@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise RCM Solutions | Patient Access, HIM & Denial Management | Nova Arc</title>
+  <meta name="description" content="Explore Nova Arc's modular healthcare revenue cycle solutions: Patient Access, Health Information Management (HIM), Extended Business Office (EBO), and Revenue Cycle Analytics.">
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nova Arc Healthcare Technologies">
+  <meta property="og:title" content="Enterprise RCM Solutions | Patient Access, HIM & Denial Management | Nova Arc">
+  <meta property="og:description" content="Modular healthcare revenue cycle solutions: Patient Access, Health Information Management (HIM), Extended Business Office (EBO), and Revenue Cycle Analytics.">
+  <meta property="og:url" content="https://novaarc-rcm.com/solutions.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Enterprise RCM Solutions | Patient Access, HIM & Denial Management | Nova Arc">
+  <meta name="twitter:description" content="Modular healthcare revenue cycle solutions delivering cash flow acceleration and denial elimination.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/nova-arc-logo.png">
+
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NOVAARC001"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NOVAARC001', {
+      'anonymize_ip': true,
+      'cookie_flags': 'SameSite=None;Secure'
+    });
+  </script>
+</head>
+<body>
+
+  <!-- ========================================================================
+       STICKY NAVBAR (Reused from Homepage)
+       ======================================================================== -->
+  <header class="site-header" id="top">
+    <div class="container navbar">
+      <!-- Brand Logo -->
+      <a href="index.html" class="logo" aria-label="Nova Arc Homepage">
+        <img src="images/nova-arc-logo.png" alt="Nova Arc Logo" class="logo-img" width="38" height="33">
+        <span class="logo-text">Nova<span class="logo-highlight">Arc</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="solutions.html" class="nav-link" style="color: var(--blue-accent); font-weight: 700;">Solutions</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li>
+            <a href="ai-platform.html" class="nav-link has-badge">
+              Nova Arc AI Platform
+              <span class="nav-badge">New</span>
+            </a>
+          </li>
+          <li><a href="who-we-serve.html" class="nav-link">Who We Serve</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Action Buttons -->
+      <div class="nav-actions">
+        <a href="tel:18005558942" class="nav-phone" aria-label="Call Nova Arc">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          (800) 555-NOVA
+        </a>
+        <a href="contact.html" class="btn btn-primary btn-sm">Request a Demo</a>
+      </div>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-list">
+        <li><a href="solutions.html" class="mobile-nav-link" style="color: var(--blue-accent); font-weight: 700;">Solutions <span>&rarr;</span></a></li>
+        <li><a href="services.html" class="mobile-nav-link">Services <span>&rarr;</span></a></li>
+        <li><a href="ai-platform.html" class="mobile-nav-link">Nova Arc AI Platform <span class="nav-badge">New</span></a></li>
+        <li><a href="who-we-serve.html" class="mobile-nav-link">Who We Serve <span>&rarr;</span></a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact <span>&rarr;</span></a></li>
+      </ul>
+      <div class="mobile-nav-bottom">
+        <a href="tel:18005558942" class="btn btn-secondary">Call (800) 555-NOVA</a>
+        <a href="contact.html" class="btn btn-primary">Request a Demo</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ========================================================================
+       PAGE HERO / HEADER
+       ======================================================================== -->
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb-nav" aria-label="Breadcrumbs">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span style="color: var(--text-primary); font-weight: 600;">Solutions</span>
+      </nav>
+
+      <div class="page-hero-content">
+        <span class="section-tag">Enterprise RCM Suites</span>
+        <h1 class="page-hero-title">
+          Modular Revenue Intelligence for the Modern Health Enterprise
+        </h1>
+        <p class="page-hero-subtitle">
+          Nova Arc delivers targeted, high-performance technology and managed workflows across every phase of the revenue cycle. Eliminate front-end registration errors, accelerate complex clinical coding, liquidate aging receivables, and gain real-time executive visibility.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SOLUTIONS SHOWCASE (4 AREAS)
+       ======================================================================== -->
+  <section class="section" id="solutions-areas">
+    <div class="container">
+      <div class="solutions-showcase-list">
+
+        <!-- ------------------------------------------------------------------
+             SOLUTION 1: PATIENT ACCESS
+             ------------------------------------------------------------------ -->
+        <article class="solution-showcase-row" id="patient-access">
+          <div class="showcase-text-col">
+            <span class="showcase-area-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              Solution Area 01
+            </span>
+            <h2 class="showcase-heading">Patient Access &amp; Front-End Integrity</h2>
+            <p class="showcase-desc">
+              Covering the <strong>front-end RCM stage</strong>, this solution automates real-time insurance eligibility verification (EDI 270/271), prior authorization status checks, and patient cost estimation under the No Surprises Act. By validating coverage and securing authorizations before clinical care begins, it drastically reduces eligibility-related denials and shortens authorization turnaround time.
+            </p>
+
+            <div class="showcase-highlights-grid">
+              <div class="showcase-highlight-card">
+                <div class="highlight-metric-val">99.8<span class="accent">%</span></div>
+                <div class="highlight-metric-label">Upfront Eligibility Accuracy</div>
+              </div>
+              <div class="showcase-highlight-card">
+                <div class="highlight-metric-val">&lt; 3<span class="accent">s</span></div>
+                <div class="highlight-metric-label">Real-Time EDI 270/271 Queries</div>
+              </div>
+              <div class="showcase-highlight-card">
+                <div class="highlight-metric-val">+45<span class="accent">%</span></div>
+                <div class="highlight-metric-label">Point-of-Service Collection Uplift</div>
+              </div>
+              <div class="showcase-highlight-card">
+                <div class="highlight-metric-val">100<span class="accent">%</span></div>
+                <div class="highlight-metric-label">No Surprises Act Compliance</div>
+              </div>
+            </div>
+
+            <div class="showcase-actions">
+              <button type="button" class="btn-learn-more" data-modal-target="modal-patient-access">
+                Learn More
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+              <a href="contact.html" class="link-arrow" style="font-size: 0.9rem;">
+                Request Access Demo
+              </a>
+            </div>
+          </div>
+
+          <div class="showcase-visual-col">
+            <div class="showcase-preview-box">
+              <div class="preview-box-header">
+                <span style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF;">Front-End Intake Monitor</span>
+                <span class="preview-badge-status">Active Gateway</span>
+              </div>
+              <div class="preview-items-list">
+                <div class="preview-item">
+                  <div class="preview-item-left">
+                    <div class="preview-item-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 10"></polyline></svg>
+                    </div>
+                    <div>
+                      <div style="font-weight: 700; color: #FFFFFF;">Real-Time EDI 270/271</div>
+                      <div style="font-size: 0.75rem; color: #94A3B8;">Aetna Commercial PPO</div>
+                    </div>
+                  </div>
+                  <span class="preview-item-tag tag-green">Verified (1.8s)</span>
+                </div>
+
+                <div class="preview-item">
+                  <div class="preview-item-left">
+                    <div class="preview-item-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                    </div>
+                    <div>
+                      <div style="font-weight: 700; color: #FFFFFF;">Good Faith Estimate</div>
+                      <div style="font-size: 0.75rem; color: #94A3B8;">Self-Pay Colonoscopy</div>
+                    </div>
+                  </div>
+                  <span class="preview-item-tag tag-blue">Auto-Calculated</span>
+                </div>
+
+                <div class="preview-item">
+                  <div class="preview-item-left">
+                    <div class="preview-item-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    </div>
+                    <div>
+                      <div style="font-weight: 700; color: #FFFFFF;">Prior-Auth Verification</div>
+                      <div style="font-size: 0.75rem; color: #94A3B8;">Auth #AUTH-908129</div>
+                    </div>
+                  </div>
+                  <span class="preview-item-tag tag-green">Attached to EHR</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- ------------------------------------------------------------------
+             SOLUTION 2: HEALTH INFORMATION MANAGEMENT (HIM)
+             ------------------------------------------------------------------ -->
+        <article class="solution-showcase-row" id="him">
+          <div class="showcase-text-col">
+            <span class="showcase-area-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+              Solution Area 02
+            </span>
+            <h2 class="showcase-heading">Health Information Management &amp; Coding</h2>
+            <p class="showcase-desc">
+              Operating at the <strong>mid-cycle RCM stage</strong>, our certified HIM operations perform clinical chart abstraction, comprehensive CPT/HCPCS and ICD-10-CM/PCS code assignment, and DRG/HCC documentation integrity reviews. This precision coding accelerates chart turnaround, shrinks Discharged Not Final Billed (DNFB) days, and prevents coding-related claim rejections.
+            </p>
+
+            <div class="showcase-highlights-grid">
+              <div class="showcase-highlight-card">
+                <div class="highlight-metric-val">&lt; 24<span class="accent">h</span></div>
+                <div class="highlight-metric-label">Chart Turnaround Guarantee</div>
+              </div>
+              <div class="showcase-highlight-card">
+                <div class="highlight-metric-val">98.6<span class="accent">%</span></div>
+                <div class="highlight-metric-label">Coding Accuracy &amp; Quality Audit</div>
+              </div>
+              <div class="showcase-highlight-card">
+                <div class="highlight-metric-val">100<span class="accent">%</span></div>
+                <div class="highlight-metric-label">AAPC &amp; AHIMA Certified Specialists</div>
+              </div>
+              <div class="showcase-highlight-card">
+                <div class="highlight-metric-val">+14<span class="accent">%</span></div>
+                <div class="highlight-metric-label">Average CMI / RVU Capture Lift</div>
+              </div>
+            </div>
+
+            <div class="showcase-actions">
+              <button type="button" class="btn-learn-more" data-modal-target="modal-him">
+                Learn More
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+              <a href="contact.html" class="link-arrow" style="font-size: 0.9rem;">
+                Request HIM Consultation
+              </a>
+            </div>
+          </div>
+
+          <div class="showcase-visual-col">
+            <div class="showcase-preview-box">
+              <div class="preview-box-header">
+                <span style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF;">HIM Clinical Coding Console</span>
+                <span class="preview-badge-status">Certified Audit</span>
+              </div>
+              <div class="preview-items-list">
+                <div class="preview-item">
+                  <div class="preview-item-left">
+                    <div class="preview-item-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </div>
+                    <div>
+                      <div style="font-weight: 700; color: #FFFFFF;">Inpatient DRG Audit</div>
+                      <div style="font-size: 0.75rem; color: #94A3B8;">DRG 470 • Major Joint Replacement</div>
+                    </div>
+                  </div>
+                  <span class="preview-item-tag tag-green">Verified Accurate</span>
+                </div>
+
+                <div class="preview-item">
+                  <div class="preview-item-left">
+                    <div class="preview-item-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </div>
+                    <div>
+                      <div style="font-weight: 700; color: #FFFFFF;">HCC Risk Capture</div>
+                      <div style="font-size: 0.75rem; color: #94A3B8;">Chronic Condition Validation</div>
+                    </div>
+                  </div>
+                  <span class="preview-item-tag tag-blue">+0.48 RAF Score</span>
+                </div>
+
+                <div class="preview-item">
+                  <div class="preview-item-left">
+                    <div class="preview-item-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    </div>
+                    <div>
+                      <div style="font-weight: 700; color: #FFFFFF;">Physician Query Automation</div>
+                      <div style="font-size: 0.75rem; color: #94A3B8;">Acuity Clarification Pending</div>
+                    </div>
+                  </div>
+                  <span class="preview-item-tag tag-amber">Query Dispatched</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- ------------------------------------------------------------------
+             SOLUTION 3: EXTENDED BUSINESS OFFICE (EBO)
+             ------------------------------------------------------------------ -->
+        <article class="solution-showcase-row" id="ebo">
+          <div class="showcase-text-col">
+            <span class="showcase-area-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              Solution Area 03
+            </span>
+            <h2 class="showcase-heading">Extended Business Office &amp; Aged A/R</h2>
+            <p class="showcase-desc">
+              Focusing on the <strong>back-end RCM stage</strong>, our extended business office teams handle aged receivables workqueue liquidation across 30, 60, and 90+ day aging buckets, appeal complex CARC/RARC claim denials, and recover contractual underpayments against fee schedules. This targeted resolution slashes average days in A/R (DAR) and accelerates net cash recovery.
+            </p>
+
+            <div class="showcase-highlights-grid">
+              <div class="showcase-highlight-card">
+                <div class="highlight-metric-val">32<span class="accent">%</span></div>
+                <div class="highlight-metric-label">Reduction in Days in A/R</div>
+              </div>
+              <div class="showcase-highlight-card">
+                <div class="highlight-metric-val">$1.8<span class="accent">B+</span></div>
+                <div class="highlight-metric-label">Secured in Provider Recoveries</div>
+              </div>
+              <div class="showcase-highlight-card">
+                <div class="highlight-metric-val">120<span class="accent">+</span></div>
+                <div class="highlight-metric-label">Day Aged Claim Liquidation</div>
+              </div>
+              <div class="showcase-highlight-card">
+                <div class="highlight-metric-val">0<span class="accent">$</span></div>
+                <div class="highlight-metric-label">Upfront Risk / Contingency Options</div>
+              </div>
+            </div>
+
+            <div class="showcase-actions">
+              <button type="button" class="btn-learn-more" data-modal-target="modal-ebo">
+                Learn More
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+              <a href="contact.html" class="link-arrow" style="font-size: 0.9rem;">
+                Request A/R Assessment
+              </a>
+            </div>
+          </div>
+
+          <div class="showcase-visual-col">
+            <div class="showcase-preview-box">
+              <div class="preview-box-header">
+                <span style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF;">A/R Recovery Workqueues</span>
+                <span class="preview-badge-status">Priority Triage</span>
+              </div>
+              <div class="preview-items-list">
+                <div class="preview-item">
+                  <div class="preview-item-left">
+                    <div class="preview-item-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </div>
+                    <div>
+                      <div style="font-weight: 700; color: #FFFFFF;">Aged A/R Tier 3 (120+ Days)</div>
+                      <div style="font-size: 0.75rem; color: #94A3B8;">$482,000 Recovered This Month</div>
+                    </div>
+                  </div>
+                  <span class="preview-item-tag tag-green">Liquidated</span>
+                </div>
+
+                <div class="preview-item">
+                  <div class="preview-item-left">
+                    <div class="preview-item-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path></svg>
+                    </div>
+                    <div>
+                      <div style="font-weight: 700; color: #FFFFFF;">CARC 197 / Missing Auth</div>
+                      <div style="font-size: 0.75rem; color: #94A3B8;">Automated Retro-Auth Generated</div>
+                    </div>
+                  </div>
+                  <span class="preview-item-tag tag-blue">Appealed</span>
+                </div>
+
+                <div class="preview-item">
+                  <div class="preview-item-left">
+                    <div class="preview-item-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <div>
+                      <div style="font-weight: 700; color: #FFFFFF;">ERA 835 Reconciliation</div>
+                      <div style="font-size: 0.75rem; color: #94A3B8;">Direct Clearinghouse Depository</div>
+                    </div>
+                  </div>
+                  <span class="preview-item-tag tag-green">Auto-Posted</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- ------------------------------------------------------------------
+             SOLUTION 4: ANALYTICS & REPORTING
+             ------------------------------------------------------------------ -->
+        <article class="solution-showcase-row" id="analytics">
+          <div class="showcase-text-col">
+            <span class="showcase-area-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+              Solution Area 04
+            </span>
+            <h2 class="showcase-heading">Revenue Cycle Analytics &amp; Reporting</h2>
+            <p class="showcase-desc">
+              Spanning <strong>cross-cycle RCM stages</strong>, our analytics engine performs denial root-cause clustering, electronic remittance (835 ERA vs. 837) reconciliation, and payer contract variance monitoring against MGMA benchmarks. By delivering end-to-end transparency, it drives down systemic denial rates and delivers predictable cash flow forecasting.
+            </p>
+
+            <div class="showcase-highlights-grid">
+              <div class="showcase-highlight-card">
+                <div class="highlight-metric-val">100<span class="accent">%</span></div>
+                <div class="highlight-metric-label">Real-Time Denial Visibility</div>
+              </div>
+              <div class="showcase-highlight-card">
+                <div class="highlight-metric-val">90<span class="accent">d</span></div>
+                <div class="highlight-metric-label">Predictive Cash Flow Forecasting</div>
+              </div>
+              <div class="showcase-highlight-card">
+                <div class="highlight-metric-val">MGMA</div>
+                <div class="highlight-metric-label">National Benchmark Comparison</div>
+              </div>
+              <div class="showcase-highlight-card">
+                <div class="highlight-metric-val">24/7</div>
+                <div class="highlight-metric-label">Executive Cloud BI Access</div>
+              </div>
+            </div>
+
+            <div class="showcase-actions">
+              <button type="button" class="btn-learn-more" data-modal-target="modal-analytics">
+                Learn More
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+              <a href="contact.html" class="link-arrow" style="font-size: 0.9rem;">
+                Explore Executive Dashboard
+              </a>
+            </div>
+          </div>
+
+          <div class="showcase-visual-col">
+            <div class="showcase-preview-box">
+              <div class="preview-box-header">
+                <span style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF;">Executive BI Intelligence</span>
+                <span class="preview-badge-status">Real-Time Sync</span>
+              </div>
+              <div class="preview-items-list">
+                <div class="preview-item">
+                  <div class="preview-item-left">
+                    <div class="preview-item-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    </div>
+                    <div>
+                      <div style="font-weight: 700; color: #FFFFFF;">Net Collection Ratio</div>
+                      <div style="font-size: 0.75rem; color: #94A3B8;">All Payers Combined</div>
+                    </div>
+                  </div>
+                  <span class="preview-item-tag tag-green">97.8% (Target: 95%)</span>
+                </div>
+
+                <div class="preview-item">
+                  <div class="preview-item-left">
+                    <div class="preview-item-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                    </div>
+                    <div>
+                      <div style="font-weight: 700; color: #FFFFFF;">Denial Root-Cause Radar</div>
+                      <div style="font-size: 0.75rem; color: #94A3B8;">Payer Rule Shift Detected</div>
+                    </div>
+                  </div>
+                  <span class="preview-item-tag tag-amber">Policy Alert</span>
+                </div>
+
+                <div class="preview-item">
+                  <div class="preview-item-left">
+                    <div class="preview-item-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    </div>
+                    <div>
+                      <div style="font-weight: 700; color: #FFFFFF;">30-Day Cash Projection</div>
+                      <div style="font-size: 0.75rem; color: #94A3B8;">AI Predictive Modeling</div>
+                    </div>
+                  </div>
+                  <span class="preview-item-tag tag-blue">$4.2M Projected</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Bottom High-Converting CTA Strip -->
+      <div class="solutions-cta-strip">
+        <h2 class="cta-strip-title">Ready to Transform Your Revenue Cycle Operations?</h2>
+        <p class="cta-strip-desc">
+          Schedule a personalized solution demonstration with our revenue cycle architects and receive a complimentary 90-day aged receivables assessment.
+        </p>
+        <div class="cta-strip-buttons">
+          <a href="contact.html" class="btn btn-primary">
+            Request a Demonstration
+          </a>
+          <a href="tel:18005558942" class="btn btn-outline-white">
+            Call (800) 555-NOVA
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       INTERACTIVE MODAL DIALOGS ("Learn More" Details)
+       ======================================================================== -->
+
+  <!-- Modal 1: Patient Access -->
+  <div class="modal-overlay" id="modal-patient-access" role="dialog" aria-modal="true" aria-labelledby="modal-title-1">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <span class="showcase-area-badge" style="margin-bottom: 4px;">Deep Dive</span>
+          <h3 class="section-title" id="modal-title-1" style="font-size: 1.5rem; margin-bottom: 0;">Patient Access &amp; Front-End Integrity</h3>
+        </div>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: var(--space-lg);">
+          Front-end registration and eligibility errors account for over 46% of all downstream claim denials in US healthcare systems. Nova Arc solves this by deploying automated robotic verification tools directly into your patient intake workflow.
+        </p>
+        <h4 class="modal-section-title">Key Capabilities &amp; Architecture:</h4>
+        <ul class="modal-feature-list">
+          <li class="modal-feature-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Real-Time 270/271 EDI Integration:</strong> Instant querying across 1,200+ payers for co-pay, deductible remaining, coinsurance, and service-specific exclusions.</span>
+          </li>
+          <li class="modal-feature-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Automated Prior-Authorization:</strong> RPA bots ingest physician orders from Epic/Cerner and initiate portal authorizations before appointment check-in.</span>
+          </li>
+          <li class="modal-feature-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Good Faith Estimate Calculator:</strong> Fully compliant with the federal No Surprises Act, producing accurate pre-treatment price estimates in seconds.</span>
+          </li>
+          <li class="modal-feature-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Pre-Service Digital Capture:</strong> Secure SMS text-to-pay and contactless patient check-in increasing upfront self-pay collections by over 45%.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-modal-close>Close</button>
+        <a href="contact.html" class="btn btn-primary btn-sm">Schedule Demo</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: HIM & Coding -->
+  <div class="modal-overlay" id="modal-him" role="dialog" aria-modal="true" aria-labelledby="modal-title-2">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <span class="showcase-area-badge" style="margin-bottom: 4px;">Deep Dive</span>
+          <h3 class="section-title" id="modal-title-2" style="font-size: 1.5rem; margin-bottom: 0;">Health Information Management &amp; Coding</h3>
+        </div>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: var(--space-lg);">
+          Nova Arc pairs AAPC and AHIMA credentialed coding teams with AI-assisted chart auditing to ensure every clinical service rendered is compliantly coded and fully reimbursed.
+        </p>
+        <h4 class="modal-section-title">Key Capabilities &amp; Architecture:</h4>
+        <ul class="modal-feature-list">
+          <li class="modal-feature-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Sub-24-Hour Chart Turnaround:</strong> Dedicated specialty pods ensure encounter charts are coded and audited within 24 hours of clinical discharge.</span>
+          </li>
+          <li class="modal-feature-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Clinical Documentation Improvement (CDI):</strong> Proactive physician querying and documentation coaching to capture true patient acuity and elevate CMI.</span>
+          </li>
+          <li class="modal-feature-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Hierarchical Condition Category (HCC) Capture:</strong> Risk adjustment optimization for Medicare Advantage and value-based care contracts.</span>
+          </li>
+          <li class="modal-feature-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Dual-Layer Quality Auditing:</strong> Regular peer reviews and randomized algorithmic audits ensuring a consistent 98.6%+ coding quality rate.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-modal-close>Close</button>
+        <a href="contact.html" class="btn btn-primary btn-sm">Schedule Demo</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Extended Business Office -->
+  <div class="modal-overlay" id="modal-ebo" role="dialog" aria-modal="true" aria-labelledby="modal-title-3">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <span class="showcase-area-badge" style="margin-bottom: 4px;">Deep Dive</span>
+          <h3 class="section-title" id="modal-title-3" style="font-size: 1.5rem; margin-bottom: 0;">Extended Business Office &amp; Aged A/R</h3>
+        </div>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: var(--space-lg);">
+          When internal staffing shortages threaten revenue capture, Nova Arc functions as a seamless, high-volume extension of your business office, handling insurance follow-up and aged account recovery.
+        </p>
+        <h4 class="modal-section-title">Key Capabilities &amp; Architecture:</h4>
+        <ul class="modal-feature-list">
+          <li class="modal-feature-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Aged Receivables Liquidation:</strong> Relentless investigation of claims over 60, 90, and 120+ days using algorithmic triage to recover trapped cash.</span>
+          </li>
+          <li class="modal-feature-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>High-Dollar Clinical Appeals:</strong> Dedicated escalation teams challenging complex medical necessity and clinical unbundling rejections.</span>
+          </li>
+          <li class="modal-feature-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Electronic Remittance &amp; Payment Posting:</strong> Daily reconciliation of 835 remittance files, contractual adjustments, and copay allocations.</span>
+          </li>
+          <li class="modal-feature-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Flexible Engagement Models:</strong> Full outsourced business office or targeted contingency-based recovery projects with zero upfront cost.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-modal-close>Close</button>
+        <a href="contact.html" class="btn btn-primary btn-sm">Schedule Demo</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4: Analytics & Reporting -->
+  <div class="modal-overlay" id="modal-analytics" role="dialog" aria-modal="true" aria-labelledby="modal-title-4">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <span class="showcase-area-badge" style="margin-bottom: 4px;">Deep Dive</span>
+          <h3 class="section-title" id="modal-title-4" style="font-size: 1.5rem; margin-bottom: 0;">Revenue Cycle Analytics &amp; Reporting</h3>
+        </div>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: var(--space-lg);">
+          Gain complete financial transparency with real-time analytics designed for healthcare CFOs, VP of Revenue Cycle, and practice administrators.
+        </p>
+        <h4 class="modal-section-title">Key Capabilities &amp; Architecture:</h4>
+        <ul class="modal-feature-list">
+          <li class="modal-feature-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Payer Scorecards &amp; Denial Root Cause:</strong> Track CARC/RARC patterns by commercial insurer to pinpoint systemic underpayments and adjudications.</span>
+          </li>
+          <li class="modal-feature-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Predictive Cash Flow Intelligence:</strong> Machine learning forecasts expected 30, 60, and 90-day cash collections based on historical adjudication velocity.</span>
+          </li>
+          <li class="modal-feature-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Provider Productivity &amp; RVU Analytics:</strong> Monitor clinician billing velocity, encounter completion times, and charge lag in real time.</span>
+          </li>
+          <li class="modal-feature-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Automated MGMA Benchmarking:</strong> Instantly compare your days in A/R, clean claim rate, and cost to collect against national peer percentiles.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-modal-close>Close</button>
+        <a href="contact.html" class="btn btn-primary btn-sm">Schedule Demo</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================
+       FOOTER (Reused from Homepage)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-logo">
+            <img src="images/nova-arc-logo.png" alt="Nova Arc Logo" class="footer-logo-img" width="38" height="33">
+            <span class="footer-logo-text">Nova<span style="color: #38BDF8;">Arc</span></span>
+          </a>
+          <p class="footer-brand-desc">
+            Pioneering the future of intelligent healthcare revenue cycle operations with autonomous AI claim adjudication, dedicated certified billing, and guaranteed cash flow acceleration.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X / Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Solutions -->
+        <div>
+          <h4 class="footer-col-title">Solutions</h4>
+          <ul class="footer-links-list">
+            <li><a href="solutions.html#patient-access" class="footer-link">Patient Access</a></li>
+            <li><a href="solutions.html#him" class="footer-link">Health Info Management</a></li>
+            <li><a href="solutions.html#ebo" class="footer-link">Extended Business Office</a></li>
+            <li><a href="solutions.html#analytics" class="footer-link">Analytics &amp; Reporting</a></li>
+            <li><a href="index.html#ai-platform" class="footer-link">Nova Arc AI Platform</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html#services" class="footer-link">Full-Cycle Medical Billing</a></li>
+            <li><a href="index.html#services" class="footer-link">Clinical Documentation (CDI)</a></li>
+            <li><a href="index.html#services" class="footer-link">Aged A/R Recovery</a></li>
+            <li><a href="index.html#services" class="footer-link">EHR Integration Consulting</a></li>
+            <li><a href="index.html#services" class="footer-link">Compliance &amp; Auditing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Platform -->
+        <div>
+          <h4 class="footer-col-title">AI Platform</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html#ai-platform" class="footer-link">Autonomous Scrubber</a></li>
+            <li><a href="index.html#ai-platform" class="footer-link">Predictive Denial Radar</a></li>
+            <li><a href="index.html#ai-platform" class="footer-link">Automated Appeals Engine</a></li>
+            <li><a href="index.html#ai-platform" class="footer-link">Payer Policy Knowledgebase</a></li>
+            <li><a href="index.html#ai-platform" class="footer-link">Security Architecture</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Contact Info -->
+        <div>
+          <h4 class="footer-col-title">Headquarters</h4>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>100 Innovation Way, Suite 400<br>Boston, MA 02110</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>(800) 555-NOVA (6682)</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>contact@novaarc-rcm.com</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              <a href="contact.html" style="color: #38BDF8; font-weight: 600;">Direct Contact Directory &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compliance & Certifications Strip -->
+      <div class="footer-compliance-bar">
+        <div class="compliance-badge-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>HIPAA &amp; HITECH Compliant</span>
+        </div>
+        <div class="compliance-badge-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>SOC 2 Type II Certified</span>
+        </div>
+        <div class="compliance-badge-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>HL7 v2 &amp; FHIR R4 Native</span>
+        </div>
+        <div class="compliance-badge-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>AAPC &amp; AHIMA Certified Staff</span>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Legal & Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Nova Arc Technologies, Inc. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="index.html#privacy">Privacy Policy</a>
+          <a href="index.html#terms">Terms of Service</a>
+          <a href="index.html#security">Security &amp; Trust</a>
+          <a href="index.html#cookies">Cookie Preferences</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
