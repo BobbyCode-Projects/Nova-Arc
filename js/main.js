@@ -10,6 +10,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initStickyHeader();
+  initServicesMegaMenu();
   initMobileNavigation();
   initStatsCounter();
   initAITabs();
@@ -43,12 +44,78 @@ function initStickyHeader() {
 }
 
 /* --------------------------------------------------------------------------
-   2. Mobile Navigation Drawer
+   Services Mega-Menu Dropdown (Desktop & Keyboard/A11y)
+   -------------------------------------------------------------------------- */
+function initServicesMegaMenu() {
+  const toggleBtn = document.getElementById('servicesDropdownToggle');
+  const megaPanel = document.getElementById('servicesMegaMenu');
+  const dropdownItem = document.querySelector('.nav-item-dropdown');
+
+  if (!toggleBtn || !megaPanel) return;
+
+  const openMenu = () => {
+    megaPanel.classList.add('open');
+    toggleBtn.classList.add('active');
+    toggleBtn.setAttribute('aria-expanded', 'true');
+    megaPanel.setAttribute('aria-hidden', 'false');
+  };
+
+  const closeMenu = () => {
+    megaPanel.classList.remove('open');
+    toggleBtn.classList.remove('active');
+    toggleBtn.setAttribute('aria-expanded', 'false');
+    megaPanel.setAttribute('aria-hidden', 'true');
+  };
+
+  const toggleMenu = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const isOpen = megaPanel.classList.contains('open');
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  };
+
+  toggleBtn.addEventListener('click', toggleMenu);
+
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (dropdownItem && !dropdownItem.contains(e.target)) {
+      if (megaPanel.classList.contains('open')) {
+        closeMenu();
+      }
+    }
+  });
+
+  // Close on Escape key and return focus
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && megaPanel.classList.contains('open')) {
+      closeMenu();
+      toggleBtn.focus();
+    }
+  });
+
+  // Close when clicking any link inside the mega menu
+  const menuLinks = megaPanel.querySelectorAll('a');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeMenu();
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   2. Mobile Navigation Drawer & Services Accordion
    -------------------------------------------------------------------------- */
 function initMobileNavigation() {
   const toggleBtn = document.querySelector('.mobile-toggle');
-  const drawer = document.querySelector('.mobile-nav-drawer');
-  const navLinks = document.querySelectorAll('.mobile-nav-link, .mobile-nav-drawer .btn');
+  const drawer = document.querySelector('.mobile-nav-drawer') || document.querySelector('.mobile-nav');
+  // Exclude accordion toggle buttons from auto-closing the drawer
+  const navLinks = document.querySelectorAll(
+    '.mobile-nav-link:not(.mobile-accordion-toggle), .mobile-nav-drawer .btn, .mobile-submenu-link, .mobile-submenu-sublink, .mobile-overview-btn'
+  );
 
   if (!toggleBtn || !drawer) return;
 
@@ -87,55 +154,146 @@ function initMobileNavigation() {
       }
     });
   });
+
+  // Mobile accordion toggle for Services submenu
+  const mobileServicesToggle = document.getElementById('mobileServicesToggle');
+  const mobileServicesSubmenu = document.getElementById('mobileServicesSubmenu');
+  if (mobileServicesToggle && mobileServicesSubmenu) {
+    mobileServicesToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const isOpen = mobileServicesSubmenu.classList.contains('open');
+      if (isOpen) {
+        mobileServicesSubmenu.classList.remove('open');
+        mobileServicesToggle.classList.remove('open');
+        mobileServicesToggle.setAttribute('aria-expanded', 'false');
+        mobileServicesSubmenu.setAttribute('aria-hidden', 'true');
+      } else {
+        mobileServicesSubmenu.classList.add('open');
+        mobileServicesToggle.classList.add('open');
+        mobileServicesToggle.setAttribute('aria-expanded', 'true');
+        mobileServicesSubmenu.setAttribute('aria-hidden', 'false');
+      }
+    });
+  }
 }
 
 /* --------------------------------------------------------------------------
-   3. Animated Metric Counters
+   3. Animated Metric Counters (Continuous Roll with 5-Second Gap)
    -------------------------------------------------------------------------- */
 function initStatsCounter() {
   const statNumbers = document.querySelectorAll('.stat-number');
+  const statsSection = document.querySelector('.stats-section');
   if (!statNumbers.length) return;
 
-  let hasAnimated = false;
+  let loopTimeout = null;
+  let isSectionInView = false;
+  let isRolling = false;
+  let activeFrameIds = [];
 
-  const animateValue = (element, start, end, duration, decimals = 0) => {
+  const animateValue = (element, start, end, duration, decimals = 0, onComplete) => {
     let startTimestamp = null;
+
     const step = (timestamp) => {
       if (!startTimestamp) startTimestamp = timestamp;
       const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      // Ease out quad
-      const ease = 1 - (1 - progress) * (1 - progress);
+      // Smooth cubic ease-out for energetic roll decelerating into final value
+      const ease = 1 - Math.pow(1 - progress, 3);
       const current = start + (end - start) * ease;
       element.textContent = decimals > 0 ? current.toFixed(decimals) : Math.floor(current);
+
       if (progress < 1) {
-        window.requestAnimationFrame(step);
+        const frameId = window.requestAnimationFrame(step);
+        activeFrameIds.push(frameId);
       } else {
         element.textContent = decimals > 0 ? end.toFixed(decimals) : end;
+        if (typeof onComplete === 'function') {
+          onComplete();
+        }
       }
     };
-    window.requestAnimationFrame(step);
+
+    const frameId = window.requestAnimationFrame(step);
+    activeFrameIds.push(frameId);
   };
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !hasAnimated) {
-        hasAnimated = true;
-        statNumbers.forEach(statEl => {
-          const target = parseFloat(statEl.getAttribute('data-target'));
-          const decimals = parseInt(statEl.getAttribute('data-decimals') || '0', 10);
-          if (!isNaN(target)) {
-            animateValue(statEl, 0, target, 1800, decimals);
+  const startRollingCycle = () => {
+    if (isRolling) return;
+    isRolling = true;
+
+    if (loopTimeout) {
+      clearTimeout(loopTimeout);
+      loopTimeout = null;
+    }
+
+    // Cancel any still-running frames before starting fresh
+    activeFrameIds.forEach(id => window.cancelAnimationFrame(id));
+    activeFrameIds = [];
+
+    let completedCount = 0;
+    const totalCount = statNumbers.length;
+
+    statNumbers.forEach(statEl => {
+      const target = parseFloat(statEl.getAttribute('data-target'));
+      const decimals = parseInt(statEl.getAttribute('data-decimals') || '0', 10);
+      if (!isNaN(target)) {
+        animateValue(statEl, 0, target, 1600, decimals, () => {
+          completedCount++;
+          if (completedCount === totalCount) {
+            isRolling = false;
+            // 5 seconds gap before triggering the next roll
+            loopTimeout = setTimeout(() => {
+              if (isSectionInView && !document.hidden) {
+                startRollingCycle();
+              }
+            }, 5000);
           }
         });
+      } else {
+        completedCount++;
       }
     });
-  }, { threshold: 0.2 });
+  };
 
-  const statsSection = document.querySelector('.stats-section');
-  if (statsSection) {
+  // Observe visibility in viewport
+  if ('IntersectionObserver' in window && statsSection) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          isSectionInView = true;
+          if (!isRolling && !loopTimeout) {
+            startRollingCycle();
+          }
+        } else {
+          isSectionInView = false;
+          if (loopTimeout) {
+            clearTimeout(loopTimeout);
+            loopTimeout = null;
+          }
+        }
+      });
+    }, { threshold: 0.1 });
+
     observer.observe(statsSection);
+  } else {
+    // Fallback if IntersectionObserver is unavailable or section not found
+    isSectionInView = true;
+    startRollingCycle();
   }
+
+  // Pause when browser tab is inactive, resume when active
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      if (loopTimeout) {
+        clearTimeout(loopTimeout);
+        loopTimeout = null;
+      }
+    } else if (isSectionInView && !isRolling && !loopTimeout) {
+      startRollingCycle();
+    }
+  });
 }
+
 
 /* --------------------------------------------------------------------------
    4. Nova Arc AI Platform Tab Switcher
@@ -453,6 +611,62 @@ function initContactPageForm() {
   const successBox = document.getElementById('contact-success-box');
   const resetBtn = document.getElementById('reset-contact-form-btn');
   if (!form) return;
+
+  // Pre-fill from URL query param (e.g. ?service=claims-management-scrubbing)
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceParam = urlParams.get('service');
+    if (serviceParam) {
+      const interestSelect = document.getElementById('contact-interest');
+      const messageField = document.getElementById('contact-message');
+      
+      const serviceNameMap = {
+        'physician-query-management': 'Physician Query Management & Education Coaching',
+        'hcc-risk-adjustment': 'Inpatient DRG Validation & HCC Risk Adjustment',
+        'cdm-charge-capture': 'CDM Pricing Audit & Missed-Charge Reconciliation',
+        'compliance-audit-defense': 'OIG & RAC Audit Defense & Compliance Management',
+        'cdi-chart-auditing': 'Clinical Documentation Improvement (CDI) & Chart Auditing',
+        'full-cycle-medical-coding': 'Full-Cycle Medical Coding (Inpatient, Outpatient, ProFee)',
+        'referral-order-management': 'Referral & Order Management (LCD/NCD & ABN)',
+        'point-of-service-collections': 'Point-of-Service (POS) Collection Assistance',
+        'financial-clearance-gfe': 'Pre-Service Financial Clearance & Good Faith Estimates (GFE)',
+        'patient-registration-verification': 'Scheduling & Patient Registration Verification',
+        'real-time-insurance-eligibility': 'Real-Time Insurance Eligibility & Benefits (270/271)',
+        'claims-management-scrubbing': 'Claims Management & Clearinghouse Scrubbing',
+        'payment-posting-reconciliation': 'Payment Posting & Electronic Remittance (ERA / 835)',
+        'prior-authorization': 'Prior Authorization & Referral Management',
+        'patient-access': 'Patient Access Services',
+        'ar-management': 'A/R Management & Aged Claims Liquidation',
+        'denial-management': 'Denial & Appeals Management (Root-Cause Recovery)',
+        'payer-contract-modeling': 'Payer Contract Modeling & Underpayment Variance Recovery',
+        'patient-billing-collections': 'Patient Billing, Self-Pay & Omnichannel Collections',
+        'credit-balance-resolution': 'Credit Balance Resolution & Overpayment Refund Compliance',
+        'extended-business-office': 'Extended Business Office (EBO) Surge & Aged A/R Cleanup',
+        'full-cycle-rcm': 'End-to-End Enterprise Full-Cycle RCM (Single SLA)',
+        'rcm-workflow-audit': 'RCM Workflow Audit, KPI Benchmarking & Tech Stack Advisory',
+        'fractional-rcm-leadership': 'Fractional CFO & Interim RCM Leadership (EHR Surge Staffing)'
+      };
+      
+      const serviceDisplayName = serviceNameMap[serviceParam] || serviceParam.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+
+      if (interestSelect) {
+        let matchingOption = Array.from(interestSelect.options).find(opt => opt.value === serviceParam);
+        if (!matchingOption) {
+          matchingOption = document.createElement('option');
+          matchingOption.value = serviceParam;
+          matchingOption.textContent = `Service: ${serviceDisplayName}`;
+          interestSelect.appendChild(matchingOption);
+        }
+        matchingOption.selected = true;
+      }
+
+      if (messageField && !messageField.value.trim()) {
+        messageField.value = `Hello Nova Arc team, I would like to schedule an operational review for ${serviceDisplayName}. Please provide your detailed workflow specifications and SLA benchmarks.`;
+      }
+    }
+  } catch (e) {
+    console.warn('[Nova Arc] Failed to parse URL parameters for contact form:', e);
+  }
 
   const fields = {
     name: {

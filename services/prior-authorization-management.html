@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prior Authorization &amp; Referral Management | EDI 278 Automation | Nova Arc</title>
+  <meta name="description" content="Automated EDI 278 prior authorization submissions, payer portal robotic automation, and clinical attachment packaging delivering a 96.4% approval rate for ASCs and surgical practices.">
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nova Arc Healthcare Technologies">
+  <meta property="og:title" content="Prior Authorization &amp; Referral Management | Nova Arc">
+  <meta property="og:description" content="Sub-24-hour EDI 278 submission and automated payer portal clearinghouse integration. Accelerate surgical clearance and eliminate CARC 197 denials.">
+  <meta property="og:url" content="https://novaarc-rcm.com/services/prior-authorization-management.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Prior Authorization &amp; Referral Management | Nova Arc">
+  <meta name="twitter:description" content="Automated prior authorization pipeline achieving 96.4% first-pass approval and sub-48-hour surgical clearance.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../images/nova-arc-logo.png">
+
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet (Reused) -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NOVAARC001"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NOVAARC001', {
+      'anonymize_ip': true,
+      'cookie_flags': 'SameSite=None;Secure'
+    });
+  </script>
+
+  <!-- Schema.org JSON-LD: BreadcrumbList + Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://novaarc-rcm.com/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://novaarc-rcm.com/services.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Prior Authorization & Referral Management",
+            "item": "https://novaarc-rcm.com/services/prior-authorization-management.html"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://novaarc-rcm.com/services/prior-authorization-management.html#service",
+        "name": "Prior Authorization & Referral Management",
+        "serviceType": "Healthcare Revenue Cycle Management (RCM) - Patient Access",
+        "provider": {
+          "@type": "Organization",
+          "name": "Nova Arc Healthcare Technologies",
+          "url": "https://novaarc-rcm.com/",
+          "logo": "https://novaarc-rcm.com/images/nova-arc-logo.png"
+        },
+        "description": "End-to-end clinical document assembly, automated EDI 278 payer submissions, and sub-24-hour turnaround eliminating surgical schedule disruptions and CARC 197 denials.",
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Prior Authorization Deliverables",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Automated ANSI X12 278 Electronic Prior Authorization"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Payer Portal Robotic Process Automation (RPA) Dispatch"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Clinical Attachment & Medical Necessity Assembly"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Peer-to-Peer Appeal Scheduling & Dossier Preparation"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ========================================================================
+       STICKY NAVBAR (Shared Header Partial)
+       ======================================================================== -->
+      <header class="site-header" id="top">
+    <div class="container navbar">
+      <!-- Brand Logo -->
+      <a href="../index.html" class="logo" aria-label="Nova Arc Homepage">
+        <img src="../images/nova-arc-logo.png" alt="Nova Arc Logo" class="logo-img" width="38" height="33">
+        <span class="logo-text">Nova<span class="logo-highlight">Arc</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="../solutions.html" class="nav-link">Solutions</a></li>
+          
+          <!-- Services Dropdown (Mega-Menu) -->
+          <li class="nav-item-dropdown">
+            <button class="nav-link nav-dropdown-toggle active" id="servicesDropdownToggle" aria-haspopup="true" aria-expanded="false" aria-controls="servicesMegaMenu">
+              <span>Services</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+
+            <!-- Mega-Menu Light Panel -->
+            <div class="mega-menu-panel" id="servicesMegaMenu" role="menu" aria-labelledby="servicesDropdownToggle" aria-hidden="true">
+              <div class="mega-menu-inner container">
+                <div class="mega-menu-grid">
+                  <!-- Column 1: Patient Access & Front-End Integrity -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-1-heading">Patient Access &amp; Front-End Integrity</h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-1-heading">
+                      <li role="none">
+                        <a href="real-time-insurance-eligibility.html" class="mega-item standalone" role="menuitem">
+                          Insurance Eligibility &amp; Benefits Verification
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="prior-authorization-management.html" class="mega-item standalone" role="menuitem">
+                          Prior Authorization Management
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="patient-registration-verification.html" class="mega-item standalone" role="menuitem">
+                          Patient Scheduling &amp; Registration QA
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="financial-clearance-gfe.html" class="mega-item standalone" role="menuitem">
+                          Financial Clearance &amp; Good Faith Estimates
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="point-of-service-collections.html" class="mega-item standalone" role="menuitem">
+                          Point-of-Service Collections
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="referral-order-management.html" class="mega-item standalone" role="menuitem">
+                          Medical Necessity &amp; Order Verification
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Column 2: HIM & Coding -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-2-heading">HIM &amp; Coding</h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-2-heading">
+                      <!-- Parent Item: Medical Coding Services -->
+                      <li role="none" class="mega-parent-group">
+                        <a href="full-cycle-medical-coding.html" class="mega-item parent" role="menuitem">
+                          Medical Coding Services
+                        </a>
+                        <ul class="mega-sub-list" role="none">
+                          <li role="none">
+                            <a href="hcc-risk-adjustment.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Risk Adjustment/HCC Coding
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a href="full-cycle-medical-coding.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Facility/DRG Coding
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a href="full-cycle-medical-coding.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Professional Fee Coding
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li role="none">
+                        <a href="cdi-chart-auditing.html" class="mega-item standalone" role="menuitem">
+                          Clinical Documentation Improvement
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="cac-review.html" class="mega-item standalone" role="menuitem">
+                          Computer-Assisted Coding (CAC) Review
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="compliance-audit-defense.html" class="mega-item standalone" role="menuitem">
+                          Coding Compliance &amp; Audit Support
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="cdm-charge-capture.html" class="mega-item standalone" role="menuitem">
+                          Charge Capture &amp; CDM Audit
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="physician-query-management.html" class="mega-item standalone" role="menuitem">
+                          Physician Query Management
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Column 3: Patient Financial Services (PFS) & Recovery -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-3-heading">Patient Financial Services &amp; Recovery</h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-3-heading">
+                      <!-- Parent Item: Claims Management Services -->
+                      <li role="none" class="mega-parent-group">
+                        <a href="claims-management-scrubbing.html" class="mega-item parent" role="menuitem">
+                          Claims Management Services
+                        </a>
+                        <ul class="mega-sub-list" role="none">
+                          <li role="none">
+                            <a href="claims-management-scrubbing.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Claims Submission &amp; Scrubbing EDI 837
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a href="payment-posting-reconciliation.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Payment Posting &amp; Reconciliation EDI 835
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li role="none">
+                        <a href="ar-management.html" class="mega-item standalone" role="menuitem">
+                          A/R Management Services
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="denial-management.html" class="mega-item standalone" role="menuitem">
+                          Denial Management &amp; Appeals
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="payer-contract-modeling.html" class="mega-item standalone" role="menuitem">
+                          Underpayment Recovery &amp; Contract Compliance
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="patient-billing-collections.html" class="mega-item standalone" role="menuitem">
+                          Patient Billing &amp; Self-Pay Collections
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="credit-balance-resolution.html" class="mega-item standalone" role="menuitem">
+                          Credit Balance &amp; Refund Management
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="edi-enrollment.html" class="mega-item standalone" role="menuitem">
+                          EDI Enrollment Services
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <a href="../ai-platform.html" class="nav-link has-badge">
+              Nova Arc AI Platform
+              <span class="nav-badge">New</span>
+            </a>
+          </li>
+          <li><a href="../who-we-serve.html" class="nav-link">Who We Serve</a></li>
+          <li><a href="../contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Action Buttons -->
+      <div class="nav-actions">
+        <a href="tel:18005558942" class="nav-phone" aria-label="Call Nova Arc">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          (800) 555-NOVA
+        </a>
+        <a href="../contact.html" class="btn btn-primary btn-sm">Request a Demo</a>
+      </div>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-list">
+        <li><a href="../solutions.html" class="mobile-nav-link">Solutions <span>&rarr;</span></a></li>
+        <li class="mobile-accordion-item">
+          <button class="mobile-nav-link mobile-accordion-toggle" id="mobileServicesToggle" aria-expanded="false" aria-controls="mobileServicesSubmenu">
+            <span>Services</span>
+            <svg class="mobile-accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="mobile-submenu-collapse" id="mobileServicesSubmenu" aria-hidden="true">
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title">Patient Access &amp; Front-End</h4>
+              <a href="real-time-insurance-eligibility.html" class="mobile-submenu-link">Insurance Eligibility &amp; Benefits</a>
+              <a href="prior-authorization-management.html" class="mobile-submenu-link">Prior Authorization Management</a>
+              <a href="patient-registration-verification.html" class="mobile-submenu-link">Patient Scheduling &amp; Registration QA</a>
+              <a href="financial-clearance-gfe.html" class="mobile-submenu-link">Financial Clearance &amp; Good Faith Estimates</a>
+              <a href="point-of-service-collections.html" class="mobile-submenu-link">Point-of-Service Collections</a>
+              <a href="referral-order-management.html" class="mobile-submenu-link">Medical Necessity &amp; Order Verification</a>
+            </div>
+
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title">HIM &amp; Coding</h4>
+              <a href="full-cycle-medical-coding.html" class="mobile-submenu-link parent">Medical Coding Services</a>
+              <a href="hcc-risk-adjustment.html" class="mobile-submenu-sublink">&rsaquo; Risk Adjustment/HCC Coding</a>
+              <a href="full-cycle-medical-coding.html" class="mobile-submenu-sublink">&rsaquo; Facility/DRG &amp; ProFee Coding</a>
+              <a href="cdi-chart-auditing.html" class="mobile-submenu-link">Clinical Documentation Improvement</a>
+              <a href="cac-review.html" class="mobile-submenu-link">Computer-Assisted Coding (CAC) Review</a>
+              <a href="compliance-audit-defense.html" class="mobile-submenu-link">Coding Compliance &amp; Audit Support</a>
+              <a href="cdm-charge-capture.html" class="mobile-submenu-link">Charge Capture &amp; CDM Audit</a>
+              <a href="physician-query-management.html" class="mobile-submenu-link">Physician Query Management</a>
+            </div>
+
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title">Patient Financial Services &amp; Recovery</h4>
+              <a href="claims-management-scrubbing.html" class="mobile-submenu-link parent">Claims Management Services</a>
+              <a href="claims-management-scrubbing.html" class="mobile-submenu-sublink">&rsaquo; Claims Submission &amp; Scrubbing EDI 837</a>
+              <a href="payment-posting-reconciliation.html" class="mobile-submenu-sublink">&rsaquo; Payment Posting &amp; Reconciliation EDI 835</a>
+              <a href="ar-management.html" class="mobile-submenu-link">A/R Management Services</a>
+              <a href="denial-management.html" class="mobile-submenu-link">Denial Management &amp; Appeals</a>
+              <a href="payer-contract-modeling.html" class="mobile-submenu-link">Underpayment Recovery &amp; Contract Compliance</a>
+              <a href="patient-billing-collections.html" class="mobile-submenu-link">Patient Billing &amp; Self-Pay Collections</a>
+              <a href="credit-balance-resolution.html" class="mobile-submenu-link">Credit Balance &amp; Refund Management</a>
+              <a href="edi-enrollment.html" class="mobile-submenu-link">EDI Enrollment Services</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="../ai-platform.html" class="mobile-nav-link">Nova Arc AI Platform <span class="nav-badge">New</span></a></li>
+        <li><a href="../who-we-serve.html" class="mobile-nav-link">Who We Serve <span>&rarr;</span></a></li>
+        <li><a href="../contact.html" class="mobile-nav-link">Contact <span>&rarr;</span></a></li>
+      </ul>
+      <div class="mobile-nav-bottom">
+        <a href="tel:18005558942" class="btn btn-secondary">Call (800) 555-NOVA</a>
+        <a href="../contact.html" class="btn btn-primary">Request a Demo</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ========================================================================
+       1. BREADCRUMB & 2. HERO SECTION
+       ======================================================================== -->
+  <section class="page-hero" id="hero">
+    <div class="container">
+      <!-- 1. Breadcrumb -->
+      <nav class="breadcrumb-nav" aria-label="Breadcrumbs">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="../services.html">Services</a>
+        <span class="breadcrumb-separator">/</span>
+        <span style="color: var(--text-primary); font-weight: 600;">Prior Authorization &amp; Referral Management</span>
+      </nav>
+
+      <!-- 2. Hero Content -->
+      <div class="page-hero-content">
+        <span class="section-tag">Clinical Access &amp; Clearance</span>
+        <h1 class="page-hero-title">
+          Prior Authorization &amp; Referral Management
+        </h1>
+        <p class="page-hero-subtitle">
+          Autonomous EDI 278 transactions, intelligent payer portal robotics, and clinical chart abstraction delivering sub-48-hour approvals and zero surgical case cancellations.
+        </p>
+
+        <!-- Master KPI Stat Banner -->
+        <div style="display: inline-flex; align-items: center; gap: 14px; background: rgba(31, 111, 235, 0.08); border: 1px solid var(--blue-accent-border); padding: 12px 20px; border-radius: var(--radius-lg); margin-bottom: var(--space-xl); box-shadow: var(--shadow-sm);">
+          <div style="font-size: 1.85rem; font-weight: 800; color: var(--blue-accent); line-height: 1;">
+            96.4%
+          </div>
+          <div style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.4;">
+            <strong style="color: var(--navy-primary); display: block;">First-Pass Prior Authorization Approval Rate</strong>
+            Reducing surgical turnaround from 10 days to under 48 hours and eliminating CARC 197 denials
+          </div>
+        </div>
+
+        <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
+          <a href="../contact.html?service=prior-authorization" class="btn btn-primary">
+            Schedule an Authorization Review
+          </a>
+          <a href="#edi-278-timeline" class="btn btn-secondary">
+            View EDI 278 Approval Timeline &darr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       3. "THE PROBLEM" SECTION (Executive Pain Points)
+       ======================================================================== -->
+  <section class="section section-light" id="problem">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Operational Friction</span>
+        <h2 class="section-title">The High Cost of Prior-Auth Gridlock</h2>
+        <p class="section-subtitle">
+          Prior authorization has become the single greatest operational roadblock for procedural facilities. Here is why manual pre-certifications erode surgical margin.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        <!-- Problem 1 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <span class="pillar-number">PROBLEM 01</span>
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-sm);">
+            OR Cancellations &amp; Block Time Atrophy
+          </h3>
+          <p style="font-size: 0.925rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-md);">
+            When a commercial payer takes 10 to 14 days to approve an arthroscopy or spinal decompression, the surgical suite sits empty. ASCs forfeit <strong>$1,800 to $2,500 per lost operating room hour</strong> when unapproved cases are cancelled 24 hours before surgery.
+          </p>
+          <div style="font-size: 0.8rem; font-weight: 700; color: var(--status-danger); background: var(--status-danger-light); padding: 6px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(239, 68, 68, 0.2);">
+            Impact: 12% to 15% Annual Operating Margin Degradation
+          </div>
+        </div>
+
+        <!-- Problem 2 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="9" y1="15" x2="15" y2="15"></line>
+            </svg>
+          </div>
+          <span class="pillar-number">PROBLEM 02</span>
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-sm);">
+            Portal Fragmentation &amp; Administrative Churn
+          </h3>
+          <p style="font-size: 0.925rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-md);">
+            Surgical coordinators toggle across 15+ different payer portals (Availity, CoverMyMeds, Optum, eviCore, AIM), manually re-typing operative indications and uploading PDF packets. Clinical staff spend an average of <strong>2.4 hours per surgical authorization</strong> on administrative typing.
+          </p>
+          <div style="font-size: 0.8rem; font-weight: 700; color: var(--status-danger); background: var(--status-danger-light); padding: 6px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(239, 68, 68, 0.2);">
+            Impact: Staff Burnout &amp; High Intake Turnover
+          </div>
+        </div>
+
+        <!-- Problem 3 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+              <line x1="1" y1="10" x2="23" y2="10"></line>
+            </svg>
+          </div>
+          <span class="pillar-number">PROBLEM 03</span>
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-sm);">
+            Fatal CARC 197 Denials &amp; Unapproved Add-Ons
+          </h3>
+          <p style="font-size: 0.925rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-md);">
+            Surgeons perform necessary add-on procedures during surgery (e.g., unexpected meniscectomy during ligament reconstruction) without prior pre-certification. Payers deny the facility fee under CARC 197 (Precertification absent), turning thousands in implant costs into total write-offs.
+          </p>
+          <div style="font-size: 0.8rem; font-weight: 700; color: var(--status-danger); background: var(--status-danger-light); padding: 6px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(239, 68, 68, 0.2);">
+            Impact: Permanent Administrative Write-Offs
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       4. EDI 278 SUBMISSION-TO-APPROVAL TIMELINE VISUAL
+       ======================================================================== -->
+  <section class="section" id="edi-278-timeline">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Autonomous Lifecycle</span>
+        <h2 class="section-title">EDI 278 Submission-to-Approval Timeline</h2>
+        <p class="section-subtitle">
+          How Nova Arc condenses the traditional 10-day prior authorization maze into an orchestrated sub-48-hour automated clinical clearance sequence.
+        </p>
+      </div>
+
+      <!-- Timeline Container Canvas -->
+      <div class="showcase-preview-box" style="padding: var(--space-2xl); border-radius: var(--radius-xl); background: linear-gradient(135deg, #051324 0%, #0E2F56 100%);">
+        
+        <div class="preview-box-header" style="margin-bottom: var(--space-xl);">
+          <div>
+            <span style="font-size: 1rem; font-weight: 800; color: #FFFFFF; display: block;">ANSI X12 278 Health Care Services Review Lifecycle</span>
+            <span style="font-size: 0.775rem; color: #94A3B8;">Real-Time Electronic Pre-Certification &amp; Attachment Assembly</span>
+          </div>
+          <span class="preview-badge-status">
+            Automated Tracking Active
+          </span>
+        </div>
+
+        <!-- 5-Stage Chronological Timeline Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: var(--space-md); position: relative;">
+          
+          <!-- Milestone 1 -->
+          <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-lg); padding: var(--space-lg); position: relative;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+              <span class="preview-item-tag tag-blue" style="font-size: 0.75rem;">Hour 0.0</span>
+              <span style="font-size: 0.7rem; color: #94A3B8; font-weight: 700;">EHR ORDER</span>
+            </div>
+            <div style="width: 36px; height: 36px; border-radius: var(--radius-md); background: rgba(31, 111, 235, 0.2); color: #38BDF8; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+              </svg>
+            </div>
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Surgical Order Ingested</h4>
+            <p style="font-size: 0.775rem; color: #CBD5E1; line-height: 1.45; margin-bottom: 10px;">
+              Surgeon books procedural CPT codes in PM/EHR. Nova Arc flags pre-cert mandate instantly via EDI 270 benefit parsing.
+            </p>
+            <div style="font-family: monospace; font-size: 0.675rem; color: #7DD3FC; background: rgba(0, 0, 0, 0.35); padding: 4px 6px; border-radius: var(--radius-sm);">
+              Draft Auth Initialized
+            </div>
+          </div>
+
+          <!-- Milestone 2 -->
+          <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-lg); padding: var(--space-lg); position: relative;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+              <span class="preview-item-tag tag-blue" style="font-size: 0.75rem;">Hour 2.0</span>
+              <span style="font-size: 0.7rem; color: #38BDF8; font-weight: 700;">NLP SCRUB</span>
+            </div>
+            <div style="width: 36px; height: 36px; border-radius: var(--radius-md); background: rgba(56, 189, 248, 0.2); color: #38BDF8; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Clinical Data Assembly</h4>
+            <p style="font-size: 0.775rem; color: #CBD5E1; line-height: 1.45; margin-bottom: 10px;">
+              Clinical NLP extracts conservative treatment duration (PT notes, injection dates, MRI reports) matching InterQual/MCG guidelines.
+            </p>
+            <div style="font-family: monospace; font-size: 0.675rem; color: #7DD3FC; background: rgba(0, 0, 0, 0.35); padding: 4px 6px; border-radius: var(--radius-sm);">
+              Medical Necessity Packet Ready
+            </div>
+          </div>
+
+          <!-- Milestone 3 -->
+          <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-lg); padding: var(--space-lg); position: relative;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+              <span class="preview-item-tag tag-green" style="font-size: 0.75rem;">Hour 4.0</span>
+              <span style="font-size: 0.7rem; color: #10B981; font-weight: 700;">EDI DISPATCH</span>
+            </div>
+            <div style="width: 36px; height: 36px; border-radius: var(--radius-md); background: rgba(16, 185, 129, 0.2); color: #10B981; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </div>
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">EDI 278 Request Stream</h4>
+            <p style="font-size: 0.775rem; color: #CBD5E1; line-height: 1.45; margin-bottom: 10px;">
+              Transmits ANSI 278 Request packet or launches Headless RPA directly into payer portals, uploading PWK clinical attachments automatically.
+            </p>
+            <div style="font-family: monospace; font-size: 0.675rem; color: #86EFAC; background: rgba(0, 0, 0, 0.35); padding: 4px 6px; border-radius: var(--radius-sm);">
+              EDI 278 Transmitted (Ack Recvd)
+            </div>
+          </div>
+
+          <!-- Milestone 4 -->
+          <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-lg); padding: var(--space-lg); position: relative;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+              <span class="preview-item-tag tag-blue" style="font-size: 0.75rem;">Hour 24-36</span>
+              <span style="font-size: 0.7rem; color: #38BDF8; font-weight: 700;">AUTONOMOUS POLL</span>
+            </div>
+            <div style="width: 36px; height: 36px; border-radius: var(--radius-md); background: rgba(56, 189, 248, 0.2); color: #38BDF8; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 6v6l4 2"></path>
+              </svg>
+            </div>
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Payer Decision Intercept</h4>
+            <p style="font-size: 0.775rem; color: #CBD5E1; line-height: 1.45; margin-bottom: 10px;">
+              Monitors adjudication status hourly. If a peer-to-peer review is flagged, Nova Arc schedules the call and produces a physician briefing sheet.
+            </p>
+            <div style="font-family: monospace; font-size: 0.675rem; color: #7DD3FC; background: rgba(0, 0, 0, 0.35); padding: 4px 6px; border-radius: var(--radius-sm);">
+              278 Response Status: Certified
+            </div>
+          </div>
+
+          <!-- Milestone 5 -->
+          <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-lg); padding: var(--space-lg); position: relative;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+              <span class="preview-item-tag tag-green" style="font-size: 0.75rem;">Hour 48.0</span>
+              <span style="font-size: 0.7rem; color: #10B981; font-weight: 700;">CLEARED</span>
+            </div>
+            <div style="width: 36px; height: 36px; border-radius: var(--radius-md); background: rgba(16, 185, 129, 0.2); color: #10B981; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">EHR Auto-Write &amp; Lock</h4>
+            <p style="font-size: 0.775rem; color: #CBD5E1; line-height: 1.45; margin-bottom: 10px;">
+              Writes approval number, authorized date window, and allowed CPT units directly into surgical scheduling modules. Surgery proceeds on schedule.
+            </p>
+            <div style="font-family: monospace; font-size: 0.675rem; color: #86EFAC; background: rgba(0, 0, 0, 0.35); padding: 4px 6px; border-radius: var(--radius-sm);">
+              Auth Attached to OR Case #7741
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Telemetry Status Footer -->
+        <div style="margin-top: var(--space-xl); background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--radius-md); padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: #10B981; box-shadow: 0 0 8px #10B981;"></div>
+            <span style="font-size: 0.85rem; color: #E2E8F0; font-weight: 600;">Average Surgical Turnaround: <strong>31.2 Hours</strong> (vs. 9.8 Days Industry Standard)</span>
+          </div>
+          <span style="font-size: 0.775rem; color: #94A3B8;">Full Integration: Epic, Cerner, AthenaHealth, HST Pathways</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       5. PAYER PORTAL AUTOMATION EXPLAINER & BEFORE/AFTER COMPARISON
+       ======================================================================== -->
+  <section class="section section-light" id="portal-automation">
+    <div class="container">
+      
+      <!-- Part A: Payer Portal Automation Explainer -->
+      <div style="margin-bottom: var(--space-4xl);">
+        <div class="section-header">
+          <span class="section-tag">Robotic Process Intelligence</span>
+          <h2 class="section-title">Payer Portal Automation Explainer</h2>
+          <p class="section-subtitle">
+            Not all health plans accept direct ANSI 278 EDI transmissions. Here is how Nova Arc's intelligent portal robotics automate the 15+ proprietary commercial payer gateways.
+          </p>
+        </div>
+
+        <div class="pillar-card" style="padding: var(--space-2xl); background: #FFFFFF; box-shadow: var(--shadow-md);">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-lg); border-bottom: 1px solid var(--border-light); padding-bottom: var(--space-md);">
+            <div class="preview-item-icon" style="background: rgba(31, 111, 235, 0.15); color: var(--blue-accent); width: 34px; height: 34px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--navy-primary); margin: 0;">
+              Automated 5-Step Portal Execution Sequence
+            </h3>
+          </div>
+
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--space-lg); padding: 0;">
+            <li style="display: flex; align-items: flex-start; gap: 14px;">
+              <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--blue-accent-light); color: var(--blue-accent); font-weight: 800; font-size: 0.8rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+                1
+              </div>
+              <div>
+                <strong style="color: var(--navy-primary); font-size: 0.975rem; display: block; margin-bottom: 2px;">
+                  Clinical EMR Extraction &amp; Chart Scrubbing:
+                </strong>
+                <span style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.55;">
+                  Specialized healthcare NLP agents parse provider clinical notes, operative plans, radiology MRI/CT narratives, and conservative treatment timelines directly from your EHR without manual copy-pasting.
+                </span>
+              </div>
+            </li>
+
+            <li style="display: flex; align-items: flex-start; gap: 14px;">
+              <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--blue-accent-light); color: var(--blue-accent); font-weight: 800; font-size: 0.8rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+                2
+              </div>
+              <div>
+                <strong style="color: var(--navy-primary); font-size: 0.975rem; display: block; margin-bottom: 2px;">
+                  Payer Clinical Guideline Crosswalking:
+                </strong>
+                <span style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.55;">
+                  Algorithms match the extracted documentation against specific payer medical necessity criteria (e.g., InterQual, MCG, eviCore, AIM Specialty Health), validating that all mandatory clinical preconditions are met prior to submission.
+                </span>
+              </div>
+            </li>
+
+            <li style="display: flex; align-items: flex-start; gap: 14px;">
+              <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--blue-accent-light); color: var(--blue-accent); font-weight: 800; font-size: 0.8rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+                3
+              </div>
+              <div>
+                <strong style="color: var(--navy-primary); font-size: 0.975rem; display: block; margin-bottom: 2px;">
+                  Headless RPA Portal Navigation &amp; Packet Dispatch:
+                </strong>
+                <span style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.55;">
+                  Automated browser bots authenticate into proprietary payer portals (Availity, Optum, Humana, UnitedHealthcare, CoverMyMeds), populate demographic fields, select correct CPT/HCPCS modifiers, and upload required PDF attachments.
+                </span>
+              </div>
+            </li>
+
+            <li style="display: flex; align-items: flex-start; gap: 14px;">
+              <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--blue-accent-light); color: var(--blue-accent); font-weight: 800; font-size: 0.8rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+                4
+              </div>
+              <div>
+                <strong style="color: var(--navy-primary); font-size: 0.975rem; display: block; margin-bottom: 2px;">
+                  Continuous Status Polling &amp; Payer Feedback Intercept:
+                </strong>
+                <span style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.55;">
+                  Bots monitor submission queues on a scheduled hourly cadence, immediately extracting determination notices, approved reference numbers, authorized date ranges, or requests for additional clinical information (RFI).
+                </span>
+              </div>
+            </li>
+
+            <li style="display: flex; align-items: flex-start; gap: 14px;">
+              <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--blue-accent-light); color: var(--blue-accent); font-weight: 800; font-size: 0.8rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+                5
+              </div>
+              <div>
+                <strong style="color: var(--navy-primary); font-size: 0.975rem; display: block; margin-bottom: 2px;">
+                  Closed-Loop PM/EHR Synchronization:
+                </strong>
+                <span style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.55;">
+                  Upon approval, the authorization tracking ID and verified CPT units are written back into discrete database fields in your practice management system, clearing the patient on the surgical schedule with zero human data entry.
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Part B: Sample "Before / After" Turnaround Time Comparison -->
+      <div id="before-after-comparison">
+        <div class="section-header">
+          <span class="section-tag">Measurable Operational Impact</span>
+          <h2 class="section-title">Before &amp; After Turnaround Time Comparison</h2>
+          <p class="section-subtitle">
+            See the transformative difference between conventional manual pre-authorization workflows and Nova Arc's automated clinical clearance engine.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2xl);" class="contact-faq-grid">
+          
+          <!-- Column 1: Before Nova Arc -->
+          <div class="pillar-card" style="border-top: 4px solid var(--status-danger); background: #FFFFFF; box-shadow: var(--shadow-sm);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md);">
+              <span style="font-size: 0.8rem; font-weight: 800; color: var(--status-danger); text-transform: uppercase; letter-spacing: 0.05em;">
+                Traditional Manual Workflow
+              </span>
+              <span class="preview-item-tag" style="background: rgba(239, 68, 68, 0.12); color: var(--status-danger);">High Friction</span>
+            </div>
+
+            <div style="margin-bottom: var(--space-lg);">
+              <div style="font-size: 2.25rem; font-weight: 800; color: var(--status-danger); line-height: 1;">
+                7 – 14 Days
+              </div>
+              <div style="font-size: 0.825rem; color: var(--text-muted); font-weight: 600;">Average Surgical Authorization Turnaround</div>
+            </div>
+
+            <ul class="service-feature-checklist" style="display: flex; flex-direction: column; gap: 12px; margin-bottom: var(--space-lg);">
+              <li style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.875rem; color: var(--text-secondary);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                <span><strong>2.4 Hours Staff Time:</strong> Spent per surgical case logging into portals, uploading charts, and waiting on payer phone holds.</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.875rem; color: var(--text-secondary);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                <span><strong>12.8% OR Cancellation Rate:</strong> High rate of day-before case reschedules due to unapproved pre-certifications.</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.875rem; color: var(--text-secondary);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                <span><strong>74.2% First-Pass Approval:</strong> Frequent initial rejections due to incomplete medical necessity packets.</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.875rem; color: var(--text-secondary);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                <span><strong>CARC 197 Write-Off Exposure:</strong> High risk of retroactive claim denials on complex multi-code cases.</span>
+              </li>
+            </ul>
+
+            <div style="background: var(--status-danger-light); padding: 10px 14px; border-radius: var(--radius-md); font-size: 0.8rem; color: #991B1B; font-weight: 600;">
+              Result: Substantial lost OR block revenue and administrative frustration
+            </div>
+          </div>
+
+          <!-- Column 2: After Nova Arc -->
+          <div class="pillar-card" style="border-top: 4px solid var(--status-success); background: #FFFFFF; box-shadow: var(--shadow-lg);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md);">
+              <span style="font-size: 0.8rem; font-weight: 800; color: var(--status-success); text-transform: uppercase; letter-spacing: 0.05em;">
+                Nova Arc Autonomous Clearance
+              </span>
+              <span class="preview-item-tag tag-green">96.4% Approval Rate</span>
+            </div>
+
+            <div style="margin-bottom: var(--space-lg);">
+              <div style="font-size: 2.25rem; font-weight: 800; color: var(--status-success); line-height: 1;">
+                &lt; 24 – 48 Hours
+              </div>
+              <div style="font-size: 0.825rem; color: var(--text-muted); font-weight: 600;">Average Surgical Authorization Turnaround</div>
+            </div>
+
+            <ul class="service-feature-checklist" style="display: flex; flex-direction: column; gap: 12px; margin-bottom: var(--space-lg);">
+              <li style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.875rem; color: var(--text-secondary);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>&lt; 5 Minutes Staff Time:</strong> Automated clinical extraction and robotic submission eliminates manual data entry.</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.875rem; color: var(--text-secondary);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>&lt; 0.8% OR Cancellation Rate:</strong> Cases clear insurance days in advance, preserving surgical suite utilization.</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.875rem; color: var(--text-secondary);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>96.4% First-Pass Approval:</strong> Pre-screened against InterQual &amp; MCG medical necessity algorithms.</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.875rem; color: var(--text-secondary);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Zero CARC 197 Denials:</strong> Guaranteed pre-certification integrity under contract SLA covenants.</span>
+              </li>
+            </ul>
+
+            <div style="background: var(--status-success-light); padding: 10px 14px; border-radius: var(--radius-md); font-size: 0.8rem; color: #065F46; font-weight: 600;">
+              Result: Protected OR schedule, optimized surgical margin, and zero intake delays
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       6. SECTOR FOCUS: AMBULATORY SURGICAL CENTERS (ASCs)
+       ======================================================================== -->
+  <section class="section" id="asc-focus">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Dedicated Alignment</span>
+        <h2 class="section-title">Built For Ambulatory Surgical Centers (ASCs)</h2>
+        <p class="section-subtitle">
+          Engineered specifically to solve the high-stakes scheduling, costly implant pre-certifications, and multi-specialty caseloads of freestanding surgical facilities.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: var(--space-2xl);">
+        
+        <!-- ASC Card 1 -->
+        <article class="care-setting-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md);">
+              <span class="service-sla-chip">High-Acuity Surgical Focus</span>
+              <span style="font-size: 0.8rem; font-weight: 700; color: var(--blue-accent);">ASC Pillar 01</span>
+            </div>
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--navy-primary); margin-bottom: var(--space-sm);">
+              Orthopedic, Spine &amp; Joint Clearances
+            </h3>
+            <p style="font-size: 0.925rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-lg);">
+              Orthopedic and spine surgeries carry the strictest pre-authorization thresholds, requiring months of documented conservative therapy, physical therapy notes, and prior diagnostic imaging. Nova Arc synthesizes clinical narratives, verifies device implant codes, and clears complex procedures in 48 hours.
+            </p>
+            <ul class="service-feature-checklist" style="margin-bottom: var(--space-xl);">
+              <li class="service-checklist-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Automated conservative therapy documentation verification (PT, NSAIDs, injections)</span>
+              </li>
+              <li class="service-checklist-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Surgical hardware and biological implant pre-certification management</span>
+              </li>
+              <li class="service-checklist-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Peer-to-peer appeal preparation with physician talking points within 4 hours</span>
+              </li>
+            </ul>
+          </div>
+          <div style="border-top: 1px solid var(--border-light); padding-top: var(--space-md); display: flex; align-items: center; justify-content: space-between;">
+            <a href="../who-we-serve.html#asc" class="link-arrow" style="font-weight: 700; font-size: 0.9rem;">
+              Explore ASC Surgical Capabilities &rarr;
+            </a>
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Sub-48h Clearances</span>
+          </div>
+        </article>
+
+        <!-- ASC Card 2 -->
+        <article class="care-setting-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md);">
+              <span class="service-sla-chip">High-Throughput Surgical Focus</span>
+              <span style="font-size: 0.8rem; font-weight: 700; color: var(--blue-accent);">ASC Pillar 02</span>
+            </div>
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--navy-primary); margin-bottom: var(--space-sm);">
+              Ophthalmology, Pain &amp; GI Procedural Pods
+            </h3>
+            <p style="font-size: 0.925rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-lg);">
+              Cataract surgery with premium IOL lenses, pain management radiofrequency ablations, and upper/lower endoscopies require rapid volume authorization. Nova Arc establishes high-throughput submission pipelines that secure fast approvals without consuming front-desk coordinator hours.
+            </p>
+            <ul class="service-feature-checklist" style="margin-bottom: var(--space-xl);">
+              <li class="service-checklist-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>High-volume batch submission for routine ophthalmology &amp; GI procedures</span>
+              </li>
+              <li class="service-checklist-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Automated bilateral modifier pre-authorization (-50, -RT, -LT)</span>
+              </li>
+              <li class="service-checklist-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Direct integration with HST Pathways, SIS, and Epic for ASCs</span>
+              </li>
+            </ul>
+          </div>
+          <div style="border-top: 1px solid var(--border-light); padding-top: var(--space-md); display: flex; align-items: center; justify-content: space-between;">
+            <a href="../who-we-serve.html#asc" class="link-arrow" style="font-weight: 700; font-size: 0.9rem;">
+              View ASC Procedural Workflows &rarr;
+            </a>
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">96.4% Approval Rate</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       7. SLA & BENCHMARK STRIP
+       ======================================================================== -->
+  <section class="section section-light" id="sla-benchmarks" style="padding-top: var(--space-2xl); padding-bottom: var(--space-2xl);">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: var(--space-xl);">
+        <span class="section-tag">Performance Covenants</span>
+        <h2 class="section-title">Operational SLAs &amp; Prior-Auth Benchmarks</h2>
+        <p class="section-subtitle">
+          Contractual speed, approval rates, and clearance standards backing our dedicated surgical authorization pods.
+        </p>
+      </div>
+
+      <!-- 4-Box Metrics Strip -->
+      <div class="ai-hero-stats-strip">
+        <div class="ai-hero-stat-box">
+          <div class="ai-stat-highlight">&lt; 24h</div>
+          <div class="ai-stat-sublabel">Initiation from Physician Order</div>
+        </div>
+        <div class="ai-hero-stat-box">
+          <div class="ai-stat-highlight">96.4%</div>
+          <div class="ai-stat-sublabel">First-Pass Prior-Auth Approval Rate</div>
+        </div>
+        <div class="ai-hero-stat-box">
+          <div class="ai-stat-highlight">&lt; 0.8%</div>
+          <div class="ai-stat-sublabel">OR Case Rescheduling Rate</div>
+        </div>
+        <div class="ai-hero-stat-box">
+          <div class="ai-stat-highlight">0.0%</div>
+          <div class="ai-stat-sublabel">CARC 197 Authorization Denials</div>
+        </div>
+      </div>
+
+      <p style="text-align: center; font-size: 0.8rem; color: var(--text-muted); margin-top: var(--space-md); font-style: italic;">
+        * Illustrative benchmark standards based on aggregated Nova Arc ASC and surgical partner operational SLA covenants.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       8. FAQ ACCORDION (Reused Accordion Pattern)
+       ======================================================================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Executive FAQ</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Direct guidance on peer-to-peer appeals, clinical documentation parsing, and ASC scheduling integrations.
+        </p>
+      </div>
+
+      <div class="services-accordion-list" style="max-width: 920px; margin: 0 auto;">
+
+        <!-- FAQ Item 1 -->
+        <div class="service-accordion-item open">
+          <button type="button" class="service-accordion-header" aria-expanded="true">
+            <div class="accordion-title-box">
+              <div class="service-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+              </div>
+              <div class="service-header-content">
+                <h3 class="service-name">How does Nova Arc handle peer-to-peer reviews when a commercial payer flags a denial?</h3>
+              </div>
+            </div>
+            <div class="accordion-meta-box">
+              <div class="accordion-chevron-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+          </button>
+          <div class="service-accordion-body">
+            <div class="service-body-inner" style="padding: var(--space-lg) var(--space-xl);">
+              <p style="color: var(--text-secondary); line-height: 1.65; font-size: 0.95rem;">
+                When a payer medical director requests a peer-to-peer clinical discussion, Nova Arc’s clinical pod handles 90% of the logistical heavy lifting. We contact the payer to schedule the call based on your surgeon's exact availability, compile a comprehensive one-page clinical dossier with the exact policy criteria citation, highlighted MRI/CT reports, and conservative therapy dates, and deliver it to your surgeon 30 minutes before the call. Over 89% of our scheduled peer-to-peer reviews result in immediate verbal overturning.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="service-accordion-item">
+          <button type="button" class="service-accordion-header" aria-expanded="false">
+            <div class="accordion-title-box">
+              <div class="service-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+              </div>
+              <div class="service-header-content">
+                <h3 class="service-name">Can Nova Arc handle add-on procedural codes during complex surgical cases?</h3>
+              </div>
+            </div>
+            <div class="accordion-meta-box">
+              <div class="accordion-chevron-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+          </button>
+          <div class="service-accordion-body">
+            <div class="service-body-inner" style="padding: var(--space-lg) var(--space-xl);">
+              <p style="color: var(--text-secondary); line-height: 1.65; font-size: 0.95rem;">
+                Yes. For surgical cases with potential procedural extensions (e.g., knee arthroscopy with possible lateral release or chondroplasty), Nova Arc submits preemptive provisional codes based on surgeon standard preference cards. If an unforeseen procedure is performed, our team initiates a retro-authorization amendment within 24 hours of operative report sign-off to ensure complete billing coverage before claim dispatch.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="service-accordion-item">
+          <button type="button" class="service-accordion-header" aria-expanded="false">
+            <div class="accordion-title-box">
+              <div class="service-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+              </div>
+              <div class="service-header-content">
+                <h3 class="service-name">How do your robotic automation bots connect with ASC practice management systems like HST Pathways or SIS?</h3>
+              </div>
+            </div>
+            <div class="accordion-meta-box">
+              <div class="accordion-chevron-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+          </button>
+          <div class="service-accordion-body">
+            <div class="service-body-inner" style="padding: var(--space-lg) var(--space-xl);">
+              <p style="color: var(--text-secondary); line-height: 1.65; font-size: 0.95rem;">
+                Nova Arc operates standard bi-directional interfaces with all leading ASC platforms including HST Pathways, Surgical Information Systems (SIS), AmkaiCharts, Epic, and Cerner. We read operative schedules automatically to identify pending cases and write verified pre-cert numbers, valid date spans, and allowed units directly into discrete scheduling tables without manual staff intervention.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="service-accordion-item">
+          <button type="button" class="service-accordion-header" aria-expanded="false">
+            <div class="accordion-title-box">
+              <div class="service-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+              </div>
+              <div class="service-header-content">
+                <h3 class="service-name">What is your turnaround SLA when a surgical case is added on short notice?</h3>
+              </div>
+            </div>
+            <div class="accordion-meta-box">
+              <div class="accordion-chevron-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+          </button>
+          <div class="service-accordion-body">
+            <div class="service-body-inner" style="padding: var(--space-lg) var(--space-xl);">
+              <p style="color: var(--text-secondary); line-height: 1.65; font-size: 0.95rem;">
+                For urgent or add-on surgical cases booked within 24 to 72 hours of surgery, our rapid-response clinical pod executes stat pre-certifications. We initiate urgent clinical reviews with payer medical triage lines within 2 hours of case notification, tracking progress every 30 minutes until clearance is secured.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       9. CTA BAND (Pre-Filled Query Param Link)
+       ======================================================================== -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="solutions-cta-strip">
+        <h2 class="cta-strip-title">Never Cancel Another Surgery Due to Prior-Auth Delays</h2>
+        <p class="cta-strip-desc">
+          Schedule a personalized operational assessment for your ASC or surgical group and discover how Nova Arc accelerates approvals to under 48 hours with a 96.4% first-pass clearance rate.
+        </p>
+        <div class="cta-strip-buttons">
+          <a href="../contact.html?service=prior-authorization" class="btn btn-primary" id="btn-schedule-prior-auth-review">
+            Schedule an Authorization Review
+          </a>
+          <a href="tel:18005558942" class="btn btn-outline-white">
+            Call (800) 555-NOVA
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       10. FOOTER (Shared Partial with Relative Links)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand-col">
+          <a href="../index.html" class="footer-logo">
+            <img src="../images/nova-arc-logo.png" alt="Nova Arc Logo" class="footer-logo-img" width="38" height="33">
+            <span class="footer-logo-text">Nova<span style="color: #38BDF8;">Arc</span></span>
+          </a>
+          <p class="footer-brand-desc">
+            Pioneering the future of intelligent healthcare revenue cycle operations with autonomous AI claim adjudication, dedicated certified billing, and guaranteed cash flow acceleration.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X / Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Solutions -->
+        <div>
+          <h4 class="footer-col-title">Solutions</h4>
+          <ul class="footer-links-list">
+            <li><a href="../solutions.html#patient-access" class="footer-link">Patient Access</a></li>
+            <li><a href="../solutions.html#him" class="footer-link">Health Info Management</a></li>
+            <li><a href="../solutions.html#ebo" class="footer-link">Extended Business Office</a></li>
+            <li><a href="../solutions.html#analytics" class="footer-link">Analytics &amp; Reporting</a></li>
+            <li><a href="../ai-platform.html" class="footer-link">Nova Arc AI Platform</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="real-time-insurance-eligibility.html" class="footer-link">Insurance Eligibility &amp; Auth</a></li>
+            <li><a href="full-cycle-medical-coding.html" class="footer-link">Medical Coding &amp; CDI</a></li>
+            <li><a href="claims-management-scrubbing.html" class="footer-link">Claims Management &amp; Scrubbing</a></li>
+            <li><a href="denial-management.html" class="footer-link">Denial &amp; Appeals Recovery</a></li>
+            <li><a href="ar-management.html" class="footer-link">A/R Management &amp; Collections</a></li>
+            <li><a href="../services.html" class="footer-link" style="color: #38BDF8; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">Explore All 24+ Services &rarr;</a></li>
+          </ul>
+        </div>
+
+                        <!-- Col 4: Who We Serve -->
+        <div>
+          <h4 class="footer-col-title">Who We Serve</h4>
+          <ul class="footer-links-list">
+            <li><a href="../who-we-serve.html#asc" class="footer-link">Ambulatory Surgery Centers</a></li>
+            <li><a href="../who-we-serve.html#urgent-care" class="footer-link">Urgent Care Clinics</a></li>
+            <li><a href="../who-we-serve.html#pt-ot-rehab" class="footer-link">Physical &amp; Rehab</a></li>
+            <li><a href="../who-we-serve.html#behavioral-health" class="footer-link">Behavioral Health</a></li>
+            <li><a href="../index.html#who-we-serve" class="footer-link">Health Systems &amp; Hospitals</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Contact Info -->
+        <div>
+          <h4 class="footer-col-title">Headquarters</h4>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>100 Innovation Way, Suite 400<br>Boston, MA 02110</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>(800) 555-NOVA (6682)</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>contact@novaarc-rcm.com</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              <span>Hours: Mon - Fri: 8:00 AM - 8:00 PM EST</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-flex">
+          <p class="copyright-text">
+            &copy; 2026 Nova Arc Healthcare Technologies LLC. All rights reserved. Transforming healthcare revenue cycle management through autonomous artificial intelligence and certified human expertise.
+          </p>
+          <div class="footer-legal-links">
+            <a href="../contact.html" class="legal-link">Privacy Policy</a>
+            <span class="legal-separator">&bull;</span>
+            <a href="../contact.html" class="legal-link">Terms of Service</a>
+            <span class="legal-separator">&bull;</span>
+            <a href="../contact.html" class="legal-link">HIPAA Security &amp; Compliance</a>
+            <span class="legal-separator">&bull;</span>
+            <a href="../contact.html" class="legal-link">System Status</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript (Reused) -->
+  <script src="../js/main.js"></script>
+</body>
+</html>

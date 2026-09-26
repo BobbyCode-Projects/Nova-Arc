@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CDM Pricing Audit &amp; Missed-Charge Reconciliation | Nova Arc</title>
+  <meta name="description" content="Chargemaster (CDM) pricing audits, CMS price transparency compliance, and automated missed-charge reconciliation for Hospital-Based Groups (Radiology, Pathology, and Anesthesia).">
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nova Arc Healthcare Technologies">
+  <meta property="og:title" content="CDM Pricing Audit &amp; Missed-Charge Reconciliation | Nova Arc">
+  <meta property="og:description" content="Capture 100% of earned revenue: Automated clinical source log reconciliation (PACS, LIS, AIMS) and defensible Chargemaster pricing for hospital-based medical groups.">
+  <meta property="og:url" content="https://novaarc-rcm.com/services/cdm-charge-capture.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CDM Pricing Audit &amp; Missed-Charge Reconciliation | Nova Arc">
+  <meta name="twitter:description" content="Eliminate charge leakage, reconcile clinical logs against billed claims, and optimize fee schedules for Radiology, Pathology, and Anesthesia practices.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../images/nova-arc-logo.png">
+
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet (Reused) -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NOVAARC001"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NOVAARC001', {
+      'anonymize_ip': true,
+      'cookie_flags': 'SameSite=None;Secure'
+    });
+  </script>
+
+  <!-- Schema.org JSON-LD: BreadcrumbList + Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://novaarc-rcm.com/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://novaarc-rcm.com/services.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "CDM Pricing Audit & Missed-Charge Reconciliation",
+            "item": "https://novaarc-rcm.com/services/cdm-charge-capture.html"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://novaarc-rcm.com/services/cdm-charge-capture.html#service",
+        "name": "CDM Pricing Audit & Missed-Charge Reconciliation",
+        "serviceType": "Healthcare Revenue Cycle Management (RCM) - Charge Integrity & Mid-Revenue Cycle",
+        "provider": {
+          "@type": "Organization",
+          "name": "Nova Arc Healthcare Technologies",
+          "url": "https://novaarc-rcm.com/",
+          "logo": "https://novaarc-rcm.com/images/nova-arc-logo.png"
+        },
+        "description": "Comprehensive Chargemaster pricing reviews, price transparency compliance, and automated clinical source log reconciliation (PACS, LIS, AIMS) for Hospital-Based Groups.",
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Charge Integrity & CDM Audit Deliverables",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Enterprise Chargemaster (CDM) Rationalization & Fee Schedule Benchmarking"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Automated Clinical Source Log Reconciliation (PACS, LIS, AIMS)"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "CMS Hospital & Provider Price Transparency Compliance (Machine-Readable Files)"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Hospital-Based Split-Billing (TC/26) & Concurrency Integrity"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ========================================================================
+       STICKY NAVBAR (Shared Header Partial)
+       ======================================================================== -->
+      <header class="site-header" id="top">
+    <div class="container navbar">
+      <!-- Brand Logo -->
+      <a href="../index.html" class="logo" aria-label="Nova Arc Homepage">
+        <img src="../images/nova-arc-logo.png" alt="Nova Arc Logo" class="logo-img" width="38" height="33">
+        <span class="logo-text">Nova<span class="logo-highlight">Arc</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="../solutions.html" class="nav-link">Solutions</a></li>
+          
+          <!-- Services Dropdown (Mega-Menu) -->
+          <li class="nav-item-dropdown">
+            <button class="nav-link nav-dropdown-toggle active" id="servicesDropdownToggle" aria-haspopup="true" aria-expanded="false" aria-controls="servicesMegaMenu">
+              <span>Services</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+
+            <!-- Mega-Menu Light Panel -->
+            <div class="mega-menu-panel" id="servicesMegaMenu" role="menu" aria-labelledby="servicesDropdownToggle" aria-hidden="true">
+              <div class="mega-menu-inner container">
+                <div class="mega-menu-grid">
+                  <!-- Column 1: Patient Access & Front-End Integrity -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-1-heading">Patient Access &amp; Front-End Integrity</h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-1-heading">
+                      <li role="none">
+                        <a href="real-time-insurance-eligibility.html" class="mega-item standalone" role="menuitem">
+                          Insurance Eligibility &amp; Benefits Verification
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="prior-authorization-management.html" class="mega-item standalone" role="menuitem">
+                          Prior Authorization Management
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="patient-registration-verification.html" class="mega-item standalone" role="menuitem">
+                          Patient Scheduling &amp; Registration QA
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="financial-clearance-gfe.html" class="mega-item standalone" role="menuitem">
+                          Financial Clearance &amp; Good Faith Estimates
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="point-of-service-collections.html" class="mega-item standalone" role="menuitem">
+                          Point-of-Service Collections
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="referral-order-management.html" class="mega-item standalone" role="menuitem">
+                          Medical Necessity &amp; Order Verification
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Column 2: HIM & Coding -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-2-heading">HIM &amp; Coding</h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-2-heading">
+                      <!-- Parent Item: Medical Coding Services -->
+                      <li role="none" class="mega-parent-group">
+                        <a href="full-cycle-medical-coding.html" class="mega-item parent" role="menuitem">
+                          Medical Coding Services
+                        </a>
+                        <ul class="mega-sub-list" role="none">
+                          <li role="none">
+                            <a href="hcc-risk-adjustment.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Risk Adjustment/HCC Coding
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a href="full-cycle-medical-coding.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Facility/DRG Coding
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a href="full-cycle-medical-coding.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Professional Fee Coding
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li role="none">
+                        <a href="cdi-chart-auditing.html" class="mega-item standalone" role="menuitem">
+                          Clinical Documentation Improvement
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="cac-review.html" class="mega-item standalone" role="menuitem">
+                          Computer-Assisted Coding (CAC) Review
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="compliance-audit-defense.html" class="mega-item standalone" role="menuitem">
+                          Coding Compliance &amp; Audit Support
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="cdm-charge-capture.html" class="mega-item standalone" role="menuitem">
+                          Charge Capture &amp; CDM Audit
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="physician-query-management.html" class="mega-item standalone" role="menuitem">
+                          Physician Query Management
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Column 3: Patient Financial Services (PFS) & Recovery -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-3-heading">Patient Financial Services &amp; Recovery</h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-3-heading">
+                      <!-- Parent Item: Claims Management Services -->
+                      <li role="none" class="mega-parent-group">
+                        <a href="claims-management-scrubbing.html" class="mega-item parent" role="menuitem">
+                          Claims Management Services
+                        </a>
+                        <ul class="mega-sub-list" role="none">
+                          <li role="none">
+                            <a href="claims-management-scrubbing.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Claims Submission &amp; Scrubbing EDI 837
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a href="payment-posting-reconciliation.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Payment Posting &amp; Reconciliation EDI 835
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li role="none">
+                        <a href="ar-management.html" class="mega-item standalone" role="menuitem">
+                          A/R Management Services
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="denial-management.html" class="mega-item standalone" role="menuitem">
+                          Denial Management &amp; Appeals
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="payer-contract-modeling.html" class="mega-item standalone" role="menuitem">
+                          Underpayment Recovery &amp; Contract Compliance
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="patient-billing-collections.html" class="mega-item standalone" role="menuitem">
+                          Patient Billing &amp; Self-Pay Collections
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="credit-balance-resolution.html" class="mega-item standalone" role="menuitem">
+                          Credit Balance &amp; Refund Management
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="edi-enrollment.html" class="mega-item standalone" role="menuitem">
+                          EDI Enrollment Services
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <a href="../ai-platform.html" class="nav-link has-badge">
+              Nova Arc AI Platform
+              <span class="nav-badge">New</span>
+            </a>
+          </li>
+          <li><a href="../who-we-serve.html" class="nav-link">Who We Serve</a></li>
+          <li><a href="../contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Action Buttons -->
+      <div class="nav-actions">
+        <a href="tel:18005558942" class="nav-phone" aria-label="Call Nova Arc">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          (800) 555-NOVA
+        </a>
+        <a href="../contact.html" class="btn btn-primary btn-sm">Request a Demo</a>
+      </div>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-list">
+        <li><a href="../solutions.html" class="mobile-nav-link">Solutions <span>&rarr;</span></a></li>
+        <li class="mobile-accordion-item">
+          <button class="mobile-nav-link mobile-accordion-toggle" id="mobileServicesToggle" aria-expanded="false" aria-controls="mobileServicesSubmenu">
+            <span>Services</span>
+            <svg class="mobile-accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="mobile-submenu-collapse" id="mobileServicesSubmenu" aria-hidden="true">
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title">Patient Access &amp; Front-End</h4>
+              <a href="real-time-insurance-eligibility.html" class="mobile-submenu-link">Insurance Eligibility &amp; Benefits</a>
+              <a href="prior-authorization-management.html" class="mobile-submenu-link">Prior Authorization Management</a>
+              <a href="patient-registration-verification.html" class="mobile-submenu-link">Patient Scheduling &amp; Registration QA</a>
+              <a href="financial-clearance-gfe.html" class="mobile-submenu-link">Financial Clearance &amp; Good Faith Estimates</a>
+              <a href="point-of-service-collections.html" class="mobile-submenu-link">Point-of-Service Collections</a>
+              <a href="referral-order-management.html" class="mobile-submenu-link">Medical Necessity &amp; Order Verification</a>
+            </div>
+
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title">HIM &amp; Coding</h4>
+              <a href="full-cycle-medical-coding.html" class="mobile-submenu-link parent">Medical Coding Services</a>
+              <a href="hcc-risk-adjustment.html" class="mobile-submenu-sublink">&rsaquo; Risk Adjustment/HCC Coding</a>
+              <a href="full-cycle-medical-coding.html" class="mobile-submenu-sublink">&rsaquo; Facility/DRG &amp; ProFee Coding</a>
+              <a href="cdi-chart-auditing.html" class="mobile-submenu-link">Clinical Documentation Improvement</a>
+              <a href="cac-review.html" class="mobile-submenu-link">Computer-Assisted Coding (CAC) Review</a>
+              <a href="compliance-audit-defense.html" class="mobile-submenu-link">Coding Compliance &amp; Audit Support</a>
+              <a href="cdm-charge-capture.html" class="mobile-submenu-link">Charge Capture &amp; CDM Audit</a>
+              <a href="physician-query-management.html" class="mobile-submenu-link">Physician Query Management</a>
+            </div>
+
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title">Patient Financial Services &amp; Recovery</h4>
+              <a href="claims-management-scrubbing.html" class="mobile-submenu-link parent">Claims Management Services</a>
+              <a href="claims-management-scrubbing.html" class="mobile-submenu-sublink">&rsaquo; Claims Submission &amp; Scrubbing EDI 837</a>
+              <a href="payment-posting-reconciliation.html" class="mobile-submenu-sublink">&rsaquo; Payment Posting &amp; Reconciliation EDI 835</a>
+              <a href="ar-management.html" class="mobile-submenu-link">A/R Management Services</a>
+              <a href="denial-management.html" class="mobile-submenu-link">Denial Management &amp; Appeals</a>
+              <a href="payer-contract-modeling.html" class="mobile-submenu-link">Underpayment Recovery &amp; Contract Compliance</a>
+              <a href="patient-billing-collections.html" class="mobile-submenu-link">Patient Billing &amp; Self-Pay Collections</a>
+              <a href="credit-balance-resolution.html" class="mobile-submenu-link">Credit Balance &amp; Refund Management</a>
+              <a href="edi-enrollment.html" class="mobile-submenu-link">EDI Enrollment Services</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="../ai-platform.html" class="mobile-nav-link">Nova Arc AI Platform <span class="nav-badge">New</span></a></li>
+        <li><a href="../who-we-serve.html" class="mobile-nav-link">Who We Serve <span>&rarr;</span></a></li>
+        <li><a href="../contact.html" class="mobile-nav-link">Contact <span>&rarr;</span></a></li>
+      </ul>
+      <div class="mobile-nav-bottom">
+        <a href="tel:18005558942" class="btn btn-secondary">Call (800) 555-NOVA</a>
+        <a href="../contact.html" class="btn btn-primary">Request a Demo</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ========================================================================
+       1. BREADCRUMB & 2. HERO SECTION
+       ======================================================================== -->
+  <section class="page-hero" id="hero">
+    <div class="container">
+      <!-- 1. Breadcrumb -->
+      <nav class="breadcrumb-nav" aria-label="Breadcrumbs">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="../services.html">Services</a>
+        <span class="breadcrumb-separator">/</span>
+        <span style="color: var(--text-primary); font-weight: 600;">CDM Pricing Audit &amp; Missed-Charge Reconciliation</span>
+      </nav>
+
+      <!-- 2. Hero Content -->
+      <div class="page-hero-content">
+        <span class="section-tag">Mid-Revenue Cycle &amp; Charge Integrity • Service Blueprint</span>
+        <h1 class="page-hero-title">
+          CDM Pricing Audit &amp; Missed-Charge Reconciliation
+        </h1>
+        <p class="page-hero-subtitle">
+          Eliminate revenue leakage in Hospital-Based Groups (Radiology, Pathology, Anesthesia): Auditing Chargemaster fee schedules for defensible price transparency while reconciling PACS, LIS, and AIMS source logs against billed claims.
+        </p>
+
+        <!-- Master KPI Stat Banner -->
+        <div style="display: inline-flex; align-items: center; gap: 16px; background: rgba(31, 111, 235, 0.08); border: 1px solid var(--blue-accent-border); padding: 12px 22px; border-radius: var(--radius-lg); margin-bottom: var(--space-xl); box-shadow: var(--shadow-sm); flex-wrap: wrap;">
+          <div style="display: flex; align-items: baseline; gap: 8px;">
+            <div style="font-size: 2rem; font-weight: 800; color: var(--blue-accent); line-height: 1;">
+              +$1.4M
+            </div>
+            <span style="font-size: 0.85rem; color: var(--text-primary); font-weight: 600;">Average Annual Recovered Charge Revenue</span>
+          </div>
+          <div style="width: 1px; height: 24px; background: var(--border-medium); margin: 0 4px;"></div>
+          <div style="font-size: 0.85rem; color: var(--text-muted);">
+            <strong style="color: #10B981;">99.8%</strong> Cross-System Match • <strong style="color: #0284C7;">&lt; 48h</strong> Log-to-Bill Turnaround
+          </div>
+        </div>
+
+        <!-- Action CTAs -->
+        <div class="hero-actions" style="display: flex; gap: var(--space-md); flex-wrap: wrap; margin-bottom: var(--space-2xl);">
+          <a href="../contact.html?service=cdm-charge-capture" class="btn btn-primary btn-lg">
+            <span>Request a CDM &amp; Charge Audit</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#charge-reconciliation-visual" class="btn btn-secondary btn-lg">
+            <span>Explore Interactive Workflows</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- 4 Key Hero Badges -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: var(--space-md); margin-top: var(--space-md);">
+          
+          <div class="stat-card" style="padding: var(--space-md); background: #FFFFFF; border: 1px solid var(--border-medium); border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+            <div style="font-size: 1.6rem; font-weight: 800; color: var(--blue-accent); margin-bottom: 4px;">+8.2% – +14.6%</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary); font-weight: 600;">Net Revenue Uplift via Reconciliation</div>
+          </div>
+
+          <div class="stat-card" style="padding: var(--space-md); background: #FFFFFF; border: 1px solid var(--border-medium); border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+            <div style="font-size: 1.6rem; font-weight: 800; color: #10B981; margin-bottom: 4px;">100%</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary); font-weight: 600;">CMS Price Transparency Compliance</div>
+          </div>
+
+          <div class="stat-card" style="padding: var(--space-md); background: #FFFFFF; border: 1px solid var(--border-medium); border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+            <div style="font-size: 1.6rem; font-weight: 800; color: #0284C7; margin-bottom: 4px;">&lt; 48h</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary); font-weight: 600;">Clinical Log-to-Charge Lag SLA</div>
+          </div>
+
+          <div class="stat-card" style="padding: var(--space-md); background: #FFFFFF; border: 1px solid var(--border-medium); border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+            <div style="font-size: 1.6rem; font-weight: 800; color: #7C3AED; margin-bottom: 4px;">99.8%</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary); font-weight: 600;">Match Accuracy (PACS / LIS / AIMS)</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       3. THE PROBLEM: CHARGE LEAKAGE LANDSCAPE
+       ======================================================================== -->
+  <section class="section section-dark" id="the-problem">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Clinical &amp; Financial Disconnects</span>
+        <h2 class="section-title">The Hidden Revenue Drain in Hospital-Based Physician Practices</h2>
+        <p class="section-subtitle">
+          Radiology, Pathology, and Anesthesia practices deliver services inside facility walls but bill on separate professional fee schedules. When clinical logs are disconnected from billing, massive charge leakage and audit exposure occur.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
+        
+        <!-- Problem Card 1 -->
+        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
+          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #EF4444;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          </div>
+          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
+            Silent Charge Leakage Across Facility Silos
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
+            Hospital-based specialists perform procedures recorded in hospital-owned systems (e.g. PACS imaging archives, pathology LIS specimen logs, operating room flowsheets). Without automated cross-system reconciliation, <strong>7% to 14% of completed clinical procedures never generate a professional bill</strong>—including IV contrast, 3D post-processing, special pathology stains, and anesthesia nerve blocks.
+          </p>
+          <div style="margin-top: var(--space-md); padding: 8px 12px; background: rgba(239, 68, 68, 0.08); border-radius: var(--radius-sm); border: 1px solid rgba(239, 68, 68, 0.2); font-size: 0.78rem; color: #FCA5A5;">
+            <strong>Practice Impact:</strong> ~$780,000 to $2.1M in unbilled legitimate clinical services forfeited annually per 20-physician group.
+          </div>
+        </div>
+
+        <!-- Problem Card 2 -->
+        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
+          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #F59E0B;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          </div>
+          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
+            Outdated Chargemaster &amp; Arbitrary Fee Pricing
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
+            Many hospital-based CDM fee schedules have not undergone comprehensive competitive market analysis in over 3 years. Arbitrary price markups cause claims to fall below commercial payer allowed maximums on percent-of-charge contracts, leaving significant revenue on the table while exposing facilities to CMS Price Transparency fines.
+          </p>
+          <div style="margin-top: var(--space-md); padding: 8px 12px; background: rgba(245, 158, 11, 0.08); border-radius: var(--radius-sm); border: 1px solid rgba(245, 158, 11, 0.2); font-size: 0.78rem; color: #FCD34D;">
+            <strong>Practice Impact:</strong> Sub-optimal fee schedule yields cost practices 5% to 9% on non-capitated commercial collections.
+          </div>
+        </div>
+
+        <!-- Problem Card 3 -->
+        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
+          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #38BDF8;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
+            Split-Billing (TC/26) &amp; Concurrency Penalties
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
+            Hospital-based specialists must navigate complex split-billing rules: separating professional interpretations (Modifier 26) from hospital technical components (TC), while managing strict anesthesia medical direction ratios (1:4 concurrency). Missing modifiers or time discrepancies trigger instant payer downcoding and catastrophic OIG repayment audits.
+          </p>
+          <div style="margin-top: var(--space-md); padding: 8px 12px; background: rgba(56, 189, 248, 0.08); border-radius: var(--radius-sm); border: 1px solid rgba(56, 189, 248, 0.2); font-size: 0.78rem; color: #BAE6FD;">
+            <strong>Practice Impact:</strong> Medical direction downcoded to medical supervision (AD) slashes anesthesia reimbursement by 50%.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       4. FEATURE ARCHITECTURE: 6 PILLARS OF CHARGE INTEGRITY & CDM AUDIT
+       ======================================================================== -->
+  <section class="section section-light" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Charge Integrity Framework</span>
+        <h2 class="section-title">Comprehensive Architecture: 6 Pillars of Charge Capture &amp; CDM</h2>
+        <p class="section-subtitle">
+          Nova Arc bridges the technical and clinical divide between hospital operational logs and physician practice billing, ensuring that every rendered service is accurately priced, reconciled, and billed.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
+        
+        <!-- Pillar 1 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
+            1. CDM Rationalization &amp; Market Benchmarking
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+            Line-by-line audit of Chargemaster items and professional fee schedules. We align charges with local geographic Medicare allowable multiples (e.g. 250%–350% of RBRVS), commercial payer percentiles, and market-basket cost trends, eliminating under-priced codes that cap commercial collections.
+          </p>
+          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
+            • RBRVS &amp; Commercial Fee Schedule Modeling<br>
+            • Cost-to-Charge Ratio (CCR) Calibration
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
+            2. Multi-System Source Log Ingestion (PACS, LIS, AIMS)
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+            Direct automated ETL pipelines into hospital operational databases: Radiology Picture Archiving &amp; Communication Systems (PACS/RIS), Laboratory Information Systems (LIS), and Anesthesia Information Management Systems (AIMS). We ingest raw clinical logs independent of hospital billing.
+          </p>
+          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
+            • HL7 ADT, ORM, and ORU Feed Interfacing<br>
+            • DICOM Header &amp; PACS Metadata Extraction
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
+            3. Automated Discrepancy Reconciliation Engine
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+            Rule-based algorithmic matching compares completed clinical events against billed encounter claims. The engine instantly flags missing add-on codes, unbilled IV contrast, omitted post-op pain nerve blocks, uncharged special histochemical stains, and anesthesia start/stop time variances.
+          </p>
+          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
+            • Automated Discrepancy Triaging (&lt; 24h lag)<br>
+            • Clinical Add-On Code Detection Algorithms
+          </div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
+            4. CMS Price Transparency Compliance &amp; MRF Files
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+            Full regulatory alignment with CMS Hospital &amp; Provider Price Transparency mandates. We generate standardized machine-readable files (MRF in JSON/CSV format) displaying gross charges, discounted cash prices, and payer-specific negotiated rates to insulate against federal civil monetary penalties.
+          </p>
+          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
+            • 300 CMS Shoppable Services Configuration<br>
+            • Machine-Readable File (MRF) Formatting &amp; Hosting
+          </div>
+        </div>
+
+        <!-- Pillar 5 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
+            5. Split-Billing &amp; Modifier Precision (26, TC, QK, QZ)
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+            Rigorous validation of hospital-physician shared split billing. We verify Modifier 26 (professional component) vs TC (technical component) on radiology and pathology claims, and track anesthesia medical direction concurrency ratios to ensure compliance with TEFRA rules and NCCI edits.
+          </p>
+          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
+            • Anesthesia Concurrency Overlap Protection<br>
+            • NCCI Unbundling &amp; Distinct Procedural Modifiers (59/XU)
+          </div>
+        </div>
+
+        <!-- Pillar 6 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
+            6. Retrospective Audits &amp; Point-of-Care Remediation
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+            Closing the loop with hospital nursing, technologist, and physician staff. We conduct quarterly root-cause reviews on charge capture gaps, delivering targeted order-set adjustments and macro templates inside the hospital EHR to capture high-leakage items at the point of care.
+          </p>
+          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
+            • Point-of-Care Macro &amp; Order-Set Refinement<br>
+            • Hospital-Specialty Alignment Dashboards
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       5. DYNAMIC VISUAL 1: MISSED-CHARGE RECONCILIATION WORKFLOW
+       ======================================================================== -->
+  <section class="section section-dark" id="charge-reconciliation-visual">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Charge Integrity Workflow Visual</span>
+        <h2 class="section-title">Missed-Charge Reconciliation: 5-Stage Cross-System Lifecycle</h2>
+        <p class="section-subtitle">
+          See how Nova Arc reconciles hospital operational logs (PACS, LIS, AIMS) against practice billing systems to catch unbilled clinical procedures, validate medical documentation, and generate clean claims.
+        </p>
+      </div>
+
+      <!-- 5-Stage Stepper Container -->
+      <div class="pillar-card" style="padding: 0; overflow: hidden; background: rgba(11, 19, 43, 0.9); box-shadow: var(--shadow-xl); border: 1px solid var(--border-medium); max-width: 1120px; margin: 0 auto var(--space-2xl);">
+        
+        <!-- Header Strip -->
+        <div style="background: var(--navy-primary); color: #FFFFFF; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; border-bottom: 2px solid var(--blue-accent);">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="width: 10px; height: 10px; border-radius: 50%; background: #10B981; box-shadow: 0 0 8px #10B981;"></div>
+            <strong style="font-size: 1.05rem; color: #FFFFFF;">
+              Cross-System Reconciliation Engine • Live Stream Active
+            </strong>
+          </div>
+          <span style="font-size: 0.75rem; font-family: monospace; background: rgba(255, 255, 255, 0.12); padding: 4px 10px; border-radius: var(--radius-sm); color: #38BDF8;">
+            Reconciliation Latency: &lt; 24h • 100% Audit Traceability
+          </span>
+        </div>
+
+        <!-- 5-Step Horizontal Pipeline Tracker -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); border-bottom: 1px solid var(--border-light); background: rgba(3, 7, 18, 0.4);">
+          
+          <!-- Step 1 -->
+          <div class="recon-step-tab active-recon-step" id="recon-step-btn-1" onclick="switchReconStep(1)" style="padding: 16px; border-right: 1px solid var(--border-light); cursor: pointer; transition: all 0.2s ease;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+              <span class="step-num-badge" style="width: 22px; height: 22px; border-radius: 50%; background: var(--blue-accent); color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800;">1</span>
+              <strong style="font-size: 0.85rem; color: #FFFFFF;">Source Log Ingestion</strong>
+            </div>
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0; line-height: 1.4;">
+              Auto-extracting PACS, LIS, &amp; AIMS records daily.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="recon-step-tab" id="recon-step-btn-2" onclick="switchReconStep(2)" style="padding: 16px; border-right: 1px solid var(--border-light); cursor: pointer; transition: all 0.2s ease;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+              <span class="step-num-badge" style="width: 22px; height: 22px; border-radius: 50%; background: rgba(255, 255, 255, 0.15); color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800;">2</span>
+              <strong style="font-size: 0.85rem; color: #FFFFFF;">Algorithmic Match</strong>
+            </div>
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0; line-height: 1.4;">
+              Cross-checking clinical logs vs. billing workqueues.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="recon-step-tab" id="recon-step-btn-3" onclick="switchReconStep(3)" style="padding: 16px; border-right: 1px solid var(--border-light); cursor: pointer; transition: all 0.2s ease;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+              <span class="step-num-badge" style="width: 22px; height: 22px; border-radius: 50%; background: rgba(255, 255, 255, 0.15); color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800;">3</span>
+              <strong style="font-size: 0.85rem; color: #FFFFFF;">Gap Identification</strong>
+            </div>
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0; line-height: 1.4;">
+              Pinpointing unbilled contrast, stains, &amp; nerve blocks.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="recon-step-tab" id="recon-step-btn-4" onclick="switchReconStep(4)" style="padding: 16px; border-right: 1px solid var(--border-light); cursor: pointer; transition: all 0.2s ease;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+              <span class="step-num-badge" style="width: 22px; height: 22px; border-radius: 50%; background: rgba(255, 255, 255, 0.15); color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800;">4</span>
+              <strong style="font-size: 0.85rem; color: #FFFFFF;">Clinical Verification</strong>
+            </div>
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0; line-height: 1.4;">
+              Auditing operative notes &amp; orders for compliance.
+            </p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="recon-step-tab" id="recon-step-btn-5" onclick="switchReconStep(5)" style="padding: 16px; cursor: pointer; transition: all 0.2s ease;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+              <span class="step-num-badge" style="width: 22px; height: 22px; border-radius: 50%; background: #10B981; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800;">5</span>
+              <strong style="font-size: 0.85rem; color: #FFFFFF;">Clean EDI Release</strong>
+            </div>
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0; line-height: 1.4;">
+              837P transmission with split modifiers (26/59).
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Dynamic Step Details Display Box -->
+        <div style="padding: var(--space-xl); background: rgba(15, 23, 42, 0.85);" id="recon-step-content-box">
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: var(--space-md); margin-bottom: var(--space-md);">
+            <div>
+              <span style="font-size: 0.75rem; text-transform: uppercase; color: #38BDF8; font-weight: 700; letter-spacing: 0.05em;" id="recon-step-stage-tag">Stage 1 of 5 • Automated Clinical Ingestion</span>
+              <h3 style="font-size: 1.25rem; font-weight: 800; color: #FFFFFF; margin: 4px 0 0 0;" id="recon-step-title">Automated Ingestion from Hospital Clinical Modalities</h3>
+            </div>
+            <span class="preview-item-tag tag-blue" id="recon-step-badge" style="font-size: 0.8rem;">Automated ETL Pipeline</span>
+          </div>
+
+          <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: var(--space-lg);" id="recon-step-desc">
+            Nova Arc’s automated ingestion engine connects via secure SFTP, HL7 message brokers, or direct database views into hospital operational logs: PACS/RIS imaging manifests for Radiology, LIS specimen accessioning logs for Pathology, and AIMS OR flowsheets for Anesthesia. Logs are normalized and time-stamped.
+          </p>
+
+          <!-- Step Technical Specifications Grid -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-md);">
+            <div style="background: rgba(3, 7, 18, 0.5); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+              <span style="font-size: 0.75rem; color: #94A3B8; text-transform: uppercase; font-weight: 600;">Data Integration</span>
+              <div style="font-size: 0.85rem; color: #FFFFFF; font-weight: 600; margin-top: 4px;" id="recon-step-spec-1">
+                HL7 ADT/ORM/ORU + DICOM metadata extraction
+              </div>
+            </div>
+            <div style="background: rgba(3, 7, 18, 0.5); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+              <span style="font-size: 0.75rem; color: #94A3B8; text-transform: uppercase; font-weight: 600;">Ingestion Frequency</span>
+              <div style="font-size: 0.85rem; color: #FFFFFF; font-weight: 600; margin-top: 4px;" id="recon-step-spec-2">
+                Automated batch sync every 4 hours or continuous real-time stream
+              </div>
+            </div>
+            <div style="background: rgba(3, 7, 18, 0.5); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+              <span style="font-size: 0.75rem; color: #94A3B8; text-transform: uppercase; font-weight: 600;">Reconciliation SLA</span>
+              <div style="font-size: 0.85rem; color: #10B981; font-weight: 700; margin-top: 4px;" id="recon-step-spec-3">
+                &lt; 24h lag from procedure completion to billing queue
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Real-World Impact Callout -->
+        <div style="background: rgba(3, 7, 18, 0.7); border-top: 1px solid var(--border-light); padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+          <div style="font-size: 0.85rem; color: var(--text-muted);">
+            <strong style="color: #FFFFFF;">Specialty Reconciliation Metric:</strong> In a 24-physician radiology practice, automated PACS cross-matching recaptured <strong>340 unbilled 3D reconstruction codes (76377) and 1,120 IV contrast charges</strong> over 90 days.
+          </div>
+          <span style="font-size: 0.85rem; font-weight: 800; color: #10B981; background: rgba(16, 185, 129, 0.1); padding: 4px 10px; border-radius: var(--radius-sm); border: 1px solid rgba(16, 185, 129, 0.3);">
+            +$324,500 Net Revenue Reclaimed
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       6. DYNAMIC VISUAL 2: CDM PRICING AUDIT EXPLAINER & MULTI-SPECIALTY CASES
+       ======================================================================== -->
+  <section class="section section-light" id="cdm-pricing-explainer">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">CDM Pricing &amp; Specialty Auditing</span>
+        <h2 class="section-title">CDM Pricing Audit Explainer: Defensible Market Alignment</h2>
+        <p class="section-subtitle">
+          How strategic Chargemaster (CDM) auditing benchmarks professional fee schedules against commercial allowables and Medicare conversion factors, paired with real-world missed-charge recovery across hospital-based specialties.
+        </p>
+      </div>
+
+      <!-- CDM Pricing Mechanics Framework -->
+      <div style="background: #FFFFFF; border: 1px solid var(--border-medium); border-radius: var(--radius-lg); padding: var(--space-xl); box-shadow: var(--shadow-md); margin-bottom: var(--space-2xl);">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: var(--space-md); border-bottom: 1px solid var(--border-light); padding-bottom: 12px;">
+          <div>
+            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--blue-accent); font-weight: 800; letter-spacing: 0.05em;">Fee Schedule Science</span>
+            <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--navy-primary); margin: 2px 0 0 0;">
+              The 4 Pillars of a Defensible Hospital-Based CDM Pricing Audit
+            </h3>
+          </div>
+          <span class="compliance-tag-pill" style="margin: 0;">
+            CMS Price Transparency &amp; OIG Compliant
+          </span>
+        </div>
+        <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-lg);">
+          Setting charges arbitrarily high triggers consumer outrage and CMS audit scrutiny, while setting them too low caps commercial payer percent-of-charge allowable payments. Nova Arc balances fee schedules across 4 quantitative dimensions:
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-md);">
+          
+          <div style="background: #FAFBFD; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 14px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+              <span style="width: 24px; height: 24px; border-radius: 4px; background: #1F6FEB; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 800;">1</span>
+              <strong style="font-size: 0.9rem; color: var(--navy-primary);">Medicare Multiple Modeling</strong>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; margin: 0;">
+              Benchmarked at 250%–375% of local Medicare RBRVS conversion factors to ensure charges exceed all commercial fee schedules.
+            </p>
+          </div>
+
+          <div style="background: #FAFBFD; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 14px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+              <span style="width: 24px; height: 24px; border-radius: 4px; background: #10B981; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 800;">2</span>
+              <strong style="font-size: 0.9rem; color: var(--navy-primary);">Commercial Allowable Ceilings</strong>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; margin: 0;">
+              Analysis of top 10 commercial contracts ensures billed charges never fall below the maximum contracted allowable threshold.
+            </p>
+          </div>
+
+          <div style="background: #FAFBFD; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 14px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+              <span style="width: 24px; height: 24px; border-radius: 4px; background: #F59E0B; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 800;">3</span>
+              <strong style="font-size: 0.9rem; color: var(--navy-primary);">Local Market Percentiles</strong>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; margin: 0;">
+              Positioning prices within the 65th–75th percentile of regional competitors using FAIR Health and CMS public data.
+            </p>
+          </div>
+
+          <div style="background: #FAFBFD; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 14px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+              <span style="width: 24px; height: 24px; border-radius: 4px; background: #8B5CF6; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 800;">4</span>
+              <strong style="font-size: 0.9rem; color: var(--navy-primary);">Price Transparency MRF</strong>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; margin: 0;">
+              Automated compilation of CMS-compliant Machine-Readable Files with standard gross charges, cash discounts, and payer rates.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Interactive Specialty Case Switcher Tabs -->
+      <div style="display: flex; justify-content: center; gap: 8px; margin-bottom: var(--space-xl); flex-wrap: wrap;" role="tablist" aria-label="Hospital-Based Specialty Cases">
+        <button type="button" class="btn btn-sm btn-primary active-spec-tab" id="tab-group-1" onclick="switchGroupCase(1)" style="font-weight: 700; border-radius: var(--radius-full); padding: 8px 18px;">
+          Case 1: Radiology Group (PACS Imaging Reconcile)
+        </button>
+        <button type="button" class="btn btn-sm btn-secondary" id="tab-group-2" onclick="switchGroupCase(2)" style="font-weight: 600; border-radius: var(--radius-full); padding: 8px 18px;">
+          Case 2: Pathology Practice (LIS Specimen &amp; Stains)
+        </button>
+        <button type="button" class="btn btn-sm btn-secondary" id="tab-group-3" onclick="switchGroupCase(3)" style="font-weight: 600; border-radius: var(--radius-full); padding: 8px 18px;">
+          Case 3: Anesthesia Group (AIMS Perioperative &amp; Blocks)
+        </button>
+      </div>
+
+      <!-- Interactive Specialty Comparison Card -->
+      <div class="pillar-card" style="padding: 0; overflow: hidden; background: #FFFFFF; box-shadow: var(--shadow-xl); border: 1px solid var(--border-medium); max-width: 1080px; margin: 0 auto;">
+        
+        <!-- Header Strip -->
+        <div style="background: var(--navy-primary); color: #FFFFFF; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+          <div>
+            <span style="font-size: 0.75rem; text-transform: uppercase; color: #38BDF8; font-weight: 700;">Hospital-Based Clinical Reconciliation Simulation</span>
+            <h4 style="font-size: 1.1rem; font-weight: 800; color: #FFFFFF; margin: 0;" id="group-case-title">
+              Case 1: Radiology Practice • Abdominal/Pelvic CT with IV Contrast &amp; 3D Rendering
+            </h4>
+          </div>
+          <span style="font-size: 0.75rem; font-family: monospace; background: rgba(255, 255, 255, 0.1); padding: 4px 10px; border-radius: var(--radius-sm); color: #94A3B8;">
+            Zero PHI • Generic Specialty Data
+          </span>
+        </div>
+
+        <!-- Side-by-Side Comparison Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));">
+          
+          <!-- Column 1: Un-reconciled / Standard Billing (Pre-Audit) -->
+          <div style="padding: var(--space-xl); background: #FAFBFD; border-right: 1px solid var(--border-light);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md);">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <div style="width: 10px; height: 10px; border-radius: 50%; background: #EF4444;"></div>
+                <h4 style="font-size: 1.05rem; font-weight: 800; color: #991B1B; margin: 0;">
+                  Un-Reconciled Encounter (Standard Flow)
+                </h4>
+              </div>
+              <span style="font-size: 0.75rem; background: #FEE2E2; color: #991B1B; padding: 3px 8px; border-radius: var(--radius-sm); font-weight: 700;">
+                Charge Leakage
+              </span>
+            </div>
+
+            <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 14px; font-family: monospace; font-size: 0.8rem; color: #475569; line-height: 1.6; margin-bottom: var(--space-md); border-left: 3px solid #EF4444;" id="group-unrec-log">
+              "Hospital RIS order: CT Abdomen &amp; Pelvis without contrast. Radiologist dictates standard study. Billed CPT 74176-26. No IV contrast or post-processing billed."
+            </div>
+
+            <!-- Flaws Checklist -->
+            <div style="font-size: 0.8rem; color: #991B1B; font-weight: 600; margin-bottom: 6px;">
+              Reconciliation Flaws &amp; Missed Charges:
+            </div>
+            <ul style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5; padding-left: 18px; margin-bottom: var(--space-md);" id="group-unrec-flaws">
+              <li>PACS DICOM metadata revealed technologist administered 100mL Isovue-370 contrast per radiologist oral protocol change.</li>
+              <li>Radiologist performed multiplanar 3D volumetric reconstructions documented in report addendum, but code 76377 was omitted from superbill.</li>
+              <li>Only base study 74176-26 billed; contrast HCPCS Q9967 and 3D rendering 76377 completely lost.</li>
+            </ul>
+
+            <!-- Coded Output -->
+            <div style="background: #F8FAFC; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 12px;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 4px;">
+                <span style="color: var(--text-secondary);">Billed CPT Codes:</span>
+                <strong style="color: #991B1B;" id="group-unrec-codes">74176-26</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 4px;">
+                <span style="color: var(--text-secondary);">Billed Allowed Value:</span>
+                <strong style="color: var(--navy-primary);" id="group-unrec-allowed">$285.00</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; border-top: 1px solid var(--border-light); padding-top: 6px; margin-top: 6px;">
+                <span style="color: #991B1B;">Uncaptured Charge Revenue:</span>
+                <span style="color: #991B1B; font-size: 1rem;" id="group-unrec-loss">-$385.00 Lost / Scan</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Column 2: Reconciled / Full Charge Capture (Post-Audit) -->
+          <div style="padding: var(--space-xl); background: #FFFFFF;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md);">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <div style="width: 10px; height: 10px; border-radius: 50%; background: #10B981;"></div>
+                <h4 style="font-size: 1.05rem; font-weight: 800; color: #065F46; margin: 0;">
+                  Reconciled Encounter (Nova Arc Engine)
+                </h4>
+              </div>
+              <span style="font-size: 0.75rem; background: #D1FAE5; color: #065F46; padding: 3px 8px; border-radius: var(--radius-sm); font-weight: 700;">
+                +$385.00 Recovered
+              </span>
+            </div>
+
+            <div style="background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: var(--radius-sm); padding: 14px; font-family: monospace; font-size: 0.8rem; color: #166534; line-height: 1.6; margin-bottom: var(--space-md); border-left: 3px solid #10B981;" id="group-rec-log">
+              "Nova Arc engine ingests PACS series: confirms IV contrast bolus &amp; independent workstation 3D volumetric rendered series. Upgraded CPT to 74177-26 + 76377 + Q9967. Full medical necessity documentation verified."
+            </div>
+
+            <!-- Enablers Checklist -->
+            <div style="font-size: 0.8rem; color: #065F46; font-weight: 600; margin-bottom: 6px;">
+              Reconciliation Enablers &amp; Captured Codes:
+            </div>
+            <ul style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5; padding-left: 18px; margin-bottom: var(--space-md);" id="group-rec-enablers">
+              <li>Upgrades base study from without contrast (74176) to with contrast (74177-26).</li>
+              <li>Reconciles 3D post-processing rendering (76377) substantiated by separate 3D workstation image series.</li>
+              <li>Captures HCPCS Q9967 (Isovue 370, per ml) matched with nursing injection administration log.</li>
+            </ul>
+
+            <!-- Coded Output -->
+            <div style="background: #F8FAFC; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 12px;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 4px;">
+                <span style="color: var(--text-secondary);">Reconciled CPT/HCPCS Codes:</span>
+                <strong style="color: #065F46;" id="group-rec-codes">74177-26, 76377, Q9967</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 4px;">
+                <span style="color: var(--text-secondary);">Reconciled Allowed Value:</span>
+                <strong style="color: var(--navy-primary);" id="group-rec-allowed">$670.00</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; border-top: 1px solid var(--border-light); padding-top: 6px; margin-top: 6px;">
+                <span style="color: #065F46;">Reclaimed Net Revenue:</span>
+                <span style="color: #065F46; font-size: 1rem;" id="group-rec-gain">+$385.00 (+135% Lift)</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Annual Practice Impact Summary Footer -->
+        <div style="background: var(--bg-slate); padding: 16px 24px; border-top: 1px solid var(--border-medium); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+          <div>
+            <span style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600;">Annual Practice Financial Impact (1,200 Annual Cases):</span>
+            <div style="font-size: 1.1rem; font-weight: 800; color: var(--navy-primary); margin-top: 2px;" id="group-annual-impact">
+              +$462,000 Annual Net Revenue Recovered for Radiology Group
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="preview-item-tag tag-green" style="font-size: 0.8rem; font-weight: 800;">100% NCCI &amp; Split-Billing Compliant</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       7. SECTOR FOCUS: HOSPITAL-BASED GROUPS (RADIOLOGY, PATHOLOGY, ANESTHESIA)
+       ======================================================================== -->
+  <section class="section section-dark" id="sector-focus">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Sector Focus: Hospital-Based Specialties</span>
+        <h2 class="section-title">Engineered Specifically for Hospital-Based Medical Groups</h2>
+        <p class="section-subtitle">
+          Radiology, Pathology, and Anesthesia practices operate under unique contractual and operational constraints: hospital facility dependencies, split technical/professional components, and time-based units.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
+        
+        <!-- Sector Card 1: Radiology -->
+        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
+          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(31, 111, 235, 0.1); border: 1px solid var(--blue-accent-border); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: var(--blue-accent);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+          </div>
+          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
+            Hospital-Based Radiology Groups
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
+            Radiologists interpret thousands of scans across multiple hospital sites, imaging centers, and emergency departments. We bridge PACS worklists and billing engines to eliminate unbilled interpretations and capture complex interventional add-ons.
+          </p>
+          <ul style="margin-top: var(--space-md); padding-left: 18px; font-size: 0.8rem; color: var(--text-primary); line-height: 1.5;">
+            <li>PACS study-to-claim reconciliation (CT, MRI, Ultrasound, Mammography)</li>
+            <li>3D reconstruction (76376/76377) and CAD add-on capture</li>
+            <li>Interventional vascular branch catheterization coding &amp; fluoroscopy guidance</li>
+            <li>MIPS specialty measure capture (incidental pulmonary nodules, thyroid tracking)</li>
+          </ul>
+        </div>
+
+        <!-- Sector Card 2: Pathology -->
+        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
+          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #10B981;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10 2v7.31M14 9.3V1.99M8.5 2h7M14 9.3a6.5 6.5 0 1 1-4 0"></path><circle cx="12" cy="15" r="1"></circle></svg>
+          </div>
+          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
+            Anatomic &amp; Clinical Pathology Practices
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
+            Pathologists manage intricate specimen workflows where a single surgical resection container generates multiple cassettes, frozen sections, and special immunohistochemical stains. We reconcile LIS accessions with billed surgical pathology codes.
+          </p>
+          <ul style="margin-top: var(--space-md); padding-left: 18px; font-size: 0.8rem; color: var(--text-primary); line-height: 1.5;">
+            <li>Container vs. block vs. slide unit reconciliation (CPT 88300–88309)</li>
+            <li>Immunohistochemistry (IHC 88342 / 88341) and special stain (88312/88313) tracking</li>
+            <li>Split technical/professional billing with hospital histology laboratories</li>
+            <li>Reflex molecular and genetic panel order substantiation</li>
+          </ul>
+        </div>
+
+        <!-- Sector Card 3: Anesthesia -->
+        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
+          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #38BDF8;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          </div>
+          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
+            Physician Anesthesiology &amp; CRNA Groups
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
+            Anesthesia revenue depends on accurate ASA base units plus 15-minute time unit increments, concurrency tracking, and post-operative pain procedures. We ingest AIMS flowsheets to prevent time-rounding losses and defend medical direction.
+          </p>
+          <ul style="margin-top: var(--space-md); padding-left: 18px; font-size: 0.8rem; color: var(--text-primary); line-height: 1.5;">
+            <li>Exact AIMS start/stop time reconciliation preventing rounding losses</li>
+            <li>Medical direction concurrency tracking (QK/QX/QY vs QZ) protecting TEFRA criteria</li>
+            <li>Separate unbundled billing for ultrasound guidance (76942) and arterial lines (36620)</li>
+            <li>Post-operative peripheral nerve block capture (TAP, femoral, interscalene) with modifier 59</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       8. SERVICE LEVEL AGREEMENTS (SLA STRIP)
+       ======================================================================== -->
+  <section style="background: var(--navy-deep); border-top: 1px solid var(--border-medium); border-bottom: 1px solid var(--border-medium); padding: var(--space-xl) 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-xl); text-align: center;">
+        
+        <div>
+          <div style="font-size: 2.2rem; font-weight: 800; color: var(--blue-accent); line-height: 1; margin-bottom: 6px;">&lt; 48h</div>
+          <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Log-to-Claim Submission SLA</div>
+          <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">Rapid cross-system reconciliation prevents filing cutoff penalties</p>
+        </div>
+
+        <div>
+          <div style="font-size: 2.2rem; font-weight: 800; color: #10B981; line-height: 1; margin-bottom: 6px;">99.8%</div>
+          <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Cross-System Match Accuracy</div>
+          <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">Verified match between PACS/LIS/AIMS logs and billed claims</p>
+        </div>
+
+        <div>
+          <div style="font-size: 2.2rem; font-weight: 800; color: #38BDF8; line-height: 1; margin-bottom: 6px;">100%</div>
+          <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">CMS Price Transparency SLA</div>
+          <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">Guaranteed defensible MRF formatting and annual maintenance</p>
+        </div>
+
+        <div>
+          <div style="font-size: 2.2rem; font-weight: 800; color: #A855F7; line-height: 1; margin-bottom: 6px;">+$1.4M</div>
+          <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Average Revenue Recovery</div>
+          <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">Annual net collections lift per 25-physician hospital-based group</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       9. FAQ ACCORDION
+       ======================================================================== -->
+  <section class="section section-light" id="faq">
+    <div class="container" style="max-width: 860px;">
+      <div class="section-header">
+        <span class="section-tag">Frequently Asked Questions</span>
+        <h2 class="section-title">CDM Pricing &amp; Missed-Charge FAQs</h2>
+        <p class="section-subtitle">
+          Answers to common questions regarding Chargemaster pricing reviews, clinical log reconciliation, and hospital-based specialty split billing.
+        </p>
+      </div>
+
+      <div class="accordion" id="faqAccordion">
+        
+        <!-- FAQ Item 1 -->
+        <div class="accordion-item">
+          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
+            <span class="accordion-title">How does Nova Arc reconcile clinical charges when the hospital owns the EHR and PACS, but our group bills independently?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              This is the standard operating model for private hospital-based groups. We establish secure automated interfaces (via encrypted SFTP, VPN, or read-only database connections) into the hospital's clinical systems—such as the PACS imaging archive, laboratory LIS, and perioperative flowsheets. Our software normalizes and ingests procedure logs daily, then matches them against your practice management billing database using patient MRN, date of service, accession number, and provider NPI. Any clinical event missing a corresponding billed charge is instantly routed to our specialty reconciliation team for review.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="accordion-item">
+          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
+            <span class="accordion-title">What are the most commonly missed charges in Radiology, Pathology, and Anesthesia?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              In <strong>Radiology</strong>, the most frequent missed charges are 3D volumetric rendering (CPT 76376/76377), IV contrast agents (HCPCS Q-codes), fluoroscopic guidance (77002), and computer-aided detection (CAD). In <strong>Pathology</strong>, charge leakage commonly affects special histochemical stains (88312/88313), immunohistochemistry first vs. additional stains (88342/88341), in-situ hybridization, and multiple tissue block levels within a single surgical container. In <strong>Anesthesia</strong>, practices frequently miss postoperative acute pain management nerve blocks (e.g. TAP blocks 64488 with modifier 59), ultrasound guidance for vascular access (76942), invasive line placements (arterial line 36620, central line 36556), and physical status modifiers (P3/P4/P5) that add legitimate base units.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="accordion-item">
+          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
+            <span class="accordion-title">How do you audit Chargemaster (CDM) pricing to ensure both maximum commercial reimbursement and price transparency compliance?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Our CDM pricing audit utilizes a multi-layered financial model. First, we cross-reference your current fee schedule against your commercial payer contracts to ensure that no charge falls below a payer's allowable fee—preventing "lesser-of" contract underpayments. Second, we benchmark each code against local geographic Medicare RBRVS multiples (typically 250% to 375%) and regional 75th percentile market data. Third, we produce fully formatted CMS Machine-Readable Files (MRF in JSON/CSV) complying with federal price transparency rules, establishing a defensible, justifiable pricing structure that protects against regulatory scrutiny.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="accordion-item">
+          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
+            <span class="accordion-title">How do you manage anesthesia concurrency compliance and avoid medical direction downcoding penalties?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Under CMS TEFRA rules, an anesthesiologist medically directing CRNAs can oversee a maximum of 4 concurrent cases (1:4 ratio) and must personally perform 7 mandatory steps (pre-op evaluation, prescribing anesthesia plan, personally participating in induction/emergence, etc.). If concurrency exceeds 4 cases for even one minute, or if an emergency in one room pulls the physician away during induction in another, medical direction is invalid, and the claim drops to medical supervision (Modifier AD), slashing payment by 50%. Nova Arc’s reconciliation engine overlays exact AIMS OR minute-by-minute concurrency maps against billing entries, ensuring proper assignment of modifiers QK, QX, QY, or QZ while preventing audit clawbacks.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="accordion-item">
+          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
+            <span class="accordion-title">What is the typical timeframe and return on investment for a CDM pricing and missed-charge reconciliation engagement?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              A standard CDM pricing and baseline charge capture audit is completed within 3 to 4 weeks. Automated clinical source log ingestion interfaces (PACS, LIS, AIMS) are configured and live within 30 to 45 days. Most hospital-based groups experience an immediate <strong>8% to 15% net revenue uplift</strong> within the first 60 days of active reconciliation as unbilled procedures, missed add-ons, and under-priced codes are systematically captured before filing deadlines expire.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       10. CTA BAND & SHARED FOOTER
+       ======================================================================== -->
+  <section class="section" style="background: linear-gradient(135deg, #0B132B 0%, #1C2541 50%, #0B132B 100%); border-top: 1px solid var(--border-medium); padding: var(--space-3xl) 0;">
+    <div class="container">
+      <div style="max-width: 820px; margin: 0 auto; text-align: center;">
+        <span class="section-tag" style="background: rgba(31, 111, 235, 0.15); color: #38BDF8; border-color: rgba(56, 189, 248, 0.3);">
+          Practice Revenue Integrity
+        </span>
+        <h2 style="font-size: 2.2rem; font-weight: 800; color: #FFFFFF; margin: var(--space-sm) 0 var(--space-md);">
+          Stop Charge Leakage Across Your Hospital-Based Practice
+        </h2>
+        <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.6; margin-bottom: var(--space-2xl);">
+          Reconcile 100% of performed imaging, pathology specimens, and surgical anesthesia cases against billed claims while establishing market-optimized Chargemaster pricing.
+        </p>
+        <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+          <a href="../contact.html?service=cdm-charge-capture" class="btn btn-primary btn-lg">
+            <span>Schedule a Free Charge Audit</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="../index.html#roi-calculator" class="btn btn-secondary btn-lg">
+            <span>Calculate Specialty Practice ROI</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       FOOTER (Standardized Across All Pages)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        
+        <!-- Col 1: Brand -->
+        <div>
+          <a href="../index.html" class="logo" aria-label="Nova Arc Homepage" style="margin-bottom: var(--space-md); display: inline-flex;">
+            <img src="../images/nova-arc-logo.png" alt="Nova Arc Logo" class="logo-img" width="38" height="33">
+            <span class="logo-text">Nova<span class="logo-highlight">Arc</span></span>
+          </a>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: var(--space-lg);">
+            AI-driven, human-in-the-loop revenue cycle management engineered for health systems, physician groups, and specialty providers across the United States.
+          </p>
+          <div style="font-size: 0.8rem; color: var(--text-muted);">
+            &copy; 2026 Nova Arc Healthcare Technologies. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Col 2: Solutions -->
+        <div>
+          <h4 class="footer-col-title">Solutions</h4>
+          <ul class="footer-links-list">
+            <li><a href="../solutions.html#patient-access" class="footer-link">Patient Access</a></li>
+            <li><a href="../solutions.html#him" class="footer-link">Health Info Management</a></li>
+            <li><a href="../solutions.html#ebo" class="footer-link">Extended Business Office</a></li>
+            <li><a href="../solutions.html#analytics" class="footer-link">Analytics &amp; Reporting</a></li>
+            <li><a href="../ai-platform.html" class="footer-link">Nova Arc AI Platform</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="real-time-insurance-eligibility.html" class="footer-link">Insurance Eligibility &amp; Auth</a></li>
+            <li><a href="full-cycle-medical-coding.html" class="footer-link">Medical Coding &amp; CDI</a></li>
+            <li><a href="claims-management-scrubbing.html" class="footer-link">Claims Management &amp; Scrubbing</a></li>
+            <li><a href="denial-management.html" class="footer-link">Denial &amp; Appeals Recovery</a></li>
+            <li><a href="ar-management.html" class="footer-link">A/R Management &amp; Collections</a></li>
+            <li><a href="../services.html" class="footer-link" style="color: #38BDF8; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">Explore All 24+ Services &rarr;</a></li>
+          </ul>
+        </div>
+
+                <!-- Col 4: Who We Serve -->
+        <div>
+          <h4 class="footer-col-title">Who We Serve</h4>
+          <ul class="footer-links-list">
+            <li><a href="../who-we-serve.html#urgent-care" class="footer-link">Urgent Care</a></li>
+            <li><a href="../who-we-serve.html#asc" class="footer-link">Ambulatory Surgery</a></li>
+            <li><a href="../who-we-serve.html#pt-ot-rehab" class="footer-link">Physical &amp; Rehab</a></li>
+            <li><a href="../who-we-serve.html#behavioral-health" class="footer-link">Behavioral Health</a></li>
+            <li><a href="../index.html#who-we-serve" class="footer-link">Health Systems &amp; Hospitals</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Contact Info -->
+        <div>
+          <h4 class="footer-col-title">Contact Us</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: var(--space-md);">
+            Headquarters: 100 Enterprise Way, Suite 400<br>
+            Nashville, TN 37203
+          </p>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: var(--space-md);">
+            Phone: (800) 555-NOVA<br>
+            Inquiries: <a href="mailto:contact@novaarc-rcm.com" style="color: var(--blue-accent);">contact@novaarc-rcm.com</a>
+          </p>
+          <div style="margin-top: var(--space-md);">
+            <a href="../contact.html" class="btn btn-secondary btn-sm" style="width: 100%;">Connect with an Advisor</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ========================================================================
+       JAVASCRIPT: INTERACTIVE STEPPER & SPECIALTY CASE SWITCHER
+       ======================================================================== -->
+  <script src="../js/main.js"></script>
+  <script>
+    // --- 1. RECONCILIATION WORKFLOW STEPPER DATA & INTERACTION ---
+    const reconStepData = {
+      1: {
+        stageTag: "Stage 1 of 5 • Automated Clinical Ingestion",
+        title: "Automated Ingestion from Hospital Clinical Modalities",
+        badge: "Automated ETL Pipeline",
+        badgeClass: "tag-blue",
+        desc: "Nova Arc’s automated ingestion engine connects via secure SFTP, HL7 message brokers, or direct database views into hospital operational logs: PACS/RIS imaging manifests for Radiology, LIS specimen accessioning logs for Pathology, and AIMS OR flowsheets for Anesthesia. Logs are normalized and time-stamped.",
+        spec1: "HL7 ADT/ORM/ORU + DICOM metadata extraction",
+        spec2: "Automated batch sync every 4 hours or continuous real-time stream",
+        spec3: "< 24h lag from procedure completion to billing queue"
+      },
+      2: {
+        stageTag: "Stage 2 of 5 • Algorithmic Cross-Matching",
+        title: "Deterministic & Fuzzy Matching Against Billed Claims",
+        badge: "Algorithmic Cross-Match",
+        badgeClass: "tag-purple",
+        desc: "The ingestion stream is matched against your billing practice management system. Our matching algorithms cross-reference Patient MRN, Date of Service, Performing Provider NPI, Accession/Log Number, and Hospital Facility Code to detect records with zero corresponding claims.",
+        spec1: "Multi-parameter match (MRN, DOS, NPI, Accession)",
+        spec2: "Automatic detection of 100% unbilled surgical encounters",
+        spec3: "99.8% match rate with zero false duplicates"
+      },
+      3: {
+        stageTag: "Stage 3 of 5 • Discrepancy & Gap Identification",
+        title: "Clinical Gap & Add-On Code Detection",
+        badge: "Leakage Pinpointer",
+        badgeClass: "tag-amber",
+        desc: "For matched encounters, the engine inspects procedural details to surface charge leakage: contrast injections missing from CT/MRI claims, 3D volumetric reconstructions omitted from imaging superbills, unbilled IHC/special stains in pathology, and uncaptured nerve blocks or arterial lines in anesthesia.",
+        spec1: "Contrast agent (HCPCS Q-code) verification",
+        spec2: "Pathology block count vs. CPT 88305/88342 audit",
+        spec3: "Anesthesia nerve block & line placement detection"
+      },
+      4: {
+        stageTag: "Stage 4 of 5 • Clinical Documentation Verification",
+        title: "Auditing Physician Documentation & Orders",
+        badge: "Clinical Compliance Audit",
+        badgeClass: "tag-blue",
+        desc: "Specialty coding auditors review physician dictations, operative reports, and hospital orders to ensure that every identified missing charge is fully supported by clinical documentation. This guarantees that recovered charges are 100% audit-proof against payer clawbacks.",
+        spec1: "Order verification & physician signature review",
+        spec2: "Medical necessity & NCCI modifier compliance",
+        spec3: "Zero audit vulnerability on recaptured revenue"
+      },
+      5: {
+        stageTag: "Stage 5 of 5 • Clean EDI Claim Generation",
+        title: "837P Transmission with Split-Billing Modifiers",
+        badge: "Clean Claim Clearance",
+        badgeClass: "tag-green",
+        desc: "The reconciled encounter is formatted with appropriate professional split modifiers (Modifier 26), NCCI distinct procedural modifiers (59/XU), and anesthesia medical direction concurrency flags. The clean EDI 837P claim is transmitted directly to the payer clearinghouse.",
+        spec1: "Flawless split-billing modifier assignment (26/TC)",
+        spec2: "Instant clearinghouse transmission & 99.4% first-pass clean rate",
+        spec3: "Full reconciliation audit trail archived for compliance"
+      }
+    };
+
+    function switchReconStep(stepNum) {
+      for (let i = 1; i <= 5; i++) {
+        const btn = document.getElementById('recon-step-btn-' + i);
+        if (btn) {
+          const badge = btn.querySelector('.step-num-badge');
+          if (i === stepNum) {
+            btn.style.background = "rgba(31, 111, 235, 0.15)";
+            btn.style.borderColor = "var(--blue-accent)";
+            if (badge) badge.style.background = "var(--blue-accent)";
+          } else {
+            btn.style.background = "transparent";
+            btn.style.borderColor = "var(--border-light)";
+            if (badge) badge.style.background = (i === 5 ? "#10B981" : "rgba(255, 255, 255, 0.15)");
+          }
+        }
+      }
+
+      const data = reconStepData[stepNum];
+      if (data) {
+        document.getElementById('recon-step-stage-tag').innerText = data.stageTag;
+        document.getElementById('recon-step-title').innerText = data.title;
+        const badgeElem = document.getElementById('recon-step-badge');
+        badgeElem.innerText = data.badge;
+        badgeElem.className = 'preview-item-tag ' + data.badgeClass;
+        document.getElementById('recon-step-desc').innerText = data.desc;
+        document.getElementById('recon-step-spec-1').innerText = data.spec1;
+        document.getElementById('recon-step-spec-2').innerText = data.spec2;
+        document.getElementById('recon-step-spec-3').innerText = data.spec3;
+      }
+    }
+
+
+    // --- 2. SPECIALTY CASE SWITCHER DATA & LOGIC ---
+    const groupCaseData = {
+      1: {
+        title: "Case 1: Radiology Practice • Abdominal/Pelvic CT with IV Contrast & 3D Rendering",
+        unrecLog: '"Hospital RIS order: CT Abdomen & Pelvis without contrast. Radiologist dictates standard study. Billed CPT 74176-26. No IV contrast or post-processing billed."',
+        unrecFlaws: [
+          "PACS DICOM metadata revealed technologist administered 100mL Isovue-370 contrast per radiologist oral protocol change.",
+          "Radiologist performed multiplanar 3D volumetric reconstructions documented in report addendum, but code 76377 was omitted from superbill.",
+          "Only base study 74176-26 billed; contrast HCPCS Q9967 and 3D rendering 76377 completely lost."
+        ],
+        unrecCodes: "74176-26",
+        unrecAllowed: "$285.00",
+        unrecLoss: "-$385.00 Lost / Scan",
+        recLog: '"Nova Arc engine ingests PACS series: confirms IV contrast bolus & independent workstation 3D volumetric rendered series. Upgraded CPT to 74177-26 + 76377 + Q9967. Full medical necessity documentation verified."',
+        recEnablers: [
+          "Upgrades base study from without contrast (74176) to with contrast (74177-26).",
+          "Reconciles 3D post-processing rendering (76377) substantiated by separate 3D workstation image series.",
+          "Captures HCPCS Q9967 (Isovue 370, per ml) matched with nursing injection administration log."
+        ],
+        recCodes: "74177-26, 76377, Q9967",
+        recAllowed: "$670.00",
+        recGain: "+$385.00 (+135% Lift)",
+        annualImpact: "+$462,000 Annual Net Revenue Recovered for Radiology Group"
+      },
+      2: {
+        title: "Case 2: Pathology Practice • Colectomy Surgical Resection with Special Stains",
+        unrecLog: '"Pathology accession log: Colectomy specimen. Billed CPT 88309 (Surgical pathology Level VI). No reflex histochemical or immunohistochemical stains billed."',
+        unrecFlaws: [
+          "Laboratory Information System (LIS) records 3 blocks submitted for Special Stain Iron/PAS (88312).",
+          "Pathologist ordered mismatch repair (MMR) immunohistochemistry panel (MLH1, MSH2, MSH6, PMS2) but billing department only billed base resection.",
+          "Over $500 in laboratory and physician professional interpretation fees unbilled."
+        ],
+        unrecCodes: "88309-26",
+        unrecAllowed: "$320.00",
+        unrecLoss: "-$560.00 Lost / Case",
+        recLog: '"Nova Arc reconciles LIS block tracking: confirms 3 special stains (88312 x3) and 4-antibody IHC panel (88342 x1, 88341 x3) fully documented in surgical pathology diagnosis report."',
+        recEnablers: [
+          "Captures CPT 88312 x3 for special histochemical stains substantiated by laboratory technician logs.",
+          "Captures CPT 88342 (first antibody) and 88341 x3 (each additional antibody) for complete MMR panel.",
+          "Applies Modifier 26 for professional interpretation, seamlessly coordinating with hospital histology billing."
+        ],
+        recCodes: "88309-26, 88312x3, 88342, 88341x3",
+        recAllowed: "$880.00",
+        recGain: "+$560.00 (+175% Lift)",
+        annualImpact: "+$504,000 Annual Net Revenue Recovered for Pathology Group"
+      },
+      3: {
+        title: "Case 3: Anesthesia Group • Total Joint Arthroplasty with Post-Op Nerve Block",
+        unrecLog: '"Anesthesia encounter: 120-minute total hip replacement. Billed CPT 01214 (base 8 units + 8 time units = 16 units). No peripheral nerve block or invasive lines billed."',
+        unrecFlaws: [
+          "Anesthesiologist placed continuous ultrasound-guided fascia iliaca / TAP nerve block for postoperative pain, but failed to document distinct procedure code.",
+          "Arterial catheter placed for hemodynamic monitoring was unbilled.",
+          "Anesthesia physical status P3 (severe systemic disease, 1 extra base unit) omitted from claim."
+        ],
+        unrecCodes: "01214-AA",
+        unrecAllowed: "$850.00",
+        unrecLoss: "-$840.00 Lost / Case",
+        recLog: '"Nova Arc parses AIMS record: verifies distinct post-op pain documentation, consent, and ultrasound images for TAP block (64488-59 + 76942). Adds arterial line (36620) and Physical Status P3 unit."',
+        recEnablers: [
+          "Captures peripheral nerve block for post-op pain (CPT 64488) with Modifier 59 / XU unbundling bypass.",
+          "Reconciles ultrasound guidance for nerve block (CPT 76942) with saved ultrasound image in AIMS.",
+          "Captures arterial line placement (CPT 36620) and Physical Status Modifier P3 (+1 unit)."
+        ],
+        recCodes: "01214-AA-P3, 64488-59, 76942, 36620",
+        recAllowed: "$1,690.00",
+        recGain: "+$840.00 (+98% Lift)",
+        annualImpact: "+$672,000 Annual Net Revenue Recovered for Anesthesia Group"
+      }
+    };
+
+    function switchGroupCase(caseNum) {
+      for (let i = 1; i <= 3; i++) {
+        const btn = document.getElementById('tab-group-' + i);
+        if (btn) {
+          if (i === caseNum) {
+            btn.className = "btn btn-sm btn-primary active-spec-tab";
+          } else {
+            btn.className = "btn btn-sm btn-secondary";
+          }
+        }
+      }
+
+      const c = groupCaseData[caseNum];
+      if (c) {
+        document.getElementById('group-case-title').innerText = c.title;
+        document.getElementById('group-unrec-log').innerText = c.unrecLog;
+        
+        const flawsList = document.getElementById('group-unrec-flaws');
+        flawsList.innerHTML = "";
+        c.unrecFlaws.forEach(item => {
+          const li = document.createElement('li');
+          li.innerText = item;
+          flawsList.appendChild(li);
+        });
+
+        document.getElementById('group-unrec-codes').innerText = c.unrecCodes;
+        document.getElementById('group-unrec-allowed').innerText = c.unrecAllowed;
+        document.getElementById('group-unrec-loss').innerText = c.unrecLoss;
+
+        document.getElementById('group-rec-log').innerText = c.recLog;
+
+        const enablersList = document.getElementById('group-rec-enablers');
+        enablersList.innerHTML = "";
+        c.recEnablers.forEach(item => {
+          const li = document.createElement('li');
+          li.innerText = item;
+          enablersList.appendChild(li);
+        });
+
+        document.getElementById('group-rec-codes').innerText = c.recCodes;
+        document.getElementById('group-rec-allowed').innerText = c.recAllowed;
+        document.getElementById('group-rec-gain').innerText = c.recGain;
+        document.getElementById('group-annual-impact').innerText = c.annualImpact;
+      }
+    }
+
+
+    // --- 3. FAQ ACCORDION TOGGLE ---
+    function toggleFaq(button) {
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.accordion-icon');
+
+      document.querySelectorAll('#faqAccordion .accordion-header').forEach(hdr => {
+        hdr.setAttribute('aria-expanded', 'false');
+        hdr.nextElementSibling.style.maxHeight = null;
+        hdr.nextElementSibling.classList.remove('active');
+        const ic = hdr.querySelector('.accordion-icon');
+        if (ic) ic.innerText = '+';
+      });
+
+      if (!isExpanded) {
+        button.setAttribute('aria-expanded', 'true');
+        content.classList.add('active');
+        content.style.maxHeight = content.scrollHeight + "px";
+        if (icon) icon.innerText = '−';
+      }
+    }
+  </script>
+</body>
+</html>

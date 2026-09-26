@@ -44,7 +44,7 @@
   <!-- ========================================================================
        STICKY NAVBAR (Reused from Homepage)
        ======================================================================== -->
-  <header class="site-header" id="top">
+      <header class="site-header" id="top">
     <div class="container navbar">
       <!-- Brand Logo -->
       <a href="index.html" class="logo" aria-label="Nova Arc Homepage">
@@ -56,9 +56,173 @@
       <nav class="desktop-nav" aria-label="Main Navigation">
         <ul class="nav-menu">
           <li><a href="solutions.html" class="nav-link">Solutions</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
+          
+          <!-- Services Dropdown (Mega-Menu) -->
+          <li class="nav-item-dropdown">
+            <button class="nav-link nav-dropdown-toggle " id="servicesDropdownToggle" aria-haspopup="true" aria-expanded="false" aria-controls="servicesMegaMenu">
+              <span>Services</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+
+            <!-- Mega-Menu Light Panel -->
+            <div class="mega-menu-panel" id="servicesMegaMenu" role="menu" aria-labelledby="servicesDropdownToggle" aria-hidden="true">
+              <div class="mega-menu-inner container">
+                <div class="mega-menu-grid">
+                  <!-- Column 1: Patient Access & Front-End Integrity -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-1-heading">Patient Access &amp; Front-End Integrity</h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-1-heading">
+                      <li role="none">
+                        <a href="services/real-time-insurance-eligibility.html" class="mega-item standalone" role="menuitem">
+                          Insurance Eligibility &amp; Benefits Verification
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/prior-authorization-management.html" class="mega-item standalone" role="menuitem">
+                          Prior Authorization Management
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/patient-registration-verification.html" class="mega-item standalone" role="menuitem">
+                          Patient Scheduling &amp; Registration QA
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/financial-clearance-gfe.html" class="mega-item standalone" role="menuitem">
+                          Financial Clearance &amp; Good Faith Estimates
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/point-of-service-collections.html" class="mega-item standalone" role="menuitem">
+                          Point-of-Service Collections
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/referral-order-management.html" class="mega-item standalone" role="menuitem">
+                          Medical Necessity &amp; Order Verification
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Column 2: HIM & Coding -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-2-heading">HIM &amp; Coding</h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-2-heading">
+                      <!-- Parent Item: Medical Coding Services -->
+                      <li role="none" class="mega-parent-group">
+                        <a href="services/full-cycle-medical-coding.html" class="mega-item parent" role="menuitem">
+                          Medical Coding Services
+                        </a>
+                        <ul class="mega-sub-list" role="none">
+                          <li role="none">
+                            <a href="services/hcc-risk-adjustment.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Risk Adjustment/HCC Coding
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a href="services/full-cycle-medical-coding.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Facility/DRG Coding
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a href="services/full-cycle-medical-coding.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Professional Fee Coding
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li role="none">
+                        <a href="services/cdi-chart-auditing.html" class="mega-item standalone" role="menuitem">
+                          Clinical Documentation Improvement
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/cac-review.html" class="mega-item standalone" role="menuitem">
+                          Computer-Assisted Coding (CAC) Review
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/compliance-audit-defense.html" class="mega-item standalone" role="menuitem">
+                          Coding Compliance &amp; Audit Support
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/cdm-charge-capture.html" class="mega-item standalone" role="menuitem">
+                          Charge Capture &amp; CDM Audit
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/physician-query-management.html" class="mega-item standalone" role="menuitem">
+                          Physician Query Management
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Column 3: Patient Financial Services (PFS) & Recovery -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-3-heading">Patient Financial Services &amp; Recovery</h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-3-heading">
+                      <!-- Parent Item: Claims Management Services -->
+                      <li role="none" class="mega-parent-group">
+                        <a href="services/claims-management-scrubbing.html" class="mega-item parent" role="menuitem">
+                          Claims Management Services
+                        </a>
+                        <ul class="mega-sub-list" role="none">
+                          <li role="none">
+                            <a href="services/claims-management-scrubbing.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Claims Submission &amp; Scrubbing EDI 837
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a href="services/payment-posting-reconciliation.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Payment Posting &amp; Reconciliation EDI 835
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li role="none">
+                        <a href="services/ar-management.html" class="mega-item standalone" role="menuitem">
+                          A/R Management Services
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/denial-management.html" class="mega-item standalone" role="menuitem">
+                          Denial Management &amp; Appeals
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/payer-contract-modeling.html" class="mega-item standalone" role="menuitem">
+                          Underpayment Recovery &amp; Contract Compliance
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/patient-billing-collections.html" class="mega-item standalone" role="menuitem">
+                          Patient Billing &amp; Self-Pay Collections
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/credit-balance-resolution.html" class="mega-item standalone" role="menuitem">
+                          Credit Balance &amp; Refund Management
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/edi-enrollment.html" class="mega-item standalone" role="menuitem">
+                          EDI Enrollment Services
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
           <li>
-            <a href="ai-platform.html" class="nav-link has-badge" style="color: var(--blue-accent); font-weight: 700;">
+            <a href="ai-platform.html" class="nav-link has-badge">
               Nova Arc AI Platform
               <span class="nav-badge">New</span>
             </a>
@@ -93,8 +257,51 @@
     <div class="mobile-nav-drawer" id="mobileDrawer">
       <ul class="mobile-nav-list">
         <li><a href="solutions.html" class="mobile-nav-link">Solutions <span>&rarr;</span></a></li>
-        <li><a href="services.html" class="mobile-nav-link">Services <span>&rarr;</span></a></li>
-        <li><a href="ai-platform.html" class="mobile-nav-link" style="color: var(--blue-accent); font-weight: 700;">Nova Arc AI Platform <span class="nav-badge">New</span></a></li>
+        <li class="mobile-accordion-item">
+          <button class="mobile-nav-link mobile-accordion-toggle" id="mobileServicesToggle" aria-expanded="false" aria-controls="mobileServicesSubmenu">
+            <span>Services</span>
+            <svg class="mobile-accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="mobile-submenu-collapse" id="mobileServicesSubmenu" aria-hidden="true">
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title">Patient Access &amp; Front-End</h4>
+              <a href="services/real-time-insurance-eligibility.html" class="mobile-submenu-link">Insurance Eligibility &amp; Benefits</a>
+              <a href="services/prior-authorization-management.html" class="mobile-submenu-link">Prior Authorization Management</a>
+              <a href="services/patient-registration-verification.html" class="mobile-submenu-link">Patient Scheduling &amp; Registration QA</a>
+              <a href="services/financial-clearance-gfe.html" class="mobile-submenu-link">Financial Clearance &amp; Good Faith Estimates</a>
+              <a href="services/point-of-service-collections.html" class="mobile-submenu-link">Point-of-Service Collections</a>
+              <a href="services/referral-order-management.html" class="mobile-submenu-link">Medical Necessity &amp; Order Verification</a>
+            </div>
+
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title">HIM &amp; Coding</h4>
+              <a href="services/full-cycle-medical-coding.html" class="mobile-submenu-link parent">Medical Coding Services</a>
+              <a href="services/hcc-risk-adjustment.html" class="mobile-submenu-sublink">&rsaquo; Risk Adjustment/HCC Coding</a>
+              <a href="services/full-cycle-medical-coding.html" class="mobile-submenu-sublink">&rsaquo; Facility/DRG &amp; ProFee Coding</a>
+              <a href="services/cdi-chart-auditing.html" class="mobile-submenu-link">Clinical Documentation Improvement</a>
+              <a href="services/cac-review.html" class="mobile-submenu-link">Computer-Assisted Coding (CAC) Review</a>
+              <a href="services/compliance-audit-defense.html" class="mobile-submenu-link">Coding Compliance &amp; Audit Support</a>
+              <a href="services/cdm-charge-capture.html" class="mobile-submenu-link">Charge Capture &amp; CDM Audit</a>
+              <a href="services/physician-query-management.html" class="mobile-submenu-link">Physician Query Management</a>
+            </div>
+
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title">Patient Financial Services &amp; Recovery</h4>
+              <a href="services/claims-management-scrubbing.html" class="mobile-submenu-link parent">Claims Management Services</a>
+              <a href="services/claims-management-scrubbing.html" class="mobile-submenu-sublink">&rsaquo; Claims Submission &amp; Scrubbing EDI 837</a>
+              <a href="services/payment-posting-reconciliation.html" class="mobile-submenu-sublink">&rsaquo; Payment Posting &amp; Reconciliation EDI 835</a>
+              <a href="services/ar-management.html" class="mobile-submenu-link">A/R Management Services</a>
+              <a href="services/denial-management.html" class="mobile-submenu-link">Denial Management &amp; Appeals</a>
+              <a href="services/payer-contract-modeling.html" class="mobile-submenu-link">Underpayment Recovery &amp; Contract Compliance</a>
+              <a href="services/patient-billing-collections.html" class="mobile-submenu-link">Patient Billing &amp; Self-Pay Collections</a>
+              <a href="services/credit-balance-resolution.html" class="mobile-submenu-link">Credit Balance &amp; Refund Management</a>
+              <a href="services/edi-enrollment.html" class="mobile-submenu-link">EDI Enrollment Services</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="ai-platform.html" class="mobile-nav-link">Nova Arc AI Platform <span class="nav-badge">New</span></a></li>
         <li><a href="who-we-serve.html" class="mobile-nav-link">Who We Serve <span>&rarr;</span></a></li>
         <li><a href="contact.html" class="mobile-nav-link">Contact <span>&rarr;</span></a></li>
       </ul>
@@ -247,10 +454,119 @@
                   <span style="color:#10B981;">0.34s Total Cycle</span>
                 </div>
                 <div class="sim-progress-bar-bg">
-                  <div class="sim-progress-bar-fill" style="width: 100%;"></div>
-                </div>
+          </div>
+        </div>
+
+        <!-- Payer-Specific Rule Engine & Pre-Submission Clean-Claim Scoring Showcase (62% -> 99.4%) -->
+        <div class="ai-scoring-showcase" style="background: rgba(3, 7, 18, 0.75); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 16px; padding: 28px; margin: 30px 0;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+            <div>
+              <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.3); padding: 4px 12px; border-radius: 999px; margin-bottom: 8px;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                <span style="font-size: 0.75rem; font-weight: 800; color: #38BDF8; text-transform: uppercase; letter-spacing: 0.05em;">
+                  Payer-Specific Rule Engine &bull; Sector Focus: ASCs &amp; Hospital-Based Groups
+                </span>
+              </div>
+              <h3 style="font-size: 1.35rem; font-weight: 800; color: #FFFFFF; margin: 0;">
+                Pre-Submission Clean-Claim Scoring Engine: 62% &rarr; 99.4% Lift
+              </h3>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="font-size: 0.8rem; color: #94A3B8; font-weight: 600;">Sector View:</span>
+              <div style="display: flex; gap: 6px; background: rgba(15, 23, 42, 0.9); padding: 4px; border-radius: 8px; border: 1px solid rgba(56, 189, 248, 0.2);">
+                <button type="button" id="btn-score-asc" class="btn btn-sm btn-primary" style="font-size: 0.75rem; padding: 4px 12px; border-radius: 6px; font-weight: 700;">
+                  Ambulatory Surgery Centers (ASCs)
+                </button>
+                <button type="button" id="btn-score-hbg" class="btn btn-sm btn-secondary" style="font-size: 0.75rem; padding: 4px 12px; border-radius: 6px; font-weight: 600;">
+                  Hospital-Based Groups (Anes/Rad)
+                </button>
               </div>
             </div>
+          </div>
+
+          <p style="font-size: 0.875rem; color: #CBD5E1; line-height: 1.6; margin-bottom: 22px;">
+            Raw clinical encounters ingested directly from EHR schedules exhibit an average baseline first-pass clean score of just <strong>62%</strong> due to complex payer-divergent rules, unbundled surgical codes, and missing electronic attachments. Nova Arc's Payer-Specific Rule Engine interrogates <strong>15,000+ dynamic commercial and CMS policy rules</strong>, automatically remediating billing defects in <strong>0.24 seconds</strong> to elevate claim acceptance to <strong>99.4% first-pass clean</strong> before clearinghouse dispatch.
+          </p>
+
+          <!-- 3-Column Score Progression -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px;" id="scoring-telemetry-grid">
+            
+            <!-- Step 1: Raw Ingestion Score -->
+            <div style="background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(239, 68, 68, 0.35); border-radius: 12px; padding: 22px; display: flex; flex-direction: column;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <span style="font-size: 0.75rem; font-weight: 700; color: #EF4444; text-transform: uppercase;">1. Raw Ingestion Baseline</span>
+                <span style="font-size: 0.725rem; background: rgba(239, 68, 68, 0.15); color: #EF4444; padding: 2px 8px; border-radius: 4px; font-weight: 700;">Fatal Denial Risk</span>
+              </div>
+              <div style="font-size: 2.35rem; font-weight: 800; color: #EF4444; line-height: 1; margin: 4px 0; font-family: monospace;" id="score-raw-val">
+                62.0%
+              </div>
+              <div style="font-size: 0.775rem; color: #94A3B8; margin-bottom: 14px;">Pre-Scrub Clean Claim Probability</div>
+              <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 12px; flex-grow: 1;">
+                <strong style="color: #FCA5A5; font-size: 0.8rem; display: block; margin-bottom: 6px;">Identified Fatal Vulnerabilities:</strong>
+                <ul id="score-raw-flaws" style="margin: 0; padding-left: 18px; font-size: 0.775rem; line-height: 1.55; color: #94A3B8;">
+                  <li><strong>-16% PTP Unbundling:</strong> CPT 29877 debridement billed with 29881 meniscectomy lacking -XU distinct compartment modifier.</li>
+                  <li><strong>-12% Missing Attachment:</strong> HCPCS C1713 anchor implant absent electronic PWK01/02 manufacturer invoice.</li>
+                  <li><strong>-6% Missing Facility Indicator:</strong> POS 24 billed without commercial payer required modifier -SG.</li>
+                  <li><strong>-4% COB Segment Imbalance:</strong> Secondary crossover adjustment CAS segments failing balancing rules.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Step 2: AI Rule Engine Remediation -->
+            <div style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.18) 0%, rgba(15, 23, 42, 0.95) 100%); border: 1.5px solid #38BDF8; border-radius: 12px; padding: 22px; display: flex; flex-direction: column;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <span style="font-size: 0.75rem; font-weight: 700; color: #38BDF8; text-transform: uppercase;">2. Sub-Second Autonomous Fix</span>
+                <span style="font-size: 0.725rem; background: rgba(56, 189, 248, 0.15); color: #38BDF8; padding: 2px 8px; border-radius: 4px; font-weight: 700;">+37.4% Score Lift</span>
+              </div>
+              <div style="font-size: 2.35rem; font-weight: 800; color: #38BDF8; line-height: 1; margin: 4px 0; font-family: monospace;" id="score-speed-val">
+                0.24s
+              </div>
+              <div style="font-size: 0.775rem; color: #94A3B8; margin-bottom: 14px;">Automated Policy Remediation Latency</div>
+              <div style="border-top: 1px solid rgba(56, 189, 248, 0.2); padding-top: 12px; flex-grow: 1;">
+                <strong style="color: #38BDF8; font-size: 0.8rem; display: block; margin-bottom: 6px;">Payer-Specific Rule Actions:</strong>
+                <ul id="score-actions" style="margin: 0; padding-left: 18px; font-size: 0.775rem; line-height: 1.55; color: #CBD5E1;">
+                  <li>Cross-references operative report; verifies separate patellofemoral compartment &amp; appends modifier -XU.</li>
+                  <li>Extracts vendor implant invoice from materials management; embeds electronic PWK segment in Loop 2300.</li>
+                  <li>Appends payer-mandated modifier -SG to line item pursuant to commercial contract terms.</li>
+                  <li>Reconciles secondary payer coordination-of-benefits CAS segments (CO-45, PR-1, PR-2).</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Step 3: Clean Submission Score -->
+            <div style="background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(16, 185, 129, 0.35); border-radius: 12px; padding: 22px; display: flex; flex-direction: column;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <span style="font-size: 0.75rem; font-weight: 700; color: #34D399; text-transform: uppercase;">3. Pre-Submission Clean Score</span>
+                <span style="font-size: 0.725rem; background: rgba(16, 185, 129, 0.15); color: #34D399; padding: 2px 8px; border-radius: 4px; font-weight: 700;">Gateway Approved</span>
+              </div>
+              <div style="font-size: 2.35rem; font-weight: 800; color: #34D399; line-height: 1; margin: 4px 0; font-family: monospace;" id="score-clean-val">
+                99.4%
+              </div>
+              <div style="font-size: 0.775rem; color: #94A3B8; margin-bottom: 14px;">First-Pass Clean Claim Acceptance</div>
+              <div style="border-top: 1px solid rgba(16, 185, 129, 0.2); padding-top: 12px; flex-grow: 1;">
+                <strong style="color: #34D399; font-size: 0.8rem; display: block; margin-bottom: 6px;">Gateway &amp; Adjudication Result:</strong>
+                <ul id="score-outcomes" style="margin: 0; padding-left: 18px; font-size: 0.775rem; line-height: 1.55; color: #A7F3D0;">
+                  <li>ANSI X12 837P batch dispatches with 100% SNIP Level 1–7 validation.</li>
+                  <li>277CA clearinghouse acceptance returned as A1:19 (Adjudication Ready).</li>
+                  <li>100% elimination of avoidable CARC CO-97 / N56 bundling claim rejections.</li>
+                  <li>Accelerated cash collection into provider bank lockbox within 12–14 days.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Health System Pre-Submission ML Denial Scoring Callout Banner -->
+          <div style="margin-top: 20px; background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 10px; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span style="font-size: 0.75rem; background: rgba(56, 189, 248, 0.15); color: #38BDF8; padding: 3px 8px; border-radius: 4px; font-weight: 700;">Sector Focus: Health Systems</span>
+              <span style="font-size: 0.85rem; color: #E2E8F0;">
+                Looking for <strong>Inpatient Sepsis-3 Clinical Validation &amp; Two-Midnight Defense</strong>?
+              </span>
+            </div>
+            <a href="services/denial-management.html#pre-submission-scoring" class="btn btn-sm btn-primary" style="font-size: 0.75rem; padding: 6px 14px; font-weight: 700;">
+              Explore Health System ML Denial Scoring &rarr;
+            </a>
           </div>
         </div>
 
@@ -390,6 +706,178 @@
           </div>
         </div>
 
+        <!-- EDI 278 Automation + Clinical Note Extraction (NLP) Explainer (Sector Focus: ASCs) -->
+        <div class="ai-edi278-showcase" style="background: rgba(3, 7, 18, 0.75); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 16px; padding: 28px; margin: 30px 0;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+            <div>
+              <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.3); padding: 4px 12px; border-radius: 999px; margin-bottom: 8px;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                <span style="font-size: 0.75rem; font-weight: 800; color: #38BDF8; text-transform: uppercase; letter-spacing: 0.05em;">
+                  EDI 278 Automation &bull; Clinical Note Extraction (NLP) &bull; Sector Focus: ASCs
+                </span>
+              </div>
+              <h3 style="font-size: 1.35rem; font-weight: 800; color: #FFFFFF; margin: 0;">
+                Autonomous Surgical Prior Authorization: Unstructured EHR &rarr; Real-Time EDI 278 Determination
+              </h3>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="font-size: 0.8rem; color: #94A3B8; font-weight: 600;">ASC Procedure:</span>
+              <div style="display: flex; gap: 6px; background: rgba(15, 23, 42, 0.9); padding: 4px; border-radius: 8px; border: 1px solid rgba(56, 189, 248, 0.2); flex-wrap: wrap;">
+                <button type="button" id="btn-auth-ortho" class="btn btn-sm btn-primary" onclick="setAuthCase('ortho')" style="font-size: 0.75rem; padding: 4px 12px; border-radius: 6px; font-weight: 700;">
+                  1. Ortho: Knee Arthroscopy
+                </button>
+                <button type="button" id="btn-auth-spine" class="btn btn-sm btn-secondary" onclick="setAuthCase('spine')" style="font-size: 0.75rem; padding: 4px 12px; border-radius: 6px; font-weight: 600;">
+                  2. Spine / Pain: Lumbar ESI
+                </button>
+                <button type="button" id="btn-auth-eye" class="btn btn-sm btn-secondary" onclick="setAuthCase('eye')" style="font-size: 0.75rem; padding: 4px 12px; border-radius: 6px; font-weight: 600;">
+                  3. Ophth: Complex Cataract
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <p style="font-size: 0.875rem; color: #CBD5E1; line-height: 1.6; margin-bottom: 22px;">
+            Ambulatory Surgery Centers lose thousands of dollars per operating room hour when surgical cases are delayed or cancelled due to pending pre-certifications. Nova Arc's Clinical NLP reads free-text physician dictations, progress notes, and imaging reports to extract discrete medical necessity evidence (conservative therapy duration, failed NSAIDs, radiographic criteria), maps the payload into ANSI X12 EDI 278 transactions, and secures instant electronic approvals in sub-4 seconds.
+          </p>
+
+          <!-- Case Header Banner -->
+          <div style="background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 12px 18px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.8rem;">
+            <div>
+              <span style="color: #64748B; font-size: 0.7rem; display: block; text-transform: uppercase;">ASC Surgical Facility:</span>
+              <strong style="color: #38BDF8;" id="auth-case-facility">Valley Surgical Center • 6 Operating Suites (POS 24)</strong>
+            </div>
+            <div>
+              <span style="color: #64748B; font-size: 0.7rem; display: block; text-transform: uppercase;">Attending Surgeon:</span>
+              <strong style="color: #F8FAFC;" id="auth-case-surgeon">Dr. Marcus Vance, MD • Orthopedic Sports Medicine</strong>
+            </div>
+            <div>
+              <span style="color: #64748B; font-size: 0.7rem; display: block; text-transform: uppercase;">Target Payer:</span>
+              <strong style="color: #F8FAFC;" id="auth-case-payer">Aetna Commercial Choice POS II</strong>
+            </div>
+            <div>
+              <span style="color: #64748B; font-size: 0.7rem; display: block; text-transform: uppercase;">Proposed Surgical Procedure:</span>
+              <strong style="color: #34D399;" id="auth-case-cpt">CPT 29881 (Knee Arthroscopy w/ Meniscectomy)</strong>
+            </div>
+          </div>
+
+          <!-- 3-Panel Technical & Clinical Architecture -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 18px;">
+            
+            <!-- Panel 1: NLP Clinical Note Extraction -->
+            <div style="background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 12px; padding: 20px; display: flex; flex-direction: column;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <span style="font-size: 0.75rem; font-weight: 700; color: #38BDF8; text-transform: uppercase;">1. Clinical NLP Extraction</span>
+                <span style="font-size: 0.725rem; background: rgba(56, 189, 248, 0.15); color: #38BDF8; padding: 2px 8px; border-radius: 4px; font-weight: 700;">EHR Free-Text Ingestion</span>
+              </div>
+              <div style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 8px;">Unstructured Physician Clinical Note:</div>
+              <div style="background: #030712; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 6px; padding: 10px; font-size: 0.75rem; color: #CBD5E1; line-height: 1.5; font-style: italic; margin-bottom: 12px; max-height: 120px; overflow-y: auto;" id="auth-raw-note">
+                "Patient with 4-month history of right knee pain and mechanical locking. Completed 6 weeks of structured physical therapy (07/15 - 08/28) with zero functional relief. Oral meloxicam 15mg ineffective; intra-articular cortisone injection gave only 10-day relief. Physical exam reveals positive McMurray's sign, joint line tenderness. Weight-bearing X-rays show preserved joint space. Standing 3T MRI confirms complex posterior horn medial meniscus tear (ICD-10 M23.22)."
+              </div>
+              <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 10px; flex-grow: 1;">
+                <strong style="color: #38BDF8; font-size: 0.775rem; display: block; margin-bottom: 6px;">Extracted Medical Necessity Entities:</strong>
+                <div id="auth-extracted-entities" style="font-size: 0.75rem; line-height: 1.5; color: #94A3B8;">
+                  <div style="margin-bottom: 6px;"><strong style="color: #38BDF8;">Indication:</strong> ICD-10 M23.22 (Tear of Medial Meniscus, Right)</div>
+                  <div style="margin-bottom: 6px;"><strong style="color: #10B981;">Conservative Trial:</strong> 6 Weeks Structured PT + Failed Meloxicam + Steroid Inj</div>
+                  <div style="margin-bottom: 6px;"><strong style="color: #F59E0B;">Exam &amp; Imaging:</strong> Positive McMurray Test + 3T MRI Verified Tear</div>
+                  <div><strong style="color: #CBD5E1;">Procedure &amp; Setting:</strong> CPT 29881 • Place of Service 24 (ASC Facility)</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 2: ANSI X12 EDI 278 Request Payload -->
+            <div style="background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(139, 92, 246, 0.35); border-radius: 12px; padding: 20px; display: flex; flex-direction: column;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <span style="font-size: 0.75rem; font-weight: 700; color: #A78BFA; text-transform: uppercase;">2. ANSI X12 278 Synthesis</span>
+                <span style="font-size: 0.725rem; background: rgba(139, 92, 246, 0.15); color: #C4B5FD; padding: 2px 8px; border-radius: 4px; font-weight: 700;">0.18s Synthesis Latency</span>
+              </div>
+              <div style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 8px;">Structured 5010A1 Request Payload:</div>
+              <pre style="background: #030712; border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 6px; padding: 10px; font-family: monospace; font-size: 0.7rem; color: #C4B5FD; line-height: 1.4; margin: 0 0 12px 0; overflow-x: auto; max-height: 120px;" id="auth-edi-req">BHT*0007*13*REQ20260925*20260925*0830*RQ~
+HL*1**20*1~
+NM1*PR*2*AETNA*****PI*60054~
+HL*2*1*21*1~
+NM1*1P*1*VANCE*MARCUS****XX*1982736450~
+HL*3*2*22*0~
+NM1*IL*1*DOE*JANE****MI*W129384750~
+HL*4*3*EV*0~
+UM*AR*I*2*24:B~
+DTP*472*RD8*20261005-20261005~
+HI*BK:M2322*BF:M1711~
+SV2*HC:29881*2800.00*UN*1~
+PWK*OZ*BM***AC*EHR-PT-NOTE-881~</pre>
+              <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 10px; flex-grow: 1;">
+                <strong style="color: #A78BFA; font-size: 0.775rem; display: block; margin-bottom: 6px;">Key 278 Mapping Segments:</strong>
+                <ul style="margin: 0; padding-left: 16px; font-size: 0.75rem; color: #CBD5E1; line-height: 1.5;">
+                  <li><code>UM*AR*I*2*24:B~</code>: Prior Auth Review Type, Outpatient ASC Setting</li>
+                  <li><code>HI*BK:M2322~</code>: Primary ICD-10 Diagnosis Mapped Directly from NLP</li>
+                  <li><code>PWK*OZ*BM~</code>: Electronic Attachment Link for PT Records &amp; MRI</li>
+                  <li>Real-time Gateway Transmission via Clearinghouse 278 API</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Panel 3: Real-Time EDI 278 Response & ASC Impact -->
+            <div style="background: rgba(15, 23, 42, 0.85); border: 1.5px solid rgba(16, 185, 129, 0.4); border-radius: 12px; padding: 20px; display: flex; flex-direction: column;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <span style="font-size: 0.75rem; font-weight: 700; color: #34D399; text-transform: uppercase;">3. Real-Time Determination</span>
+                <span style="font-size: 0.725rem; background: rgba(16, 185, 129, 0.2); color: #34D399; padding: 2px 8px; border-radius: 4px; font-weight: 700;">100% INSTANT APPROVAL</span>
+              </div>
+              <div style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 8px;">Payer Electronic 278 Response:</div>
+              <pre style="background: #030712; border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 6px; padding: 10px; font-family: monospace; font-size: 0.7rem; color: #A7F3D0; line-height: 1.4; margin: 0 0 12px 0; overflow-x: auto; max-height: 120px;" id="auth-edi-resp">BHT*0007*11*RESP20260925*20260925*0830*AD~
+HL*1**20*1~
+NM1*PR*2*AETNA*****PI*60054~
+HL*2*1*21*1~
+NM1*1P*1*VANCE*MARCUS****XX*1982736450~
+HL*3*2*22*0~
+NM1*IL*1*DOE*JANE****MI*W129384750~
+HL*4*3*EV*0~
+HCR*A1*AUTH-AET-9948201~
+DTP*435*RD8*20261001-20261231~</pre>
+              <div style="border-top: 1px solid rgba(16, 185, 129, 0.25); padding-top: 10px; flex-grow: 1;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                  <span style="font-size: 0.75rem; color: #94A3B8;">Certified Auth Number:</span>
+                  <strong style="color: #34D399; font-family: monospace;" id="auth-num-val">AUTH-AET-9948201</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                  <span style="font-size: 0.75rem; color: #94A3B8;">Approved Window:</span>
+                  <strong style="color: #F8FAFC; font-size: 0.75rem;" id="auth-window-val">90 Days (10/01/2026 – 12/31/2026)</strong>
+                </div>
+                <strong style="color: #34D399; font-size: 0.775rem; display: block; margin-bottom: 6px;">ASC Operational Benefit:</strong>
+                <ul id="auth-impact-list" style="margin: 0; padding-left: 16px; font-size: 0.75rem; color: #D1FAE5; line-height: 1.5;">
+                  <li><strong style="color: #34D399;">OR Block Schedule Preserved:</strong> $8,500 ASC contribution margin secured; OR Room 3 kept fully utilized.</li>
+                  <li><strong style="color: #34D399;">Zero Day-of-Surgery Delays:</strong> Pre-cert approved 10 days prior to scheduled surgical booking.</li>
+                  <li><strong style="color: #34D399;">CARC 197 Immunity:</strong> Prior authorization number embedded into Loop 2300 REF*G1 for clean billing.</li>
+                  <li><strong style="color: #34D399;">Human Escalation Not Needed:</strong> 100% autonomous clearance without manual phone hold time.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Dedicated Cross-Link to Human-Workflow Prior Authorization Service -->
+          <div style="margin-top: 24px; background: linear-gradient(135deg, rgba(31, 111, 235, 0.15) 0%, rgba(15, 23, 42, 0.9) 100%); border: 1.5px solid rgba(56, 189, 248, 0.4); border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+            <div style="max-width: 780px;">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                <span style="font-size: 0.75rem; background: rgba(56, 189, 248, 0.2); color: #38BDF8; padding: 2px 8px; border-radius: 4px; font-weight: 800; text-transform: uppercase;">
+                  Human-in-the-Loop Clinical Escalations
+                </span>
+                <span style="font-size: 0.8rem; color: #94A3B8; font-weight: 600;">Managed Service Alternative</span>
+              </div>
+              <h4 style="font-size: 1.05rem; font-weight: 800; color: #FFFFFF; margin: 0 0 4px 0;">
+                Need Expert Clinical Staff for Peer-to-Peer Calls, Portal Uploads &amp; Complex Appeals?
+              </h4>
+              <p style="font-size: 0.85rem; color: #CBD5E1; margin: 0; line-height: 1.5;">
+                While our AI Platform autonomously clears 85%+ of standard surgical pre-certifications via EDI 278, complex non-electronic commercial portals, peer-to-peer physician scheduling, and medical director escalations often require a dedicated clinical touch. Nova Arc’s full-service human RCM pod of certified intake nurses and prior auth coordinators manages the entire end-to-end workflow for your ASC.
+              </p>
+            </div>
+            <div>
+              <a href="services/prior-authorization.html" class="btn btn-primary" style="font-size: 0.85rem; padding: 10px 20px; font-weight: 700; white-space: nowrap;">
+                Explore Human Prior Auth Services &rarr;
+              </a>
+            </div>
+          </div>
+
+        </div>
+
         <!-- Business Outcomes Trio -->
         <div class="ai-outcomes-container">
           <div class="outcomes-title">
@@ -524,6 +1012,185 @@
               </div>
             </div>
           </div>
+        </div>
+
+        <!-- Unstructured Note -> Coded/Billable Data Pipeline Explainer (Sector Focus: Health Systems) -->
+        <div class="ai-coding-pipeline-showcase" style="background: rgba(3, 7, 18, 0.75); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 16px; padding: 28px; margin: 30px 0;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+            <div>
+              <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.3); padding: 4px 12px; border-radius: 999px; margin-bottom: 8px;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                <span style="font-size: 0.75rem; font-weight: 800; color: #38BDF8; text-transform: uppercase; letter-spacing: 0.05em;">
+                  Unstructured Note &rarr; Coded / Billable Pipeline &bull; Sector Focus: Health Systems
+                </span>
+              </div>
+              <h3 style="font-size: 1.35rem; font-weight: 800; color: #FFFFFF; margin: 0;">
+                Inpatient Clinical NLP &rarr; Autonomous MS-DRG &amp; ICD-10-PCS Grouper Pipeline
+              </h3>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="font-size: 0.8rem; color: #94A3B8; font-weight: 600;">Inpatient Specialty:</span>
+              <div style="display: flex; gap: 6px; background: rgba(15, 23, 42, 0.9); padding: 4px; border-radius: 8px; border: 1px solid rgba(56, 189, 248, 0.2); flex-wrap: wrap;">
+                <button type="button" id="btn-pipe-cardio" class="btn btn-sm btn-primary" onclick="setPipelineCase('cardio')" style="font-size: 0.75rem; padding: 4px 12px; border-radius: 6px; font-weight: 700;">
+                  1. Cardiology (STEMI w/ IABP)
+                </button>
+                <button type="button" id="btn-pipe-neuro" class="btn btn-sm btn-secondary" onclick="setPipelineCase('neuro')" style="font-size: 0.75rem; padding: 4px 12px; border-radius: 6px; font-weight: 600;">
+                  2. Neurology (Stroke w/ tPA)
+                </button>
+                <button type="button" id="btn-pipe-ortho" class="btn btn-sm btn-secondary" onclick="setPipelineCase('ortho')" style="font-size: 0.75rem; padding: 4px 12px; border-radius: 6px; font-weight: 600;">
+                  3. Spine Surgery (PLIF Fusion)
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <p style="font-size: 0.875rem; color: #CBD5E1; line-height: 1.6; margin-bottom: 22px;">
+            Enterprise health systems manage multi-thousand-page inpatient records across dozens of facilities. A single overlooked Major Complication or Comorbidity (MCC) or missing Present on Admission (POA) indicator results in an <strong>$8,000 to $25,000 downcoding loss</strong> per inpatient discharge. Nova Arc’s Clinical NLP transformer parses multi-document inpatient records, isolates qualifying comorbidities, assigns 7-character ICD-10-PCS surgical codes, and constructs fully compliant, audited 837I billing data in <strong>1.8 seconds</strong>.
+          </p>
+
+          <!-- 4-Stage Horizontal Pipeline Architecture Stepper -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin-bottom: 22px;">
+            <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 8px; padding: 12px;">
+              <span style="font-size: 0.68rem; font-weight: 800; color: #38BDF8; background: rgba(56, 189, 248, 0.15); padding: 1px 6px; border-radius: 3px;">STEP 1</span>
+              <h5 style="color: #FFFFFF; font-size: 0.825rem; margin: 4px 0 2px 0;">Multi-Note NLP Ingestion</h5>
+              <p style="color: #94A3B8; font-size: 0.72rem; margin: 0; line-height: 1.4;">Consumes H&amp;P, cath lab operative note, ICU flowsheets; runs negation &amp; temporality detection.</p>
+            </div>
+            <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 8px; padding: 12px;">
+              <span style="font-size: 0.68rem; font-weight: 800; color: #38BDF8; background: rgba(56, 189, 248, 0.15); padding: 1px 6px; border-radius: 3px;">STEP 2</span>
+              <h5 style="color: #FFFFFF; font-size: 0.825rem; margin: 4px 0 2px 0;">SNOMED &rarr; ICD-10 Ontology</h5>
+              <p style="color: #94A3B8; font-size: 0.72rem; margin: 0; line-height: 1.4;">Normalizes clinical terms; maps to ICD-10-CM diagnoses &amp; 7-character ICD-10-PCS procedural codes.</p>
+            </div>
+            <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 8px; padding: 12px;">
+              <span style="font-size: 0.68rem; font-weight: 800; color: #38BDF8; background: rgba(56, 189, 248, 0.15); padding: 1px 6px; border-radius: 3px;">STEP 3</span>
+              <h5 style="color: #FFFFFF; font-size: 0.825rem; margin: 4px 0 2px 0;">CMS MS-DRG Grouper</h5>
+              <p style="color: #94A3B8; font-size: 0.72rem; margin: 0; line-height: 1.4;">Applies Principal DX selection, checks POA (Y/N), captures CC/MCC tiers, and optimizes compliant CMI weight.</p>
+            </div>
+            <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px; padding: 12px;">
+              <span style="font-size: 0.68rem; font-weight: 800; color: #34D399; background: rgba(16, 185, 129, 0.15); padding: 1px 6px; border-radius: 3px;">STEP 4</span>
+              <h5 style="color: #FFFFFF; font-size: 0.825rem; margin: 4px 0 2px 0;">EDI 837I Billable Data</h5>
+              <p style="color: #94A3B8; font-size: 0.72rem; margin: 0; line-height: 1.4;">Generates clean Loop 2300 HI/SV2 claim segments with 99.4% confidence for CAC human sign-off.</p>
+            </div>
+          </div>
+
+          <!-- Inpatient Encounter Header Strip -->
+          <div style="background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 12px 18px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.8rem;">
+            <div>
+              <span style="color: #64748B; font-size: 0.7rem; display: block; text-transform: uppercase;">Health System Hospital:</span>
+              <strong style="color: #38BDF8;" id="pipe-facility">St. Luke's University Health Network • 850-Bed Inpatient Tertiary Center</strong>
+            </div>
+            <div>
+              <span style="color: #64748B; font-size: 0.7rem; display: block; text-transform: uppercase;">Clinical Specialty &amp; Setting:</span>
+              <strong style="color: #F8FAFC;" id="pipe-specialty">Inpatient Interventional Cardiology • Cardiac ICU (UB-04)</strong>
+            </div>
+            <div>
+              <span style="color: #64748B; font-size: 0.7rem; display: block; text-transform: uppercase;">Assigned MS-DRG:</span>
+              <strong style="color: #34D399;" id="pipe-drg">MS-DRG 280 (Acute Myocardial Infarction w/ MCC)</strong>
+            </div>
+            <div>
+              <span style="color: #64748B; font-size: 0.7rem; display: block; text-transform: uppercase;">Case-Mix Index &amp; Reimbursement:</span>
+              <strong style="color: #F8FAFC;" id="pipe-cmi">CMI: 1.842 • Net: $26,450.00</strong>
+            </div>
+          </div>
+
+          <!-- 3-Column Interactive Pipeline Workspace -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 18px;">
+            
+            <!-- Column 1: Unstructured Physician Clinical Notes -->
+            <div style="background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 12px; padding: 20px; display: flex; flex-direction: column;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <span style="font-size: 0.75rem; font-weight: 700; color: #38BDF8; text-transform: uppercase;">1. Raw Inpatient Prose</span>
+                <span style="font-size: 0.725rem; background: rgba(56, 189, 248, 0.15); color: #38BDF8; padding: 2px 8px; border-radius: 4px; font-weight: 700;">Clinical Notes &amp; Op Dictation</span>
+              </div>
+              <div style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 8px;">Multi-Document Inpatient Record Snippet:</div>
+              <div style="background: #030712; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 6px; padding: 10px; font-size: 0.75rem; color: #CBD5E1; line-height: 1.5; font-style: italic; margin-bottom: 12px; max-height: 130px; overflow-y: auto;" id="pipe-raw-note">
+                "Patient brought by EMS in severe crushing chest pain, diaphoresis. EKG confirms acute anterior STEMI with ST elevations in V1-V4. Emergent coronary angiography showed 100% occlusion of proximal LAD. During procedure, patient became acutely hypotensive (BP 72/45), cold and clammy, requiring emergency intra-aortic balloon pump (IABP) insertion via right femoral percutaneous access for cardiogenic shock. Aspiration thrombectomy performed. Transferred to CICU on norepinephrine."
+              </div>
+              <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 10px; flex-grow: 1;">
+                <strong style="color: #38BDF8; font-size: 0.775rem; display: block; margin-bottom: 6px;">Clinical NLP Entity Identification:</strong>
+                <div id="pipe-nlp-entities" style="font-size: 0.75rem; line-height: 1.5; color: #94A3B8;">
+                  <div style="margin-bottom: 4px;"><strong style="color: #38BDF8;">Condition:</strong> Acute Anterior Wall STEMI &rarr; Present on Admission (POA: Y)</div>
+                  <div style="margin-bottom: 4px;"><strong style="color: #EF4444;">Comorbidity (MCC):</strong> Cardiogenic Shock (BP 72/45, pressors) &rarr; (POA: Y)</div>
+                  <div style="margin-bottom: 4px;"><strong style="color: #F59E0B;">Surgical Inpatient Procedure:</strong> Percutaneous IABP Insertion (Descending Aorta)</div>
+                  <div><strong style="color: #10B981;">Negation Check:</strong> "No history of CABG" verified as non-billable historical</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 2: Code Assignment & Grouper Logic -->
+            <div style="background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(139, 92, 246, 0.35); border-radius: 12px; padding: 20px; display: flex; flex-direction: column;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <span style="font-size: 0.75rem; font-weight: 700; color: #A78BFA; text-transform: uppercase;">2. ICD-10 &amp; PCS Mapping</span>
+                <span style="font-size: 0.725rem; background: rgba(139, 92, 246, 0.15); color: #C4B5FD; padding: 2px 8px; border-radius: 4px; font-weight: 700;">CMS Inpatient Grouper</span>
+              </div>
+              <div style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 8px;">Structured Code &amp; POA Mapping:</div>
+              <div style="background: #030712; border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 6px; padding: 10px; font-family: monospace; font-size: 0.725rem; color: #E2E8F0; line-height: 1.5; margin: 0 0 12px 0; max-height: 130px; overflow-y: auto;" id="pipe-codes-block">
+                <div><span style="color: #38BDF8;">[PDX]</span> ICD-10 I21.09 (Anterior STEMI) - POA: Y</div>
+                <div><span style="color: #EF4444;">[MCC]</span> ICD-10 R57.0 (Cardiogenic Shock) - POA: Y</div>
+                <div><span style="color: #F59E0B;">[CC] </span> ICD-10 I50.21 (Acute Systolic HF) - POA: Y</div>
+                <div><span style="color: #34D399;">[PCS]</span> 02HK30Z (Insertion IABP into Aorta, Perc)</div>
+                <div><span style="color: #34D399;">[PCS]</span> 02703ZZ (Dilation Coronary Artery, Perc)</div>
+              </div>
+              <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 10px; flex-grow: 1;">
+                <strong style="color: #A78BFA; font-size: 0.775rem; display: block; margin-bottom: 6px;">Grouper &amp; CMI Optimization:</strong>
+                <ul id="pipe-grouper-details" style="margin: 0; padding-left: 16px; font-size: 0.75rem; color: #CBD5E1; line-height: 1.5;">
+                  <li>Primary Diagnosis maps to MDC 05 (Diseases &amp; Disorders of Circulatory System).</li>
+                  <li>Cardiogenic Shock (R57.0) satisfies CMS Major Complication/Comorbidity (MCC).</li>
+                  <li>Elevates encounter from MS-DRG 282 (Base) &rarr; MS-DRG 280 (With MCC).</li>
+                  <li><strong>+$16,650.00 Net Hospital Revenue Optimization</strong> under compliance guidelines.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Column 3: Billable EDI 837I & Revenue Integrity -->
+            <div style="background: rgba(15, 23, 42, 0.85); border: 1.5px solid rgba(16, 185, 129, 0.4); border-radius: 12px; padding: 20px; display: flex; flex-direction: column;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <span style="font-size: 0.75rem; font-weight: 700; color: #34D399; text-transform: uppercase;">3. Billable EDI 837I Output</span>
+                <span style="font-size: 0.725rem; background: rgba(16, 185, 129, 0.2); color: #34D399; padding: 2px 8px; border-radius: 4px; font-weight: 700;">99.4% AI Confidence</span>
+              </div>
+              <div style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 8px;">Generated ANSI X12 837I Segments:</div>
+              <pre style="background: #030712; border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 6px; padding: 10px; font-family: monospace; font-size: 0.7rem; color: #A7F3D0; line-height: 1.4; margin: 0 0 12px 0; overflow-x: auto; max-height: 130px;" id="pipe-edi-block">CLM*HOSP892011*26450.00***11:A:1*Y*A*Y*Y~
+HI*BK:I2109:Y*BF:R570:Y*BF:I5021:Y~
+HI*BR:02HK30Z:D8:20260920*BR:02703ZZ:D8:20260920~
+SV2*0110*HC:99223*4500.00*UN*1~
+SV2*0250**12000.00*UN*1~
+SV2*0481*HC:02HK30Z*9950.00*UN*1~
+DTP*434*RD8*20260920-20260924~</pre>
+              <div style="border-top: 1px solid rgba(16, 185, 129, 0.25); padding-top: 10px; flex-grow: 1;">
+                <strong style="color: #34D399; font-size: 0.775rem; display: block; margin-bottom: 6px;">Health System Financial &amp; Compliance Impact:</strong>
+                <ul id="pipe-impact-list" style="margin: 0; padding-left: 16px; font-size: 0.75rem; color: #D1FAE5; line-height: 1.5;">
+                  <li><strong style="color: #34D399;">$26,450.00 Full MS-DRG Realized:</strong> Zero undercoding leakage; captures accurate clinical acuity.</li>
+                  <li><strong style="color: #34D399;">DNFB Accelerated by 6.2 Days:</strong> Chart coded in 1.8 seconds vs. 48-hour manual backlog.</li>
+                  <li><strong style="color: #34D399;">100% OIG Audit Defensibility:</strong> Explicit POA indicators verified against emergency presentation.</li>
+                  <li><strong style="color: #34D399;">CAC Review Ready:</strong> Pre-staged for AHIMA certified inpatient coder one-click sign-off.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Dedicated Cross-Link to services/cac-review.html -->
+          <div style="margin-top: 24px; background: linear-gradient(135deg, rgba(31, 111, 235, 0.15) 0%, rgba(15, 23, 42, 0.9) 100%); border: 1.5px solid rgba(56, 189, 248, 0.4); border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+            <div style="max-width: 780px;">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                <span style="font-size: 0.75rem; background: rgba(56, 189, 248, 0.2); color: #38BDF8; padding: 2px 8px; border-radius: 4px; font-weight: 800; text-transform: uppercase;">
+                  Human-in-the-Loop Clinical Coding Services
+                </span>
+                <span style="font-size: 0.8rem; color: #94A3B8; font-weight: 600;">Managed Inpatient Coding Pods</span>
+              </div>
+              <h4 style="font-size: 1.05rem; font-weight: 800; color: #FFFFFF; margin: 0 0 4px 0;">
+                Looking for Certified Coders (CPC, CCS, CIC) to Audit &amp; Validate Your AI Coding Queue?
+              </h4>
+              <p style="font-size: 0.85rem; color: #CBD5E1; margin: 0; line-height: 1.5;">
+                Nova Arc pairs our autonomous NLP pipeline with 100% US-based, AHIMA and AAPC-certified inpatient coding pods. Our certified specialists review AI-generated code assignments, manage physician queries, resolve Discharged Not Final Billed (DNFB) backlogs, and audit case-mix index (CMI) integrity under an audited 98.6% accuracy SLA.
+              </p>
+            </div>
+            <div>
+              <a href="services/cac-review.html" class="btn btn-primary" style="font-size: 0.85rem; padding: 10px 20px; font-weight: 700; white-space: nowrap;">
+                Explore CAC Review &amp; Coding Services &rarr;
+              </a>
+            </div>
+          </div>
+
         </div>
 
         <!-- Business Outcomes Trio -->
@@ -759,5 +1426,384 @@
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btnAsc = document.getElementById('btn-score-asc');
+      const btnHbg = document.getElementById('btn-score-hbg');
+      const rawFlaws = document.getElementById('score-raw-flaws');
+      const actions = document.getElementById('score-actions');
+      const outcomes = document.getElementById('score-outcomes');
+
+      if (btnAsc && btnHbg && rawFlaws && actions && outcomes) {
+        btnAsc.addEventListener('click', () => {
+          btnAsc.className = 'btn btn-sm btn-primary';
+          btnAsc.style.fontWeight = '700';
+          btnHbg.className = 'btn btn-sm btn-secondary';
+          btnHbg.style.fontWeight = '600';
+
+          rawFlaws.innerHTML = `
+            <li><strong>-16% PTP Unbundling:</strong> CPT 29877 debridement billed with 29881 meniscectomy lacking -XU distinct compartment modifier.</li>
+            <li><strong>-12% Missing Attachment:</strong> HCPCS C1713 anchor implant absent electronic PWK01/02 manufacturer invoice.</li>
+            <li><strong>-6% Missing Facility Indicator:</strong> POS 24 billed without commercial payer required modifier -SG.</li>
+            <li><strong>-4% COB Segment Imbalance:</strong> Secondary crossover adjustment CAS segments failing balancing rules.</li>
+          `;
+
+          actions.innerHTML = `
+            <li>Cross-references operative report; verifies separate patellofemoral compartment &amp; appends modifier -XU.</li>
+            <li>Extracts vendor implant invoice from materials management; embeds electronic PWK segment in Loop 2300.</li>
+            <li>Appends payer-mandated modifier -SG to line item pursuant to commercial contract terms.</li>
+            <li>Reconciles secondary payer coordination-of-benefits CAS segments (CO-45, PR-1, PR-2).</li>
+          `;
+
+          outcomes.innerHTML = `
+            <li>ANSI X12 837P batch dispatches with 100% SNIP Level 1–7 validation.</li>
+            <li>277CA clearinghouse acceptance returned as A1:19 (Adjudication Ready).</li>
+            <li>100% elimination of avoidable CARC CO-97 / N56 bundling claim rejections.</li>
+            <li>Accelerated cash collection into provider bank lockbox within 12–14 days.</li>
+          `;
+        });
+
+        btnHbg.addEventListener('click', () => {
+          btnHbg.className = 'btn btn-sm btn-primary';
+          btnHbg.style.fontWeight = '700';
+          btnAsc.className = 'btn btn-sm btn-secondary';
+          btnAsc.style.fontWeight = '600';
+
+          rawFlaws.innerHTML = `
+            <li><strong>-18% Concurrency Direction:</strong> Anesthesia CPT 00811 missing CRNA medical supervision modifier (-QZ vs -AA/-QK).</li>
+            <li><strong>-10% Unit Calculation Defect:</strong> Billed without exact anesthesia minutes (120 mins = 8 time units + 7 base units).</li>
+            <li><strong>-6% Split-Billing Omission:</strong> CT Abdomen/Pelvis CPT 74177 missing modifier -26 for hospitalist professional read.</li>
+            <li><strong>-4% LCD Medical Necessity Gap:</strong> Missing primary acute abdominal pain ICD-10 indication linkage.</li>
+          `;
+
+          actions.innerHTML = `
+            <li>Calculates ASA base units + 15-minute intervals and automatically appends modifier -QZ based on provider roster.</li>
+            <li>Splits facility technical charge (UB-04) and appends modifier -26 for physician group CMS-1500 dispatch.</li>
+            <li>Cross-references Medicare LCD L34458 and links valid ICD-10 diagnostic indications (R10.9).</li>
+            <li>Validates NCCI Multiple Procedure Payment Reduction (MPPR) rules across multi-line professional interpretation bills.</li>
+          `;
+
+          outcomes.innerHTML = `
+            <li>ANSI X12 837P professional fee claim dispatches with 99.4% first-pass acceptance.</li>
+            <li>100% prevention of commercial downcoding clawbacks on professional interpretation reads.</li>
+            <li>Elimination of anesthesia minute mismatch denials (CARC 96 / RARC M20).</li>
+            <li>Direct electronic remit (835) cash posted to group bank account in 11 days.</li>
+          `;
+        });
+      }
+
+      // --- EDI 278 ASC PRIOR AUTH SWITCHER ---
+      const authCases = {
+        ortho: {
+          facility: "Valley Surgical Center • 6 Operating Suites (POS 24)",
+          surgeon: "Dr. Marcus Vance, MD • Orthopedic Sports Medicine",
+          payer: "Aetna Commercial Choice POS II",
+          cpt: "CPT 29881 (Knee Arthroscopy w/ Meniscectomy)",
+          rawNote: `"Patient with 4-month history of right knee pain and mechanical locking. Completed 6 weeks of structured physical therapy (07/15 - 08/28) with zero functional relief. Oral meloxicam 15mg ineffective; intra-articular cortisone injection gave only 10-day relief. Physical exam reveals positive McMurray's sign, joint line tenderness. Weight-bearing X-rays show preserved joint space. Standing 3T MRI confirms complex posterior horn medial meniscus tear (ICD-10 M23.22)."`,
+          entities: `
+            <div style="margin-bottom: 6px;"><strong style="color: #38BDF8;">Indication:</strong> ICD-10 M23.22 (Tear of Medial Meniscus, Right)</div>
+            <div style="margin-bottom: 6px;"><strong style="color: #10B981;">Conservative Trial:</strong> 6 Weeks Structured PT + Failed Meloxicam + Steroid Inj</div>
+            <div style="margin-bottom: 6px;"><strong style="color: #F59E0B;">Exam &amp; Imaging:</strong> Positive McMurray Test + 3T MRI Verified Tear</div>
+            <div><strong style="color: #CBD5E1;">Procedure &amp; Setting:</strong> CPT 29881 • Place of Service 24 (ASC Facility)</div>
+          `,
+          ediReq: `BHT*0007*13*REQ20260925*20260925*0830*RQ~
+HL*1**20*1~
+NM1*PR*2*AETNA*****PI*60054~
+HL*2*1*21*1~
+NM1*1P*1*VANCE*MARCUS****XX*1982736450~
+HL*3*2*22*0~
+NM1*IL*1*DOE*JANE****MI*W129384750~
+HL*4*3*EV*0~
+UM*AR*I*2*24:B~
+DTP*472*RD8*20261005-20261005~
+HI*BK:M2322*BF:M1711~
+SV2*HC:29881*2800.00*UN*1~
+PWK*OZ*BM***AC*EHR-PT-NOTE-881~`,
+          ediResp: `BHT*0007*11*RESP20260925*20260925*0830*AD~
+HL*1**20*1~
+NM1*PR*2*AETNA*****PI*60054~
+HL*2*1*21*1~
+NM1*1P*1*VANCE*MARCUS****XX*1982736450~
+HL*3*2*22*0~
+NM1*IL*1*DOE*JANE****MI*W129384750~
+HL*4*3*EV*0~
+HCR*A1*AUTH-AET-9948201~
+DTP*435*RD8*20261001-20261231~`,
+          authNum: "AUTH-AET-9948201",
+          authWindow: "90 Days (10/01/2026 – 12/31/2026)",
+          impact: `
+            <li><strong style="color: #34D399;">OR Block Schedule Preserved:</strong> $8,500 ASC contribution margin secured; OR Room 3 kept fully utilized.</li>
+            <li><strong style="color: #34D399;">Zero Day-of-Surgery Delays:</strong> Pre-cert approved 10 days prior to scheduled surgical booking.</li>
+            <li><strong style="color: #34D399;">CARC 197 Immunity:</strong> Prior authorization number embedded into Loop 2300 REF*G1 for clean billing.</li>
+            <li><strong style="color: #34D399;">Human Escalation Not Needed:</strong> 100% autonomous clearance without manual phone hold time.</li>
+          `
+        },
+        spine: {
+          facility: "Advanced Spine & Joint ASC • 4 Operating Suites (POS 24)",
+          surgeon: "Dr. Elena Rostova, MD • Interventional Spine & Pain",
+          payer: "UnitedHealthcare Commercial Choice Plus",
+          cpt: "CPT 62323 (Lumbar Epidural Steroid Inj w/ Imaging)",
+          rawNote: `"54-year-old presenting with severe L5-S1 radicular shooting pain radiating down left leg for 8 weeks. Physical therapy (12 sessions) completed with persistent radiculopathy. Failed oral gabapentin 300mg TID and naproxen. Positive straight leg raise test on left at 40 degrees. Lumbar MRI confirms L5-S1 disc herniation with left S1 nerve root compression (ICD-10 M54.16)."`,
+          entities: `
+            <div style="margin-bottom: 6px;"><strong style="color: #38BDF8;">Indication:</strong> ICD-10 M54.16 (Lumbar Radiculopathy, L5-S1)</div>
+            <div style="margin-bottom: 6px;"><strong style="color: #10B981;">Conservative Trial:</strong> 8-Week Duration + 12 PT Sessions + Failed Gabapentin/Naproxen</div>
+            <div style="margin-bottom: 6px;"><strong style="color: #F59E0B;">Exam &amp; Imaging:</strong> Positive Straight Leg Raise (40°) + MRI Confirmed Herniation</div>
+            <div><strong style="color: #CBD5E1;">Procedure &amp; Setting:</strong> CPT 62323 • Place of Service 24 (ASC Facility)</div>
+          `,
+          ediReq: `BHT*0007*13*REQ20260925*20260925*0915*RQ~
+HL*1**20*1~
+NM1*PR*2*UNITEDHEALTHCARE*****PI*87726~
+HL*2*1*21*1~
+NM1*1P*1*ROSTOVA*ELENA****XX*1773928104~
+HL*3*2*22*0~
+NM1*IL*1*MILLER*ROBERT****MI*U991827364~
+HL*4*3*EV*0~
+UM*AR*I*2*24:B~
+DTP*472*RD8*20261008-20261008~
+HI*BK:M5416*BF:M5126~
+SV2*HC:62323*1450.00*UN*1~
+PWK*OZ*BM***AC*MRI-RAD-LUMBAR-412~`,
+          ediResp: `BHT*0007*11*RESP20260925*20260925*0915*AD~
+HL*1**20*1~
+NM1*PR*2*UNITEDHEALTHCARE*****PI*87726~
+HL*2*1*21*1~
+NM1*1P*1*ROSTOVA*ELENA****XX*1773928104~
+HL*3*2*22*0~
+NM1*IL*1*MILLER*ROBERT****MI*U991827364~
+HL*4*3*EV*0~
+HCR*A1*AUTH-UHC-7721094~
+DTP*435*RD8*20261005-20261105~`,
+          authNum: "AUTH-UHC-7721094",
+          authWindow: "30 Days (10/05/2026 – 11/05/2026)",
+          impact: `
+            <li><strong style="color: #34D399;">Fluoroscopy Suite Fully Booked:</strong> 98.4% ASC procedure room utilization maintained without schedule holes.</li>
+            <li><strong style="color: #34D399;">Instant UHC Policy Clearance:</strong> Met all UHC Medical Policy 2026T0048 criteria in 3.8 seconds.</li>
+            <li><strong style="color: #34D399;">Patient Satisfaction:</strong> Procedure scheduled immediately upon clinical consultation without waiting weeks.</li>
+            <li><strong style="color: #34D399;">Repeat Series Tracking:</strong> System automatically monitors 6-month interval limits for future injections.</li>
+          `
+        },
+        eye: {
+          facility: "Precision Eye Surgical Institute • 4 Dedicated Ophthalmic Suites (POS 24)",
+          surgeon: "Dr. Jonathan Sterling, MD • Cataract & Refractive Surgeon",
+          payer: "Blue Cross Blue Shield State Plan",
+          cpt: "CPT 66982 (Complex Cataract Extraction w/ Premium IOL)",
+          rawNote: `"71-year-old female with worsening bilateral visual impairment. Best corrected visual acuity (BCVA) 20/60 OD with significant disabling glare impairment interfering with driving. Slit lamp examination demonstrates 3+ nuclear sclerotic cataract with pseudoexfoliation syndrome (PXF) and weak zonules requiring iris hooks/capsular tension ring. Pre-op biometry completed (ICD-10 H25.11 / H26.8)."`,
+          entities: `
+            <div style="margin-bottom: 6px;"><strong style="color: #38BDF8;">Indication:</strong> ICD-10 H25.11 (Age-Related Nuclear Cataract) &amp; H26.8 (PXF)</div>
+            <div style="margin-bottom: 6px;"><strong style="color: #10B981;">Acuity &amp; Functional Deficit:</strong> BCVA 20/60 OD + Glare Disability Impairing Activities of Daily Living</div>
+            <div style="margin-bottom: 6px;"><strong style="color: #F59E0B;">Surgical Complexity:</strong> Pseudoexfoliation with Zonular Laxity Requiring Capsular Ring</div>
+            <div><strong style="color: #CBD5E1;">Procedure &amp; Setting:</strong> CPT 66982 • Place of Service 24 (ASC Facility)</div>
+          `,
+          ediReq: `BHT*0007*13*REQ20260925*20260925*1045*RQ~
+HL*1**20*1~
+NM1*PR*2*BCBS STATE PLAN*****PI*54771~
+HL*2*1*21*1~
+NM1*1P*1*STERLING*JONATHAN****XX*1662541890~
+HL*3*2*22*0~
+NM1*IL*1*DAVIS*MARGARET****MI*X882910471~
+HL*4*3*EV*0~
+UM*AR*I*2*24:B~
+DTP*472*RD8*20261012-20261012~
+HI*BK:H2511*BF:H268~
+SV2*HC:66982*3600.00*UN*1~
+PWK*OZ*BM***AC*OPHTH-BIOMETRY-104~`,
+          ediResp: `BHT*0007*11*RESP20260925*20260925*1045*AD~
+HL*1**20*1~
+NM1*PR*2*BCBS STATE PLAN*****PI*54771~
+HL*2*1*21*1~
+NM1*1P*1*STERLING*JONATHAN****XX*1662541890~
+HL*3*2*22*0~
+NM1*IL*1*DAVIS*MARGARET****MI*X882910471~
+HL*4*3*EV*0~
+HCR*A1*AUTH-BCBS-3309182~
+DTP*435*RD8*20261010-20270110~`,
+          authNum: "AUTH-BCBS-3309182",
+          authWindow: "90 Days (10/10/2026 – 01/10/2027)",
+          impact: `
+            <li><strong style="color: #34D399;">High-Throughput Eye Turnover:</strong> 12 cataract cases/day run on schedule with zero morning authorization hold-ups.</li>
+            <li><strong style="color: #34D399;">Complex CPT 66982 Upfront Clearance:</strong> Pre-cleared zonular weakness criteria, avoiding post-op downcoding to 66984.</li>
+            <li><strong style="color: #34D399;">Lens Inventory Precision:</strong> Premium IOL ordered and verified in surgical materials management 5 days in advance.</li>
+            <li><strong style="color: #34D399;">Physician Time Saved:</strong> Surgeon spends zero minutes filling out repetitive BCBS pre-cert questionnaires.</li>
+          `
+        }
+      };
+
+      window.setAuthCase = function(caseKey) {
+        const btnOrtho = document.getElementById('btn-auth-ortho');
+        const btnSpine = document.getElementById('btn-auth-spine');
+        const btnEye = document.getElementById('btn-auth-eye');
+
+        if (btnOrtho && btnSpine && btnEye) {
+          btnOrtho.className = (caseKey === 'ortho') ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-secondary';
+          btnOrtho.style.fontWeight = (caseKey === 'ortho') ? '700' : '600';
+          btnSpine.className = (caseKey === 'spine') ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-secondary';
+          btnSpine.style.fontWeight = (caseKey === 'spine') ? '700' : '600';
+          btnEye.className = (caseKey === 'eye') ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-secondary';
+          btnEye.style.fontWeight = (caseKey === 'eye') ? '700' : '600';
+        }
+
+        const c = authCases[caseKey];
+        if (c) {
+          document.getElementById('auth-case-facility').innerText = c.facility;
+          document.getElementById('auth-case-surgeon').innerText = c.surgeon;
+          document.getElementById('auth-case-payer').innerText = c.payer;
+          document.getElementById('auth-case-cpt').innerText = c.cpt;
+          document.getElementById('auth-raw-note').innerText = c.rawNote;
+          document.getElementById('auth-extracted-entities').innerHTML = c.entities;
+          document.getElementById('auth-edi-req').innerText = c.ediReq;
+          document.getElementById('auth-edi-resp').innerText = c.ediResp;
+          document.getElementById('auth-num-val').innerText = c.authNum;
+          document.getElementById('auth-window-val').innerText = c.authWindow;
+          const authImpact = document.getElementById('auth-impact-list');
+          if (authImpact && c.impact) {
+            authImpact.innerHTML = c.impact;
+          }
+        }
+      };
+
+      // --- UNSTRUCTURED NOTE -> BILLABLE PIPELINE (HEALTH SYSTEMS) ---
+      const pipelineCases = {
+        cardio: {
+          facility: "St. Luke's University Health Network • 850-Bed Inpatient Tertiary Center",
+          specialty: "Inpatient Interventional Cardiology • Cardiac ICU (UB-04)",
+          drg: "MS-DRG 280 (Acute Myocardial Infarction w/ MCC)",
+          cmi: "CMI: 1.842 • Net: $26,450.00",
+          rawNote: `"Patient brought by EMS in severe crushing chest pain, diaphoresis. EKG confirms acute anterior STEMI with ST elevations in V1-V4. Emergent coronary angiography showed 100% occlusion of proximal LAD. During procedure, patient became acutely hypotensive (BP 72/45), cold and clammy, requiring emergency intra-aortic balloon pump (IABP) insertion via right femoral percutaneous access for cardiogenic shock. Aspiration thrombectomy performed. Transferred to CICU on norepinephrine."`,
+          nlpEntities: `
+            <div style="margin-bottom: 4px;"><strong style="color: #38BDF8;">Condition:</strong> Acute Anterior Wall STEMI &rarr; Present on Admission (POA: Y)</div>
+            <div style="margin-bottom: 4px;"><strong style="color: #EF4444;">Comorbidity (MCC):</strong> Cardiogenic Shock (BP 72/45, pressors) &rarr; (POA: Y)</div>
+            <div style="margin-bottom: 4px;"><strong style="color: #F59E0B;">Surgical Inpatient Procedure:</strong> Percutaneous IABP Insertion (Descending Aorta)</div>
+            <div><strong style="color: #10B981;">Negation Check:</strong> "No history of CABG" verified as non-billable historical</div>
+          `,
+          codesBlock: `<div><span style="color: #38BDF8;">[PDX]</span> ICD-10 I21.09 (Anterior STEMI) - POA: Y</div>
+<div><span style="color: #EF4444;">[MCC]</span> ICD-10 R57.0 (Cardiogenic Shock) - POA: Y</div>
+<div><span style="color: #F59E0B;">[CC] </span> ICD-10 I50.21 (Acute Systolic HF) - POA: Y</div>
+<div><span style="color: #34D399;">[PCS]</span> 02HK30Z (Insertion IABP into Aorta, Perc)</div>
+<div><span style="color: #34D399;">[PCS]</span> 02703ZZ (Dilation Coronary Artery, Perc)</div>`,
+          grouperDetails: `
+            <li>Primary Diagnosis maps to MDC 05 (Diseases &amp; Disorders of Circulatory System).</li>
+            <li>Cardiogenic Shock (R57.0) satisfies CMS Major Complication/Comorbidity (MCC).</li>
+            <li>Elevates encounter from MS-DRG 282 (Base) &rarr; MS-DRG 280 (With MCC).</li>
+            <li><strong>+$16,650.00 Net Hospital Revenue Optimization</strong> under compliance guidelines.</li>
+          `,
+          ediBlock: `CLM*HOSP892011*26450.00***11:A:1*Y*A*Y*Y~
+HI*BK:I2109:Y*BF:R570:Y*BF:I5021:Y~
+HI*BR:02HK30Z:D8:20260920*BR:02703ZZ:D8:20260920~
+SV2*0110*HC:99223*4500.00*UN*1~
+SV2*0250**12000.00*UN*1~
+SV2*0481*HC:02HK30Z*9950.00*UN*1~
+DTP*434*RD8*20260920-20260924~`,
+          impact: `
+            <li><strong style="color: #34D399;">$26,450.00 Full MS-DRG Realized:</strong> Zero undercoding leakage; captures accurate clinical acuity.</li>
+            <li><strong style="color: #34D399;">DNFB Accelerated by 6.2 Days:</strong> Chart coded in 1.8 seconds vs. 48-hour manual backlog.</li>
+            <li><strong style="color: #34D399;">100% OIG Audit Defensibility:</strong> Explicit POA indicators verified against emergency presentation.</li>
+            <li><strong style="color: #34D399;">CAC Review Ready:</strong> Pre-staged for AHIMA certified inpatient coder one-click sign-off.</li>
+          `
+        },
+        neuro: {
+          facility: "Memorial Comprehensive Stroke Center • 700-Bed Regional Hospital",
+          specialty: "Inpatient Neurology &amp; Neuro-ICU • Code Stroke Inpatient (UB-04)",
+          drg: "MS-DRG 062 (Ischemic Stroke w/ Thrombolytic Agent w/ MCC)",
+          cmi: "CMI: 2.315 • Net: $31,800.00",
+          rawNote: `"76-year-old male presenting via Code Stroke within 75 minutes of sudden onset right hemiplegia and expressive aphasia. Baseline NIHSS 16. Stat non-contrast head CT excluded intracranial hemorrhage. CT angiogram showed acute occlusion of left M1 segment MCA. Intravenous tenecteplase (tPA) bolus administered at 0.25 mg/kg per protocol in ED. Patient admitted to Neuro-ICU. On day 2, developed acute fever (102.1°F), purulent sputum, and hypoxia; chest X-ray confirmed acute aspiration pneumonia."`,
+          nlpEntities: `
+            <div style="margin-bottom: 4px;"><strong style="color: #38BDF8;">Condition:</strong> Cerebral Infarction / Thrombosis Left MCA &rarr; (POA: Y)</div>
+            <div style="margin-bottom: 4px;"><strong style="color: #EF4444;">Comorbidity (MCC):</strong> Acute Aspiration Pneumonia (ICU day 2) &rarr; (POA: Y)</div>
+            <div style="margin-bottom: 4px;"><strong style="color: #F59E0B;">Comorbidity (CC):</strong> Right Hemiplegia &amp; Hemiparesis &rarr; (POA: Y)</div>
+            <div><strong style="color: #34D399;">Procedure:</strong> IV Infusion of Thrombolytic / Fibrinolytic Agent (3E03317)</div>
+          `,
+          codesBlock: `<div><span style="color: #38BDF8;">[PDX]</span> ICD-10 I63.511 (Occlusion Left MCA w/ Infarct) - POA: Y</div>
+<div><span style="color: #EF4444;">[MCC]</span> ICD-10 J69.0 (Pneumonitis due to Inhalation Food/Vomitus) - POA: Y</div>
+<div><span style="color: #F59E0B;">[CC] </span> ICD-10 G81.91 (Hemiplegia, Right Dominant) - POA: Y</div>
+<div><span style="color: #34D399;">[PCS]</span> 3E03317 (Introduction of Other Thrombolytic into Peripheral Vein)</div>`,
+          grouperDetails: `
+            <li>Primary Diagnosis maps to MDC 01 (Diseases &amp; Disorders of Nervous System).</li>
+            <li>Administration of tPA moves case into surgical/procedural partition MS-DRG 061–063.</li>
+            <li>Aspiration Pneumonia (J69.0) qualifies as Major Complication/Comorbidity (MCC).</li>
+            <li>Final grouper determination: <strong>MS-DRG 062</strong> (Weight: 2.315).</li>
+          `,
+          ediBlock: `CLM*HOSP441029*31800.00***11:A:1*Y*A*Y*Y~
+HI*BK:I63511:Y*BF:J690:Y*BF:G8191:Y*BF:R4701:Y~
+HI*BR:3E03317:D8:20260918~
+SV2*0110*HC:99223*4800.00*UN*1~
+SV2*0250**18500.00*UN*1~
+SV2*0730**8500.00*UN*1~
+DTP*434*RD8*20260918-20260925~`,
+          impact: `
+            <li><strong style="color: #34D399;">$31,800.00 Accurate Inpatient Revenue:</strong> Averts $12,400 under-reimbursement from missing tPA PCS code.</li>
+            <li><strong style="color: #34D399;">Complex Stroke Quality Defensibility:</strong> Captures NIHSS score and thrombolytic timing for AHA Get With The Guidelines.</li>
+            <li><strong style="color: #34D399;">Zero Inpatient Coding Discrepancies:</strong> 100% alignment between pharmacy MAR tPA infusion and PCS code.</li>
+            <li><strong style="color: #34D399;">Sub-2-Minute Processing:</strong> High-acuity ICU chart ready for final billing on day of discharge.</li>
+          `
+        },
+        ortho: {
+          facility: "Valley Health Regional Medical Center • 550-Bed Orthopedic & Spine Center",
+          specialty: "Inpatient Spine Surgery • Major Surgical Inpatient (UB-04)",
+          drg: "MS-DRG 460 (Spinal Fusion Except Cervical w/o MCC)",
+          cmi: "CMI: 3.421 • Net: $48,200.00",
+          rawNote: `"62-year-old female with Grade II degenerative spondylolisthesis at L4-L5 with neurogenic claudication. Underwent posterior lumbar interbody fusion (PLIF) at L4-L5. Bilateral complete laminectomy and facetectomy performed. Interbody PEEK cage packed with morselized autologous local bone graft and synthetic demineralized bone matrix placed into disc space. Posterior transpedicular screw and rod instrumentation placed at L4 and L5 bilaterally. Intra-operative fluoroscopy confirmed anatomic alignment. Patient's BMI is 41.2 (Morbid Obesity)."`,
+          nlpEntities: `
+            <div style="margin-bottom: 4px;"><strong style="color: #38BDF8;">Condition:</strong> Lumbar Spondylolisthesis L4-L5 &rarr; (POA: Y)</div>
+            <div style="margin-bottom: 4px;"><strong style="color: #F59E0B;">Comorbidity (CC):</strong> Morbid Obesity (BMI 41.2) &rarr; (POA: Y)</div>
+            <div style="margin-bottom: 4px;"><strong style="color: #34D399;">Surgical Procedure 1:</strong> Interbody Fusion Lumbar Joint w/ Cage &amp; Autograft (0SG007Z)</div>
+            <div><strong style="color: #34D399;">Surgical Procedure 2:</strong> Insertion Pedicle Screw Internal Fixation Device (0SH004Z)</div>
+          `,
+          codesBlock: `<div><span style="color: #38BDF8;">[PDX]</span> ICD-10 M43.16 (Spondylolisthesis, Lumbar Region) - POA: Y</div>
+<div><span style="color: #F59E0B;">[CC] </span> ICD-10 E66.01 (Morbid Severe Obesity) - POA: Y</div>
+<div><span style="color: #94A3B8;">[Z]  </span> ICD-10 Z68.41 (Body Mass Index 40.0-44.9, Adult) - POA: Y</div>
+<div><span style="color: #34D399;">[PCS]</span> 0SG007Z (Fusion Lumbar Joint w/ Interbody Fusion Device, Post)</div>
+<div><span style="color: #34D399;">[PCS]</span> 0SH004Z (Insertion Internal Fixation into Lumbar Vertebra, Post)</div>`,
+          grouperDetails: `
+            <li>Primary Diagnosis maps to MDC 08 (Diseases &amp; Disorders of Musculoskeletal System).</li>
+            <li>Procedural PCS codes trigger major OR surgical partition (Spinal Fusion).</li>
+            <li>Differentiates between anterior, posterior, column count, and interbody device types.</li>
+            <li>Compliantly captures Morbid Obesity CC for proper clinical severity weighting.</li>
+          `,
+          ediBlock: `CLM*HOSP338910*48200.00***11:A:1*Y*A*Y*Y~
+HI*BK:M4316:Y*BF:E6601:Y*BF:Z6841:Y~
+HI*BR:0SG007Z:D8:20260921*BR:0SH004Z:D8:20260921~
+SV2*0110*HC:99223*5200.00*UN*1~
+SV2*0250**14000.00*UN*1~
+SV2*0360**29000.00*UN*1~
+DTP*434*RD8*20260921-20260925~`,
+          impact: `
+            <li><strong style="color: #34D399;">$48,200.00 High-Acuity Surgical Revenue Protected:</strong> Accurately isolates 7-character PCS devices.</li>
+            <li><strong style="color: #34D399;">Prevents DRG Downcoding Clawback:</strong> Pre-validated surgical operative approach and fusion qualifiers.</li>
+            <li><strong style="color: #34D399;">Implant Reconciliation:</strong> PEEK cage and pedicle screw barcode serial numbers mapped to UB-04 Rev Code 0278.</li>
+            <li><strong style="color: #34D399;">Coder Productivity 3.5x:</strong> Human coder audits verified suggestions in &lt; 3 minutes.</li>
+          `
+        }
+      };
+
+      window.setPipelineCase = function(caseKey) {
+        const btnCardio = document.getElementById('btn-pipe-cardio');
+        const btnNeuro = document.getElementById('btn-pipe-neuro');
+        const btnOrtho = document.getElementById('btn-pipe-ortho');
+
+        if (btnCardio && btnNeuro && btnOrtho) {
+          btnCardio.className = (caseKey === 'cardio') ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-secondary';
+          btnCardio.style.fontWeight = (caseKey === 'cardio') ? '700' : '600';
+          btnNeuro.className = (caseKey === 'neuro') ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-secondary';
+          btnNeuro.style.fontWeight = (caseKey === 'neuro') ? '700' : '600';
+          btnOrtho.className = (caseKey === 'ortho') ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-secondary';
+          btnOrtho.style.fontWeight = (caseKey === 'ortho') ? '700' : '600';
+        }
+
+        const p = pipelineCases[caseKey];
+        if (p) {
+          document.getElementById('pipe-facility').innerText = p.facility;
+          document.getElementById('pipe-specialty').innerText = p.specialty;
+          document.getElementById('pipe-drg').innerText = p.drg;
+          document.getElementById('pipe-cmi').innerText = p.cmi;
+          document.getElementById('pipe-raw-note').innerText = p.rawNote;
+          document.getElementById('pipe-nlp-entities').innerHTML = p.nlpEntities;
+          document.getElementById('pipe-codes-block').innerHTML = p.codesBlock;
+          document.getElementById('pipe-grouper-details').innerHTML = p.grouperDetails;
+          document.getElementById('pipe-edi-block').innerText = p.ediBlock;
+          document.getElementById('pipe-impact-list').innerHTML = p.impact;
+        }
+      };
+    });
+  </script>
 </body>
 </html>

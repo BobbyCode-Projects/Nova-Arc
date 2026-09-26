@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inpatient DRG Validation &amp; HCC Risk Adjustment | Nova Arc</title>
+  <meta name="description" content="Enterprise Inpatient MS-DRG / APR-DRG pre-bill validation and CMS-HCC v28 Hierarchical Condition Category optimization for Health Systems and Multi-Hospital Networks.">
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nova Arc Healthcare Technologies">
+  <meta property="og:title" content="Inpatient DRG Validation &amp; HCC Risk Adjustment | Nova Arc">
+  <meta property="og:description" content="Dual-acuity revenue integrity: Validating complex inpatient DRGs before final billing while capturing risk-adjusted CMS-HCC v28 conditions across multi-hospital networks.">
+  <meta property="og:url" content="https://novaarc-rcm.com/services/hcc-risk-adjustment.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Inpatient DRG Validation &amp; HCC Risk Adjustment | Nova Arc">
+  <meta name="twitter:description" content="Maximize clinical documentation integrity, eliminate RAC audit recoupments, and elevate RAF scores in risk-adjusted value-based contracts.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../images/nova-arc-logo.png">
+
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet (Reused) -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NOVAARC001"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NOVAARC001', {
+      'anonymize_ip': true,
+      'cookie_flags': 'SameSite=None;Secure'
+    });
+  </script>
+
+  <!-- Schema.org JSON-LD: BreadcrumbList + Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://novaarc-rcm.com/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://novaarc-rcm.com/services.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Inpatient DRG Validation & HCC Risk Adjustment",
+            "item": "https://novaarc-rcm.com/services/hcc-risk-adjustment.html"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://novaarc-rcm.com/services/hcc-risk-adjustment.html#service",
+        "name": "Inpatient DRG Validation & HCC Risk Adjustment Capture",
+        "serviceType": "Healthcare Revenue Cycle Management (RCM) - Health Information Management (HIM)",
+        "provider": {
+          "@type": "Organization",
+          "name": "Nova Arc Healthcare Technologies",
+          "url": "https://novaarc-rcm.com/",
+          "logo": "https://novaarc-rcm.com/images/nova-arc-logo.png"
+        },
+        "description": "Pre-bill Inpatient MS-DRG/APR-DRG validation, clinical criteria audit, and CMS-HCC v28 risk adjustment optimization for Health Systems and Multi-Hospital Networks.",
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "DRG Validation & HCC Risk Adjustment Deliverables",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Pre-Bill Inpatient MS-DRG & APR-DRG Clinical Validation"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "CMS-HCC v28 & HHS-HCC Model Optimization & Gap Closure"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "MEAT & TAMPO Criteria Clinical Audit & RADV Defense"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Post-Acute Care Transfer (PACT) Rule Verification"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ========================================================================
+       STICKY NAVBAR (Shared Header Partial)
+       ======================================================================== -->
+      <header class="site-header" id="top">
+    <div class="container navbar">
+      <!-- Brand Logo -->
+      <a href="../index.html" class="logo" aria-label="Nova Arc Homepage">
+        <img src="../images/nova-arc-logo.png" alt="Nova Arc Logo" class="logo-img" width="38" height="33">
+        <span class="logo-text">Nova<span class="logo-highlight">Arc</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="../solutions.html" class="nav-link">Solutions</a></li>
+          
+          <!-- Services Dropdown (Mega-Menu) -->
+          <li class="nav-item-dropdown">
+            <button class="nav-link nav-dropdown-toggle active" id="servicesDropdownToggle" aria-haspopup="true" aria-expanded="false" aria-controls="servicesMegaMenu">
+              <span>Services</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+
+            <!-- Mega-Menu Light Panel -->
+            <div class="mega-menu-panel" id="servicesMegaMenu" role="menu" aria-labelledby="servicesDropdownToggle" aria-hidden="true">
+              <div class="mega-menu-inner container">
+                <div class="mega-menu-grid">
+                  <!-- Column 1: Patient Access & Front-End Integrity -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-1-heading">Patient Access &amp; Front-End Integrity</h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-1-heading">
+                      <li role="none">
+                        <a href="real-time-insurance-eligibility.html" class="mega-item standalone" role="menuitem">
+                          Insurance Eligibility &amp; Benefits Verification
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="prior-authorization-management.html" class="mega-item standalone" role="menuitem">
+                          Prior Authorization Management
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="patient-registration-verification.html" class="mega-item standalone" role="menuitem">
+                          Patient Scheduling &amp; Registration QA
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="financial-clearance-gfe.html" class="mega-item standalone" role="menuitem">
+                          Financial Clearance &amp; Good Faith Estimates
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="point-of-service-collections.html" class="mega-item standalone" role="menuitem">
+                          Point-of-Service Collections
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="referral-order-management.html" class="mega-item standalone" role="menuitem">
+                          Medical Necessity &amp; Order Verification
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Column 2: HIM & Coding -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-2-heading">HIM &amp; Coding</h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-2-heading">
+                      <!-- Parent Item: Medical Coding Services -->
+                      <li role="none" class="mega-parent-group">
+                        <a href="full-cycle-medical-coding.html" class="mega-item parent" role="menuitem">
+                          Medical Coding Services
+                        </a>
+                        <ul class="mega-sub-list" role="none">
+                          <li role="none">
+                            <a href="hcc-risk-adjustment.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Risk Adjustment/HCC Coding
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a href="full-cycle-medical-coding.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Facility/DRG Coding
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a href="full-cycle-medical-coding.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Professional Fee Coding
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li role="none">
+                        <a href="cdi-chart-auditing.html" class="mega-item standalone" role="menuitem">
+                          Clinical Documentation Improvement
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="cac-review.html" class="mega-item standalone" role="menuitem">
+                          Computer-Assisted Coding (CAC) Review
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="compliance-audit-defense.html" class="mega-item standalone" role="menuitem">
+                          Coding Compliance &amp; Audit Support
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="cdm-charge-capture.html" class="mega-item standalone" role="menuitem">
+                          Charge Capture &amp; CDM Audit
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="physician-query-management.html" class="mega-item standalone" role="menuitem">
+                          Physician Query Management
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Column 3: Patient Financial Services (PFS) & Recovery -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-3-heading">Patient Financial Services &amp; Recovery</h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-3-heading">
+                      <!-- Parent Item: Claims Management Services -->
+                      <li role="none" class="mega-parent-group">
+                        <a href="claims-management-scrubbing.html" class="mega-item parent" role="menuitem">
+                          Claims Management Services
+                        </a>
+                        <ul class="mega-sub-list" role="none">
+                          <li role="none">
+                            <a href="claims-management-scrubbing.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Claims Submission &amp; Scrubbing EDI 837
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a href="payment-posting-reconciliation.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Payment Posting &amp; Reconciliation EDI 835
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li role="none">
+                        <a href="ar-management.html" class="mega-item standalone" role="menuitem">
+                          A/R Management Services
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="denial-management.html" class="mega-item standalone" role="menuitem">
+                          Denial Management &amp; Appeals
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="payer-contract-modeling.html" class="mega-item standalone" role="menuitem">
+                          Underpayment Recovery &amp; Contract Compliance
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="patient-billing-collections.html" class="mega-item standalone" role="menuitem">
+                          Patient Billing &amp; Self-Pay Collections
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="credit-balance-resolution.html" class="mega-item standalone" role="menuitem">
+                          Credit Balance &amp; Refund Management
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="edi-enrollment.html" class="mega-item standalone" role="menuitem">
+                          EDI Enrollment Services
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <a href="../ai-platform.html" class="nav-link has-badge">
+              Nova Arc AI Platform
+              <span class="nav-badge">New</span>
+            </a>
+          </li>
+          <li><a href="../who-we-serve.html" class="nav-link">Who We Serve</a></li>
+          <li><a href="../contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Action Buttons -->
+      <div class="nav-actions">
+        <a href="tel:18005558942" class="nav-phone" aria-label="Call Nova Arc">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          (800) 555-NOVA
+        </a>
+        <a href="../contact.html" class="btn btn-primary btn-sm">Request a Demo</a>
+      </div>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-list">
+        <li><a href="../solutions.html" class="mobile-nav-link">Solutions <span>&rarr;</span></a></li>
+        <li class="mobile-accordion-item">
+          <button class="mobile-nav-link mobile-accordion-toggle" id="mobileServicesToggle" aria-expanded="false" aria-controls="mobileServicesSubmenu">
+            <span>Services</span>
+            <svg class="mobile-accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="mobile-submenu-collapse" id="mobileServicesSubmenu" aria-hidden="true">
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title">Patient Access &amp; Front-End</h4>
+              <a href="real-time-insurance-eligibility.html" class="mobile-submenu-link">Insurance Eligibility &amp; Benefits</a>
+              <a href="prior-authorization-management.html" class="mobile-submenu-link">Prior Authorization Management</a>
+              <a href="patient-registration-verification.html" class="mobile-submenu-link">Patient Scheduling &amp; Registration QA</a>
+              <a href="financial-clearance-gfe.html" class="mobile-submenu-link">Financial Clearance &amp; Good Faith Estimates</a>
+              <a href="point-of-service-collections.html" class="mobile-submenu-link">Point-of-Service Collections</a>
+              <a href="referral-order-management.html" class="mobile-submenu-link">Medical Necessity &amp; Order Verification</a>
+            </div>
+
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title">HIM &amp; Coding</h4>
+              <a href="full-cycle-medical-coding.html" class="mobile-submenu-link parent">Medical Coding Services</a>
+              <a href="hcc-risk-adjustment.html" class="mobile-submenu-sublink">&rsaquo; Risk Adjustment/HCC Coding</a>
+              <a href="full-cycle-medical-coding.html" class="mobile-submenu-sublink">&rsaquo; Facility/DRG &amp; ProFee Coding</a>
+              <a href="cdi-chart-auditing.html" class="mobile-submenu-link">Clinical Documentation Improvement</a>
+              <a href="cac-review.html" class="mobile-submenu-link">Computer-Assisted Coding (CAC) Review</a>
+              <a href="compliance-audit-defense.html" class="mobile-submenu-link">Coding Compliance &amp; Audit Support</a>
+              <a href="cdm-charge-capture.html" class="mobile-submenu-link">Charge Capture &amp; CDM Audit</a>
+              <a href="physician-query-management.html" class="mobile-submenu-link">Physician Query Management</a>
+            </div>
+
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title">Patient Financial Services &amp; Recovery</h4>
+              <a href="claims-management-scrubbing.html" class="mobile-submenu-link parent">Claims Management Services</a>
+              <a href="claims-management-scrubbing.html" class="mobile-submenu-sublink">&rsaquo; Claims Submission &amp; Scrubbing EDI 837</a>
+              <a href="payment-posting-reconciliation.html" class="mobile-submenu-sublink">&rsaquo; Payment Posting &amp; Reconciliation EDI 835</a>
+              <a href="ar-management.html" class="mobile-submenu-link">A/R Management Services</a>
+              <a href="denial-management.html" class="mobile-submenu-link">Denial Management &amp; Appeals</a>
+              <a href="payer-contract-modeling.html" class="mobile-submenu-link">Underpayment Recovery &amp; Contract Compliance</a>
+              <a href="patient-billing-collections.html" class="mobile-submenu-link">Patient Billing &amp; Self-Pay Collections</a>
+              <a href="credit-balance-resolution.html" class="mobile-submenu-link">Credit Balance &amp; Refund Management</a>
+              <a href="edi-enrollment.html" class="mobile-submenu-link">EDI Enrollment Services</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="../ai-platform.html" class="mobile-nav-link">Nova Arc AI Platform <span class="nav-badge">New</span></a></li>
+        <li><a href="../who-we-serve.html" class="mobile-nav-link">Who We Serve <span>&rarr;</span></a></li>
+        <li><a href="../contact.html" class="mobile-nav-link">Contact <span>&rarr;</span></a></li>
+      </ul>
+      <div class="mobile-nav-bottom">
+        <a href="tel:18005558942" class="btn btn-secondary">Call (800) 555-NOVA</a>
+        <a href="../contact.html" class="btn btn-primary">Request a Demo</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ========================================================================
+       1. BREADCRUMB & 2. HERO SECTION
+       ======================================================================== -->
+  <section class="page-hero" id="hero">
+    <div class="container">
+      <!-- 1. Breadcrumb -->
+      <nav class="breadcrumb-nav" aria-label="Breadcrumbs">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="../services.html">Services</a>
+        <span class="breadcrumb-separator">/</span>
+        <span style="color: var(--text-primary); font-weight: 600;">Inpatient DRG Validation &amp; HCC Risk Adjustment</span>
+      </nav>
+
+      <!-- 2. Hero Content -->
+      <div class="page-hero-content">
+        <span class="section-tag">HIM, Coding &amp; Clinical Documentation • Service 02.3</span>
+        <h1 class="page-hero-title">
+          Inpatient DRG Validation &amp; HCC Risk Adjustment
+        </h1>
+        <p class="page-hero-subtitle">
+          Dual-acuity revenue integrity for health systems: Validating complex inpatient MS-DRG / APR-DRG encounters before final billing while optimizing CMS-HCC v28 Hierarchical Condition Categories across risk-bearing networks.
+        </p>
+
+        <!-- Master KPI Stat Banner -->
+        <div style="display: inline-flex; align-items: center; gap: 16px; background: rgba(31, 111, 235, 0.08); border: 1px solid var(--blue-accent-border); padding: 12px 22px; border-radius: var(--radius-lg); margin-bottom: var(--space-xl); box-shadow: var(--shadow-sm); flex-wrap: wrap;">
+          <div style="display: flex; align-items: baseline; gap: 8px;">
+            <div style="font-size: 2rem; font-weight: 800; color: var(--blue-accent); line-height: 1;">
+              +0.38
+            </div>
+            <span style="font-size: 0.85rem; color: var(--text-primary); font-weight: 600;">Average RAF Lift in Risk Contracts</span>
+          </div>
+          <div style="width: 1px; height: 24px; background: var(--border-medium); margin: 0 4px;"></div>
+          <div style="font-size: 0.85rem; color: var(--text-muted);">
+            <strong style="color: #10B981;">99.2%</strong> DRG Audit Accuracy • <strong style="color: #38BDF8;">&lt; 24h</strong> Pre-Bill Review
+          </div>
+        </div>
+
+        <!-- Action CTAs -->
+        <div class="hero-actions" style="display: flex; gap: var(--space-md); flex-wrap: wrap; margin-bottom: var(--space-2xl);">
+          <a href="../contact.html?service=hcc-risk-adjustment" class="btn btn-primary btn-lg">
+            <span>Schedule a DRG &amp; HCC Audit</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#drg-workflow-visual" class="btn btn-secondary btn-lg">
+            <span>Explore Interactive Visuals</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- 4 Key Hero Badges -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: var(--space-md); margin-top: var(--space-md);">
+          
+          <div class="stat-card" style="padding: var(--space-md); background: #FFFFFF; border: 1px solid var(--border-medium); border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+            <div style="font-size: 1.6rem; font-weight: 800; color: var(--blue-accent); margin-bottom: 4px;">+0.34 – +0.48</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary); font-weight: 600;">Value-Based RAF Score Lift</div>
+          </div>
+
+          <div class="stat-card" style="padding: var(--space-md); background: #FFFFFF; border: 1px solid var(--border-medium); border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+            <div style="font-size: 1.6rem; font-weight: 800; color: #10B981; margin-bottom: 4px;">99.2%</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary); font-weight: 600;">Inpatient MS-DRG Accuracy</div>
+          </div>
+
+          <div class="stat-card" style="padding: var(--space-md); background: #FFFFFF; border: 1px solid var(--border-medium); border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+            <div style="font-size: 1.6rem; font-weight: 800; color: #0284C7; margin-bottom: 4px;">100%</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary); font-weight: 600;">CMS-HCC v28 &amp; RADV Defensibility</div>
+          </div>
+
+          <div class="stat-card" style="padding: var(--space-md); background: #FFFFFF; border: 1px solid var(--border-medium); border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+            <div style="font-size: 1.6rem; font-weight: 800; color: #7C3AED; margin-bottom: 4px;">&lt; 24h</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary); font-weight: 600;">Pre-Bill Inpatient Review Turnaround</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       3. THE PROBLEM: CLINICAL COMPLEXITY LANDSCAPE
+       ======================================================================== -->
+  <section class="section section-dark" id="the-problem">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Clinical &amp; Contractual Complexity</span>
+        <h2 class="section-title">The Dual-Acuity Dilemma: Inpatient DRG Downcoding &amp; HCC Erosion</h2>
+        <p class="section-subtitle">
+          Health systems operate in a bifurcated revenue environment: fee-for-service inpatient admissions vulnerable to aggressive payer DRG downgrades, and value-based risk contracts penalized by the severe structural changes of CMS-HCC Model v28.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
+        
+        <!-- Problem Card 1 -->
+        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
+          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #EF4444;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          </div>
+          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
+            Inpatient DRG Downgrades &amp; Clinical Denials
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
+            Payers and Recovery Audit Contractors (RAC) aggressively target single-MCC/CC inpatient claims, asserting that diagnoses like Sepsis, Acute Kidney Injury, Encephalopathy, or Malnutrition are "clinically unsupported." When a secondary MCC is eliminated, the claim drops an entire MS-DRG tier—forfeiting <strong>$4,500 to $11,800 per admission</strong>.
+          </p>
+          <div style="margin-top: var(--space-md); padding: 8px 12px; background: rgba(239, 68, 68, 0.08); border-radius: var(--radius-sm); border: 1px solid rgba(239, 68, 68, 0.2); font-size: 0.78rem; color: #FCA5A5;">
+            <strong>The Health System Impact:</strong> 4.8% of inpatient net revenue lost to clinical validation takebacks.
+          </div>
+        </div>
+
+        <!-- Problem Card 2 -->
+        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
+          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #F59E0B;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          </div>
+          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
+            CMS-HCC v28 Structural Disruption &amp; Benchmark Loss
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
+            CMS-HCC Model v28 reorganized 115 payment categories and removed over 2,000 ICD-10 codes from risk adjustment mapping. Diabetes with non-specific complications, uncomplicated angina, and low-stage CKD no longer map to HCCs. Health systems reliant on legacy v24 coding habits experience severe <strong>12% to 22% RAF score contractions</strong>.
+          </p>
+          <div style="margin-top: var(--space-md); padding: 8px 12px; background: rgba(245, 158, 11, 0.08); border-radius: var(--radius-sm); border: 1px solid rgba(245, 158, 11, 0.2); font-size: 0.78rem; color: #FCD34D;">
+            <strong>The Health System Impact:</strong> Unmanaged v28 transitions depress capitation benchmarks by $1.8M–$4.2M annually per 10,000 attributed lives.
+          </div>
+        </div>
+
+        <!-- Problem Card 3 -->
+        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
+          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #38BDF8;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
+            Chronic Condition Recapture Gaps by December 31
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
+            Risk adjustment models require annual re-documentation of every persistent chronic illness. In large multi-hospital networks, patients seen during inpatient stays often fail to have chronic conditions captured in outpatient follow-up. Without proactive point-of-care alerts and suspect condition tracking, <strong>30% of chronic conditions reset to zero</strong>.
+          </p>
+          <div style="margin-top: var(--space-md); padding: 8px 12px; background: rgba(56, 189, 248, 0.08); border-radius: var(--radius-sm); border: 1px solid rgba(56, 189, 248, 0.2); font-size: 0.78rem; color: #BAE6FD;">
+            <strong>The Health System Impact:</strong> Sicker patient panels appear artificially healthy, skewing quality scores and eroding shared savings.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       4. FEATURE ARCHITECTURE: 6 PILLARS OF DRG & HCC INTEGRITY
+       ======================================================================== -->
+  <section class="section section-light" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Acuity Optimization Framework</span>
+        <h2 class="section-title">Comprehensive Architecture: 6 Pillars of DRG &amp; HCC Integrity</h2>
+        <p class="section-subtitle">
+          Nova Arc combines certified inpatient coding auditors, Clinical Documentation Specialists (CCDS), and Certified Risk Adjustment Coders (CRC) to substantiate acute illness and chronic disease severity.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
+        
+        <!-- Pillar 1 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
+            1. Pre-Bill Inpatient MS-DRG &amp; APR-DRG Validation
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+            100% pre-bill audit of high-dollar, single-CC/MCC, and surgical inpatient encounters. We re-verify Principal Diagnosis selection under Uniform Hospital Discharge Data Set (UHDDS) rules, validate MCC/CC capture, and audit ICD-10-PCS root operations before final 837I transmission.
+          </p>
+          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
+            • UHDDS Sequencing Optimization<br>
+            • Surgical Hierarchy &amp; Root Operation Audit
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
+            2. CMS-HCC v28 &amp; HHS-HCC Model Optimization
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+            Full transition engineering from CMS-HCC v24 to v28 (and HHS-HCC commercial exchange models). We run dual-model gap analytics, identifying lost v24 codes and training clinical teams on specific v28 documentation triggers (e.g., severe vs. moderate disease staging, vascular specificity).
+          </p>
+          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
+            • Dual-Model v24 vs. v28 Financial Modeling<br>
+            • Hierarchical Disease Interaction Coefficients
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
+            3. Clinical Criteria Validation vs. Coding Validation
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+            A claim may be technically coded correctly but clinically denied by payer auditors. Our clinical team validates diagnosis against objective diagnostic criteria: Sepsis-3 (SOFA delta), KDIGO AKI staging, ASPEN/GLIM malnutrition standards, and metabolic encephalopathy markers to insulate against takebacks.
+          </p>
+          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
+            • Sepsis-3 &amp; Sepsis-2 Criteria Benchmarking<br>
+            • KDIGO AKI &amp; GLIM Malnutrition Substantiation
+          </div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
+            4. MEAT &amp; TAMPO Criteria Substantiation
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+            To survive CMS Risk Adjustment Data Validation (RADV) audits, every submitted HCC must demonstrate active clinical management. We audit progress notes to ensure chronic conditions are explicitly <strong>M</strong>onitored, <strong>E</strong>valuated, <strong>A</strong>ssessed, and <strong>T</strong>reated during the DOS.
+          </p>
+          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
+            • Zero-Tolerance for "Problem List Only" Billing<br>
+            • Active Assessment &amp; Treatment Plan Verification
+          </div>
+        </div>
+
+        <!-- Pillar 5 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
+            5. Post-Acute Care Transfer (PACT) Rule Verification
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+            CMS PACT rules reduce full MS-DRG payments to graduated per-diem amounts when patients are discharged to home health or skilled nursing with an early length of stay. We cross-verify actual post-acute care utilization against discharge disposition to recover wrongful per-diem cuts.
+          </p>
+          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
+            • Discharge Disposition Code 06 vs. 01 Verification<br>
+            • CMS Common Working File (CWF) Cross-Match
+          </div>
+        </div>
+
+        <!-- Pillar 6 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
+            6. RADV Audit Readiness &amp; Mock Audit Defense
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+            CMS extrapolation under final RADV rules poses multi-million-dollar clawback liability for health systems and MA plans. We perform blinded mock RADV audits, construct defensible clinical evidence binders, and eliminate non-conforming charts before submission to CMS.
+          </p>
+          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
+            • Blinded Retrospective Chart Sampling<br>
+            • Extrapolation Risk Assessment &amp; Error Rate Minimization
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       5. DYNAMIC VISUAL 1: INPATIENT DRG VALIDATION WORKFLOW
+       ======================================================================== -->
+  <section class="section section-dark" id="drg-workflow-visual">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Inpatient DRG Workflow Visual</span>
+        <h2 class="section-title">Inpatient DRG Validation Workflow: 5-Stage Pre-Bill Integrity</h2>
+        <p class="section-subtitle">
+          Explore how Nova Arc intercepts inpatient charts between clinical discharge and final clearinghouse billing to correct sequencing, defend MCC capture, and calibrate MS-DRG weights.
+        </p>
+      </div>
+
+      <!-- 5-Stage Stepper Container -->
+      <div class="pillar-card" style="padding: 0; overflow: hidden; background: rgba(11, 19, 43, 0.9); box-shadow: var(--shadow-xl); border: 1px solid var(--border-medium); max-width: 1120px; margin: 0 auto var(--space-2xl);">
+        
+        <!-- Header Strip -->
+        <div style="background: var(--navy-primary); color: #FFFFFF; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; border-bottom: 2px solid var(--blue-accent);">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="width: 10px; height: 10px; border-radius: 50%; background: #10B981; box-shadow: 0 0 8px #10B981;"></div>
+            <strong style="font-size: 1.05rem; color: #FFFFFF;">
+              Enterprise DRG Validation Lifecycle • Active Pre-Bill Routing
+            </strong>
+          </div>
+          <span style="font-size: 0.75rem; font-family: monospace; background: rgba(255, 255, 255, 0.12); padding: 4px 10px; border-radius: var(--radius-sm); color: #38BDF8;">
+            Latency: &lt; 24h • Zero DNFB Delay
+          </span>
+        </div>
+
+        <!-- 5-Step Horizontal Pipeline Tracker -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); border-bottom: 1px solid var(--border-light); background: rgba(3, 7, 18, 0.4);">
+          
+          <!-- Step 1 -->
+          <div class="drg-step-tab active-drg-step" id="drg-step-btn-1" onclick="switchDrgStep(1)" style="padding: 16px; border-right: 1px solid var(--border-light); cursor: pointer; transition: all 0.2s ease;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+              <span class="step-num-badge" style="width: 22px; height: 22px; border-radius: 50%; background: var(--blue-accent); color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800;">1</span>
+              <strong style="font-size: 0.85rem; color: #FFFFFF;">Discharge Ingestion</strong>
+            </div>
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0; line-height: 1.4;">
+              Auto-filtering high-risk cases from EHR workqueues.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="drg-step-tab" id="drg-step-btn-2" onclick="switchDrgStep(2)" style="padding: 16px; border-right: 1px solid var(--border-light); cursor: pointer; transition: all 0.2s ease;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+              <span class="step-num-badge" style="width: 22px; height: 22px; border-radius: 50%; background: rgba(255, 255, 255, 0.15); color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800;">2</span>
+              <strong style="font-size: 0.85rem; color: #FFFFFF;">Clinical Criteria Check</strong>
+            </div>
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0; line-height: 1.4;">
+              Sepsis-3, KDIGO, GLIM validation by senior CCDS.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="drg-step-tab" id="drg-step-btn-3" onclick="switchDrgStep(3)" style="padding: 16px; border-right: 1px solid var(--border-light); cursor: pointer; transition: all 0.2s ease;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+              <span class="step-num-badge" style="width: 22px; height: 22px; border-radius: 50%; background: rgba(255, 255, 255, 0.15); color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800;">3</span>
+              <strong style="font-size: 0.85rem; color: #FFFFFF;">UHDDS &amp; CC/MCC Audit</strong>
+            </div>
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0; line-height: 1.4;">
+              Principal diagnosis sequencing &amp; PCS root ops.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="drg-step-tab" id="drg-step-btn-4" onclick="switchDrgStep(4)" style="padding: 16px; border-right: 1px solid var(--border-light); cursor: pointer; transition: all 0.2s ease;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+              <span class="step-num-badge" style="width: 22px; height: 22px; border-radius: 50%; background: rgba(255, 255, 255, 0.15); color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800;">4</span>
+              <strong style="font-size: 0.85rem; color: #FFFFFF;">DRG Recalibration</strong>
+            </div>
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0; line-height: 1.4;">
+              Relative weight &amp; GMLOS recalculated in grouper.
+            </p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="drg-step-tab" id="drg-step-btn-5" onclick="switchDrgStep(5)" style="padding: 16px; cursor: pointer; transition: all 0.2s ease;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+              <span class="step-num-badge" style="width: 22px; height: 22px; border-radius: 50%; background: #10B981; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800;">5</span>
+              <strong style="font-size: 0.85rem; color: #FFFFFF;">RAC Defense Release</strong>
+            </div>
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0; line-height: 1.4;">
+              837I transmission + audit defense evidence binder.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Dynamic Step Details Display Box -->
+        <div style="padding: var(--space-xl); background: rgba(15, 23, 42, 0.85);" id="drg-step-content-box">
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: var(--space-md); margin-bottom: var(--space-md);">
+            <div>
+              <span style="font-size: 0.75rem; text-transform: uppercase; color: #38BDF8; font-weight: 700; letter-spacing: 0.05em;" id="drg-step-stage-tag">Stage 1 of 5 • Inpatient Ingestion</span>
+              <h3 style="font-size: 1.25rem; font-weight: 800; color: #FFFFFF; margin: 4px 0 0 0;" id="drg-step-title">Automated Triage &amp; Targeted Chart Ingestion</h3>
+            </div>
+            <span class="preview-item-tag tag-blue" id="drg-step-badge" style="font-size: 0.8rem;">Automated Real-Time Rule Engine</span>
+          </div>
+
+          <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: var(--space-lg);" id="drg-step-desc">
+            The moment an inpatient chart reaches coding status in Epic, Cerner, or Meditech, Nova Arc's rule engine evaluates the preliminary code assignment against high-risk criteria: single-MCC encounters, high-mortality surgical DRGs, short stay transfers (PACT Rule), and diagnoses historically targeted by RAC auditors.
+          </p>
+
+          <!-- Step Technical Specifications Grid -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-md);">
+            <div style="background: rgba(3, 7, 18, 0.5); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+              <span style="font-size: 0.75rem; color: #94A3B8; text-transform: uppercase; font-weight: 600;">Clinical Focus</span>
+              <div style="font-size: 0.85rem; color: #FFFFFF; font-weight: 600; margin-top: 4px;" id="drg-step-spec-1">
+                Single-CC/MCC vulnerability screening &amp; mortality risk
+              </div>
+            </div>
+            <div style="background: rgba(3, 7, 18, 0.5); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+              <span style="font-size: 0.75rem; color: #94A3B8; text-transform: uppercase; font-weight: 600;">EHR Integration</span>
+              <div style="font-size: 0.85rem; color: #FFFFFF; font-weight: 600; margin-top: 4px;" id="drg-step-spec-2">
+                HL7 ADT + 837I pre-adjudication workqueue hooks
+              </div>
+            </div>
+            <div style="background: rgba(3, 7, 18, 0.5); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+              <span style="font-size: 0.75rem; color: #94A3B8; text-transform: uppercase; font-weight: 600;">Turnaround Benchmark</span>
+              <div style="font-size: 0.85rem; color: #10B981; font-weight: 700; margin-top: 4px;" id="drg-step-spec-3">
+                Processed within 45 minutes of coder sign-off
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Real-World Inpatient DRG Impact Case Callout -->
+        <div style="background: rgba(3, 7, 18, 0.7); border-top: 1px solid var(--border-light); padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+          <div style="font-size: 0.85rem; color: var(--text-muted);">
+            <strong style="color: #FFFFFF;">Example Inpatient Case Impact:</strong> Septicemia shifted from <span style="color: #F87171; text-decoration: line-through;">MS-DRG 872 (w/o MCC, $6,450)</span> &rarr; <span style="color: #10B981; font-weight: 700;">MS-DRG 871 (w/ MCC, $14,992)</span> based on validated acute encephalopathy and metabolic acidosis.
+          </div>
+          <span style="font-size: 0.85rem; font-weight: 800; color: #10B981; background: rgba(16, 185, 129, 0.1); padding: 4px 10px; border-radius: var(--radius-sm); border: 1px solid rgba(16, 185, 129, 0.3);">
+            +$8,542 Reclaimed per Admission
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       6. DYNAMIC VISUAL 2: HCC CAPTURE EXPLAINER FOR RISK CONTRACTS
+       ======================================================================== -->
+  <section class="section section-light" id="hcc-explainer-visual">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Value-Based Risk Adjustment Explainer</span>
+        <h2 class="section-title">HCC Capture Explainer: Risk-Adjusted Contracts &amp; RAF Mechanics</h2>
+        <p class="section-subtitle">
+          How clinical documentation precision translates into appropriate Risk Adjustment Factor (RAF) scores, securing adequate per-member-per-month (PMPM) capitation benchmarks under CMS-HCC Model v28.
+        </p>
+      </div>
+
+      <!-- MEAT & TAMPO Framework Explainer Banner -->
+      <div style="background: #FFFFFF; border: 1px solid var(--border-medium); border-radius: var(--radius-lg); padding: var(--space-xl); box-shadow: var(--shadow-md); margin-bottom: var(--space-2xl);">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: var(--space-md); border-bottom: 1px solid var(--border-light); padding-bottom: 12px;">
+          <div>
+            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--blue-accent); font-weight: 800; letter-spacing: 0.05em;">RADV Compliance Standard</span>
+            <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--navy-primary); margin: 2px 0 0 0;">
+              The MEAT Documentation Rule: Substantiating Every Billed HCC
+            </h3>
+          </div>
+          <span class="compliance-tag-pill" style="margin: 0;">
+            CMS-HCC v28 &amp; RADV Audit Standard
+          </span>
+        </div>
+        <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-lg);">
+          CMS does not allow chronic conditions to be reported from static EHR "problem lists." To contribute to patient RAF scores, each condition must be actively addressed during a face-to-face encounter under the <strong>MEAT criteria</strong>:
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-md);">
+          
+          <div style="background: #FAFBFD; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 14px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+              <span style="width: 24px; height: 24px; border-radius: 4px; background: #1F6FEB; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 800;">M</span>
+              <strong style="font-size: 0.9rem; color: var(--navy-primary);">Monitor</strong>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; margin: 0;">
+              Document signs, symptoms, disease progression, vitals, or disease regression.
+            </p>
+          </div>
+
+          <div style="background: #FAFBFD; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 14px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+              <span style="width: 24px; height: 24px; border-radius: 4px; background: #10B981; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 800;">E</span>
+              <strong style="font-size: 0.9rem; color: var(--navy-primary);">Evaluate</strong>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; margin: 0;">
+              Review diagnostic tests, lab panels (HbA1c, eGFR), specialist notes, or imaging.
+            </p>
+          </div>
+
+          <div style="background: #FAFBFD; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 14px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+              <span style="width: 24px; height: 24px; border-radius: 4px; background: #F59E0B; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 800;">A</span>
+              <strong style="font-size: 0.9rem; color: var(--navy-primary);">Assess</strong>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; margin: 0;">
+              Explicit clinical judgment: status stable, worsening, well-controlled, or deteriorating.
+            </p>
+          </div>
+
+          <div style="background: #FAFBFD; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 14px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+              <span style="width: 24px; height: 24px; border-radius: 4px; background: #8B5CF6; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 800;">T</span>
+              <strong style="font-size: 0.9rem; color: var(--navy-primary);">Treat</strong>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; margin: 0;">
+              Medications prescribed or refilled, therapies ordered, dietary counseling, or referrals.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Interactive HCC Case Switcher Tabs -->
+      <div style="display: flex; justify-content: center; gap: 8px; margin-bottom: var(--space-xl); flex-wrap: wrap;" role="tablist" aria-label="HCC Value-Based Contract Cases">
+        <button type="button" class="btn btn-sm btn-primary active-hcc-tab" id="tab-hcc-1" onclick="switchHccCase(1)" style="font-weight: 700; border-radius: var(--radius-full); padding: 8px 18px;">
+          Case 1: Diabetes with Microvascular Manifestations
+        </button>
+        <button type="button" class="btn btn-sm btn-secondary" id="tab-hcc-2" onclick="switchHccCase(2)" style="font-weight: 600; border-radius: var(--radius-full); padding: 8px 18px;">
+          Case 2: Cardiorenal Syndrome &amp; CKD Staging
+        </button>
+        <button type="button" class="btn btn-sm btn-secondary" id="tab-hcc-3" onclick="switchHccCase(3)" style="font-weight: 600; border-radius: var(--radius-full); padding: 8px 18px;">
+          Case 3: Severe Malnutrition &amp; COPD
+        </button>
+      </div>
+
+      <!-- Interactive HCC Comparison Card -->
+      <div class="pillar-card" style="padding: 0; overflow: hidden; background: #FFFFFF; box-shadow: var(--shadow-xl); border: 1px solid var(--border-medium); max-width: 1080px; margin: 0 auto;">
+        
+        <!-- Header Strip -->
+        <div style="background: var(--navy-primary); color: #FFFFFF; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+          <div>
+            <span style="font-size: 0.75rem; text-transform: uppercase; color: #38BDF8; font-weight: 700;">Risk-Adjusted Contract Simulation (CMS-HCC Model v28)</span>
+            <h4 style="font-size: 1.1rem; font-weight: 800; color: #FFFFFF; margin: 0;" id="hcc-case-title">
+              Case 1: Medicare Advantage Patient • Type 2 Diabetes Management
+            </h4>
+          </div>
+          <span style="font-size: 0.75rem; font-family: monospace; background: rgba(255, 255, 255, 0.1); padding: 4px 10px; border-radius: var(--radius-sm); color: #94A3B8;">
+            Zero PHI • Generic Synthetic Benchmark
+          </span>
+        </div>
+
+        <!-- Side-by-Side Comparison Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));">
+          
+          <!-- Column 1: Unoptimized / Vague / Non-HCC Documentation -->
+          <div style="padding: var(--space-xl); background: #FAFBFD; border-right: 1px solid var(--border-light);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md);">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <div style="width: 10px; height: 10px; border-radius: 50%; background: #EF4444;"></div>
+                <h4 style="font-size: 1.05rem; font-weight: 800; color: #991B1B; margin: 0;">
+                  Unspecified / Incomplete Encounter
+                </h4>
+              </div>
+              <span style="font-size: 0.75rem; background: #FEE2E2; color: #991B1B; padding: 3px 8px; border-radius: var(--radius-sm); font-weight: 700;">
+                0.000 RAF Credit
+              </span>
+            </div>
+
+            <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 14px; font-family: monospace; font-size: 0.8rem; color: #475569; line-height: 1.6; margin-bottom: var(--space-md); border-left: 3px solid #EF4444;" id="hcc-vague-note">
+              "Assessment: Type 2 diabetes mellitus, history of chronic kidney disease. Patient feels well. Refilled metformin. Follow up in 6 months."
+            </div>
+
+            <!-- Flaws Checklist -->
+            <div style="font-size: 0.8rem; color: #991B1B; font-weight: 600; margin-bottom: 6px;">
+              Documentation Flaws &amp; v28 Impact:
+            </div>
+            <ul style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5; padding-left: 18px; margin-bottom: var(--space-md);" id="hcc-vague-flaws">
+              <li>Code E11.9 (uncomplicated T2D) mapped to CMS-HCC v28 category 38, but CKD stage omitted.</li>
+              <li>"History of CKD" cannot be coded as active disease under ICD-10 guidelines.</li>
+              <li>Fails MEAT criteria: No eGFR or urine microalbumin evaluated; no CKD staging documented.</li>
+            </ul>
+
+            <!-- Coded Output -->
+            <div style="background: #F8FAFC; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 12px;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 4px;">
+                <span style="color: var(--text-secondary);">Reported Codes:</span>
+                <strong style="color: #991B1B;" id="hcc-vague-codes">E11.9</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 4px;">
+                <span style="color: var(--text-secondary);">CMS-HCC v28 Category:</span>
+                <strong style="color: var(--navy-primary);" id="hcc-vague-cat">HCC 38 (Low Weight)</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; border-top: 1px solid var(--border-light); padding-top: 6px; margin-top: 6px;">
+                <span style="color: #991B1B;">Assigned RAF Score:</span>
+                <span style="color: #991B1B; font-size: 1rem;" id="hcc-vague-raf">0.105</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Column 2: Optimized / Specific MEAT-Compliant Documentation -->
+          <div style="padding: var(--space-xl); background: #FFFFFF;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md);">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <div style="width: 10px; height: 10px; border-radius: 50%; background: #10B981;"></div>
+                <h4 style="font-size: 1.05rem; font-weight: 800; color: #065F46; margin: 0;">
+                  MEAT-Compliant Specific Encounter
+                </h4>
+              </div>
+              <span style="font-size: 0.75rem; background: #D1FAE5; color: #065F46; padding: 3px 8px; border-radius: var(--radius-sm); font-weight: 700;">
+                +0.628 RAF Lift
+              </span>
+            </div>
+
+            <div style="background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: var(--radius-sm); padding: 14px; font-family: monospace; font-size: 0.8rem; color: #166534; line-height: 1.6; margin-bottom: var(--space-md); border-left: 3px solid #10B981;" id="hcc-specific-note">
+              "Assessment: Type 2 diabetes mellitus with diabetic nephropathy and CKD Stage 4 (eGFR 24 mL/min/1.73m², Cr 2.4). Monitored BP at 134/82. Evaluated microalbuminuria at 340 mg/g. Assessed as stable renal function on current regimen. Treated: titrated losartan to 50mg daily, continued Jardiance, nephrology referral scheduled."
+            </div>
+
+            <!-- Enablers Checklist -->
+            <div style="font-size: 0.8rem; color: #065F46; font-weight: 600; margin-bottom: 6px;">
+              MEAT Criteria &amp; v28 Enablers:
+            </div>
+            <ul style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5; padding-left: 18px; margin-bottom: var(--space-md);" id="hcc-specific-enablers">
+              <li>Explicit cause-and-effect link between diabetes and kidney disease coded as E11.22 + N18.4.</li>
+              <li>Satisfies all 4 MEAT pillars (Monitored BP, Evaluated eGFR/Cr, Assessed stability, Treated med change).</li>
+              <li>Triggers CMS-HCC v28 category 37 (severe diabetes) + category 326 (CKD Stage 4) + disease interaction coefficient.</li>
+            </ul>
+
+            <!-- Coded Output -->
+            <div style="background: #F8FAFC; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 12px;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 4px;">
+                <span style="color: var(--text-secondary);">Substantiated Codes:</span>
+                <strong style="color: #065F46;" id="hcc-specific-codes">E11.22, N18.4</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 4px;">
+                <span style="color: var(--text-secondary);">CMS-HCC v28 Categories:</span>
+                <strong style="color: var(--navy-primary);" id="hcc-specific-cat">HCC 37 + HCC 326 + Interaction</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; border-top: 1px solid var(--border-light); padding-top: 6px; margin-top: 6px;">
+                <span style="color: #065F46;">Substantiated RAF Score:</span>
+                <span style="color: #065F46; font-size: 1rem;" id="hcc-specific-raf">0.733 (+0.628 Delta)</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Capitation Benchmark Impact Summary Footer -->
+        <div style="background: var(--bg-slate); padding: 16px 24px; border-top: 1px solid var(--border-medium); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+          <div>
+            <span style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600;">Annual Value-Based Contract Benchmark Impact:</span>
+            <div style="font-size: 1.1rem; font-weight: 800; color: var(--navy-primary); margin-top: 2px;" id="hcc-benchmark-impact">
+              +$6,280 Annual Benchmark Payment Lift per Attributed Member
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="preview-item-tag tag-green" style="font-size: 0.8rem; font-weight: 800;">100% RADV Audit Defense Ready</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       7. SECTOR FOCUS: HEALTH SYSTEMS & MULTI-HOSPITAL NETWORKS
+       ======================================================================== -->
+  <section class="section section-dark" id="sector-focus">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Sector Focus: Enterprise Scale</span>
+        <h2 class="section-title">Engineered for Health Systems &amp; Multi-Hospital Networks</h2>
+        <p class="section-subtitle">
+          How Nova Arc synchronizes acute inpatient DRG integrity across tertiary hubs and community hospitals while closing chronic condition recapture gaps across enterprise primary care networks.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
+        
+        <!-- Sector Card 1 -->
+        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
+          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(31, 111, 235, 0.1); border: 1px solid var(--blue-accent-border); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: var(--blue-accent);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+          </div>
+          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
+            Multi-Hospital Centralized DRG Governance
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
+            Health systems managing between 3 and 40+ facilities frequently suffer from wide variations in CMI, DRG coding depth, and physician query response times. Nova Arc establishes a unified enterprise DRG review workqueue that equalizes clinical audit rigor across all campuses.
+          </p>
+          <ul style="margin-top: var(--space-md); padding-left: 18px; font-size: 0.8rem; color: var(--text-primary); line-height: 1.5;">
+            <li>Cross-facility CMI and MCC capture variance analytics</li>
+            <li>Elimination of regional coder habits &amp; under-documentation</li>
+            <li>Standardized corporate RAC audit appeals repository</li>
+          </ul>
+        </div>
+
+        <!-- Sector Card 2 -->
+        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
+          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #10B981;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
+            Dual-Risk Alignment (FFS Inpatient + Capitated ACOs)
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
+            Modern health systems face a balancing act: optimizing acute inpatient DRGs under traditional Medicare IPPS without conflicting with value-based capitation rules in their Clinically Integrated Networks (CINs) and Medicare Shared Savings Program (MSSP) ACOs.
+          </p>
+          <ul style="margin-top: var(--space-md); padding-left: 18px; font-size: 0.8rem; color: var(--text-primary); line-height: 1.5;">
+            <li>Inpatient discharge chronic condition transmission to primary care</li>
+            <li>Simultaneous CMI elevation and RAF score gap closure</li>
+            <li>Elimination of clinical documentation contradictions across venues</li>
+          </ul>
+        </div>
+
+        <!-- Sector Card 3 -->
+        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
+          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #38BDF8;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          </div>
+          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
+            EHR-Embedded Risk Tooling (Epic &amp; Cerner)
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
+            We interface directly with enterprise EHR population health modules (such as Epic Healthy Planet, Epic Cogito, and Oracle Cerner HealtheIntent). Uncaptured chronic disease alerts and suspect condition flags appear directly in provider encounter navigators.
+          </p>
+          <ul style="margin-top: var(--space-md); padding-left: 18px; font-size: 0.8rem; color: var(--text-primary); line-height: 1.5;">
+            <li>Point-of-care MEAT documentation prompt integration</li>
+            <li>Annual wellness visit (AWV) pre-visit chart scrubbing</li>
+            <li>Suspect condition algorithmic extraction from lab &amp; pharmacy feeds</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       8. SERVICE LEVEL AGREEMENTS (SLA STRIP)
+       ======================================================================== -->
+  <section style="background: var(--navy-deep); border-top: 1px solid var(--border-medium); border-bottom: 1px solid var(--border-medium); padding: var(--space-xl) 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-xl); text-align: center;">
+        
+        <div>
+          <div style="font-size: 2.2rem; font-weight: 800; color: var(--blue-accent); line-height: 1; margin-bottom: 6px;">&lt; 24h</div>
+          <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Pre-Bill Inpatient Turnaround</div>
+          <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">Zero delay to Discharged Not Final Billed (DNFB) metrics</p>
+        </div>
+
+        <div>
+          <div style="font-size: 2.2rem; font-weight: 800; color: #10B981; line-height: 1; margin-bottom: 6px;">99.2%</div>
+          <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Audited DRG &amp; HCC Accuracy</div>
+          <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">Verified by dual CCDS and CRC credentialed auditors</p>
+        </div>
+
+        <div>
+          <div style="font-size: 2.2rem; font-weight: 800; color: #38BDF8; line-height: 1; margin-bottom: 6px;">100%</div>
+          <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">RADV Defensibility Standard</div>
+          <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">Every submitted code backed by compliant MEAT evidence</p>
+        </div>
+
+        <div>
+          <div style="font-size: 2.2rem; font-weight: 800; color: #A855F7; line-height: 1; margin-bottom: 6px;">30-Day</div>
+          <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Year-End Recapture Sprint</div>
+          <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">Targeted recapture campaigns closing gaps before Dec 31</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       9. FAQ ACCORDION
+       ======================================================================== -->
+  <section class="section section-light" id="faq">
+    <div class="container" style="max-width: 860px;">
+      <div class="section-header">
+        <span class="section-tag">Frequently Asked Questions</span>
+        <h2 class="section-title">Inpatient DRG Validation &amp; HCC Risk FAQs</h2>
+        <p class="section-subtitle">
+          Answers to common questions regarding MS-DRG clinical validation, CMS-HCC v28 transitions, and enterprise revenue defense.
+        </p>
+      </div>
+
+      <div class="accordion" id="faqAccordion">
+        
+        <!-- FAQ Item 1 -->
+        <div class="accordion-item">
+          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
+            <span class="accordion-title">How does Nova Arc distinguish clinical validation from coding validation in inpatient DRG audits?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              <strong>Coding validation</strong> verifies whether the codes assigned match official ICD-10-CM/PCS guidelines and documentation in the record. <strong>Clinical validation</strong> evaluates whether the documented diagnosis is supported by clinical indicators (lab values, vitals, diagnostic imaging, and physician treatment plans). For example, a physician may write "Sepsis," but if the patient had a normal white blood count, normal lactate, normal organ function, and was discharged within 24 hours on oral antibiotics, a commercial payer will issue a clinical validation denial. Nova Arc's CCDS auditors catch these discrepancies prior to billing, initiating compliant queries to establish genuine clinical support or adjusting the DRG to an airtight, defensible code.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="accordion-item">
+          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
+            <span class="accordion-title">What is the impact of CMS-HCC Model v28 on health systems, and how do you mitigate revenue erosion?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              CMS-HCC Model v28 represents a significant overhaul of risk adjustment, increasing categories from 86 to 115 while dropping roughly 2,000 diagnostic codes from risk mapping. Uncomplicated diabetes (which previously mapped to HCC 19 in v24) and early-stage chronic kidney disease (CKD Stages 1-3a) no longer produce RAF weights in v28. To mitigate this contraction, Nova Arc runs dual-model v24/v28 gap analyses to identify patients with underlying complex manifestations (such as diabetic neuropathy, nephropathy, or peripheral vascular disease) that must be specifically documented with staging to regain legitimate RAF value.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="accordion-item">
+          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
+            <span class="accordion-title">How do you prevent Discharged Not Final Billed (DNFB) delays during pre-bill inpatient reviews?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Pre-bill DRG validation occurs within an automated 24-hour review window. Rather than reviewing 100% of simple admissions, our algorithmic engine triages cases based on risk: single-CC/MCC claims, surgical cases with discrepancy between root operation and approach, short-stay mortality encounters, and cases flagged by CDI queries. Charts are reviewed in real-time by senior auditors while the patient's billing hold is active, ensuring that overall DNFB days remain at or below your historical baseline.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="accordion-item">
+          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
+            <span class="accordion-title">What documentation is required to satisfy CMS MEAT criteria during a RADV audit?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              To survive a CMS Risk Adjustment Data Validation (RADV) audit, the patient record must demonstrate that the condition was actively addressed by an approved credentialed provider during a face-to-face encounter in that calendar year. Simply listing a condition on a past medical history or problem list is grounds for complete disallowance. The note must document at least one element of MEAT (Monitor, Evaluate, Assess, or Treat). Nova Arc audits every chart to ensure the progress note contains specific assessment language, diagnostic references, and an active therapeutic plan.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="accordion-item">
+          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
+            <span class="accordion-title">How do you bridge inpatient discharge diagnoses with outpatient HCC capture in health systems?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              When a patient is hospitalized, high-acuity chronic conditions (such as severe cardiomyopathy, end-stage renal disease, or hemiplegia) are thoroughly investigated and coded on the inpatient claim. However, because risk adjustment is an annual outpatient cycle, that condition must be recaptured during an outpatient encounter in the next calendar year. Nova Arc deploys a closed-loop bridge: all high-value inpatient HCC diagnoses are ingested into our suspect condition engine and routed directly into outpatient EHR schedules (Epic Healthy Planet, Cerner HealtheIntent) so primary care physicians are alerted to confirm the condition during the patient's annual wellness visit.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       10. CTA BAND & SHARED FOOTER
+       ======================================================================== -->
+  <section class="section" style="background: linear-gradient(135deg, #0B132B 0%, #1C2541 50%, #0B132B 100%); border-top: 1px solid var(--border-medium); padding: var(--space-3xl) 0;">
+    <div class="container">
+      <div style="max-width: 820px; margin: 0 auto; text-align: center;">
+        <span class="section-tag" style="background: rgba(31, 111, 235, 0.15); color: #38BDF8; border-color: rgba(56, 189, 248, 0.3);">
+          Enterprise Acuity Diagnostic
+        </span>
+        <h2 style="font-size: 2.2rem; font-weight: 800; color: #FFFFFF; margin: var(--space-sm) 0 var(--space-md);">
+          Substantiate Inpatient Acuity &amp; Elevate Value-Based RAF Scores
+        </h2>
+        <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.6; margin-bottom: var(--space-2xl);">
+          Eliminate RAC audit recoupments on inpatient DRGs while systematically closing chronic disease capture gaps across your multi-hospital network under CMS-HCC Model v28.
+        </p>
+        <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+          <a href="../contact.html?service=hcc-risk-adjustment" class="btn btn-primary btn-lg">
+            <span>Request a DRG &amp; HCC Opportunity Audit</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="../index.html#roi-calculator" class="btn btn-secondary btn-lg">
+            <span>Calculate Health System ROI</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       FOOTER (Standardized Across All Pages)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        
+        <!-- Col 1: Brand -->
+        <div>
+          <a href="../index.html" class="logo" aria-label="Nova Arc Homepage" style="margin-bottom: var(--space-md); display: inline-flex;">
+            <img src="../images/nova-arc-logo.png" alt="Nova Arc Logo" class="logo-img" width="38" height="33">
+            <span class="logo-text">Nova<span class="logo-highlight">Arc</span></span>
+          </a>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: var(--space-lg);">
+            AI-driven, human-in-the-loop revenue cycle management engineered for health systems, physician groups, and specialty providers across the United States.
+          </p>
+          <div style="font-size: 0.8rem; color: var(--text-muted);">
+            &copy; 2026 Nova Arc Healthcare Technologies. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Col 2: Solutions -->
+        <div>
+          <h4 class="footer-col-title">Solutions</h4>
+          <ul class="footer-links-list">
+            <li><a href="../solutions.html#front-end" class="footer-link">Front-End RCM</a></li>
+            <li><a href="../solutions.html#mid-rcm" class="footer-link">Mid-Revenue Cycle</a></li>
+            <li><a href="../solutions.html#back-end" class="footer-link">Back-End Billing &amp; AR</a></li>
+            <li><a href="../solutions.html#denials" class="footer-link">Denial Prevention</a></li>
+            <li><a href="../solutions.html#ebo" class="footer-link">Extended Business Office</a></li>
+            <li><a href="../solutions.html#analytics" class="footer-link">Analytics &amp; Reporting</a></li>
+            <li><a href="../ai-platform.html" class="footer-link">Nova Arc AI Platform</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="real-time-insurance-eligibility.html" class="footer-link">Insurance Eligibility &amp; Auth</a></li>
+            <li><a href="full-cycle-medical-coding.html" class="footer-link">Medical Coding &amp; CDI</a></li>
+            <li><a href="claims-management-scrubbing.html" class="footer-link">Claims Management &amp; Scrubbing</a></li>
+            <li><a href="denial-management.html" class="footer-link">Denial &amp; Appeals Recovery</a></li>
+            <li><a href="ar-management.html" class="footer-link">A/R Management &amp; Collections</a></li>
+            <li><a href="../services.html" class="footer-link" style="color: #38BDF8; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">Explore All 24+ Services &rarr;</a></li>
+          </ul>
+        </div>
+
+                <!-- Col 4: Who We Serve -->
+        <div>
+          <h4 class="footer-col-title">Who We Serve</h4>
+          <ul class="footer-links-list">
+            <li><a href="../who-we-serve.html#urgent-care" class="footer-link">Urgent Care</a></li>
+            <li><a href="../who-we-serve.html#asc" class="footer-link">Ambulatory Surgery</a></li>
+            <li><a href="../who-we-serve.html#pt-ot-rehab" class="footer-link">Physical &amp; Rehab</a></li>
+            <li><a href="../who-we-serve.html#behavioral-health" class="footer-link">Behavioral Health</a></li>
+            <li><a href="../index.html#who-we-serve" class="footer-link">Health Systems &amp; Hospitals</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Contact Info -->
+        <div>
+          <h4 class="footer-col-title">Contact Us</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: var(--space-md);">
+            Headquarters: 100 Enterprise Way, Suite 400<br>
+            Nashville, TN 37203
+          </p>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: var(--space-md);">
+            Phone: (800) 555-NOVA<br>
+            Inquiries: <a href="mailto:contact@novaarc-rcm.com" style="color: var(--blue-accent);">contact@novaarc-rcm.com</a>
+          </p>
+          <div style="margin-top: var(--space-md);">
+            <a href="../contact.html" class="btn btn-secondary btn-sm" style="width: 100%;">Connect with an Advisor</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ========================================================================
+       JAVASCRIPT: INTERACTIVE DRG STEPPER, HCC SIMULATOR & ACCORDION
+       ======================================================================== -->
+  <script src="../js/main.js"></script>
+  <script>
+    // --- 1. INPATIENT DRG VALIDATION STEPPER DATA & INTERACTION ---
+    const drgStepData = {
+      1: {
+        stageTag: "Stage 1 of 5 • Inpatient Ingestion",
+        title: "Automated Triage & Targeted Chart Ingestion",
+        badge: "Automated Real-Time Rule Engine",
+        badgeClass: "tag-blue",
+        desc: "The moment an inpatient chart reaches coding status in Epic, Cerner, or Meditech, Nova Arc's rule engine evaluates the preliminary code assignment against high-risk criteria: single-MCC encounters, high-mortality surgical DRGs, short stay transfers (PACT Rule), and diagnoses historically targeted by RAC auditors.",
+        spec1: "Single-CC/MCC vulnerability screening & mortality risk",
+        spec2: "HL7 ADT + 837I pre-adjudication workqueue hooks",
+        spec3: "Processed within 45 minutes of coder sign-off"
+      },
+      2: {
+        stageTag: "Stage 2 of 5 • Clinical Criteria Verification",
+        title: "Clinical Validation vs. Coding Validation Audit",
+        badge: "CCDS Clinical Criteria Review",
+        badgeClass: "tag-purple",
+        desc: "Certified Clinical Documentation Specialists (CCDS) evaluate clinical documentation against objective medical guidelines (Sepsis-3 SOFA scoring, KDIGO criteria for acute kidney injury, ASPEN/GLIM consensus for malnutrition, and clinical biomarkers for encephalopathy) to identify unsupported diagnoses before payers can issue downcoding denials.",
+        spec1: "Sepsis-3, KDIGO, and GLIM criteria verification",
+        spec2: "Biomarker, lab flowsheet, and imaging corroboration",
+        spec3: "Zero clinical vulnerability before claim leaves hospital"
+      },
+      3: {
+        stageTag: "Stage 3 of 5 • Diagnostic & Surgical Sequencing",
+        title: "UHDDS Principal Diagnosis & PCS Hierarchy Audit",
+        badge: "Senior Inpatient Coding Audit",
+        badgeClass: "tag-amber",
+        desc: "Senior inpatient coding auditors review Principal Diagnosis selection under Uniform Hospital Discharge Data Set (UHDDS) rules to ensure the true condition established after study chiefly responsible for admission is sequenced first. Concurrently, ICD-10-PCS root operations, surgical approaches, and device codes are validated against operative reports.",
+        spec1: "UHDDS principal diagnosis sequencing & re-ordering",
+        spec2: "ICD-10-PCS root operation & approach verification",
+        spec3: "Elimination of wrongful surgical unbundling flags"
+      },
+      4: {
+        stageTag: "Stage 4 of 5 • DRG Grouper Recalibration",
+        title: "MS-DRG / APR-DRG Relative Weight Recalculation",
+        badge: "Automated Grouper Engine",
+        badgeClass: "tag-blue",
+        desc: "The audited diagnosis and procedure codes are re-run through the CMS MS-DRG (or 3M APR-DRG) grouper. Relative weight adjustments, Geometric Mean Length of Stay (GMLOS), outlier payment thresholds, and transfer per-diem adjustments are computed, capturing legitimate hospital severity of illness (SOI) and risk of mortality (ROM).",
+        spec1: "MS-DRG relative weight recalibration & CMI lift",
+        spec2: "GMLOS variance recalculation preventing RAC penalty",
+        spec3: "Outlier threshold payment validation"
+      },
+      5: {
+        stageTag: "Stage 5 of 5 • Audit Defense & Release",
+        title: "837I Clean Claim Release & RAC Defense Binder",
+        badge: "Clean Claim Clearance",
+        badgeClass: "tag-green",
+        desc: "The validated 837I claim is released to the clearinghouse with an audited timestamp. Simultaneously, an electronic 'Audit Defense Packet' containing clinical indicator excerpts, operative report citations, and physician query sign-offs is archived in the health system's audit repository to defeat post-payment payer takebacks automatically.",
+        spec1: "Instant clearinghouse 837I electronic transmission",
+        spec2: "Automated clinical evidence binder generation for RAC defense",
+        spec3: "100% audit trail with electronic signature log"
+      }
+    };
+
+    function switchDrgStep(stepNum) {
+      // Update step tabs
+      for (let i = 1; i <= 5; i++) {
+        const btn = document.getElementById('drg-step-btn-' + i);
+        if (btn) {
+          const badge = btn.querySelector('.step-num-badge');
+          if (i === stepNum) {
+            btn.style.background = "rgba(31, 111, 235, 0.15)";
+            btn.style.borderColor = "var(--blue-accent)";
+            if (badge) badge.style.background = "var(--blue-accent)";
+          } else {
+            btn.style.background = "transparent";
+            btn.style.borderColor = "var(--border-light)";
+            if (badge) badge.style.background = (i === 5 ? "#10B981" : "rgba(255, 255, 255, 0.15)");
+          }
+        }
+      }
+
+      // Update content
+      const data = drgStepData[stepNum];
+      if (data) {
+        document.getElementById('drg-step-stage-tag').innerText = data.stageTag;
+        document.getElementById('drg-step-title').innerText = data.title;
+        const badgeElem = document.getElementById('drg-step-badge');
+        badgeElem.innerText = data.badge;
+        badgeElem.className = 'preview-item-tag ' + data.badgeClass;
+        document.getElementById('drg-step-desc').innerText = data.desc;
+        document.getElementById('drg-step-spec-1').innerText = data.spec1;
+        document.getElementById('drg-step-spec-2').innerText = data.spec2;
+        document.getElementById('drg-step-spec-3').innerText = data.spec3;
+      }
+    }
+
+
+    // --- 2. VALUE-BASED HCC CONTRACT CASE SWITCHER DATA & LOGIC ---
+    const hccCaseData = {
+      1: {
+        title: "Case 1: Medicare Advantage Patient • Type 2 Diabetes Management",
+        vagueNote: '"Assessment: Type 2 diabetes mellitus, history of chronic kidney disease. Patient feels well. Refilled metformin. Follow up in 6 months."',
+        vagueFlaws: [
+          "Code E11.9 (uncomplicated T2D) mapped to CMS-HCC v28 category 38, but CKD stage omitted.",
+          "\"History of CKD\" cannot be coded as active disease under ICD-10 guidelines.",
+          "Fails MEAT criteria: No eGFR or urine microalbumin evaluated; no CKD staging documented."
+        ],
+        vagueCodes: "E11.9",
+        vagueCat: "HCC 38 (Low Weight)",
+        vagueRaf: "0.105",
+        specificNote: '"Assessment: Type 2 diabetes mellitus with diabetic nephropathy and CKD Stage 4 (eGFR 24 mL/min/1.73m², Cr 2.4). Monitored BP at 134/82. Evaluated microalbuminuria at 340 mg/g. Assessed as stable renal function on current regimen. Treated: titrated losartan to 50mg daily, continued Jardiance, nephrology referral scheduled."',
+        specificEnablers: [
+          "Explicit cause-and-effect link between diabetes and kidney disease coded as E11.22 + N18.4.",
+          "Satisfies all 4 MEAT pillars (Monitored BP, Evaluated eGFR/Cr, Assessed stability, Treated med change).",
+          "Triggers CMS-HCC v28 category 37 (severe diabetes) + category 326 (CKD Stage 4) + disease interaction coefficient."
+        ],
+        specificCodes: "E11.22, N18.4",
+        specificCat: "HCC 37 + HCC 326 + Interaction",
+        specificRaf: "0.733 (+0.628 Delta)",
+        benchmarkImpact: "+$6,280 Annual Benchmark Payment Lift per Attributed Member"
+      },
+      2: {
+        title: "Case 2: MSSP ACO Beneficiary • Cardiorenal Syndrome & CHF Staging",
+        vagueNote: '"Assessment: Chronic congestive heart failure, fluid overload. Dyspnea on exertion. Lasix continued. Renal function slightly abnormal. See again next quarter."',
+        vagueFlaws: [
+          "Non-specific heart failure code I50.9 lacks acuity staging (acute vs. chronic) and subtype (systolic vs. diastolic).",
+          "\"Renal function slightly abnormal\" fails to state chronic kidney disease or acute decompensation.",
+          "Fails MEAT criteria: No physical exam edema grade, no BNP lab review, no dosage titration noted."
+        ],
+        vagueCodes: "I50.9",
+        vagueCat: "HCC 226 (Heart Failure Unspecified)",
+        vagueRaf: "0.334",
+        specificNote: '"Assessment: Chronic combined systolic and diastolic congestive heart failure (HFrEF, EF 32%), stable on current guideline-directed medical therapy. Concomitant Chronic Kidney Disease Stage 3b (eGFR 38, Cr 1.9). Monitored: trace pedal edema, lung bases clear. Evaluated: BNP 420 (down from 780). Assessed: euvolemic. Treated: refilled Entresto 49/51mg and spironolactone 25mg daily."',
+        specificEnablers: [
+          "Specific ICD-10 code I50.42 (Chronic combined systolic and diastolic HF) substantiated with EF.",
+          "Explicit documentation of CKD Stage 3b (N18.32) satisfying MEAT criteria.",
+          "Captures CMS-HCC 225 (Heart Failure) + CMS-HCC 327 (CKD 3b) + CMS-HCC Cardiorenal Interaction bonus."
+        ],
+        specificCodes: "I50.42, N18.32",
+        specificCat: "HCC 225 + HCC 327 + Cardiorenal Interaction",
+        specificRaf: "0.892 (+0.558 Delta)",
+        benchmarkImpact: "+$5,580 Annual Benchmark Payment Lift per Attributed Member"
+      },
+      3: {
+        title: "Case 3: Medicare Advantage Dual-Eligible • COPD & Severe Malnutrition",
+        vagueNote: '"Assessment: COPD with chronic bronchitis. Weight loss noted over past year. Inhaler refilled. Patient advised to eat high protein snacks."',
+        vagueFlaws: [
+          "COPD documented without specifying exacerbation or ongoing chronic respiratory failure.",
+          "\"Weight loss\" is a symptom code (R63.4) that carries zero HCC credit in CMS-HCC v28.",
+          "Fails ASPEN/GLIM diagnostic criteria for malnutrition: No percentage weight loss or BMI recorded."
+        ],
+        vagueCodes: "J44.9, R63.4",
+        vagueCat: "HCC 283 (COPD alone, 0 credit for weight loss)",
+        vagueRaf: "0.298",
+        specificNote: '"Assessment: Chronic Obstructive Pulmonary Disease with emphysema, stable on Trelegy Ellipta. Severe Protein-Calorie Malnutrition confirmed by clinical dietitian evaluation: unintentional weight loss of 14% over 6 months, severe muscle wasting in bitemporal and clavicular regions, BMI 17.2 kg/m². Monitored: serial weights. Evaluated: prealbumin 11 mg/dL. Assessed: severe malnutrition. Treated: started Boost Very High Calorie oral nutrition supplements BID, scheduled for nutrition follow-up."',
+        specificEnablers: [
+          "Documented GLIM consensus criteria for Severe Protein-Calorie Malnutrition (E43).",
+          "Substantiates CMS-HCC 48 (Severe Malnutrition), which holds one of the highest weights in v28.",
+          "Complete MEAT compliance: Dietary consult review, prealbumin monitoring, and caloric supplementation treatment."
+        ],
+        specificCodes: "J44.9, E43",
+        specificCat: "HCC 283 + HCC 48 (Severe Protein-Calorie Malnutrition)",
+        specificRaf: "1.142 (+0.844 Delta)",
+        benchmarkImpact: "+$8,440 Annual Benchmark Payment Lift per Attributed Member"
+      }
+    };
+
+    function switchHccCase(caseNum) {
+      // Toggle button styling
+      for (let i = 1; i <= 3; i++) {
+        const btn = document.getElementById('tab-hcc-' + i);
+        if (btn) {
+          if (i === caseNum) {
+            btn.className = "btn btn-sm btn-primary active-hcc-tab";
+          } else {
+            btn.className = "btn btn-sm btn-secondary";
+          }
+        }
+      }
+
+      // Update case details
+      const c = hccCaseData[caseNum];
+      if (c) {
+        document.getElementById('hcc-case-title').innerText = c.title;
+        document.getElementById('hcc-vague-note').innerText = c.vagueNote;
+        
+        // Flaws
+        const flawsList = document.getElementById('hcc-vague-flaws');
+        flawsList.innerHTML = "";
+        c.vagueFlaws.forEach(item => {
+          const li = document.createElement('li');
+          li.innerText = item;
+          flawsList.appendChild(li);
+        });
+
+        document.getElementById('hcc-vague-codes').innerText = c.vagueCodes;
+        document.getElementById('hcc-vague-cat').innerText = c.vagueCat;
+        document.getElementById('hcc-vague-raf').innerText = c.vagueRaf;
+
+        document.getElementById('hcc-specific-note').innerText = c.specificNote;
+
+        // Enablers
+        const enablersList = document.getElementById('hcc-specific-enablers');
+        enablersList.innerHTML = "";
+        c.specificEnablers.forEach(item => {
+          const li = document.createElement('li');
+          li.innerText = item;
+          enablersList.appendChild(li);
+        });
+
+        document.getElementById('hcc-specific-codes').innerText = c.specificCodes;
+        document.getElementById('hcc-specific-cat').innerText = c.specificCat;
+        document.getElementById('hcc-specific-raf').innerText = c.specificRaf;
+        document.getElementById('hcc-benchmark-impact').innerText = c.benchmarkImpact;
+      }
+    }
+
+
+    // --- 3. FAQ ACCORDION TOGGLE ---
+    function toggleFaq(button) {
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.accordion-icon');
+
+      // Close all others
+      document.querySelectorAll('#faqAccordion .accordion-header').forEach(hdr => {
+        hdr.setAttribute('aria-expanded', 'false');
+        hdr.nextElementSibling.style.maxHeight = null;
+        hdr.nextElementSibling.classList.remove('active');
+        const ic = hdr.querySelector('.accordion-icon');
+        if (ic) ic.innerText = '+';
+      });
+
+      if (!isExpanded) {
+        button.setAttribute('aria-expanded', 'true');
+        content.classList.add('active');
+        content.style.maxHeight = content.scrollHeight + "px";
+        if (icon) icon.innerText = '−';
+      }
+    }
+  </script>
+</body>
+</html>

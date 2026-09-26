@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RCM Workflow Audit, KPI Benchmarking &amp; Technology Stack Advisory | Sector-Agnostic | Nova Arc</title>
+  <meta name="description" content="Scientific revenue cycle workflow diagnostic, HFMA MAP &amp; MGMA KPI benchmarking methodology, and vendor-neutral healthcare technology stack recommendation framework for all clinical sectors.">
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nova Arc Healthcare Technologies">
+  <meta property="og:title" content="RCM Workflow Audit, KPI Benchmarking &amp; Technology Advisory | Nova Arc">
+  <meta property="og:description" content="Data-driven revenue cycle diagnostics, national peer benchmarking against HFMA/MGMA percentiles, and vendor-neutral tech stack evaluation for health systems, ASCs, and medical groups.">
+  <meta property="og:url" content="https://novaarc-rcm.com/services/rcm-workflow-audit-benchmarking.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RCM Workflow Audit &amp; Tech Stack Framework | Nova Arc">
+  <meta name="twitter:description" content="Operational workflow audit methodology, peer KPI benchmarking, and vendor-neutral technology stack architecture.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../images/nova-arc-logo.png">
+
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet (Reused) -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NOVAARC001"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NOVAARC001', {
+      'anonymize_ip': true,
+      'cookie_flags': 'SameSite=None;Secure'
+    });
+  </script>
+
+  <!-- Schema.org JSON-LD: BreadcrumbList + Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://novaarc-rcm.com/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://novaarc-rcm.com/services.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "RCM Workflow Audit & Tech Stack Advisory",
+            "item": "https://novaarc-rcm.com/services/rcm-workflow-audit-benchmarking.html"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://novaarc-rcm.com/services/rcm-workflow-audit-benchmarking.html#service",
+        "name": "RCM Workflow Audit, KPI Benchmarking & Technology Stack Advisory",
+        "serviceType": "Healthcare Revenue Cycle Consulting - Operational Diagnostics & Technology Architecture Advisory",
+        "provider": {
+          "@type": "Organization",
+          "name": "Nova Arc Healthcare Technologies",
+          "url": "https://novaarc-rcm.com/",
+          "logo": "https://novaarc-rcm.com/images/nova-arc-logo.png"
+        },
+        "description": "Scientific revenue cycle diagnostic audit, HFMA MAP & MGMA KPI benchmarking methodology, and vendor-neutral healthcare technology stack evaluation for Health Systems, ASCs, Physician Groups, and Specialty Practices.",
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "RCM Advisory & Audit Deliverables",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Cross-Cycle RCM Operational Workflow Diagnostic & Friction Mapping"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "HFMA MAP Keys & MGMA National Peer KPI Benchmarking"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "5-Layer Vendor-Neutral Healthcare Technology Stack Architecture Evaluation"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Revenue Leakage Quantification & Root-Cause Remediation Roadmap"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* Scoped Styles for Audit & Benchmarking Page */
+    .hero-stat-card {
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      backdrop-filter: blur(8px);
+    }
+    .hero-stat-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(56, 189, 248, 0.45);
+      box-shadow: 0 12px 24px -10px rgba(56, 189, 248, 0.25);
+    }
+    .hero-stat-val {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: #38BDF8;
+      line-height: 1.1;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+    .hero-stat-lbl {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #E2E8F0;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+    .hero-stat-sub {
+      font-size: 0.775rem;
+      color: #94A3B8;
+      line-height: 1.4;
+    }
+
+    /* 4-Phase Stepper */
+    .audit-phase-card {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(56, 189, 248, 0.18);
+      border-radius: 14px;
+      padding: 26px;
+      position: relative;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .audit-phase-card:hover {
+      border-color: #38BDF8;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px -8px rgba(56, 189, 248, 0.3);
+    }
+    .phase-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: rgba(56, 189, 248, 0.15);
+      color: #38BDF8;
+      font-weight: 800;
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    /* Benchmarking Matrix Table */
+    .bench-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      background: rgba(15, 23, 42, 0.85);
+    }
+    .bench-table th {
+      background: rgba(30, 41, 59, 0.9);
+      color: #F8FAFC;
+      font-weight: 700;
+      font-size: 0.825rem;
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+    }
+    .bench-table td {
+      padding: 14px 16px;
+      font-size: 0.825rem;
+      color: #CBD5E1;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      vertical-align: middle;
+      line-height: 1.5;
+    }
+    .bench-table tr:last-child td {
+      border-bottom: none;
+    }
+    .bench-table tr:hover td {
+      background: rgba(56, 189, 248, 0.04);
+    }
+
+    /* Tech Layer Cards */
+    .tech-layer-card {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 14px;
+      padding: 24px;
+      transition: all 0.2s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .tech-layer-card:hover {
+      border-color: #38BDF8;
+      box-shadow: 0 10px 25px -8px rgba(56, 189, 248, 0.3);
+      transform: translateY(-2px);
+    }
+
+    /* Sliders */
+    .calc-slider {
+      width: 100%;
+      height: 6px;
+      background: rgba(56, 189, 248, 0.2);
+      border-radius: 4px;
+      outline: none;
+      -webkit-appearance: none;
+      margin: 12px 0;
+    }
+    .calc-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #38BDF8;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.8);
+      border: 2px solid #FFFFFF;
+    }
+
+    /* Sector Tab Buttons */
+    .sector-tab-btn {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      color: #94A3B8;
+      font-weight: 600;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-size: 0.825rem;
+    }
+    .sector-tab-btn:hover {
+      border-color: #38BDF8;
+      color: #FFFFFF;
+    }
+    .sector-tab-btn.active {
+      background: #0284C7;
+      color: #FFFFFF;
+      border-color: #38BDF8;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4);
+    }
+
+    /* Breadcrumbs */
+    .breadcrumb-nav {
+      padding: 16px 0 8px 0;
+      font-size: 0.825rem;
+      color: #94A3B8;
+    }
+    .breadcrumb-nav a {
+      color: #94A3B8;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .breadcrumb-nav a:hover {
+      color: #38BDF8;
+    }
+    .breadcrumb-nav .separator {
+      margin: 0 8px;
+      color: #64748B;
+    }
+    .breadcrumb-nav .current {
+      color: #CBD5E1;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       STICKY NAVBAR (Shared Header Partial)
+       ======================================================================== -->
+      <header class="site-header" id="top">
+    <div class="container navbar">
+      <!-- Brand Logo -->
+      <a href="../index.html" class="logo" aria-label="Nova Arc Homepage">
+        <img src="../images/nova-arc-logo.png" alt="Nova Arc Logo" class="logo-img" width="38" height="33">
+        <span class="logo-text">Nova<span class="logo-highlight">Arc</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="../solutions.html" class="nav-link">Solutions</a></li>
+          
+          <!-- Services Dropdown (Mega-Menu) -->
+          <li class="nav-item-dropdown">
+            <button class="nav-link nav-dropdown-toggle active" id="servicesDropdownToggle" aria-haspopup="true" aria-expanded="false" aria-controls="servicesMegaMenu">
+              <span>Services</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+
+            <!-- Mega-Menu Light Panel -->
+            <div class="mega-menu-panel" id="servicesMegaMenu" role="menu" aria-labelledby="servicesDropdownToggle" aria-hidden="true">
+              <div class="mega-menu-inner container">
+                <div class="mega-menu-grid">
+                  <!-- Column 1: Patient Access & Front-End Integrity -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-1-heading">Patient Access &amp; Front-End Integrity</h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-1-heading">
+                      <li role="none">
+                        <a href="real-time-insurance-eligibility.html" class="mega-item standalone" role="menuitem">
+                          Insurance Eligibility &amp; Benefits Verification
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="prior-authorization-management.html" class="mega-item standalone" role="menuitem">
+                          Prior Authorization Management
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="patient-registration-verification.html" class="mega-item standalone" role="menuitem">
+                          Patient Scheduling &amp; Registration QA
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="financial-clearance-gfe.html" class="mega-item standalone" role="menuitem">
+                          Financial Clearance &amp; Good Faith Estimates
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="point-of-service-collections.html" class="mega-item standalone" role="menuitem">
+                          Point-of-Service Collections
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="referral-order-management.html" class="mega-item standalone" role="menuitem">
+                          Medical Necessity &amp; Order Verification
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Column 2: HIM & Coding -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-2-heading">HIM &amp; Coding</h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-2-heading">
+                      <!-- Parent Item: Medical Coding Services -->
+                      <li role="none" class="mega-parent-group">
+                        <a href="full-cycle-medical-coding.html" class="mega-item parent" role="menuitem">
+                          Medical Coding Services
+                        </a>
+                        <ul class="mega-sub-list" role="none">
+                          <li role="none">
+                            <a href="hcc-risk-adjustment.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Risk Adjustment/HCC Coding
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a href="full-cycle-medical-coding.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Facility/DRG Coding
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a href="full-cycle-medical-coding.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Professional Fee Coding
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li role="none">
+                        <a href="cdi-chart-auditing.html" class="mega-item standalone" role="menuitem">
+                          Clinical Documentation Improvement
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="cac-review.html" class="mega-item standalone" role="menuitem">
+                          Computer-Assisted Coding (CAC) Review
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="compliance-audit-defense.html" class="mega-item standalone" role="menuitem">
+                          Coding Compliance &amp; Audit Support
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="cdm-charge-capture.html" class="mega-item standalone" role="menuitem">
+                          Charge Capture &amp; CDM Audit
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="physician-query-management.html" class="mega-item standalone" role="menuitem">
+                          Physician Query Management
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Column 3: Patient Financial Services (PFS) & Recovery -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-3-heading">Patient Financial Services &amp; Recovery</h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-3-heading">
+                      <!-- Parent Item: Claims Management Services -->
+                      <li role="none" class="mega-parent-group">
+                        <a href="claims-management-scrubbing.html" class="mega-item parent" role="menuitem">
+                          Claims Management Services
+                        </a>
+                        <ul class="mega-sub-list" role="none">
+                          <li role="none">
+                            <a href="claims-management-scrubbing.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Claims Submission &amp; Scrubbing EDI 837
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a href="payment-posting-reconciliation.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Payment Posting &amp; Reconciliation EDI 835
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li role="none">
+                        <a href="ar-management.html" class="mega-item standalone" role="menuitem">
+                          A/R Management Services
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="denial-management.html" class="mega-item standalone" role="menuitem">
+                          Denial Management &amp; Appeals
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="payer-contract-modeling.html" class="mega-item standalone" role="menuitem">
+                          Underpayment Recovery &amp; Contract Compliance
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="patient-billing-collections.html" class="mega-item standalone" role="menuitem">
+                          Patient Billing &amp; Self-Pay Collections
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="credit-balance-resolution.html" class="mega-item standalone" role="menuitem">
+                          Credit Balance &amp; Refund Management
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="edi-enrollment.html" class="mega-item standalone" role="menuitem">
+                          EDI Enrollment Services
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <a href="../ai-platform.html" class="nav-link has-badge">
+              Nova Arc AI Platform
+              <span class="nav-badge">New</span>
+            </a>
+          </li>
+          <li><a href="../who-we-serve.html" class="nav-link">Who We Serve</a></li>
+          <li><a href="../contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Action Buttons -->
+      <div class="nav-actions">
+        <a href="tel:18005558942" class="nav-phone" aria-label="Call Nova Arc">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          (800) 555-NOVA
+        </a>
+        <a href="../contact.html" class="btn btn-primary btn-sm">Request a Demo</a>
+      </div>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-list">
+        <li><a href="../solutions.html" class="mobile-nav-link">Solutions <span>&rarr;</span></a></li>
+        <li class="mobile-accordion-item">
+          <button class="mobile-nav-link mobile-accordion-toggle" id="mobileServicesToggle" aria-expanded="false" aria-controls="mobileServicesSubmenu">
+            <span>Services</span>
+            <svg class="mobile-accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="mobile-submenu-collapse" id="mobileServicesSubmenu" aria-hidden="true">
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title">Patient Access &amp; Front-End</h4>
+              <a href="real-time-insurance-eligibility.html" class="mobile-submenu-link">Insurance Eligibility &amp; Benefits</a>
+              <a href="prior-authorization-management.html" class="mobile-submenu-link">Prior Authorization Management</a>
+              <a href="patient-registration-verification.html" class="mobile-submenu-link">Patient Scheduling &amp; Registration QA</a>
+              <a href="financial-clearance-gfe.html" class="mobile-submenu-link">Financial Clearance &amp; Good Faith Estimates</a>
+              <a href="point-of-service-collections.html" class="mobile-submenu-link">Point-of-Service Collections</a>
+              <a href="referral-order-management.html" class="mobile-submenu-link">Medical Necessity &amp; Order Verification</a>
+            </div>
+
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title">HIM &amp; Coding</h4>
+              <a href="full-cycle-medical-coding.html" class="mobile-submenu-link parent">Medical Coding Services</a>
+              <a href="hcc-risk-adjustment.html" class="mobile-submenu-sublink">&rsaquo; Risk Adjustment/HCC Coding</a>
+              <a href="full-cycle-medical-coding.html" class="mobile-submenu-sublink">&rsaquo; Facility/DRG &amp; ProFee Coding</a>
+              <a href="cdi-chart-auditing.html" class="mobile-submenu-link">Clinical Documentation Improvement</a>
+              <a href="cac-review.html" class="mobile-submenu-link">Computer-Assisted Coding (CAC) Review</a>
+              <a href="compliance-audit-defense.html" class="mobile-submenu-link">Coding Compliance &amp; Audit Support</a>
+              <a href="cdm-charge-capture.html" class="mobile-submenu-link">Charge Capture &amp; CDM Audit</a>
+              <a href="physician-query-management.html" class="mobile-submenu-link">Physician Query Management</a>
+            </div>
+
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title">Patient Financial Services &amp; Recovery</h4>
+              <a href="claims-management-scrubbing.html" class="mobile-submenu-link parent">Claims Management Services</a>
+              <a href="claims-management-scrubbing.html" class="mobile-submenu-sublink">&rsaquo; Claims Submission &amp; Scrubbing EDI 837</a>
+              <a href="payment-posting-reconciliation.html" class="mobile-submenu-sublink">&rsaquo; Payment Posting &amp; Reconciliation EDI 835</a>
+              <a href="ar-management.html" class="mobile-submenu-link">A/R Management Services</a>
+              <a href="denial-management.html" class="mobile-submenu-link">Denial Management &amp; Appeals</a>
+              <a href="payer-contract-modeling.html" class="mobile-submenu-link">Underpayment Recovery &amp; Contract Compliance</a>
+              <a href="patient-billing-collections.html" class="mobile-submenu-link">Patient Billing &amp; Self-Pay Collections</a>
+              <a href="credit-balance-resolution.html" class="mobile-submenu-link">Credit Balance &amp; Refund Management</a>
+              <a href="edi-enrollment.html" class="mobile-submenu-link">EDI Enrollment Services</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="../ai-platform.html" class="mobile-nav-link">Nova Arc AI Platform <span class="nav-badge">New</span></a></li>
+        <li><a href="../who-we-serve.html" class="mobile-nav-link">Who We Serve <span>&rarr;</span></a></li>
+        <li><a href="../contact.html" class="mobile-nav-link">Contact <span>&rarr;</span></a></li>
+      </ul>
+      <div class="mobile-nav-bottom">
+        <a href="tel:18005558942" class="btn btn-secondary">Call (800) 555-NOVA</a>
+        <a href="../contact.html" class="btn btn-primary">Request a Demo</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ========================================================================
+       HERO SECTION
+       ======================================================================== -->
+  <section class="section service-hero-section" style="padding-top: 100px; padding-bottom: 60px; background: radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.08) 0%, transparent 68%);">
+    <div class="container">
+      
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="separator">/</span>
+        <a href="../services.html">Services</a>
+        <span class="separator">/</span>
+        <span class="current">RCM Workflow Audit &amp; Tech Stack Advisory</span>
+      </nav>
+
+      <!-- Hero Header -->
+      <div style="max-width: 900px; margin: 20px 0 40px 0;">
+        <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.3); padding: 6px 14px; border-radius: 999px; margin-bottom: 18px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+          <span style="font-size: 0.8rem; font-weight: 700; color: #38BDF8; letter-spacing: 0.05em; text-transform: uppercase;">
+            Sector-Agnostic Advisory &bull; Health Systems, ASCs, Physician Groups &amp; Specialty Practices
+          </span>
+        </div>
+
+        <h1 style="font-size: clamp(2rem, 3.8vw, 3.35rem); font-weight: 800; line-height: 1.15; color: #FFFFFF; margin-bottom: 20px; letter-spacing: -0.02em;">
+          RCM Workflow Audit, KPI Benchmarking &amp; Technology Stack Advisory
+        </h1>
+
+        <p style="font-size: 1.125rem; line-height: 1.65; color: #CBD5E1; margin-bottom: 28px;">
+          A rigorous, data-driven diagnostic evaluation of your revenue cycle operations. Nova Arc mines 12 to 24 months of raw EDI 837/835 remittance data, benchmarks your performance against national peer percentiles (HFMA MAP &amp; MGMA), and architects an unbiased, vendor-neutral technology stack to eliminate silent revenue leakage.
+        </p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center;">
+          <a href="../contact.html?service=rcm-workflow-audit" class="btn btn-primary" style="padding: 12px 28px; font-weight: 700;">
+            Request Operational Diagnostic Audit
+          </a>
+          <a href="#kpi-matrix" class="btn btn-secondary" style="padding: 12px 24px;">
+            Explore Peer KPI Benchmarks &rarr;
+          </a>
+          <span style="font-size: 0.85rem; color: #94A3B8; margin-left: 8px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="display: inline-block; vertical-align: -2px;"><polyline points="20 6 9 17 4 12"/></svg>
+            14-Day Delivery &bull; Zero Impact on Daily Operations
+          </span>
+        </div>
+      </div>
+
+      <!-- Hero 4-Stat Metric Row -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin-top: 40px;">
+        <div class="hero-stat-card">
+          <div class="hero-stat-val">100%</div>
+          <div class="hero-stat-lbl">Data-Driven Diagnostic</div>
+          <div class="hero-stat-sub">Algorithmic mining of historical ANSI X12 837 claims, 835 ERAs, and EHR logs</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-val">14 Days</div>
+          <div class="hero-stat-lbl">Rapid Assessment Turnaround</div>
+          <div class="hero-stat-sub">Executive scorecard, friction maps, and prioritized transformation roadmap</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-val">8 Metrics</div>
+          <div class="hero-stat-lbl">HFMA MAP &amp; MGMA Benchmarks</div>
+          <div class="hero-stat-sub">Quartile peer comparisons normalized by clinical specialty and care setting</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-val">5 Layers</div>
+          <div class="hero-stat-lbl">Vendor-Neutral Tech Stack</div>
+          <div class="hero-stat-sub">Unbiased architectural evaluation across EHR, clearinghouses, AI, and payments</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECTION 1: THE REVENUE CYCLE BLIND SPOT
+       ======================================================================== -->
+  <section class="section" style="padding: 70px 0; background: rgba(10, 15, 29, 0.6); border-top: 1px solid rgba(56, 189, 248, 0.1); border-bottom: 1px solid rgba(56, 189, 248, 0.1);">
+    <div class="container">
+      <div style="max-width: 820px; margin-bottom: 48px;">
+        <span style="font-size: 0.8rem; font-weight: 700; color: #38BDF8; letter-spacing: 0.08em; text-transform: uppercase;">
+          The Diagnostic Imperative &bull; Moving Beyond Anecdotes
+        </span>
+        <h2 style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; color: #FFFFFF; margin-top: 8px;">
+          The "Blind Spot Dilemma": Why Healthcare Leaders Misdiagnose Revenue Friction
+        </h2>
+        <p style="font-size: 1rem; color: #94A3B8; line-height: 1.6; margin-top: 12px;">
+          When collections drop or days in A/R rise, organizations often implement superficial fixes—hiring more billing clerks, switching collection agencies, or buying bolt-on software. Without a scientific diagnostic, leadership treats symptoms rather than the root-cause friction silently draining 3% to 8% of earned revenue.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+        
+        <!-- Trap 1 -->
+        <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 14px; padding: 26px;">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+            <div style="width: 36px; height: 36px; border-radius: 8px; background: rgba(239, 68, 68, 0.15); display: flex; align-items: center; justify-content: center; color: #EF4444;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: #FFFFFF; margin: 0;">Unmeasured Workflow Handoff Gaps</h3>
+          </div>
+          <p style="font-size: 0.85rem; color: #CBD5E1; line-height: 1.6; margin: 0;">
+            Most revenue leakage occurs at the boundary between departments: when registration errors bypass clinic intake, when coding queries languish in physician in-baskets, or when clearinghouse rejections sit in unmonitored queues. Our audit maps every handoff to isolate exactly where clean claims derail.
+          </p>
+        </div>
+
+        <!-- Trap 2 -->
+        <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 14px; padding: 26px;">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+            <div style="width: 36px; height: 36px; border-radius: 8px; background: rgba(245, 158, 11, 0.15); display: flex; align-items: center; justify-content: center; color: #F59E0B;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: #FFFFFF; margin: 0;">Flawed Internal Benchmarking</h3>
+          </div>
+          <p style="font-size: 0.85rem; color: #CBD5E1; line-height: 1.6; margin: 0;">
+            Comparing your performance only to your own historical numbers creates an illusion of stability. If your days in A/R have been 48 days for three years, internal reports show consistency&mdash;while peer MGMA and HFMA top-quartile performers are collecting cash in 29 days and operating with 30% lower cost-to-collect.
+          </p>
+        </div>
+
+        <!-- Trap 3 -->
+        <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 14px; padding: 26px;">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+            <div style="width: 36px; height: 36px; border-radius: 8px; background: rgba(56, 189, 248, 0.15); display: flex; align-items: center; justify-content: center; color: #38BDF8;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: #FFFFFF; margin: 0;">Bloated &amp; Underutilized Tech Stacks</h3>
+          </div>
+          <p style="font-size: 0.85rem; color: #CBD5E1; line-height: 1.6; margin: 0;">
+            Healthcare providers spend thousands monthly on overlapping software tools (clearinghouses, patient portals, bolt-on scrubbers, eligibility widgets) that fail to communicate. Our technology framework evaluates true ROI, eliminating redundant licensing and activating native EHR capabilities.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECTION 2: WORKFLOW AUDIT METHODOLOGY (4-PHASE DIAGNOSTIC)
+       ======================================================================== -->
+  <section class="section" id="methodology" style="padding: 70px 0;">
+    <div class="container">
+      <div style="text-align: center; max-width: 820px; margin: 0 auto 52px auto;">
+        <span style="font-size: 0.8rem; font-weight: 700; color: #38BDF8; letter-spacing: 0.08em; text-transform: uppercase;">
+          The Nova Arc Operational Diagnostic &bull; 14-Day Blueprint
+        </span>
+        <h2 style="font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; color: #FFFFFF; margin-top: 8px;">
+          The 4-Phase RCM Workflow Audit Methodology
+        </h2>
+        <p style="font-size: 1.05rem; color: #94A3B8; line-height: 1.6; margin-top: 12px;">
+          Our diagnostic methodology combines forensic electronic remittance mining with on-the-ground operational workflow shadowing to evaluate every touchpoint from patient scheduling to balance resolution.
+        </p>
+      </div>
+
+      <!-- 4-Phase Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+        
+        <!-- Phase 1 -->
+        <div class="audit-phase-card">
+          <div class="phase-badge">01</div>
+          <div style="font-size: 0.725rem; font-weight: 700; color: #38BDF8; text-transform: uppercase; margin-bottom: 6px;">Days 1 &ndash; 3</div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Quantitative Data Ingestion &amp; Mining</h3>
+          <p style="font-size: 0.825rem; color: #CBD5E1; line-height: 1.55; margin-bottom: 14px; flex-grow: 1;">
+            Securely extract 12 to 24 months of raw ANSI X12 837 claim files, 835 electronic remittances, appointment logs, and aged A/R trial balances via secure SFTP. Our algorithms parse millions of line items to reconstruct your historical baseline.
+          </p>
+          <div style="border-top: 1px solid rgba(56, 189, 248, 0.15); padding-top: 10px; font-size: 0.75rem; color: #34D399; font-weight: 700;">
+            Output: Baseline Data Lake &amp; Remittance Ledger
+          </div>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="audit-phase-card">
+          <div class="phase-badge">02</div>
+          <div style="font-size: 0.725rem; font-weight: 700; color: #38BDF8; text-transform: uppercase; margin-bottom: 6px;">Days 4 &ndash; 7</div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Operational Process Shadowing</h3>
+          <p style="font-size: 0.825rem; color: #CBD5E1; line-height: 1.55; margin-bottom: 14px; flex-grow: 1;">
+            Virtual or on-site shadowing across the four core pillars: Front-End Intake &amp; Auth, Mid-Cycle HIM/Coding, Central Business Office Billing, and Back-End Collections. We document staff workflows, handoff friction, and manual workarounds.
+          </p>
+          <div style="border-top: 1px solid rgba(56, 189, 248, 0.15); padding-top: 10px; font-size: 0.75rem; color: #34D399; font-weight: 700;">
+            Output: Current-State Operational Flowcharts
+          </div>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="audit-phase-card">
+          <div class="phase-badge">03</div>
+          <div style="font-size: 0.725rem; font-weight: 700; color: #38BDF8; text-transform: uppercase; margin-bottom: 6px;">Days 8 &ndash; 10</div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Friction Mapping &amp; Leakage Quantification</h3>
+          <p style="font-size: 0.825rem; color: #CBD5E1; line-height: 1.55; margin-bottom: 14px; flex-grow: 1;">
+            Correlate qualitative operational gaps with forensic remittance data. Quantify exact dollar leakage across: registration defects, timely filing write-offs, underpayment variances, unbilled implant charges, and patient bad-debt attrition.
+          </p>
+          <div style="border-top: 1px solid rgba(56, 189, 248, 0.15); padding-top: 10px; font-size: 0.75rem; color: #34D399; font-weight: 700;">
+            Output: Quantified Dollar Revenue Leakage Map
+          </div>
+        </div>
+
+        <!-- Phase 4 -->
+        <div class="audit-phase-card">
+          <div class="phase-badge">04</div>
+          <div style="font-size: 0.725rem; font-weight: 700; color: #38BDF8; text-transform: uppercase; margin-bottom: 6px;">Days 11 &ndash; 14</div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Strategic Roadmap &amp; Tech Architecture</h3>
+          <p style="font-size: 0.825rem; color: #CBD5E1; line-height: 1.55; margin-bottom: 14px; flex-grow: 1;">
+            Executive presentation to C-suite and board. Delivers prioritized quick-hit cash capture wins (30-day), strategic workflow redesigns (90-day), and a vendor-neutral technology stack optimization blueprint with guaranteed ROI.
+          </p>
+          <div style="border-top: 1px solid rgba(56, 189, 248, 0.15); padding-top: 10px; font-size: 0.75rem; color: #34D399; font-weight: 700;">
+            Output: C-Suite Executive Diagnostic Dossier
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECTION 3: INTERACTIVE TOOL 1 - KPI BENCHMARKING MATRIX (SECTOR-AGNOSTIC)
+       ======================================================================== -->
+  <section class="section" id="kpi-matrix" style="padding: 70px 0; background: rgba(10, 15, 29, 0.7); border-top: 1px solid rgba(56, 189, 248, 0.15); border-bottom: 1px solid rgba(56, 189, 248, 0.15);">
+    <div class="container">
+      <div style="max-width: 820px; margin-bottom: 32px;">
+        <span style="font-size: 0.8rem; font-weight: 700; color: #38BDF8; letter-spacing: 0.08em; text-transform: uppercase;">
+          Interactive Peer Benchmarking &bull; HFMA MAP &amp; MGMA Standards
+        </span>
+        <h2 style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; color: #FFFFFF; margin-top: 8px;">
+          Cross-Sector RCM KPI Benchmarking Matrix
+        </h2>
+        <p style="font-size: 1rem; color: #94A3B8; line-height: 1.6; margin-top: 8px;">
+          Select your healthcare sector below to examine how national peer percentiles compare against Nova Arc's Top-Decile Best-in-Class benchmarks across 8 critical revenue cycle dimensions.
+        </p>
+      </div>
+
+      <!-- Sector Selector Bar -->
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px;">
+        <button type="button" class="sector-tab-btn active" data-sector="health_systems">
+          Health Systems &amp; Hospitals
+        </button>
+        <button type="button" class="sector-tab-btn" data-sector="asc">
+          Ambulatory Surgery Centers (ASCs)
+        </button>
+        <button type="button" class="sector-tab-btn" data-sector="physician_groups">
+          Physician Groups &amp; Specialty Practices
+        </button>
+        <button type="button" class="sector-tab-btn" data-sector="urgent_care">
+          Urgent Care &amp; Multi-Clinic Networks
+        </button>
+      </div>
+
+      <!-- Benchmarking Matrix Table Container -->
+      <div style="background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 14px; padding: 24px; box-shadow: 0 16px 36px -12px rgba(0,0,0,0.6);">
+        
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <h3 id="sector-display-name" style="font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin: 0;">
+              Health Systems &amp; Inpatient Hospital Networks
+            </h3>
+            <span id="sector-sample-size" style="font-size: 0.775rem; color: #94A3B8;">
+              Benchmark Source: HFMA MAP Keys &bull; Peer Sample: 420+ Enterprise Health Systems
+            </span>
+          </div>
+          <div style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.35); padding: 6px 14px; border-radius: 8px; font-size: 0.775rem; color: #34D399; font-weight: 700;">
+            Nova Arc Best-in-Class Guarantee
+          </div>
+        </div>
+
+        <div style="overflow-x: auto;">
+          <table class="bench-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Core KPI Dimension</th>
+                <th style="width: 18%;">25th Percentile (Laggard)</th>
+                <th style="width: 18%;">50th Percentile (National Median)</th>
+                <th style="width: 18%;">75th Percentile (Strong)</th>
+                <th style="width: 21%; color: #38BDF8;">Nova Arc Best-in-Class (Top 10%)</th>
+              </tr>
+            </thead>
+            <tbody id="bench-table-body">
+              <!-- Dynamically Rendered -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Explanatory Footnote -->
+        <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(56, 189, 248, 0.15); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 0.775rem; color: #94A3B8;">
+          <span>All metrics defined strictly according to HFMA MAP Key standard definitions and MGMA Cost &amp; Revenue survey methodologies.</span>
+          <a href="../contact.html?service=rcm-workflow-audit" style="color: #38BDF8; font-weight: 600; text-decoration: none;">
+            Request Custom Peer Gap Analysis &rarr;
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECTION 4: TECHNOLOGY STACK RECOMMENDATION FRAMEWORK
+       ======================================================================== -->
+  <section class="section" id="tech-framework" style="padding: 70px 0;">
+    <div class="container">
+      <div style="max-width: 820px; margin-bottom: 48px;">
+        <span style="font-size: 0.8rem; font-weight: 700; color: #38BDF8; letter-spacing: 0.08em; text-transform: uppercase;">
+          Architectural Blueprint &bull; 5-Layer Stack Advisory
+        </span>
+        <h2 style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; color: #FFFFFF; margin-top: 8px;">
+          The 5-Layer Healthcare Technology Stack Framework
+        </h2>
+        <p style="font-size: 1rem; color: #94A3B8; line-height: 1.6; margin-top: 12px;">
+          Technology should automate labor, not create administrative burden. Nova Arc provides vendor-neutral architectural evaluations to streamline your software ecosystem across five critical functional layers.
+        </p>
+      </div>
+
+      <!-- 5-Layer Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+        
+        <!-- Layer 1 -->
+        <div class="tech-layer-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 0.75rem; font-weight: 700; color: #38BDF8; background: rgba(56, 189, 248, 0.12); padding: 4px 10px; border-radius: 6px;">Layer 01</span>
+            <span style="font-size: 0.725rem; color: #94A3B8;">System of Record</span>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Core EHR &amp; Practice Management (PM)</h3>
+          <p style="font-size: 0.825rem; color: #CBD5E1; line-height: 1.6; margin-bottom: 14px; flex-grow: 1;">
+            The central clinical and billing ledger. We evaluate how effectively your organization leverages native workqueues, charge routers, scheduling templates, and master patient indexes (MPI).
+          </p>
+          <div style="background: rgba(10, 15, 29, 0.8); border: 1px solid rgba(56, 189, 248, 0.15); border-radius: 8px; padding: 12px; font-size: 0.75rem; color: #94A3B8;">
+            <strong style="color: #FFFFFF;">Evaluated Platforms:</strong> Epic Resolute, Oracle Cerner Millennium, MEDITECH Expanse, AthenaHealth, NextGen, eClinicalWorks, Allscripts/Veradigm.
+          </div>
+        </div>
+
+        <!-- Layer 2 -->
+        <div class="tech-layer-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 0.75rem; font-weight: 700; color: #38BDF8; background: rgba(56, 189, 248, 0.12); padding: 4px 10px; border-radius: 6px;">Layer 02</span>
+            <span style="font-size: 0.725rem; color: #94A3B8;">Transaction Gateway</span>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Clearinghouse &amp; EDI Transaction Hub</h3>
+          <p style="font-size: 0.825rem; color: #CBD5E1; line-height: 1.6; margin-bottom: 14px; flex-grow: 1;">
+            The conduit for ANSI X12 270/271, 837, 835, and 276/277 transactions. We analyze custom edit capabilities, real-time response latency, payer connectivity breadth, and clearinghouse rejection visibility.
+          </p>
+          <div style="background: rgba(10, 15, 29, 0.8); border: 1px solid rgba(56, 189, 248, 0.15); border-radius: 8px; padding: 12px; font-size: 0.75rem; color: #94A3B8;">
+            <strong style="color: #FFFFFF;">Evaluated Platforms:</strong> Waystar, Change Healthcare / Optum, Availity Essentials, Experian Health, TriZetto Provider Solutions.
+          </div>
+        </div>
+
+        <!-- Layer 3 -->
+        <div class="tech-layer-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 0.75rem; font-weight: 700; color: #38BDF8; background: rgba(56, 189, 248, 0.12); padding: 4px 10px; border-radius: 6px;">Layer 03</span>
+            <span style="font-size: 0.725rem; color: #34D399; font-weight: 700;">Intelligence Engine</span>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Autonomous AI &amp; Rules Engines</h3>
+          <p style="font-size: 0.825rem; color: #CBD5E1; line-height: 1.6; margin-bottom: 14px; flex-grow: 1;">
+            Automates cognitive billing tasks: algorithmic clean-claim scrubbing, predictive denial modeling, autonomous EDI 278 prior authorization, CAC clinical coding, and automated appeal generation.
+          </p>
+          <div style="background: rgba(10, 15, 29, 0.8); border: 1px solid rgba(56, 189, 248, 0.15); border-radius: 8px; padding: 12px; font-size: 0.75rem; color: #94A3B8;">
+            <strong style="color: #FFFFFF;">Evaluated Platforms:</strong> Nova Arc Autonomous Scrubber AI, 3M 360 Encompass, Olive AI / Waystar RPA, Nuance Dragon Medical, Banjo Health.
+          </div>
+        </div>
+
+        <!-- Layer 4 -->
+        <div class="tech-layer-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 0.75rem; font-weight: 700; color: #38BDF8; background: rgba(56, 189, 248, 0.12); padding: 4px 10px; border-radius: 6px;">Layer 04</span>
+            <span style="font-size: 0.725rem; color: #94A3B8;">Patient Financial Access</span>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Patient Engagement &amp; Omnichannel Payments</h3>
+          <p style="font-size: 0.825rem; color: #CBD5E1; line-height: 1.6; margin-bottom: 14px; flex-grow: 1;">
+            Patient-facing payment tools: SMS text-to-pay links, pre-service cost estimates, card-on-file tokenization, digital payment plans, and seamless credit balance refund disbursement portals.
+          </p>
+          <div style="background: rgba(10, 15, 29, 0.8); border: 1px solid rgba(56, 189, 248, 0.15); border-radius: 8px; padding: 12px; font-size: 0.75rem; color: #94A3B8;">
+            <strong style="color: #FFFFFF;">Evaluated Platforms:</strong> Cedar, Phreesia, Flywire, Salucro, Epic MyChart Billing, Simplee / Relatient, Rectangle Health.
+          </div>
+        </div>
+
+        <!-- Layer 5 -->
+        <div class="tech-layer-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 0.75rem; font-weight: 700; color: #38BDF8; background: rgba(56, 189, 248, 0.12); padding: 4px 10px; border-radius: 6px;">Layer 05</span>
+            <span style="font-size: 0.725rem; color: #94A3B8;">Executive Command</span>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Enterprise Analytics, Data Lake &amp; BI</h3>
+          <p style="font-size: 0.825rem; color: #CBD5E1; line-height: 1.6; margin-bottom: 14px; flex-grow: 1;">
+            Executive decision support: automated HFMA MAP tracking, denial root-cause clustering, payer contract variance alerts, and rolling 90-day cash flow predictive models.
+          </p>
+          <div style="background: rgba(10, 15, 29, 0.8); border: 1px solid rgba(56, 189, 248, 0.15); border-radius: 8px; padding: 12px; font-size: 0.75rem; color: #94A3B8;">
+            <strong style="color: #FFFFFF;">Evaluated Platforms:</strong> Snowflake, Tableau, Microsoft PowerBI, MedeAnalytics, Dimensional Insight, Epic Cogito / Caboodle.
+          </div>
+        </div>
+
+        <!-- Architecture Decision Matrix Callout -->
+        <div style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.2) 0%, rgba(15, 23, 42, 0.95) 100%); border: 1px solid #38BDF8; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-size: 0.75rem; font-weight: 700; color: #38BDF8; text-transform: uppercase; margin-bottom: 8px;">
+              Decision Matrix Framework
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 800; color: #FFFFFF; margin-bottom: 10px;">
+              Build vs. Buy vs. Bolt-On Guidance
+            </h3>
+            <p style="font-size: 0.825rem; color: #CBD5E1; line-height: 1.6; margin-bottom: 14px;">
+              Our evaluation delivers an unbiased roadmap: when to leverage native EHR modules (saving licensing fees), when to deploy specialized best-of-breed bolt-ons (for high ROI), and how to bridge gaps using modern FHIR APIs rather than brittle RPA screen-scraping bots.
+            </p>
+          </div>
+          <a href="../contact.html?service=rcm-workflow-audit" class="btn btn-primary btn-sm" style="width: 100%; text-align: center;">
+            Request Tech Stack Review &rarr;
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECTION 5: INTERACTIVE TOOL 2 - REVENUE LEAKAGE CALCULATOR
+       ======================================================================== -->
+  <section class="section" id="leakage-calculator" style="padding: 70px 0; background: rgba(10, 15, 29, 0.7); border-top: 1px solid rgba(56, 189, 248, 0.15); border-bottom: 1px solid rgba(56, 189, 248, 0.15);">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 48px auto;">
+        <span style="font-size: 0.8rem; font-weight: 700; color: #38BDF8; letter-spacing: 0.08em; text-transform: uppercase;">
+          Executive Financial Modeling &bull; Quantify the Opportunity
+        </span>
+        <h2 style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; color: #FFFFFF; margin-top: 8px;">
+          RCM Health Diagnostic &amp; Revenue Leakage Calculator
+        </h2>
+        <p style="font-size: 1rem; color: #94A3B8; line-height: 1.6; margin-top: 8px;">
+          Configure your organization's annual revenue and performance parameters below to estimate total uncaptured revenue leakage and working capital trapped in aging receivables.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 16px; padding: 32px; backdrop-filter: blur(12px);">
+        
+        <!-- Controls Column -->
+        <div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: 20px;">
+            1. Configure Clinical Organization Parameters
+          </h3>
+
+          <!-- Slider 1: Annual Net Patient Revenue -->
+          <div style="margin-bottom: 24px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <label for="slider-diag-npr" style="font-size: 0.85rem; font-weight: 600; color: #CBD5E1;">Annual Net Patient Revenue (NPR):</label>
+              <span id="val-diag-npr" style="font-size: 1.1rem; font-weight: 800; color: #38BDF8; font-family: monospace;">$85,000,000</span>
+            </div>
+            <input type="range" id="slider-diag-npr" class="calc-slider" min="5000000" max="500000000" step="5000000" value="85000000">
+            <span style="font-size: 0.725rem; color: #64748B;">Range: $5M specialty practice to $500M hospital system</span>
+          </div>
+
+          <!-- Slider 2: Current Days in A/R -->
+          <div style="margin-bottom: 24px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <label for="slider-diag-dar" style="font-size: 0.85rem; font-weight: 600; color: #CBD5E1;">Current Average Days in A/R:</label>
+              <span id="val-diag-dar" style="font-size: 1.1rem; font-weight: 800; color: #EF4444; font-family: monospace;">46.5 Days</span>
+            </div>
+            <input type="range" id="slider-diag-dar" class="calc-slider" min="24" max="65" step="0.5" value="46.5">
+            <span style="font-size: 0.725rem; color: #64748B;">National median = 44–48 days; Top-decile benchmark = &lt; 30 days</span>
+          </div>
+
+          <!-- Slider 3: Initial Denial Rate -->
+          <div style="margin-bottom: 24px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <label for="slider-diag-denial" style="font-size: 0.85rem; font-weight: 600; color: #CBD5E1;">Initial Claim Denial Rate:</label>
+              <span id="val-diag-denial" style="font-size: 1.1rem; font-weight: 800; color: #EF4444; font-family: monospace;">11.5%</span>
+            </div>
+            <input type="range" id="slider-diag-denial" class="calc-slider" min="3" max="18" step="0.5" value="11.5">
+            <span style="font-size: 0.725rem; color: #64748B;">Percentage of 837 claims initially rejected or denied on first 835</span>
+          </div>
+
+          <!-- Slider 4: Cost to Collect -->
+          <div style="margin-bottom: 12px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <label for="slider-diag-cost" style="font-size: 0.85rem; font-weight: 600; color: #CBD5E1;">RCM Cost to Collect (% of NPR):</label>
+              <span id="val-diag-cost" style="font-size: 1.1rem; font-weight: 800; color: #38BDF8; font-family: monospace;">4.8%</span>
+            </div>
+            <input type="range" id="slider-diag-cost" class="calc-slider" min="2.0" max="8.0" step="0.1" value="4.8">
+            <span style="font-size: 0.725rem; color: #64748B;">Includes internal billing staff, vendor fees &amp; software licenses</span>
+          </div>
+        </div>
+
+        <!-- Calculated Yield & Risk Column -->
+        <div style="background: rgba(10, 15, 29, 0.95); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 14px; padding: 26px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <span style="font-size: 0.75rem; font-weight: 700; color: #38BDF8; text-transform: uppercase; letter-spacing: 0.05em;">
+                Diagnostic Audit Projections
+              </span>
+              <span id="calc-health-grade" style="font-size: 0.85rem; font-weight: 800; padding: 4px 10px; border-radius: 6px; background: rgba(239, 68, 68, 0.15); color: #EF4444; border: 1px solid rgba(239, 68, 68, 0.3);">
+                Grade: C- (Substantial Friction)
+              </span>
+            </div>
+            <h4 style="font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin: 4px 0 16px 0;">
+              Estimated Revenue Opportunity
+            </h4>
+
+            <!-- Annual Leakage Recapturable -->
+            <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 10px; padding: 14px; margin-bottom: 12px;">
+              <div style="font-size: 0.75rem; color: #34D399; font-weight: 700; text-transform: uppercase;">
+                Annual Preventable Revenue Leakage
+              </div>
+              <div id="calc-leakage-total" style="font-size: 1.85rem; font-weight: 800; color: #34D399; font-family: monospace;">
+                +$3,145,000 / yr
+              </div>
+              <span style="font-size: 0.725rem; color: #A7F3D0;">Recaptured through root-cause denial fix &amp; underpayment audit</span>
+            </div>
+
+            <!-- Trapped Working Capital -->
+            <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(56, 189, 248, 0.15); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.8rem; color: #94A3B8;">Working Capital Trapped in A/R:</span>
+                <span id="calc-trapped-cash" style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; font-family: monospace;">$3,842,000</span>
+              </div>
+              <div style="font-size: 0.725rem; color: #64748B; margin-top: 2px;">Cash released upon compressing A/R cycle down to 30 days</div>
+            </div>
+
+            <!-- Tech & Cost-to-Collect Optimization -->
+            <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(56, 189, 248, 0.15); border-radius: 10px; padding: 12px 14px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.8rem; color: #94A3B8;">Potential Cost-to-Collect Savings:</span>
+                <span id="calc-tech-savings" style="font-size: 1.05rem; font-weight: 700; color: #38BDF8; font-family: monospace;">$850,000 / yr</span>
+              </div>
+              <div style="font-size: 0.725rem; color: #64748B; margin-top: 2px;">Achieved via tech stack consolidation &amp; automation</div>
+            </div>
+          </div>
+
+          <div style="margin-top: 18px;">
+            <a href="../contact.html?service=rcm-workflow-audit" class="btn btn-primary" style="width: 100%; text-align: center; display: block; font-weight: 700;">
+              Schedule 14-Day Diagnostic Audit &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECTION 6: CROSS-SECTOR PROOF POINTS
+       ======================================================================== -->
+  <section class="section" style="padding: 70px 0;">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 52px auto;">
+        <span style="font-size: 0.8rem; font-weight: 700; color: #38BDF8; letter-spacing: 0.08em; text-transform: uppercase;">
+          Cross-Sector Proof Points &bull; Health Systems, ASCs &amp; Practices
+        </span>
+        <h2 style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; color: #FFFFFF; margin-top: 8px;">
+          Proven Audit Results Across Diverse Healthcare Settings
+        </h2>
+        <p style="font-size: 1rem; color: #94A3B8; line-height: 1.6; margin-top: 10px;">
+          Our diagnostic methodology is sector-agnostic because revenue cycle mathematics apply universally. Examine how different healthcare sectors leveraged our workflow audit and tech recommendations.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+        
+        <!-- Setting 1 -->
+        <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 14px; padding: 26px;">
+          <span style="font-size: 0.75rem; font-weight: 700; color: #38BDF8; text-transform: uppercase;">Health Systems</span>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin: 6px 0 10px 0;">5-Hospital Regional Network ($720M NPR)</h3>
+          <p style="font-size: 0.825rem; color: #CBD5E1; line-height: 1.6; margin-bottom: 14px;">
+            <strong>Audit Finding:</strong> A 14-day diagnostic identified that surgical implant charges (HCPCS C-codes) were failing to cross the charge interface from OR supply tracking into Epic Resolute, creating $8.4M in unbilled Discharged Not Final Billed (DNFB) leakage.
+          </p>
+          <div style="background: rgba(16, 185, 129, 0.1); border-left: 3px solid #10B981; padding: 8px 12px; font-size: 0.775rem; color: #A7F3D0; font-weight: 600;">
+            Outcome: Reclaimed $8.4M in unbilled revenue; compressed DAR from 56.4 to 32.1 days.
+          </div>
+        </div>
+
+        <!-- Setting 2 -->
+        <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 14px; padding: 26px;">
+          <span style="font-size: 0.75rem; font-weight: 700; color: #38BDF8; text-transform: uppercase;">Ambulatory Surgery Centers</span>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin: 6px 0 10px 0;">Multi-Site ASC Network (14 Operating Rooms)</h3>
+          <p style="font-size: 0.825rem; color: #CBD5E1; line-height: 1.6; margin-bottom: 14px;">
+            <strong>Audit Finding:</strong> Tech stack review revealed the ASC was paying $18,000/mo for three disconnected bolt-on scrubbing and eligibility tools. Clearinghouse edits were misaligned with commercial surgical bundling rules, causing a 16.4% first-pass denial rate.
+          </p>
+          <div style="background: rgba(16, 185, 129, 0.1); border-left: 3px solid #10B981; padding: 8px 12px; font-size: 0.775rem; color: #A7F3D0; font-weight: 600;">
+            Outcome: Replaced bolt-ons with native rules engine; clean claims jumped to 99.4%; saved $216K/yr in fees.
+          </div>
+        </div>
+
+        <!-- Setting 3 -->
+        <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 14px; padding: 26px;">
+          <span style="font-size: 0.75rem; font-weight: 700; color: #38BDF8; text-transform: uppercase;">Specialty Practice Networks</span>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin: 6px 0 10px 0;">48-Physician Cardiology Network</h3>
+          <p style="font-size: 0.825rem; color: #CBD5E1; line-height: 1.6; margin-bottom: 14px;">
+            <strong>Audit Finding:</strong> KPI benchmarking against MGMA top-decile cardiology practices revealed systematic CARC 97 bundling denials on same-day E/M visits with diagnostic ultrasounds (CPT 93306), due to omitted Modifier 25 documentation.
+          </p>
+          <div style="background: rgba(16, 185, 129, 0.1); border-left: 3px solid #10B981; padding: 8px 12px; font-size: 0.775rem; color: #A7F3D0; font-weight: 600;">
+            Outcome: Implemented automated CDI documentation template; recovered $1.2M in annual bundled revenue.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECTION 7: EXECUTIVE FAQ ACCORDION
+       ======================================================================== -->
+  <section class="section" id="faq" style="padding: 70px 0; background: rgba(10, 15, 29, 0.7); border-top: 1px solid rgba(56, 189, 248, 0.15); border-bottom: 1px solid rgba(56, 189, 248, 0.15);">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 48px auto;">
+        <span style="font-size: 0.8rem; font-weight: 700; color: #38BDF8; letter-spacing: 0.08em; text-transform: uppercase;">
+          Methodology Clarity &bull; Executive Answers
+        </span>
+        <h2 style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; color: #FFFFFF; margin-top: 8px;">
+          Frequently Asked Questions on RCM Audits &amp; Tech Advisory
+        </h2>
+      </div>
+
+      <div style="max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px;">
+        
+        <!-- FAQ 1 -->
+        <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 12px; overflow: hidden;">
+          <button type="button" class="service-accordion-header" style="width: 100%; padding: 18px 24px; text-align: left; background: none; border: none; color: #FFFFFF; font-size: 0.95rem; font-weight: 700; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+            <span>What data files and system access are required to perform an RCM workflow audit?</span>
+            <span style="color: #38BDF8; font-size: 1.2rem;">+</span>
+          </button>
+          <div class="service-accordion-body" style="display: none; padding: 0 24px 20px 24px; color: #CBD5E1; font-size: 0.875rem; line-height: 1.6;">
+            We require standard electronic exports: trailing 12 to 24 months of ANSI X12 837 claim files, ANSI X12 835 Electronic Remittance Advice (ERA) files, current accounts receivable aged trial balance (ATB) reports broken down by aging buckets and financial class, and top 20 payer fee schedules. We do not require invasive system installations; data is transmitted via encrypted SFTP under an executed Business Associate Agreement (BAA).
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 12px; overflow: hidden;">
+          <button type="button" class="service-accordion-header" style="width: 100%; padding: 18px 24px; text-align: left; background: none; border: none; color: #FFFFFF; font-size: 0.95rem; font-weight: 700; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+            <span>How does Nova Arc protect Protected Health Information (PHI) during an audit?</span>
+            <span style="color: #38BDF8; font-size: 1.2rem;">+</span>
+          </button>
+          <div class="service-accordion-body" style="display: none; padding: 0 24px 20px 24px; color: #CBD5E1; font-size: 0.875rem; line-height: 1.6;">
+            Nova Arc is fully HIPAA and HITECH compliant and SOC 2 Type II certified. Prior to receiving any data, we execute a mutual Non-Disclosure Agreement (NDA) and an enterprise Business Associate Agreement (BAA). All data transfers take place over TLS 1.3 encrypted connections and are stored in SOC 2 Type II certified, AES-256 encrypted isolated data vaults. Data is purged following project delivery according to contractual data retention schedules.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 12px; overflow: hidden;">
+          <button type="button" class="service-accordion-header" style="width: 100%; padding: 18px 24px; text-align: left; background: none; border: none; color: #FFFFFF; font-size: 0.95rem; font-weight: 700; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+            <span>How are MGMA and HFMA MAP benchmarks normalized across different clinical specialties?</span>
+            <span style="color: #38BDF8; font-size: 1.2rem;">+</span>
+          </button>
+          <div class="service-accordion-body" style="display: none; padding: 0 24px 20px 24px; color: #CBD5E1; font-size: 0.875rem; line-height: 1.6;">
+            Benchmarking must account for specialty acuity and payer mix. For example, orthopedic surgery and cardiology have higher surgical implant costs and longer pre-authorization lead times than urgent care or dermatology. Our benchmarking engine normalizes peer cohorts by clinical specialty, facility type (Inpatient Acute vs ASC vs Clinic), bed size, and payer distribution (Medicare/Medicaid vs Commercial managed care) to ensure apples-to-apples comparisons.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 12px; overflow: hidden;">
+          <button type="button" class="service-accordion-header" style="width: 100%; padding: 18px 24px; text-align: left; background: none; border: none; color: #FFFFFF; font-size: 0.95rem; font-weight: 700; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+            <span>Is Nova Arc's technology stack recommendation vendor-neutral?</span>
+            <span style="color: #38BDF8; font-size: 1.2rem;">+</span>
+          </button>
+          <div class="service-accordion-body" style="display: none; padding: 0 24px 20px 24px; color: #CBD5E1; font-size: 0.875rem; line-height: 1.6;">
+            Yes, 100%. Nova Arc accepts zero referral fees, commissions, or reseller kickbacks from EHR vendors, clearinghouses, or payment software companies. Our technology evaluations are strictly objective, designed to maximize your return on existing investments, eliminate redundant licensing, and ensure seamless interoperability.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 12px; overflow: hidden;">
+          <button type="button" class="service-accordion-header" style="width: 100%; padding: 18px 24px; text-align: left; background: none; border: none; color: #FFFFFF; font-size: 0.95rem; font-weight: 700; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+            <span>How long does an operational workflow audit take from kickoff to executive presentation?</span>
+            <span style="color: #38BDF8; font-size: 1.2rem;">+</span>
+          </button>
+          <div class="service-accordion-body" style="display: none; padding: 0 24px 20px 24px; color: #CBD5E1; font-size: 0.875rem; line-height: 1.6;">
+            Our standard diagnostic audit takes exactly <strong>14 calendar days</strong> from the date electronic data files are received. Days 1–3 focus on automated data parsing and baseline validation; Days 4–7 involve workflow shadowing and staff interviews; Days 8–10 synthesize friction mapping and leakage quantification; and Days 11–14 conclude with executive C-suite delivery.
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 12px; overflow: hidden;">
+          <button type="button" class="service-accordion-header" style="width: 100%; padding: 18px 24px; text-align: left; background: none; border: none; color: #FFFFFF; font-size: 0.95rem; font-weight: 700; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+            <span>Can our internal team implement the audit recommendations, or must we hire Nova Arc?</span>
+            <span style="color: #38BDF8; font-size: 1.2rem;">+</span>
+          </button>
+          <div class="service-accordion-body" style="display: none; padding: 0 24px 20px 24px; color: #CBD5E1; font-size: 0.875rem; line-height: 1.6;">
+            The final audit deliverable is 100% yours to keep and execute as you see fit. We provide step-by-step SOPs, configuration specifications for your existing EHR, and clear guidance that your internal billing leadership can implement independently. Many organizations choose to execute quick-hits internally, while partnering with Nova Arc for specialized modules such as aged A/R recovery, complex coding pods, or full-cycle single-SLA management.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECTION 8: BOTTOM CTA STRIP
+       ======================================================================== -->
+  <section class="section" style="padding-top: 0; padding-bottom: 70px;">
+    <div class="container">
+      <div class="solutions-cta-strip">
+        <h2 class="cta-strip-title">Pinpoint Revenue Friction with a 14-Day Diagnostic Audit</h2>
+        <p class="cta-strip-desc">
+          Schedule a confidential scoping call with our senior revenue cycle architects. We will define data extraction protocols, establish timeline deliverables, and show you how national peer benchmarking can transform your cash collections.
+        </p>
+        <div class="cta-strip-buttons">
+          <a href="../contact.html?service=rcm-workflow-audit" class="btn btn-primary">
+            Schedule 14-Day Diagnostic Audit
+          </a>
+          <a href="tel:18005556682" class="btn btn-outline-white">
+            Call (800) 555-NOVA
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      
+      <!-- Col 1: Brand & Overview -->
+      <div class="footer-col footer-col-brand">
+        <a href="../index.html" class="logo" aria-label="Nova Arc Homepage">
+          <span class="logo-mark">
+            <svg width="24" height="24" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="16" r="14" stroke="url(#f-logo-grad)" stroke-width="2.5" />
+              <path d="M10 20 L16 8 L22 20 Z" fill="url(#f-logo-grad)" opacity="0.85" />
+              <circle cx="16" cy="19" r="2.5" fill="#38BDF8" />
+              <defs>
+                <linearGradient id="f-logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#38BDF8" />
+                  <stop offset="100%" stop-color="#0284C7" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="logo-text">Nova<span class="logo-accent">Arc</span></span>
+        </a>
+        <p class="footer-tagline">
+          Enterprise revenue cycle diagnostics, HFMA/MGMA KPI benchmarking, and vendor-neutral healthcare technology stack architecture for healthcare organizations nationwide.
+        </p>
+        <div style="font-size: 0.8rem; color: #94A3B8; margin-top: 12px;">
+          HIPAA &bull; SOC2 Type II &bull; HFMA MAP &amp; MGMA Survey Standards
+        </div>
+      </div>
+
+      <!-- Col 2: Solutions -->
+      <div>
+        <h4 class="footer-col-title">Solutions</h4>
+        <ul class="footer-links-list">
+          <li><a href="full-cycle-rcm.html" class="footer-link">Full-Cycle Enterprise RCM</a></li>
+          <li><a href="../solutions.html#analytics" class="footer-link">Revenue Analytics &amp; BI</a></li>
+          <li><a href="../solutions.html#denial-prevention" class="footer-link">Denial Prevention</a></li>
+          <li><a href="../solutions.html#patient-access" class="footer-link">Patient Access</a></li>
+          <li><a href="../solutions.html#coding" class="footer-link">HIM &amp; Coding</a></li>
+          <li><a href="../solutions.html#ebo" class="footer-link">Extended Business Office</a></li>
+          <li><a href="../ai-platform.html" class="footer-link">Nova Arc AI Platform</a></li>
+        </ul>
+      </div>
+
+        <!-- Col 3: Services -->
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="real-time-insurance-eligibility.html" class="footer-link">Insurance Eligibility &amp; Auth</a></li>
+            <li><a href="full-cycle-medical-coding.html" class="footer-link">Medical Coding &amp; CDI</a></li>
+            <li><a href="claims-management-scrubbing.html" class="footer-link">Claims Management &amp; Scrubbing</a></li>
+            <li><a href="denial-management.html" class="footer-link">Denial &amp; Appeals Recovery</a></li>
+            <li><a href="ar-management.html" class="footer-link">A/R Management &amp; Collections</a></li>
+            <li><a href="../services.html" class="footer-link" style="color: #38BDF8; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">Explore All 24+ Services &rarr;</a></li>
+          </ul>
+        </div>
+
+              <!-- Col 4: Who We Serve & Contact -->
+      <div>
+        <h4 class="footer-col-title">Who We Serve</h4>
+        <ul class="footer-links-list">
+          <li><a href="../who-we-serve.html" class="footer-link">Health Systems &amp; Hospitals</a></li>
+          <li><a href="../who-we-serve.html#physician-groups" class="footer-link">Hospital-Based Medical Groups</a></li>
+          <li><a href="../who-we-serve.html#asc" class="footer-link">Ambulatory Surgery Centers</a></li>
+          <li><a href="../who-we-serve.html#specialty" class="footer-link">Specialty Practice Networks</a></li>
+          <li><a href="../contact.html" class="footer-link">Contact &amp; Discovery Call</a></li>
+        </ul>
+        <div style="margin-top: 20px;">
+          <h4 class="footer-col-title" style="margin-bottom: 8px;">Direct Support</h4>
+          <p style="font-size: 0.85rem; color: #94A3B8; margin: 0;">(800) 555-NOVA</p>
+          <p style="font-size: 0.85rem; color: #94A3B8; margin: 4px 0 0 0;">solutions@novaarc-rcm.com</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Sub-Footer -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="copyright-text">
+          &copy; 2026 Nova Arc Healthcare Technologies LLC. All rights reserved. Transforming healthcare revenue architecture.
+        </p>
+        <div class="footer-legal-links">
+          <a href="../index.html" class="legal-link">Privacy Policy</a>
+          <a href="../index.html" class="legal-link">Terms of Service</a>
+          <a href="../index.html" class="legal-link">Security Overview</a>
+          <a href="../index.html" class="legal-link">Compliance (HIPAA)</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ========================================================================
+       PAGE SCRIPTS: Benchmarking Matrix, Calculator & Accordion
+       ======================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Mobile Menu Toggle
+      const mobileToggle = document.getElementById('mobile-menu-toggle');
+      const mobileNav = document.getElementById('mobile-nav');
+      if (mobileToggle && mobileNav) {
+        mobileToggle.addEventListener('click', () => {
+          const isOpen = mobileNav.classList.toggle('open');
+          mobileToggle.classList.toggle('open');
+          mobileToggle.setAttribute('aria-expanded', isOpen);
+          mobileNav.setAttribute('aria-hidden', !isOpen);
+        });
+      }
+
+      // ======================================================================
+      // 1. KPI BENCHMARKING MATRIX (SECTOR-AGNOSTIC DATA)
+      // ======================================================================
+      const sectorBenchmarks = {
+        health_systems: {
+          name: "Health Systems & Inpatient Hospital Networks",
+          sampleSize: "Benchmark Source: HFMA MAP Keys • Peer Sample: 420+ Enterprise Health Systems",
+          rows: [
+            { kpi: "Net Collection Ratio (NCR)", p25: "93.4%", p50: "95.2%", p75: "97.1%", top: "≥ 98.6%" },
+            { kpi: "Days in A/R (DAR)", p25: "54.2 Days", p50: "48.6 Days", p75: "38.4 Days", top: "≤ 29.4 Days" },
+            { kpi: "Aged A/R > 90 Days (% of Ledger)", p25: "26.8%", p50: "22.4%", p75: "16.2%", top: "≤ 11.5%" },
+            { kpi: "First-Pass Clean Claim Rate", p25: "74.8%", p50: "81.2%", p75: "89.5%", top: "≥ 99.2%" },
+            { kpi: "Initial Claim Denial Rate", p25: "14.6%", p50: "11.2%", p75: "7.8%", top: "≤ 4.8%" },
+            { kpi: "Denial Write-Off (% of NPR)", p25: "3.4%", p50: "2.1%", p75: "1.2%", top: "≤ 0.4%" },
+            { kpi: "Cost to Collect (% of NPR)", p25: "4.8%", p50: "3.9%", p75: "3.1%", top: "≤ 2.4%" },
+            { kpi: "Discharged Not Final Billed (DNFB)", p25: "7.8 Days", p50: "5.4 Days", p75: "4.1 Days", top: "≤ 2.8 Days" }
+          ]
+        },
+        asc: {
+          name: "Ambulatory Surgery Centers (ASCs)",
+          sampleSize: "Benchmark Source: ASCA & MGMA Surgical Benchmarks • Peer Sample: 310+ ASC Facilities",
+          rows: [
+            { kpi: "Net Collection Ratio (NCR)", p25: "94.1%", p50: "96.4%", p75: "98.2%", top: "≥ 99.1%" },
+            { kpi: "Days in A/R (DAR)", p25: "44.6 Days", p50: "36.8 Days", p75: "31.2 Days", top: "≤ 24.6 Days" },
+            { kpi: "Aged A/R > 90 Days (% of Ledger)", p25: "21.4%", p50: "16.8%", p75: "12.4%", top: "≤ 8.2%" },
+            { kpi: "First-Pass Clean Claim Rate", p25: "79.2%", p50: "86.4%", p75: "93.1%", top: "≥ 99.4%" },
+            { kpi: "Initial Claim Denial Rate", p25: "12.8%", p50: "8.9%", p75: "5.4%", top: "≤ 3.2%" },
+            { kpi: "Denial Write-Off (% of NPR)", p25: "2.8%", p50: "1.6%", p75: "0.8%", top: "≤ 0.25%" },
+            { kpi: "Cost to Collect (% of NPR)", p25: "4.2%", p50: "3.4%", p75: "2.7%", top: "≤ 2.1%" },
+            { kpi: "Discharged Not Final Billed (DNFB)", p25: "4.6 Days", p50: "3.2 Days", p75: "2.1 Days", top: "≤ 1.4 Days" }
+          ]
+        },
+        physician_groups: {
+          name: "Physician Groups & Specialty Practices",
+          sampleSize: "Benchmark Source: MGMA Cost & Revenue Survey • Peer Sample: 1,850+ Medical Groups",
+          rows: [
+            { kpi: "Net Collection Ratio (NCR)", p25: "92.8%", p50: "94.8%", p75: "96.8%", top: "≥ 98.4%" },
+            { kpi: "Days in A/R (DAR)", p25: "49.8 Days", p50: "41.5 Days", p75: "34.2 Days", top: "≤ 27.8 Days" },
+            { kpi: "Aged A/R > 90 Days (% of Ledger)", p25: "24.2%", p50: "18.6%", p75: "13.8%", top: "≤ 9.8%" },
+            { kpi: "First-Pass Clean Claim Rate", p25: "77.5%", p50: "84.2%", p75: "91.8%", top: "≥ 99.1%" },
+            { kpi: "Initial Claim Denial Rate", p25: "13.4%", p50: "9.8%", p75: "6.2%", top: "≤ 3.8%" },
+            { kpi: "Denial Write-Off (% of NPR)", p25: "3.1%", p50: "1.9%", p75: "1.0%", top: "≤ 0.35%" },
+            { kpi: "Cost to Collect (% of NPR)", p25: "6.8%", p50: "5.4%", p75: "4.2%", top: "≤ 3.2%" },
+            { kpi: "Point-of-Service (POS) Collections", p25: "18.4%", p50: "31.2%", p75: "44.6%", top: "≥ 62.4%" }
+          ]
+        },
+        urgent_care: {
+          name: "Urgent Care & Multi-Clinic Networks",
+          sampleSize: "Benchmark Source: UCAOA & MGMA Ambulatory Benchmarks • Peer Sample: 540+ Urgent Care Clinics",
+          rows: [
+            { kpi: "Net Collection Ratio (NCR)", p25: "91.5%", p50: "94.1%", p75: "96.5%", top: "≥ 98.2%" },
+            { kpi: "Days in A/R (DAR)", p25: "42.1 Days", p50: "34.5 Days", p75: "28.4 Days", top: "≤ 21.8 Days" },
+            { kpi: "Aged A/R > 90 Days (% of Ledger)", p25: "22.8%", p50: "15.9%", p75: "10.8%", top: "≤ 6.8%" },
+            { kpi: "First-Pass Clean Claim Rate", p25: "81.4%", p50: "88.6%", p75: "94.2%", top: "≥ 99.3%" },
+            { kpi: "Initial Claim Denial Rate", p25: "11.8%", p50: "8.2%", p75: "4.9%", top: "≤ 2.9%" },
+            { kpi: "Denial Write-Off (% of NPR)", p25: "2.6%", p50: "1.5%", p75: "0.7%", top: "≤ 0.2%" },
+            { kpi: "Cost to Collect (% of NPR)", p25: "5.4%", p50: "4.2%", p75: "3.4%", top: "≤ 2.6%" },
+            { kpi: "Point-of-Service (POS) Collections", p25: "38.2%", p50: "54.8%", p75: "68.4%", top: "≥ 82.5%" }
+          ]
+        }
+      };
+
+      const sectorTabBtns = document.querySelectorAll('.sector-tab-btn');
+      const sectorDisplayName = document.getElementById('sector-display-name');
+      const sectorSampleSize = document.getElementById('sector-sample-size');
+      const benchTableBody = document.getElementById('bench-table-body');
+
+      function renderSectorBenchmarks(sectorKey) {
+        const sec = sectorBenchmarks[sectorKey];
+        if (!sec) return;
+
+        sectorDisplayName.textContent = sec.name;
+        sectorSampleSize.textContent = sec.sampleSize;
+
+        benchTableBody.innerHTML = '';
+        sec.rows.forEach(r => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td><strong>${r.kpi}</strong></td>
+            <td style="color: #F87171; font-family: monospace;">${r.p25}</td>
+            <td style="color: #CBD5E1; font-family: monospace;">${r.p50}</td>
+            <td style="color: #93C5FD; font-family: monospace;">${r.p75}</td>
+            <td style="color: #34D399; font-weight: 800; font-family: monospace;">${r.top}</td>
+          `;
+          benchTableBody.appendChild(tr);
+        });
+      }
+
+      sectorTabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          sectorTabBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          renderSectorBenchmarks(btn.dataset.sector);
+        });
+      });
+
+      // Initial Benchmark Render
+      renderSectorBenchmarks('health_systems');
+
+
+      // ======================================================================
+      // 2. RCM HEALTH DIAGNOSTIC & LEAKAGE CALCULATOR
+      // ======================================================================
+      const sliderNpr = document.getElementById('slider-diag-npr');
+      const sliderDar = document.getElementById('slider-diag-dar');
+      const sliderDenial = document.getElementById('slider-diag-denial');
+      const sliderCost = document.getElementById('slider-diag-cost');
+
+      const valNpr = document.getElementById('val-diag-npr');
+      const valDar = document.getElementById('val-diag-dar');
+      const valDenial = document.getElementById('val-diag-denial');
+      const valCost = document.getElementById('val-diag-cost');
+
+      const calcHealthGrade = document.getElementById('calc-health-grade');
+      const calcLeakageTotal = document.getElementById('calc-leakage-total');
+      const calcTrappedCash = document.getElementById('calc-trapped-cash');
+      const calcTechSavings = document.getElementById('calc-tech-savings');
+
+      function recalculateDiagnostic() {
+        const npr = parseInt(sliderNpr.value, 10);
+        const dar = parseFloat(sliderDar.value);
+        const denial = parseFloat(sliderDenial.value);
+        const cost = parseFloat(sliderCost.value);
+
+        // Update Labels
+        valNpr.textContent = `$${(npr).toLocaleString()}`;
+        valDar.textContent = `${dar.toFixed(1)} Days`;
+        valDenial.textContent = `${denial.toFixed(1)}%`;
+        valCost.textContent = `${cost.toFixed(1)}%`;
+
+        // 1. Annual Preventable Revenue Leakage:
+        // Difference between current denial rate and top-decile 4.0%
+        const avoidableDenialPct = Math.max(0, (denial - 4.0) / 100);
+        // Average 32% of avoidable denials turn into unrecovered write-offs
+        const denialLeakage = npr * (avoidableDenialPct * 0.32);
+        // Underpayment variance leakage ~1.2% of NPR
+        const varianceLeakage = npr * 0.012;
+        const totalLeakage = Math.round(denialLeakage + varianceLeakage);
+
+        // 2. Trapped Working Capital:
+        // Cash tied up between current DAR and 30.0 days
+        const excessDays = Math.max(0, dar - 30.0);
+        const dailyRevenue = npr / 365;
+        const trappedCash = Math.round(dailyRevenue * excessDays);
+
+        // 3. Cost to Collect Optimization:
+        // Difference between current cost-to-collect and 2.8% benchmark
+        const excessCostPct = Math.max(0, (cost - 2.8) / 100);
+        const techSavings = Math.round(npr * excessCostPct);
+
+        // 4. RCM Health Grade
+        let grade = "A (Top Decile)";
+        let gradeBg = "rgba(16, 185, 129, 0.15)";
+        let gradeColor = "#34D399";
+        let gradeBorder = "rgba(16, 185, 129, 0.35)";
+
+        const frictionScore = (dar - 30) + (denial - 4) * 2 + (cost - 3) * 3;
+        if (frictionScore > 35) {
+          grade = "Grade: F (Critical Distress)";
+          gradeBg = "rgba(239, 68, 68, 0.2)";
+          gradeColor = "#EF4444";
+          gradeBorder = "rgba(239, 68, 68, 0.4)";
+        } else if (frictionScore > 24) {
+          grade = "Grade: D (High Leakage)";
+          gradeBg = "rgba(239, 68, 68, 0.15)";
+          gradeColor = "#F87171";
+          gradeBorder = "rgba(239, 68, 68, 0.3)";
+        } else if (frictionScore > 14) {
+          grade = "Grade: C (Moderate Friction)";
+          gradeBg = "rgba(245, 158, 11, 0.15)";
+          gradeColor = "#FBBF24";
+          gradeBorder = "rgba(245, 158, 11, 0.3)";
+        } else if (frictionScore > 5) {
+          grade = "Grade: B (Average Performance)";
+          gradeBg = "rgba(56, 189, 248, 0.15)";
+          gradeColor = "#38BDF8";
+          gradeBorder = "rgba(56, 189, 248, 0.3)";
+        }
+
+        calcHealthGrade.textContent = grade;
+        calcHealthGrade.style.background = gradeBg;
+        calcHealthGrade.style.color = gradeColor;
+        calcHealthGrade.style.borderColor = gradeBorder;
+
+        calcLeakageTotal.textContent = `+$${totalLeakage.toLocaleString()} / yr`;
+        calcTrappedCash.textContent = `$${trappedCash.toLocaleString()}`;
+        calcTechSavings.textContent = `$${techSavings.toLocaleString()} / yr`;
+      }
+
+      sliderNpr.addEventListener('input', recalculateDiagnostic);
+      sliderDar.addEventListener('input', recalculateDiagnostic);
+      sliderDenial.addEventListener('input', recalculateDiagnostic);
+      sliderCost.addEventListener('input', recalculateDiagnostic);
+
+      recalculateDiagnostic();
+
+
+      // ======================================================================
+      // 3. EXECUTIVE FAQ ACCORDION
+      // ======================================================================
+      const accordionHeaders = document.querySelectorAll('.service-accordion-header');
+      accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+          const body = header.nextElementSibling;
+          const isExpanded = header.getAttribute('aria-expanded') === 'true';
+          const indicator = header.querySelector('span:last-child');
+
+          // Close all other FAQs
+          accordionHeaders.forEach(otherHeader => {
+            if (otherHeader !== header) {
+              otherHeader.setAttribute('aria-expanded', 'false');
+              if (otherHeader.nextElementSibling) {
+                otherHeader.nextElementSibling.style.display = 'none';
+              }
+              const otherInd = otherHeader.querySelector('span:last-child');
+              if (otherInd) otherInd.textContent = '+';
+            }
+          });
+
+          // Toggle current
+          if (isExpanded) {
+            header.setAttribute('aria-expanded', 'false');
+            if (body) body.style.display = 'none';
+            if (indicator) indicator.textContent = '+';
+          } else {
+            header.setAttribute('aria-expanded', 'true');
+            if (body) body.style.display = 'block';
+            if (indicator) indicator.textContent = '−';
+          }
+        });
+      });
+
+    });
+  </script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

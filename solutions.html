@@ -44,7 +44,7 @@
   <!-- ========================================================================
        STICKY NAVBAR (Reused from Homepage)
        ======================================================================== -->
-  <header class="site-header" id="top">
+      <header class="site-header" id="top">
     <div class="container navbar">
       <!-- Brand Logo -->
       <a href="index.html" class="logo" aria-label="Nova Arc Homepage">
@@ -55,8 +55,172 @@
       <!-- Desktop Navigation Menu -->
       <nav class="desktop-nav" aria-label="Main Navigation">
         <ul class="nav-menu">
-          <li><a href="solutions.html" class="nav-link" style="color: var(--blue-accent); font-weight: 700;">Solutions</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+          
+          <!-- Services Dropdown (Mega-Menu) -->
+          <li class="nav-item-dropdown">
+            <button class="nav-link nav-dropdown-toggle " id="servicesDropdownToggle" aria-haspopup="true" aria-expanded="false" aria-controls="servicesMegaMenu">
+              <span>Services</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+
+            <!-- Mega-Menu Light Panel -->
+            <div class="mega-menu-panel" id="servicesMegaMenu" role="menu" aria-labelledby="servicesDropdownToggle" aria-hidden="true">
+              <div class="mega-menu-inner container">
+                <div class="mega-menu-grid">
+                  <!-- Column 1: Patient Access & Front-End Integrity -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-1-heading">Patient Access &amp; Front-End Integrity</h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-1-heading">
+                      <li role="none">
+                        <a href="services/real-time-insurance-eligibility.html" class="mega-item standalone" role="menuitem">
+                          Insurance Eligibility &amp; Benefits Verification
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/prior-authorization-management.html" class="mega-item standalone" role="menuitem">
+                          Prior Authorization Management
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/patient-registration-verification.html" class="mega-item standalone" role="menuitem">
+                          Patient Scheduling &amp; Registration QA
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/financial-clearance-gfe.html" class="mega-item standalone" role="menuitem">
+                          Financial Clearance &amp; Good Faith Estimates
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/point-of-service-collections.html" class="mega-item standalone" role="menuitem">
+                          Point-of-Service Collections
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/referral-order-management.html" class="mega-item standalone" role="menuitem">
+                          Medical Necessity &amp; Order Verification
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Column 2: HIM & Coding -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-2-heading">HIM &amp; Coding</h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-2-heading">
+                      <!-- Parent Item: Medical Coding Services -->
+                      <li role="none" class="mega-parent-group">
+                        <a href="services/full-cycle-medical-coding.html" class="mega-item parent" role="menuitem">
+                          Medical Coding Services
+                        </a>
+                        <ul class="mega-sub-list" role="none">
+                          <li role="none">
+                            <a href="services/hcc-risk-adjustment.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Risk Adjustment/HCC Coding
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a href="services/full-cycle-medical-coding.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Facility/DRG Coding
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a href="services/full-cycle-medical-coding.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Professional Fee Coding
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li role="none">
+                        <a href="services/cdi-chart-auditing.html" class="mega-item standalone" role="menuitem">
+                          Clinical Documentation Improvement
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/cac-review.html" class="mega-item standalone" role="menuitem">
+                          Computer-Assisted Coding (CAC) Review
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/compliance-audit-defense.html" class="mega-item standalone" role="menuitem">
+                          Coding Compliance &amp; Audit Support
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/cdm-charge-capture.html" class="mega-item standalone" role="menuitem">
+                          Charge Capture &amp; CDM Audit
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/physician-query-management.html" class="mega-item standalone" role="menuitem">
+                          Physician Query Management
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Column 3: Patient Financial Services (PFS) & Recovery -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-3-heading">Patient Financial Services &amp; Recovery</h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-3-heading">
+                      <!-- Parent Item: Claims Management Services -->
+                      <li role="none" class="mega-parent-group">
+                        <a href="services/claims-management-scrubbing.html" class="mega-item parent" role="menuitem">
+                          Claims Management Services
+                        </a>
+                        <ul class="mega-sub-list" role="none">
+                          <li role="none">
+                            <a href="services/claims-management-scrubbing.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Claims Submission &amp; Scrubbing EDI 837
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a href="services/payment-posting-reconciliation.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Payment Posting &amp; Reconciliation EDI 835
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li role="none">
+                        <a href="services/ar-management.html" class="mega-item standalone" role="menuitem">
+                          A/R Management Services
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/denial-management.html" class="mega-item standalone" role="menuitem">
+                          Denial Management &amp; Appeals
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/payer-contract-modeling.html" class="mega-item standalone" role="menuitem">
+                          Underpayment Recovery &amp; Contract Compliance
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/patient-billing-collections.html" class="mega-item standalone" role="menuitem">
+                          Patient Billing &amp; Self-Pay Collections
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/credit-balance-resolution.html" class="mega-item standalone" role="menuitem">
+                          Credit Balance &amp; Refund Management
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="services/edi-enrollment.html" class="mega-item standalone" role="menuitem">
+                          EDI Enrollment Services
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
           <li>
             <a href="ai-platform.html" class="nav-link has-badge">
               Nova Arc AI Platform
@@ -92,8 +256,51 @@
     <!-- Mobile Drawer Menu -->
     <div class="mobile-nav-drawer" id="mobileDrawer">
       <ul class="mobile-nav-list">
-        <li><a href="solutions.html" class="mobile-nav-link" style="color: var(--blue-accent); font-weight: 700;">Solutions <span>&rarr;</span></a></li>
-        <li><a href="services.html" class="mobile-nav-link">Services <span>&rarr;</span></a></li>
+        <li><a href="solutions.html" class="mobile-nav-link">Solutions <span>&rarr;</span></a></li>
+        <li class="mobile-accordion-item">
+          <button class="mobile-nav-link mobile-accordion-toggle" id="mobileServicesToggle" aria-expanded="false" aria-controls="mobileServicesSubmenu">
+            <span>Services</span>
+            <svg class="mobile-accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="mobile-submenu-collapse" id="mobileServicesSubmenu" aria-hidden="true">
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title">Patient Access &amp; Front-End</h4>
+              <a href="services/real-time-insurance-eligibility.html" class="mobile-submenu-link">Insurance Eligibility &amp; Benefits</a>
+              <a href="services/prior-authorization-management.html" class="mobile-submenu-link">Prior Authorization Management</a>
+              <a href="services/patient-registration-verification.html" class="mobile-submenu-link">Patient Scheduling &amp; Registration QA</a>
+              <a href="services/financial-clearance-gfe.html" class="mobile-submenu-link">Financial Clearance &amp; Good Faith Estimates</a>
+              <a href="services/point-of-service-collections.html" class="mobile-submenu-link">Point-of-Service Collections</a>
+              <a href="services/referral-order-management.html" class="mobile-submenu-link">Medical Necessity &amp; Order Verification</a>
+            </div>
+
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title">HIM &amp; Coding</h4>
+              <a href="services/full-cycle-medical-coding.html" class="mobile-submenu-link parent">Medical Coding Services</a>
+              <a href="services/hcc-risk-adjustment.html" class="mobile-submenu-sublink">&rsaquo; Risk Adjustment/HCC Coding</a>
+              <a href="services/full-cycle-medical-coding.html" class="mobile-submenu-sublink">&rsaquo; Facility/DRG &amp; ProFee Coding</a>
+              <a href="services/cdi-chart-auditing.html" class="mobile-submenu-link">Clinical Documentation Improvement</a>
+              <a href="services/cac-review.html" class="mobile-submenu-link">Computer-Assisted Coding (CAC) Review</a>
+              <a href="services/compliance-audit-defense.html" class="mobile-submenu-link">Coding Compliance &amp; Audit Support</a>
+              <a href="services/cdm-charge-capture.html" class="mobile-submenu-link">Charge Capture &amp; CDM Audit</a>
+              <a href="services/physician-query-management.html" class="mobile-submenu-link">Physician Query Management</a>
+            </div>
+
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title">Patient Financial Services &amp; Recovery</h4>
+              <a href="services/claims-management-scrubbing.html" class="mobile-submenu-link parent">Claims Management Services</a>
+              <a href="services/claims-management-scrubbing.html" class="mobile-submenu-sublink">&rsaquo; Claims Submission &amp; Scrubbing EDI 837</a>
+              <a href="services/payment-posting-reconciliation.html" class="mobile-submenu-sublink">&rsaquo; Payment Posting &amp; Reconciliation EDI 835</a>
+              <a href="services/ar-management.html" class="mobile-submenu-link">A/R Management Services</a>
+              <a href="services/denial-management.html" class="mobile-submenu-link">Denial Management &amp; Appeals</a>
+              <a href="services/payer-contract-modeling.html" class="mobile-submenu-link">Underpayment Recovery &amp; Contract Compliance</a>
+              <a href="services/patient-billing-collections.html" class="mobile-submenu-link">Patient Billing &amp; Self-Pay Collections</a>
+              <a href="services/credit-balance-resolution.html" class="mobile-submenu-link">Credit Balance &amp; Refund Management</a>
+              <a href="services/edi-enrollment.html" class="mobile-submenu-link">EDI Enrollment Services</a>
+            </div>
+          </div>
+        </li>
         <li><a href="ai-platform.html" class="mobile-nav-link">Nova Arc AI Platform <span class="nav-badge">New</span></a></li>
         <li><a href="who-we-serve.html" class="mobile-nav-link">Who We Serve <span>&rarr;</span></a></li>
         <li><a href="contact.html" class="mobile-nav-link">Contact <span>&rarr;</span></a></li>
@@ -136,6 +343,113 @@
   <section class="section" id="solutions-areas">
     <div class="container">
       <div class="solutions-showcase-list">
+
+        <!-- ------------------------------------------------------------------
+             FLAGSHIP ENTERPRISE SOLUTION: END-TO-END FULL-CYCLE RCM (SINGLE SLA)
+             ------------------------------------------------------------------ -->
+        <article class="solution-showcase-row" id="end-to-end" style="border: 1px solid rgba(56, 189, 248, 0.4); background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(2, 132, 199, 0.12) 100%); border-radius: 18px; padding: 36px; margin-bottom: 48px; box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.7);">
+          <div class="showcase-text-col">
+            <span class="showcase-area-badge" style="background: rgba(56, 189, 248, 0.2); border-color: #38BDF8; color: #38BDF8;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Flagship Enterprise Solution &bull; Health Systems
+            </span>
+            <h2 class="showcase-heading" style="font-size: clamp(1.8rem, 2.8vw, 2.3rem);">End-to-End Full-Cycle RCM &amp; Front-to-Back Operations</h2>
+            <p class="showcase-desc">
+              Comprehensive <strong>front-to-back revenue cycle ownership</strong> unifying patient access, clinical coding, central billing office, and collections under a single master enterprise SLA. Designed specifically for multi-hospital health systems to permanently eliminate vendor handoffs, departmental silos, and finger-pointing.
+            </p>
+
+            <div class="showcase-highlights-grid">
+              <div class="showcase-highlight-card">
+                <div class="highlight-metric-val">98.6<span class="accent">%</span></div>
+                <div class="highlight-metric-label">Net Collections Ratio (NCR)</div>
+              </div>
+              <div class="showcase-highlight-card">
+                <div class="highlight-metric-val">29.4<span class="accent">d</span></div>
+                <div class="highlight-metric-label">Guaranteed Days in A/R</div>
+              </div>
+              <div class="showcase-highlight-card">
+                <div class="highlight-metric-val">99.2<span class="accent">%</span></div>
+                <div class="highlight-metric-label">First-Pass Clean Claim Rate</div>
+              </div>
+              <div class="showcase-highlight-card">
+                <div class="highlight-metric-val">20<span class="accent">%</span></div>
+                <div class="highlight-metric-label">Management Fee At-Risk Escrow</div>
+              </div>
+            </div>
+
+            <div class="showcase-actions">
+              <a href="services/full-cycle-rcm.html" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+                <span>Explore Full-Cycle Blueprint</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="contact.html?service=full-cycle-rcm" class="link-arrow" style="font-size: 0.9rem;">
+                Request Health System Assessment &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="showcase-visual-col">
+            <div class="showcase-preview-box" style="border-color: rgba(56, 189, 248, 0.4);">
+              <div class="preview-box-header">
+                <span style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF;">Front-to-Back RCM Architecture</span>
+                <span class="preview-badge-status" style="background: rgba(16, 185, 129, 0.2); color: #34D399; border-color: rgba(16, 185, 129, 0.4);">One Master SLA</span>
+              </div>
+              <div class="preview-items-list">
+                <div class="preview-item">
+                  <div class="preview-item-left">
+                    <div class="preview-item-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <div>
+                      <div style="font-weight: 700; color: #FFFFFF;">1. Pre-Service Patient Access</div>
+                      <div style="font-size: 0.75rem; color: #94A3B8;">270/271 Eligibility &bull; EDI 278 Prior Auth &bull; GFE</div>
+                    </div>
+                  </div>
+                  <span class="preview-item-tag tag-green">&lt;0.5% Errors</span>
+                </div>
+
+                <div class="preview-item">
+                  <div class="preview-item-left">
+                    <div class="preview-item-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                    </div>
+                    <div>
+                      <div style="font-weight: 700; color: #FFFFFF;">2. Mid-Cycle HIM &amp; Coding</div>
+                      <div style="font-size: 0.75rem; color: #94A3B8;">Inpatient DRG &bull; CDI Chart Auditing &bull; Queries</div>
+                    </div>
+                  </div>
+                  <span class="preview-item-tag tag-blue">&lt;24h Turnaround</span>
+                </div>
+
+                <div class="preview-item">
+                  <div class="preview-item-left">
+                    <div class="preview-item-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    </div>
+                    <div>
+                      <div style="font-weight: 700; color: #FFFFFF;">3. Central Billing Office</div>
+                      <div style="font-size: 0.75rem; color: #94A3B8;">837 Scrubbing &bull; 835 Posting &bull; Variance Audits</div>
+                    </div>
+                  </div>
+                  <span class="preview-item-tag tag-green">99.2% Clean</span>
+                </div>
+
+                <div class="preview-item">
+                  <div class="preview-item-left">
+                    <div class="preview-item-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </div>
+                    <div>
+                      <div style="font-weight: 700; color: #FFFFFF;">4. Back-End Denials &amp; A/R</div>
+                      <div style="font-size: 0.75rem; color: #94A3B8;">Predictive Appeals &bull; Self-Pay &bull; 60d Refunds</div>
+                    </div>
+                  </div>
+                  <span class="preview-item-tag tag-blue">29.4d DAR</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
 
         <!-- ------------------------------------------------------------------
              SOLUTION 1: PATIENT ACCESS
@@ -361,11 +675,15 @@
             </div>
 
             <div class="showcase-actions">
+              <a href="services/extended-business-office.html" class="btn btn-primary btn-sm" style="display: inline-flex; align-items: center; gap: 8px;">
+                Explore EBO Blueprint
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
               <button type="button" class="btn-learn-more" data-modal-target="modal-ebo">
                 Learn More
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </button>
-              <a href="contact.html" class="link-arrow" style="font-size: 0.9rem;">
+              <a href="contact.html?service=extended-business-office" class="link-arrow" style="font-size: 0.9rem;">
                 Request A/R Assessment
               </a>
             </div>
@@ -456,12 +774,19 @@
             </div>
 
             <div class="showcase-actions">
-              <button type="button" class="btn-learn-more" data-modal-target="modal-analytics">
-                Learn More
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <a href="services/rcm-workflow-audit-benchmarking.html" class="btn btn-primary btn-sm" style="display: inline-flex; align-items: center; gap: 8px;">
+                <span>Explore Audit Blueprint</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="services/fractional-rcm-leadership.html" class="btn btn-secondary btn-sm" style="display: inline-flex; align-items: center; gap: 6px;">
+                <span>Interim Leadership</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <button type="button" class="btn-learn-more" data-modal-target="modal-analytics" style="padding: 10px 16px;">
+                Details
               </button>
-              <a href="contact.html" class="link-arrow" style="font-size: 0.9rem;">
-                Explore Executive Dashboard
+              <a href="contact.html?service=fractional-rcm-leadership" class="link-arrow" style="font-size: 0.9rem;">
+                Request Placement &rarr;
               </a>
             </div>
           </div>
@@ -659,7 +984,11 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary btn-sm" data-modal-close>Close</button>
-        <a href="contact.html" class="btn btn-primary btn-sm">Schedule Demo</a>
+        <a href="services/extended-business-office.html" class="btn btn-secondary btn-sm" style="display: inline-flex; align-items: center; gap: 6px;">
+          <span>Explore Blueprint</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <a href="contact.html?service=extended-business-office" class="btn btn-primary btn-sm">Schedule Demo</a>
       </div>
     </div>
   </div>
@@ -700,7 +1029,11 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary btn-sm" data-modal-close>Close</button>
-        <a href="contact.html" class="btn btn-primary btn-sm">Schedule Demo</a>
+        <a href="services/fractional-rcm-leadership.html" class="btn btn-secondary btn-sm" style="display: inline-flex; align-items: center; gap: 6px;">
+          <span>Interim Leadership</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <a href="contact.html?service=fractional-rcm-leadership" class="btn btn-primary btn-sm">Schedule Demo</a>
       </div>
     </div>
   </div>
@@ -754,6 +1087,7 @@
           <h4 class="footer-col-title">Services</h4>
           <ul class="footer-links-list">
             <li><a href="index.html#services" class="footer-link">Full-Cycle Medical Billing</a></li>
+            <li><a href="services/fractional-rcm-leadership.html" class="footer-link">Interim Leadership &amp; EHR Surge</a></li>
             <li><a href="index.html#services" class="footer-link">Clinical Documentation (CDI)</a></li>
             <li><a href="index.html#services" class="footer-link">Aged A/R Recovery</a></li>
             <li><a href="index.html#services" class="footer-link">EHR Integration Consulting</a></li>
