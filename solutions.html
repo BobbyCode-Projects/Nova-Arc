@@ -55,24 +55,58 @@
       <!-- Desktop Navigation Menu -->
       <nav class="desktop-nav" aria-label="Main Navigation">
         <ul class="nav-menu">
-          <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+          <!-- Item 1: Solutions with dropdown -->
+          <li class="nav-item-dropdown nav-item-solutions">
+            <a href="solutions.html" class="nav-dropdown-link" id="solutionsDropdownToggle" aria-haspopup="true" aria-expanded="false">
+              <span>Solutions</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="nav-simple-dropdown" aria-labelledby="solutionsDropdownToggle" role="menu">
+              <a href="solutions/all-solutions-overview.html" class="nav-simple-item" role="menuitem">
+                <strong>All Solutions Overview</strong>
+                <span>Comprehensive end-to-end healthcare RCM suite</span>
+              </a>
+              <a href="solutions/end-to-end-full-cycle-rcm.html" class="nav-simple-item" role="menuitem">
+                <strong>End-to-End Full-Cycle RCM</strong>
+                <span>Front-to-back revenue cycle operations</span>
+              </a>
+              <a href="solutions/patient-access.html" class="nav-simple-item" role="menuitem">
+                <strong>Patient Access</strong>
+                <span>Pre-service clearance, eligibility &amp; auth</span>
+              </a>
+              <a href="solutions/health-information-management.html" class="nav-simple-item" role="menuitem">
+                <strong>Health Information Management</strong>
+                <span>Inpatient, outpatient, profee &amp; HCC</span>
+              </a>
+              <a href="solutions/extended-business-office.html" class="nav-simple-item" role="menuitem">
+                <strong>Extended Business Office</strong>
+                <span>Legacy resolution &amp; denial recovery</span>
+              </a>
+              <a href="solutions/analytics-and-reporting.html" class="nav-simple-item" role="menuitem">
+                <strong>Analytics and Reporting</strong>
+                <span>Executive dashboards &amp; financial benchmarking</span>
+              </a>
+            </div>
+          </li>
           
-          <!-- Services Dropdown (Mega-Menu) -->
-          <li class="nav-item-dropdown">
-            <button class="nav-link nav-dropdown-toggle " id="servicesDropdownToggle" aria-haspopup="true" aria-expanded="false" aria-controls="servicesMegaMenu">
+          <!-- Item 2: Services Dropdown (Mega-Menu) -->
+          <li class="nav-item-dropdown nav-item-services">
+            <a href="services.html" class="nav-dropdown-link nav-dropdown-toggle" id="servicesDropdownToggle" aria-haspopup="true" aria-expanded="false" aria-controls="servicesMegaMenu">
               <span>Services</span>
               <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
-            </button>
+            </a>
 
             <!-- Mega-Menu Light Panel -->
             <div class="mega-menu-panel" id="servicesMegaMenu" role="menu" aria-labelledby="servicesDropdownToggle" aria-hidden="true">
               <div class="mega-menu-inner container">
                 <div class="mega-menu-grid">
-                  <!-- Column 1: Patient Access & Front-End Integrity -->
+                  <!-- Column 1: Patient Access Services -->
                   <div class="mega-col" role="none">
-                    <h3 class="mega-col-heading" id="menu-col-1-heading">Patient Access &amp; Front-End Integrity</h3>
+                    <h3 class="mega-col-heading" id="menu-col-1-heading"><a href="services/patient-access-services.html" class="mega-heading-link">Patient Access</a></h3>
                     <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-1-heading">
                       <li role="none">
                         <a href="services/real-time-insurance-eligibility.html" class="mega-item standalone" role="menuitem">
@@ -109,7 +143,7 @@
 
                   <!-- Column 2: HIM & Coding -->
                   <div class="mega-col" role="none">
-                    <h3 class="mega-col-heading" id="menu-col-2-heading">HIM &amp; Coding</h3>
+                    <h3 class="mega-col-heading" id="menu-col-2-heading"><a href="services/him-coding-services.html" class="mega-heading-link">HIM &amp; Coding</a></h3>
                     <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-2-heading">
                       <!-- Parent Item: Medical Coding Services -->
                       <li role="none" class="mega-parent-group">
@@ -164,7 +198,7 @@
 
                   <!-- Column 3: Patient Financial Services (PFS) & Recovery -->
                   <div class="mega-col" role="none">
-                    <h3 class="mega-col-heading" id="menu-col-3-heading">Patient Financial Services &amp; Recovery</h3>
+                    <h3 class="mega-col-heading" id="menu-col-3-heading"><a href="services/patient-financial-services.html" class="mega-heading-link">Patient Financial Services &amp; Recovery</a></h3>
                     <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-3-heading">
                       <!-- Parent Item: Claims Management Services -->
                       <li role="none" class="mega-parent-group">
@@ -221,26 +255,48 @@
             </div>
           </li>
 
-          <li>
-            <a href="ai-platform.html" class="nav-link has-badge">
-              Nova Arc AI Platform
-              <span class="nav-badge">New</span>
+          <!-- Item 3: Nova Arc AI Platform with Dropdown -->
+          <li class="nav-item-dropdown nav-item-ai">
+            <a href="ai-platform.html" class="nav-dropdown-link" id="aiDropdownToggle" aria-haspopup="true" aria-expanded="false">
+              <span>Nova Arc AI Platform</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
             </a>
+            <div class="nav-simple-dropdown" aria-labelledby="aiDropdownToggle" role="menu">
+              <a href="ai-platform.html" class="nav-simple-item" role="menuitem">
+                <strong>Platform Overview</strong>
+                <span>Sub-second healthcare adjudication engine</span>
+              </a>
+              <a href="ai-platform.html#agents" class="nav-simple-item" role="menuitem">
+                <strong>AI Agents &amp; Intelligent Automation</strong>
+                <span>Autonomous bots handling repetitive workflows</span>
+              </a>
+              <a href="ai-platform.html#auth" class="nav-simple-item" role="menuitem">
+                <strong>Intelligent Prior Authorization</strong>
+                <span>Real-time clinical guideline alignment</span>
+              </a>
+              <a href="ai-platform.html#coding" class="nav-simple-item" role="menuitem">
+                <strong>Autonomous Coding Engine</strong>
+                <span>AI-driven chart review &amp; code generation</span>
+              </a>
+            </div>
           </li>
+
+          <!-- Item 4: Who We Serve Link -->
           <li><a href="who-we-serve.html" class="nav-link">Who We Serve</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
-      <!-- Desktop Action Buttons -->
+      <!-- Desktop Action Buttons (Right side: Search icon + Connect with us button) -->
       <div class="nav-actions">
-        <a href="tel:18005558942" class="nav-phone" aria-label="Call Nova Arc">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        <button class="nav-search-btn" id="siteSearchBtn" aria-label="Search Nova Arc services and solutions" title="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
-          (800) 555-NOVA
-        </a>
-        <a href="contact.html" class="btn btn-primary btn-sm">Request a Demo</a>
+        </button>
+        <a href="contact.html" class="btn btn-connect-nav">Connect with us</a>
       </div>
 
       <!-- Mobile Hamburger Toggle -->
@@ -266,7 +322,7 @@
           </button>
           <div class="mobile-submenu-collapse" id="mobileServicesSubmenu" aria-hidden="true">
             <div class="mobile-submenu-section">
-              <h4 class="mobile-category-title">Patient Access &amp; Front-End</h4>
+              <h4 class="mobile-category-title"><a href="services/patient-access-services.html">Patient Access</a></h4>
               <a href="services/real-time-insurance-eligibility.html" class="mobile-submenu-link">Insurance Eligibility &amp; Benefits</a>
               <a href="services/prior-authorization-management.html" class="mobile-submenu-link">Prior Authorization Management</a>
               <a href="services/patient-registration-verification.html" class="mobile-submenu-link">Patient Scheduling &amp; Registration QA</a>
@@ -276,7 +332,7 @@
             </div>
 
             <div class="mobile-submenu-section">
-              <h4 class="mobile-category-title">HIM &amp; Coding</h4>
+              <h4 class="mobile-category-title"><a href="services/him-coding-services.html">HIM &amp; Coding</a></h4>
               <a href="services/full-cycle-medical-coding.html" class="mobile-submenu-link parent">Medical Coding Services</a>
               <a href="services/hcc-risk-adjustment.html" class="mobile-submenu-sublink">&rsaquo; Risk Adjustment/HCC Coding</a>
               <a href="services/full-cycle-medical-coding.html" class="mobile-submenu-sublink">&rsaquo; Facility/DRG &amp; ProFee Coding</a>
@@ -288,7 +344,7 @@
             </div>
 
             <div class="mobile-submenu-section">
-              <h4 class="mobile-category-title">Patient Financial Services &amp; Recovery</h4>
+              <h4 class="mobile-category-title"><a href="services/patient-financial-services.html">Patient Financial Services &amp; Recovery</a></h4>
               <a href="services/claims-management-scrubbing.html" class="mobile-submenu-link parent">Claims Management Services</a>
               <a href="services/claims-management-scrubbing.html" class="mobile-submenu-sublink">&rsaquo; Claims Submission &amp; Scrubbing EDI 837</a>
               <a href="services/payment-posting-reconciliation.html" class="mobile-submenu-sublink">&rsaquo; Payment Posting &amp; Reconciliation EDI 835</a>
@@ -301,13 +357,19 @@
             </div>
           </div>
         </li>
-        <li><a href="ai-platform.html" class="mobile-nav-link">Nova Arc AI Platform <span class="nav-badge">New</span></a></li>
+        <li><a href="ai-platform.html" class="mobile-nav-link">Nova Arc AI Platform <span>&rarr;</span></a></li>
         <li><a href="who-we-serve.html" class="mobile-nav-link">Who We Serve <span>&rarr;</span></a></li>
-        <li><a href="contact.html" class="mobile-nav-link">Contact <span>&rarr;</span></a></li>
       </ul>
       <div class="mobile-nav-bottom">
-        <a href="tel:18005558942" class="btn btn-secondary">Call (800) 555-NOVA</a>
-        <a href="contact.html" class="btn btn-primary">Request a Demo</a>
+        <button class="btn btn-secondary mobile-search-trigger" id="mobileSearchTrigger" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          Search Services
+        </button>
+        <a href="tel:18005558942" class="btn btn-secondary" style="width: 100%; margin-bottom: 8px;">Call (800) 555-NOVA</a>
+        <a href="contact.html" class="btn btn-primary" style="width: 100%;">Connect with us</a>
       </div>
     </div>
   </header>
@@ -316,38 +378,287 @@
   <!-- ========================================================================
        PAGE HERO / HEADER
        ======================================================================== -->
-  <section class="page-hero">
-    <div class="container">
-      <nav class="breadcrumb-nav" aria-label="Breadcrumbs">
-        <a href="index.html">Home</a>
-        <span class="breadcrumb-separator">/</span>
-        <span style="color: var(--text-primary); font-weight: 600;">Solutions</span>
-      </nav>
+  <!-- ========================================================================
+       SECTION 1: HERO (AGS-STYLE, NOVA ARC BRAND COLORS)
+       ======================================================================== -->
+  <section class="solutions-hero-ags">
+    <!-- Atmospheric Ambient Lighting (Nova Arc Brand Navy & Blue) -->
+    <div class="hero-orchestrated-glow-cyan"></div>
+    <div class="hero-orchestrated-glow-blue"></div>
 
-      <div class="page-hero-content">
-        <span class="section-tag">Enterprise RCM Suites</span>
-        <h1 class="page-hero-title">
-          Modular Revenue Intelligence for the Modern Health Enterprise
-        </h1>
-        <p class="page-hero-subtitle">
-          Nova Arc delivers targeted, high-performance technology and managed workflows across every phase of the revenue cycle. Eliminate front-end registration errors, accelerate complex clinical coding, liquidate aging receivables, and gain real-time executive visibility.
+    <!-- Heart Wave ECG Waveform Background (Spanning across hero, animating cardiac rhythm) -->
+    <div class="orchestration-wave-container ecg-waveform-container" aria-hidden="true">
+      <!-- ECG Track 1: Lead I Rhythm -->
+      <div class="ecg-waveform-track ecg-track-upper">
+        <div class="ecg-track-inner">
+          <svg class="ecg-svg" viewBox="0 0 2400 80" preserveAspectRatio="none">
+            <path class="ecg-path-ambient" d="M 0 40 L 39.0 40 C 48.0 40, 52.5 33.0, 60.0 33.0 C 67.5 33.0, 72.0 40, 81.0 40 L 108.0 40 L 114.0 44.0 L 123.0 15.0 L 132.0 58.0 L 139.5 40 L 162.0 40 C 171.0 40, 181.5 30.0, 192.0 30.0 C 202.5 30.0, 213.0 40, 222.0 40 L 300.0 40 L 339.0 40 C 348.0 40, 352.5 33.0, 360.0 33.0 C 367.5 33.0, 372.0 40, 381.0 40 L 408.0 40 L 414.0 44.0 L 423.0 15.0 L 432.0 58.0 L 439.5 40 L 462.0 40 C 471.0 40, 481.5 30.0, 492.0 30.0 C 502.5 30.0, 513.0 40, 522.0 40 L 600.0 40 L 639.0 40 C 648.0 40, 652.5 33.0, 660.0 33.0 C 667.5 33.0, 672.0 40, 681.0 40 L 708.0 40 L 714.0 44.0 L 723.0 15.0 L 732.0 58.0 L 739.5 40 L 762.0 40 C 771.0 40, 781.5 30.0, 792.0 30.0 C 802.5 30.0, 813.0 40, 822.0 40 L 900.0 40 L 939.0 40 C 948.0 40, 952.5 33.0, 960.0 33.0 C 967.5 33.0, 972.0 40, 981.0 40 L 1008.0 40 L 1014.0 44.0 L 1023.0 15.0 L 1032.0 58.0 L 1039.5 40 L 1062.0 40 C 1071.0 40, 1081.5 30.0, 1092.0 30.0 C 1102.5 30.0, 1113.0 40, 1122.0 40 L 1200.0 40 L 1239.0 40 C 1248.0 40, 1252.5 33.0, 1260.0 33.0 C 1267.5 33.0, 1272.0 40, 1281.0 40 L 1308.0 40 L 1314.0 44.0 L 1323.0 15.0 L 1332.0 58.0 L 1339.5 40 L 1362.0 40 C 1371.0 40, 1381.5 30.0, 1392.0 30.0 C 1402.5 30.0, 1413.0 40, 1422.0 40 L 1500.0 40 L 1539.0 40 C 1548.0 40, 1552.5 33.0, 1560.0 33.0 C 1567.5 33.0, 1572.0 40, 1581.0 40 L 1608.0 40 L 1614.0 44.0 L 1623.0 15.0 L 1632.0 58.0 L 1639.5 40 L 1662.0 40 C 1671.0 40, 1681.5 30.0, 1692.0 30.0 C 1702.5 30.0, 1713.0 40, 1722.0 40 L 1800.0 40 L 1839.0 40 C 1848.0 40, 1852.5 33.0, 1860.0 33.0 C 1867.5 33.0, 1872.0 40, 1881.0 40 L 1908.0 40 L 1914.0 44.0 L 1923.0 15.0 L 1932.0 58.0 L 1939.5 40 L 1962.0 40 C 1971.0 40, 1981.5 30.0, 1992.0 30.0 C 2002.5 30.0, 2013.0 40, 2022.0 40 L 2100.0 40 L 2139.0 40 C 2148.0 40, 2152.5 33.0, 2160.0 33.0 C 2167.5 33.0, 2172.0 40, 2181.0 40 L 2208.0 40 L 2214.0 44.0 L 2223.0 15.0 L 2232.0 58.0 L 2239.5 40 L 2262.0 40 C 2271.0 40, 2281.5 30.0, 2292.0 30.0 C 2302.5 30.0, 2313.0 40, 2322.0 40 L 2400.0 40 " />
+            <path class="ecg-path-signal" d="M 0 40 L 39.0 40 C 48.0 40, 52.5 33.0, 60.0 33.0 C 67.5 33.0, 72.0 40, 81.0 40 L 108.0 40 L 114.0 44.0 L 123.0 15.0 L 132.0 58.0 L 139.5 40 L 162.0 40 C 171.0 40, 181.5 30.0, 192.0 30.0 C 202.5 30.0, 213.0 40, 222.0 40 L 300.0 40 L 339.0 40 C 348.0 40, 352.5 33.0, 360.0 33.0 C 367.5 33.0, 372.0 40, 381.0 40 L 408.0 40 L 414.0 44.0 L 423.0 15.0 L 432.0 58.0 L 439.5 40 L 462.0 40 C 471.0 40, 481.5 30.0, 492.0 30.0 C 502.5 30.0, 513.0 40, 522.0 40 L 600.0 40 L 639.0 40 C 648.0 40, 652.5 33.0, 660.0 33.0 C 667.5 33.0, 672.0 40, 681.0 40 L 708.0 40 L 714.0 44.0 L 723.0 15.0 L 732.0 58.0 L 739.5 40 L 762.0 40 C 771.0 40, 781.5 30.0, 792.0 30.0 C 802.5 30.0, 813.0 40, 822.0 40 L 900.0 40 L 939.0 40 C 948.0 40, 952.5 33.0, 960.0 33.0 C 967.5 33.0, 972.0 40, 981.0 40 L 1008.0 40 L 1014.0 44.0 L 1023.0 15.0 L 1032.0 58.0 L 1039.5 40 L 1062.0 40 C 1071.0 40, 1081.5 30.0, 1092.0 30.0 C 1102.5 30.0, 1113.0 40, 1122.0 40 L 1200.0 40 L 1239.0 40 C 1248.0 40, 1252.5 33.0, 1260.0 33.0 C 1267.5 33.0, 1272.0 40, 1281.0 40 L 1308.0 40 L 1314.0 44.0 L 1323.0 15.0 L 1332.0 58.0 L 1339.5 40 L 1362.0 40 C 1371.0 40, 1381.5 30.0, 1392.0 30.0 C 1402.5 30.0, 1413.0 40, 1422.0 40 L 1500.0 40 L 1539.0 40 C 1548.0 40, 1552.5 33.0, 1560.0 33.0 C 1567.5 33.0, 1572.0 40, 1581.0 40 L 1608.0 40 L 1614.0 44.0 L 1623.0 15.0 L 1632.0 58.0 L 1639.5 40 L 1662.0 40 C 1671.0 40, 1681.5 30.0, 1692.0 30.0 C 1702.5 30.0, 1713.0 40, 1722.0 40 L 1800.0 40 L 1839.0 40 C 1848.0 40, 1852.5 33.0, 1860.0 33.0 C 1867.5 33.0, 1872.0 40, 1881.0 40 L 1908.0 40 L 1914.0 44.0 L 1923.0 15.0 L 1932.0 58.0 L 1939.5 40 L 1962.0 40 C 1971.0 40, 1981.5 30.0, 1992.0 30.0 C 2002.5 30.0, 2013.0 40, 2022.0 40 L 2100.0 40 L 2139.0 40 C 2148.0 40, 2152.5 33.0, 2160.0 33.0 C 2167.5 33.0, 2172.0 40, 2181.0 40 L 2208.0 40 L 2214.0 44.0 L 2223.0 15.0 L 2232.0 58.0 L 2239.5 40 L 2262.0 40 C 2271.0 40, 2281.5 30.0, 2292.0 30.0 C 2302.5 30.0, 2313.0 40, 2322.0 40 L 2400.0 40 " />
+          </svg>
+          <svg class="ecg-svg" viewBox="0 0 2400 80" preserveAspectRatio="none">
+            <path class="ecg-path-ambient" d="M 0 40 L 39.0 40 C 48.0 40, 52.5 33.0, 60.0 33.0 C 67.5 33.0, 72.0 40, 81.0 40 L 108.0 40 L 114.0 44.0 L 123.0 15.0 L 132.0 58.0 L 139.5 40 L 162.0 40 C 171.0 40, 181.5 30.0, 192.0 30.0 C 202.5 30.0, 213.0 40, 222.0 40 L 300.0 40 L 339.0 40 C 348.0 40, 352.5 33.0, 360.0 33.0 C 367.5 33.0, 372.0 40, 381.0 40 L 408.0 40 L 414.0 44.0 L 423.0 15.0 L 432.0 58.0 L 439.5 40 L 462.0 40 C 471.0 40, 481.5 30.0, 492.0 30.0 C 502.5 30.0, 513.0 40, 522.0 40 L 600.0 40 L 639.0 40 C 648.0 40, 652.5 33.0, 660.0 33.0 C 667.5 33.0, 672.0 40, 681.0 40 L 708.0 40 L 714.0 44.0 L 723.0 15.0 L 732.0 58.0 L 739.5 40 L 762.0 40 C 771.0 40, 781.5 30.0, 792.0 30.0 C 802.5 30.0, 813.0 40, 822.0 40 L 900.0 40 L 939.0 40 C 948.0 40, 952.5 33.0, 960.0 33.0 C 967.5 33.0, 972.0 40, 981.0 40 L 1008.0 40 L 1014.0 44.0 L 1023.0 15.0 L 1032.0 58.0 L 1039.5 40 L 1062.0 40 C 1071.0 40, 1081.5 30.0, 1092.0 30.0 C 1102.5 30.0, 1113.0 40, 1122.0 40 L 1200.0 40 L 1239.0 40 C 1248.0 40, 1252.5 33.0, 1260.0 33.0 C 1267.5 33.0, 1272.0 40, 1281.0 40 L 1308.0 40 L 1314.0 44.0 L 1323.0 15.0 L 1332.0 58.0 L 1339.5 40 L 1362.0 40 C 1371.0 40, 1381.5 30.0, 1392.0 30.0 C 1402.5 30.0, 1413.0 40, 1422.0 40 L 1500.0 40 L 1539.0 40 C 1548.0 40, 1552.5 33.0, 1560.0 33.0 C 1567.5 33.0, 1572.0 40, 1581.0 40 L 1608.0 40 L 1614.0 44.0 L 1623.0 15.0 L 1632.0 58.0 L 1639.5 40 L 1662.0 40 C 1671.0 40, 1681.5 30.0, 1692.0 30.0 C 1702.5 30.0, 1713.0 40, 1722.0 40 L 1800.0 40 L 1839.0 40 C 1848.0 40, 1852.5 33.0, 1860.0 33.0 C 1867.5 33.0, 1872.0 40, 1881.0 40 L 1908.0 40 L 1914.0 44.0 L 1923.0 15.0 L 1932.0 58.0 L 1939.5 40 L 1962.0 40 C 1971.0 40, 1981.5 30.0, 1992.0 30.0 C 2002.5 30.0, 2013.0 40, 2022.0 40 L 2100.0 40 L 2139.0 40 C 2148.0 40, 2152.5 33.0, 2160.0 33.0 C 2167.5 33.0, 2172.0 40, 2181.0 40 L 2208.0 40 L 2214.0 44.0 L 2223.0 15.0 L 2232.0 58.0 L 2239.5 40 L 2262.0 40 C 2271.0 40, 2281.5 30.0, 2292.0 30.0 C 2302.5 30.0, 2313.0 40, 2322.0 40 L 2400.0 40 " />
+            <path class="ecg-path-signal" d="M 0 40 L 39.0 40 C 48.0 40, 52.5 33.0, 60.0 33.0 C 67.5 33.0, 72.0 40, 81.0 40 L 108.0 40 L 114.0 44.0 L 123.0 15.0 L 132.0 58.0 L 139.5 40 L 162.0 40 C 171.0 40, 181.5 30.0, 192.0 30.0 C 202.5 30.0, 213.0 40, 222.0 40 L 300.0 40 L 339.0 40 C 348.0 40, 352.5 33.0, 360.0 33.0 C 367.5 33.0, 372.0 40, 381.0 40 L 408.0 40 L 414.0 44.0 L 423.0 15.0 L 432.0 58.0 L 439.5 40 L 462.0 40 C 471.0 40, 481.5 30.0, 492.0 30.0 C 502.5 30.0, 513.0 40, 522.0 40 L 600.0 40 L 639.0 40 C 648.0 40, 652.5 33.0, 660.0 33.0 C 667.5 33.0, 672.0 40, 681.0 40 L 708.0 40 L 714.0 44.0 L 723.0 15.0 L 732.0 58.0 L 739.5 40 L 762.0 40 C 771.0 40, 781.5 30.0, 792.0 30.0 C 802.5 30.0, 813.0 40, 822.0 40 L 900.0 40 L 939.0 40 C 948.0 40, 952.5 33.0, 960.0 33.0 C 967.5 33.0, 972.0 40, 981.0 40 L 1008.0 40 L 1014.0 44.0 L 1023.0 15.0 L 1032.0 58.0 L 1039.5 40 L 1062.0 40 C 1071.0 40, 1081.5 30.0, 1092.0 30.0 C 1102.5 30.0, 1113.0 40, 1122.0 40 L 1200.0 40 L 1239.0 40 C 1248.0 40, 1252.5 33.0, 1260.0 33.0 C 1267.5 33.0, 1272.0 40, 1281.0 40 L 1308.0 40 L 1314.0 44.0 L 1323.0 15.0 L 1332.0 58.0 L 1339.5 40 L 1362.0 40 C 1371.0 40, 1381.5 30.0, 1392.0 30.0 C 1402.5 30.0, 1413.0 40, 1422.0 40 L 1500.0 40 L 1539.0 40 C 1548.0 40, 1552.5 33.0, 1560.0 33.0 C 1567.5 33.0, 1572.0 40, 1581.0 40 L 1608.0 40 L 1614.0 44.0 L 1623.0 15.0 L 1632.0 58.0 L 1639.5 40 L 1662.0 40 C 1671.0 40, 1681.5 30.0, 1692.0 30.0 C 1702.5 30.0, 1713.0 40, 1722.0 40 L 1800.0 40 L 1839.0 40 C 1848.0 40, 1852.5 33.0, 1860.0 33.0 C 1867.5 33.0, 1872.0 40, 1881.0 40 L 1908.0 40 L 1914.0 44.0 L 1923.0 15.0 L 1932.0 58.0 L 1939.5 40 L 1962.0 40 C 1971.0 40, 1981.5 30.0, 1992.0 30.0 C 2002.5 30.0, 2013.0 40, 2022.0 40 L 2100.0 40 L 2139.0 40 C 2148.0 40, 2152.5 33.0, 2160.0 33.0 C 2167.5 33.0, 2172.0 40, 2181.0 40 L 2208.0 40 L 2214.0 44.0 L 2223.0 15.0 L 2232.0 58.0 L 2239.5 40 L 2262.0 40 C 2271.0 40, 2281.5 30.0, 2292.0 30.0 C 2302.5 30.0, 2313.0 40, 2322.0 40 L 2400.0 40 " />
+          </svg>
+        </div>
+      </div>
+
+      <!-- ECG Track 2: Lead II Primary Rhythm (Dominant cardiac signal) -->
+      <div class="ecg-waveform-track ecg-track-mid">
+        <div class="ecg-track-inner">
+          <svg class="ecg-svg" viewBox="0 0 2400 80" preserveAspectRatio="none">
+            <path class="ecg-path-ambient" d="M 0 40 L 39.0 40 C 48.0 40, 52.5 31.0, 60.0 31.0 C 67.5 31.0, 72.0 40, 81.0 40 L 108.0 40 L 114.0 46.0 L 123.0 6.0 L 132.0 68.0 L 139.5 40 L 162.0 40 C 171.0 40, 181.5 26.0, 192.0 26.0 C 202.5 26.0, 213.0 40, 222.0 40 L 300.0 40 L 339.0 40 C 348.0 40, 352.5 31.0, 360.0 31.0 C 367.5 31.0, 372.0 40, 381.0 40 L 408.0 40 L 414.0 46.0 L 423.0 6.0 L 432.0 68.0 L 439.5 40 L 462.0 40 C 471.0 40, 481.5 26.0, 492.0 26.0 C 502.5 26.0, 513.0 40, 522.0 40 L 600.0 40 L 639.0 40 C 648.0 40, 652.5 31.0, 660.0 31.0 C 667.5 31.0, 672.0 40, 681.0 40 L 708.0 40 L 714.0 46.0 L 723.0 6.0 L 732.0 68.0 L 739.5 40 L 762.0 40 C 771.0 40, 781.5 26.0, 792.0 26.0 C 802.5 26.0, 813.0 40, 822.0 40 L 900.0 40 L 939.0 40 C 948.0 40, 952.5 31.0, 960.0 31.0 C 967.5 31.0, 972.0 40, 981.0 40 L 1008.0 40 L 1014.0 46.0 L 1023.0 6.0 L 1032.0 68.0 L 1039.5 40 L 1062.0 40 C 1071.0 40, 1081.5 26.0, 1092.0 26.0 C 1102.5 26.0, 1113.0 40, 1122.0 40 L 1200.0 40 L 1239.0 40 C 1248.0 40, 1252.5 31.0, 1260.0 31.0 C 1267.5 31.0, 1272.0 40, 1281.0 40 L 1308.0 40 L 1314.0 46.0 L 1323.0 6.0 L 1332.0 68.0 L 1339.5 40 L 1362.0 40 C 1371.0 40, 1381.5 26.0, 1392.0 26.0 C 1402.5 26.0, 1413.0 40, 1422.0 40 L 1500.0 40 L 1539.0 40 C 1548.0 40, 1552.5 31.0, 1560.0 31.0 C 1567.5 31.0, 1572.0 40, 1581.0 40 L 1608.0 40 L 1614.0 46.0 L 1623.0 6.0 L 1632.0 68.0 L 1639.5 40 L 1662.0 40 C 1671.0 40, 1681.5 26.0, 1692.0 26.0 C 1702.5 26.0, 1713.0 40, 1722.0 40 L 1800.0 40 L 1839.0 40 C 1848.0 40, 1852.5 31.0, 1860.0 31.0 C 1867.5 31.0, 1872.0 40, 1881.0 40 L 1908.0 40 L 1914.0 46.0 L 1923.0 6.0 L 1932.0 68.0 L 1939.5 40 L 1962.0 40 C 1971.0 40, 1981.5 26.0, 1992.0 26.0 C 2002.5 26.0, 2013.0 40, 2022.0 40 L 2100.0 40 L 2139.0 40 C 2148.0 40, 2152.5 31.0, 2160.0 31.0 C 2167.5 31.0, 2172.0 40, 2181.0 40 L 2208.0 40 L 2214.0 46.0 L 2223.0 6.0 L 2232.0 68.0 L 2239.5 40 L 2262.0 40 C 2271.0 40, 2281.5 26.0, 2292.0 26.0 C 2302.5 26.0, 2313.0 40, 2322.0 40 L 2400.0 40 " />
+            <path class="ecg-path-signal" d="M 0 40 L 39.0 40 C 48.0 40, 52.5 31.0, 60.0 31.0 C 67.5 31.0, 72.0 40, 81.0 40 L 108.0 40 L 114.0 46.0 L 123.0 6.0 L 132.0 68.0 L 139.5 40 L 162.0 40 C 171.0 40, 181.5 26.0, 192.0 26.0 C 202.5 26.0, 213.0 40, 222.0 40 L 300.0 40 L 339.0 40 C 348.0 40, 352.5 31.0, 360.0 31.0 C 367.5 31.0, 372.0 40, 381.0 40 L 408.0 40 L 414.0 46.0 L 423.0 6.0 L 432.0 68.0 L 439.5 40 L 462.0 40 C 471.0 40, 481.5 26.0, 492.0 26.0 C 502.5 26.0, 513.0 40, 522.0 40 L 600.0 40 L 639.0 40 C 648.0 40, 652.5 31.0, 660.0 31.0 C 667.5 31.0, 672.0 40, 681.0 40 L 708.0 40 L 714.0 46.0 L 723.0 6.0 L 732.0 68.0 L 739.5 40 L 762.0 40 C 771.0 40, 781.5 26.0, 792.0 26.0 C 802.5 26.0, 813.0 40, 822.0 40 L 900.0 40 L 939.0 40 C 948.0 40, 952.5 31.0, 960.0 31.0 C 967.5 31.0, 972.0 40, 981.0 40 L 1008.0 40 L 1014.0 46.0 L 1023.0 6.0 L 1032.0 68.0 L 1039.5 40 L 1062.0 40 C 1071.0 40, 1081.5 26.0, 1092.0 26.0 C 1102.5 26.0, 1113.0 40, 1122.0 40 L 1200.0 40 L 1239.0 40 C 1248.0 40, 1252.5 31.0, 1260.0 31.0 C 1267.5 31.0, 1272.0 40, 1281.0 40 L 1308.0 40 L 1314.0 46.0 L 1323.0 6.0 L 1332.0 68.0 L 1339.5 40 L 1362.0 40 C 1371.0 40, 1381.5 26.0, 1392.0 26.0 C 1402.5 26.0, 1413.0 40, 1422.0 40 L 1500.0 40 L 1539.0 40 C 1548.0 40, 1552.5 31.0, 1560.0 31.0 C 1567.5 31.0, 1572.0 40, 1581.0 40 L 1608.0 40 L 1614.0 46.0 L 1623.0 6.0 L 1632.0 68.0 L 1639.5 40 L 1662.0 40 C 1671.0 40, 1681.5 26.0, 1692.0 26.0 C 1702.5 26.0, 1713.0 40, 1722.0 40 L 1800.0 40 L 1839.0 40 C 1848.0 40, 1852.5 31.0, 1860.0 31.0 C 1867.5 31.0, 1872.0 40, 1881.0 40 L 1908.0 40 L 1914.0 46.0 L 1923.0 6.0 L 1932.0 68.0 L 1939.5 40 L 1962.0 40 C 1971.0 40, 1981.5 26.0, 1992.0 26.0 C 2002.5 26.0, 2013.0 40, 2022.0 40 L 2100.0 40 L 2139.0 40 C 2148.0 40, 2152.5 31.0, 2160.0 31.0 C 2167.5 31.0, 2172.0 40, 2181.0 40 L 2208.0 40 L 2214.0 46.0 L 2223.0 6.0 L 2232.0 68.0 L 2239.5 40 L 2262.0 40 C 2271.0 40, 2281.5 26.0, 2292.0 26.0 C 2302.5 26.0, 2313.0 40, 2322.0 40 L 2400.0 40 " />
+          </svg>
+          <svg class="ecg-svg" viewBox="0 0 2400 80" preserveAspectRatio="none">
+            <path class="ecg-path-ambient" d="M 0 40 L 39.0 40 C 48.0 40, 52.5 31.0, 60.0 31.0 C 67.5 31.0, 72.0 40, 81.0 40 L 108.0 40 L 114.0 46.0 L 123.0 6.0 L 132.0 68.0 L 139.5 40 L 162.0 40 C 171.0 40, 181.5 26.0, 192.0 26.0 C 202.5 26.0, 213.0 40, 222.0 40 L 300.0 40 L 339.0 40 C 348.0 40, 352.5 31.0, 360.0 31.0 C 367.5 31.0, 372.0 40, 381.0 40 L 408.0 40 L 414.0 46.0 L 423.0 6.0 L 432.0 68.0 L 439.5 40 L 462.0 40 C 471.0 40, 481.5 26.0, 492.0 26.0 C 502.5 26.0, 513.0 40, 522.0 40 L 600.0 40 L 639.0 40 C 648.0 40, 652.5 31.0, 660.0 31.0 C 667.5 31.0, 672.0 40, 681.0 40 L 708.0 40 L 714.0 46.0 L 723.0 6.0 L 732.0 68.0 L 739.5 40 L 762.0 40 C 771.0 40, 781.5 26.0, 792.0 26.0 C 802.5 26.0, 813.0 40, 822.0 40 L 900.0 40 L 939.0 40 C 948.0 40, 952.5 31.0, 960.0 31.0 C 967.5 31.0, 972.0 40, 981.0 40 L 1008.0 40 L 1014.0 46.0 L 1023.0 6.0 L 1032.0 68.0 L 1039.5 40 L 1062.0 40 C 1071.0 40, 1081.5 26.0, 1092.0 26.0 C 1102.5 26.0, 1113.0 40, 1122.0 40 L 1200.0 40 L 1239.0 40 C 1248.0 40, 1252.5 31.0, 1260.0 31.0 C 1267.5 31.0, 1272.0 40, 1281.0 40 L 1308.0 40 L 1314.0 46.0 L 1323.0 6.0 L 1332.0 68.0 L 1339.5 40 L 1362.0 40 C 1371.0 40, 1381.5 26.0, 1392.0 26.0 C 1402.5 26.0, 1413.0 40, 1422.0 40 L 1500.0 40 L 1539.0 40 C 1548.0 40, 1552.5 31.0, 1560.0 31.0 C 1567.5 31.0, 1572.0 40, 1581.0 40 L 1608.0 40 L 1614.0 46.0 L 1623.0 6.0 L 1632.0 68.0 L 1639.5 40 L 1662.0 40 C 1671.0 40, 1681.5 26.0, 1692.0 26.0 C 1702.5 26.0, 1713.0 40, 1722.0 40 L 1800.0 40 L 1839.0 40 C 1848.0 40, 1852.5 31.0, 1860.0 31.0 C 1867.5 31.0, 1872.0 40, 1881.0 40 L 1908.0 40 L 1914.0 46.0 L 1923.0 6.0 L 1932.0 68.0 L 1939.5 40 L 1962.0 40 C 1971.0 40, 1981.5 26.0, 1992.0 26.0 C 2002.5 26.0, 2013.0 40, 2022.0 40 L 2100.0 40 L 2139.0 40 C 2148.0 40, 2152.5 31.0, 2160.0 31.0 C 2167.5 31.0, 2172.0 40, 2181.0 40 L 2208.0 40 L 2214.0 46.0 L 2223.0 6.0 L 2232.0 68.0 L 2239.5 40 L 2262.0 40 C 2271.0 40, 2281.5 26.0, 2292.0 26.0 C 2302.5 26.0, 2313.0 40, 2322.0 40 L 2400.0 40 " />
+          </svg>
+        </div>
+      </div>
+
+      <!-- ECG Track 3: Lead III Cadence Rhythm -->
+      <div class="ecg-waveform-track ecg-track-lower">
+        <div class="ecg-track-inner">
+          <svg class="ecg-svg" viewBox="0 0 2400 80" preserveAspectRatio="none">
+            <path class="ecg-path-ambient" d="M 0 40 L 39.0 40 C 48.0 40, 52.5 34.0, 60.0 34.0 C 67.5 34.0, 72.0 40, 81.0 40 L 108.0 40 L 114.0 44.0 L 123.0 18.0 L 132.0 56.0 L 139.5 40 L 162.0 40 C 171.0 40, 181.5 31.0, 192.0 31.0 C 202.5 31.0, 213.0 40, 222.0 40 L 300.0 40 L 339.0 40 C 348.0 40, 352.5 34.0, 360.0 34.0 C 367.5 34.0, 372.0 40, 381.0 40 L 408.0 40 L 414.0 44.0 L 423.0 18.0 L 432.0 56.0 L 439.5 40 L 462.0 40 C 471.0 40, 481.5 31.0, 492.0 31.0 C 502.5 31.0, 513.0 40, 522.0 40 L 600.0 40 L 639.0 40 C 648.0 40, 652.5 34.0, 660.0 34.0 C 667.5 34.0, 672.0 40, 681.0 40 L 708.0 40 L 714.0 44.0 L 723.0 18.0 L 732.0 56.0 L 739.5 40 L 762.0 40 C 771.0 40, 781.5 31.0, 792.0 31.0 C 802.5 31.0, 813.0 40, 822.0 40 L 900.0 40 L 939.0 40 C 948.0 40, 952.5 34.0, 960.0 34.0 C 967.5 34.0, 972.0 40, 981.0 40 L 1008.0 40 L 1014.0 44.0 L 1023.0 18.0 L 1032.0 56.0 L 1039.5 40 L 1062.0 40 C 1071.0 40, 1081.5 31.0, 1092.0 31.0 C 1102.5 31.0, 1113.0 40, 1122.0 40 L 1200.0 40 L 1239.0 40 C 1248.0 40, 1252.5 34.0, 1260.0 34.0 C 1267.5 34.0, 1272.0 40, 1281.0 40 L 1308.0 40 L 1314.0 44.0 L 1323.0 18.0 L 1332.0 56.0 L 1339.5 40 L 1362.0 40 C 1371.0 40, 1381.5 31.0, 1392.0 31.0 C 1402.5 31.0, 1413.0 40, 1422.0 40 L 1500.0 40 L 1539.0 40 C 1548.0 40, 1552.5 34.0, 1560.0 34.0 C 1567.5 34.0, 1572.0 40, 1581.0 40 L 1608.0 40 L 1614.0 44.0 L 1623.0 18.0 L 1632.0 56.0 L 1639.5 40 L 1662.0 40 C 1671.0 40, 1681.5 31.0, 1692.0 31.0 C 1702.5 31.0, 1713.0 40, 1722.0 40 L 1800.0 40 L 1839.0 40 C 1848.0 40, 1852.5 34.0, 1860.0 34.0 C 1867.5 34.0, 1872.0 40, 1881.0 40 L 1908.0 40 L 1914.0 44.0 L 1923.0 18.0 L 1932.0 56.0 L 1939.5 40 L 1962.0 40 C 1971.0 40, 1981.5 31.0, 1992.0 31.0 C 2002.5 31.0, 2013.0 40, 2022.0 40 L 2100.0 40 L 2139.0 40 C 2148.0 40, 2152.5 34.0, 2160.0 34.0 C 2167.5 34.0, 2172.0 40, 2181.0 40 L 2208.0 40 L 2214.0 44.0 L 2223.0 18.0 L 2232.0 56.0 L 2239.5 40 L 2262.0 40 C 2271.0 40, 2281.5 31.0, 2292.0 31.0 C 2302.5 31.0, 2313.0 40, 2322.0 40 L 2400.0 40 " />
+            <path class="ecg-path-signal" d="M 0 40 L 39.0 40 C 48.0 40, 52.5 34.0, 60.0 34.0 C 67.5 34.0, 72.0 40, 81.0 40 L 108.0 40 L 114.0 44.0 L 123.0 18.0 L 132.0 56.0 L 139.5 40 L 162.0 40 C 171.0 40, 181.5 31.0, 192.0 31.0 C 202.5 31.0, 213.0 40, 222.0 40 L 300.0 40 L 339.0 40 C 348.0 40, 352.5 34.0, 360.0 34.0 C 367.5 34.0, 372.0 40, 381.0 40 L 408.0 40 L 414.0 44.0 L 423.0 18.0 L 432.0 56.0 L 439.5 40 L 462.0 40 C 471.0 40, 481.5 31.0, 492.0 31.0 C 502.5 31.0, 513.0 40, 522.0 40 L 600.0 40 L 639.0 40 C 648.0 40, 652.5 34.0, 660.0 34.0 C 667.5 34.0, 672.0 40, 681.0 40 L 708.0 40 L 714.0 44.0 L 723.0 18.0 L 732.0 56.0 L 739.5 40 L 762.0 40 C 771.0 40, 781.5 31.0, 792.0 31.0 C 802.5 31.0, 813.0 40, 822.0 40 L 900.0 40 L 939.0 40 C 948.0 40, 952.5 34.0, 960.0 34.0 C 967.5 34.0, 972.0 40, 981.0 40 L 1008.0 40 L 1014.0 44.0 L 1023.0 18.0 L 1032.0 56.0 L 1039.5 40 L 1062.0 40 C 1071.0 40, 1081.5 31.0, 1092.0 31.0 C 1102.5 31.0, 1113.0 40, 1122.0 40 L 1200.0 40 L 1239.0 40 C 1248.0 40, 1252.5 34.0, 1260.0 34.0 C 1267.5 34.0, 1272.0 40, 1281.0 40 L 1308.0 40 L 1314.0 44.0 L 1323.0 18.0 L 1332.0 56.0 L 1339.5 40 L 1362.0 40 C 1371.0 40, 1381.5 31.0, 1392.0 31.0 C 1402.5 31.0, 1413.0 40, 1422.0 40 L 1500.0 40 L 1539.0 40 C 1548.0 40, 1552.5 34.0, 1560.0 34.0 C 1567.5 34.0, 1572.0 40, 1581.0 40 L 1608.0 40 L 1614.0 44.0 L 1623.0 18.0 L 1632.0 56.0 L 1639.5 40 L 1662.0 40 C 1671.0 40, 1681.5 31.0, 1692.0 31.0 C 1702.5 31.0, 1713.0 40, 1722.0 40 L 1800.0 40 L 1839.0 40 C 1848.0 40, 1852.5 34.0, 1860.0 34.0 C 1867.5 34.0, 1872.0 40, 1881.0 40 L 1908.0 40 L 1914.0 44.0 L 1923.0 18.0 L 1932.0 56.0 L 1939.5 40 L 1962.0 40 C 1971.0 40, 1981.5 31.0, 1992.0 31.0 C 2002.5 31.0, 2013.0 40, 2022.0 40 L 2100.0 40 L 2139.0 40 C 2148.0 40, 2152.5 34.0, 2160.0 34.0 C 2167.5 34.0, 2172.0 40, 2181.0 40 L 2208.0 40 L 2214.0 44.0 L 2223.0 18.0 L 2232.0 58.0 L 2239.5 40 L 2262.0 40 C 2271.0 40, 2281.5 31.0, 2292.0 31.0 C 2302.5 31.0, 2313.0 40, 2322.0 40 L 2400.0 40 " />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="container hero-container-ags">
+      <div class="hero-content-ags">
+        <h1 class="hero-title-ags">Revenue Cycle<br>Management Solutions</h1>
+        <p class="hero-subtitle-ags">
+          Healthcare is experiencing an unprecedented pace of change and complexity. We’re here to help.
         </p>
+        <div class="hero-actions-ags">
+          <a href="contact.html" class="btn btn-consultation-ags">
+            <span>Schedule a free consultation</span>
+            <svg class="btn-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
 
   <!-- ========================================================================
-       SOLUTIONS SHOWCASE (4 AREAS)
+       SECTION 2: SOLUTIONS MADE FOR YOU (AGS-STYLE, NOVA ARC DATA & B&W IMAGES)
        ======================================================================== -->
-  <section class="section" id="solutions-areas">
+  <section class="section-solutions-grid" id="solutions-made-for-you">
     <div class="container">
+      <div class="section-header-centered">
+        <span class="eyebrow-ags">SOLUTIONS MADE FOR YOU</span>
+        <h2 class="section-heading-ags">For each of your unique RCM challenges,<br>we have a configurable solution.</h2>
+        <p class="section-desc-ags">
+          As a technology-enabled revenue cycle management company, we help healthcare organizations develop the right mix of human expertise and intelligent automation to streamline workflows, improve cash flow, and reduce operating costs. Nova Arc takes a unique approach to configure integrated RCM solutions for your unique needs. We understand that no two healthcare organizations are exactly alike. Each presents a unique set of challenges that may change over time. We’ll work closely with you at every step to maximize your revenue.
+        </p>
+      </div>
+
+      <!-- 6 Solutions Cards Grid (Pure B&W Images, Nova Arc Data) -->
+      <div class="solutions-card-grid">
+        <!-- Card 1: All Solutions Overview -->
+        <article class="sol-grid-card">
+          <div class="sol-card-media">
+            <img src="images/solution-overview.jpg" alt="All Solutions Overview" class="sol-card-img" loading="lazy">
+          </div>
+          <div class="sol-card-body">
+            <h3 class="sol-card-title">All Solutions Overview</h3>
+            <p class="sol-card-text">
+              Gain a unified, enterprise-wide revenue cycle architecture. Nova Arc integrates front-end patient intake, mid-cycle clinical coding, central billing office operations, and executive analytics under an synchronized operational framework.
+            </p>
+            <a href="solutions/all-solutions-overview.html" class="sol-card-link">
+              <span>Explore Overview</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 2: End-to-End Full-Cycle RCM -->
+        <article class="sol-grid-card">
+          <div class="sol-card-media">
+            <img src="images/solution-full-cycle.jpg" alt="End-to-End Full-Cycle RCM" class="sol-card-img" loading="lazy">
+          </div>
+          <div class="sol-card-body">
+            <h3 class="sol-card-title">End-to-End Full-Cycle RCM</h3>
+            <p class="sol-card-text">
+              Comprehensive front-to-back revenue cycle management governed by a single master enterprise SLA. Designed for multi-hospital health systems to eliminate departmental silos and vendor handoffs with guaranteed net collection ratio performance.
+            </p>
+            <a href="solutions/end-to-end-full-cycle-rcm.html" class="sol-card-link">
+              <span>Explore Blueprint</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 3: Patient Access Solutions -->
+        <article class="sol-grid-card">
+          <div class="sol-card-media">
+            <img src="images/solution-patient-access.jpg" alt="Patient Access Solutions" class="sol-card-img" loading="lazy">
+          </div>
+          <div class="sol-card-body">
+            <h3 class="sol-card-title">Patient Access</h3>
+            <p class="sol-card-text">
+              Start your revenue cycle strong by ensuring that critical, and accurate, patient information is in place upfront. Includes automated 270/271 insurance eligibility, prior authorization tracking, registration QA, and Good Faith Estimates.
+            </p>
+            <a href="solutions/patient-access.html" class="sol-card-link">
+              <span>Explore Services</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 4: HIM & Medical Coding -->
+        <article class="sol-grid-card">
+          <div class="sol-card-media">
+            <img src="images/solution-him-coding.jpg" alt="Health Information Management" class="sol-card-img" loading="lazy">
+          </div>
+          <div class="sol-card-body">
+            <h3 class="sol-card-title">Health Information Management</h3>
+            <p class="sol-card-text">
+              Our team of coding experts, with a deep understanding of the healthcare industry and AAPC/AHIMA credentials, delivers sub-24-hour chart turnaround, 98.6%+ coding accuracy, and optimal DRG and HCC risk-adjustment capture across all clinical specialties.
+            </p>
+            <a href="solutions/health-information-management.html" class="sol-card-link">
+              <span>Explore Services</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 5: Extended Business Office & Aged A/R -->
+        <article class="sol-grid-card">
+          <div class="sol-card-media">
+            <img src="images/solution-ebo.jpg" alt="Extended Business Office" class="sol-card-img" loading="lazy">
+          </div>
+          <div class="sol-card-body">
+            <h3 class="sol-card-title">Extended Business Office</h3>
+            <p class="sol-card-text">
+              Nova Arc provides a comprehensive suite of RCM services that are tailored to the needs of each healthcare organization. Resolving aged receivables across 60, 90, and 120+ days, appealing complex denials, and accelerating cash recovery.
+            </p>
+            <a href="solutions/extended-business-office.html" class="sol-card-link">
+              <span>Explore Services</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 6: Revenue Cycle Analytics & Reporting -->
+        <article class="sol-grid-card">
+          <div class="sol-card-media">
+            <img src="images/solution-analytics.jpg" alt="Analytics and Reporting" class="sol-card-img" loading="lazy">
+          </div>
+          <div class="sol-card-body">
+            <h3 class="sol-card-title">Analytics and Reporting</h3>
+            <p class="sol-card-text">
+              Obtain answers to critical questions related to performance benchmarking, root cause analysis, cash flow predictability, and payer variance through 24/7 executive cloud dashboards and machine learning denial trend detection.
+            </p>
+            <a href="solutions/analytics-and-reporting.html" class="sol-card-link">
+              <span>Explore Analytics</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECTION 3: INTELLIGENT PROBLEM-SOLVING (EXACT COPY & ICONS FROM SCREENSHOT 3)
+       ======================================================================== -->
+  <section class="section-problem-solving" id="intelligent-problem-solving">
+    <div class="container">
+      <div class="problem-header">
+        <span class="eyebrow-ags">INTELLIGENT PROBLEM-SOLVING</span>
+        <h2 class="section-heading-ags">Technology, with human insight</h2>
+        <p class="section-desc-ags">
+          Automation offers the promise of lower costs and increased efficiency, but only when it is applied effectively. Nova Arc’s RCM solutions combine advanced automation and powerful predictive analytics with real human expertise.
+        </p>
+      </div>
+
+      <div class="problem-pillars-grid">
+        <!-- Pillar 1 -->
+        <div class="problem-pillar-col">
+          <div class="problem-col-icon-wrap" aria-hidden="true">
+            <svg class="problem-col-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <path d="M24 6 A18 18 0 1 0 42 24" stroke="#0B2545" stroke-width="2.5" stroke-linecap="round"/>
+              <polyline points="38 16 42 24 34 24" stroke="#0B2545" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="16" y="26" width="3.5" height="8" rx="1" fill="#1F6FEB"/>
+              <rect x="22" y="21" width="3.5" height="13" rx="1" fill="#1F6FEB"/>
+              <rect x="28" y="16" width="3.5" height="18" rx="1" fill="#1F6FEB"/>
+            </svg>
+          </div>
+          <h3 class="problem-col-title">Realize the Abundant Potential of Your Revenue Cycle</h3>
+          <p class="problem-col-text">
+            By creating a high-performance revenue cycle, you will not only get the benefits of being fully paid for your services, you will directly contribute to creating a better patient experience, while freeing cash flow to invest more resources into transforming how you care for patients.
+          </p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="problem-pillar-col">
+          <div class="problem-col-icon-wrap" aria-hidden="true">
+            <svg class="problem-col-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <rect x="8" y="12" width="32" height="20" rx="2" stroke="#0B2545" stroke-width="2.5"/>
+              <line x1="4" y1="36" x2="44" y2="36" stroke="#0B2545" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M19 19 L15 22 L19 25" stroke="#1F6FEB" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M29 19 L33 22 L29 25" stroke="#1F6FEB" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="25" y1="18" x2="23" y2="26" stroke="#1F6FEB" stroke-width="2.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="problem-col-title">Realize the Transformative Power of the Right Technology</h3>
+          <p class="problem-col-text">
+            The right technology can change everything about revenue cycle management, from predictive analytics that help solve problems before they occur, to intelligent automation that removes monotonous tasks and errors, all working toward a high-precision revenue cycle like the healthcare industry has never seen.
+          </p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="problem-pillar-col">
+          <div class="problem-col-icon-wrap" aria-hidden="true">
+            <svg class="problem-col-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <rect x="6" y="10" width="36" height="24" rx="2" stroke="#0B2545" stroke-width="2.5"/>
+              <line x1="24" y1="34" x2="24" y2="38" stroke="#0B2545" stroke-width="2.5"/>
+              <line x1="16" y1="38" x2="32" y2="38" stroke="#0B2545" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M18 22 A6 6 0 1 0 24 16 L24 22 Z" fill="#1F6FEB" opacity="0.3" stroke="#1F6FEB" stroke-width="1.8"/>
+              <path d="M24 16 A6 6 0 0 1 24 22 Z" fill="#1F6FEB"/>
+              <line x1="28" y1="18" x2="36" y2="18" stroke="#0B2545" stroke-width="2" stroke-linecap="round"/>
+              <line x1="28" y1="22" x2="34" y2="22" stroke="#0B2545" stroke-width="2" stroke-linecap="round"/>
+              <line x1="28" y1="26" x2="36" y2="26" stroke="#0B2545" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="problem-col-title">Realize the Full Impact of Committed Collaboration</h3>
+          <p class="problem-col-text">
+            A technology-enhanced revenue cycle means that the skills and capabilities of the human element become even more important. You need high-touch service experts who partner with you to proactively solve problems, identify opportunities, and execute flawlessly day after day.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SOLUTIONS DEEP DIVE & ENTERPRISE BLUEPRINTS
+       ======================================================================== -->
+  <section class="section" id="solutions-areas" style="padding-top: 80px;">
+    <div class="container">
+      <div class="section-header-centered" style="margin-bottom: 48px;">
+        <span class="eyebrow-ags">ENTERPRISE BLUEPRINTS</span>
+        <h2 class="section-heading-ags">Detailed Architecture &amp; Service Level Guarantees</h2>
+        <p class="section-desc-ags">
+          Examine the operational workflows, sub-second integrations, and contractual SLA guarantees powering each Nova Arc solution area.
+        </p>
+      </div>
+
       <div class="solutions-showcase-list">
 
         <!-- ------------------------------------------------------------------
              FLAGSHIP ENTERPRISE SOLUTION: END-TO-END FULL-CYCLE RCM (SINGLE SLA)
              ------------------------------------------------------------------ -->
-        <article class="solution-showcase-row" id="end-to-end" style="border: 1px solid rgba(56, 189, 248, 0.4); background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(2, 132, 199, 0.12) 100%); border-radius: 18px; padding: 36px; margin-bottom: 48px; box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.7);">
+        <span id="full-cycle" style="display: block; position: relative; top: -100px; visibility: hidden;"></span>
+        <article class="solution-showcase-row" id="end-to-end" data-anchor="full-cycle" style="border: 1px solid rgba(56, 189, 248, 0.4); background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(2, 132, 199, 0.12) 100%); border-radius: 18px; padding: 36px; margin-bottom: 48px; box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.7);">
           <div class="showcase-text-col">
             <span class="showcase-area-badge" style="background: rgba(56, 189, 248, 0.2); border-color: #38BDF8; color: #38BDF8;">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -460,7 +771,7 @@
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
               Solution Area 01
             </span>
-            <h2 class="showcase-heading">Patient Access &amp; Front-End Integrity</h2>
+            <h2 class="showcase-heading">Patient Access Services</h2>
             <p class="showcase-desc">
               Covering the <strong>front-end RCM stage</strong>, this solution automates real-time insurance eligibility verification (EDI 270/271), prior authorization status checks, and patient cost estimation under the No Surprises Act. By validating coverage and securing authorizations before clinical care begins, it drastically reduces eligibility-related denials and shortens authorization turnaround time.
             </p>
@@ -549,6 +860,7 @@
         <!-- ------------------------------------------------------------------
              SOLUTION 2: HEALTH INFORMATION MANAGEMENT (HIM)
              ------------------------------------------------------------------ -->
+        <span id="him-coding" style="display: block; position: relative; top: -100px; visibility: hidden;"></span>
         <article class="solution-showcase-row" id="him">
           <div class="showcase-text-col">
             <span class="showcase-area-badge">
@@ -872,7 +1184,7 @@
       <div class="modal-header">
         <div>
           <span class="showcase-area-badge" style="margin-bottom: 4px;">Deep Dive</span>
-          <h3 class="section-title" id="modal-title-1" style="font-size: 1.5rem; margin-bottom: 0;">Patient Access &amp; Front-End Integrity</h3>
+          <h3 class="section-title" id="modal-title-1" style="font-size: 1.5rem; margin-bottom: 0;">Patient Access Services</h3>
         </div>
         <button class="modal-close-btn" aria-label="Close modal">&times;</button>
       </div>

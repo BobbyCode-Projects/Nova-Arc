@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scheduling &amp; Patient Registration Verification | EMPI &amp; MRN Integrity | Nova Arc</title>
-  <meta name="description" content="Enterprise patient registration scrubbing, duplicate MRN prevention, and pre-encounter demographic auditing delivering a 99.8% registration accuracy rate for health systems.">
+  <title>Patient Scheduling &amp; Registration QA | Nova Arc</title>
+  <meta name="description" content="Patient Scheduling and Registration Quality Assurance services. Accurate registration and seamless patient access with Nova Arc.">
   
   <!-- SEO & Social Meta Tags -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Nova Arc Healthcare Technologies">
-  <meta property="og:title" content="Scheduling &amp; Patient Registration Verification | Nova Arc">
-  <meta property="og:description" content="Automated demographic scrubbing, duplicate MRN prevention, and upfront insurance verification delivering 99.8% registration accuracy across multi-hospital networks.">
+  <meta property="og:title" content="Patient Scheduling &amp; Registration QA | Nova Arc">
+  <meta property="og:description" content="Patient Scheduling and Registration Quality Assurance services. Accurate registration and seamless patient access with Nova Arc.">
   <meta property="og:url" content="https://novaarc-rcm.com/services/patient-registration-verification.html">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Scheduling &amp; Patient Registration Verification | Nova Arc">
-  <meta name="twitter:description" content="Pre-encounter demographic scrubbing and EMPI duplicate MRN elimination for enterprise health systems.">
+  <meta name="twitter:title" content="Patient Scheduling &amp; Registration QA | Nova Arc">
+  <meta name="twitter:description" content="Patient Scheduling and Registration Quality Assurance services. Accurate registration and seamless patient access with Nova Arc.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="../images/nova-arc-logo.png">
@@ -62,7 +62,7 @@
           {
             "@type": "ListItem",
             "position": 3,
-            "name": "Scheduling & Patient Registration Verification",
+            "name": "Patient Scheduling & Registration QA",
             "item": "https://novaarc-rcm.com/services/patient-registration-verification.html"
           }
         ]
@@ -70,7 +70,7 @@
       {
         "@type": "Service",
         "@id": "https://novaarc-rcm.com/services/patient-registration-verification.html#service",
-        "name": "Scheduling & Patient Registration Verification",
+        "name": "Patient Scheduling & Registration QA",
         "serviceType": "Healthcare Revenue Cycle Management (RCM) - Patient Access",
         "provider": {
           "@type": "Organization",
@@ -138,24 +138,58 @@
       <!-- Desktop Navigation Menu -->
       <nav class="desktop-nav" aria-label="Main Navigation">
         <ul class="nav-menu">
-          <li><a href="../solutions.html" class="nav-link">Solutions</a></li>
+          <!-- Item 1: Solutions with dropdown -->
+          <li class="nav-item-dropdown nav-item-solutions">
+            <a href="../solutions.html" class="nav-dropdown-link" id="solutionsDropdownToggle" aria-haspopup="true" aria-expanded="false">
+              <span>Solutions</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="nav-simple-dropdown" aria-labelledby="solutionsDropdownToggle" role="menu">
+              <a href="../solutions/all-solutions-overview.html" class="nav-simple-item" role="menuitem">
+                <strong>All Solutions Overview</strong>
+                <span>Comprehensive end-to-end healthcare RCM suite</span>
+              </a>
+              <a href="../solutions/end-to-end-full-cycle-rcm.html" class="nav-simple-item" role="menuitem">
+                <strong>End-to-End Full-Cycle RCM</strong>
+                <span>Front-to-back revenue cycle operations</span>
+              </a>
+              <a href="../solutions/patient-access.html" class="nav-simple-item" role="menuitem">
+                <strong>Patient Access</strong>
+                <span>Pre-service clearance, eligibility &amp; auth</span>
+              </a>
+              <a href="../solutions/health-information-management.html" class="nav-simple-item" role="menuitem">
+                <strong>Health Information Management</strong>
+                <span>Inpatient, outpatient, profee &amp; HCC</span>
+              </a>
+              <a href="../solutions/extended-business-office.html" class="nav-simple-item" role="menuitem">
+                <strong>Extended Business Office</strong>
+                <span>Legacy resolution &amp; denial recovery</span>
+              </a>
+              <a href="../solutions/analytics-and-reporting.html" class="nav-simple-item" role="menuitem">
+                <strong>Analytics and Reporting</strong>
+                <span>Executive dashboards &amp; financial benchmarking</span>
+              </a>
+            </div>
+          </li>
           
-          <!-- Services Dropdown (Mega-Menu) -->
-          <li class="nav-item-dropdown">
-            <button class="nav-link nav-dropdown-toggle active" id="servicesDropdownToggle" aria-haspopup="true" aria-expanded="false" aria-controls="servicesMegaMenu">
+          <!-- Item 2: Services Dropdown (Mega-Menu) with Pill Button Style from Screenshot -->
+          <li class="nav-item-dropdown nav-item-services">
+            <a href="../services.html" class="nav-dropdown-link nav-dropdown-toggle" id="servicesDropdownToggle" aria-haspopup="true" aria-expanded="false" aria-controls="servicesMegaMenu">
               <span>Services</span>
               <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
-            </button>
+            </a>
 
             <!-- Mega-Menu Light Panel -->
             <div class="mega-menu-panel" id="servicesMegaMenu" role="menu" aria-labelledby="servicesDropdownToggle" aria-hidden="true">
               <div class="mega-menu-inner container">
                 <div class="mega-menu-grid">
-                  <!-- Column 1: Patient Access & Front-End Integrity -->
+                  <!-- Column 1: Patient Access Services -->
                   <div class="mega-col" role="none">
-                    <h3 class="mega-col-heading" id="menu-col-1-heading">Patient Access &amp; Front-End Integrity</h3>
+                    <h3 class="mega-col-heading" id="menu-col-1-heading"><a href="patient-access-services.html" class="mega-heading-link">Patient Access</a></h3>
                     <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-1-heading">
                       <li role="none">
                         <a href="real-time-insurance-eligibility.html" class="mega-item standalone" role="menuitem">
@@ -192,7 +226,7 @@
 
                   <!-- Column 2: HIM & Coding -->
                   <div class="mega-col" role="none">
-                    <h3 class="mega-col-heading" id="menu-col-2-heading">HIM &amp; Coding</h3>
+                    <h3 class="mega-col-heading" id="menu-col-2-heading"><a href="him-coding-services.html" class="mega-heading-link">HIM &amp; Coding</a></h3>
                     <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-2-heading">
                       <!-- Parent Item: Medical Coding Services -->
                       <li role="none" class="mega-parent-group">
@@ -247,7 +281,7 @@
 
                   <!-- Column 3: Patient Financial Services (PFS) & Recovery -->
                   <div class="mega-col" role="none">
-                    <h3 class="mega-col-heading" id="menu-col-3-heading">Patient Financial Services &amp; Recovery</h3>
+                    <h3 class="mega-col-heading" id="menu-col-3-heading"><a href="patient-financial-services.html" class="mega-heading-link">Patient Financial Services &amp; Recovery</a></h3>
                     <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-3-heading">
                       <!-- Parent Item: Claims Management Services -->
                       <li role="none" class="mega-parent-group">
@@ -304,26 +338,48 @@
             </div>
           </li>
 
-          <li>
-            <a href="../ai-platform.html" class="nav-link has-badge">
-              Nova Arc AI Platform
-              <span class="nav-badge">New</span>
+          <!-- Item 3: Nova Arc AI Platform with Dropdown -->
+          <li class="nav-item-dropdown nav-item-ai">
+            <a href="../ai-platform.html" class="nav-dropdown-link" id="aiDropdownToggle" aria-haspopup="true" aria-expanded="false">
+              <span>Nova Arc AI Platform</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
             </a>
+            <div class="nav-simple-dropdown" aria-labelledby="aiDropdownToggle" role="menu">
+              <a href="../ai-platform.html" class="nav-simple-item" role="menuitem">
+                <strong>Platform Overview</strong>
+                <span>Sub-second healthcare adjudication engine</span>
+              </a>
+              <a href="../ai-platform.html#agents" class="nav-simple-item" role="menuitem">
+                <strong>AI Agents &amp; Intelligent Automation</strong>
+                <span>Autonomous bots handling repetitive workflows</span>
+              </a>
+              <a href="../ai-platform.html#auth" class="nav-simple-item" role="menuitem">
+                <strong>Intelligent Prior Authorization</strong>
+                <span>Real-time clinical guideline alignment</span>
+              </a>
+              <a href="../ai-platform.html#coding" class="nav-simple-item" role="menuitem">
+                <strong>Autonomous Coding Engine</strong>
+                <span>AI-driven chart review &amp; code generation</span>
+              </a>
+            </div>
           </li>
+
+          <!-- Item 4: Who We Serve Link -->
           <li><a href="../who-we-serve.html" class="nav-link">Who We Serve</a></li>
-          <li><a href="../contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
-      <!-- Desktop Action Buttons -->
+      <!-- Desktop Action Buttons (Right side: Search icon + Connect with us button) -->
       <div class="nav-actions">
-        <a href="tel:18005558942" class="nav-phone" aria-label="Call Nova Arc">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        <button class="nav-search-btn" id="siteSearchBtn" aria-label="Search Nova Arc services and solutions" title="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
-          (800) 555-NOVA
-        </a>
-        <a href="../contact.html" class="btn btn-primary btn-sm">Request a Demo</a>
+        </button>
+        <a href="../contact.html" class="btn btn-connect-nav">Connect with us</a>
       </div>
 
       <!-- Mobile Hamburger Toggle -->
@@ -349,7 +405,7 @@
           </button>
           <div class="mobile-submenu-collapse" id="mobileServicesSubmenu" aria-hidden="true">
             <div class="mobile-submenu-section">
-              <h4 class="mobile-category-title">Patient Access &amp; Front-End</h4>
+              <h4 class="mobile-category-title"><a href="patient-access-services.html">Patient Access</a></h4>
               <a href="real-time-insurance-eligibility.html" class="mobile-submenu-link">Insurance Eligibility &amp; Benefits</a>
               <a href="prior-authorization-management.html" class="mobile-submenu-link">Prior Authorization Management</a>
               <a href="patient-registration-verification.html" class="mobile-submenu-link">Patient Scheduling &amp; Registration QA</a>
@@ -359,7 +415,7 @@
             </div>
 
             <div class="mobile-submenu-section">
-              <h4 class="mobile-category-title">HIM &amp; Coding</h4>
+              <h4 class="mobile-category-title"><a href="him-coding-services.html">HIM &amp; Coding</a></h4>
               <a href="full-cycle-medical-coding.html" class="mobile-submenu-link parent">Medical Coding Services</a>
               <a href="hcc-risk-adjustment.html" class="mobile-submenu-sublink">&rsaquo; Risk Adjustment/HCC Coding</a>
               <a href="full-cycle-medical-coding.html" class="mobile-submenu-sublink">&rsaquo; Facility/DRG &amp; ProFee Coding</a>
@@ -371,7 +427,7 @@
             </div>
 
             <div class="mobile-submenu-section">
-              <h4 class="mobile-category-title">Patient Financial Services &amp; Recovery</h4>
+              <h4 class="mobile-category-title"><a href="patient-financial-services.html">Patient Financial Services &amp; Recovery</a></h4>
               <a href="claims-management-scrubbing.html" class="mobile-submenu-link parent">Claims Management Services</a>
               <a href="claims-management-scrubbing.html" class="mobile-submenu-sublink">&rsaquo; Claims Submission &amp; Scrubbing EDI 837</a>
               <a href="payment-posting-reconciliation.html" class="mobile-submenu-sublink">&rsaquo; Payment Posting &amp; Reconciliation EDI 835</a>
@@ -384,60 +440,445 @@
             </div>
           </div>
         </li>
-        <li><a href="../ai-platform.html" class="mobile-nav-link">Nova Arc AI Platform <span class="nav-badge">New</span></a></li>
+        <li><a href="../ai-platform.html" class="mobile-nav-link">Nova Arc AI Platform <span>&rarr;</span></a></li>
         <li><a href="../who-we-serve.html" class="mobile-nav-link">Who We Serve <span>&rarr;</span></a></li>
-        <li><a href="../contact.html" class="mobile-nav-link">Contact <span>&rarr;</span></a></li>
       </ul>
       <div class="mobile-nav-bottom">
-        <a href="tel:18005558942" class="btn btn-secondary">Call (800) 555-NOVA</a>
-        <a href="../contact.html" class="btn btn-primary">Request a Demo</a>
+        <button class="btn btn-secondary mobile-search-trigger" id="mobileSearchTrigger" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          Search Services
+        </button>
+        <a href="tel:18005558942" class="btn btn-secondary" style="width: 100%; margin-bottom: 8px;">Call (800) 555-NOVA</a>
+        <a href="../contact.html" class="btn btn-primary" style="width: 100%;">Connect with us</a>
       </div>
     </div>
   </header>
 
 
   <!-- ========================================================================
-       1. BREADCRUMB & 2. HERO SECTION
+       PAGE-SPECIFIC STYLES
        ======================================================================== -->
-  <section class="page-hero" id="hero">
+  <style>
+    /* Scoped Page Styles for Patient Scheduling & Registration QA */
+    .reg-hero {
+      text-align: center;
+      padding: 72px 0 64px;
+      background: radial-gradient(circle at 50% 0%, rgba(31, 111, 235, 0.08) 0%, transparent 70%),
+                  linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .reg-breadcrumbs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .reg-breadcrumbs a {
+      color: var(--blue-accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+    .reg-breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+    .reg-breadcrumbs .separator {
+      color: var(--text-light);
+      font-size: 0.75rem;
+    }
+    .reg-tag {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      margin-bottom: 16px;
+    }
+    .reg-title {
+      font-size: clamp(2.3rem, 4.4vw, 3.6rem);
+      font-weight: 800;
+      color: var(--navy-primary);
+      line-height: 1.16;
+      letter-spacing: -0.025em;
+      max-width: 980px;
+      margin: 0 auto 20px;
+    }
+    .reg-subtitle {
+      font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+      color: var(--text-secondary);
+      line-height: 1.55;
+      font-weight: 400;
+      max-width: 820px;
+      margin: 0 auto 36px;
+    }
+    .btn-connect {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--blue-accent);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 14px 38px;
+      border-radius: 6px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(31, 111, 235, 0.35);
+      transition: all 0.2s ease;
+    }
+    .btn-connect:hover {
+      background: var(--blue-accent-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(31, 111, 235, 0.45);
+      color: #FFFFFF;
+    }
+
+    /* Overview Section (Screenshot 2) */
+    .overview-section {
+      padding: 96px 0;
+      background: #FFFFFF;
+    }
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .overview-tag {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      margin-bottom: 24px;
+    }
+    .overview-paragraph {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+    .overview-paragraph:last-child {
+      margin-bottom: 0;
+    }
+    .overview-image-container {
+      position: relative;
+    }
+    .overview-image {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 12px 32px rgba(11, 37, 69, 0.09);
+      border: 1px solid var(--border-light);
+      display: block;
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+    }
+
+    /* Services Provided Section (Screenshot 3) */
+    .services-provided-section {
+      padding: 96px 0 104px;
+      background: #F8FAFC;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .services-tag {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .services-headline {
+      font-size: clamp(2rem, 3.2vw, 2.75rem);
+      font-weight: 800;
+      color: var(--navy-primary);
+      text-align: center;
+      max-width: 880px;
+      margin: 0 auto 56px;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+    .services-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .service-feature-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 8px rgba(11, 37, 69, 0.03);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .service-feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(11, 37, 69, 0.08);
+      border-color: var(--blue-accent-border);
+    }
+    .service-card-icon-box {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      background: var(--blue-accent-light);
+      color: var(--blue-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      flex-shrink: 0;
+    }
+    .service-card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy-primary);
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+    .service-card-desc {
+      font-size: 0.925rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
+      flex-grow: 1;
+      margin-bottom: 20px;
+    }
+    .service-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--blue-accent);
+      text-decoration: none;
+      transition: color 0.15s ease;
+      margin-top: auto;
+    }
+    .service-card-link:hover {
+      color: var(--blue-accent-hover);
+      text-decoration: underline;
+    }
+
+    /* Benefits Section (Screenshot 4) */
+    .benefits-section {
+      padding: 96px 0;
+      background: #FFFFFF;
+    }
+    .benefits-tag {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .benefits-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+    .benefit-col {
+      display: flex;
+      flex-direction: column;
+    }
+    .benefit-icon-wrapper {
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 22px;
+      color: var(--blue-accent);
+    }
+    .benefit-heading {
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--navy-primary);
+      line-height: 1.35;
+      margin-bottom: 14px;
+    }
+    .benefit-copy {
+      font-size: 0.935rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
+    }
+
+    /* Dark CTA Section (Screenshot 5) */
+    .dark-cta-section {
+      background: linear-gradient(135deg, #051324 0%, #0B2545 60%, #133B6C 100%);
+      padding: 104px 0;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .dark-cta-bg-art {
+      position: absolute;
+      right: -80px;
+      bottom: -100px;
+      width: 650px;
+      height: 480px;
+      opacity: 0.22;
+      pointer-events: none;
+    }
+    .dark-cta-title {
+      font-size: clamp(2.3rem, 4vw, 3.4rem);
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      max-width: 820px;
+      margin: 0 auto 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .dark-cta-subtitle {
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+      color: #CBD5E1;
+      line-height: 1.65;
+      max-width: 740px;
+      margin: 0 auto 38px;
+      position: relative;
+      z-index: 1;
+    }
+    .btn-cta-consult {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--blue-accent);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 16px 36px;
+      border-radius: 6px;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(31, 111, 235, 0.4);
+      transition: all 0.2s ease;
+      position: relative;
+      z-index: 1;
+    }
+    .btn-cta-consult:hover {
+      background: var(--blue-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(31, 111, 235, 0.5);
+      color: #FFFFFF;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 1080px) {
+      .services-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .benefits-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px;
+      }
+    }
+    @media (max-width: 860px) {
+      .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .overview-image {
+        height: 320px;
+      }
+    }
+    @media (max-width: 640px) {
+      .services-cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .benefits-row {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .reg-hero {
+        padding: 48px 0 44px;
+      }
+      .overview-section,
+      .services-provided-section,
+      .benefits-section,
+      .dark-cta-section {
+        padding: 64px 0;
+      }
+    }
+  </style>
+
+  <!-- ========================================================================
+       1. HERO SECTION (Screenshot 1)
+       ======================================================================== -->
+  <section class="reg-hero" id="hero">
     <div class="container">
-      <!-- 1. Breadcrumb -->
-      <nav class="breadcrumb-nav" aria-label="Breadcrumbs">
+      <!-- Breadcrumb Navigation -->
+      <nav class="reg-breadcrumbs" aria-label="Breadcrumbs">
         <a href="../index.html">Home</a>
-        <span class="breadcrumb-separator">/</span>
+        <span class="separator">&gt;</span>
         <a href="../services.html">Services</a>
-        <span class="breadcrumb-separator">/</span>
-        <span style="color: var(--text-primary); font-weight: 600;">Scheduling &amp; Patient Registration Verification</span>
+        <span class="separator">&gt;</span>
+        <a href="patient-access-services.html">Patient Access</a>
+        <span class="separator">&gt;</span>
+        <span style="color: var(--text-primary); font-weight: 600;">Patient Scheduling &amp; Registration QA</span>
       </nav>
 
-      <!-- 2. Hero Content -->
-      <div class="page-hero-content">
-        <span class="section-tag">Front-End Data Integrity</span>
-        <h1 class="page-hero-title">
-          Scheduling &amp; Patient Registration Verification
-        </h1>
-        <p class="page-hero-subtitle">
-          Continuous pre-encounter demographic auditing, duplicate MRN prevention, and algorithmic insurance capture establishing a 99.8% front-end accuracy baseline across hospital networks.
-        </p>
+      <!-- Eyebrow: SERVICES -->
+      <div>
+        <span class="reg-tag">SERVICES</span>
+      </div>
 
-        <!-- Master KPI Stat Banner -->
-        <div style="display: inline-flex; align-items: center; gap: 14px; background: rgba(31, 111, 235, 0.08); border: 1px solid var(--blue-accent-border); padding: 12px 20px; border-radius: var(--radius-lg); margin-bottom: var(--space-xl); box-shadow: var(--shadow-sm);">
-          <div style="font-size: 1.85rem; font-weight: 800; color: var(--blue-accent); line-height: 1;">
-            99.8%
-          </div>
-          <div style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.4;">
-            <strong style="color: var(--navy-primary); display: block;">Front-End Registration Accuracy SLA</strong>
-            Eliminating duplicate MRN fragmentation and reducing front-end billing denials to under 0.5%
-          </div>
+      <!-- Main Title -->
+      <h1 class="reg-title">
+        Patient Scheduling &amp; Registration QA
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="reg-subtitle">
+        Accurate Registration. Seamless Patient Access.
+      </p>
+
+      <!-- Connect With Us Button -->
+      <div>
+        <a href="../contact.html?service=patient-registration" class="btn-connect">
+          Connect with us
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       2. OVERVIEW SECTION (Screenshot 2)
+       ======================================================================== -->
+  <section class="overview-section" id="overview">
+    <div class="container">
+      <div class="overview-grid">
+        <!-- Left: Text Content -->
+        <div class="overview-content">
+          <span class="overview-tag">OVERVIEW</span>
+          <p class="overview-paragraph">
+            The quality of information captured during scheduling and registration directly influences downstream patient access and revenue cycle performance. Incomplete demographics, inaccurate insurance details, duplicate records, or scheduling inconsistencies can create unnecessary rework and downstream complications.
+          </p>
+          <p class="overview-paragraph">
+            Our Patient Scheduling and Registration Quality Assurance services help healthcare organizations strengthen the accuracy of information captured at the earliest point of the patient journey. We review critical data elements, identify discrepancies, and support timely correction before information moves further through the care and billing process.
+          </p>
         </div>
 
-        <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
-          <a href="../contact.html?service=patient-registration-verification" class="btn btn-primary">
-            Schedule a Registration Audit
-          </a>
-          <a href="#duplicate-mrn-explainer" class="btn btn-secondary">
-            Explore Duplicate MRN Architecture &darr;
-          </a>
+        <!-- Right: Professional Team Image -->
+        <div class="overview-image-container">
+          <img src="../images/patient-reg-qa-team.jpg" alt="Patient Scheduling & Registration Quality Assurance Team" class="overview-image" width="600" height="440">
         </div>
       </div>
     </div>
@@ -445,80 +886,175 @@
 
 
   <!-- ========================================================================
-       3. "THE PROBLEM" SECTION (Executive Pain Points)
+       3. SERVICES PROVIDED SECTION (Screenshot 3)
        ======================================================================== -->
-  <section class="section section-light" id="problem">
+  <section class="services-provided-section" id="services-provided">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Front-End Root Causes</span>
-        <h2 class="section-title">Why Flawed Patient Registration Corrupts the Revenue Cycle</h2>
-        <p class="section-subtitle">
-          Over 40% of all billing denials and Discharged Not Final Billed (DNFB) delays trace directly back to errors committed during the first 3 minutes of patient scheduling.
-        </p>
-      </div>
+      <!-- Section Header -->
+      <span class="services-tag">SERVICES PROVIDED</span>
+      <h2 class="services-headline">
+        Leverage our experience and expertise for comprehensive registration quality assurance.
+      </h2>
 
-      <div class="pillars-grid">
-        <!-- Problem 1 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+      <!-- 10 Service Cards Grid -->
+      <div class="services-cards-grid">
+        <!-- Service 1 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
             </svg>
           </div>
-          <span class="pillar-number">PROBLEM 01</span>
-          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-sm);">
-            Duplicate MRN Proliferation &amp; Chart Splitting
-          </h3>
-          <p style="font-size: 0.925rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-md);">
-            The average hospital network operates with an <strong>8% to 12% duplicate MRN rate</strong>. When hurried intake staff create a second profile for an existing patient, historical insurance policies, prior balances, and clinical allergy records fragment, creating severe clinical liability and billing gridlock.
+          <h3 class="service-card-title">Patient demographic validation</h3>
+          <p class="service-card-desc">
+            Verify patient legal name, date of birth, social security number, contact details, and residential address against authoritative national databases.
           </p>
-          <div style="font-size: 0.8rem; font-weight: 700; color: var(--status-danger); background: var(--status-danger-light); padding: 6px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(239, 68, 68, 0.2);">
-            Impact: $1,950 Average Cost per Duplicate Record in Redundant Care &amp; HIM Merging
-          </div>
+          <a href="../contact.html?service=patient-registration" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
         </div>
 
-        <!-- Problem 2 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <!-- Service 2 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              <line x1="2" y1="10" x2="22" y2="10"></line>
+              <circle cx="8" cy="15" r="1.5"></circle>
+              <line x1="14" y1="15" x2="18" y2="15"></line>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Insurance information quality checks</h3>
+          <p class="service-card-desc">
+            Validate primary subscriber identity, group policy numbers, payer ID mapping, and coverage tier parameters prior to patient encounters.
+          </p>
+          <a href="../contact.html?service=patient-registration" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Registration data review</h3>
+          <p class="service-card-desc">
+            Comprehensive pre-encounter review of intake paperwork, digital questionnaires, and patient registration fields to verify data integrity.
+          </p>
+          <a href="../contact.html?service=patient-registration" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Appointment and scheduling accuracy checks</h3>
+          <p class="service-card-desc">
+            Ensure correct provider scheduling rules, appointment duration templates, visit types, and facility locations are accurately matched.
+          </p>
+          <a href="../contact.html?service=patient-registration" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Duplicate and inconsistent information identification</h3>
+          <p class="service-card-desc">
+            Detect duplicate master patient indexes (MPI), fragmented medical record numbers (MRNs), and conflicting demographic histories across systems.
+          </p>
+          <a href="../contact.html?service=patient-registration" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Patient record quality assurance</h3>
+          <p class="service-card-desc">
+            Rigorous QA protocols ensuring patient clinical profiles and billing records are synchronized across all enterprise EHR modules.
+          </p>
+          <a href="../contact.html?service=patient-registration" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 7 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
               <line x1="12" y1="8" x2="12" y2="12"></line>
               <line x1="12" y1="16" x2="12.01" y2="16"></line>
             </svg>
           </div>
-          <span class="pillar-number">PROBLEM 02</span>
-          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-sm);">
-            Demographic Typos &amp; Subscriber ID Inversion
-          </h3>
-          <p style="font-size: 0.925rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-md);">
-            A single inverted digit in a Medicare Beneficiary Identifier (MBI) or a transposed birth date month/day causes clearinghouse 277CA rejections. Staff spend 18 to 25 business days re-verifying identities on unbilled charts while Discharged Not Final Billed (DNFB) metrics climb.
+          <h3 class="service-card-title">Front-end data discrepancy identification</h3>
+          <p class="service-card-desc">
+            Identify discrepancies between patient-entered intake forms and verified payer coverage records before billing generation.
           </p>
-          <div style="font-size: 0.8rem; font-weight: 700; color: var(--status-danger); background: var(--status-danger-light); padding: 6px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(239, 68, 68, 0.2);">
-            Impact: Extended DNFB &amp; Clearinghouse 277CA Front-End Bounces
-          </div>
+          <a href="../contact.html?service=patient-registration" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
         </div>
 
-        <!-- Problem 3 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
+        <!-- Service 8 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 11 12 14 22 4"></polyline>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
             </svg>
           </div>
-          <span class="pillar-number">PROBLEM 03</span>
-          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-sm);">
-            Returned Mail Statements &amp; Bad Debt Leakage
-          </h3>
-          <p style="font-size: 0.925rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-md);">
-            Without automated address standardization at registration, 14% of paper patient balance billing statements are returned as undeliverable mail. Uncollected patient deductibles and coinsurance balances age directly into bad debt write-offs without reaching the responsible guarantor.
+          <h3 class="service-card-title">Registration workflow audits</h3>
+          <p class="service-card-desc">
+            Ongoing departmental audits assessing front-desk intake compliance, error trends, and registrar procedural benchmarks.
           </p>
-          <div style="font-size: 0.8rem; font-weight: 700; color: var(--status-danger); background: var(--status-danger-light); padding: 6px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(239, 68, 68, 0.2);">
-            Impact: $350K+ Annual Loss per Hospital in Undeliverable Self-Pay Statements
+          <a href="../contact.html?service=patient-registration" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 9 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
           </div>
+          <h3 class="service-card-title">Pre-service data validation</h3>
+          <p class="service-card-desc">
+            Conduct final pre-service validations 24 to 48 hours prior to care to capture last-minute policy alterations or address updates.
+          </p>
+          <a href="../contact.html?service=patient-registration" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 10 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Quality monitoring and reporting</h3>
+          <p class="service-card-desc">
+            Real-time accuracy dashboards, error category breakdown analytics, and actionable registrar training feedback reports.
+          </p>
+          <a href="../contact.html?service=patient-registration" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
     </div>
@@ -526,492 +1062,103 @@
 
 
   <!-- ========================================================================
-       4. DUPLICATE MRN PREVENTION EXPLAINER
+       4. BENEFITS SECTION (Screenshot 4)
        ======================================================================== -->
-  <section class="section" id="duplicate-mrn-explainer">
+  <section class="benefits-section" id="benefits">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Identity Governance</span>
-        <h2 class="section-title">Duplicate MRN Prevention Architecture</h2>
-        <p class="section-subtitle">
-          How Nova Arc protects Enterprise Master Patient Index (EMPI) integrity, resolving ambiguous identities in real time before duplicate medical records fragment clinical care.
-        </p>
-      </div>
+      <!-- Section Tag -->
+      <span class="benefits-tag">BENEFITS</span>
 
-      <!-- Explainer Canvas -->
-      <div class="showcase-preview-box" style="padding: var(--space-2xl); border-radius: var(--radius-xl); background: linear-gradient(135deg, #051324 0%, #0E2F56 100%);">
-        
-        <div class="preview-box-header" style="margin-bottom: var(--space-xl);">
-          <div>
-            <span style="font-size: 1rem; font-weight: 800; color: #FFFFFF; display: block;">Real-Time EMPI Identity Resolution Gateway</span>
-            <span style="font-size: 0.775rem; color: #94A3B8;">Multi-Factor Deterministic &amp; Probabilistic Identity Matching</span>
+      <!-- 4 Columns Grid -->
+      <div class="benefits-row">
+        <!-- Benefit 1 -->
+        <div class="benefit-col">
+          <div class="benefit-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
           </div>
-          <span class="preview-badge-status">
-            0.18% Duplicate Rate SLA
-          </span>
+          <h3 class="benefit-heading">Improve Data Accuracy</h3>
+          <p class="benefit-copy">
+            Quality checks help ensure critical patient and insurance information is complete and consistent before the encounter.
+          </p>
         </div>
 
-        <!-- 3-Column Explainer Layout -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-lg); margin-bottom: var(--space-xl);">
-          
-          <!-- Step 1: Pre-Registration Intercept -->
-          <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-lg); padding: var(--space-lg);">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-              <span class="preview-item-tag tag-blue" style="font-size: 0.75rem;">Step 01</span>
-              <span style="font-size: 0.7rem; color: #94A3B8; font-weight: 700;">INTERCEPT</span>
-            </div>
-            <h4 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">
-              Cross-Campus Scheduling Intercept
-            </h4>
-            <p style="font-size: 0.825rem; color: #CBD5E1; line-height: 1.55; margin-bottom: 12px;">
-              When an appointment is booked in any ambulatory clinic, acute hospital, or surgery center, Nova Arc intercepts the intake transaction before the EHR assigns a new MRN.
-            </p>
-            <div style="font-family: monospace; font-size: 0.725rem; color: #7DD3FC; background: rgba(0, 0, 0, 0.35); padding: 6px 10px; border-radius: var(--radius-sm);">
-              HL7 ADT &bull; FHIR Patient Resource Intercepted
-            </div>
+        <!-- Benefit 2 -->
+        <div class="benefit-col">
+          <div class="benefit-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="1 4 1 10 7 10"></polyline>
+              <polyline points="23 20 23 14 17 14"></polyline>
+              <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
+            </svg>
           </div>
-
-          <!-- Step 2: Algorithmic Matching -->
-          <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-lg); padding: var(--space-lg);">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-              <span class="preview-item-tag tag-green" style="font-size: 0.75rem;">Step 02</span>
-              <span style="font-size: 0.7rem; color: #10B981; font-weight: 700;">&gt; 99.9% ACCURACY</span>
-            </div>
-            <h4 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">
-              Multi-Attribute Identity Resolution
-            </h4>
-            <p style="font-size: 0.825rem; color: #CBD5E1; line-height: 1.55; margin-bottom: 12px;">
-              Scans historical records using 14 discrete identifiers: legal name phonetics (Metaphone), DOB, SSN-last-4, prior maiden names, address history, and telecom hashes.
-            </p>
-            <div style="font-family: monospace; font-size: 0.725rem; color: #86EFAC; background: rgba(0, 0, 0, 0.35); padding: 6px 10px; border-radius: var(--radius-sm);">
-              Match Score: 98.4% &bull; Existing MRN #902148 Identified
-            </div>
-          </div>
-
-          <!-- Step 3: Automated Profile Unification -->
-          <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-lg); padding: var(--space-lg);">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-              <span class="preview-item-tag tag-blue" style="font-size: 0.75rem;">Step 03</span>
-              <span style="font-size: 0.7rem; color: #38BDF8; font-weight: 700;">AUTO-UNIFY</span>
-            </div>
-            <h4 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">
-              Single Golden Record Unification
-            </h4>
-            <p style="font-size: 0.825rem; color: #CBD5E1; line-height: 1.55; margin-bottom: 12px;">
-              Binds the encounter to the master golden record. Updates current address, refreshed insurance subscriber cards, and prevents duplicate registration generation in Epic or Cerner.
-            </p>
-            <div style="font-family: monospace; font-size: 0.725rem; color: #7DD3FC; background: rgba(0, 0, 0, 0.35); padding: 6px 10px; border-radius: var(--radius-sm);">
-              EHR EMPI Sync Confirmed &bull; Zero HIM Merge Needed
-            </div>
-          </div>
-
+          <h3 class="benefit-heading">Reduce Rework</h3>
+          <p class="benefit-copy">
+            Early identification of registration errors minimizes repetitive corrections across downstream teams.
+          </p>
         </div>
 
-        <!-- Comparative Identity Matching Telemetry Card -->
-        <div style="background: rgba(0, 0, 0, 0.4); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-md); padding: var(--space-lg);">
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
-            <span style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF;">Live Enterprise Identity Matching Log:</span>
-            <span style="font-size: 0.75rem; color: #10B981; font-weight: 600;">Match Algorithm: Fellegi-Sunter Probabilistic Framework</span>
+        <!-- Benefit 3 -->
+        <div class="benefit-col">
+          <div class="benefit-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+              <polyline points="17 6 23 6 23 12"></polyline>
+            </svg>
           </div>
-          
-          <div style="font-family: monospace; font-size: 0.775rem; color: #E2E8F0; line-height: 1.6;">
-            <div><span style="color: #94A3B8;">[INTAKE ENCOUNTER]:</span> "Katherine M. Johnson" &bull; DOB: 1984-11-03 &bull; 1402 Elmwood Ave, Boston MA</div>
-            <div><span style="color: #94A3B8;">[HISTORICAL MRN 44021]:</span> "Kate Johnson-Smythe" &bull; DOB: 1984-11-03 &bull; 72 Beacon St, Boston MA</div>
-            <div style="color: #FCD34D;">[IDENTITY ENGINE]: Prior address &amp; phone match identified &bull; Maiden name cross-referenced &bull; SSN4 verified</div>
-            <div style="color: #86EFAC; font-weight: bold;">[PREVENTION ACTION]: Duplicate MRN creation BLOCKED &bull; Encounter routed to Master MRN #44021</div>
-          </div>
+          <h3 class="benefit-heading">Strengthen Revenue Cycle Performance</h3>
+          <p class="benefit-copy">
+            Better front-end data creates a stronger foundation for billing, claims processing, and reimbursement activities.
+          </p>
         </div>
 
+        <!-- Benefit 4 -->
+        <div class="benefit-col">
+          <div class="benefit-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </div>
+          <h3 class="benefit-heading">Enhance the Patient Experience</h3>
+          <p class="benefit-copy">
+            Accurate registration reduces unnecessary questions, delays, and administrative friction during the patient journey.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
 
   <!-- ========================================================================
-       5. REGISTRATION ACCURACY CHECKLIST (Demographics & Insurance Capture)
+       5. DARK CTA SECTION (Screenshot 5)
        ======================================================================== -->
-  <section class="section section-light" id="registration-checklist">
+  <section class="dark-cta-section" id="cta-contact">
+    <!-- Decorative Wave Contour Lines (Nova Arc Accent Colors) -->
+    <svg class="dark-cta-bg-art" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M0 360C160 320 290 190 460 240C550 270 590 330 610 360" stroke="#1F6FEB" stroke-width="1.5" stroke-opacity="0.4" />
+      <path d="M0 330C150 290 280 170 450 220C540 250 580 310 610 340" stroke="#1F6FEB" stroke-width="1.5" stroke-opacity="0.35" />
+      <path d="M0 300C140 260 270 150 440 200C530 230 570 290 610 320" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.3" />
+      <path d="M0 270C130 230 260 130 430 180C520 210 560 270 610 300" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.25" />
+      <path d="M0 240C120 200 250 110 420 160C510 190 550 250 610 280" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.2" />
+      <path d="M0 210C110 170 240 90 410 140C500 170 540 230 610 260" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.15" />
+    </svg>
+
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Front-End Precision</span>
-        <h2 class="section-title">Registration Accuracy Checklist</h2>
-        <p class="section-subtitle">
-          Our pre-arrival auditing engine screens all scheduled patients 48 to 72 hours in advance against 28 critical demographic and insurance validation points.
-        </p>
-      </div>
-
-      <!-- 2-Column Checklist Matrix -->
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2xl);" class="contact-faq-grid">
-        
-        <!-- Checklist Group 1: Demographics & Guarantor Integrity -->
-        <div class="pillar-card" style="padding: var(--space-2xl); background: #FFFFFF; box-shadow: var(--shadow-sm);">
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-lg); border-bottom: 1px solid var(--border-light); padding-bottom: var(--space-md);">
-            <div class="preview-item-icon" style="background: rgba(31, 111, 235, 0.15); color: var(--blue-accent); width: 34px; height: 34px;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-            </div>
-            <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--navy-primary); margin: 0;">
-              Part A: Demographic &amp; Guarantor Checklist
-            </h3>
-          </div>
-
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px; padding: 0;">
-            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: var(--text-secondary);">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Legal Name &amp; Alias Reconciliation:</strong> Validates first, middle, last, and preferred names against government ID scans and payer master indexes.</span>
-            </li>
-            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: var(--text-secondary);">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>USPS CASS-Certified Address Standardization:</strong> Corrects ZIP+4, street prefixes, apartment designations, and validates active deliverability.</span>
-            </li>
-            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: var(--text-secondary);">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Mobile Telecom &amp; TCPA Consent:</strong> Confirms active cellular subscriber numbers and records electronic consent for billing statements and appointment reminders.</span>
-            </li>
-            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: var(--text-secondary);">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Guarantor Financial Accountability:</strong> Verifies legal guardian identity for pediatric encounters or power-of-attorney documentation for dependent adults.</span>
-            </li>
-            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: var(--text-secondary);">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Identity Theft &amp; Red Flags Rule Compliance:</strong> Automated cross-checking against deceased master files and active fraud alerts.</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Checklist Group 2: Insurance & COB Integrity -->
-        <div class="pillar-card" style="padding: var(--space-2xl); background: #FFFFFF; box-shadow: var(--shadow-sm);">
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-lg); border-bottom: 1px solid var(--border-light); padding-bottom: var(--space-md);">
-            <div class="preview-item-icon" style="background: rgba(16, 185, 129, 0.15); color: #10B981; width: 34px; height: 34px;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="4" width="20" height="16" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
-            </div>
-            <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--navy-primary); margin: 0;">
-              Part B: Insurance Capture &amp; COB Checklist
-            </h3>
-          </div>
-
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px; padding: 0;">
-            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: var(--text-secondary);">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>OCR Card Image Ingestion:</strong> Captures high-resolution front/back scans of insurance cards, extracting member ID, group number, and RxBIN/PCN.</span>
-            </li>
-            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: var(--text-secondary);">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Electronic Payer ID Resolution:</strong> Crosswalks vague payer names (e.g. "Blue Cross") to the exact 5-digit electronic clearinghouse payer ID.</span>
-            </li>
-            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: var(--text-secondary);">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Subscriber-to-Patient Relationship:</strong> Confirms whether the patient is self, spouse, or child, and validates subscriber DOB for COB primacy.</span>
-            </li>
-            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: var(--text-secondary);">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Medicare Secondary Payer (MSP) Questionnaire:</strong> Executes automated 6-question CMS survey to detect working-aged commercial primacy or black lung coverage.</span>
-            </li>
-            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: var(--text-secondary);">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Active Plan Window &amp; Benefit Tiering:</strong> Verifies policy effective date covers encounter date, checking in-network vs out-of-network status.</span>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
-       6. SECTOR FOCUS: HEALTH SYSTEMS & MULTI-HOSPITAL NETWORKS
-       ======================================================================== -->
-  <section class="section" id="health-systems-focus">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Enterprise Scale</span>
-        <h2 class="section-title">Built For Health Systems &amp; Multi-Hospital Networks</h2>
-        <p class="section-subtitle">
-          Engineered for integrated delivery networks (IDNs), academic medical centers, and regional health systems managing multi-facility registration workflows.
-        </p>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: var(--space-2xl);">
-        
-        <!-- Health System Pillar 1 -->
-        <article class="care-setting-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md);">
-              <span class="service-sla-chip">Regional Network Scale</span>
-              <span style="font-size: 0.8rem; font-weight: 700; color: var(--blue-accent);">Enterprise 01</span>
-            </div>
-            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--navy-primary); margin-bottom: var(--space-sm);">
-              Cross-Campus Patient Access Governance
-            </h3>
-            <p style="font-size: 0.925rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-lg);">
-              Large health systems with multiple acute hospitals, emergency departments, and dozens of outpatient specialty clinics face rampant record duplication. Nova Arc creates a centralized pre-arrival verification hub that harmonizes patient access across every physical and virtual point of entry.
-            </p>
-            <ul class="service-feature-checklist" style="margin-bottom: var(--space-xl);">
-              <li class="service-checklist-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Unified patient identification across acute, ambulatory, and emergency facilities</span>
-              </li>
-              <li class="service-checklist-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Automated pre-registration workqueues prioritized by clinical encounter date</span>
-              </li>
-              <li class="service-checklist-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Instant bi-directional synchronization with Epic Prelude, Cerner, and MEDITECH</span>
-              </li>
-            </ul>
-          </div>
-          <div style="border-top: 1px solid var(--border-light); padding-top: var(--space-md); display: flex; align-items: center; justify-content: space-between;">
-            <a href="../who-we-serve.html" class="link-arrow" style="font-weight: 700; font-size: 0.9rem;">
-              Explore Health System Solutions &rarr;
-            </a>
-            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">99.8% Accuracy Rate</span>
-          </div>
-        </article>
-
-        <!-- Health System Pillar 2 -->
-        <article class="care-setting-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md);">
-              <span class="service-sla-chip">Post-Merger EMPI Cleanup</span>
-              <span style="font-size: 0.8rem; font-weight: 700; color: var(--blue-accent);">Enterprise 02</span>
-            </div>
-            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--navy-primary); margin-bottom: var(--space-sm);">
-              M&amp;A Consolidation &amp; EMPI Cleansing
-            </h3>
-            <p style="font-size: 0.925rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-lg);">
-              Hospital acquisitions result in conflicting patient records scattered across disparate EHR databases. Nova Arc’s automated data migration algorithms deduplicate millions of historical records, resolving conflicting demographics and merging fragmented charts into a pristine master patient index.
-            </p>
-            <ul class="service-feature-checklist" style="margin-bottom: var(--space-xl);">
-              <li class="service-checklist-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Automated bulk deduplication of historical multi-facility EHR databases</span>
-              </li>
-              <li class="service-checklist-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Elimination of manual HIM chart-merge backlogs and associated labor costs</span>
-              </li>
-              <li class="service-checklist-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Continuous data governance monitoring with automated exception alerting</span>
-              </li>
-            </ul>
-          </div>
-          <div style="border-top: 1px solid var(--border-light); padding-top: var(--space-md); display: flex; align-items: center; justify-content: space-between;">
-            <a href="../who-we-serve.html" class="link-arrow" style="font-weight: 700; font-size: 0.9rem;">
-              View Enterprise RCM Blueprint &rarr;
-            </a>
-            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">&lt; 0.2% Duplicates</span>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
-       7. SLA & BENCHMARK STRIP
-       ======================================================================== -->
-  <section class="section section-light" id="sla-benchmarks" style="padding-top: var(--space-2xl); padding-bottom: var(--space-2xl);">
-    <div class="container">
-      <div class="section-header" style="margin-bottom: var(--space-xl);">
-        <span class="section-tag">Performance Covenants</span>
-        <h2 class="section-title">Operational SLAs &amp; Registration Benchmarks</h2>
-        <p class="section-subtitle">
-          Contractual performance standards guaranteeing intake accuracy, address standardization, and zero front-end registration leakage.
-        </p>
-      </div>
-
-      <!-- 4-Box Metrics Strip -->
-      <div class="ai-hero-stats-strip">
-        <div class="ai-hero-stat-box">
-          <div class="ai-stat-highlight">99.8%</div>
-          <div class="ai-stat-sublabel">Front-End Registration Accuracy</div>
-        </div>
-        <div class="ai-hero-stat-box">
-          <div class="ai-stat-highlight">48 – 72h</div>
-          <div class="ai-stat-sublabel">Pre-Encounter Audit Window</div>
-        </div>
-        <div class="ai-hero-stat-box">
-          <div class="ai-stat-highlight">&lt; 0.2%</div>
-          <div class="ai-stat-sublabel">Enterprise Duplicate Record Rate</div>
-        </div>
-        <div class="ai-hero-stat-box">
-          <div class="ai-stat-highlight">100%</div>
-          <div class="ai-stat-sublabel">USPS CASS Address Standardization</div>
-        </div>
-      </div>
-
-      <p style="text-align: center; font-size: 0.8rem; color: var(--text-muted); margin-top: var(--space-md); font-style: italic;">
-        * Illustrative benchmark standards based on aggregated Nova Arc enterprise hospital network partner operational SLA covenants.
+      <h2 class="dark-cta-title">
+        Ready to strengthen registration quality?
+      </h2>
+      <p class="dark-cta-subtitle">
+        Contact us today to discuss eliminating front-end demographic errors and streamlining patient access across your organization.
       </p>
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
-       8. FAQ ACCORDION (Reused Accordion Pattern)
-       ======================================================================== -->
-  <section class="section" id="faq">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Executive FAQ</span>
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">
-          Technical and operational guidance on EMPI identity matching, OCR card ingestion, and EHR integration.
-        </p>
-      </div>
-
-      <div class="services-accordion-list" style="max-width: 920px; margin: 0 auto;">
-
-        <!-- FAQ Item 1 -->
-        <div class="service-accordion-item open">
-          <button type="button" class="service-accordion-header" aria-expanded="true">
-            <div class="accordion-title-box">
-              <div class="service-icon-circle">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                </svg>
-              </div>
-              <div class="service-header-content">
-                <h3 class="service-name">How does Nova Arc distinguish between patients with identical names and birth dates?</h3>
-              </div>
-            </div>
-            <div class="accordion-meta-box">
-              <div class="accordion-chevron-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-          </button>
-          <div class="service-accordion-body">
-            <div class="service-body-inner" style="padding: var(--space-lg) var(--space-xl);">
-              <p style="color: var(--text-secondary); line-height: 1.65; font-size: 0.95rem;">
-                When two patients share identical legal names and dates of birth (a common occurrence in metropolitan health systems), Nova Arc’s identity resolution engine triggers secondary and tertiary probabilistic comparisons. The system analyzes historical address footprints, cell phone carrier hashes, previous insurance policy group numbers, and SSN-last-4 segments. If a score falls within the borderline ambiguity zone (85%–94%), it is routed to our certified HIM identity verification pod for discrete document verification before any record merging occurs.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- FAQ Item 2 -->
-        <div class="service-accordion-item">
-          <button type="button" class="service-accordion-header" aria-expanded="false">
-            <div class="accordion-title-box">
-              <div class="service-icon-circle">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                </svg>
-              </div>
-              <div class="service-header-content">
-                <h3 class="service-name">Can your system ingest insurance card photos taken by patients on mobile devices?</h3>
-              </div>
-            </div>
-            <div class="accordion-meta-box">
-              <div class="accordion-chevron-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-          </button>
-          <div class="service-accordion-body">
-            <div class="service-body-inner" style="padding: var(--space-lg) var(--space-xl);">
-              <p style="color: var(--text-secondary); line-height: 1.65; font-size: 0.95rem;">
-                Yes. Our computer vision OCR pipeline accepts mobile photos captured through patient pre-check-in portals, digital check-in kiosks, or staff scanner devices. The engine handles low-light captures, skewed angles, and glare, automatically extracting member numbers, group IDs, payer claims mailing addresses, and pharmacy benefit details, writing them into discrete EHR registration fields with 99.4% optical accuracy.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- FAQ Item 3 -->
-        <div class="service-accordion-item">
-          <button type="button" class="service-accordion-header" aria-expanded="false">
-            <div class="accordion-title-box">
-              <div class="service-icon-circle">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                </svg>
-              </div>
-              <div class="service-header-content">
-                <h3 class="service-name">How does pre-encounter registration verification integrate with hospital EHR scheduling queues?</h3>
-              </div>
-            </div>
-            <div class="accordion-meta-box">
-              <div class="accordion-chevron-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-          </button>
-          <div class="service-accordion-body">
-            <div class="service-body-inner" style="padding: var(--space-lg) var(--space-xl);">
-              <p style="color: var(--text-secondary); line-height: 1.65; font-size: 0.95rem;">
-                Nova Arc establishes real-time HL7 SIU (Scheduling Information Unsolicited) and FHIR appointment listeners. As soon as an encounter is scheduled, our automated audit engine pulls the account into a 72-hour pre-encounter queue. Scrubbed and verified records are flagged with a green "Registration Cleared" badge in your EHR scheduling view, highlighting unverified accounts for focused front-desk outreach.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- FAQ Item 4 -->
-        <div class="service-accordion-item">
-          <button type="button" class="service-accordion-header" aria-expanded="false">
-            <div class="accordion-title-box">
-              <div class="service-icon-circle">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                </svg>
-              </div>
-              <div class="service-header-content">
-                <h3 class="service-name">What is the direct impact of CASS-certified address standardization on patient collections?</h3>
-              </div>
-            </div>
-            <div class="accordion-meta-box">
-              <div class="accordion-chevron-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-          </button>
-          <div class="service-accordion-body">
-            <div class="service-body-inner" style="padding: var(--space-lg) var(--space-xl);">
-              <p style="color: var(--text-secondary); line-height: 1.65; font-size: 0.95rem;">
-                Standardizing addresses using the USPS Coding Accuracy Support System (CASS) reduces returned statement mail from an average of 14% to under 0.8%. Statements reach the responsible guarantor on the first billing cycle, accelerating self-pay cash collection by an average of 18 days and preventing unnecessary collection agency placements.
-              </p>
-            </div>
-          </div>
-        </div>
-
+      <div>
+        <a href="../contact.html?service=patient-registration" class="btn-cta-consult">
+          Request a Free Consultation <span aria-hidden="true">&rarr;</span>
+        </a>
       </div>
     </div>
   </section>
-
-
-  <!-- ========================================================================
-       9. CTA BAND (Pre-Filled Query Param Link)
-       ======================================================================== -->
-  <section class="section" style="padding-top: 0;">
-    <div class="container">
-      <div class="solutions-cta-strip">
-        <h2 class="cta-strip-title">Stop Intake Errors Before They Reach Your Billing Department</h2>
-        <p class="cta-strip-desc">
-          Schedule a personalized front-end registration audit for your hospital network and discover how Nova Arc achieves a 99.8% registration accuracy rate while eliminating duplicate MRNs.
-        </p>
-        <div class="cta-strip-buttons">
-          <a href="../contact.html?service=patient-registration-verification" class="btn btn-primary" id="btn-schedule-registration-audit">
-            Schedule a Registration Audit
-          </a>
-          <a href="tel:18005558942" class="btn btn-outline-white">
-            Call (800) 555-NOVA
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
 
   <!-- ========================================================================
        10. FOOTER (Shared Partial with Relative Links)

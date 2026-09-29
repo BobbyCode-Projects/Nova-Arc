@@ -320,24 +320,58 @@
       <!-- Desktop Navigation Menu -->
       <nav class="desktop-nav" aria-label="Main Navigation">
         <ul class="nav-menu">
-          <li><a href="../solutions.html" class="nav-link">Solutions</a></li>
+          <!-- Item 1: Solutions with dropdown -->
+          <li class="nav-item-dropdown nav-item-solutions">
+            <a href="../solutions.html" class="nav-dropdown-link" id="solutionsDropdownToggle" aria-haspopup="true" aria-expanded="false">
+              <span>Solutions</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="nav-simple-dropdown" aria-labelledby="solutionsDropdownToggle" role="menu">
+              <a href="../solutions/all-solutions-overview.html" class="nav-simple-item" role="menuitem">
+                <strong>All Solutions Overview</strong>
+                <span>Comprehensive end-to-end healthcare RCM suite</span>
+              </a>
+              <a href="../solutions/end-to-end-full-cycle-rcm.html" class="nav-simple-item" role="menuitem">
+                <strong>End-to-End Full-Cycle RCM</strong>
+                <span>Front-to-back revenue cycle operations</span>
+              </a>
+              <a href="../solutions/patient-access.html" class="nav-simple-item" role="menuitem">
+                <strong>Patient Access</strong>
+                <span>Pre-service clearance, eligibility &amp; auth</span>
+              </a>
+              <a href="../solutions/health-information-management.html" class="nav-simple-item" role="menuitem">
+                <strong>Health Information Management</strong>
+                <span>Inpatient, outpatient, profee &amp; HCC</span>
+              </a>
+              <a href="../solutions/extended-business-office.html" class="nav-simple-item" role="menuitem">
+                <strong>Extended Business Office</strong>
+                <span>Legacy resolution &amp; denial recovery</span>
+              </a>
+              <a href="../solutions/analytics-and-reporting.html" class="nav-simple-item" role="menuitem">
+                <strong>Analytics and Reporting</strong>
+                <span>Executive dashboards &amp; financial benchmarking</span>
+              </a>
+            </div>
+          </li>
           
-          <!-- Services Dropdown (Mega-Menu) -->
-          <li class="nav-item-dropdown">
-            <button class="nav-link nav-dropdown-toggle active" id="servicesDropdownToggle" aria-haspopup="true" aria-expanded="false" aria-controls="servicesMegaMenu">
+          <!-- Item 2: Services Dropdown (Mega-Menu) with Pill Button Style from Screenshot -->
+          <li class="nav-item-dropdown nav-item-services">
+            <a href="../services.html" class="nav-dropdown-link nav-dropdown-toggle" id="servicesDropdownToggle" aria-haspopup="true" aria-expanded="false" aria-controls="servicesMegaMenu">
               <span>Services</span>
               <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
-            </button>
+            </a>
 
             <!-- Mega-Menu Light Panel -->
             <div class="mega-menu-panel" id="servicesMegaMenu" role="menu" aria-labelledby="servicesDropdownToggle" aria-hidden="true">
               <div class="mega-menu-inner container">
                 <div class="mega-menu-grid">
-                  <!-- Column 1: Patient Access & Front-End Integrity -->
+                  <!-- Column 1: Patient Access Services -->
                   <div class="mega-col" role="none">
-                    <h3 class="mega-col-heading" id="menu-col-1-heading">Patient Access &amp; Front-End Integrity</h3>
+                    <h3 class="mega-col-heading" id="menu-col-1-heading"><a href="patient-access-services.html" class="mega-heading-link">Patient Access</a></h3>
                     <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-1-heading">
                       <li role="none">
                         <a href="real-time-insurance-eligibility.html" class="mega-item standalone" role="menuitem">
@@ -374,7 +408,7 @@
 
                   <!-- Column 2: HIM & Coding -->
                   <div class="mega-col" role="none">
-                    <h3 class="mega-col-heading" id="menu-col-2-heading">HIM &amp; Coding</h3>
+                    <h3 class="mega-col-heading" id="menu-col-2-heading"><a href="him-coding-services.html" class="mega-heading-link">HIM &amp; Coding</a></h3>
                     <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-2-heading">
                       <!-- Parent Item: Medical Coding Services -->
                       <li role="none" class="mega-parent-group">
@@ -429,7 +463,7 @@
 
                   <!-- Column 3: Patient Financial Services (PFS) & Recovery -->
                   <div class="mega-col" role="none">
-                    <h3 class="mega-col-heading" id="menu-col-3-heading">Patient Financial Services &amp; Recovery</h3>
+                    <h3 class="mega-col-heading" id="menu-col-3-heading"><a href="patient-financial-services.html" class="mega-heading-link">Patient Financial Services &amp; Recovery</a></h3>
                     <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-3-heading">
                       <!-- Parent Item: Claims Management Services -->
                       <li role="none" class="mega-parent-group">
@@ -486,26 +520,48 @@
             </div>
           </li>
 
-          <li>
-            <a href="../ai-platform.html" class="nav-link has-badge">
-              Nova Arc AI Platform
-              <span class="nav-badge">New</span>
+          <!-- Item 3: Nova Arc AI Platform with Dropdown -->
+          <li class="nav-item-dropdown nav-item-ai">
+            <a href="../ai-platform.html" class="nav-dropdown-link" id="aiDropdownToggle" aria-haspopup="true" aria-expanded="false">
+              <span>Nova Arc AI Platform</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
             </a>
+            <div class="nav-simple-dropdown" aria-labelledby="aiDropdownToggle" role="menu">
+              <a href="../ai-platform.html" class="nav-simple-item" role="menuitem">
+                <strong>Platform Overview</strong>
+                <span>Sub-second healthcare adjudication engine</span>
+              </a>
+              <a href="../ai-platform.html#agents" class="nav-simple-item" role="menuitem">
+                <strong>AI Agents &amp; Intelligent Automation</strong>
+                <span>Autonomous bots handling repetitive workflows</span>
+              </a>
+              <a href="../ai-platform.html#auth" class="nav-simple-item" role="menuitem">
+                <strong>Intelligent Prior Authorization</strong>
+                <span>Real-time clinical guideline alignment</span>
+              </a>
+              <a href="../ai-platform.html#coding" class="nav-simple-item" role="menuitem">
+                <strong>Autonomous Coding Engine</strong>
+                <span>AI-driven chart review &amp; code generation</span>
+              </a>
+            </div>
           </li>
+
+          <!-- Item 4: Who We Serve Link -->
           <li><a href="../who-we-serve.html" class="nav-link">Who We Serve</a></li>
-          <li><a href="../contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
-      <!-- Desktop Action Buttons -->
+      <!-- Desktop Action Buttons (Right side: Search icon + Connect with us button) -->
       <div class="nav-actions">
-        <a href="tel:18005558942" class="nav-phone" aria-label="Call Nova Arc">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        <button class="nav-search-btn" id="siteSearchBtn" aria-label="Search Nova Arc services and solutions" title="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
-          (800) 555-NOVA
-        </a>
-        <a href="../contact.html" class="btn btn-primary btn-sm">Request a Demo</a>
+        </button>
+        <a href="../contact.html" class="btn btn-connect-nav">Connect with us</a>
       </div>
 
       <!-- Mobile Hamburger Toggle -->
@@ -531,7 +587,7 @@
           </button>
           <div class="mobile-submenu-collapse" id="mobileServicesSubmenu" aria-hidden="true">
             <div class="mobile-submenu-section">
-              <h4 class="mobile-category-title">Patient Access &amp; Front-End</h4>
+              <h4 class="mobile-category-title"><a href="patient-access-services.html">Patient Access</a></h4>
               <a href="real-time-insurance-eligibility.html" class="mobile-submenu-link">Insurance Eligibility &amp; Benefits</a>
               <a href="prior-authorization-management.html" class="mobile-submenu-link">Prior Authorization Management</a>
               <a href="patient-registration-verification.html" class="mobile-submenu-link">Patient Scheduling &amp; Registration QA</a>
@@ -541,7 +597,7 @@
             </div>
 
             <div class="mobile-submenu-section">
-              <h4 class="mobile-category-title">HIM &amp; Coding</h4>
+              <h4 class="mobile-category-title"><a href="him-coding-services.html">HIM &amp; Coding</a></h4>
               <a href="full-cycle-medical-coding.html" class="mobile-submenu-link parent">Medical Coding Services</a>
               <a href="hcc-risk-adjustment.html" class="mobile-submenu-sublink">&rsaquo; Risk Adjustment/HCC Coding</a>
               <a href="full-cycle-medical-coding.html" class="mobile-submenu-sublink">&rsaquo; Facility/DRG &amp; ProFee Coding</a>
@@ -553,7 +609,7 @@
             </div>
 
             <div class="mobile-submenu-section">
-              <h4 class="mobile-category-title">Patient Financial Services &amp; Recovery</h4>
+              <h4 class="mobile-category-title"><a href="patient-financial-services.html">Patient Financial Services &amp; Recovery</a></h4>
               <a href="claims-management-scrubbing.html" class="mobile-submenu-link parent">Claims Management Services</a>
               <a href="claims-management-scrubbing.html" class="mobile-submenu-sublink">&rsaquo; Claims Submission &amp; Scrubbing EDI 837</a>
               <a href="payment-posting-reconciliation.html" class="mobile-submenu-sublink">&rsaquo; Payment Posting &amp; Reconciliation EDI 835</a>
@@ -566,13 +622,19 @@
             </div>
           </div>
         </li>
-        <li><a href="../ai-platform.html" class="mobile-nav-link">Nova Arc AI Platform <span class="nav-badge">New</span></a></li>
+        <li><a href="../ai-platform.html" class="mobile-nav-link">Nova Arc AI Platform <span>&rarr;</span></a></li>
         <li><a href="../who-we-serve.html" class="mobile-nav-link">Who We Serve <span>&rarr;</span></a></li>
-        <li><a href="../contact.html" class="mobile-nav-link">Contact <span>&rarr;</span></a></li>
       </ul>
       <div class="mobile-nav-bottom">
-        <a href="tel:18005558942" class="btn btn-secondary">Call (800) 555-NOVA</a>
-        <a href="../contact.html" class="btn btn-primary">Request a Demo</a>
+        <button class="btn btn-secondary mobile-search-trigger" id="mobileSearchTrigger" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          Search Services
+        </button>
+        <a href="tel:18005558942" class="btn btn-secondary" style="width: 100%; margin-bottom: 8px;">Call (800) 555-NOVA</a>
+        <a href="../contact.html" class="btn btn-primary" style="width: 100%;">Connect with us</a>
       </div>
     </div>
   </header>

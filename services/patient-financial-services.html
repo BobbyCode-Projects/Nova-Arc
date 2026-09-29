@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Financial Services &amp; Recovery | Autonomous Claims &amp; A/R Liquidation | Nova Arc</title>
+  <meta name="description" content="End-to-end Patient Financial Services (PFS) and revenue recovery: EDI 837 clearinghouse scrubbing, 835 auto-posting, aged A/R liquidation, root-cause denial appeals, underpayment recovery, and self-pay patient billing.">
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nova Arc Healthcare Technologies">
+  <meta property="og:title" content="Patient Financial Services &amp; Recovery | Autonomous Claims &amp; A/R Liquidation | Nova Arc">
+  <meta property="og:description" content="Accelerate cash collections, systematically liquidate aged A/R buckets (30/60/90+ days), overturn complex denials, and recapture contract underpayments with Nova Arc.">
+  <meta property="og:url" content="https://novaarc-rcm.com/services/patient-financial-services.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Patient Financial Services &amp; Revenue Recovery Operations | Nova Arc">
+  <meta name="twitter:description" content="Autonomous EDI 837 dispatch, sub-24h 835 payment posting, 96.8% denial overturn success, and aged A/R liquidation for health systems and physician groups.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../images/nova-arc-logo.png">
+
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NOVAARC001"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NOVAARC001', {
+      'anonymize_ip': true,
+      'cookie_flags': 'SameSite=None;Secure'
+    });
+  </script>
+
+  <!-- Schema.org JSON-LD: BreadcrumbList + Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://novaarc-rcm.com/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://novaarc-rcm.com/services.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Patient Financial Services & Recovery",
+            "item": "https://novaarc-rcm.com/services/patient-financial-services.html"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://novaarc-rcm.com/services/patient-financial-services.html#service",
+        "name": "Patient Financial Services & Revenue Recovery",
+        "serviceType": "Healthcare Revenue Cycle Management (RCM) - Patient Financial Services & Cash Recovery",
+        "provider": {
+          "@type": "Organization",
+          "name": "Nova Arc Healthcare Technologies",
+          "url": "https://novaarc-rcm.com/",
+          "logo": "https://novaarc-rcm.com/images/nova-arc-logo.png"
+        },
+        "description": "Comprehensive back-end revenue cycle and patient financial services spanning electronic claims management (EDI 837), automated electronic remittance posting (EDI 835), aged A/R liquidation, root-cause denial appeals, payer underpayment recovery, compassionate patient billing, and statutory credit balance resolution.",
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Patient Financial Services Disciplines",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Claims Management & Clearinghouse Scrubbing (ANSI EDI 837)"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Payment Posting & Electronic Remittance Advice (ANSI EDI 835)"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "A/R Management & Aged Claims Liquidation (30/60/90+ Days)"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Denial Management & Root-Cause Appeals (CARC/RARC Recovery)"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Payer Contract Modeling & Underpayment Variance Recovery"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Patient Billing, Self-Pay & Omnichannel Collections"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Credit Balance Resolution & Statutory Refund Compliance"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* Scoped Styles for Pillar Pages */
+    .pillar-hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 48px;
+      align-items: center;
+      margin-top: 24px;
+    }
+    @media (max-width: 991px) {
+      .pillar-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+    }
+    .pillar-hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .pillar-metric-card {
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 14px;
+      padding: 20px 22px;
+      backdrop-filter: blur(10px);
+      transition: all 0.25s ease;
+    }
+    .pillar-metric-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(56, 189, 248, 0.45);
+      box-shadow: 0 10px 25px -8px rgba(56, 189, 248, 0.25);
+    }
+    .pillar-metric-val {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #38BDF8;
+      line-height: 1.1;
+      margin-bottom: 6px;
+      font-family: var(--font-mono, monospace);
+    }
+    .pillar-metric-lbl {
+      font-size: 0.825rem;
+      font-weight: 600;
+      color: #E2E8F0;
+      line-height: 1.35;
+    }
+    .pillar-metric-sub {
+      font-size: 0.75rem;
+      color: #94A3B8;
+      margin-top: 4px;
+    }
+
+    /* Jump Navigation Bar */
+    .pillar-jump-nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 32px 0 0 0;
+      padding-top: 22px;
+      border-top: 1px solid rgba(15, 23, 42, 0.08);
+    }
+    .pillar-jump-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      border-radius: 9999px;
+      font-size: 0.825rem;
+      font-weight: 600;
+      background: #FFFFFF;
+      color: var(--navy-primary);
+      border: 1px solid rgba(15, 23, 42, 0.12);
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+      transition: all 0.2s ease;
+    }
+    .pillar-jump-pill:hover,
+    .pillar-jump-pill:focus {
+      background: var(--blue-accent);
+      color: #FFFFFF;
+      border-color: var(--blue-accent);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(31, 111, 235, 0.25);
+    }
+    .pillar-jump-pill .pill-num {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(31, 111, 235, 0.1);
+      color: var(--blue-accent);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.725rem;
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+    .pillar-jump-pill:hover .pill-num {
+      background: rgba(255, 255, 255, 0.25);
+      color: #FFFFFF;
+    }
+    .pillar-jump-pill.pill-accent {
+      background: rgba(31, 111, 235, 0.08);
+      border-color: rgba(31, 111, 235, 0.25);
+      color: var(--blue-accent);
+    }
+
+    /* Discipline Section Item */
+    .discipline-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 48px;
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .discipline-card:hover {
+      box-shadow: 0 20px 40px -12px rgba(15, 23, 42, 0.12);
+    }
+    .discipline-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: stretch;
+    }
+    @media (max-width: 991px) {
+      .discipline-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .discipline-content {
+      padding: 44px;
+    }
+    @media (max-width: 640px) {
+      .discipline-content {
+        padding: 28px 20px;
+      }
+    }
+    .discipline-sidebar {
+      background: linear-gradient(145deg, #0F172A 0%, #1E293B 100%);
+      padding: 40px;
+      color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-left: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    @media (max-width: 991px) {
+      .discipline-sidebar {
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 32px 24px;
+      }
+    }
+    .discipline-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--blue-accent);
+      background: rgba(31, 111, 235, 0.08);
+      border: 1px solid rgba(31, 111, 235, 0.2);
+      padding: 5px 12px;
+      border-radius: 9999px;
+      margin-bottom: 14px;
+    }
+    .discipline-title {
+      font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+      font-weight: 800;
+      color: var(--navy-primary);
+      margin-bottom: 14px;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+    .discipline-desc {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 24px;
+    }
+    .discipline-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .discipline-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.885rem;
+      color: var(--text-primary);
+      line-height: 1.45;
+    }
+    .discipline-feature-item svg {
+      color: var(--blue-accent);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    .discipline-sidebar-stat {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 20px;
+    }
+    .discipline-sidebar-stat .stat-num {
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: #38BDF8;
+      font-family: var(--font-mono, monospace);
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+    .discipline-sidebar-stat .stat-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #E2E8F0;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .discipline-sidebar-stat .stat-detail {
+      font-size: 0.75rem;
+      color: #94A3B8;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    /* Benefits Section Grid */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      margin-top: 40px;
+    }
+    .benefit-card-premium {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 32px 28px;
+      box-shadow: 0 6px 20px -8px rgba(0, 0, 0, 0.05);
+      transition: all 0.25s ease;
+      position: relative;
+    }
+    .benefit-card-premium:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px -12px rgba(15, 23, 42, 0.12);
+      border-color: rgba(31, 111, 235, 0.35);
+    }
+    .benefit-icon-wrapper {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: rgba(31, 111, 235, 0.08);
+      color: var(--blue-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .benefit-card-premium h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--navy-primary);
+      margin-bottom: 12px;
+      line-height: 1.35;
+    }
+    .benefit-card-premium p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+    .benefit-kpi-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.775rem;
+      font-weight: 700;
+      color: #0284C7;
+      background: #E0F2FE;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    /* Minimal Testimonials */
+    .minimal-testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 22px;
+    }
+    .minimal-testimonial-card {
+      background: #F8FAFC;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+    }
+    .minimal-testimonial-card:hover {
+      border-color: rgba(31, 111, 235, 0.35);
+      background: #FFFFFF;
+      box-shadow: 0 6px 18px -4px rgba(15, 23, 42, 0.08);
+      transform: translateY(-2px);
+    }
+    .minimal-quote {
+      font-size: 0.915rem;
+      line-height: 1.65;
+      color: var(--text-primary);
+      margin: 0 0 18px 0;
+      font-style: normal;
+    }
+    .minimal-author {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(15, 23, 42, 0.07);
+    }
+    .minimal-author strong {
+      font-size: 0.875rem;
+      color: var(--navy-primary);
+      font-weight: 700;
+    }
+    .minimal-author span {
+      font-size: 0.775rem;
+      color: var(--text-muted);
+    }
+    .minimal-ehr-pill {
+      background: #F1F5F9;
+      color: #475569;
+      border: 1px solid #E2E8F0;
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      font-family: var(--font-mono, monospace);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       STICKY NAVBAR (Shared Header Partial)
+       ======================================================================== -->
+  <header class="site-header" id="top">
+    <div class="container navbar">
+      <!-- Brand Logo -->
+      <a href="../index.html" class="logo" aria-label="Nova Arc Homepage">
+        <img src="../images/nova-arc-logo.png" alt="Nova Arc Logo" class="logo-img" width="38" height="33">
+        <span class="logo-text">Nova<span class="logo-highlight">Arc</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <!-- Item 1: Solutions with dropdown -->
+          <li class="nav-item-dropdown nav-item-solutions">
+            <a href="../solutions.html" class="nav-dropdown-link" id="solutionsDropdownToggle" aria-haspopup="true" aria-expanded="false">
+              <span>Solutions</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="nav-simple-dropdown" aria-labelledby="solutionsDropdownToggle" role="menu">
+              <a href="../solutions/all-solutions-overview.html" class="nav-simple-item" role="menuitem">
+                <strong>All Solutions Overview</strong>
+                <span>Comprehensive end-to-end healthcare RCM suite</span>
+              </a>
+              <a href="../solutions/end-to-end-full-cycle-rcm.html" class="nav-simple-item" role="menuitem">
+                <strong>End-to-End Full-Cycle RCM</strong>
+                <span>Front-to-back revenue cycle operations</span>
+              </a>
+              <a href="../solutions/patient-access.html" class="nav-simple-item" role="menuitem">
+                <strong>Patient Access</strong>
+                <span>Pre-service clearance, eligibility &amp; auth</span>
+              </a>
+              <a href="../solutions/health-information-management.html" class="nav-simple-item" role="menuitem">
+                <strong>Health Information Management</strong>
+                <span>Inpatient, outpatient, profee &amp; HCC</span>
+              </a>
+              <a href="../solutions/extended-business-office.html" class="nav-simple-item" role="menuitem">
+                <strong>Extended Business Office</strong>
+                <span>Legacy resolution &amp; denial recovery</span>
+              </a>
+              <a href="../solutions/analytics-and-reporting.html" class="nav-simple-item" role="menuitem">
+                <strong>Analytics and Reporting</strong>
+                <span>Executive dashboards &amp; financial benchmarking</span>
+              </a>
+            </div>
+          </li>
+          
+          <!-- Item 2: Services Dropdown (Mega-Menu) with Pill Button Style from Screenshot -->
+          <li class="nav-item-dropdown nav-item-services">
+            <a href="../services.html" class="nav-dropdown-link nav-dropdown-toggle" id="servicesDropdownToggle" aria-haspopup="true" aria-expanded="false" aria-controls="servicesMegaMenu">
+              <span>Services</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+
+            <!-- Mega-Menu Light Panel -->
+            <div class="mega-menu-panel" id="servicesMegaMenu" role="menu" aria-labelledby="servicesDropdownToggle" aria-hidden="true">
+              <div class="mega-menu-inner container">
+                <div class="mega-menu-grid">
+                  <!-- Column 1: Patient Access Services -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-1-heading"><a href="patient-access-services.html" class="mega-heading-link">Patient Access</a></h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-1-heading">
+                      <li role="none">
+                        <a href="real-time-insurance-eligibility.html" class="mega-item standalone" role="menuitem">
+                          Insurance Eligibility &amp; Benefits Verification
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="prior-authorization-management.html" class="mega-item standalone" role="menuitem">
+                          Prior Authorization Management
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="patient-registration-verification.html" class="mega-item standalone" role="menuitem">
+                          Patient Scheduling &amp; Registration QA
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="financial-clearance-gfe.html" class="mega-item standalone" role="menuitem">
+                          Financial Clearance &amp; Good Faith Estimates
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="point-of-service-collections.html" class="mega-item standalone" role="menuitem">
+                          Point-of-Service Collections
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="referral-order-management.html" class="mega-item standalone" role="menuitem">
+                          Medical Necessity &amp; Order Verification
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Column 2: HIM & Coding -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-2-heading"><a href="him-coding-services.html" class="mega-heading-link">HIM &amp; Coding</a></h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-2-heading">
+                      <!-- Parent Item: Medical Coding Services -->
+                      <li role="none" class="mega-parent-group">
+                        <a href="full-cycle-medical-coding.html" class="mega-item parent" role="menuitem">
+                          Medical Coding Services
+                        </a>
+                        <ul class="mega-sub-list" role="none">
+                          <li role="none">
+                            <a href="hcc-risk-adjustment.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Risk Adjustment/HCC Coding
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a href="full-cycle-medical-coding.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Facility/DRG Coding
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a href="full-cycle-medical-coding.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Professional Fee Coding
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li role="none">
+                        <a href="cdi-chart-auditing.html" class="mega-item standalone" role="menuitem">
+                          Clinical Documentation Improvement
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="cac-review.html" class="mega-item standalone" role="menuitem">
+                          Computer-Assisted Coding (CAC) Review
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="compliance-audit-defense.html" class="mega-item standalone" role="menuitem">
+                          Coding Compliance &amp; Audit Support
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="cdm-charge-capture.html" class="mega-item standalone" role="menuitem">
+                          Charge Capture &amp; CDM Audit
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="physician-query-management.html" class="mega-item standalone" role="menuitem">
+                          Physician Query Management
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Column 3: Patient Financial Services (PFS) & Recovery -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-3-heading"><a href="patient-financial-services.html" class="mega-heading-link">Patient Financial Services &amp; Recovery</a></h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-3-heading">
+                      <!-- Parent Item: Claims Management Services -->
+                      <li role="none" class="mega-parent-group">
+                        <a href="claims-management-scrubbing.html" class="mega-item parent" role="menuitem">
+                          Claims Management Services
+                        </a>
+                        <ul class="mega-sub-list" role="none">
+                          <li role="none">
+                            <a href="claims-management-scrubbing.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Claims Submission &amp; Scrubbing EDI 837
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a href="payment-posting-reconciliation.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Payment Posting &amp; Reconciliation EDI 835
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li role="none">
+                        <a href="ar-management.html" class="mega-item standalone" role="menuitem">
+                          A/R Management Services
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="denial-management.html" class="mega-item standalone" role="menuitem">
+                          Denial Management &amp; Appeals
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="payer-contract-modeling.html" class="mega-item standalone" role="menuitem">
+                          Underpayment Recovery &amp; Contract Compliance
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="patient-billing-collections.html" class="mega-item standalone" role="menuitem">
+                          Patient Billing &amp; Self-Pay Collections
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="credit-balance-resolution.html" class="mega-item standalone" role="menuitem">
+                          Credit Balance &amp; Refund Management
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="edi-enrollment.html" class="mega-item standalone" role="menuitem">
+                          EDI Enrollment Services
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Item 3: Nova Arc AI Platform with Dropdown -->
+          <li class="nav-item-dropdown nav-item-ai">
+            <a href="../ai-platform.html" class="nav-dropdown-link" id="aiDropdownToggle" aria-haspopup="true" aria-expanded="false">
+              <span>Nova Arc AI Platform</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="nav-simple-dropdown" aria-labelledby="aiDropdownToggle" role="menu">
+              <a href="../ai-platform.html" class="nav-simple-item" role="menuitem">
+                <strong>Platform Overview</strong>
+                <span>Sub-second healthcare adjudication engine</span>
+              </a>
+              <a href="../ai-platform.html#agents" class="nav-simple-item" role="menuitem">
+                <strong>AI Agents &amp; Intelligent Automation</strong>
+                <span>Autonomous bots handling repetitive workflows</span>
+              </a>
+              <a href="../ai-platform.html#auth" class="nav-simple-item" role="menuitem">
+                <strong>Intelligent Prior Authorization</strong>
+                <span>Real-time clinical guideline alignment</span>
+              </a>
+              <a href="../ai-platform.html#coding" class="nav-simple-item" role="menuitem">
+                <strong>Autonomous Coding Engine</strong>
+                <span>AI-driven chart review &amp; code generation</span>
+              </a>
+            </div>
+          </li>
+
+          <!-- Item 4: Who We Serve Link -->
+          <li><a href="../who-we-serve.html" class="nav-link">Who We Serve</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Action Buttons (Right side: Search icon + Connect with us button) -->
+      <div class="nav-actions">
+        <button class="nav-search-btn" id="siteSearchBtn" aria-label="Search Nova Arc services and solutions" title="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <a href="../contact.html" class="btn btn-connect-nav">Connect with us</a>
+      </div>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-list">
+        <li><a href="../solutions.html" class="mobile-nav-link">Solutions <span>&rarr;</span></a></li>
+        <li class="mobile-accordion-item">
+          <button class="mobile-nav-link mobile-accordion-toggle" id="mobileServicesToggle" aria-expanded="false" aria-controls="mobileServicesSubmenu">
+            <span>Services</span>
+            <svg class="mobile-accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="mobile-submenu-collapse" id="mobileServicesSubmenu" aria-hidden="true">
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title"><a href="patient-access-services.html">Patient Access</a></h4>
+              <a href="real-time-insurance-eligibility.html" class="mobile-submenu-link">Insurance Eligibility &amp; Benefits</a>
+              <a href="prior-authorization-management.html" class="mobile-submenu-link">Prior Authorization Management</a>
+              <a href="patient-registration-verification.html" class="mobile-submenu-link">Patient Scheduling &amp; Registration QA</a>
+              <a href="financial-clearance-gfe.html" class="mobile-submenu-link">Financial Clearance &amp; Good Faith Estimates</a>
+              <a href="point-of-service-collections.html" class="mobile-submenu-link">Point-of-Service Collections</a>
+              <a href="referral-order-management.html" class="mobile-submenu-link">Medical Necessity &amp; Order Verification</a>
+            </div>
+
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title"><a href="him-coding-services.html">HIM &amp; Coding</a></h4>
+              <a href="full-cycle-medical-coding.html" class="mobile-submenu-link parent">Medical Coding Services</a>
+              <a href="hcc-risk-adjustment.html" class="mobile-submenu-sublink">&rsaquo; Risk Adjustment/HCC Coding</a>
+              <a href="full-cycle-medical-coding.html" class="mobile-submenu-sublink">&rsaquo; Facility/DRG &amp; ProFee Coding</a>
+              <a href="cdi-chart-auditing.html" class="mobile-submenu-link">Clinical Documentation Improvement</a>
+              <a href="cac-review.html" class="mobile-submenu-link">Computer-Assisted Coding (CAC) Review</a>
+              <a href="compliance-audit-defense.html" class="mobile-submenu-link">Coding Compliance &amp; Audit Support</a>
+              <a href="cdm-charge-capture.html" class="mobile-submenu-link">Charge Capture &amp; CDM Audit</a>
+              <a href="physician-query-management.html" class="mobile-submenu-link">Physician Query Management</a>
+            </div>
+
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title"><a href="patient-financial-services.html">Patient Financial Services &amp; Recovery</a></h4>
+              <a href="claims-management-scrubbing.html" class="mobile-submenu-link parent">Claims Management Services</a>
+              <a href="claims-management-scrubbing.html" class="mobile-submenu-sublink">&rsaquo; Claims Submission &amp; Scrubbing EDI 837</a>
+              <a href="payment-posting-reconciliation.html" class="mobile-submenu-sublink">&rsaquo; Payment Posting &amp; Reconciliation EDI 835</a>
+              <a href="ar-management.html" class="mobile-submenu-link">A/R Management Services</a>
+              <a href="denial-management.html" class="mobile-submenu-link">Denial Management &amp; Appeals</a>
+              <a href="payer-contract-modeling.html" class="mobile-submenu-link">Underpayment Recovery &amp; Contract Compliance</a>
+              <a href="patient-billing-collections.html" class="mobile-submenu-link">Patient Billing &amp; Self-Pay Collections</a>
+              <a href="credit-balance-resolution.html" class="mobile-submenu-link">Credit Balance &amp; Refund Management</a>
+              <a href="edi-enrollment.html" class="mobile-submenu-link">EDI Enrollment Services</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="../ai-platform.html" class="mobile-nav-link">Nova Arc AI Platform <span>&rarr;</span></a></li>
+        <li><a href="../who-we-serve.html" class="mobile-nav-link">Who We Serve <span>&rarr;</span></a></li>
+      </ul>
+      <div class="mobile-nav-bottom">
+        <button class="btn btn-secondary mobile-search-trigger" id="mobileSearchTrigger" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          Search Services
+        </button>
+        <a href="tel:18005558942" class="btn btn-secondary" style="width: 100%; margin-bottom: 8px;">Call (800) 555-NOVA</a>
+        <a href="../contact.html" class="btn btn-primary" style="width: 100%;">Connect with us</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ========================================================================
+       PAGE HERO / EXECUTIVE OVERVIEW
+       ======================================================================== -->
+  <section class="page-hero" style="padding-bottom: 40px;">
+    <div class="container">
+      <nav class="breadcrumb-nav" aria-label="Breadcrumbs">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="../services.html">Services</a>
+        <span class="breadcrumb-separator">/</span>
+        <span style="color: var(--text-primary); font-weight: 600;">Patient Financial Services &amp; Recovery</span>
+      </nav>
+
+      <div class="pillar-hero-grid">
+        <div>
+          <span class="section-tag" style="margin-bottom: 12px; display: inline-block;">
+            BACK-END REVENUE CYCLE &amp; CASH RECOVERY
+          </span>
+          <h1 style="font-size: clamp(2.2rem, 3.8vw, 3.4rem); font-weight: 900; line-height: 1.15; color: var(--navy-primary); letter-spacing: -0.03em; margin-bottom: 20px;">
+            Patient Financial Services &amp; Recovery
+          </h1>
+          <p style="font-size: 1.1rem; line-height: 1.65; color: var(--text-secondary); margin-bottom: 28px;">
+            Accelerate net cash collection, systematically liquidate aging A/R buckets, and eliminate bad-debt write-offs. Nova Arc unites autonomous EDI 837/835 adjudication, targeted denial root-cause appeals, contract underpayment recovery, and compassionate self-pay billing into one relentless cash generation engine.
+          </p>
+
+          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <a href="../contact.html?service=patient-financial-services" class="btn btn-primary">
+              <span>Request A/R Recovery Assessment</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#pfs-disciplines" class="btn btn-secondary">
+              <span>Explore 7 Core Disciplines &darr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4 Hero Metric Cards -->
+        <div class="pillar-hero-metrics">
+          <div class="pillar-metric-card">
+            <div class="pillar-metric-val">99.4%</div>
+            <div class="pillar-metric-lbl">Clean Claim Rate</div>
+            <div class="pillar-metric-sub">Multi-tier EDI 837 algorithmic scrubbing across 1,200+ payers</div>
+          </div>
+          <div class="pillar-metric-card">
+            <div class="pillar-metric-val">-32%</div>
+            <div class="pillar-metric-lbl">Reduction in Days in A/R</div>
+            <div class="pillar-metric-sub">Systematic liquidation of aged 30, 60, 90, and 120+ balances</div>
+          </div>
+          <div class="pillar-metric-card">
+            <div class="pillar-metric-val">96.8%</div>
+            <div class="pillar-metric-lbl">Denial Overturn Success</div>
+            <div class="pillar-metric-sub">Clinical &amp; technical appeals turning denials into cash</div>
+          </div>
+          <div class="pillar-metric-card">
+            <div class="pillar-metric-val">+4.8%</div>
+            <div class="pillar-metric-lbl">Underpayment Recapture</div>
+            <div class="pillar-metric-sub">Remittance audits against contracted fee schedules</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Jump Pill Navigation -->
+      <div class="pillar-jump-nav">
+        <a href="#claims-management" class="pillar-jump-pill">
+          <span class="pill-num">1</span>
+          <span>Claims Scrubbing (837)</span>
+        </a>
+        <a href="#payment-posting" class="pillar-jump-pill">
+          <span class="pill-num">2</span>
+          <span>Payment Posting (835)</span>
+        </a>
+        <a href="#ar-liquidation" class="pillar-jump-pill">
+          <span class="pill-num">3</span>
+          <span>A/R Management</span>
+        </a>
+        <a href="#denial-management" class="pillar-jump-pill">
+          <span class="pill-num">4</span>
+          <span>Denials &amp; Appeals</span>
+        </a>
+        <a href="#contract-modeling" class="pillar-jump-pill">
+          <span class="pill-num">5</span>
+          <span>Underpayment Recovery</span>
+        </a>
+        <a href="#patient-billing" class="pillar-jump-pill">
+          <span class="pill-num">6</span>
+          <span>Patient Self-Pay</span>
+        </a>
+        <a href="#credit-balance" class="pillar-jump-pill">
+          <span class="pill-num">7</span>
+          <span>Credit Balances</span>
+        </a>
+        <a href="#enterprise-benefits" class="pillar-jump-pill pill-accent">
+          <span>Enterprise Benefits &rarr;</span>
+        </a>
+        <a href="#testimonials" class="pillar-jump-pill pill-accent">
+          <span>Client Perspectives &rarr;</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECTION-BY-SECTION CORE DISCIPLINES
+       ======================================================================== -->
+  <main class="section" id="pfs-disciplines" style="background: #F8FAFC; padding-top: 60px;">
+    <div class="container">
+
+      <div style="text-align: center; max-width: 780px; margin: 0 auto 52px auto;">
+        <span class="section-tag">COMPREHENSIVE BACK-END ARCHITECTURE</span>
+        <h2 style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; color: var(--navy-primary); margin-top: 8px;">
+          The 7 Core Disciplines of Nova Arc PFS &amp; Recovery
+        </h2>
+        <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.6; margin-top: 10px;">
+          From high-velocity electronic claim transmission to systematic aged receivables recovery and audit-ready credit balance resolution, our operations protect every earned dollar across health systems and physician enterprises.
+        </p>
+      </div>
+
+      <!-- DISCIPLINE 1: Claims Management & Scrubbing -->
+      <section class="discipline-card" id="claims-management">
+        <div class="discipline-grid">
+          <div class="discipline-content">
+            <span class="discipline-badge">Discipline 01 &bull; Clean Claim Dispatch</span>
+            <h3 class="discipline-title">Claims Management &amp; Clearinghouse Scrubbing</h3>
+            <p class="discipline-desc">
+              Every electronic claim undergoes rigorous multi-tier algorithmic scrubbing prior to transmission. We validate CPT and HCPCS codes against ICD-10 medical necessity criteria, NCCI edits, LCD/NCD guidelines, and payer-specific modifier requirements in real time, achieving 99.4% first-pass clearinghouse acceptance.
+            </p>
+            <ul class="discipline-features">
+              <li class="discipline-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Autonomous Multi-Tier Scrubbing:</strong> Validates HIPAA SNIP levels 1 through 7 before file dispatch to commercial and government clearinghouses.</span>
+              </li>
+              <li class="discipline-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Instant 277CA Auto-Remediation:</strong> Clearinghouse rejections are flagged, corrected, and resubmitted under a strict sub-4-hour SLA.</span>
+              </li>
+              <li class="discipline-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Automated Attachment Routing:</strong> Seamless transmission of operative notes, implant invoices (PWK), and secondary EOB documentation.</span>
+              </li>
+            </ul>
+            <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+              <a href="claims-management-scrubbing.html" class="btn btn-primary btn-sm">
+                <span>Explore Deep-Dive Blueprint</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <span class="compliance-tag-pill" style="margin: 0;">ANSI X12 837P &amp; 837I &bull; SNIP 1–7</span>
+            </div>
+          </div>
+
+          <div class="discipline-sidebar">
+            <div>
+              <div class="discipline-sidebar-stat">
+                <div class="stat-num">99.4%</div>
+                <div class="stat-label">First-Pass Acceptance Rate</div>
+                <div class="stat-detail">Consistently beats national HFMA clean claim benchmarks across all major clearinghouses.</div>
+              </div>
+              <div class="discipline-sidebar-stat">
+                <div class="stat-num">&lt; 12h</div>
+                <div class="stat-label">Submission Turnaround</div>
+                <div class="stat-detail">Rapid daily batch cycles ensuring zero lag between chart finalization and claim dispatch.</div>
+              </div>
+            </div>
+            <div style="padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+              <span style="font-size: 0.75rem; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.05em;">Key Operational Value:</span>
+              <p style="font-size: 0.85rem; color: #E2E8F0; margin: 4px 0 0 0;">Eliminates clearinghouse rejections and ensures prompt carrier payment within 14 business days.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DISCIPLINE 2: Payment Posting & Reconciliation -->
+      <section class="discipline-card" id="payment-posting">
+        <div class="discipline-grid">
+          <div class="discipline-content">
+            <span class="discipline-badge">Discipline 02 &bull; Cash Reconciliation &amp; ERA</span>
+            <h3 class="discipline-title">Payment Posting &amp; Electronic Remittance (ERA / EDI 835)</h3>
+            <p class="discipline-desc">
+              Accurate financial accounting begins with sub-24-hour payment posting and zero-variance bank reconciliation. Nova Arc automates electronic remittance advice (ERA 835) ingestion, lockbox OCR scanning, contractual allowance adjustments, and patient deductible/copay transfers directly into your billing system.
+            </p>
+            <ul class="discipline-features">
+              <li class="discipline-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Automated ANSI 835 Ingestion:</strong> Over 98.9% auto-match rate between electronic remittances and billed claim charge lines.</span>
+              </li>
+              <li class="discipline-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Instant Denial Classification:</strong> Payer CARC and RARC codes are automatically tagged and routed to specialized appeal workqueues.</span>
+              </li>
+              <li class="discipline-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Daily Bank Deposit Reconciliation:</strong> Strict three-way matching between clearinghouse ERA, lockbox deposits, and general ledger accounts.</span>
+              </li>
+            </ul>
+            <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+              <a href="payment-posting-reconciliation.html" class="btn btn-primary btn-sm">
+                <span>Explore Deep-Dive Blueprint</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <span class="compliance-tag-pill" style="margin: 0;">ANSI X12 835 &bull; GAAP Audit-Ready</span>
+            </div>
+          </div>
+
+          <div class="discipline-sidebar">
+            <div>
+              <div class="discipline-sidebar-stat">
+                <div class="stat-num">98.9%</div>
+                <div class="stat-label">Auto-Posting Match Rate</div>
+                <div class="stat-detail">Sub-second line-item matching against open invoice balances inside EHR ledgers.</div>
+              </div>
+              <div class="discipline-sidebar-stat">
+                <div class="stat-num">Daily</div>
+                <div class="stat-label">Zero-Variance Balancing</div>
+                <div class="stat-detail">All cash posted balances against bank lockbox statements prior to end-of-day close.</div>
+              </div>
+            </div>
+            <div style="padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+              <span style="font-size: 0.75rem; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.05em;">Key Operational Value:</span>
+              <p style="font-size: 0.85rem; color: #E2E8F0; margin: 4px 0 0 0;">Prevents unapplied cash balances and immediately arms denial specialists with fresh CARC/RARC codes.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DISCIPLINE 3: A/R Management & Aged Claims Liquidation -->
+      <section class="discipline-card" id="ar-liquidation">
+        <div class="discipline-grid">
+          <div class="discipline-content">
+            <span class="discipline-badge">Discipline 03 &bull; Days in A/R Liquidation</span>
+            <h3 class="discipline-title">A/R Management &amp; Aged Claims Liquidation</h3>
+            <p class="discipline-desc">
+              Aging receivables tie up vital working capital and risk crossing timely filing thresholds. Nova Arc deploys dedicated accounts receivable task forces utilizing algorithmic workqueue prioritization to liquidate 30, 60, 90, and 120+ day balances, recovering hard-to-collect cash before statutory expiration.
+            </p>
+            <ul class="discipline-features">
+              <li class="discipline-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>High-Velocity Workqueues:</strong> Claims are stratified by dollar value, aging velocity, and payer filing deadlines to maximize daily cash yield.</span>
+              </li>
+              <li class="discipline-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Automated Claim Status (EDI 276/277):</strong> Real-time telephonic and electronic status inquiries resolving silent payer pendings.</span>
+              </li>
+              <li class="discipline-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Closed-Loop Root-Cause Feedback:</strong> Aged claim patterns are fed back upstream to front-end registration and HIM coding to permanently halt recurrence.</span>
+              </li>
+            </ul>
+            <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+              <a href="ar-management.html" class="btn btn-primary btn-sm">
+                <span>Explore Deep-Dive Blueprint</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <span class="compliance-tag-pill" style="margin: 0;">HFMA MAP Key Indicator Aligned</span>
+            </div>
+          </div>
+
+          <div class="discipline-sidebar">
+            <div>
+              <div class="discipline-sidebar-stat">
+                <div class="stat-num">-32%</div>
+                <div class="stat-label">Reduction in Days in A/R</div>
+                <div class="stat-detail">Rapidly compresses average aging balances from industry averages down to sub-32 days.</div>
+              </div>
+              <div class="discipline-sidebar-stat">
+                <div class="stat-num">&gt; 85%</div>
+                <div class="stat-label">Cash Collected in &lt; 60 Days</div>
+                <div class="stat-detail">Drastically reduces exposure to high-risk 90+ day aging buckets.</div>
+              </div>
+            </div>
+            <div style="padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+              <span style="font-size: 0.75rem; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.05em;">Key Operational Value:</span>
+              <p style="font-size: 0.85rem; color: #E2E8F0; margin: 4px 0 0 0;">Restores predictable hospital cash flow and permanently eliminates write-offs due to missed timely filing limits.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DISCIPLINE 4: Denial Management & Appeals -->
+      <section class="discipline-card" id="denial-management">
+        <div class="discipline-grid">
+          <div class="discipline-content">
+            <span class="discipline-badge">Discipline 04 &bull; Clinical &amp; Technical Appeals</span>
+            <h3 class="discipline-title">Denial Management &amp; Root-Cause Appeals</h3>
+            <p class="discipline-desc">
+              Payer claim rejections demand more than boilerplate resubmissions. Nova Arc combines certified appeal specialists and Registered Nurse (RN) clinical auditors to craft comprehensive appeal packets targeting complex medical necessity (CARC 50), prior authorization (CARC 197), and experimental procedure denials with a 96.8% overturn rate.
+            </p>
+            <ul class="discipline-features">
+              <li class="discipline-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>RN-Led Clinical Appeals:</strong> Evidence-based clinical summaries citing peer-reviewed medical literature and Milliman Care Guidelines (MCG).</span>
+              </li>
+              <li class="discipline-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Multi-Level Escalation:</strong> Rapid progression through Level 1 reconsiderations, Level 2 external reviews, and state insurance commissioner inquiries.</span>
+              </li>
+              <li class="discipline-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Denial Prevention Analytics:</strong> Root causes are systematically tagged by provider, clinic, and CPT code to eradicate recurring claim rejections.</span>
+              </li>
+            </ul>
+            <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+              <a href="denial-management.html" class="btn btn-primary btn-sm">
+                <span>Explore Deep-Dive Blueprint</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <span class="compliance-tag-pill" style="margin: 0;">Certified Healthcare Appeals Specialists (CHAS)</span>
+            </div>
+          </div>
+
+          <div class="discipline-sidebar">
+            <div>
+              <div class="discipline-sidebar-stat">
+                <div class="stat-num">96.8%</div>
+                <div class="stat-label">Denial Overturn Success Rate</div>
+                <div class="stat-detail">Overturns both high-dollar surgical denials and high-volume technical rejections.</div>
+              </div>
+              <div class="discipline-sidebar-stat">
+                <div class="stat-num">&lt; 72h</div>
+                <div class="stat-label">Appeal Submission Window</div>
+                <div class="stat-detail">Fast turnaround prevents claims from expiring during lengthy appeal administrative clocks.</div>
+              </div>
+            </div>
+            <div style="padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+              <span style="font-size: 0.75rem; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.05em;">Key Operational Value:</span>
+              <p style="font-size: 0.85rem; color: #E2E8F0; margin: 4px 0 0 0;">Recovers millions in previously written-off revenue and holds commercial payers accountable to published clinical policies.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DISCIPLINE 5: Underpayment Recovery & Contract Modeling -->
+      <section class="discipline-card" id="contract-modeling">
+        <div class="discipline-grid">
+          <div class="discipline-content">
+            <span class="discipline-badge">Discipline 05 &bull; Contractual Revenue Protection</span>
+            <h3 class="discipline-title">Payer Contract Modeling &amp; Underpayment Recovery</h3>
+            <p class="discipline-desc">
+              Commercial payers routinely miscalculate reimbursements, silently shortchanging health systems by 3% to 7% on complex cases. Nova Arc’s contract modeling engine audits every line-item remittance against your executed fee schedules, identifying stop-loss failures, implant carve-out underpayments, and incorrect fee discounting.
+            </p>
+            <ul class="discipline-features">
+              <li class="discipline-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Line-Item Contract Modeling:</strong> Algorithmic comparison of paid amounts against negotiated per diems, DRG multipliers, and fee-for-service schedules.</span>
+              </li>
+              <li class="discipline-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Automated Bulk Variance Demands:</strong> Identifies systematic payer payment software errors and generates legally binding demand packages.</span>
+              </li>
+              <li class="discipline-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Actuarial Payer Negotiation Support:</strong> Historical variance analytics arm your C-suite with quantitative leverage during contract renewals.</span>
+              </li>
+            </ul>
+            <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+              <a href="payer-contract-modeling.html" class="btn btn-primary btn-sm">
+                <span>Explore Deep-Dive Blueprint</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <span class="compliance-tag-pill" style="margin: 0;">HFMA CHFP Modeling Standards</span>
+            </div>
+          </div>
+
+          <div class="discipline-sidebar">
+            <div>
+              <div class="discipline-sidebar-stat">
+                <div class="stat-num">+4.8%</div>
+                <div class="stat-label">Net Revenue Recapture</div>
+                <div class="stat-detail">Average annual revenue increase achieved solely by clawing back silent payer underpayments.</div>
+              </div>
+              <div class="discipline-sidebar-stat">
+                <div class="stat-num">100%</div>
+                <div class="stat-label">Remittance Auditing</div>
+                <div class="stat-detail">Every single electronic and paper remittance is audited against the active provider contract.</div>
+              </div>
+            </div>
+            <div style="padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+              <span style="font-size: 0.75rem; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.05em;">Key Operational Value:</span>
+              <p style="font-size: 0.85rem; color: #E2E8F0; margin: 4px 0 0 0;">Ensures commercial payers pay 100% of negotiated contractual rates plus statutory prompt-payment interest penalties.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DISCIPLINE 6: Patient Billing & Self-Pay Collections -->
+      <section class="discipline-card" id="patient-billing">
+        <div class="discipline-grid">
+          <div class="discipline-content">
+            <span class="discipline-badge">Discipline 06 &bull; Digital Patient Financial Experience</span>
+            <h3 class="discipline-title">Patient Billing, Self-Pay &amp; Omnichannel Collections</h3>
+            <p class="discipline-desc">
+              High-deductible health plans have shifted up to 35% of total healthcare revenue directly onto patients. Nova Arc delivers clear, transparent billing statements, frictionless digital text-to-pay links, tailored payment installments, and empathetic bilingual call center support that accelerates self-pay cash while preserving patient trust.
+            </p>
+            <ul class="discipline-features">
+              <li class="discipline-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Plain-Language Digital Statements:</strong> Mobile-optimized SMS and email billing notices with zero-login click-to-pay functionality.</span>
+              </li>
+              <li class="discipline-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Propensity-to-Pay Payment Plans:</strong> Automated interest-free installment options tailored dynamically to patient financial capability.</span>
+              </li>
+              <li class="discipline-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Compassionate Concierge Support:</strong> Trained inbound patient liaisons equipped with clinical understanding and financial assistance applications.</span>
+              </li>
+            </ul>
+            <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+              <a href="patient-billing-collections.html" class="btn btn-primary btn-sm">
+                <span>Explore Deep-Dive Blueprint</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <span class="compliance-tag-pill" style="margin: 0;">TCPA &bull; CFPB Reg F &bull; FDCPA Compliant</span>
+            </div>
+          </div>
+
+          <div class="discipline-sidebar">
+            <div>
+              <div class="discipline-sidebar-stat">
+                <div class="stat-num">+38%</div>
+                <div class="stat-label">Self-Pay Cash Velocity</div>
+                <div class="stat-detail">Accelerated post-encounter patient cash collection within the first 45 billing days.</div>
+              </div>
+              <div class="discipline-sidebar-stat">
+                <div class="stat-num">&lt; 2.5%</div>
+                <div class="stat-label">Bad-Debt Write-Off Rate</div>
+                <div class="stat-detail">Maintains an industry-low bad debt rate through early digital engagement and counseling.</div>
+              </div>
+            </div>
+            <div style="padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+              <span style="font-size: 0.75rem; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.05em;">Key Operational Value:</span>
+              <p style="font-size: 0.85rem; color: #E2E8F0; margin: 4px 0 0 0;">Maximizes patient collections while maintaining exceptional patient satisfaction ratings and federal No Surprises Act compliance.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DISCIPLINE 7: Credit Balance Resolution -->
+      <section class="discipline-card" id="credit-balance">
+        <div class="discipline-grid">
+          <div class="discipline-content">
+            <span class="discipline-badge">Discipline 07 &bull; Statutory Compliance &amp; Refunds</span>
+            <h3 class="discipline-title">Credit Balance Resolution &amp; Statutory Refund Compliance</h3>
+            <p class="discipline-desc">
+              Unresolved credit balances are not just balance sheet liabilities—under the federal Affordable Care Act and CMS 60-Day Rule, failure to report and return overpayments triggers severe False Claims Act exposure. Nova Arc audits credit balances to isolate true overpayments from posting errors, resolving backlogs with audit-ready documentation.
+            </p>
+            <ul class="discipline-features">
+              <li class="discipline-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Multi-Tier Audit Verification:</strong> Differentiates posting errors, duplicate payments, and COB timing issues from genuine overpayments.</span>
+              </li>
+              <li class="discipline-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>CMS 60-Day Rule Adherence:</strong> Strict compliance workflows preventing extrapolated treble damages and civil monetary penalties.</span>
+              </li>
+              <li class="discipline-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>State Escheatment Compliance:</strong> Automated tracking of unclaimed patient credit balances conforming to 50-state abandoned property laws.</span>
+              </li>
+            </ul>
+            <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+              <a href="credit-balance-resolution.html" class="btn btn-primary btn-sm">
+                <span>Explore Deep-Dive Blueprint</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <span class="compliance-tag-pill" style="margin: 0;">CMS 60-Day Overpayment Rule</span>
+            </div>
+          </div>
+
+          <div class="discipline-sidebar">
+            <div>
+              <div class="discipline-sidebar-stat">
+                <div class="stat-num">100%</div>
+                <div class="stat-label">Statutory Compliance</div>
+                <div class="stat-detail">Zero regulatory infractions or False Claims Act exposure across all client health systems.</div>
+              </div>
+              <div class="discipline-sidebar-stat">
+                <div class="stat-num">92%</div>
+                <div class="stat-label">Zero-Refund Resolution Rate</div>
+                <div class="stat-detail">Over 90% of flagged credit balances resolved through ledger adjustment without cash outflow.</div>
+              </div>
+            </div>
+            <div style="padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+              <span style="font-size: 0.75rem; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.05em;">Key Operational Value:</span>
+              <p style="font-size: 0.85rem; color: #E2E8F0; margin: 4px 0 0 0;">Eliminates False Claims Act liability and cleanses historical accounting ledgers with complete audit defensibility.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+
+  <!-- ========================================================================
+       ENTERPRISE BENEFITS SECTION
+       ======================================================================== -->
+  <section class="section" id="enterprise-benefits" style="background: #FFFFFF; padding: 75px 0;">
+    <div class="container">
+      
+      <div style="text-align: center; max-width: 760px; margin: 0 auto;">
+        <span class="section-tag">STRATEGIC HEALTH SYSTEM ADVANTAGES</span>
+        <h2 style="font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; color: var(--navy-primary); margin-top: 8px;">
+          Why Financial Leaders Choose Nova Arc PFS
+        </h2>
+        <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.6; margin-top: 12px;">
+          Nova Arc combines certified billing professionals, clinical appeal nurses, and autonomous adjudication to accelerate cash velocity and liquidate aged receivables.
+        </p>
+      </div>
+
+      <div class="benefits-grid">
+        
+        <!-- Benefit 1 -->
+        <div class="benefit-card-premium">
+          <div class="benefit-icon-wrapper">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Aggressive Days in A/R Compression</h3>
+          <p>
+            Systematic liquidation of aged 30, 60, 90, and 120+ day balances compresses Days in A/R by an average of 32%, freeing millions in operational cash.
+          </p>
+          <span class="benefit-kpi-pill">-32% Average Days in A/R</span>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="benefit-card-premium">
+          <div class="benefit-icon-wrapper">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </div>
+          <h3>99.4% Clean Claim Acceptance</h3>
+          <p>
+            Autonomous pre-submission multi-tier algorithmic scrubbing catches billing errors before clearinghouse dispatch, virtually eliminating 277CA fallout.
+          </p>
+          <span class="benefit-kpi-pill">99.4% First-Pass Clean Rate</span>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="benefit-card-premium">
+          <div class="benefit-icon-wrapper">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          </div>
+          <h3>Unmatched 96.8% Denial Recovery</h3>
+          <p>
+            Clinical RN auditors and appeal attorneys draft evidence-backed appeal packages that systematically overturn high-dollar surgical and medical necessity denials.
+          </p>
+          <span class="benefit-kpi-pill">96.8% Overturn Success</span>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="benefit-card-premium">
+          <div class="benefit-icon-wrapper">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          </div>
+          <h3>Silent Underpayment Recapture</h3>
+          <p>
+            Automated remittance auditing against executed payer fee schedules recovers an average of 4.8% in silent contractual underpayments and prompt-pay interest.
+          </p>
+          <span class="benefit-kpi-pill">+4.8% Recaptured Net Revenue</span>
+        </div>
+
+        <!-- Benefit 5 -->
+        <div class="benefit-card-premium">
+          <div class="benefit-icon-wrapper">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          </div>
+          <h3>Sub-24h 835 Remittance Posting</h3>
+          <p>
+            Automated line-item ERA posting with daily zero-variance bank reconciliation ensures your general ledger is perpetually audit-ready with zero unapplied cash.
+          </p>
+          <span class="benefit-kpi-pill">Sub-24h Bank Match SLA</span>
+        </div>
+
+        <!-- Benefit 6 -->
+        <div class="benefit-card-premium">
+          <div class="benefit-icon-wrapper">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h3>Complete Regulatory &amp; Refund Protection</h3>
+          <p>
+            Audit-defensible credit balance management ensures 100% adherence to the CMS 60-Day Overpayment Rule and state escheatment laws, eliminating False Claims Act exposure.
+          </p>
+          <span class="benefit-kpi-pill">CMS 60-Day Rule Defense</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       MINIMAL TESTIMONIALS SECTION
+       ======================================================================== -->
+  <section class="section" id="testimonials" style="padding: 56px 0; background: #FFFFFF; border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      
+      <div style="margin-bottom: 28px; display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <span style="font-size: 0.75rem; font-weight: 700; color: var(--blue-accent); text-transform: uppercase; letter-spacing: 0.08em;">
+            Client Perspectives
+          </span>
+          <h2 style="font-size: clamp(1.35rem, 2vw, 1.75rem); font-weight: 800; color: var(--navy-primary); margin-top: 6px; margin-bottom: 0;">
+            Operating Feedback &amp; Cash Acceleration
+          </h2>
+        </div>
+        <p style="font-size: 0.875rem; color: var(--text-muted); margin: 0; max-width: 440px;">
+          Direct observations from health system CFOs, revenue cycle vice presidents, and business office directors running Nova Arc PFS operations.
+        </p>
+      </div>
+
+      <div class="minimal-testimonial-grid">
+        
+        <!-- Testimonial 1 -->
+        <div class="minimal-testimonial-card">
+          <p class="minimal-quote">
+            &ldquo;Nova Arc reduced our Days in A/R from 49 to 31 days within six months while recovering $3.4M in stalled clinical denials. Their systematic workqueue approach and underpayment auditing gave our board total clarity on cash flow.&rdquo;
+          </p>
+          <div class="minimal-author">
+            <strong>Robert K. Mercer</strong>
+            <span>Chief Financial Officer &bull; Tri-State Health Alliance (650 Beds)</span>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="minimal-testimonial-card">
+          <p class="minimal-quote">
+            &ldquo;Our in-house business office was overwhelmed with aging accounts over 90 days. Nova Arc deployed their specialized A/R surge pod, liquidated 82% of the backlog, and brought our net collection rate to an all-time high of 98.4%.&rdquo;
+          </p>
+          <div class="minimal-author">
+            <strong>Linda Thornton</strong>
+            <span>VP of Revenue Cycle &bull; Premier Orthopedic Institute</span>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="minimal-testimonial-card">
+          <p class="minimal-quote">
+            &ldquo;The digital self-pay portal and automated payment posting transformed our operations. Patient collection velocity accelerated by 40%, and our credit balance liability dropped to zero within 90 days.&rdquo;
+          </p>
+          <div class="minimal-author">
+            <strong>Daniel Vance</strong>
+            <span>Director of Patient Financial Services &bull; Cascade Medical Center</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Compact Clearinghouse & Banking Sync Strip -->
+      <div style="margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;">
+        <span style="font-size: 0.775rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">
+          Certified Clearinghouse &amp; Banking Sync:
+        </span>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span class="minimal-ehr-pill">Change Healthcare / Optum</span>
+          <span class="minimal-ehr-pill">Availity Essentials</span>
+          <span class="minimal-ehr-pill">Waystar</span>
+          <span class="minimal-ehr-pill">InstaMed / J.P. Morgan</span>
+          <span class="minimal-ehr-pill">Epic Resolute</span>
+          <span class="minimal-ehr-pill">Cerner Millennium PFS</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       EXECUTIVE CTA SECTION
+       ======================================================================== -->
+  <section class="section" style="background: linear-gradient(135deg, #0284C7 0%, #0F172A 100%); color: #FFFFFF; padding: 75px 0; text-align: center;">
+    <div class="container">
+      <div style="max-width: 780px; margin: 0 auto;">
+        <span style="display: inline-block; font-size: 0.8rem; font-weight: 700; color: #38BDF8; letter-spacing: 0.1em; text-transform: uppercase; background: rgba(255, 255, 255, 0.1); padding: 4px 14px; border-radius: 9999px; margin-bottom: 16px;">
+          Complimentary A/R Liquidation Analysis
+        </span>
+        <h2 style="font-size: clamp(2rem, 3.5vw, 2.75rem); font-weight: 800; line-height: 1.2; margin-bottom: 16px; color: #FFFFFF;">
+          Ready to Accelerate Cash Flow and Eliminate Aging A/R?
+        </h2>
+        <p style="font-size: 1.1rem; line-height: 1.65; color: #E2E8F0; margin-bottom: 32px;">
+          Connect with our revenue cycle leaders for a complimentary aged A/R bucket audit, underpayment variance scan, and denial root-cause assessment.
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="../contact.html?service=patient-financial-services" class="btn btn-primary btn-lg" style="background: #38BDF8; color: #0F172A; border-color: #38BDF8;">
+            <span>Schedule A/R Assessment</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="tel:18005558942" class="btn btn-secondary btn-lg" style="border-color: rgba(255, 255, 255, 0.3); color: #FFFFFF;">
+            <span>Call (800) 555-NOVA</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       FOOTER (Shared Partial)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo" aria-label="Nova Arc Homepage">
+          <img src="../images/nova-arc-logo.png" alt="Nova Arc Logo" class="logo-img" width="38" height="33">
+          <span class="logo-text">Nova<span class="logo-highlight">Arc</span></span>
+        </a>
+        <p class="footer-tagline">
+          Intelligent Healthcare Revenue Cycle Management. Pairing seasoned revenue recovery specialists with autonomous AI to accelerate cash collections and liquidate aged A/R.
+        </p>
+        <div class="footer-contact-info">
+          <p><strong>Headquarters:</strong> 100 Montgomery St, Suite 1800, San Francisco, CA 94104</p>
+          <p><strong>Direct Line:</strong> (800) 555-NOVA (800-555-8942)</p>
+          <p><strong>HIPAA / Compliance:</strong> compliance@novaarc-rcm.com</p>
+        </div>
+      </div>
+
+      <div class="footer-links-group">
+        <div class="footer-col">
+          <h4 class="footer-col-title">Core Services</h4>
+          <ul class="footer-menu">
+            <li><a href="patient-access-services.html">Patient Access Services</a></li>
+            <li><a href="him-coding-services.html">HIM &amp; Medical Coding</a></li>
+            <li><a href="patient-financial-services.html">Patient Financial Services</a></li>
+            <li><a href="full-cycle-rcm.html">Full-Cycle End-to-End RCM</a></li>
+            <li><a href="extended-business-office.html">Extended Business Office (EBO)</a></li>
+            <li><a href="rcm-workflow-audit-benchmarking.html">RCM Workflow Audit</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">PFS Disciplines</h4>
+          <ul class="footer-menu">
+            <li><a href="claims-management-scrubbing.html">Claims Management EDI 837</a></li>
+            <li><a href="payment-posting-reconciliation.html">Payment Posting EDI 835</a></li>
+            <li><a href="ar-management.html">A/R Liquidation Management</a></li>
+            <li><a href="denial-management.html">Denial Management &amp; Appeals</a></li>
+            <li><a href="payer-contract-modeling.html">Underpayment Recovery</a></li>
+            <li><a href="patient-billing-collections.html">Patient Self-Pay Billing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Company &amp; Legal</h4>
+          <ul class="footer-menu">
+            <li><a href="../who-we-serve.html">Who We Serve</a></li>
+            <li><a href="../ai-platform.html">Nova Arc AI Platform</a></li>
+            <li><a href="../contact.html">Request a Demo</a></li>
+            <li><a href="../contact.html#privacy">HIPAA Security Safeguards</a></li>
+            <li><a href="../contact.html#terms">SOC 2 Type II Accreditation</a></li>
+            <li><a href="../contact.html#support">Client Support Portal</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Nova Arc Healthcare Technologies LLC. All rights reserved. HIPAA, HITECH, and SOC 2 Type II Certified Operating Environment.</p>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript -->
+  <script src="../js/main.js"></script>
+
+</body>
+</html>

@@ -55,24 +55,58 @@
       <!-- Desktop Navigation Menu -->
       <nav class="desktop-nav" aria-label="Main Navigation">
         <ul class="nav-menu">
-          <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+          <!-- Item 1: Solutions with dropdown -->
+          <li class="nav-item-dropdown nav-item-solutions">
+            <a href="solutions.html" class="nav-dropdown-link" id="solutionsDropdownToggle" aria-haspopup="true" aria-expanded="false">
+              <span>Solutions</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="nav-simple-dropdown" aria-labelledby="solutionsDropdownToggle" role="menu">
+              <a href="solutions/all-solutions-overview.html" class="nav-simple-item" role="menuitem">
+                <strong>All Solutions Overview</strong>
+                <span>Comprehensive end-to-end healthcare RCM suite</span>
+              </a>
+              <a href="solutions/end-to-end-full-cycle-rcm.html" class="nav-simple-item" role="menuitem">
+                <strong>End-to-End Full-Cycle RCM</strong>
+                <span>Front-to-back revenue cycle operations</span>
+              </a>
+              <a href="solutions/patient-access.html" class="nav-simple-item" role="menuitem">
+                <strong>Patient Access</strong>
+                <span>Pre-service clearance, eligibility &amp; auth</span>
+              </a>
+              <a href="solutions/health-information-management.html" class="nav-simple-item" role="menuitem">
+                <strong>Health Information Management</strong>
+                <span>Inpatient, outpatient, profee &amp; HCC</span>
+              </a>
+              <a href="solutions/extended-business-office.html" class="nav-simple-item" role="menuitem">
+                <strong>Extended Business Office</strong>
+                <span>Legacy resolution &amp; denial recovery</span>
+              </a>
+              <a href="solutions/analytics-and-reporting.html" class="nav-simple-item" role="menuitem">
+                <strong>Analytics and Reporting</strong>
+                <span>Executive dashboards &amp; financial benchmarking</span>
+              </a>
+            </div>
+          </li>
           
-          <!-- Services Dropdown (Mega-Menu) -->
-          <li class="nav-item-dropdown">
-            <button class="nav-link nav-dropdown-toggle " id="servicesDropdownToggle" aria-haspopup="true" aria-expanded="false" aria-controls="servicesMegaMenu">
+          <!-- Item 2: Services Dropdown (Mega-Menu) -->
+          <li class="nav-item-dropdown nav-item-services">
+            <a href="services.html" class="nav-dropdown-link nav-dropdown-toggle" id="servicesDropdownToggle" aria-haspopup="true" aria-expanded="false" aria-controls="servicesMegaMenu">
               <span>Services</span>
               <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
-            </button>
+            </a>
 
             <!-- Mega-Menu Light Panel -->
             <div class="mega-menu-panel" id="servicesMegaMenu" role="menu" aria-labelledby="servicesDropdownToggle" aria-hidden="true">
               <div class="mega-menu-inner container">
                 <div class="mega-menu-grid">
-                  <!-- Column 1: Patient Access & Front-End Integrity -->
+                  <!-- Column 1: Patient Access Services -->
                   <div class="mega-col" role="none">
-                    <h3 class="mega-col-heading" id="menu-col-1-heading">Patient Access &amp; Front-End Integrity</h3>
+                    <h3 class="mega-col-heading" id="menu-col-1-heading"><a href="services/patient-access-services.html" class="mega-heading-link">Patient Access</a></h3>
                     <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-1-heading">
                       <li role="none">
                         <a href="services/real-time-insurance-eligibility.html" class="mega-item standalone" role="menuitem">
@@ -109,7 +143,7 @@
 
                   <!-- Column 2: HIM & Coding -->
                   <div class="mega-col" role="none">
-                    <h3 class="mega-col-heading" id="menu-col-2-heading">HIM &amp; Coding</h3>
+                    <h3 class="mega-col-heading" id="menu-col-2-heading"><a href="services/him-coding-services.html" class="mega-heading-link">HIM &amp; Coding</a></h3>
                     <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-2-heading">
                       <!-- Parent Item: Medical Coding Services -->
                       <li role="none" class="mega-parent-group">
@@ -164,7 +198,7 @@
 
                   <!-- Column 3: Patient Financial Services (PFS) & Recovery -->
                   <div class="mega-col" role="none">
-                    <h3 class="mega-col-heading" id="menu-col-3-heading">Patient Financial Services &amp; Recovery</h3>
+                    <h3 class="mega-col-heading" id="menu-col-3-heading"><a href="services/patient-financial-services.html" class="mega-heading-link">Patient Financial Services &amp; Recovery</a></h3>
                     <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-3-heading">
                       <!-- Parent Item: Claims Management Services -->
                       <li role="none" class="mega-parent-group">
@@ -221,26 +255,48 @@
             </div>
           </li>
 
-          <li>
-            <a href="ai-platform.html" class="nav-link has-badge">
-              Nova Arc AI Platform
-              <span class="nav-badge">New</span>
+          <!-- Item 3: Nova Arc AI Platform with Dropdown -->
+          <li class="nav-item-dropdown nav-item-ai">
+            <a href="ai-platform.html" class="nav-dropdown-link" id="aiDropdownToggle" aria-haspopup="true" aria-expanded="false">
+              <span>Nova Arc AI Platform</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
             </a>
+            <div class="nav-simple-dropdown" aria-labelledby="aiDropdownToggle" role="menu">
+              <a href="ai-platform.html" class="nav-simple-item" role="menuitem">
+                <strong>Platform Overview</strong>
+                <span>Sub-second healthcare adjudication engine</span>
+              </a>
+              <a href="ai-platform.html#agents" class="nav-simple-item" role="menuitem">
+                <strong>AI Agents &amp; Intelligent Automation</strong>
+                <span>Autonomous bots handling repetitive workflows</span>
+              </a>
+              <a href="ai-platform.html#auth" class="nav-simple-item" role="menuitem">
+                <strong>Intelligent Prior Authorization</strong>
+                <span>Real-time clinical guideline alignment</span>
+              </a>
+              <a href="ai-platform.html#coding" class="nav-simple-item" role="menuitem">
+                <strong>Autonomous Coding Engine</strong>
+                <span>AI-driven chart review &amp; code generation</span>
+              </a>
+            </div>
           </li>
+
+          <!-- Item 4: Who We Serve Link -->
           <li><a href="who-we-serve.html" class="nav-link">Who We Serve</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
-      <!-- Desktop Action Buttons -->
+      <!-- Desktop Action Buttons (Right side: Search icon + Connect with us button) -->
       <div class="nav-actions">
-        <a href="tel:18005558942" class="nav-phone" aria-label="Call Nova Arc">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        <button class="nav-search-btn" id="siteSearchBtn" aria-label="Search Nova Arc services and solutions" title="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
-          (800) 555-NOVA
-        </a>
-        <a href="contact.html" class="btn btn-primary btn-sm">Request a Demo</a>
+        </button>
+        <a href="contact.html" class="btn btn-connect-nav">Connect with us</a>
       </div>
 
       <!-- Mobile Hamburger Toggle -->
@@ -265,8 +321,8 @@
             </svg>
           </button>
           <div class="mobile-submenu-collapse" id="mobileServicesSubmenu" aria-hidden="true">
-            <div class="mobile-submenu-section">
-              <h4 class="mobile-category-title">Patient Access &amp; Front-End</h4>
+<div class="mobile-submenu-section">
+              <h4 class="mobile-category-title"><a href="services/patient-access-services.html">Patient Access</a></h4>
               <a href="services/real-time-insurance-eligibility.html" class="mobile-submenu-link">Insurance Eligibility &amp; Benefits</a>
               <a href="services/prior-authorization-management.html" class="mobile-submenu-link">Prior Authorization Management</a>
               <a href="services/patient-registration-verification.html" class="mobile-submenu-link">Patient Scheduling &amp; Registration QA</a>
@@ -276,7 +332,7 @@
             </div>
 
             <div class="mobile-submenu-section">
-              <h4 class="mobile-category-title">HIM &amp; Coding</h4>
+              <h4 class="mobile-category-title"><a href="services/him-coding-services.html">HIM &amp; Coding</a></h4>
               <a href="services/full-cycle-medical-coding.html" class="mobile-submenu-link parent">Medical Coding Services</a>
               <a href="services/hcc-risk-adjustment.html" class="mobile-submenu-sublink">&rsaquo; Risk Adjustment/HCC Coding</a>
               <a href="services/full-cycle-medical-coding.html" class="mobile-submenu-sublink">&rsaquo; Facility/DRG &amp; ProFee Coding</a>
@@ -288,7 +344,7 @@
             </div>
 
             <div class="mobile-submenu-section">
-              <h4 class="mobile-category-title">Patient Financial Services &amp; Recovery</h4>
+              <h4 class="mobile-category-title"><a href="services/patient-financial-services.html">Patient Financial Services &amp; Recovery</a></h4>
               <a href="services/claims-management-scrubbing.html" class="mobile-submenu-link parent">Claims Management Services</a>
               <a href="services/claims-management-scrubbing.html" class="mobile-submenu-sublink">&rsaquo; Claims Submission &amp; Scrubbing EDI 837</a>
               <a href="services/payment-posting-reconciliation.html" class="mobile-submenu-sublink">&rsaquo; Payment Posting &amp; Reconciliation EDI 835</a>
@@ -301,13 +357,19 @@
             </div>
           </div>
         </li>
-        <li><a href="ai-platform.html" class="mobile-nav-link">Nova Arc AI Platform <span class="nav-badge">New</span></a></li>
+        <li><a href="ai-platform.html" class="mobile-nav-link">Nova Arc AI Platform <span>&rarr;</span></a></li>
         <li><a href="who-we-serve.html" class="mobile-nav-link">Who We Serve <span>&rarr;</span></a></li>
-        <li><a href="contact.html" class="mobile-nav-link">Contact <span>&rarr;</span></a></li>
       </ul>
       <div class="mobile-nav-bottom">
-        <a href="tel:18005558942" class="btn btn-secondary">Call (800) 555-NOVA</a>
-        <a href="contact.html" class="btn btn-primary">Request a Demo</a>
+        <button class="btn btn-secondary mobile-search-trigger" id="mobileSearchTrigger" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          Search Services
+        </button>
+        <a href="tel:18005558942" class="btn btn-secondary" style="width: 100%; margin-bottom: 8px;">Call (800) 555-NOVA</a>
+        <a href="contact.html" class="btn btn-primary" style="width: 100%;">Connect with us</a>
       </div>
     </div>
   </header>
@@ -316,1761 +378,352 @@
   <!-- ========================================================================
        PAGE HERO / HEADER
        ======================================================================== -->
-  <section class="page-hero">
-    <div class="container">
-      <nav class="breadcrumb-nav" aria-label="Breadcrumbs">
-        <a href="index.html">Home</a>
-        <span class="breadcrumb-separator">/</span>
-        <span style="color: var(--text-primary); font-weight: 600;">Services</span>
-      </nav>
+  <!-- ========================================================================
+       SECTION 1: HERO (SCREENSHOT 1)
+       ======================================================================== -->
+  <section class="services-hero-ags">
+    <!-- Atmospheric Ambient Lighting (Nova Arc Brand Navy & Blue) -->
+    <div class="hero-orchestrated-glow-cyan"></div>
+    <div class="hero-orchestrated-glow-blue"></div>
 
-      <div class="page-hero-content">
-        <span class="section-tag">Revenue Cycle Managed Services</span>
-        <h1 class="page-hero-title">
-          Specialized Healthcare RCM Services &amp; Certified Operations
-        </h1>
-        <p class="page-hero-subtitle">
-          Nova Arc combines certified medical billing specialists with autonomous AI claim adjudication to manage your revenue cycle with extreme precision. Explore our comprehensive services categorized by operational focus.
+    <!-- Heart Wave ECG Waveform Background (Spanning across hero, animating cardiac rhythm) -->
+    <div class="orchestration-wave-container ecg-waveform-container" aria-hidden="true">
+      <!-- ECG Track 1: Lead I Rhythm -->
+      <div class="ecg-waveform-track ecg-track-upper">
+        <div class="ecg-track-inner">
+          <svg class="ecg-svg" viewBox="0 0 2400 80" preserveAspectRatio="none">
+            <path class="ecg-path-ambient" d="M 0 40 L 39.0 40 C 48.0 40, 52.5 33.0, 60.0 33.0 C 67.5 33.0, 72.0 40, 81.0 40 L 108.0 40 L 114.0 44.0 L 123.0 15.0 L 132.0 58.0 L 139.5 40 L 162.0 40 C 171.0 40, 181.5 30.0, 192.0 30.0 C 202.5 30.0, 213.0 40, 222.0 40 L 300.0 40 L 339.0 40 C 348.0 40, 352.5 33.0, 360.0 33.0 C 367.5 33.0, 372.0 40, 381.0 40 L 408.0 40 L 414.0 44.0 L 423.0 15.0 L 432.0 58.0 L 439.5 40 L 462.0 40 C 471.0 40, 481.5 30.0, 492.0 30.0 C 502.5 30.0, 513.0 40, 522.0 40 L 600.0 40 L 639.0 40 C 648.0 40, 652.5 33.0, 660.0 33.0 C 667.5 33.0, 672.0 40, 681.0 40 L 708.0 40 L 714.0 44.0 L 723.0 15.0 L 732.0 58.0 L 739.5 40 L 762.0 40 C 771.0 40, 781.5 30.0, 792.0 30.0 C 802.5 30.0, 813.0 40, 822.0 40 L 900.0 40 L 939.0 40 C 948.0 40, 952.5 33.0, 960.0 33.0 C 967.5 33.0, 972.0 40, 981.0 40 L 1008.0 40 L 1014.0 44.0 L 1023.0 15.0 L 1032.0 58.0 L 1039.5 40 L 1062.0 40 C 1071.0 40, 1081.5 30.0, 1092.0 30.0 C 1102.5 30.0, 1113.0 40, 1122.0 40 L 1200.0 40 L 1239.0 40 C 1248.0 40, 1252.5 33.0, 1260.0 33.0 C 1267.5 33.0, 1272.0 40, 1281.0 40 L 1308.0 40 L 1314.0 44.0 L 1323.0 15.0 L 1332.0 58.0 L 1339.5 40 L 1362.0 40 C 1371.0 40, 1381.5 30.0, 1392.0 30.0 C 1402.5 30.0, 1413.0 40, 1422.0 40 L 1500.0 40 L 1539.0 40 C 1548.0 40, 1552.5 33.0, 1560.0 33.0 C 1567.5 33.0, 1572.0 40, 1581.0 40 L 1608.0 40 L 1614.0 44.0 L 1623.0 15.0 L 1632.0 58.0 L 1639.5 40 L 1662.0 40 C 1671.0 40, 1681.5 30.0, 1692.0 30.0 C 1702.5 30.0, 1713.0 40, 1722.0 40 L 1800.0 40 L 1839.0 40 C 1848.0 40, 1852.5 33.0, 1860.0 33.0 C 1867.5 33.0, 1872.0 40, 1881.0 40 L 1908.0 40 L 1914.0 44.0 L 1923.0 15.0 L 1932.0 58.0 L 1939.5 40 L 1962.0 40 C 1971.0 40, 1981.5 30.0, 1992.0 30.0 C 2002.5 30.0, 2013.0 40, 2022.0 40 L 2100.0 40 L 2139.0 40 C 2148.0 40, 2152.5 33.0, 2160.0 33.0 C 2167.5 33.0, 2172.0 40, 2181.0 40 L 2208.0 40 L 2214.0 44.0 L 2223.0 15.0 L 2232.0 58.0 L 2239.5 40 L 2262.0 40 C 2271.0 40, 2281.5 30.0, 2292.0 30.0 C 2302.5 30.0, 2313.0 40, 2322.0 40 L 2400.0 40 " />
+            <path class="ecg-path-signal" d="M 0 40 L 39.0 40 C 48.0 40, 52.5 33.0, 60.0 33.0 C 67.5 33.0, 72.0 40, 81.0 40 L 108.0 40 L 114.0 44.0 L 123.0 15.0 L 132.0 58.0 L 139.5 40 L 162.0 40 C 171.0 40, 181.5 30.0, 192.0 30.0 C 202.5 30.0, 213.0 40, 222.0 40 L 300.0 40 L 339.0 40 C 348.0 40, 352.5 33.0, 360.0 33.0 C 367.5 33.0, 372.0 40, 381.0 40 L 408.0 40 L 414.0 44.0 L 423.0 15.0 L 432.0 58.0 L 439.5 40 L 462.0 40 C 471.0 40, 481.5 30.0, 492.0 30.0 C 502.5 30.0, 513.0 40, 522.0 40 L 600.0 40 L 639.0 40 C 648.0 40, 652.5 33.0, 660.0 33.0 C 667.5 33.0, 672.0 40, 681.0 40 L 708.0 40 L 714.0 44.0 L 723.0 15.0 L 732.0 58.0 L 739.5 40 L 762.0 40 C 771.0 40, 781.5 30.0, 792.0 30.0 C 802.5 30.0, 813.0 40, 822.0 40 L 900.0 40 L 939.0 40 C 948.0 40, 952.5 33.0, 960.0 33.0 C 967.5 33.0, 972.0 40, 981.0 40 L 1008.0 40 L 1014.0 44.0 L 1023.0 15.0 L 1032.0 58.0 L 1039.5 40 L 1062.0 40 C 1071.0 40, 1081.5 30.0, 1092.0 30.0 C 1102.5 30.0, 1113.0 40, 1122.0 40 L 1200.0 40 L 1239.0 40 C 1248.0 40, 1252.5 33.0, 1260.0 33.0 C 1267.5 33.0, 1272.0 40, 1281.0 40 L 1308.0 40 L 1314.0 44.0 L 1323.0 15.0 L 1332.0 58.0 L 1339.5 40 L 1362.0 40 C 1371.0 40, 1381.5 30.0, 1392.0 30.0 C 1402.5 30.0, 1413.0 40, 1422.0 40 L 1500.0 40 L 1539.0 40 C 1548.0 40, 1552.5 33.0, 1560.0 33.0 C 1567.5 33.0, 1572.0 40, 1581.0 40 L 1608.0 40 L 1614.0 44.0 L 1623.0 15.0 L 1632.0 58.0 L 1639.5 40 L 1662.0 40 C 1671.0 40, 1681.5 30.0, 1692.0 30.0 C 1702.5 30.0, 1713.0 40, 1722.0 40 L 1800.0 40 L 1839.0 40 C 1848.0 40, 1852.5 33.0, 1860.0 33.0 C 1867.5 33.0, 1872.0 40, 1881.0 40 L 1908.0 40 L 1914.0 44.0 L 1923.0 15.0 L 1932.0 58.0 L 1939.5 40 L 1962.0 40 C 1971.0 40, 1981.5 30.0, 1992.0 30.0 C 2002.5 30.0, 2013.0 40, 2022.0 40 L 2100.0 40 L 2139.0 40 C 2148.0 40, 2152.5 33.0, 2160.0 33.0 C 2167.5 33.0, 2172.0 40, 2181.0 40 L 2208.0 40 L 2214.0 44.0 L 2223.0 15.0 L 2232.0 58.0 L 2239.5 40 L 2262.0 40 C 2271.0 40, 2281.5 30.0, 2292.0 30.0 C 2302.5 30.0, 2313.0 40, 2322.0 40 L 2400.0 40 " />
+          </svg>
+          <svg class="ecg-svg" viewBox="0 0 2400 80" preserveAspectRatio="none">
+            <path class="ecg-path-ambient" d="M 0 40 L 39.0 40 C 48.0 40, 52.5 33.0, 60.0 33.0 C 67.5 33.0, 72.0 40, 81.0 40 L 108.0 40 L 114.0 44.0 L 123.0 15.0 L 132.0 58.0 L 139.5 40 L 162.0 40 C 171.0 40, 181.5 30.0, 192.0 30.0 C 202.5 30.0, 213.0 40, 222.0 40 L 300.0 40 L 339.0 40 C 348.0 40, 352.5 33.0, 360.0 33.0 C 367.5 33.0, 372.0 40, 381.0 40 L 408.0 40 L 414.0 44.0 L 423.0 15.0 L 432.0 58.0 L 439.5 40 L 462.0 40 C 471.0 40, 481.5 30.0, 492.0 30.0 C 502.5 30.0, 513.0 40, 522.0 40 L 600.0 40 L 639.0 40 C 648.0 40, 652.5 33.0, 660.0 33.0 C 667.5 33.0, 672.0 40, 681.0 40 L 708.0 40 L 714.0 44.0 L 723.0 15.0 L 732.0 58.0 L 739.5 40 L 762.0 40 C 771.0 40, 781.5 30.0, 792.0 30.0 C 802.5 30.0, 813.0 40, 822.0 40 L 900.0 40 L 939.0 40 C 948.0 40, 952.5 33.0, 960.0 33.0 C 967.5 33.0, 972.0 40, 981.0 40 L 1008.0 40 L 1014.0 44.0 L 1023.0 15.0 L 1032.0 58.0 L 1039.5 40 L 1062.0 40 C 1071.0 40, 1081.5 30.0, 1092.0 30.0 C 1102.5 30.0, 1113.0 40, 1122.0 40 L 1200.0 40 L 1239.0 40 C 1248.0 40, 1252.5 33.0, 1260.0 33.0 C 1267.5 33.0, 1272.0 40, 1281.0 40 L 1308.0 40 L 1314.0 44.0 L 1323.0 15.0 L 1332.0 58.0 L 1339.5 40 L 1362.0 40 C 1371.0 40, 1381.5 30.0, 1392.0 30.0 C 1402.5 30.0, 1413.0 40, 1422.0 40 L 1500.0 40 L 1539.0 40 C 1548.0 40, 1552.5 33.0, 1560.0 33.0 C 1567.5 33.0, 1572.0 40, 1581.0 40 L 1608.0 40 L 1614.0 44.0 L 1623.0 15.0 L 1632.0 58.0 L 1639.5 40 L 1662.0 40 C 1671.0 40, 1681.5 30.0, 1692.0 30.0 C 1702.5 30.0, 1713.0 40, 1722.0 40 L 1800.0 40 L 1839.0 40 C 1848.0 40, 1852.5 33.0, 1860.0 33.0 C 1867.5 33.0, 1872.0 40, 1881.0 40 L 1908.0 40 L 1914.0 44.0 L 1923.0 15.0 L 1932.0 58.0 L 1939.5 40 L 1962.0 40 C 1971.0 40, 1981.5 30.0, 1992.0 30.0 C 2002.5 30.0, 2013.0 40, 2022.0 40 L 2100.0 40 L 2139.0 40 C 2148.0 40, 2152.5 33.0, 2160.0 33.0 C 2167.5 33.0, 2172.0 40, 2181.0 40 L 2208.0 40 L 2214.0 44.0 L 2223.0 15.0 L 2232.0 58.0 L 2239.5 40 L 2262.0 40 C 2271.0 40, 2281.5 30.0, 2292.0 30.0 C 2302.5 30.0, 2313.0 40, 2322.0 40 L 2400.0 40 " />
+          </svg>
+        </div>
+      </div>
+
+      <!-- ECG Track 2: Lead II Primary Rhythm (Dominant cardiac signal) -->
+      <div class="ecg-waveform-track ecg-track-mid">
+        <div class="ecg-track-inner">
+          <svg class="ecg-svg" viewBox="0 0 2400 80" preserveAspectRatio="none">
+            <path class="ecg-path-ambient" d="M 0 40 L 39.0 40 C 48.0 40, 52.5 31.0, 60.0 31.0 C 67.5 31.0, 72.0 40, 81.0 40 L 108.0 40 L 114.0 46.0 L 123.0 6.0 L 132.0 68.0 L 139.5 40 L 162.0 40 C 171.0 40, 181.5 26.0, 192.0 26.0 C 202.5 26.0, 213.0 40, 222.0 40 L 300.0 40 L 339.0 40 C 348.0 40, 352.5 31.0, 360.0 31.0 C 367.5 31.0, 372.0 40, 381.0 40 L 408.0 40 L 414.0 46.0 L 423.0 6.0 L 432.0 68.0 L 439.5 40 L 462.0 40 C 471.0 40, 481.5 26.0, 492.0 26.0 C 502.5 26.0, 513.0 40, 522.0 40 L 600.0 40 L 639.0 40 C 648.0 40, 652.5 31.0, 660.0 31.0 C 667.5 31.0, 672.0 40, 681.0 40 L 708.0 40 L 714.0 46.0 L 723.0 6.0 L 732.0 68.0 L 739.5 40 L 762.0 40 C 771.0 40, 781.5 26.0, 792.0 26.0 C 802.5 26.0, 813.0 40, 822.0 40 L 900.0 40 L 939.0 40 C 948.0 40, 952.5 31.0, 960.0 31.0 C 967.5 31.0, 972.0 40, 981.0 40 L 1008.0 40 L 1014.0 46.0 L 1023.0 6.0 L 1032.0 68.0 L 1039.5 40 L 1062.0 40 C 1071.0 40, 1081.5 26.0, 1092.0 26.0 C 1102.5 26.0, 1113.0 40, 1122.0 40 L 1200.0 40 L 1239.0 40 C 1248.0 40, 1252.5 31.0, 1260.0 31.0 C 1267.5 31.0, 1272.0 40, 1281.0 40 L 1308.0 40 L 1314.0 46.0 L 1323.0 6.0 L 1332.0 68.0 L 1339.5 40 L 1362.0 40 C 1371.0 40, 1381.5 26.0, 1392.0 26.0 C 1402.5 26.0, 1413.0 40, 1422.0 40 L 1500.0 40 L 1539.0 40 C 1548.0 40, 1552.5 31.0, 1560.0 31.0 C 1567.5 31.0, 1572.0 40, 1581.0 40 L 1608.0 40 L 1614.0 46.0 L 1623.0 6.0 L 1632.0 68.0 L 1639.5 40 L 1662.0 40 C 1671.0 40, 1681.5 26.0, 1692.0 26.0 C 1702.5 26.0, 1713.0 40, 1722.0 40 L 1800.0 40 L 1839.0 40 C 1848.0 40, 1852.5 31.0, 1860.0 31.0 C 1867.5 31.0, 1872.0 40, 1881.0 40 L 1908.0 40 L 1914.0 46.0 L 1923.0 6.0 L 1932.0 68.0 L 1939.5 40 L 1962.0 40 C 1971.0 40, 1981.5 26.0, 1992.0 26.0 C 2002.5 26.0, 2013.0 40, 2022.0 40 L 2100.0 40 L 2139.0 40 C 2148.0 40, 2152.5 31.0, 2160.0 31.0 C 2167.5 31.0, 2172.0 40, 2181.0 40 L 2208.0 40 L 2214.0 46.0 L 2223.0 6.0 L 2232.0 68.0 L 2239.5 40 L 2262.0 40 C 2271.0 40, 2281.5 26.0, 2292.0 26.0 C 2302.5 26.0, 2313.0 40, 2322.0 40 L 2400.0 40 " />
+            <path class="ecg-path-signal" d="M 0 40 L 39.0 40 C 48.0 40, 52.5 31.0, 60.0 31.0 C 67.5 31.0, 72.0 40, 81.0 40 L 108.0 40 L 114.0 46.0 L 123.0 6.0 L 132.0 68.0 L 139.5 40 L 162.0 40 C 171.0 40, 181.5 26.0, 192.0 26.0 C 202.5 26.0, 213.0 40, 222.0 40 L 300.0 40 L 339.0 40 C 348.0 40, 352.5 31.0, 360.0 31.0 C 367.5 31.0, 372.0 40, 381.0 40 L 408.0 40 L 414.0 46.0 L 423.0 6.0 L 432.0 68.0 L 439.5 40 L 462.0 40 C 471.0 40, 481.5 26.0, 492.0 26.0 C 502.5 26.0, 513.0 40, 522.0 40 L 600.0 40 L 639.0 40 C 648.0 40, 652.5 31.0, 660.0 31.0 C 667.5 31.0, 672.0 40, 681.0 40 L 708.0 40 L 714.0 46.0 L 723.0 6.0 L 732.0 68.0 L 739.5 40 L 762.0 40 C 771.0 40, 781.5 26.0, 792.0 26.0 C 802.5 26.0, 813.0 40, 822.0 40 L 900.0 40 L 939.0 40 C 948.0 40, 952.5 31.0, 960.0 31.0 C 967.5 31.0, 972.0 40, 981.0 40 L 1008.0 40 L 1014.0 46.0 L 1023.0 6.0 L 1032.0 68.0 L 1039.5 40 L 1062.0 40 C 1071.0 40, 1081.5 26.0, 1092.0 26.0 C 1102.5 26.0, 1113.0 40, 1122.0 40 L 1200.0 40 L 1239.0 40 C 1248.0 40, 1252.5 31.0, 1260.0 31.0 C 1267.5 31.0, 1272.0 40, 1281.0 40 L 1308.0 40 L 1314.0 46.0 L 1323.0 6.0 L 1332.0 68.0 L 1339.5 40 L 1362.0 40 C 1371.0 40, 1381.5 26.0, 1392.0 26.0 C 1402.5 26.0, 1413.0 40, 1422.0 40 L 1500.0 40 L 1539.0 40 C 1548.0 40, 1552.5 31.0, 1560.0 31.0 C 1567.5 31.0, 1572.0 40, 1581.0 40 L 1608.0 40 L 1614.0 46.0 L 1623.0 6.0 L 1632.0 68.0 L 1639.5 40 L 1662.0 40 C 1671.0 40, 1681.5 26.0, 1692.0 26.0 C 1702.5 26.0, 1713.0 40, 1722.0 40 L 1800.0 40 L 1839.0 40 C 1848.0 40, 1852.5 31.0, 1860.0 31.0 C 1867.5 31.0, 1872.0 40, 1881.0 40 L 1908.0 40 L 1914.0 46.0 L 1923.0 6.0 L 1932.0 68.0 L 1939.5 40 L 1962.0 40 C 1971.0 40, 1981.5 26.0, 1992.0 26.0 C 2002.5 26.0, 2013.0 40, 2022.0 40 L 2100.0 40 L 2139.0 40 C 2148.0 40, 2152.5 31.0, 2160.0 31.0 C 2167.5 31.0, 2172.0 40, 2181.0 40 L 2208.0 40 L 2214.0 46.0 L 2223.0 6.0 L 2232.0 68.0 L 2239.5 40 L 2262.0 40 C 2271.0 40, 2281.5 26.0, 2292.0 26.0 C 2302.5 26.0, 2313.0 40, 2322.0 40 L 2400.0 40 " />
+          </svg>
+          <svg class="ecg-svg" viewBox="0 0 2400 80" preserveAspectRatio="none">
+            <path class="ecg-path-ambient" d="M 0 40 L 39.0 40 C 48.0 40, 52.5 31.0, 60.0 31.0 C 67.5 31.0, 72.0 40, 81.0 40 L 108.0 40 L 114.0 46.0 L 123.0 6.0 L 132.0 68.0 L 139.5 40 L 162.0 40 C 171.0 40, 181.5 26.0, 192.0 26.0 C 202.5 26.0, 213.0 40, 222.0 40 L 300.0 40 L 339.0 40 C 348.0 40, 352.5 31.0, 360.0 31.0 C 367.5 31.0, 372.0 40, 381.0 40 L 408.0 40 L 414.0 46.0 L 423.0 6.0 L 432.0 68.0 L 439.5 40 L 462.0 40 C 471.0 40, 481.5 26.0, 492.0 26.0 C 502.5 26.0, 513.0 40, 522.0 40 L 600.0 40 L 639.0 40 C 648.0 40, 652.5 31.0, 660.0 31.0 C 667.5 31.0, 672.0 40, 681.0 40 L 708.0 40 L 714.0 46.0 L 723.0 6.0 L 732.0 68.0 L 739.5 40 L 762.0 40 C 771.0 40, 781.5 26.0, 792.0 26.0 C 802.5 26.0, 813.0 40, 822.0 40 L 900.0 40 L 939.0 40 C 948.0 40, 952.5 31.0, 960.0 31.0 C 967.5 31.0, 972.0 40, 981.0 40 L 1008.0 40 L 1014.0 46.0 L 1023.0 6.0 L 1032.0 68.0 L 1039.5 40 L 1062.0 40 C 1071.0 40, 1081.5 26.0, 1092.0 26.0 C 1102.5 26.0, 1113.0 40, 1122.0 40 L 1200.0 40 L 1239.0 40 C 1248.0 40, 1252.5 31.0, 1260.0 31.0 C 1267.5 31.0, 1272.0 40, 1281.0 40 L 1308.0 40 L 1314.0 46.0 L 1323.0 6.0 L 1332.0 68.0 L 1339.5 40 L 1362.0 40 C 1371.0 40, 1381.5 26.0, 1392.0 26.0 C 1402.5 26.0, 1413.0 40, 1422.0 40 L 1500.0 40 L 1539.0 40 C 1548.0 40, 1552.5 31.0, 1560.0 31.0 C 1567.5 31.0, 1572.0 40, 1581.0 40 L 1608.0 40 L 1614.0 46.0 L 1623.0 6.0 L 1632.0 68.0 L 1639.5 40 L 1662.0 40 C 1671.0 40, 1681.5 26.0, 1692.0 26.0 C 1702.5 26.0, 1713.0 40, 1722.0 40 L 1800.0 40 L 1839.0 40 C 1848.0 40, 1852.5 31.0, 1860.0 31.0 C 1867.5 31.0, 1872.0 40, 1881.0 40 L 1908.0 40 L 1914.0 46.0 L 1923.0 6.0 L 1932.0 68.0 L 1939.5 40 L 1962.0 40 C 1971.0 40, 1981.5 26.0, 1992.0 26.0 C 2002.5 26.0, 2013.0 40, 2022.0 40 L 2100.0 40 L 2139.0 40 C 2148.0 40, 2152.5 31.0, 2160.0 31.0 C 2167.5 31.0, 2172.0 40, 2181.0 40 L 2208.0 40 L 2214.0 46.0 L 2223.0 6.0 L 2232.0 68.0 L 2239.5 40 L 2262.0 40 C 2271.0 40, 2281.5 26.0, 2292.0 26.0 C 2302.5 26.0, 2313.0 40, 2322.0 40 L 2400.0 40 " />
+          </svg>
+        </div>
+      </div>
+
+      <!-- ECG Track 3: Lead III Cadence Rhythm -->
+      <div class="ecg-waveform-track ecg-track-lower">
+        <div class="ecg-track-inner">
+          <svg class="ecg-svg" viewBox="0 0 2400 80" preserveAspectRatio="none">
+            <path class="ecg-path-ambient" d="M 0 40 L 39.0 40 C 48.0 40, 52.5 34.0, 60.0 34.0 C 67.5 34.0, 72.0 40, 81.0 40 L 108.0 40 L 114.0 44.0 L 123.0 18.0 L 132.0 56.0 L 139.5 40 L 162.0 40 C 171.0 40, 181.5 31.0, 192.0 31.0 C 202.5 31.0, 213.0 40, 222.0 40 L 300.0 40 L 339.0 40 C 348.0 40, 352.5 34.0, 360.0 34.0 C 367.5 34.0, 372.0 40, 381.0 40 L 408.0 40 L 414.0 44.0 L 423.0 18.0 L 432.0 56.0 L 439.5 40 L 462.0 40 C 471.0 40, 481.5 31.0, 492.0 31.0 C 502.5 31.0, 513.0 40, 522.0 40 L 600.0 40 L 639.0 40 C 648.0 40, 652.5 34.0, 660.0 34.0 C 667.5 34.0, 672.0 40, 681.0 40 L 708.0 40 L 714.0 44.0 L 723.0 18.0 L 732.0 56.0 L 739.5 40 L 762.0 40 C 771.0 40, 781.5 31.0, 792.0 31.0 C 802.5 31.0, 813.0 40, 822.0 40 L 900.0 40 L 939.0 40 C 948.0 40, 952.5 34.0, 960.0 34.0 C 967.5 34.0, 972.0 40, 981.0 40 L 1008.0 40 L 1014.0 44.0 L 1023.0 18.0 L 1032.0 56.0 L 1039.5 40 L 1062.0 40 C 1071.0 40, 1081.5 31.0, 1092.0 31.0 C 1102.5 31.0, 1113.0 40, 1122.0 40 L 1200.0 40 L 1239.0 40 C 1248.0 40, 1252.5 34.0, 1260.0 34.0 C 1267.5 34.0, 1272.0 40, 1281.0 40 L 1308.0 40 L 1314.0 44.0 L 1323.0 18.0 L 1332.0 56.0 L 1339.5 40 L 1362.0 40 C 1371.0 40, 1381.5 31.0, 1392.0 31.0 C 1402.5 31.0, 1413.0 40, 1422.0 40 L 1500.0 40 L 1539.0 40 C 1548.0 40, 1552.5 34.0, 1560.0 34.0 C 1567.5 34.0, 1572.0 40, 1581.0 40 L 1608.0 40 L 1614.0 44.0 L 1623.0 18.0 L 1632.0 56.0 L 1639.5 40 L 1662.0 40 C 1671.0 40, 1681.5 31.0, 1692.0 31.0 C 1702.5 31.0, 1713.0 40, 1722.0 40 L 1800.0 40 L 1839.0 40 C 1848.0 40, 1852.5 34.0, 1860.0 34.0 C 1867.5 34.0, 1872.0 40, 1881.0 40 L 1908.0 40 L 1914.0 44.0 L 1923.0 18.0 L 1932.0 56.0 L 1939.5 40 L 1962.0 40 C 1971.0 40, 1981.5 31.0, 1992.0 31.0 C 2002.5 31.0, 2013.0 40, 2022.0 40 L 2100.0 40 L 2139.0 40 C 2148.0 40, 2152.5 34.0, 2160.0 34.0 C 2167.5 34.0, 2172.0 40, 2181.0 40 L 2208.0 40 L 2214.0 44.0 L 2223.0 18.0 L 2232.0 58.0 L 2239.5 40 L 2262.0 40 C 2271.0 40, 2281.5 31.0, 2292.0 31.0 C 2302.5 31.0, 2313.0 40, 2322.0 40 L 2400.0 40 " />
+            <path class="ecg-path-signal" d="M 0 40 L 39.0 40 C 48.0 40, 52.5 34.0, 60.0 34.0 C 67.5 34.0, 72.0 40, 81.0 40 L 108.0 40 L 114.0 44.0 L 123.0 18.0 L 132.0 56.0 L 139.5 40 L 162.0 40 C 171.0 40, 181.5 31.0, 192.0 31.0 C 202.5 31.0, 213.0 40, 222.0 40 L 300.0 40 L 339.0 40 C 348.0 40, 352.5 34.0, 360.0 34.0 C 367.5 34.0, 372.0 40, 381.0 40 L 408.0 40 L 414.0 44.0 L 423.0 18.0 L 432.0 56.0 L 439.5 40 L 462.0 40 C 471.0 40, 481.5 31.0, 492.0 31.0 C 502.5 31.0, 513.0 40, 522.0 40 L 600.0 40 L 639.0 40 C 648.0 40, 652.5 34.0, 660.0 34.0 C 667.5 34.0, 672.0 40, 681.0 40 L 708.0 40 L 714.0 44.0 L 723.0 18.0 L 732.0 56.0 L 739.5 40 L 762.0 40 C 771.0 40, 781.5 31.0, 792.0 31.0 C 802.5 31.0, 813.0 40, 822.0 40 L 900.0 40 L 939.0 40 C 948.0 40, 952.5 34.0, 960.0 34.0 C 967.5 34.0, 972.0 40, 981.0 40 L 1008.0 40 L 1014.0 44.0 L 1023.0 18.0 L 1032.0 56.0 L 1039.5 40 L 1062.0 40 C 1071.0 40, 1081.5 31.0, 1092.0 31.0 C 1102.5 31.0, 1113.0 40, 1122.0 40 L 1200.0 40 L 1239.0 40 C 1248.0 40, 1252.5 34.0, 1260.0 34.0 C 1267.5 34.0, 1272.0 40, 1281.0 40 L 1308.0 40 L 1314.0 44.0 L 1323.0 18.0 L 1332.0 56.0 L 1339.5 40 L 1362.0 40 C 1371.0 40, 1381.5 31.0, 1392.0 31.0 C 1402.5 31.0, 1413.0 40, 1422.0 40 L 1500.0 40 L 1539.0 40 C 1548.0 40, 1552.5 34.0, 1560.0 34.0 C 1567.5 34.0, 1572.0 40, 1581.0 40 L 1608.0 40 L 1614.0 44.0 L 1623.0 18.0 L 1632.0 56.0 L 1639.5 40 L 1662.0 40 C 1671.0 40, 1681.5 31.0, 1692.0 31.0 C 1702.5 31.0, 1713.0 40, 1722.0 40 L 1800.0 40 L 1839.0 40 C 1848.0 40, 1852.5 34.0, 1860.0 34.0 C 1867.5 34.0, 1872.0 40, 1881.0 40 L 1908.0 40 L 1914.0 44.0 L 1923.0 18.0 L 1932.0 56.0 L 1939.5 40 L 1962.0 40 C 1971.0 40, 1981.5 31.0, 1992.0 31.0 C 2002.5 31.0, 2013.0 40, 2022.0 40 L 2100.0 40 L 2139.0 40 C 2148.0 40, 2152.5 34.0, 2160.0 34.0 C 2167.5 34.0, 2172.0 40, 2181.0 40 L 2208.0 40 L 2214.0 44.0 L 2223.0 18.0 L 2232.0 58.0 L 2239.5 40 L 2262.0 40 C 2271.0 40, 2281.5 31.0, 2292.0 31.0 C 2302.5 31.0, 2313.0 40, 2322.0 40 L 2400.0 40 " />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="container hero-container-ags">
+      <div class="hero-content-ags">
+        <h1 class="hero-title-ags">Revenue Cycle<br>Management (RCM)<br>Services</h1>
+        <p class="hero-subtitle-ags">
+          From insurance verification and prior authorization to the final payment of a balance, we can help you simplify your revenue cycle management processes with intelligent, technology-enabled healthcare revenue cycle management services.
+        </p>
+        <div class="hero-actions-ags">
+          <a href="contact.html" class="btn btn-consultation-ags">
+            <span>Schedule a free consultation</span>
+            <svg class="btn-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECTION 2: OVERVIEW
+       ======================================================================== -->
+  <section class="section-overview-ags" id="overview">
+    <div class="container">
+      <div class="overview-content-centered">
+        <span class="eyebrow-ags">OVERVIEW</span>
+        <h2 class="overview-heading-ags">Strengthening Patient Access from the Very Beginning</h2>
+        <div class="overview-body-wrap">
+          <p class="overview-body-text">
+            Every successful patient encounter starts with accurate and complete information. Our Patient Access solutions help healthcare organizations verify patient demographics, confirm insurance coverage, and identify missing or inconsistent information before the visit.
+          </p>
+          <p class="overview-body-text">
+            Our experienced team proactively reviews eligibility, benefits, insurance details, and registration information to identify potential issues at the front end. By resolving discrepancies before they move downstream, we help organizations minimize avoidable delays, reduce front-end denial risk, and create a smoother patient experience.
+          </p>
+          <p class="overview-body-text">
+            Through a structured and proactive approach, we help strengthen the point of access while supporting greater efficiency across the revenue cycle.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECTION 3: SERVICES PROVIDED (SCREENSHOT 2)
+       ======================================================================== -->
+  <section class="section-solutions-grid" id="services-provided" style="padding-top: 30px;">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="eyebrow-ags">SERVICES PROVIDED</span>
+        <h2 class="section-heading-ags">End-to-End RCM services</h2>
+      </div>
+
+      <!-- 3 Main Headings in Megamenu (matching Screenshot 2 layout) -->
+      <div class="services-provided-grid">
+        <!-- Card 1: Patient Access Services -->
+        <article class="service-prov-card">
+          <div class="service-prov-media">
+            <img src="images/solution-patient-access.jpg" alt="Patient Access Services" class="service-prov-img" loading="lazy">
+          </div>
+          <div class="service-prov-body">
+            <h3 class="service-prov-title">Patient Access Services</h3>
+            <p class="service-prov-desc">
+              Nova Arc understands the key goals, priorities, and needs of a high-functioning Patient Access department. Our experienced team can help you identify missing information and confirm insurance details prior to the visit — ensuring nothing is missed that could hold up your claims.
+            </p>
+            <a href="services/patient-access-services.html" class="service-prov-link">
+              <span>Learn more</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 2: HIM & Coding -->
+        <article class="service-prov-card">
+          <div class="service-prov-media">
+            <img src="images/solution-him-coding.jpg" alt="HIM & Coding Services" class="service-prov-img" loading="lazy">
+          </div>
+          <div class="service-prov-body">
+            <h3 class="service-prov-title">HIM &amp; Coding</h3>
+            <p class="service-prov-desc">
+              We are experts in the ever-changing complexities of healthcare regulations, and we employ a variety of technology-enhanced tools to help ensure your health information is documented and coded correctly, efficiently, and in full compliance.
+            </p>
+            <a href="services/him-coding-services.html" class="service-prov-link">
+              <span>Learn more</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 3: Patient Financial Services & Recovery -->
+        <article class="service-prov-card">
+          <div class="service-prov-media">
+            <img src="images/solution-ebo.jpg" alt="Patient Financial Services & Recovery" class="service-prov-img" loading="lazy">
+          </div>
+          <div class="service-prov-body">
+            <h3 class="service-prov-title">Patient Financial Services &amp; Recovery</h3>
+            <p class="service-prov-desc">
+              Whether working with hospital or physician billing, our team of experts will work with you to overcome payor complexities, minimize billing confusion, and recover revenue through decreased days in A/R and identification of lost revenue.
+            </p>
+            <a href="services/patient-financial-services.html" class="service-prov-link">
+              <span>Learn more</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECTION 4: PROCESS & PROCEDURE (SCREENSHOT 3)
+       ======================================================================== -->
+  <section class="section-process-procedure" id="process-procedure">
+    <div class="container">
+      <div class="problem-header">
+        <span class="eyebrow-ags">PROCESS &amp; PROCEDURE</span>
+        <h2 class="section-heading-ags">Generate savings with efficient RCM, medical billing, and coding</h2>
+        <p class="section-desc-ags">
+          Our comprehensive approach to understanding and streamlining your revenue cycle means you can stop worrying about revenue and keep your attention on patients.
         </p>
       </div>
 
-      <!-- Quick Category Jump Pills -->
-      <nav class="services-category-nav" aria-label="Services Category Jump Links">
-        <a href="#patient-access-services" class="category-pill-link active">
-          Patient Access Services
-          <span class="pill-counter">6 Services</span>
-        </a>
-        <a href="#him-clinical-services" class="category-pill-link">
-          HIM &amp; Clinical Services
-          <span class="pill-counter">6 Services</span>
-        </a>
-        <a href="#patient-financial-services" class="category-pill-link">
-          Patient Financial Services
-          <span class="pill-counter">7 Services</span>
-        </a>
-        <a href="#rcm-advisory-services" class="category-pill-link">
-          Advisory &amp; Tech Stack
-          <span class="pill-counter">Flagship</span>
-        </a>
-      </nav>
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
-       CATEGORY 1: PATIENT ACCESS SERVICES
-       ======================================================================== -->
-  <section class="section services-category-block" id="patient-access-services">
-    <div class="container">
-      <div class="category-header-wrap">
-        <div class="category-header-text">
-          <span class="section-tag">Category 01</span>
-          <h2 class="category-title">Patient Access Services</h2>
-          <p class="category-subtitle">
-            Securing front-end data integrity, real-time coverage verification, CPT/HCPCS pre-encounter authorization checks, and financial clearance to establish high clean claim rates and protect first-pass resolution rates.
-          </p>
-        </div>
-        <span class="category-count-badge">5 Core Services</span>
-      </div>
-
-      <!-- Accordion List: Patient Access -->
-      <div class="services-accordion-list">
-
-        <!-- Service 1.1 -->
-        <div class="service-accordion-item open">
-          <button type="button" class="service-accordion-header" aria-expanded="true">
-            <div class="accordion-title-box">
-              <div class="service-icon-circle">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              </div>
-              <div class="service-header-content">
-                <h3 class="service-name">Scheduling &amp; Patient Registration Verification</h3>
-                <p class="service-summary-line">Automated demographic scrubbing, address validation, and identity matching before appointment check-in.</p>
-              </div>
+      <div class="process-grid-layout">
+        <!-- Left: Timeline Steps (01 to 06) -->
+        <div class="process-timeline">
+          <!-- Step 01 -->
+          <div class="process-step-item">
+            <div class="process-step-badge">01</div>
+            <div class="process-step-content">
+              <h3 class="process-step-title">Patient Access &amp; Pre-Service Validation</h3>
+              <p class="process-step-desc">
+                We begin by establishing accurate patient and insurance information through eligibility verification, benefits validation, scheduling and registration QA, prior authorization, financial clearance, and medical necessity checks.
+              </p>
             </div>
-            <div class="accordion-meta-box">
-              <span class="service-sla-chip">99.8% Accuracy SLA</span>
-              <div class="accordion-chevron-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="process-step-item">
+            <div class="process-step-badge">02</div>
+            <div class="process-step-content">
+              <h3 class="process-step-title">Documentation, Coding &amp; Charge Validation</h3>
+              <p class="process-step-desc">
+                Clinical documentation and encounter information are reviewed to support accurate medical coding, charge capture, HCC/risk adjustment, facility/DRG, and professional fee coding while identifying documentation gaps.
+              </p>
             </div>
-          </button>
-          <div class="service-accordion-body">
-            <div class="service-body-inner">
-              <div class="service-scope-col">
-                <h4>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Scope &amp; Operating Deliverables
-                </h4>
-                <p class="service-detailed-desc">
-                  Our front-end verification specialists review scheduled appointments 48 to 72 hours prior to arrival, validating demographics and primary, secondary, and tertiary coordination of benefits (COB). This upfront rigor eliminates front-end Discharged Not Final Billed (DNFB) bottlenecks and sets the baseline for high clean claim rates.
-                </p>
-                <ul class="service-feature-checklist">
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Continuous automated pre-arrival appointment queue auditing</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>COB (Coordination of Benefits) ordering verification</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Direct registration error correction inside Epic, Cerner, AthenaHealth</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="service-deliverables-col">
-                <div class="service-deliverables-card">
-                  <div class="deliverables-stat-duo">
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">48h - 72h</div>
-                      <div class="deliv-stat-lbl">Pre-Encounter Audit Window</div>
-                    </div>
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">&lt; 0.5%</div>
-                      <div class="deliv-stat-lbl">Front-End Error Rate</div>
-                    </div>
-                  </div>
-                  <h4 style="font-size: 0.85rem; margin-bottom: 6px;">Target Impact:</h4>
-                  <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px;">
-                    Eliminates downstream CO-22 and CO-27 coordination of benefit rejections, saving an average of 4.2 hours per provider week.
-                  </p>
-                  <a href="services/patient-registration-verification.html" class="btn btn-primary btn-sm" style="width: 100%; margin-bottom: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-                    <span>Explore Deep-Dive Blueprint</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </a>
-                  <a href="contact.html?service=patient-registration-verification" class="btn btn-secondary btn-sm" style="width: 100%;">Inquire About Registration</a>
-                </div>
-              </div>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="process-step-item">
+            <div class="process-step-badge">03</div>
+            <div class="process-step-content">
+              <h3 class="process-step-title">Coding Quality &amp; Compliance Review</h3>
+              <p class="process-step-desc">
+                Our team performs coding QA, CDI review, CAC review, physician query management, and compliance audits to help ensure coding accuracy, consistency, and appropriate reimbursement.
+              </p>
             </div>
-            <div class="service-accordion-footer">
-              <span class="compliance-tag-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                HIPAA &amp; HITECH Compliant Process
-              </span>
-              <a href="services/patient-registration-verification.html" class="link-arrow" style="font-size: 0.825rem; font-weight: 700; color: var(--blue-accent);">
-                Dedicated Service Blueprint &rarr;
-              </a>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="process-step-item">
+            <div class="process-step-badge">04</div>
+            <div class="process-step-content">
+              <h3 class="process-step-title">Claims Submission &amp; Payment Processing</h3>
+              <p class="process-step-desc">
+                Clean claims are prepared, validated, scrubbed, and submitted electronically. Once payments are received, payment posting and reconciliation are performed to maintain accurate account balances and financial records.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 05 -->
+          <div class="process-step-item">
+            <div class="process-step-badge">05</div>
+            <div class="process-step-content">
+              <h3 class="process-step-title">A/R, Denial &amp; Underpayment Management</h3>
+              <p class="process-step-desc">
+                Outstanding accounts are monitored and analyzed to identify denials, underpayments, payer issues, and aging balances. Appropriate follow-up, appeals, recovery actions, and contract compliance reviews are performed.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 06 -->
+          <div class="process-step-item">
+            <div class="process-step-badge">06</div>
+            <div class="process-step-content">
+              <h3 class="process-step-title">Patient Financial Services &amp; Revenue Recovery</h3>
+              <p class="process-step-desc">
+                We support patient billing, self-pay collections, credit balance and refund management, EDI enrollment, and other recovery activities to help organizations optimize the full revenue cycle.
+              </p>
             </div>
           </div>
         </div>
 
-        <!-- Service 1.2 -->
-        <div class="service-accordion-item">
-          <button type="button" class="service-accordion-header" aria-expanded="false">
-            <div class="accordion-title-box">
-              <div class="service-icon-circle">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 10"></polyline></svg>
-              </div>
-              <div class="service-header-content">
-                <h3 class="service-name">Real-Time Insurance Eligibility &amp; Benefits (270/271)</h3>
-                <p class="service-summary-line">Instant sub-3-second multi-payer EDI verification delivering copay, deductible, and coverage breakdowns.</p>
-              </div>
-            </div>
-            <div class="accordion-meta-box">
-              <span class="service-sla-chip">&lt; 3s Automated Response</span>
-              <div class="accordion-chevron-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-          </button>
-          <div class="service-accordion-body">
-            <div class="service-body-inner">
-              <div class="service-scope-col">
-                <h4>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Scope &amp; Operating Deliverables
-                </h4>
-                <p class="service-detailed-desc">
-                  Comprehensive electronic batch and real-time ANSI 270/271 queries connected to over 1,200 commercial insurers, Medicare Part A/B/C/D, and state Medicaid plans. We verify effective dates, benefit limits, remaining deductibles, out-of-pocket maximums, and service-specific exclusions.
-                </p>
-                <ul class="service-feature-checklist">
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Instant copay, deductible remaining, and coinsurance calculation</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Service-level benefit mapping (telehealth, surgery, diagnostic imaging)</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Automated fallback phone verification for non-EDI regional payers</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="service-deliverables-col">
-                <div class="service-deliverables-card">
-                  <div class="deliverables-stat-duo">
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">1,200+</div>
-                      <div class="deliv-stat-lbl">Connected US Payers</div>
-                    </div>
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">100%</div>
-                      <div class="deliv-stat-lbl">Real-Time Benefit Capture</div>
-                    </div>
-                  </div>
-                  <h4 style="font-size: 0.85rem; margin-bottom: 6px;">Target Impact:</h4>
-                  <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px;">
-                    Decreases eligibility-related denials to under 0.8%, ensuring patients never receive unexpected surprise bills.
-                  </p>
-                  <a href="services/real-time-insurance-eligibility.html" class="btn btn-primary btn-sm" style="width: 100%; margin-bottom: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-                    <span>Explore Deep-Dive Blueprint</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </a>
-                  <a href="contact.html?service=real-time-insurance-eligibility" class="btn btn-secondary btn-sm" style="width: 100%;">Inquire About Eligibility</a>
-                </div>
-              </div>
-            </div>
-            <div class="service-accordion-footer">
-              <span class="compliance-tag-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                ANSI X12 270/271 Certified Transaction Gateway
-              </span>
-              <a href="services/real-time-insurance-eligibility.html" class="link-arrow" style="font-size: 0.825rem; font-weight: 700; color: var(--blue-accent);">
-                Dedicated Service Blueprint &rarr;
-              </a>
-            </div>
-          </div>
+        <!-- Right: Sticky Editorial B&W Image -->
+        <div class="process-sticky-media">
+          <img src="images/process-executive.jpg" alt="Revenue Cycle Operational Excellence" class="process-sticky-img" loading="lazy">
         </div>
-
-        <!-- Service 1.3 -->
-        <div class="service-accordion-item">
-          <button type="button" class="service-accordion-header" aria-expanded="false">
-            <div class="accordion-title-box">
-              <div class="service-icon-circle">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-              </div>
-              <div class="service-header-content">
-                <h3 class="service-name">Prior Authorization &amp; Referral Management</h3>
-                <p class="service-summary-line">End-to-end clinical attachment compilation, portal submissions, and proactive authorization tracking.</p>
-              </div>
-            </div>
-            <div class="accordion-meta-box">
-              <span class="service-sla-chip">Zero-Delay Guarantee</span>
-              <div class="accordion-chevron-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-          </button>
-          <div class="service-accordion-body">
-            <div class="service-body-inner">
-              <div class="service-scope-col">
-                <h4>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Scope &amp; Operating Deliverables
-                </h4>
-                <p class="service-detailed-desc">
-                  Prior authorization delays cause patient cancellations and lost revenue. Our dedicated prior-auth pods cross-reference ordered CPT and HCPCS codes against payer medical necessity criteria, attach required ICD-10 diagnostic indications, and secure approvals through clearinghouses or direct portals to protect first-pass resolution rates and prevent CARC 197 denials.
-                </p>
-                <ul class="service-feature-checklist">
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Sub-24-hour initiation from physician order creation</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Peer-to-peer scheduling support and packet prep for physicians</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Automated authorization number entry into scheduling EHR modules</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="service-deliverables-col">
-                <div class="service-deliverables-card">
-                  <div class="deliverables-stat-duo">
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">96.4%</div>
-                      <div class="deliv-stat-lbl">First-Pass Approval Rate</div>
-                    </div>
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">&lt; 24h</div>
-                      <div class="deliv-stat-lbl">Submission Turnaround</div>
-                    </div>
-                  </div>
-                  <h4 style="font-size: 0.85rem; margin-bottom: 6px;">Target Impact:</h4>
-                  <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px;">
-                    Prevents procedure cancellations and completely eliminates CARC 197 authorization denials.
-                  </p>
-                  <a href="services/prior-authorization-management.html" class="btn btn-primary btn-sm" style="width: 100%; margin-bottom: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-                    <span>Explore Prior Auth Blueprint</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </a>
-                  <a href="services/referral-order-management.html" class="btn btn-primary btn-sm" style="width: 100%; margin-bottom: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: rgba(56, 189, 248, 0.15); color: #38BDF8; border-color: rgba(56, 189, 248, 0.3);">
-                    <span>Explore Referral &amp; Order (LCD/ABN) Blueprint</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </a>
-                  <a href="contact.html?service=referral-order-management" class="btn btn-secondary btn-sm" style="width: 100%;">Inquire About Orders &amp; Auth</a>
-                </div>
-              </div>
-            </div>
-            <div class="service-accordion-footer">
-              <span class="compliance-tag-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                Specialty-Specific Clinical Knowledge Pods
-              </span>
-              <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap;">
-                <a href="services/prior-authorization-management.html" class="link-arrow" style="font-size: 0.825rem; font-weight: 700; color: var(--blue-accent);">
-                  Prior Auth Blueprint &rarr;
-                </a>
-                <span style="color: var(--border-medium);">&bull;</span>
-                <a href="services/referral-order-management.html" class="link-arrow" style="font-size: 0.825rem; font-weight: 700; color: #38BDF8;">
-                  Referral/Order Blueprint &rarr;
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 1.4 -->
-        <div class="service-accordion-item">
-          <button type="button" class="service-accordion-header" aria-expanded="false">
-            <div class="accordion-title-box">
-              <div class="service-icon-circle">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
-              </div>
-              <div class="service-header-content">
-                <h3 class="service-name">Pre-Service Financial Clearance &amp; Good Faith Estimates (GFE)</h3>
-                <p class="service-summary-line">Full No Surprises Act compliance, upfront cost calculations, and pre-service patient communication.</p>
-              </div>
-            </div>
-            <div class="accordion-meta-box">
-              <span class="service-sla-chip">100% GFE Compliance</span>
-              <div class="accordion-chevron-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-          </button>
-          <div class="service-accordion-body">
-            <div class="service-body-inner">
-              <div class="service-scope-col">
-                <h4>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Scope &amp; Operating Deliverables
-                </h4>
-                <p class="service-detailed-desc">
-                  Calculate precise patient financial responsibility before date-of-service, combining payer allowable fee schedules, provider contracted rates, and remaining deductible balances to generate compliant Good Faith Estimates under the federal No Surprises Act.
-                </p>
-                <ul class="service-feature-checklist">
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Pre-encounter automated Good Faith Estimate PDF generation</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Digital SMS and email pre-service delivery with read receipts</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Financial counseling liaison for high-deductible plan holders</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="service-deliverables-col">
-                <div class="service-deliverables-card">
-                  <div class="deliverables-stat-duo">
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">100%</div>
-                      <div class="deliv-stat-lbl">Statutory Compliance</div>
-                    </div>
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">&lt; 3 Min</div>
-                      <div class="deliv-stat-lbl">Automated GFE Creation</div>
-                    </div>
-                  </div>
-                  <h4 style="font-size: 0.85rem; margin-bottom: 6px;">Target Impact:</h4>
-                  <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px;">
-                    Avoids federal penalty exposure ($10,000 per violation) and gives patients price clarity before treatment.
-                  </p>
-                  <a href="services/financial-clearance-gfe.html" class="btn btn-primary btn-sm" style="width: 100%; margin-bottom: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-                    <span>Explore Deep-Dive Blueprint</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </a>
-                  <a href="contact.html?service=financial-clearance-gfe" class="btn btn-secondary btn-sm" style="width: 100%;">Inquire About GFE</a>
-                </div>
-              </div>
-            </div>
-            <div class="service-accordion-footer">
-              <span class="compliance-tag-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                No Surprises Act &amp; CMS Price Transparency Standard
-              </span>
-              <a href="services/financial-clearance-gfe.html" class="link-arrow" style="font-size: 0.825rem; font-weight: 700; color: var(--blue-accent);">
-                Dedicated Service Blueprint &rarr;
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 1.5 -->
-        <div class="service-accordion-item">
-          <button type="button" class="service-accordion-header" aria-expanded="false">
-            <div class="accordion-title-box">
-              <div class="service-icon-circle">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-              </div>
-              <div class="service-header-content">
-                <h3 class="service-name">Point-of-Service (POS) Collection Assistance</h3>
-                <p class="service-summary-line">Contactless payment links, front-desk scripting, and tokenized card-on-file workflows that double collections.</p>
-              </div>
-            </div>
-            <div class="accordion-meta-box">
-              <span class="service-sla-chip">+45% POS Collections</span>
-              <div class="accordion-chevron-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-          </button>
-          <div class="service-accordion-body">
-            <div class="service-body-inner">
-              <div class="service-scope-col">
-                <h4>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Scope &amp; Operating Deliverables
-                </h4>
-                <p class="service-detailed-desc">
-                  Collecting patient copayments and deductibles at check-in is four times cheaper than billing patients post-encounter. We equip front-office staff with real-time balance indicators, polite collection scripts, and automated SMS text-to-pay triggers.
-                </p>
-                <ul class="service-feature-checklist">
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Tokenized secure card-on-file pre-authorization protocols</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Apple Pay, Google Pay, and contactless mobile terminal integration</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Front-desk staff collection training and performance tracking</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="service-deliverables-col">
-                <div class="service-deliverables-card">
-                  <div class="deliverables-stat-duo">
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">+45%</div>
-                      <div class="deliv-stat-lbl">Average Cash Collection Lift</div>
-                    </div>
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">-60%</div>
-                      <div class="deliv-stat-lbl">Post-Visit Statement Cost</div>
-                    </div>
-                  </div>
-                  <h4 style="font-size: 0.85rem; margin-bottom: 6px;">Target Impact:</h4>
-                  <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px;">
-                    Secures patient revenue before they leave the facility, drastically slashing bad debt write-offs.
-                  </p>
-                  <a href="services/point-of-service-collections.html" class="btn btn-primary btn-sm" style="width: 100%; margin-bottom: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-                    <span>Explore Deep-Dive Blueprint</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </a>
-                  <a href="contact.html?service=point-of-service-collections" class="btn btn-secondary btn-sm" style="width: 100%;">Inquire About POS Collections</a>
-                </div>
-              </div>
-            </div>
-            <div class="service-accordion-footer">
-              <span class="compliance-tag-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                PCI-DSS Level 1 Encrypted Payment Flow
-              </span>
-              <a href="services/point-of-service-collections.html" class="link-arrow" style="font-size: 0.825rem; font-weight: 700; color: var(--blue-accent);">
-                Dedicated Service Blueprint &rarr;
-              </a>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
 
   <!-- ========================================================================
-       CATEGORY 2: HIM & CLINICAL SERVICES
+       SECTION 5: TESTIMONIALS
        ======================================================================== -->
-  <section class="section section-light services-category-block" id="him-clinical-services">
+  <section class="section-testimonials" id="testimonials">
     <div class="container">
-      <div class="category-header-wrap">
-        <div class="category-header-text">
-          <span class="section-tag">Category 02</span>
-          <h2 class="category-title">HIM &amp; Clinical Services</h2>
-          <p class="category-subtitle">
-            Certified medical coding, concurrent and retrospective chart review, ICD-10-CM/PCS and CPT code assignment, and NCCI modifier validation to shrink DNFB days and elevate first-pass resolution rates.
-          </p>
-        </div>
-        <span class="category-count-badge">5 Core Services</span>
+      <div class="section-header-centered" style="margin-bottom: 56px;">
+        <span class="eyebrow-ags">TESTIMONIALS</span>
+        <h2 class="section-heading-ags">What Healthcare Leaders Say About Nova Arc</h2>
+        <p class="section-desc-ags">
+          Proactive front-end validation, certified clinical coding, and relentless recovery delivered across health systems nationwide.
+        </p>
       </div>
 
-      <!-- Accordion List: HIM & Clinical -->
-      <div class="services-accordion-list">
-
-        <!-- Service 2.1 -->
-        <div class="service-accordion-item open">
-          <button type="button" class="service-accordion-header" aria-expanded="true">
-            <div class="accordion-title-box">
-              <div class="service-icon-circle">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
-              </div>
-              <div class="service-header-content">
-                <h3 class="service-name">Full-Cycle Medical Coding (Inpatient, Outpatient, ProFee)</h3>
-                <p class="service-summary-line">AAPC &amp; AHIMA certified coders (CPC, CCS, CIC) delivering concurrent and retrospective coding under sub-24-hour turnaround SLAs.</p>
-              </div>
-            </div>
-            <div class="accordion-meta-box">
-              <span class="service-sla-chip">&lt; 24h Turnaround SLA</span>
-              <div class="accordion-chevron-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-          </button>
-          <div class="service-accordion-body">
-            <div class="service-body-inner">
-              <div class="service-scope-col">
-                <h4>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Scope &amp; Operating Deliverables
-                </h4>
-                <p class="service-detailed-desc">
-                  Our credentialed coding teams—holding CPC (Certified Professional Coder), CCS (Certified Coding Specialist), and CIC (Certified Inpatient Coder) designations—perform both concurrent coding during inpatient stays to optimize CDI and retrospective coding post-discharge. We apply precise ICD-10-CM, ICD-10-PCS, CPT, and HCPCS Level II codes with appropriate NCCI modifiers (such as -25 and -59) to drive high clean claim rates and maximize first-pass resolution.
-                </p>
-                <ul class="service-feature-checklist">
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Sub-24-hour chart turnaround guarantee with daily SLA tracking</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Full coverage for surgical, cardiovascular, orthopedic, and ED specialties</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Automated AI cross-scrubbing for unbundling and mutual exclusion rules</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="service-deliverables-col">
-                <div class="service-deliverables-card">
-                  <div class="deliverables-stat-duo">
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">98.6%</div>
-                      <div class="deliv-stat-lbl">Audited Coding Accuracy</div>
-                    </div>
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">&lt; 24h</div>
-                      <div class="deliv-stat-lbl">Turnaround Commitment</div>
-                    </div>
-                  </div>
-                  <h4 style="font-size: 0.85rem; margin-bottom: 6px;">Target Impact:</h4>
-                  <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px;">
-                    Shrinks Discharged Not Final Billed (DNFB) days, prevents unbundling rejections, and captures full legitimate RVUs compliant with CMS guidelines.
-                  </p>
-                  <a href="services/full-cycle-medical-coding.html" class="btn btn-primary btn-sm" style="width: 100%; margin-bottom: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-                    <span>Explore Deep-Dive Blueprint</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </a>
-                  <a href="contact.html?service=full-cycle-medical-coding" class="btn btn-secondary btn-sm" style="width: 100%;">Inquire About Coding Services</a>
-                </div>
-              </div>
-            </div>
-            <div class="service-accordion-footer">
-              <span class="compliance-tag-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                100% AAPC &amp; AHIMA Credentialed Coders
-              </span>
-              <a href="services/full-cycle-medical-coding.html" class="link-arrow" style="font-size: 0.825rem; font-weight: 700; color: var(--blue-accent);">
-                Dedicated Service Blueprint &rarr;
-              </a>
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <article class="testimonial-card-item">
+          <div class="testimonial-quote-icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <h3 class="testimonial-headline">“A smoother process from the very beginning.”</h3>
+          <blockquote class="testimonial-body-quote">
+            “The patient access process has become much more organized and consistent. Issues that previously surfaced later are now identified much earlier, giving our team the opportunity to resolve them before they affect the patient or the claim.”
+          </blockquote>
+          <div class="testimonial-author-row">
+            <div class="testimonial-author-avatar">RC</div>
+            <div>
+              <div class="testimonial-author-name">Revenue Cycle Director</div>
+              <div class="testimonial-author-role">Healthcare Organization</div>
             </div>
           </div>
-        </div>
+        </article>
 
-        <!-- Service 2.2 -->
-        <div class="service-accordion-item">
-          <button type="button" class="service-accordion-header" aria-expanded="false">
-            <div class="accordion-title-box">
-              <div class="service-icon-circle">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-              </div>
-              <div class="service-header-content">
-                <h3 class="service-name">Clinical Documentation Improvement (CDI) &amp; Chart Auditing</h3>
-                <p class="service-summary-line">Physician documentation coaching and concurrent chart auditing that accurately reflects patient acuity.</p>
-              </div>
-            </div>
-            <div class="accordion-meta-box">
-              <span class="service-sla-chip">+14% CMI Lift</span>
-              <div class="accordion-chevron-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-          </button>
-          <div class="service-accordion-body">
-            <div class="service-body-inner">
-              <div class="service-scope-col">
-                <h4>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Scope &amp; Operating Deliverables
-                </h4>
-                <p class="service-detailed-desc">
-                  Our CDI specialists perform concurrent reviews of active inpatient charts and retrospective audits of outpatient encounters. We ensure physician progress notes thoroughly document secondary diagnoses, comorbidities, and complications (CC/MCC) for proper DRG assignment.
-                </p>
-                <ul class="service-feature-checklist">
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Concurrent inpatient chart reviews before discharge</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Case Mix Index (CMI) elevation and CC/MCC capture optimization</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>One-on-one physician documentation educational feedback</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="service-deliverables-col">
-                <div class="service-deliverables-card">
-                  <div class="deliverables-stat-duo">
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">+14%</div>
-                      <div class="deliv-stat-lbl">Average CMI Increase</div>
-                    </div>
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">95%+</div>
-                      <div class="deliv-stat-lbl">Physician Query Response</div>
-                    </div>
-                  </div>
-                  <h4 style="font-size: 0.85rem; margin-bottom: 6px;">Target Impact:</h4>
-                  <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px;">
-                    Ensures hospital severity of illness (SOI) and risk of mortality (ROM) are accurately reflected in public quality scorecards.
-                  </p>
-                  <a href="services/cdi-chart-auditing.html" class="btn btn-primary btn-sm" style="width: 100%; margin-bottom: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-                    <span>Explore Deep-Dive Blueprint</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </a>
-                  <a href="contact.html?service=cdi-chart-auditing" class="btn btn-secondary btn-sm" style="width: 100%;">Inquire About CDI &amp; Auditing</a>
-                </div>
-              </div>
-            </div>
-            <div class="service-accordion-footer">
-              <span class="compliance-tag-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                ACDIS Certified Clinical Documentation Specialists (CCDS)
-              </span>
-              <a href="services/cdi-chart-auditing.html" class="link-arrow" style="font-size: 0.825rem; font-weight: 700; color: var(--blue-accent);">
-                Dedicated Service Blueprint &rarr;
-              </a>
+        <!-- Testimonial 2 -->
+        <article class="testimonial-card-item">
+          <div class="testimonial-quote-icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <h3 class="testimonial-headline">“Better visibility and fewer surprises.”</h3>
+          <blockquote class="testimonial-body-quote">
+            “Having accurate insurance and patient information before the encounter has made a significant difference in how our teams prepare for each visit. It has improved visibility and helped us address potential issues proactively.”
+          </blockquote>
+          <div class="testimonial-author-row">
+            <div class="testimonial-author-avatar">PA</div>
+            <div>
+              <div class="testimonial-author-name">Patient Access Manager</div>
+              <div class="testimonial-author-role">Multi-Specialty Practice</div>
             </div>
           </div>
-        </div>
+        </article>
 
-        <!-- Service 2.3 -->
-        <div class="service-accordion-item">
-          <button type="button" class="service-accordion-header" aria-expanded="false">
-            <div class="accordion-title-box">
-              <div class="service-icon-circle">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4l3 3"></path></svg>
-              </div>
-              <div class="service-header-content">
-                <h3 class="service-name">HCC Risk Adjustment &amp; Quality Measure Capture</h3>
-                <p class="service-summary-line">Optimizing Hierarchical Condition Category capture to secure appropriate RAF scores for Medicare Advantage.</p>
-              </div>
-            </div>
-            <div class="accordion-meta-box">
-              <span class="service-sla-chip">+0.38 RAF Score Avg</span>
-              <div class="accordion-chevron-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-          </button>
-          <div class="service-accordion-body">
-            <div class="service-body-inner">
-              <div class="service-scope-col">
-                <h4>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Scope &amp; Operating Deliverables
-                </h4>
-                <p class="service-detailed-desc">
-                  Value-based contracts and Medicare Advantage plans rely heavily on accurate Risk Adjustment Factor (RAF) scores. We systematically audit patient panels for suspect chronic conditions (diabetes with manifestations, chronic kidney disease, CHF) and verify annual re-documentation.
-                </p>
-                <ul class="service-feature-checklist">
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Suspect condition analytics identifying uncaptured chronic diseases</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Pre-encounter point-of-care clinical alerts inside EHR</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Retrospective chart auditing for RADV compliance defense</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="service-deliverables-col">
-                <div class="service-deliverables-card">
-                  <div class="deliverables-stat-duo">
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">+22%</div>
-                      <div class="deliv-stat-lbl">Chronic Condition Capture</div>
-                    </div>
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">100%</div>
-                      <div class="deliv-stat-lbl">RADV Audit Defensibility</div>
-                    </div>
-                  </div>
-                  <h4 style="font-size: 0.85rem; margin-bottom: 6px;">Target Impact:</h4>
-                  <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px;">
-                    Secures accurate monthly capitation benchmark payments for ACOs, CINs, and risk-bearing provider groups.
-                  </p>
-                  <a href="services/hcc-risk-adjustment.html" class="btn btn-primary btn-sm" style="width: 100%; margin-bottom: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-                    <span>Explore Deep-Dive Blueprint</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </a>
-                  <a href="contact.html?service=hcc-risk-adjustment" class="btn btn-secondary btn-sm" style="width: 100%;">Inquire About DRG &amp; HCC Services</a>
-                </div>
-              </div>
-            </div>
-            <div class="service-accordion-footer">
-              <span class="compliance-tag-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                CMS-HCC v28 &amp; HHS-HCC Model Compliant
-              </span>
-              <a href="services/hcc-risk-adjustment.html" class="link-arrow" style="font-size: 0.825rem; font-weight: 700; color: var(--blue-accent);">
-                Dedicated Service Blueprint &rarr;
-              </a>
+        <!-- Testimonial 3 -->
+        <article class="testimonial-card-item">
+          <div class="testimonial-quote-icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <h3 class="testimonial-headline">“Our front end is much stronger.”</h3>
+          <blockquote class="testimonial-body-quote">
+            “The biggest value has been the ability to catch missing or inconsistent information before it moves downstream. Our teams can focus on resolving exceptions instead of repeatedly correcting avoidable errors.”
+          </blockquote>
+          <div class="testimonial-author-row">
+            <div class="testimonial-author-avatar">PF</div>
+            <div>
+              <div class="testimonial-author-name">Director of Patient Financial Services</div>
+              <div class="testimonial-author-role">Regional Health Network</div>
             </div>
           </div>
-        </div>
+        </article>
 
-        <!-- Service 2.4 -->
-        <div class="service-accordion-item">
-          <button type="button" class="service-accordion-header" aria-expanded="false">
-            <div class="accordion-title-box">
-              <div class="service-icon-circle">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-              </div>
-              <div class="service-header-content">
-                <h3 class="service-name">Physician Query Management &amp; Education Coaching</h3>
-                <p class="service-summary-line">Non-leading clinical query workflows clarifying conflicting, vague, or missing medical charting.</p>
-              </div>
-            </div>
-            <div class="accordion-meta-box">
-              <span class="service-sla-chip">&gt; 94% Response Rate</span>
-              <div class="accordion-chevron-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-          </button>
-          <div class="service-accordion-body">
-            <div class="service-body-inner">
-              <div class="service-scope-col">
-                <h4>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Scope &amp; Operating Deliverables
-                </h4>
-                <p class="service-detailed-desc">
-                  Eliminate documentation ambiguity with AHIMA-compliant, non-leading query templates integrated directly into your clinical EHR inbox. Our team coordinates with medical directors to establish rapid query turnaround protocols and delivers bi-weekly clinical documentation feedback summaries.
-                </p>
-                <ul class="service-feature-checklist">
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>EHR in-basket query delivery with single-click physician resolution</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Multi-specialty query templates (acute kidney injury, sepsis, malnutrition)</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Bi-weekly provider scorecards and CME-accredited documentation sessions</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="service-deliverables-col">
-                <div class="service-deliverables-card">
-                  <div class="deliverables-stat-duo">
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">&lt; 48h</div>
-                      <div class="deliv-stat-lbl">Average Query Turnaround</div>
-                    </div>
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">100%</div>
-                      <div class="deliv-stat-lbl">Non-Leading Compliance</div>
-                    </div>
-                  </div>
-                  <h4 style="font-size: 0.85rem; margin-bottom: 6px;">Target Impact:</h4>
-                  <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px;">
-                    Prevents OIG audit scrutiny by ensuring all physician queries strictly follow ethical clinical documentation standards.
-                  </p>
-                  <a href="services/physician-query-management.html" class="btn btn-primary btn-sm" style="width: 100%; margin-bottom: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-                    <span>Explore Deep-Dive Blueprint</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </a>
-                  <a href="contact.html?service=physician-query-management" class="btn btn-secondary btn-sm" style="width: 100%;">Inquire About Query Management</a>
-                </div>
-              </div>
-            </div>
-            <div class="service-accordion-footer">
-              <span class="compliance-tag-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                AHIMA / ACDIS Ethical Query Practice Guidelines
-              </span>
-              <a href="services/physician-query-management.html" class="link-arrow" style="font-size: 0.825rem; font-weight: 700; color: var(--blue-accent);">
-                Dedicated Service Blueprint &rarr;
-              </a>
+        <!-- Testimonial 4 -->
+        <article class="testimonial-card-item">
+          <div class="testimonial-quote-icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <h3 class="testimonial-headline">“A better experience for our patients and staff.”</h3>
+          <blockquote class="testimonial-body-quote">
+            “When patient and insurance information is accurate from the start, everything becomes easier—from scheduling and registration to billing. The process is more efficient for our staff and more seamless for our patients.”
+          </blockquote>
+          <div class="testimonial-author-row">
+            <div class="testimonial-author-avatar">HO</div>
+            <div>
+              <div class="testimonial-author-name">Healthcare Operations Leader</div>
+              <div class="testimonial-author-role">Ambulatory &amp; Surgical Centers</div>
             </div>
           </div>
-        </div>
-
-        <!-- Service 2.5 -->
-        <div class="service-accordion-item">
-          <button type="button" class="service-accordion-header" aria-expanded="false">
-            <div class="accordion-title-box">
-              <div class="service-icon-circle">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              </div>
-              <div class="service-header-content">
-                <h3 class="service-name">OIG &amp; RAC Audit Defense &amp; Compliance Management</h3>
-                <p class="service-summary-line">Statistically valid RAT-STATS QA sampling, automated 45-day ADR pipelines, and 5-level Medicare audit appeals defense.</p>
-              </div>
-            </div>
-            <div class="accordion-meta-box">
-              <span class="service-sla-chip">94.6% Appeals Overturn Rate</span>
-              <div class="accordion-chevron-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-          </button>
-          <div class="service-accordion-body">
-            <div class="service-body-inner">
-              <div class="service-scope-col">
-                <h4>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Scope &amp; Operating Deliverables
-                </h4>
-                <p class="service-detailed-desc">
-                  Shielding health systems and hospital-based specialty practices from aggressive RAC, UPIC, and MAC clawbacks. We integrate OIG Work Plan surveillance, statistically defensible RAT-STATS internal QA sampling, and rapid electronic ADR fulfillment.
-                </p>
-                <ul class="service-feature-checklist">
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Statistically valid RAT-STATS probe sampling &amp; 95%+ precision QA defense</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Automated 45-day ADR pipeline with 100% statutory timeliness guarantee</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>5-Level Medicare administrative appeals escalation (Redetermination to Federal Court)</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="service-deliverables-col">
-                <div class="service-deliverables-card">
-                  <div class="deliverables-stat-duo">
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">94.6%</div>
-                      <div class="deliv-stat-lbl">Appeals Overturn Win Rate</div>
-                    </div>
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">100%</div>
-                      <div class="deliv-stat-lbl">On-Time ADR Submission</div>
-                    </div>
-                  </div>
-                  <h4 style="font-size: 0.85rem; margin-bottom: 6px;">Target Impact:</h4>
-                  <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px;">
-                    Defends against aggressive RAC/UPIC extrapolated clawbacks and eliminates technical denials across Health Systems and Hospital-Based Groups.
-                  </p>
-                  <a href="services/compliance-audit-defense.html" class="btn btn-primary btn-sm" style="width: 100%; margin-bottom: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-                    <span>Explore Deep-Dive Blueprint</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </a>
-                  <a href="contact.html?service=compliance-audit-defense" class="btn btn-secondary btn-sm" style="width: 100%;">Inquire About Audit Defense</a>
-                </div>
-              </div>
-            </div>
-            <div class="service-accordion-footer">
-              <span class="compliance-tag-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                HHS-OIG Work Plan &amp; RAT-STATS Validated
-              </span>
-              <a href="services/compliance-audit-defense.html" class="link-arrow" style="font-size: 0.825rem; font-weight: 700; color: var(--blue-accent);">
-                Dedicated Service Blueprint &rarr;
-              </a>
-            </div>
-          </div>
-        </div>
-
+        </article>
       </div>
     </div>
   </section>
-
-
-  <!-- ========================================================================
-       CATEGORY 3: PATIENT FINANCIAL SERVICES
-       ======================================================================== -->
-  <section class="section services-category-block" id="patient-financial-services">
-    <div class="container">
-      <div class="category-header-wrap">
-        <div class="category-header-text">
-          <span class="section-tag">Category 03</span>
-          <h2 class="category-title">Patient Financial Services</h2>
-          <p class="category-subtitle">
-            High-velocity EDI 837 claim dispatch, systematic aged A/R bucket liquidation (30/60/90+ days), underpayment recovery, and strategic denial prevention vs. denial management.
-          </p>
-        </div>
-        <span class="category-count-badge">8 Core Services</span>
-      </div>
-
-      <!-- Accordion List: Patient Financial Services -->
-      <div class="services-accordion-list">
-
-        <!-- Service 3.1: Claims Management -->
-        <div class="service-accordion-item open">
-          <button type="button" class="service-accordion-header" aria-expanded="true">
-            <div class="accordion-title-box">
-              <div class="service-icon-circle">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-              </div>
-              <div class="service-header-content">
-                <h3 class="service-name">Claims Management &amp; Clearinghouse Scrubbing</h3>
-                <p class="service-summary-line">Autonomous multi-tier EDI 837 scrubbing, instant 277CA rejection remediation, and payer-specific edit validation delivering 99.4% first-pass acceptance.</p>
-              </div>
-            </div>
-            <div class="accordion-meta-box">
-              <span class="service-sla-chip">99.4% Clean Claim Rate</span>
-              <div class="accordion-chevron-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-          </button>
-          <div class="service-accordion-body">
-            <div class="service-body-inner">
-              <div class="service-scope-col">
-                <h4>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Scope &amp; Operating Deliverables
-                </h4>
-                <p class="service-detailed-desc">
-                  Every electronic claim undergoes rigorous algorithmic scrubbing before transmission to commercial and government clearinghouses. We validate CPT and HCPCS codes against ICD-10 medical necessity criteria, NCCI edits, LCD/NCD guidelines, and payer-specific modifier requirements in real time to accelerate first-pass resolution rates and eliminate DNFB hold-ups.
-                </p>
-                <ul class="service-feature-checklist">
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Autonomous EDI 837 scrubbing linked to Nova Arc Scrubber AI platform</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Instant 277CA clearinghouse rejection auto-remediation (&lt; 4h SLA)</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>ASC surgical multi-procedure discounting &amp; PWK implant invoice routing</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="service-deliverables-col">
-                <div class="service-deliverables-card">
-                  <div class="deliverables-stat-duo">
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">99.4%</div>
-                      <div class="deliv-stat-lbl">First-Pass Acceptance</div>
-                    </div>
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">&lt; 12h</div>
-                      <div class="deliv-stat-lbl">Submission Turnaround</div>
-                    </div>
-                  </div>
-                  <h4 style="font-size: 0.85rem; margin-bottom: 6px;">Target Impact:</h4>
-                  <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px;">
-                    Minimizes clearinghouse rejections and ensures prompt carrier payment within 14 business days.
-                  </p>
-                  <a href="services/claims-management-scrubbing.html" class="btn btn-primary btn-sm" style="width: 100%; margin-bottom: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-                    <span>Explore Deep-Dive Blueprint</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </a>
-                  <a href="contact.html?service=claims-management-scrubbing" class="btn btn-secondary btn-sm" style="width: 100%;">Inquire About Claims Management</a>
-                </div>
-              </div>
-            </div>
-            <div class="service-accordion-footer">
-              <span class="compliance-tag-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                ANSI X12 837P &amp; 837I • SNIP 1–7 Validated
-              </span>
-              <a href="services/claims-management-scrubbing.html" class="link-arrow" style="font-size: 0.825rem; font-weight: 700; color: var(--blue-accent);">
-                Dedicated Service Blueprint &rarr;
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 3.2: A/R Management -->
-        <div class="service-accordion-item">
-          <button type="button" class="service-accordion-header" aria-expanded="false">
-            <div class="accordion-title-box">
-              <div class="service-icon-circle">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-              </div>
-              <div class="service-header-content">
-                <h3 class="service-name">A/R Management &amp; Aged Claims Liquidation</h3>
-                <p class="service-summary-line">Dedicated accounts receivable specialists systematically liquidating aged A/R buckets (30, 60, and 90+ days) and recovering underpayments.</p>
-              </div>
-            </div>
-            <div class="accordion-meta-box">
-              <span class="service-sla-chip">-32% Days in A/R</span>
-              <div class="accordion-chevron-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-          </button>
-          <div class="service-accordion-body">
-            <div class="service-body-inner">
-              <div class="service-scope-col">
-                <h4>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Scope &amp; Operating Deliverables
-                </h4>
-                <p class="service-detailed-desc">
-                  Our aged A/R task forces utilize smart workqueue prioritization to systematically work 30, 60, and 90+ day aged A/R buckets. We distinguish between reactive denial management—rapidly appealing payer rejections—and proactive denial prevention by feeding denial root causes back to front-end and coding workflows. Furthermore, our underpayment recovery analysts audit remittances against contracted fee schedules to recapture contractual underpayment variances.
-                </p>
-                <ul class="service-feature-checklist">
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Systematic liquidation of aged A/R buckets across 30, 60, 90, and 120+ days</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Dual-track denial management (appeals) and denial prevention (root-cause feedback)</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Contractual underpayment recovery auditing line items against contracted fee schedules</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="service-deliverables-col">
-                <div class="service-deliverables-card">
-                  <div class="deliverables-stat-duo">
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">27.4</div>
-                      <div class="deliv-stat-lbl">Average Days in A/R</div>
-                    </div>
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">$1.8B+</div>
-                      <div class="deliv-stat-lbl">Recovered to Date</div>
-                    </div>
-                  </div>
-                  <h4 style="font-size: 0.85rem; margin-bottom: 6px;">Target Impact:</h4>
-                  <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px;">
-                    Slashes average days in A/R by 32% and converts stale accounts into immediate working capital.
-                  </p>
-                  <a href="services/ar-management.html" class="btn btn-primary btn-sm" style="width: 100%; margin-bottom: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-                    <span>Explore Deep-Dive Blueprint</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </a>
-                  <a href="contact.html?service=ar-management" class="btn btn-secondary btn-sm" style="width: 100%;">Inquire About A/R Management</a>
-                </div>
-              </div>
-            </div>
-            <div class="service-accordion-footer">
-              <span class="compliance-tag-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                Zero-Risk Contingency Options Available
-              </span>
-              <a href="services/ar-management.html" class="link-arrow" style="font-size: 0.825rem; font-weight: 700; color: var(--blue-accent);">
-                Dedicated Service Blueprint &rarr;
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 3.3: Denial Management -->
-        <div class="service-accordion-item">
-          <button type="button" class="service-accordion-header" aria-expanded="false">
-            <div class="accordion-title-box">
-              <div class="service-icon-circle">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-              </div>
-              <div class="service-header-content">
-                <h3 class="service-name">Denial &amp; Appeals Management (Root-Cause Recovery)</h3>
-                <p class="service-summary-line">CARC/RARC root-cause triage, automated evidence compilation, and clinical appeals with 84%+ overturn rate.</p>
-              </div>
-            </div>
-            <div class="accordion-meta-box">
-              <span class="service-sla-chip">84.2% Overturn Rate</span>
-              <div class="accordion-chevron-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-          </button>
-          <div class="service-accordion-body">
-            <div class="service-body-inner">
-              <div class="service-scope-col">
-                <h4>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Scope &amp; Operating Deliverables
-                </h4>
-                <p class="service-detailed-desc">
-                  Denials cost US hospitals billions in lost revenue annually. We categorize every inbound 835 denial code (CARC/RARC) into actionable buckets: Medical Necessity, Clinical Unbundling, Authorization, or Technical Eligibility. Our nurse appeal team drafts airtight legal and clinical appeal packets.
-                </p>
-                <ul class="service-feature-checklist">
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Root-cause analytics by insurer, specialty, and individual billing provider</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Evidence-based clinical appeals citing Milliman Care Guidelines (MCG)</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Sub-48-hour appeal submission to meet strict timely filing deadlines</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="service-deliverables-col">
-                <div class="service-deliverables-card">
-                  <div class="deliverables-stat-duo">
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">84.2%</div>
-                      <div class="deliv-stat-lbl">Appeal Overturn Rate</div>
-                    </div>
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">&lt; 1.8%</div>
-                      <div class="deliv-stat-lbl">Net Unrecovered Denials</div>
-                    </div>
-                  </div>
-                  <h4 style="font-size: 0.85rem; margin-bottom: 6px;">Target Impact:</h4>
-                  <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px;">
-                    Recovers up to 84% of previously written-off claims and stops systemic denial loops at the source.
-                  </p>
-                  <a href="services/denial-management.html" class="btn btn-primary btn-sm" style="width: 100%; margin-bottom: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-                    <span>Explore Deep-Dive Blueprint</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </a>
-                  <a href="contact.html?service=denial-management" class="btn btn-secondary btn-sm" style="width: 100%;">Inquire About Denial Recovery</a>
-                </div>
-              </div>
-            </div>
-            <div class="service-accordion-footer">
-              <span class="compliance-tag-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                Registered Nurse (RN) Clinical Appeal Reviewers
-              </span>
-              <a href="services/denial-management.html" class="link-arrow" style="font-size: 0.825rem; font-weight: 700; color: var(--blue-accent);">
-                Dedicated Service Blueprint &rarr;
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 3.4: Payment Posting -->
-        <div class="service-accordion-item">
-          <button type="button" class="service-accordion-header" aria-expanded="false">
-            <div class="accordion-title-box">
-              <div class="service-icon-circle">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              </div>
-              <div class="service-header-content">
-                <h3 class="service-name">Payment Posting &amp; Electronic Remittance (ERA / 835)</h3>
-                <p class="service-summary-line">Daily automated reconciliation of electronic remittances, contractual adjustments, and copay allocations.</p>
-              </div>
-            </div>
-            <div class="accordion-meta-box">
-              <span class="service-sla-chip">Daily 100% Reconciliation</span>
-              <div class="accordion-chevron-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-          </button>
-          <div class="service-accordion-body">
-            <div class="service-body-inner">
-              <div class="service-scope-col">
-                <h4>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Scope &amp; Operating Deliverables
-                </h4>
-                <p class="service-detailed-desc">
-                  Prompt, accurate cash posting is essential for maintaining accurate patient balances and timely billing cycles. We automate 835 electronic remittance advice (ERA) posting, process EFT bank deposits, and manually post non-standard paper Explanation of Benefits (EOB) checks within 24 hours.
-                </p>
-                <ul class="service-feature-checklist">
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Sub-24-hour bank lockbox deposit-to-EHR reconciliation</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Automated contractual write-offs based on fee schedule tables</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Unallocated payment and credit balance resolution workflows</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="service-deliverables-col">
-                <div class="service-deliverables-card">
-                  <div class="deliverables-stat-duo">
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">99.9%</div>
-                      <div class="deliv-stat-lbl">Posting Accuracy Rate</div>
-                    </div>
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">&lt; 24h</div>
-                      <div class="deliv-stat-lbl">Deposit-to-Post SLA</div>
-                    </div>
-                  </div>
-                  <h4 style="font-size: 0.85rem; margin-bottom: 6px;">Target Impact:</h4>
-                  <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px;">
-                    Ensures exact ledger balancing, prevents double-billing patients, and guarantees compliance with financial audit standards.
-                  </p>
-                  <a href="services/payment-posting-reconciliation.html" class="btn btn-primary btn-sm" style="width: 100%; margin-bottom: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-                    <span>Explore Deep-Dive Blueprint</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </a>
-                  <a href="contact.html?service=payment-posting-reconciliation" class="btn btn-secondary btn-sm" style="width: 100%;">Inquire About Payment Posting</a>
-                </div>
-              </div>
-            </div>
-            <div class="service-accordion-footer">
-              <span class="compliance-tag-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                ANSI X12 835 ERA &amp; EFT Auto-Reconciliation
-              </span>
-              <a href="services/payment-posting-reconciliation.html" class="link-arrow" style="font-size: 0.825rem; font-weight: 700; color: var(--blue-accent);">
-                Dedicated Service Blueprint &rarr;
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 3.5: Patient Billing & Self-Pay -->
-        <div class="service-accordion-item">
-          <button type="button" class="service-accordion-header" aria-expanded="false">
-            <div class="accordion-title-box">
-              <div class="service-icon-circle">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
-              </div>
-              <div class="service-header-content">
-                <h3 class="service-name">Patient Billing, Self-Pay &amp; Omnichannel Collections</h3>
-                <p class="service-summary-line">Compassionate patient statement delivery, SMS text-to-pay, and custom payment plan scheduling.</p>
-              </div>
-            </div>
-            <div class="accordion-meta-box">
-              <span class="service-sla-chip">+48% Self-Pay Yield</span>
-              <div class="accordion-chevron-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-          </button>
-          <div class="service-accordion-body">
-            <div class="service-body-inner">
-              <div class="service-scope-col">
-                <h4>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Scope &amp; Operating Deliverables
-                </h4>
-                <p class="service-detailed-desc">
-                  With high-deductible health plans rising, patient responsibility now represents over 30% of total provider revenue. We provide patient-friendly billing statements, interactive SMS text-to-pay reminders, dedicated US-based bilingual call centers, and custom interest-free installment plans.
-                </p>
-                <ul class="service-feature-checklist">
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Omnichannel statements (digital text-to-pay, email, and paper letters)</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Self-service patient payment portal with recurring payment plans</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Dedicated, empathetic bilingual financial advocacy representatives</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="service-deliverables-col">
-                <div class="service-deliverables-card">
-                  <div class="deliverables-stat-duo">
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">+48%</div>
-                      <div class="deliv-stat-lbl">Self-Pay Cash Velocity</div>
-                    </div>
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">98%</div>
-                      <div class="deliv-stat-lbl">Patient Satisfaction Score</div>
-                    </div>
-                  </div>
-                  <h4 style="font-size: 0.85rem; margin-bottom: 6px;">Target Impact:</h4>
-                  <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px;">
-                    Maximizes patient collections without damaging clinical relationships or generating patient billing complaints.
-                  </p>
-                  <a href="services/patient-billing-collections.html" class="btn btn-primary btn-sm" style="width: 100%; margin-bottom: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-                    <span>Explore Deep-Dive Blueprint</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </a>
-                  <a href="contact.html?service=patient-billing-collections" class="btn btn-secondary btn-sm" style="width: 100%;">Inquire About Patient Billing</a>
-                </div>
-              </div>
-            </div>
-            <div class="service-accordion-footer">
-              <span class="compliance-tag-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                TCPA &amp; FDCPA Compliant Patient Outreach
-              </span>
-              <a href="services/patient-billing-collections.html" class="link-arrow" style="font-size: 0.825rem; font-weight: 700; color: var(--blue-accent);">
-                Dedicated Service Blueprint &rarr;
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 3.6: Payer Contract Modeling & Underpayment Variance Recovery -->
-        <div class="service-accordion-item">
-          <button type="button" class="service-accordion-header" aria-expanded="false">
-            <div class="accordion-title-box">
-              <div class="service-icon-circle">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-              </div>
-              <div class="service-header-content">
-                <h3 class="service-name">Payer Contract Modeling &amp; Underpayment Variance Recovery</h3>
-                <p class="service-summary-line">Automated 100% remittance line auditing, fee schedule digitization, and contractual underpayment recovery for hospital-based groups.</p>
-              </div>
-            </div>
-            <div class="accordion-meta-box">
-              <span class="service-sla-chip">+4.8% Net Revenue Lift</span>
-              <div class="accordion-chevron-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-          </button>
-          <div class="service-accordion-body">
-            <div class="service-body-inner">
-              <div class="service-scope-col">
-                <h4>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Scope &amp; Operating Deliverables
-                </h4>
-                <p class="service-detailed-desc">
-                  Commercial payers routinely short-pay clean claims by 3% to 7% through silent downcoding edits and misapplied multiple procedure payment reductions (MPPR). Nova Arc models your managed care contracts and fee schedules into an algorithmic calculation engine, audits 100% of ERA 835 line items against legal contract terms, and auto-dispatches formal contractual demand letters to reclaim earned revenue.
-                </p>
-                <ul class="service-feature-checklist">
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Commercial payer contract digitization &amp; fee schedule logic modeling</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Hospital-based split-billing protection (Mod 26 vs TC) and anesthesia unit auditing</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Automated contractual demand packages citing contract articles &amp; statutory interest</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="service-deliverables-col">
-                <div class="service-deliverables-card">
-                  <div class="deliverables-stat-duo">
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">100%</div>
-                      <div class="deliv-stat-lbl">ERA 835 Audited</div>
-                    </div>
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">&lt; 14d</div>
-                      <div class="deliv-stat-lbl">Demand Dispatch</div>
-                    </div>
-                  </div>
-                  <h4 style="font-size: 0.85rem; margin-bottom: 6px;">Target Impact:</h4>
-                  <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px;">
-                    Reclaims 4.8% to 7.2% in silent contractual underpayments without increasing clinical encounter volume.
-                  </p>
-                  <a href="services/payer-contract-modeling.html" class="btn btn-primary btn-sm" style="width: 100%; margin-bottom: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-                    <span>Explore Deep-Dive Blueprint</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </a>
-                  <a href="contact.html?service=payer-contract-modeling" class="btn btn-secondary btn-sm" style="width: 100%;">Inquire About Contract Modeling</a>
-                </div>
-              </div>
-            </div>
-            <div class="service-accordion-footer">
-              <span class="compliance-tag-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                Zero-Risk Contingency Options Available
-              </span>
-              <a href="services/payer-contract-modeling.html" class="link-arrow" style="font-size: 0.825rem; font-weight: 700; color: var(--blue-accent);">
-                Dedicated Service Blueprint &rarr;
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 3.7: Credit Balance Resolution & Overpayment Refund Compliance -->
-        <div class="service-accordion-item">
-          <button type="button" class="service-accordion-header" aria-expanded="false">
-            <div class="accordion-title-box">
-              <div class="service-icon-circle">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-              </div>
-              <div class="service-header-content">
-                <h3 class="service-name">Credit Balance Resolution, Overpayment Identification &amp; Statutory Refund Compliance</h3>
-                <p class="service-summary-line">Enterprise negative A/R ledger triage, CMS 60-day Medicare compliance, false credit elimination, and audit-proof refund governance for health systems.</p>
-              </div>
-            </div>
-            <div class="accordion-meta-box">
-              <span class="service-sla-chip">71.4% False Credits Extinguished</span>
-              <div class="accordion-chevron-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-          </button>
-          <div class="service-accordion-body">
-            <div class="service-body-inner">
-              <div class="service-scope-col">
-                <h4>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Scope &amp; Operating Deliverables
-                </h4>
-                <p class="service-detailed-desc">
-                  Hospital negative A/R ledgers accumulate millions in unearned liabilities and trapped cash. Nova Arc delivers automated credit balance triage, distinguishing false credits from true overpayments, enforcing strict CMS 60-day Medicare refund compliance, preventing commercial double-refund offsets, and eliminating False Claims Act exposure across enterprise health systems.
-                </p>
-                <ul class="service-feature-checklist">
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Automated negative A/R workqueue extraction (Epic WQ 102/104, Cerner, MEDITECH)</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Algorithmic COB re-adjudication, eliminating phantom credit balance write-offs</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>CMS 60-day clock registration, automated quarterly CMS-838 MAC reporting, &amp; offset verification</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="service-deliverables-col">
-                <div class="service-deliverables-card">
-                  <div class="deliverables-stat-duo">
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">71.4%</div>
-                      <div class="deliv-stat-lbl">Retained Cash Yield</div>
-                    </div>
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">&lt; 28d</div>
-                      <div class="deliv-stat-lbl">Resolution &amp; Disbursal SLA</div>
-                    </div>
-                  </div>
-                  <h4 style="font-size: 0.85rem; margin-bottom: 6px;">Target Impact:</h4>
-                  <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px;">
-                    Restores pure recognized operating margin from false credits while achieving 100% False Claims Act safe-harbor compliance.
-                  </p>
-                  <a href="services/credit-balance-resolution.html" class="btn btn-primary btn-sm" style="width: 100%; margin-bottom: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-                    <span>Explore Deep-Dive Blueprint</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </a>
-                  <a href="contact.html?service=credit-balance-resolution" class="btn btn-secondary btn-sm" style="width: 100%;">Inquire About Credit Balances</a>
-                </div>
-              </div>
-            </div>
-            <div class="service-accordion-footer">
-              <span class="compliance-tag-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                ACA &sect; 6402 &amp; False Claims Act Safe Harbor
-              </span>
-              <a href="services/credit-balance-resolution.html" class="link-arrow" style="font-size: 0.825rem; font-weight: 700; color: var(--blue-accent);">
-                Dedicated Service Blueprint &rarr;
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 3.8: Extended Business Office (EBO) Surge & Aged A/R Cleanup -->
-        <div class="service-accordion-item">
-          <button type="button" class="service-accordion-header" aria-expanded="false">
-            <div class="accordion-title-box">
-              <div class="service-icon-circle">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              </div>
-              <div class="service-header-content">
-                <h3 class="service-name">Extended Business Office (EBO) Surge &amp; Aged A/R Cleanup</h3>
-                <p class="service-summary-line">Time-boxed 90-to-120 day backlog liquidation engagements with non-disruptive staffing overlay and 100% contingency risk-free cash recovery.</p>
-              </div>
-            </div>
-            <div class="accordion-meta-box">
-              <span class="service-sla-chip">100% Contingency &bull; 90-120d SLA</span>
-              <div class="accordion-chevron-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-          </button>
-          <div class="service-accordion-body">
-            <div class="service-body-grid">
-              <div class="service-desc-col">
-                <h4 style="font-size: 0.95rem; margin-bottom: 8px;">Service Architecture &amp; Execution:</h4>
-                <p>
-                  Nova Arc's Extended Business Office operates as an agile, certified revenue surge pod that integrates directly into your host EHR (Epic Resolute, Cerner Millennium, or MEDITECH). We take complete ownership of stagnant 60+, 90+, 120+, and 180+ day accounts while your internal hospital staff remains 100% focused on current billings.
-                </p>
-                <div class="service-workflow-strip">
-                  <div class="workflow-mini-step">
-                    <span class="mini-step-num">01</span>
-                    <span class="mini-step-title">Ingest &amp; Score</span>
-                    <span class="mini-step-desc">Algorithmic risk stratification &amp; worklist lock</span>
-                  </div>
-                  <div class="workflow-mini-step">
-                    <span class="mini-step-num">02</span>
-                    <span class="mini-step-title">Mass Liquidation</span>
-                    <span class="mini-step-desc">276/277 auto-statusing &amp; rapid claim re-filing</span>
-                  </div>
-                  <div class="workflow-mini-step">
-                    <span class="mini-step-num">03</span>
-                    <span class="mini-step-title">Complex Appeals</span>
-                    <span class="mini-step-desc">RAC audit defense &amp; underpayment demands</span>
-                  </div>
-                  <div class="workflow-mini-step">
-                    <span class="mini-step-num">04</span>
-                    <span class="mini-step-title">Clean Hand-off</span>
-                    <span class="mini-step-desc">Zero-balance ledger exit &amp; root-cause cure</span>
-                  </div>
-                </div>
-              </div>
-              <div class="service-specs-col">
-                <div class="service-deliverables-box">
-                  <h4 style="font-size: 0.85rem; margin-bottom: 6px;">Key Engagement Benchmarks:</h4>
-                  <div class="deliverables-stats-row">
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">32%</div>
-                      <div class="deliv-stat-lbl">Average DAR Reduction</div>
-                    </div>
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">14d</div>
-                      <div class="deliv-stat-lbl">Rapid Pod Deployment</div>
-                    </div>
-                  </div>
-                  <h4 style="font-size: 0.85rem; margin-bottom: 6px;">Target Impact:</h4>
-                  <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px;">
-                    Eliminates timely-filing write-offs and recovers millions in trapped cash with zero added permanent FTE payroll.
-                  </p>
-                  <a href="services/extended-business-office.html" class="btn btn-primary btn-sm" style="width: 100%; margin-bottom: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-                    <span>Explore Deep-Dive Blueprint</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </a>
-                  <a href="contact.html?service=extended-business-office" class="btn btn-secondary btn-sm" style="width: 100%;">Inquire About EBO Surge</a>
-                </div>
-              </div>
-            </div>
-            <div class="service-accordion-footer">
-              <span class="compliance-tag-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                Health Systems &bull; Hospital-Based Groups &bull; 100% Contingency
-              </span>
-              <a href="services/extended-business-office.html" class="link-arrow" style="font-size: 0.825rem; font-weight: 700; color: var(--blue-accent);">
-                Dedicated Service Blueprint &rarr;
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       CATEGORY 4: REVENUE CYCLE ADVISORY, AUDIT & TECH CONSULTING
-       ======================================================================== -->
-  <section class="section services-category-block" id="rcm-advisory-services">
-    <div class="container">
-      <div class="category-header-wrap">
-        <div class="category-header-text">
-          <span class="section-tag">Category 04</span>
-          <h2 class="category-title">Revenue Cycle Advisory, Audit &amp; Technology Consulting</h2>
-          <p class="category-subtitle">
-            Scientific operational diagnostics, HFMA MAP and MGMA peer benchmarking, and vendor-neutral technology stack architecture evaluations across all healthcare sectors.
-          </p>
-        </div>
-        <span class="category-count-badge">2 Core Advisory Services</span>
-      </div>
-
-      <!-- Accordion List: Advisory -->
-      <div class="services-accordion-list">
-
-        <!-- Service 4.1: RCM Workflow Audit & Tech Stack Advisory -->
-        <div class="service-accordion-item">
-          <button type="button" class="service-accordion-header" aria-expanded="false">
-            <div class="accordion-title-box">
-              <div class="service-icon-circle">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
-              </div>
-              <div class="service-header-content">
-                <h3 class="service-name">RCM Workflow Audit, KPI Benchmarking &amp; Technology Stack Advisory</h3>
-                <p class="service-summary-line">Comprehensive 14-day operational diagnostic, HFMA MAP &amp; MGMA peer benchmarking, and vendor-neutral 5-layer tech stack recommendations for all clinical care settings.</p>
-              </div>
-            </div>
-            <div class="accordion-meta-box">
-              <span class="service-sla-chip">14-Day Delivery &bull; Sector-Agnostic</span>
-              <div class="accordion-chevron-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-          </button>
-          <div class="service-accordion-body">
-            <div class="service-body-inner">
-              <div class="service-scope-col">
-                <h4>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Scope &amp; Operating Deliverables
-                </h4>
-                <p class="service-detailed-desc">
-                  Eliminate revenue cycle blind spots with an objective, data-driven diagnostic. Nova Arc mines 12 to 24 months of raw 837 claim and 835 remittance data, maps operational handoff gaps across your front-to-back lifecycle, benchmarks your KPIs against national peer quartiles (HFMA MAP &amp; MGMA), and architects an unbiased 5-layer technology stack roadmap.
-                </p>
-                <ul class="service-feature-checklist">
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Quantitative remittance mining (12-24 mo 837/835 EDI &amp; EHR ledger extraction)</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>National peer KPI quartile benchmarking across 8 core dimensions</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>5-layer vendor-neutral healthcare tech stack evaluation (EHR, clearinghouse, AI, payments, BI)</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="service-deliverables-col">
-                <div class="service-deliverables-card">
-                  <div class="deliverables-stat-duo">
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">14d</div>
-                      <div class="deliv-stat-lbl">Rapid Assessment Turnaround</div>
-                    </div>
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">100%</div>
-                      <div class="deliv-stat-lbl">Vendor-Neutral Analysis</div>
-                    </div>
-                  </div>
-                  <h4 style="font-size: 0.85rem; margin-bottom: 6px;">Target Impact:</h4>
-                  <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px;">
-                    Uncovers 3% to 8% in preventable revenue leakage, isolates trapped working capital, and eliminates redundant software licenses.
-                  </p>
-                  <a href="services/rcm-workflow-audit-benchmarking.html" class="btn btn-primary btn-sm" style="width: 100%; margin-bottom: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-                    <span>Explore Deep-Dive Blueprint</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </a>
-                  <a href="contact.html?service=rcm-workflow-audit" class="btn btn-secondary btn-sm" style="width: 100%;">Inquire About Workflow Audit</a>
-                </div>
-              </div>
-            </div>
-            <div class="service-accordion-footer">
-              <span class="compliance-tag-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                HFMA MAP &amp; MGMA Survey Normalized Standards
-              </span>
-              <a href="services/rcm-workflow-audit-benchmarking.html" class="link-arrow" style="font-size: 0.825rem; font-weight: 700; color: var(--blue-accent);">
-                Dedicated Service Blueprint &rarr;
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 4.2: Fractional CFO & Interim RCM Leadership -->
-        <div class="service-accordion-item">
-          <button type="button" class="service-accordion-header" aria-expanded="false">
-            <div class="accordion-title-box">
-              <div class="service-icon-circle">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              </div>
-              <div class="service-header-content">
-                <h3 class="service-name">Fractional CFO &amp; Interim RCM Leadership (EHR Surge Staffing)</h3>
-                <p class="service-summary-line">Board-ready interim executive placement and turnkey EHR cutover surge pods (Epic, Cerner, MEDITECH) defending cash flow and bond covenants for health systems.</p>
-              </div>
-            </div>
-            <div class="accordion-meta-box">
-              <span class="service-sla-chip">7–10d Placement &bull; Health Systems</span>
-              <div class="accordion-chevron-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-          </button>
-          <div class="service-accordion-body">
-            <div class="service-body-inner">
-              <div class="service-scope-col">
-                <h4>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Scope &amp; Operating Deliverables
-                </h4>
-                <p class="service-detailed-desc">
-                  Protect institutional solvency and operational momentum during executive turnover, multi-hospital M&amp;A consolidations, or enterprise EHR cutovers. Nova Arc embeds seasoned healthcare CFOs and VP/Director-level revenue cycle operators within 7 to 10 business days, backed by specialized on-site and remote surge staffing to liquidate legacy dual-ledgers and suppress DNFB spikes.
-                </p>
-                <ul class="service-feature-checklist">
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Board-tested Interim CFO &amp; VP of Revenue Cycle placement (on-site or embedded)</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>EHR Cutover Revenue Command Center with at-the-elbow super-user floor pods</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Dual-ledger legacy A/R wind-down squads protecting timely filing deadlines</span>
-                  </li>
-                  <li class="service-checklist-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Bond covenant defense (DCOH &amp; DSCR) and credit rating agency advocacy</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="service-deliverables-col">
-                <div class="service-deliverables-card">
-                  <div class="deliverables-stat-duo">
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">7-10d</div>
-                      <div class="deliv-stat-lbl">Executive Placement</div>
-                    </div>
-                    <div class="deliv-stat-item">
-                      <div class="deliv-stat-num">&lt; 3.8d</div>
-                      <div class="deliv-stat-lbl">Cutover Peak DNFB</div>
-                    </div>
-                  </div>
-                  <h4 style="font-size: 0.85rem; margin-bottom: 6px;">Target Impact:</h4>
-                  <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px;">
-                    Prevents multi-million dollar post-cutover cash cliffs, safeguards bond covenants, and mentors permanent leadership successors.
-                  </p>
-                  <a href="services/fractional-rcm-leadership.html" class="btn btn-primary btn-sm" style="width: 100%; margin-bottom: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-                    <span>Explore Deep-Dive Blueprint</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </a>
-                  <a href="contact.html?service=fractional-rcm-leadership" class="btn btn-secondary btn-sm" style="width: 100%;">Inquire About Interim Leadership</a>
-                </div>
-              </div>
-            </div>
-            <div class="service-accordion-footer">
-              <span class="compliance-tag-pill">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                Health Systems &bull; Multi-Hospital Networks &bull; EHR Conversions
-              </span>
-              <a href="services/fractional-rcm-leadership.html" class="link-arrow" style="font-size: 0.825rem; font-weight: 700; color: var(--blue-accent);">
-                Dedicated Service Blueprint &rarr;
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
 
   <!-- ========================================================================
        BOTTOM CTA SECTION

@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactPageForm();
   initAnalyticsTracking();
   initWaveformInteraction();
+  initNavSimpleDropdowns();
+  initSiteSearchModal();
 });
 
 /* --------------------------------------------------------------------------
@@ -49,12 +51,13 @@ function initStickyHeader() {
 function initServicesMegaMenu() {
   const toggleBtn = document.getElementById('servicesDropdownToggle');
   const megaPanel = document.getElementById('servicesMegaMenu');
-  const dropdownItem = document.querySelector('.nav-item-dropdown');
+  const navItem = toggleBtn ? toggleBtn.closest('.nav-item-dropdown') : null;
 
   if (!toggleBtn || !megaPanel) return;
 
   const openMenu = () => {
     megaPanel.classList.add('open');
+    if (navItem) navItem.classList.add('open');
     toggleBtn.classList.add('active');
     toggleBtn.setAttribute('aria-expanded', 'true');
     megaPanel.setAttribute('aria-hidden', 'false');
@@ -62,27 +65,70 @@ function initServicesMegaMenu() {
 
   const closeMenu = () => {
     megaPanel.classList.remove('open');
+    if (navItem) navItem.classList.remove('open');
     toggleBtn.classList.remove('active');
     toggleBtn.setAttribute('aria-expanded', 'false');
     megaPanel.setAttribute('aria-hidden', 'true');
   };
 
-  const toggleMenu = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    const isOpen = megaPanel.classList.contains('open');
-    if (isOpen) {
-      closeMenu();
-    } else {
+  // Hover support: open on mouseenter
+  // Persistent Display When Cursor Leaves: do NOT close on mouseleave!
+  if (navItem) {
+    navItem.addEventListener('mouseenter', () => {
       openMenu();
+    });
+  }
+
+  // Clicking the Services dropdown toggle:
+  // - If clicking the chevron arrow: toggle the megamenu open/close
+  // - If clicking "Services" link text:
+  //   * If already on services.html, close megamenu so page content is visible
+  //   * If on another page, navigate to services.html!
+  toggleBtn.addEventListener('click', (e) => {
+    const isChevron = e.target.closest('.dropdown-chevron');
+    if (isChevron) {
+      e.preventDefault();
+      e.stopPropagation();
+      const isOpen = megaPanel.classList.contains('open');
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+      return;
     }
-  };
 
-  toggleBtn.addEventListener('click', toggleMenu);
+    const isCurrentServicesPage = window.location.pathname.endsWith('services.html') || 
+                                  window.location.pathname.endsWith('/services') ||
+                                  window.location.pathname === '/services.html';
+    if (isCurrentServicesPage) {
+      if (megaPanel.classList.contains('open')) {
+        closeMenu();
+      }
+    } else {
+      closeMenu();
+    }
+  });
 
-  // Close on outside click
+  // If user clicks a link inside the mega menu, close menu on navigation
+  megaPanel.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    if (link) {
+      closeMenu();
+    }
+  });
+
+  // If user enters another dropdown in navbar (e.g. Solutions or AI Platform), close Services
+  const otherDropdowns = document.querySelectorAll('.nav-item-dropdown:not(.nav-item-services)');
+  otherDropdowns.forEach(otherItem => {
+    otherItem.addEventListener('mouseenter', () => {
+      closeMenu();
+    });
+  });
+
+  // Close when clicking outside navbar and megamenu so user can interact with the page
   document.addEventListener('click', (e) => {
-    if (dropdownItem && !dropdownItem.contains(e.target)) {
+    if (navItem && !navItem.contains(e.target) && !megaPanel.contains(e.target)) {
       if (megaPanel.classList.contains('open')) {
         closeMenu();
       }
@@ -95,14 +141,6 @@ function initServicesMegaMenu() {
       closeMenu();
       toggleBtn.focus();
     }
-  });
-
-  // Close when clicking any link inside the mega menu
-  const menuLinks = megaPanel.querySelectorAll('a');
-  menuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      closeMenu();
-    });
   });
 }
 
@@ -1007,5 +1045,348 @@ function initWaveformInteraction() {
   });
 }
 
+/* --------------------------------------------------------------------------
+   Simple Dropdown Toggles (Solutions & AI Platform)
+   -------------------------------------------------------------------------- */
+function initNavSimpleDropdowns() {
+  const toggles = document.querySelectorAll('.nav-dropdown-link');
+  toggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      if (window.innerWidth < 992) {
+        e.preventDefault();
+        const parent = toggle.closest('.nav-item-dropdown');
+        if (parent) {
+          parent.classList.toggle('open');
+          const isExpanded = parent.classList.contains('open');
+          toggle.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+        }
+      }
+    });
+  });
+}
 
+/* --------------------------------------------------------------------------
+   Site Search Modal (Instant Client-Side Search Across All Pages & Services)
+   -------------------------------------------------------------------------- */
+function initSiteSearchModal() {
+  let backdrop = document.getElementById('siteSearchModalBackdrop');
+  if (!backdrop) {
+    backdrop = document.createElement('div');
+    backdrop.id = 'siteSearchModalBackdrop';
+    backdrop.className = 'site-search-modal-backdrop';
+    backdrop.setAttribute('aria-hidden', 'true');
+    backdrop.setAttribute('role', 'dialog');
+    backdrop.setAttribute('aria-modal', 'true');
+    backdrop.setAttribute('aria-label', 'Site Search');
 
+    backdrop.innerHTML = `
+      <div class="site-search-modal">
+        <div class="site-search-header">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" class="site-search-input" id="siteSearchInput" placeholder="Search services, solutions, coding, prior auth..." autocomplete="off">
+          <button type="button" class="site-search-close" id="siteSearchCloseBtn" aria-label="Close search">ESC</button>
+        </div>
+        <div class="site-search-body">
+          <div id="siteSearchDefaultView">
+            <div class="site-search-section-title">Quick Suggestions</div>
+            <div class="site-search-tags">
+              <button type="button" class="site-search-tag" data-query="Eligibility">Eligibility &amp; Benefits</button>
+              <button type="button" class="site-search-tag" data-query="Prior Authorization">Prior Authorization</button>
+              <button type="button" class="site-search-tag" data-query="Medical Coding">Medical Coding</button>
+              <button type="button" class="site-search-tag" data-query="Medical Necessity">Medical Necessity</button>
+              <button type="button" class="site-search-tag" data-query="Denial Management">Denials &amp; Appeals</button>
+              <button type="button" class="site-search-tag" data-query="AI Platform">AI Platform</button>
+              <button type="button" class="site-search-tag" data-query="Collections">Point-of-Service</button>
+            </div>
+            <div class="site-search-section-title">Featured Services</div>
+          </div>
+          <ul class="site-search-results" id="siteSearchResultsList"></ul>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(backdrop);
+  }
+
+  const isServicesDir = window.location.pathname.includes('/services/');
+  const rootPrefix = isServicesDir ? '../' : '';
+  const servicesPrefix = isServicesDir ? '' : 'services/';
+
+  const searchIndex = [
+    {
+      title: 'Insurance Eligibility & Benefits Verification',
+      category: 'Patient Access',
+      desc: 'Real-time 270/271 EDI coverage verification and co-pay validation.',
+      url: servicesPrefix + 'real-time-insurance-eligibility.html',
+      tags: ['eligibility', 'benefits', 'insurance', 'coverage', '270', '271', 'copay']
+    },
+    {
+      title: 'Prior Authorization Management',
+      category: 'Patient Access',
+      desc: 'Proactive requirement verification, tracking, and end-to-end payer submission.',
+      url: servicesPrefix + 'prior-authorization-management.html',
+      tags: ['prior auth', 'authorization', 'precertification', 'stat auth', 'peer to peer']
+    },
+    {
+      title: 'Patient Scheduling & Registration QA',
+      category: 'Patient Access',
+      desc: 'Demographic validation and appointment QA preventing front-end rework.',
+      url: servicesPrefix + 'patient-registration-verification.html',
+      tags: ['scheduling', 'registration', 'qa', 'demographics', 'intake', 'patient access']
+    },
+    {
+      title: 'Financial Clearance & Good Faith Estimates',
+      category: 'Patient Access',
+      desc: 'Pre-service liability calculation, No Surprises Act compliance, and GFE generation.',
+      url: servicesPrefix + 'financial-clearance-gfe.html',
+      tags: ['financial clearance', 'gfe', 'good faith estimates', 'no surprises act', 'estimates']
+    },
+    {
+      title: 'Point-of-Service Collections',
+      category: 'Patient Access',
+      desc: 'Compassionate upfront patient payment collection and financial counseling.',
+      url: servicesPrefix + 'point-of-service-collections.html',
+      tags: ['pos', 'collections', 'point of service', 'upfront', 'copays', 'self-pay']
+    },
+    {
+      title: 'Medical Necessity & Order Verification',
+      category: 'Patient Access',
+      desc: 'LCD/NCD validation, order signatures, and clinical compliance checks before care.',
+      url: servicesPrefix + 'referral-order-management.html',
+      tags: ['medical necessity', 'order verification', 'lcd', 'ncd', 'abn', 'referral']
+    },
+    {
+      title: 'Full-Cycle Medical Coding Services',
+      category: 'HIM & Coding',
+      desc: 'Inpatient DRG, outpatient surgery, and profee multi-specialty coding.',
+      url: servicesPrefix + 'full-cycle-medical-coding.html',
+      tags: ['medical coding', 'drg', 'cpt', 'icd-10', 'profee', 'inpatient']
+    },
+    {
+      title: 'Risk Adjustment & HCC Coding',
+      category: 'HIM & Coding',
+      desc: 'Hierarchical Condition Category capture ensuring Medicare Advantage revenue integrity.',
+      url: servicesPrefix + 'hcc-risk-adjustment.html',
+      tags: ['hcc', 'risk adjustment', 'medicare advantage', 'raf', 'chart audit']
+    },
+    {
+      title: 'Clinical Documentation Improvement (CDI)',
+      category: 'HIM & Coding',
+      desc: 'Concurrent and retrospective chart auditing to capture true patient acuity.',
+      url: servicesPrefix + 'cdi-chart-auditing.html',
+      tags: ['cdi', 'chart auditing', 'acuity', 'clinical documentation', 'query']
+    },
+    {
+      title: 'Computer-Assisted Coding (CAC) Review',
+      category: 'HIM & Coding',
+      desc: 'Expert human validation optimizing NLP and AI auto-suggested coding pipelines.',
+      url: servicesPrefix + 'cac-review.html',
+      tags: ['cac', 'nlp', 'computer-assisted', 'validation', 'automation']
+    },
+    {
+      title: 'Coding Compliance & Audit Defense',
+      category: 'HIM & Coding',
+      desc: 'External quality audits, RAC defense, and OIG workplan risk mitigation.',
+      url: servicesPrefix + 'compliance-audit-defense.html',
+      tags: ['compliance', 'audit', 'defense', 'rac', 'oig', 'quality']
+    },
+    {
+      title: 'Charge Capture & CDM Audit',
+      category: 'HIM & Coding',
+      desc: 'Reconciling clinical administration against chargemaster entries to eliminate revenue leakage.',
+      url: servicesPrefix + 'cdm-charge-capture.html',
+      tags: ['cdm', 'charge capture', 'chargemaster', 'leakage', 'reconciliation']
+    },
+    {
+      title: 'Physician Query Management',
+      category: 'HIM & Coding',
+      desc: 'Compliant clinical clarification workflows for non-leading provider queries.',
+      url: servicesPrefix + 'physician-query-management.html',
+      tags: ['physician query', 'clarification', 'ahima', 'acdis', 'queries']
+    },
+    {
+      title: 'Claims Submission & Scrubbing (EDI 837)',
+      category: 'Patient Financial Services',
+      desc: '98%+ first-pass clean claim rates through automated multi-payer rules engines.',
+      url: servicesPrefix + 'claims-management-scrubbing.html',
+      tags: ['claims', 'scrubbing', '837', 'clean claim', 'edi', 'submission']
+    },
+    {
+      title: 'Payment Posting & Reconciliation (EDI 835)',
+      category: 'Patient Financial Services',
+      desc: 'Automated ERA posting, manual EOB indexing, and zero-balance banking reconciliation.',
+      url: servicesPrefix + 'payment-posting-reconciliation.html',
+      tags: ['payment posting', '835', 'era', 'eob', 'reconciliation', 'remittance']
+    },
+    {
+      title: 'A/R Management Services',
+      category: 'Patient Financial Services',
+      desc: 'Targeted aging bucket resolution across commercial, Medicare, and Medicaid accounts.',
+      url: servicesPrefix + 'ar-management.html',
+      tags: ['ar', 'accounts receivable', 'aging', 'follow-up', 'payer']
+    },
+    {
+      title: 'Denial Management & Appeals',
+      category: 'Patient Financial Services',
+      desc: 'Root-cause CARC/RARC analysis, clinical appeals, and overturned recovery workflows.',
+      url: servicesPrefix + 'denial-management.html',
+      tags: ['denials', 'appeals', 'carc', 'rarc', 'overturn', 'recovery']
+    },
+    {
+      title: 'Underpayment Recovery & Contract Compliance',
+      category: 'Patient Financial Services',
+      desc: 'Fee schedule modeling and forensic variance audits recovering unpaid contractual balances.',
+      url: servicesPrefix + 'payer-contract-modeling.html',
+      tags: ['underpayment', 'contract modeling', 'variance', 'fee schedule']
+    },
+    {
+      title: 'Patient Billing & Self-Pay Collections',
+      category: 'Patient Financial Services',
+      desc: 'Clear statements, digital payment portals, and patient-friendly financial resolution.',
+      url: servicesPrefix + 'patient-billing-collections.html',
+      tags: ['patient billing', 'self-pay', 'statements', 'portal', 'balances']
+    },
+    {
+      title: 'Credit Balance & Refund Management',
+      category: 'Patient Financial Services',
+      desc: 'Auditing overpayments and processing CMS-compliant refunds to prevent compliance penalties.',
+      url: servicesPrefix + 'credit-balance-resolution.html',
+      tags: ['credit balance', 'refunds', 'overpayments', 'compliance']
+    },
+    {
+      title: 'Extended Business Office (EBO)',
+      category: 'Patient Financial Services',
+      desc: 'Scalable revenue cycle staffing extending your internal business office operations.',
+      url: servicesPrefix + 'extended-business-office.html',
+      tags: ['ebo', 'extended business office', 'staffing', 'scaling']
+    },
+    {
+      title: 'Full-Cycle RCM Management',
+      category: 'Solutions',
+      desc: 'Comprehensive front-to-back revenue cycle management for hospitals and health systems.',
+      url: servicesPrefix + 'full-cycle-rcm.html',
+      tags: ['full cycle', 'end-to-end', 'operations', 'comprehensive rcm']
+    },
+    {
+      title: 'Nova Arc AI Platform',
+      category: 'Technology',
+      desc: 'Sub-second autonomous AI agents, intelligent prior auth, and autonomous clinical coding.',
+      url: rootPrefix + 'ai-platform.html',
+      tags: ['ai', 'platform', 'agents', 'automation', 'intelligence', 'autonomous']
+    },
+    {
+      title: 'All Solutions Overview',
+      category: 'Solutions',
+      desc: 'Discover Nova Arc’s complete enterprise healthcare revenue cycle portfolio.',
+      url: rootPrefix + 'solutions.html',
+      tags: ['solutions', 'overview', 'suite', 'services portfolio']
+    },
+    {
+      title: 'Who We Serve',
+      category: 'Organization',
+      desc: 'Health systems, academic medical centers, ambulatory groups, and specialty practices.',
+      url: rootPrefix + 'who-we-serve.html',
+      tags: ['who we serve', 'health systems', 'hospitals', 'physician groups', 'specialties']
+    },
+    {
+      title: 'Connect with Us / Request Consultation',
+      category: 'Contact',
+      desc: 'Get in touch with Nova Arc revenue cycle leadership for tailored consultations.',
+      url: rootPrefix + 'contact.html',
+      tags: ['contact', 'consultation', 'demo', 'connect', 'phone', 'email']
+    }
+  ];
+
+  const searchInput = document.getElementById('siteSearchInput');
+  const searchClose = document.getElementById('siteSearchCloseBtn');
+  const resultsList = document.getElementById('siteSearchResultsList');
+  const defaultView = document.getElementById('siteSearchDefaultView');
+
+  const openSearch = () => {
+    backdrop.classList.add('open');
+    backdrop.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    renderResults(searchIndex.slice(0, 6));
+    setTimeout(() => searchInput.focus(), 80);
+  };
+
+  const closeSearch = () => {
+    backdrop.classList.remove('open');
+    backdrop.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    searchInput.value = '';
+  };
+
+  const renderResults = (items) => {
+    resultsList.innerHTML = '';
+    if (!items.length) {
+      resultsList.innerHTML = `<li class="site-search-empty">No matching services found. Try searching for "Prior Auth", "Coding", or "Eligibility".</li>`;
+      return;
+    }
+    items.forEach(item => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <a href="${item.url}" class="site-search-result-item">
+          <span class="site-search-result-cat">${item.category}</span>
+          <h4 class="site-search-result-title">${item.title}</h4>
+          <p class="site-search-result-desc">${item.desc}</p>
+        </a>
+      `;
+      resultsList.appendChild(li);
+    });
+  };
+
+  document.querySelectorAll('#siteSearchBtn, #mobileSearchTrigger, .open-search-trigger').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openSearch();
+    });
+  });
+
+  if (searchClose) searchClose.addEventListener('click', closeSearch);
+
+  backdrop.addEventListener('click', (e) => {
+    if (e.target === backdrop) closeSearch();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      if (backdrop.classList.contains('open')) {
+        closeSearch();
+      } else {
+        openSearch();
+      }
+    } else if (e.key === 'Escape' && backdrop.classList.contains('open')) {
+      closeSearch();
+    }
+  });
+
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.trim().toLowerCase();
+    if (!query) {
+      defaultView.style.display = 'block';
+      renderResults(searchIndex.slice(0, 6));
+      return;
+    }
+    defaultView.style.display = 'none';
+    const matches = searchIndex.filter(item => {
+      return item.title.toLowerCase().includes(query) ||
+             item.category.toLowerCase().includes(query) ||
+             item.desc.toLowerCase().includes(query) ||
+             item.tags.some(tag => tag.includes(query));
+    });
+    renderResults(matches);
+  });
+
+  document.querySelectorAll('.site-search-tag').forEach(tag => {
+    tag.addEventListener('click', () => {
+      const q = tag.getAttribute('data-query');
+      searchInput.value = q;
+      searchInput.dispatchEvent(new Event('input'));
+      searchInput.focus();
+    });
+  });
+}
