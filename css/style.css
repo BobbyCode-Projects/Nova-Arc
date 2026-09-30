@@ -6502,10 +6502,92 @@ button, input, select, textarea {
   }
   .solution-hero-actions {
     flex-direction: column;
-    width: 100%;
+}
+
+/* ==========================================================================
+   SOLUTIONS CALLOUT BANNER (AGS HEALTH STYLE)
+   ========================================================================== */
+.solutions-callout-section {
+  padding: 95px 0 90px;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+
+.solutions-callout-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.solutions-callout-heading {
+  font-size: clamp(2.2rem, 3.6vw, 3rem);
+  font-weight: 800;
+  color: #0B2545;
+  line-height: 1.22;
+  letter-spacing: -0.025em;
+  margin-bottom: 20px;
+}
+
+.solutions-callout-desc {
+  font-size: clamp(1.05rem, 1.3vw, 1.15rem);
+  color: #475569;
+  line-height: 1.68;
+  max-width: 660px;
+  margin: 0 auto 30px;
+  font-weight: 400;
+}
+
+.solutions-callout-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-solutions-callout,
+.btn-solutions-green {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #1F6FEB !important;
+  color: #FFFFFF !important;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 13px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(31, 111, 235, 0.35);
+}
+
+.btn-solutions-callout:hover,
+.btn-solutions-green:hover {
+  background-color: #1656B8 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(31, 111, 235, 0.45);
+  color: #FFFFFF !important;
+}
+
+.btn-solutions-callout svg,
+.btn-solutions-green svg {
+  transition: transform 0.2s ease;
+}
+
+.btn-solutions-callout:hover svg,
+.btn-solutions-green:hover svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .solutions-callout-section {
+    padding: 70px 0 65px;
   }
-  .solution-hero-actions .btn {
-    width: 100%;
+  .solutions-callout-heading {
+    font-size: 2rem;
+  }
+  .solutions-callout-desc {
+    font-size: 1rem;
+    margin-bottom: 28px;
   }
 }
 
