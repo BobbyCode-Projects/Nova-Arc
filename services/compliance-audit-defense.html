@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OIG &amp; RAC Audit Defense &amp; Compliance Management | Nova Arc</title>
-  <meta name="description" content="OIG and RAC audit defense, statistically valid internal QA sampling (RAT-STATS), and automated ADR fulfillment for Health Systems and Hospital-Based Groups.">
+  <title>Coding Compliance &amp; Audit Support | Nova Arc</title>
+  <meta name="description" content="Strengthen Compliance. Reduce Coding Risk. Our Coding Compliance and Audit Support services provide structured reviews of coding practices, documentation, and claims.">
   
   <!-- SEO & Social Meta Tags -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Nova Arc Healthcare Technologies">
-  <meta property="og:title" content="OIG &amp; RAC Audit Defense &amp; Compliance Management | Nova Arc">
-  <meta property="og:description" content="Shield your organization from RAC clawbacks and OIG inquiries: Statistically valid QA chart audits, 100% on-time ADR fulfillment, and 94.6% appeals overturn rates.">
+  <meta property="og:title" content="Coding Compliance &amp; Audit Support | Nova Arc">
+  <meta property="og:description" content="Strengthen Compliance. Reduce Coding Risk. Structured coding compliance audits, pre-bill and post-bill reviews, and documentation validation.">
   <meta property="og:url" content="https://novaarc-rcm.com/services/compliance-audit-defense.html">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="OIG &amp; RAC Audit Defense &amp; Compliance | Nova Arc">
-  <meta name="twitter:description" content="Defensible internal QA sampling, OIG Work Plan surveillance, and end-to-end Medicare administrative appeals for Health Systems and Medical Groups.">
+  <meta name="twitter:title" content="Coding Compliance &amp; Audit Support | Nova Arc">
+  <meta name="twitter:description" content="Strengthen Compliance. Reduce Coding Risk. Structured coding compliance audits, pre-bill and post-bill reviews, and documentation validation.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="../images/nova-arc-logo.png">
@@ -458,830 +458,717 @@
     </div>
   </header>
 
+  <!-- ========================================================================
+       PAGE-SPECIFIC STYLES
+       ======================================================================== -->
+  <style>
+    /* Scoped Page Styles for Coding Compliance & Audit Support */
+    .compliance-hero {
+      text-align: center;
+      padding: 72px 0 64px;
+      background: radial-gradient(circle at 50% 0%, rgba(31, 111, 235, 0.08) 0%, transparent 70%),
+                  linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .compliance-breadcrumbs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .compliance-breadcrumbs a {
+      color: var(--blue-accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+    .compliance-breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+    .compliance-breadcrumbs .separator {
+      color: var(--text-light);
+      font-size: 0.75rem;
+    }
+    .compliance-tag {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      margin-bottom: 16px;
+    }
+    .compliance-title {
+      font-size: clamp(2.3rem, 4.4vw, 3.6rem);
+      font-weight: 800;
+      color: var(--navy-primary);
+      line-height: 1.16;
+      letter-spacing: -0.025em;
+      max-width: 980px;
+      margin: 0 auto 20px;
+    }
+    .compliance-subtitle {
+      font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+      color: var(--text-secondary);
+      line-height: 1.55;
+      font-weight: 400;
+      max-width: 820px;
+      margin: 0 auto 36px;
+    }
+    .btn-connect {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--blue-accent);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 14px 38px;
+      border-radius: 6px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(31, 111, 235, 0.35);
+      transition: all 0.2s ease;
+    }
+    .btn-connect:hover {
+      background: var(--blue-accent-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(31, 111, 235, 0.45);
+      color: #FFFFFF;
+    }
+
+    /* Overview Section */
+    .overview-section {
+      padding: 96px 0;
+      background: #FFFFFF;
+    }
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .overview-tag {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      margin-bottom: 24px;
+    }
+    .overview-paragraph {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+    .overview-paragraph:last-child {
+      margin-bottom: 0;
+    }
+    .overview-image-container {
+      position: relative;
+    }
+    .overview-image {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 12px 32px rgba(11, 37, 69, 0.09);
+      border: 1px solid var(--border-light);
+      display: block;
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+    }
+
+    /* Services Provided Section */
+    .services-provided-section {
+      padding: 96px 0 104px;
+      background: #F8FAFC;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .services-tag {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .services-headline {
+      font-size: clamp(2rem, 3.2vw, 2.75rem);
+      font-weight: 800;
+      color: var(--navy-primary);
+      text-align: center;
+      max-width: 880px;
+      margin: 0 auto 56px;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+    .services-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .service-feature-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 8px rgba(11, 37, 69, 0.03);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .service-feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(11, 37, 69, 0.08);
+      border-color: var(--blue-accent-border);
+    }
+    .service-card-icon-box {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      background: var(--blue-accent-light);
+      color: var(--blue-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      flex-shrink: 0;
+    }
+    .service-card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy-primary);
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+    .service-card-desc {
+      font-size: 0.925rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
+      flex-grow: 1;
+      margin-bottom: 20px;
+    }
+    .service-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--blue-accent);
+      text-decoration: none;
+      transition: color 0.15s ease;
+      margin-top: auto;
+    }
+    .service-card-link:hover {
+      color: var(--blue-accent-hover);
+      text-decoration: underline;
+    }
+
+    /* Benefits Section */
+    .benefits-section {
+      padding: 96px 0;
+      background: #FFFFFF;
+    }
+    .benefits-tag {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .benefits-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+    .benefit-col {
+      display: flex;
+      flex-direction: column;
+    }
+    .benefit-icon-wrapper {
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 22px;
+      color: var(--blue-accent);
+    }
+    .benefit-heading {
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--navy-primary);
+      line-height: 1.35;
+      margin-bottom: 14px;
+    }
+    .benefit-copy {
+      font-size: 0.935rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
+    }
+
+    /* Dark CTA Section */
+    .dark-cta-section {
+      background: linear-gradient(135deg, #051324 0%, #0B2545 60%, #133B6C 100%);
+      padding: 104px 0;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .dark-cta-bg-art {
+      position: absolute;
+      right: -80px;
+      bottom: -100px;
+      width: 650px;
+      height: 480px;
+      opacity: 0.22;
+      pointer-events: none;
+    }
+    .dark-cta-title {
+      font-size: clamp(2.3rem, 4vw, 3.4rem);
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      max-width: 820px;
+      margin: 0 auto 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .dark-cta-subtitle {
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+      color: #CBD5E1;
+      line-height: 1.65;
+      max-width: 740px;
+      margin: 0 auto 38px;
+      position: relative;
+      z-index: 1;
+    }
+    .btn-cta-consult {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--blue-accent);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 16px 36px;
+      border-radius: 6px;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(31, 111, 235, 0.4);
+      transition: all 0.2s ease;
+      position: relative;
+      z-index: 1;
+    }
+    .btn-cta-consult:hover {
+      background: var(--blue-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(31, 111, 235, 0.5);
+      color: #FFFFFF;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 1080px) {
+      .services-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .benefits-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px;
+      }
+    }
+    @media (max-width: 860px) {
+      .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .overview-image {
+        height: 320px;
+      }
+    }
+    @media (max-width: 640px) {
+      .services-cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .benefits-row {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .compliance-hero {
+        padding: 48px 0 44px;
+      }
+      .overview-section,
+      .services-provided-section,
+      .benefits-section,
+      .dark-cta-section {
+        padding: 64px 0;
+      }
+    }
+  </style>
+
 
   <!-- ========================================================================
-       1. BREADCRUMB & 2. HERO SECTION
+       1. HERO SECTION
        ======================================================================== -->
-  <section class="page-hero" id="hero">
+  <section class="compliance-hero" id="hero">
     <div class="container">
-      <!-- 1. Breadcrumb -->
-      <nav class="breadcrumb-nav" aria-label="Breadcrumbs">
+      <!-- Breadcrumb Navigation -->
+      <nav class="compliance-breadcrumbs" aria-label="Breadcrumbs">
         <a href="../index.html">Home</a>
-        <span class="breadcrumb-separator">/</span>
+        <span class="separator">&gt;</span>
         <a href="../services.html">Services</a>
-        <span class="breadcrumb-separator">/</span>
-        <span style="color: var(--text-primary); font-weight: 600;">OIG &amp; RAC Audit Defense &amp; Compliance</span>
+        <span class="separator">&gt;</span>
+        <a href="him-coding-services.html">HIM &amp; Coding</a>
+        <span class="separator">&gt;</span>
+        <span style="color: var(--text-primary); font-weight: 600;">Coding Compliance &amp; Audit Support</span>
       </nav>
 
-      <!-- 2. Hero Content -->
-      <div class="page-hero-content">
-        <span class="section-tag">HIM, Compliance &amp; Regulatory Defense • Service 02.5</span>
-        <h1 class="page-hero-title">
-          OIG &amp; RAC Audit Defense &amp; Compliance Management
-        </h1>
-        <p class="page-hero-subtitle">
-          Shield Health Systems and Hospital-Based Groups from devastating clawbacks: Defensible internal QA chart sampling under HHS RAT-STATS standards, 100% on-time ADR fulfillment, and a 94.6% administrative appeals overturn rate.
-        </p>
+      <!-- Eyebrow: SERVICES -->
+      <div>
+        <span class="compliance-tag">SERVICES</span>
+      </div>
 
-        <!-- Master KPI Stat Banner -->
-        <div style="display: inline-flex; align-items: center; gap: 16px; background: rgba(31, 111, 235, 0.08); border: 1px solid var(--blue-accent-border); padding: 12px 22px; border-radius: var(--radius-lg); margin-bottom: var(--space-xl); box-shadow: var(--shadow-sm); flex-wrap: wrap;">
-          <div style="display: flex; align-items: baseline; gap: 8px;">
-            <div style="font-size: 2rem; font-weight: 800; color: var(--blue-accent); line-height: 1;">
-              94.6%
-            </div>
-            <span style="font-size: 0.85rem; color: var(--text-primary); font-weight: 600;">RAC &amp; MAC Audit Appeals Overturn Rate</span>
-          </div>
-          <div style="width: 1px; height: 24px; background: var(--border-medium); margin: 0 4px;"></div>
-          <div style="font-size: 0.85rem; color: var(--text-muted);">
-            <strong style="color: #10B981;">100%</strong> On-Time ADR SLA • <strong style="color: #0284C7;">RAT-STATS</strong> Statistically Valid QA
-          </div>
-        </div>
+      <!-- Main Title -->
+      <h1 class="compliance-title">
+        Coding Compliance &amp; Audit Support
+      </h1>
 
-        <!-- Action CTAs -->
-        <div class="hero-actions" style="display: flex; gap: var(--space-md); flex-wrap: wrap; margin-bottom: var(--space-2xl);">
-          <a href="../contact.html?service=compliance-audit-defense" class="btn btn-primary btn-lg">
-            <span>Request an Audit Defense Assessment</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-          <a href="#audit-prep-checklist-visual" class="btn btn-secondary btn-lg">
-            <span>Interactive Audit Prep Checklist</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </a>
-        </div>
+      <!-- Subtitle -->
+      <p class="compliance-subtitle">
+        Strengthen Compliance. Reduce Coding Risk.
+      </p>
 
-        <!-- 4 Key Hero Badges -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: var(--space-md); margin-top: var(--space-md);">
-          
-          <div class="stat-card" style="padding: var(--space-md); background: #FFFFFF; border: 1px solid var(--border-medium); border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
-            <div style="font-size: 1.6rem; font-weight: 800; color: var(--blue-accent); margin-bottom: 4px;">94.6%</div>
-            <div style="font-size: 0.8rem; color: var(--text-secondary); font-weight: 600;">Medicare Appeals Overturn Rate</div>
-          </div>
-
-          <div class="stat-card" style="padding: var(--space-md); background: #FFFFFF; border: 1px solid var(--border-medium); border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
-            <div style="font-size: 1.6rem; font-weight: 800; color: #10B981; margin-bottom: 4px;">100%</div>
-            <div style="font-size: 0.8rem; color: var(--text-secondary); font-weight: 600;">ADR Statutory Deadline SLA</div>
-          </div>
-
-          <div class="stat-card" style="padding: var(--space-md); background: #FFFFFF; border: 1px solid var(--border-medium); border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
-            <div style="font-size: 1.6rem; font-weight: 800; color: #0284C7; margin-bottom: 4px;">95.0%+</div>
-            <div style="font-size: 0.8rem; color: var(--text-secondary); font-weight: 600;">Internal Coding Accuracy Benchmark</div>
-          </div>
-
-          <div class="stat-card" style="padding: var(--space-md); background: #FFFFFF; border: 1px solid var(--border-medium); border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
-            <div style="font-size: 1.6rem; font-weight: 800; color: #7C3AED; margin-bottom: 4px;">&lt; 48h</div>
-            <div style="font-size: 0.8rem; color: var(--text-secondary); font-weight: 600;">Payer Record Fulfillment SLA</div>
-          </div>
-
-        </div>
+      <!-- Connect With Us Button -->
+      <div>
+        <a href="../contact.html?service=compliance-audit" class="btn-connect">
+          Connect with us
+        </a>
       </div>
     </div>
   </section>
 
 
   <!-- ========================================================================
-       3. THE PROBLEM: REGULATORY AUDIT SCRUTINY
+       2. OVERVIEW SECTION
        ======================================================================== -->
-  <section class="section section-dark" id="the-problem">
+  <section class="overview-section" id="overview">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Regulatory Exposure &amp; Clawback Risks</span>
-        <h2 class="section-title">The Mounting Threat of Extrapolated RAC Audits &amp; Technical Denials</h2>
-        <p class="section-subtitle">
-          Government contractors and commercial payers employ algorithmic post-payment data mining to target vulnerable billing patterns. Without proactive surveillance and statistically valid QA, providers face catastrophic extrapolation recoupments.
-        </p>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
-        
-        <!-- Problem Card 1 -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #EF4444;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-          </div>
-          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
-            Aggressive RAC &amp; UPIC Extrapolation Clawbacks
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
-            Recovery Audit Contractors (RAC) and Unified Program Integrity Contractors (UPIC) conduct targeted probe audits on small samples (e.g., 30 to 50 charts). If an error rate exceeds threshold, auditors apply statistical extrapolation across <strong>three to six years of historical billings</strong>—turning a $15,000 sample discrepancy into a <strong>$2.8M to $7.5M demand letter</strong>.
+      <div class="overview-grid">
+        <!-- Left: Text Content -->
+        <div class="overview-content">
+          <span class="overview-tag">OVERVIEW</span>
+          <p class="overview-paragraph">
+            Coding compliance requires continuous monitoring to identify inaccuracies, inconsistencies, and potential regulatory risks. Our Coding Compliance and Audit Support services provide structured reviews of coding practices, documentation, and claims to help organizations identify opportunities for improvement.
           </p>
-          <div style="margin-top: var(--space-md); padding: 8px 12px; background: rgba(239, 68, 68, 0.08); border-radius: var(--radius-sm); border: 1px solid rgba(239, 68, 68, 0.2); font-size: 0.78rem; color: #FCA5A5;">
-            <strong>The Threat:</strong> Medicare offsets current weekly remit disbursements to satisfy demands if appeals are delayed.
-          </div>
+          <p class="overview-paragraph">
+            Our audit approach focuses on accuracy, consistency, documentation support, and adherence to applicable coding and billing requirements.
+          </p>
         </div>
 
-        <!-- Problem Card 2 -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #F59E0B;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          </div>
-          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
-            Missed 45-Day ADR Deadlines &amp; Technical Denials
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
-            Medicare MACs and commercial payers dispatch Additional Documentation Requests (ADR) across disparate physical mailrooms and obscure payer portals. If the certified medical record packet is not received by day 45, the claim is <strong>automatically denied as a technical failure</strong>—forfeiting reimbursement without any evaluation of clinical merit.
-          </p>
-          <div style="margin-top: var(--space-md); padding: 8px 12px; background: rgba(245, 158, 11, 0.08); border-radius: var(--radius-sm); border: 1px solid rgba(245, 158, 11, 0.2); font-size: 0.78rem; color: #FCD34D;">
-            <strong>The Threat:</strong> Over 18% of hospital audit recoupments occur strictly due to missed ADR transmission deadlines.
-          </div>
+        <!-- Right: Professional Team Imagery -->
+        <div class="overview-image-container">
+          <img src="../images/solution-him-coding.jpg" alt="Coding Compliance &amp; Audit Support Overview" class="overview-image" width="600" height="440">
         </div>
-
-        <!-- Problem Card 3 -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #38BDF8;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-          </div>
-          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
-            Subjective "10-Chart" QA Lacking Statistical Validity
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
-            Most provider organizations rely on rudimentary internal audits—reviewing an arbitrary 5 to 10 charts per coder per month. This unscientific approach fails HHS OIG Compliance Program Guidance, misses low-frequency high-dollar vulnerabilities (e.g. surgical unbundling, split-billing), and leaves leadership blind to true systemic risk.
-          </p>
-          <div style="margin-top: var(--space-md); padding: 8px 12px; background: rgba(56, 189, 248, 0.08); border-radius: var(--radius-sm); border: 1px solid rgba(56, 189, 248, 0.2); font-size: 0.78rem; color: #BAE6FD;">
-            <strong>The Threat:</strong> Inability to prove an effective compliance program during a federal Department of Justice (DOJ) inquiry.
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
 
   <!-- ========================================================================
-       4. FEATURE ARCHITECTURE: 6 PILLARS OF AUDIT DEFENSE & COMPLIANCE
+       3. SERVICES PROVIDED SECTION
        ======================================================================== -->
-  <section class="section section-light" id="features">
+  <section class="services-provided-section" id="services-provided">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Enterprise Compliance Framework</span>
-        <h2 class="section-title">Comprehensive Architecture: 6 Pillars of Audit Defense</h2>
-        <p class="section-subtitle">
-          Nova Arc provides Certified Professional Medical Auditors (CPMA), Certified Healthcare Compliance specialists (CHC), and legal-grade appeal strategists to insulate your revenue from regulatory intrusion.
-        </p>
-      </div>
+      <!-- Section Header -->
+      <span class="services-tag">SERVICES PROVIDED</span>
+      <h2 class="services-headline">
+        Leverage independent audit expertise to safeguard compliance and revenue integrity.
+      </h2>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
-        
-        <!-- Pillar 1 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      <!-- 10 Service Cards Grid -->
+      <div class="services-cards-grid">
+        <!-- Service 1 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
           </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
-            1. OIG Work Plan &amp; Audit Target Surveillance
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            Continuous tracking of monthly HHS Office of Inspector General (OIG) Work Plan updates and RAC Statement of Work focus areas. We run automated claim scans against active target areas: Two-Midnight rule, spinal fusion levels, facet injections, observation stays, and cardiac telemetry.
+          <h3 class="service-card-title">Coding compliance audits</h3>
+          <p class="service-card-desc">
+            Structured baseline and periodic compliance evaluations verifying adherence to official coding guidelines and regulatory mandates.
           </p>
-          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
-            • Monthly OIG Work Plan Claim Cross-Match<br>
-            • Proactive Pre-Submission Risk Isolation
-          </div>
+          <a href="../contact.html?service=compliance-audit" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
         </div>
 
-        <!-- Pillar 2 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+        <!-- Service 2 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
           </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
-            2. Statistically Valid QA Sampling (RAT-STATS)
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            Replacing arbitrary chart audits with HHS OIG-sanctioned RAT-STATS statistical software methodology. We execute stratified probe sampling with 90%–95% confidence levels, calculating statistically defensible error rates across coder cohorts and specialty service lines.
+          <h3 class="service-card-title">Pre-bill and post-bill audits</h3>
+          <p class="service-card-desc">
+            Dual-phase auditing workflows evaluating claims prior to submission as well as retrospective analysis of paid claims.
           </p>
-          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
-            • OIG-Approved RAT-STATS Variable/Attribute Sampling<br>
-            • Stratified High-Dollar &amp; Outlier Bucketing
-          </div>
+          <a href="../contact.html?service=compliance-audit" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
         </div>
 
-        <!-- Pillar 3 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+        <!-- Service 3 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 4 23 10 17 10"></polyline>
+              <polyline points="1 20 1 14 7 14"></polyline>
+              <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+            </svg>
           </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
-            3. Automated 45-Day ADR Fulfillment Pipeline
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            End-to-end management of Additional Documentation Requests (ADR). Our digital chain-of-custody engine ingests payer letters, retrieves certified EMR records, verifies complete physician signatures and orders, and transmits secure electronic packets well before statutory deadlines.
+          <h3 class="service-card-title">Retrospective coding reviews</h3>
+          <p class="service-card-desc">
+            Statistical sampling and in-depth chart evaluations examining coding patterns, payer adjudication trends, and historical error rates.
           </p>
-          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
-            • Zero Technical Defaults on 45-Day Time Limits<br>
-            • Encrypted CMS esMD Electronic Submission
-          </div>
+          <a href="../contact.html?service=compliance-audit" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
         </div>
 
-        <!-- Pillar 4 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+        <!-- Service 4 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
           </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
-            4. 5-Level Medicare Administrative Appeals Ladder
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            Relentless defense through all 5 statutory appeal levels: Level 1 Redetermination (MAC), Level 2 Reconsideration (QIC), Level 3 Administrative Law Judge (ALJ) hearings with expert clinical witnesses, Level 4 Medicare Appeals Council, and Level 5 Federal District Court.
+          <h3 class="service-card-title">Documentation validation</h3>
+          <p class="service-card-desc">
+            Rigorous validation ensuring provider documentation meets clinical necessity, billing standards, and statutory requirements.
           </p>
-          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
-            • 94.6% Overturn Rate at Level 3 ALJ Hearings<br>
-            • Clinical Rationale &amp; Legal Precedent Binders
-          </div>
+          <a href="../contact.html?service=compliance-audit" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
         </div>
 
-        <!-- Pillar 5 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+        <!-- Service 5 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
           </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
-            5. PEPPER Outlier Surveillance &amp; Benchmarking
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            Quarterly ingestion of Program for Evaluating Payment Patterns Electronic Reports (PEPPER). We identify Target Areas where hospital coding percentiles exceed the national 80th percentile (e.g. single-MCC septicemia, stroke, respiratory infections), remediating risks before RAC triggers.
+          <h3 class="service-card-title">Coding error identification</h3>
+          <p class="service-card-desc">
+            Systematic isolation of unbundling, upcoding, undercoding, and misapplied NCCI edits to prevent compliance inquiries.
           </p>
-          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
-            • National &amp; Jurisdiction PEPPER Percentile Mapping<br>
-            • Early Outlier Normalization Protocols
-          </div>
+          <a href="../contact.html?service=compliance-audit" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
         </div>
 
-        <!-- Pillar 6 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        <!-- Service 6 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
           </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
-            6. Coder QA Remediation &amp; Physician Coaching
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            Auditing is meaningless without closed-loop education. Audit findings feed automated root-cause reports, driving weekly 1-on-1 coder coaching, focused specialty retraining modules, and concise physician documentation tips that eliminate recurring deficiencies.
+          <h3 class="service-card-title">Modifier and E/M audits</h3>
+          <p class="service-card-desc">
+            Focused review of high-risk modifier usage (-25, -59, -51) and Evaluation &amp; Management level substantiation.
           </p>
-          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
-            • 95.0%+ Audited Coding Accuracy Maintenance<br>
-            • Physician Specialty Documentation Feedback
-          </div>
+          <a href="../contact.html?service=compliance-audit" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
         </div>
 
+        <!-- Service 7 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="11" y1="8" x2="11" y2="14"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Audit sampling</h3>
+          <p class="service-card-desc">
+            Statistically valid random and targeted sampling methodologies (including RAT-STATS) ensuring reliable audit findings.
+          </p>
+          <a href="../contact.html?service=compliance-audit" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 8 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Compliance reporting</h3>
+          <p class="service-card-desc">
+            Clear, executive-ready audit dashboards highlighting error trends, accuracy scores, risk areas, and financial impact.
+          </p>
+          <a href="../contact.html?service=compliance-audit" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 9 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 11 12 14 22 4"></polyline>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Corrective action recommendations</h3>
+          <p class="service-card-desc">
+            Actionable guidance and policy refinement to eliminate systemic coding defects and mitigate future audit vulnerabilities.
+          </p>
+          <a href="../contact.html?service=compliance-audit" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 10 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Coder education support</h3>
+          <p class="service-card-desc">
+            Targeted clinical education, coding workshops, and one-on-one coaching driven directly by audit findings and industry updates.
+          </p>
+          <a href="../contact.html?service=compliance-audit" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
       </div>
     </div>
   </section>
 
 
   <!-- ========================================================================
-       5. DYNAMIC VISUAL 1: OIG / RAC AUDIT PREP CHECKLIST
+       4. BENEFITS SECTION
        ======================================================================== -->
-  <section class="section section-dark" id="audit-prep-checklist-visual">
+  <section class="benefits-section" id="benefits">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Interactive Compliance Visual</span>
-        <h2 class="section-title">OIG &amp; RAC Audit Prep Checklist: 4-Phase Protocol</h2>
-        <p class="section-subtitle">
-          Interactive compliance simulator: Track your organization's readiness across pre-audit surveillance, ADR packet compilation, clinical validation, and the 5-level Medicare appeals ladder.
-        </p>
-      </div>
+      <!-- Section Tag -->
+      <span class="benefits-tag">BENEFITS</span>
 
-      <!-- Checklist Interactive Card -->
-      <div class="pillar-card" style="padding: 0; overflow: hidden; background: rgba(11, 19, 43, 0.9); box-shadow: var(--shadow-xl); border: 1px solid var(--border-medium); max-width: 1080px; margin: 0 auto var(--space-2xl);">
-        
-        <!-- Header Strip -->
-        <div style="background: var(--navy-primary); color: #FFFFFF; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; border-bottom: 2px solid var(--blue-accent);">
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <div style="width: 10px; height: 10px; border-radius: 50%; background: #10B981; box-shadow: 0 0 8px #10B981;"></div>
-            <strong style="font-size: 1.05rem; color: #FFFFFF;">
-              RAC / MAC Audit Defense Protocol • Readiness Tracker
-            </strong>
+      <!-- 4 Columns Grid -->
+      <div class="benefits-row">
+        <!-- Benefit 1 -->
+        <div class="benefit-col">
+          <div class="benefit-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
           </div>
-          <div style="display: flex; align-items: center; gap: 12px;">
-            <span style="font-size: 0.8rem; color: var(--text-muted);">Readiness Score:</span>
-            <span style="font-size: 0.95rem; font-weight: 800; color: #10B981; background: rgba(16, 185, 129, 0.15); padding: 4px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(16, 185, 129, 0.3);" id="audit-score-display">
-              100% Audit Ready
-            </span>
-          </div>
-        </div>
-
-        <!-- 4 Interactive Phases Grid -->
-        <div style="padding: var(--space-xl);">
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-lg);">
-            
-            <!-- Phase 1 -->
-            <div style="background: rgba(3, 7, 18, 0.5); padding: 18px; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <strong style="font-size: 0.9rem; color: #38BDF8;">Phase 1: Pre-Audit Surveillance</strong>
-                <span class="preview-item-tag tag-blue" style="font-size: 0.7rem;">Target Scan</span>
-              </div>
-              <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8rem; color: #E2E8F0; line-height: 1.8;">
-                <li><label style="cursor: pointer;"><input type="checkbox" checked onchange="updateAuditScore()"> Ingest &amp; audit quarterly PEPPER reports</label></li>
-                <li><label style="cursor: pointer;"><input type="checkbox" checked onchange="updateAuditScore()"> Scan claims vs. active OIG Work Plan items</label></li>
-                <li><label style="cursor: pointer;"><input type="checkbox" checked onchange="updateAuditScore()"> Flag single-CC/MCC inpatient outlier claims</label></li>
-                <li><label style="cursor: pointer;"><input type="checkbox" checked onchange="updateAuditScore()"> Audit short-stay Two-Midnight rule orders</label></li>
-              </ul>
-            </div>
-
-            <!-- Phase 2 -->
-            <div style="background: rgba(3, 7, 18, 0.5); padding: 18px; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <strong style="font-size: 0.9rem; color: #10B981;">Phase 2: ADR Receipt &amp; Logging</strong>
-                <span class="preview-item-tag tag-green" style="font-size: 0.7rem;">Day 1–15</span>
-              </div>
-              <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8rem; color: #E2E8F0; line-height: 1.8;">
-                <li><label style="cursor: pointer;"><input type="checkbox" checked onchange="updateAuditScore()"> Centralized digital tracking of ADR notice</label></li>
-                <li><label style="cursor: pointer;"><input type="checkbox" checked onchange="updateAuditScore()"> Confirm exact 45-day statutory filing cutoff</label></li>
-                <li><label style="cursor: pointer;"><input type="checkbox" checked onchange="updateAuditScore()"> Retrieve certified EMR record &amp; orders</label></li>
-                <li><label style="cursor: pointer;"><input type="checkbox" checked onchange="updateAuditScore()"> Verify all physician signatures &amp; credentials</label></li>
-              </ul>
-            </div>
-
-            <!-- Phase 3 -->
-            <div style="background: rgba(3, 7, 18, 0.5); padding: 18px; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <strong style="font-size: 0.9rem; color: #F59E0B;">Phase 3: Clinical Packet Defense</strong>
-                <span class="preview-item-tag tag-amber" style="font-size: 0.7rem;">Day 16–35</span>
-              </div>
-              <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8rem; color: #E2E8F0; line-height: 1.8;">
-                <li><label style="cursor: pointer;"><input type="checkbox" checked onchange="updateAuditScore()"> Validate Sepsis-3, KDIGO, GLIM criteria</label></li>
-                <li><label style="cursor: pointer;"><input type="checkbox" checked onchange="updateAuditScore()"> Draft clinical rationale physician defense brief</label></li>
-                <li><label style="cursor: pointer;"><input type="checkbox" checked onchange="updateAuditScore()"> Compile lab flowsheets, imaging &amp; pathology</label></li>
-                <li><label style="cursor: pointer;"><input type="checkbox" checked onchange="updateAuditScore()"> Submit encrypted electronic packet via esMD</label></li>
-              </ul>
-            </div>
-
-            <!-- Phase 4 -->
-            <div style="background: rgba(3, 7, 18, 0.5); padding: 18px; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <strong style="font-size: 0.9rem; color: #A855F7;">Phase 4: Appeals Escalation</strong>
-                <span class="preview-item-tag tag-purple" style="font-size: 0.7rem;">Levels 1–5</span>
-              </div>
-              <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8rem; color: #E2E8F0; line-height: 1.8;">
-                <li><label style="cursor: pointer;"><input type="checkbox" checked onchange="updateAuditScore()"> Request 30-day RAC discussion period</label></li>
-                <li><label style="cursor: pointer;"><input type="checkbox" checked onchange="updateAuditScore()"> File Level 1 Redetermination within 120 days</label></li>
-                <li><label style="cursor: pointer;"><input type="checkbox" checked onchange="updateAuditScore()"> Escalate to Level 2 QIC Reconsideration (180d)</label></li>
-                <li><label style="cursor: pointer;"><input type="checkbox" checked onchange="updateAuditScore()"> Represent at Level 3 ALJ hearing w/ experts</label></li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Callout Banner -->
-        <div style="background: rgba(3, 7, 18, 0.7); border-top: 1px solid var(--border-light); padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
-          <div style="font-size: 0.85rem; color: var(--text-muted);">
-            <strong style="color: #FFFFFF;">Critical Defense Rule:</strong> Responding during the informal 30-day RAC discussion period overturns <strong>38% of clawbacks</strong> before formal Level 1 Redetermination filing is required.
-          </div>
-          <span style="font-size: 0.8rem; font-weight: 700; color: #38BDF8;">
-            Statutory Compliance Guaranteed
-          </span>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
-       6. DYNAMIC VISUAL 2: INTERNAL QA SAMPLING METHODOLOGY EXPLAINER
-       ======================================================================== -->
-  <section class="section section-light" id="qa-sampling-explainer">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Quality Assurance Science</span>
-        <h2 class="section-title">Internal QA Sampling Methodology: Scientific Precision (RAT-STATS)</h2>
-        <p class="section-subtitle">
-          How Nova Arc replaces arbitrary 10-chart audits with statistically valid RAT-STATS probe sampling, precision error taxonomies, and defensible compliance stratification.
-        </p>
-      </div>
-
-      <!-- Comparative Framework: Arbitrary vs. Scientific Sampling -->
-      <div style="background: #FFFFFF; border: 1px solid var(--border-medium); border-radius: var(--radius-lg); padding: var(--space-xl); box-shadow: var(--shadow-md); margin-bottom: var(--space-2xl);">
-        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: var(--space-md); border-bottom: 1px solid var(--border-light); padding-bottom: 12px;">
-          <div>
-            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--blue-accent); font-weight: 800; letter-spacing: 0.05em;">HHS OIG Sanctioned Methodology</span>
-            <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--navy-primary); margin: 2px 0 0 0;">
-              Arbitrary Sampling vs. Statistically Valid RAT-STATS Probe Auditing
-            </h3>
-          </div>
-          <span class="compliance-tag-pill" style="margin: 0;">
-            OIG Compliance Guidance Standard
-          </span>
-        </div>
-        <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-lg);">
-          Arbitrary sample sizes cannot withstand judicial review during federal investigations. Nova Arc executes statistically defensible quality assurance structured across mathematical sampling principles:
-        </p>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-md);">
-          
-          <div style="background: #FAFBFD; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 14px;">
-            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-              <span style="width: 24px; height: 24px; border-radius: 4px; background: #1F6FEB; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 800;">1</span>
-              <strong style="font-size: 0.9rem; color: var(--navy-primary);">95% Confidence Level</strong>
-            </div>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; margin: 0;">
-              Statistical calculations parameterized with a 95% confidence interval and +/- 5% precision to satisfy OIG corporate integrity mandates.
-            </p>
-          </div>
-
-          <div style="background: #FAFBFD; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 14px;">
-            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-              <span style="width: 24px; height: 24px; border-radius: 4px; background: #10B981; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 800;">2</span>
-              <strong style="font-size: 0.9rem; color: var(--navy-primary);">Stratified Risk Buckets</strong>
-            </div>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; margin: 0;">
-              Charts partitioned into high-risk strata: High-Dollar ($25k+), Single CC/MCC, Surgical Inpatient, Short Stays, and Random Baseline.
-            </p>
-          </div>
-
-          <div style="background: #FAFBFD; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 14px;">
-            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-              <span style="width: 24px; height: 24px; border-radius: 4px; background: #F59E0B; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 800;">3</span>
-              <strong style="font-size: 0.9rem; color: var(--navy-primary);">Error Weight Taxonomy</strong>
-            </div>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; margin: 0;">
-              Differentiating Major Errors (DRG shift, unbundling, medical necessity) from Minor Errors (secondary non-CC code omission).
-            </p>
-          </div>
-
-          <div style="background: #FAFBFD; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 14px;">
-            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-              <span style="width: 24px; height: 24px; border-radius: 4px; background: #8B5CF6; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 800;">4</span>
-              <strong style="font-size: 0.9rem; color: var(--navy-primary);">Targeted Remediation</strong>
-            </div>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; margin: 0;">
-              Error patterns trigger targeted probe audits (100% review of specific vulnerable codes) and 1-on-1 clinician/coder retraining.
-            </p>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Interactive Sampling Mode Switcher Tabs -->
-      <div style="display: flex; justify-content: center; gap: 8px; margin-bottom: var(--space-xl); flex-wrap: wrap;" role="tablist" aria-label="Internal QA Sampling Modes">
-        <button type="button" class="btn btn-sm btn-primary active-spec-tab" id="tab-qa-1" onclick="switchQaMode(1)" style="font-weight: 700; border-radius: var(--radius-full); padding: 8px 18px;">
-          Mode 1: Health System Inpatient DRG QA
-        </button>
-        <button type="button" class="btn btn-sm btn-secondary" id="tab-qa-2" onclick="switchQaMode(2)" style="font-weight: 600; border-radius: var(--radius-full); padding: 8px 18px;">
-          Mode 2: Hospital-Based Specialty Group QA
-        </button>
-        <button type="button" class="btn btn-sm btn-secondary" id="tab-qa-3" onclick="switchQaMode(3)" style="font-weight: 600; border-radius: var(--radius-full); padding: 8px 18px;">
-          Mode 3: Focused Physician Documentation Probe
-        </button>
-      </div>
-
-      <!-- Interactive Sampling Simulation Card -->
-      <div class="pillar-card" style="padding: 0; overflow: hidden; background: #FFFFFF; box-shadow: var(--shadow-xl); border: 1px solid var(--border-medium); max-width: 1080px; margin: 0 auto;">
-        
-        <!-- Header Strip -->
-        <div style="background: var(--navy-primary); color: #FFFFFF; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-          <div>
-            <span style="font-size: 0.75rem; text-transform: uppercase; color: #38BDF8; font-weight: 700;">RAT-STATS Audit Sampling Model</span>
-            <h4 style="font-size: 1.1rem; font-weight: 800; color: #FFFFFF; margin: 0;" id="qa-mode-title">
-              Mode 1: Health System Inpatient Stratified Probe Audit (Quarterly Universe: 4,200 Discharges)
-            </h4>
-          </div>
-          <span style="font-size: 0.75rem; font-family: monospace; background: rgba(255, 255, 255, 0.1); padding: 4px 10px; border-radius: var(--radius-sm); color: #94A3B8;">
-            Statistical Confidence: 95% • Precision: ±5%
-          </span>
-        </div>
-
-        <!-- Sampling Architecture Grid -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
-          
-          <!-- Column 1: Sampling Stratification -->
-          <div style="padding: var(--space-xl); background: #FAFBFD; border-right: 1px solid var(--border-light);">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md);">
-              <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--navy-primary); margin: 0;">
-                Universe Stratification &amp; Sample Size
-              </h4>
-              <span class="preview-item-tag tag-blue" style="font-size: 0.75rem;" id="qa-sample-size">
-                Sample Size: 184 Charts
-              </span>
-            </div>
-
-            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: var(--space-md);" id="qa-strata-desc">
-              Discharge population stratified into risk tranches using RAT-STATS random number generator. High-dollar admissions ($35,000+) receive 100% census review, while lower-risk strata undergo proportional random sampling.
-            </p>
-
-            <!-- Stratum Breakdown Table -->
-            <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 12px; font-size: 0.78rem; margin-bottom: var(--space-md);">
-              <div style="display: flex; justify-content: space-between; padding-bottom: 6px; border-bottom: 1px solid var(--border-light); font-weight: 700; color: var(--navy-primary);">
-                <span>Stratum Tranche</span>
-                <span>Universe / Sample</span>
-              </div>
-              <div style="display: flex; justify-content: space-between; padding: 6px 0;" id="qa-tranche-1">
-                <span>Tranche A: High-Dollar ($35k+)</span>
-                <strong style="color: var(--blue-accent);">120 / 60 (50% sample)</strong>
-              </div>
-              <div style="display: flex; justify-content: space-between; padding: 6px 0;" id="qa-tranche-2">
-                <span>Tranche B: Single CC/MCC DRGs</span>
-                <strong style="color: var(--blue-accent);">480 / 64 (13% sample)</strong>
-              </div>
-              <div style="display: flex; justify-content: space-between; padding: 6px 0;" id="qa-tranche-3">
-                <span>Tranche C: Short Stays (&lt; 2 Midnights)</span>
-                <strong style="color: var(--blue-accent);">600 / 30 (5% sample)</strong>
-              </div>
-              <div style="display: flex; justify-content: space-between; padding: 6px 0;" id="qa-tranche-4">
-                <span>Tranche D: Baseline Medical Discharges</span>
-                <strong style="color: var(--blue-accent);">3,000 / 30 (1% sample)</strong>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Column 2: Error Taxonomy & Remediation -->
-          <div style="padding: var(--space-xl); background: #FFFFFF;">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md);">
-              <h4 style="font-size: 1.05rem; font-weight: 800; color: #065F46; margin: 0;">
-                Audited Findings &amp; Accuracy Score
-              </h4>
-              <span style="font-size: 0.75rem; background: #D1FAE5; color: #065F46; padding: 3px 8px; border-radius: var(--radius-sm); font-weight: 700;" id="qa-accuracy-score">
-                Overall Accuracy: 96.8%
-              </span>
-            </div>
-
-            <!-- Error Breakdown List -->
-            <div style="font-size: 0.8rem; color: #065F46; font-weight: 600; margin-bottom: 6px;">
-              Error Classification Breakdown:
-            </div>
-            <ul style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5; padding-left: 18px; margin-bottom: var(--space-md);" id="qa-findings-list">
-              <li><strong>Major Error (1 case):</strong> Sepsis sequenced as Principal Diagnosis without documented organ dysfunction; re-sequenced to Acute Pyelonephritis (MS-DRG shift from 871 to 690).</li>
-              <li><strong>Major Error (1 case):</strong> ICD-10-PCS spinal fusion approach miscoded as open instead of percutaneous endoscopic.</li>
-              <li><strong>Minor Errors (4 cases):</strong> Non-payment-affecting secondary hypertension and tobacco use disorder omitted from code strings.</li>
-            </ul>
-
-            <!-- Scoring Metric Box -->
-            <div style="background: #F8FAFC; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 12px;">
-              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 4px;">
-                <span style="color: var(--text-secondary);">Major Error Rate:</span>
-                <strong style="color: #10B981;" id="qa-major-rate">1.08% (2 / 184) &lt; 3.0% Benchmark</strong>
-              </div>
-              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 4px;">
-                <span style="color: var(--text-secondary);">Financial Extrapolation Risk:</span>
-                <strong style="color: #10B981;" id="qa-extrap-risk">Negligible / Audit Proof</strong>
-              </div>
-              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; border-top: 1px solid var(--border-light); padding-top: 6px; margin-top: 6px;">
-                <span style="color: var(--navy-primary);">Corrective Action:</span>
-                <span style="color: var(--blue-accent); font-size: 0.85rem;" id="qa-corrective-action">Coder Education on Sepsis Criteria Complete</span>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- Summary Footer -->
-        <div style="background: var(--bg-slate); padding: 16px 24px; border-top: 1px solid var(--border-medium); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
-          <div>
-            <span style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600;">Compliance Program Validation:</span>
-            <div style="font-size: 1.1rem; font-weight: 800; color: var(--navy-primary); margin-top: 2px;" id="qa-compliance-status">
-              Fully Meets OIG Seven Elements of an Effective Compliance Program
-            </div>
-          </div>
-          <div style="text-align: right;">
-            <span class="preview-item-tag tag-green" style="font-size: 0.8rem; font-weight: 800;">RAT-STATS Audit Ready</span>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
-       7. SECTOR FOCUS: HEALTH SYSTEMS & HOSPITAL-BASED GROUPS
-       ======================================================================== -->
-  <section class="section section-dark" id="sector-focus">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Sector Focus: Enterprise Compliance</span>
-        <h2 class="section-title">Engineered for Health Systems &amp; Hospital-Based Groups</h2>
-        <p class="section-subtitle">
-          How Nova Arc aligns regulatory audit defense across enterprise multi-hospital networks and specialized hospital-based physician entities (Radiology, Pathology, Anesthesia, Hospitalists).
-        </p>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
-        
-        <!-- Sector Card 1: Health Systems -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(31, 111, 235, 0.1); border: 1px solid var(--blue-accent-border); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: var(--blue-accent);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
-          </div>
-          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
-            Health Systems &amp; Multi-Hospital Networks
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
-            Health systems managing inpatient IPPS facilities face constant RAC scrutiny on high-dollar MS-DRGs, observation vs. inpatient placement, and PEPPER outlier target areas. We centralize compliance governance across all member campuses.
+          <h3 class="benefit-heading">Identify Compliance Risks Early</h3>
+          <p class="benefit-copy">
+            Regular audits help organizations identify potential coding and documentation concerns.
           </p>
-          <ul style="margin-top: var(--space-md); padding-left: 18px; font-size: 0.8rem; color: #E2E8F0; line-height: 1.5;">
-            <li>Enterprise ADR pipeline tracking across 5 to 50+ hospital campuses</li>
-            <li>Two-Midnight short-stay inpatient admission auditing</li>
-            <li>System-wide PEPPER report outlier normalization &amp; probe reviews</li>
-            <li>Executive compliance committee dashboards and OIG risk scorecards</li>
-          </ul>
         </div>
 
-        <!-- Sector Card 2: Hospital-Based Groups -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #10B981;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+        <!-- Benefit 2 -->
+        <div class="benefit-col">
+          <div class="benefit-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
           </div>
-          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
-            Hospital-Based Groups (Rad / Path / Anesthesia)
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
-            Specialty groups billing professional fees inside hospital facilities are targeted for unbundling modifiers (25, 59, XU) and split-billing (26/TC). We safeguard against commercial downcoding and federal medical necessity audits.
+          <h3 class="benefit-heading">Improve Coding Quality</h3>
+          <p class="benefit-copy">
+            Feedback and targeted review help improve coding consistency.
           </p>
-          <ul style="margin-top: var(--space-md); padding-left: 18px; font-size: 0.8rem; color: #E2E8F0; line-height: 1.5;">
-            <li>Anesthesia concurrency compliance &amp; TEFRA medical direction defense (1:4)</li>
-            <li>Pathology 88305 tissue block and special stain medical necessity audits</li>
-            <li>Radiology 3D reconstruction and interventional catheterization validation</li>
-            <li>Distinct procedural modifier (59/XU) clinical justification binders</li>
-          </ul>
         </div>
 
-        <!-- Sector Card 3: Academic Medical Centers -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #38BDF8;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+        <!-- Benefit 3 -->
+        <div class="benefit-col">
+          <div class="benefit-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+              <polyline points="17 6 23 6 23 12"></polyline>
+            </svg>
           </div>
-          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
-            Academic Teaching Hospitals &amp; Faculty Plans
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
-            Teaching medical facilities navigate strict CMS Teaching Physician rules (GC/GE modifiers) and Physician at Teaching Hospitals (PATH) audit guidelines. We audit resident chart involvement and attending physician presence.
+          <h3 class="benefit-heading">Reduce Financial Exposure</h3>
+          <p class="benefit-copy">
+            Early identification of inappropriate coding can reduce potential overpayment and underpayment risks.
           </p>
-          <ul style="margin-top: var(--space-md); padding-left: 18px; font-size: 0.8rem; color: #E2E8F0; line-height: 1.5;">
-            <li>Teaching physician presence documentation verification (key portion of service)</li>
-            <li>Modifier GC vs. GE primary care exception compliance</li>
-            <li>High-complexity APR-DRG risk of mortality and severity validation</li>
-            <li>Resident clinical documentation improvement coaching modules</li>
-          </ul>
         </div>
 
+        <!-- Benefit 4 -->
+        <div class="benefit-col">
+          <div class="benefit-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 4 23 10 17 10"></polyline>
+              <polyline points="1 20 1 14 7 14"></polyline>
+              <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+            </svg>
+          </div>
+          <h3 class="benefit-heading">Support Continuous Improvement</h3>
+          <p class="benefit-copy">
+            Audit findings can be converted into actionable education and process improvements.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
 
   <!-- ========================================================================
-       8. SERVICE LEVEL AGREEMENTS (SLA STRIP)
+       5. DARK CTA SECTION
        ======================================================================== -->
-  <section style="background: var(--navy-deep); border-top: 1px solid var(--border-medium); border-bottom: 1px solid var(--border-medium); padding: var(--space-xl) 0;">
+  <section class="dark-cta-section" id="cta-contact">
+    <!-- Decorative Wave Contour Lines (Nova Arc Accent Colors) -->
+    <svg class="dark-cta-bg-art" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M0 360C160 320 290 190 460 240C550 270 590 330 610 360" stroke="#1F6FEB" stroke-width="1.5" stroke-opacity="0.4" />
+      <path d="M0 330C150 290 280 170 450 220C540 250 580 310 610 340" stroke="#1F6FEB" stroke-width="1.5" stroke-opacity="0.35" />
+      <path d="M0 300C140 260 270 150 440 200C530 230 570 290 610 320" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.3" />
+      <path d="M0 270C130 230 260 130 430 180C520 210 560 270 610 300" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.25" />
+      <path d="M0 240C120 200 250 110 420 160C510 190 550 250 610 280" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.2" />
+      <path d="M0 210C110 170 240 90 410 140C500 170 540 230 610 260" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.15" />
+    </svg>
+
     <div class="container">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-xl); text-align: center;">
-        
-        <div>
-          <div style="font-size: 2.2rem; font-weight: 800; color: #10B981; line-height: 1; margin-bottom: 6px;">100%</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">On-Time ADR Submission SLA</div>
-          <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">Zero technical default takebacks on 45-day statutory limits</p>
-        </div>
-
-        <div>
-          <div style="font-size: 2.2rem; font-weight: 800; color: var(--blue-accent); line-height: 1; margin-bottom: 6px;">94.6%</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Appeals Overturn Win Rate</div>
-          <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">Verified recovery across Medicare Levels 1, 2, and 3 (ALJ)</p>
-        </div>
-
-        <div>
-          <div style="font-size: 2.2rem; font-weight: 800; color: #38BDF8; line-height: 1; margin-bottom: 6px;">95.0%+</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Coding Accuracy Maintenance</div>
-          <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">Audited by dual AAPC &amp; AHIMA credentialed quality specialists</p>
-        </div>
-
-        <div>
-          <div style="font-size: 2.2rem; font-weight: 800; color: #A855F7; line-height: 1; margin-bottom: 6px;">&lt; 48h</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Audit Record Fulfillment SLA</div>
-          <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">High-priority EMR redaction and encrypted transmission</p>
-        </div>
-
+      <h2 class="dark-cta-title">
+        Ready to strengthen coding compliance and mitigate risk?
+      </h2>
+      <p class="dark-cta-subtitle">
+        Connect with our certified compliance auditors today to discuss baseline reviews, sampling audits, and coder education programs.
+      </p>
+      <div>
+        <a href="../contact.html?service=compliance-audit" class="btn-cta-consult">
+          Request a Free Consultation <span aria-hidden="true">&rarr;</span>
+        </a>
       </div>
     </div>
   </section>
 
 
-  <!-- ========================================================================
-       9. FAQ ACCORDION
-       ======================================================================== -->
-  <section class="section section-light" id="faq">
-    <div class="container" style="max-width: 860px;">
-      <div class="section-header">
-        <span class="section-tag">Frequently Asked Questions</span>
-        <h2 class="section-title">OIG &amp; RAC Audit Defense FAQs</h2>
-        <p class="section-subtitle">
-          Answers to common questions regarding RAC audit preparation, RAT-STATS sampling methodology, ADR deadlines, and Medicare administrative appeals.
-        </p>
-      </div>
-
-      <div class="accordion" id="faqAccordion">
-        
-        <!-- FAQ Item 1 -->
-        <div class="accordion-item">
-          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="accordion-title">What are the current top targets on the HHS OIG Work Plan and RAC focus lists?</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>
-              Current federal focus areas heavily emphasize: (1) <strong>Inpatient Two-Midnight Rule compliance</strong> for short-stay admissions that auditors argue should have been outpatient observation; (2) <strong>Single-CC/MCC MS-DRGs</strong> where removing one secondary complication (such as sepsis, encephalopathy, or acute kidney injury) drops the payment by thousands; (3) <strong>Modifier 25 unbundling</strong> on significant E/M visits billed on the same day as minor procedures; (4) <strong>High-cost surgical implants and spinal fusions</strong> where operative report documentation fails to substantiate the billed approach or number of interspaces; and (5) <strong>Anesthesia concurrency ratios</strong> under TEFRA rules where an anesthesiologist oversees more than 4 concurrent CRNA cases.
-            </p>
-          </div>
-        </div>
-
-        <!-- FAQ Item 2 -->
-        <div class="accordion-item">
-          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="accordion-title">How does the RAT-STATS statistical sampling methodology protect health systems from extrapolated clawbacks?</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>
-              When a government contractor (like a UPIC or RAC) seeks to extrapolate sample errors across an entire multi-million-dollar billing universe, the legal defense hinges on mathematical rigor. Nova Arc utilizes <strong>RAT-STATS</strong>—the exact statistical package published by the HHS Office of Inspector General. By establishing statistically valid probe sample sizes, calculating standard deviation and precision margins, and auditing stratified risk buckets, we can identify errors internally, execute voluntary repayments under the OIG self-disclosure protocol, or legally challenge flawed payer sampling extrapolation models during Administrative Law Judge (ALJ) hearings.
-            </p>
-          </div>
-        </div>
-
-        <!-- FAQ Item 3 -->
-        <div class="accordion-item">
-          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="accordion-title">What happens if a hospital or medical group misses a 45-day ADR deadline from a Medicare MAC or RAC?</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>
-              Failing to submit the certified record packet within the 45-day statutory window results in an immediate <strong>technical denial (Claim Adjustment Reason Code 16 or 252)</strong>. The contractor issues a demand letter recouping 100% of the paid claim, and Medicare automatically offsets future remit payments. While technical denials can be appealed at Level 1 Redetermination, doing so causes immense administrative overhead and delays cash flow for months. Nova Arc guarantees 100% on-time transmission, typically dispatching complete certified EMR packets before day 30.
-            </p>
-          </div>
-        </div>
-
-        <!-- FAQ Item 4 -->
-        <div class="accordion-item">
-          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="accordion-title">How does Nova Arc handle the 5 levels of Medicare administrative appeals for RAC denials?</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>
-              We manage the entire appeals lifecycle:
-              <br>• <strong>Discussion Period (Day 1–30):</strong> We engage directly with the RAC auditor with clinical citations to reverse the finding informally.
-              <br>• <strong>Level 1 Redetermination (120-Day Limit):</strong> Formal written appeal to the Medicare Administrative Contractor (MAC) with certified medical records and CCDS rationale letters.
-              <br>• <strong>Level 2 Reconsideration (180-Day Limit):</strong> Independent review by a Qualified Independent Contractor (QIC) including medical expert declarations.
-              <br>• <strong>Level 3 Administrative Law Judge (ALJ) Hearing:</strong> Legal brief drafting and representation before an independent HHS judge, achieving a <strong>94.6% overturn rate</strong>.
-              <br>• <strong>Levels 4 &amp; 5:</strong> Escalation to the Medicare Appeals Council and Federal District Court when national policy precedent is at stake.
-            </p>
-          </div>
-        </div>
-
-        <!-- FAQ Item 5 -->
-        <div class="accordion-item">
-          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="accordion-title">How do you distinguish between a major and a minor coding error during internal QA reviews?</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>
-              Nova Arc applies a standardized, objective error-scoring taxonomy:
-              <br>• <strong>Major Error (-5% penalty):</strong> Any error that directly alters reimbursement, legal compliance, or severity grouping. Examples include incorrect Principal Diagnosis sequencing that alters the MS-DRG, unbundling an NCCI code without meeting modifier 59/XU criteria, assigning an unsupported MCC/CC, or failing medical necessity.
-              <br>• <strong>Minor Error (-1% penalty):</strong> Errors that do not alter reimbursement or compliance risk, such as omitting an incidental secondary chronic code (e.g. uncomplicated essential hypertension) when higher-severity CCs are already present, or minor typographic errors in non-payment-affecting fields.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
-       10. CTA BAND & SHARED FOOTER
-       ======================================================================== -->
-  <section class="section" style="background: linear-gradient(135deg, #0B132B 0%, #1C2541 50%, #0B132B 100%); border-top: 1px solid var(--border-medium); padding: var(--space-3xl) 0;">
-    <div class="container">
-      <div style="max-width: 820px; margin: 0 auto; text-align: center;">
-        <span class="section-tag" style="background: rgba(31, 111, 235, 0.15); color: #38BDF8; border-color: rgba(56, 189, 248, 0.3);">
-          Enterprise Compliance Defense
-        </span>
-        <h2 style="font-size: 2.2rem; font-weight: 800; color: #FFFFFF; margin: var(--space-sm) 0 var(--space-md);">
-          Defend Your Revenue Against RAC &amp; OIG Scrutiny
-        </h2>
-        <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.6; margin-bottom: var(--space-2xl);">
-          Establish statistically valid RAT-STATS QA sampling, eliminate ADR technical defaults, and overturn wrongful payer takebacks with Nova Arc's specialized audit defense team.
-        </p>
-        <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
-          <a href="../contact.html?service=compliance-audit-defense" class="btn btn-primary btn-lg">
-            <span>Schedule a Confidential Audit Review</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-          <a href="../index.html#roi-calculator" class="btn btn-secondary btn-lg">
-            <span>Calculate Health System ROI</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
+    <!-- ========================================================================
        FOOTER (Standardized Across All Pages)
        ======================================================================== -->
   <footer class="site-footer">
