@@ -754,7 +754,7 @@ button, input, select, textarea {
   gap: 2px;
 }
 
-/* Sub-items: Indented, small 5px horizontal tick mark (::before) turning accent-blue on hover */
+/* Sub-items: Indented cleanly without any hyphens or tick marks */
 .mega-subitem {
   position: relative;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -762,23 +762,16 @@ button, input, select, textarea {
   font-weight: 400;
   color: #1A1A2E;
   display: block;
-  padding: 7px 10px 7px 24px;
+  padding: 6.5px 10px 6.5px 16px;
   border-radius: 6px;
   line-height: 1.35;
   transition: background-color var(--transition-fast), color var(--transition-fast);
 }
 
-.mega-subitem::before {
-  content: "";
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 5px;
-  height: 1.5px;
-  background-color: #8891A6;
-  border-radius: 1px;
-  transition: background-color var(--transition-fast), width var(--transition-fast);
+.mega-subitem::before,
+.mega-subitem:hover::before {
+  display: none !important;
+  content: none !important;
 }
 
 .mega-subitem:hover {
@@ -787,12 +780,7 @@ button, input, select, textarea {
   text-decoration: none !important;
 }
 
-.mega-subitem:hover::before {
-  background-color: #1F6FEB;
-  width: 7px;
-}
-
-/* Hide the old chevron span glyph */
+/* Hide any chevron/arrow/hyphen span glyphs */
 .mega-subitem .sub-arrow {
   display: none !important;
 }
@@ -828,7 +816,7 @@ button, input, select, textarea {
 }
 
 .mega-col-featured .mega-subitem {
-  padding: 6px 8px 6px 22px;
+  padding: 6px 8px 6px 14px;
 }
 
 .mega-subheading {
