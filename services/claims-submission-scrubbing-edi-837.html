@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claims Submission &amp; Scrubbing — EDI 837 | Nova Arc</title>
+  <meta name="description" content="Clean Claims In. Faster Processing. Fewer Preventable Errors. Accurate claims submission and multi-layer EDI 837 claim scrubbing services for healthcare organizations.">
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nova Arc Healthcare Technologies">
+  <meta property="og:title" content="Claims Submission &amp; Scrubbing — EDI 837 | Nova Arc">
+  <meta property="og:description" content="Clean Claims In. Faster Processing. Fewer Preventable Errors. Accurate claims submission and multi-layer EDI 837 claim scrubbing services for healthcare organizations.">
+  <meta property="og:url" content="https://novaarc-rcm.com/services/claims-management-scrubbing.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claims Submission &amp; Scrubbing — EDI 837 | Nova Arc">
+  <meta name="twitter:description" content="Clean Claims In. Faster Processing. Fewer Preventable Errors. Accurate claims submission and multi-layer EDI 837 claim scrubbing services for healthcare organizations.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../images/nova-arc-logo.png">
+
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet (Reused) -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NOVAARC001"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NOVAARC001', {
+      'anonymize_ip': true,
+      'cookie_flags': 'SameSite=None;Secure'
+    });
+  </script>
+
+  <!-- Schema.org JSON-LD: BreadcrumbList + Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://novaarc-rcm.com/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://novaarc-rcm.com/services.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Patient Financial Services & Recovery",
+            "item": "https://novaarc-rcm.com/services/patient-financial-services.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Claims Submission & Scrubbing — EDI 837",
+            "item": "https://novaarc-rcm.com/services/claims-management-scrubbing.html"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://novaarc-rcm.com/services/claims-management-scrubbing.html#service",
+        "name": "Claims Submission & Scrubbing — EDI 837 Services",
+        "serviceType": "Healthcare Revenue Cycle Management (RCM) - Claims Management & Billing",
+        "provider": {
+          "@type": "Organization",
+          "name": "Nova Arc Healthcare Technologies",
+          "url": "https://novaarc-rcm.com/",
+          "logo": "https://novaarc-rcm.com/images/nova-arc-logo.png"
+        },
+        "description": "Clean claims in, faster processing, fewer preventable errors through pre-submission validation, multi-layer claim scrubbing, and EDI 837 transaction support.",
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Claims Management Deliverables",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "ANSI X12 837P Professional & 837I Institutional Multi-Tier Scrubbing"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Autonomous Claims Scrubber AI Integration & SNIP 1-7 Validation"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Payer-Specific Edit Rule Engine & Modifier Automation"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Ambulatory Surgery Center (ASC) Multi-Procedure & Implant Scrubbing"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Automated 277CA Rejection Triage & ERA 835 Secondary Crossover"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ========================================================================
+       STICKY NAVBAR (Shared Header Partial)
+       ======================================================================== -->
+      <header class="site-header" id="top">
+    <div class="container navbar">
+      <!-- Brand Logo -->
+      <a href="../index.html" class="logo" aria-label="Nova Arc Homepage">
+        <img src="../images/nova-arc-logo.png" alt="Nova Arc Logo" class="logo-img" width="38" height="33">
+        <span class="logo-text">Nova<span class="logo-highlight">Arc</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <!-- Item 1: Solutions with dropdown -->
+          <li class="nav-item-dropdown nav-item-solutions">
+            <a href="../solutions.html" class="nav-dropdown-link" id="solutionsDropdownToggle" aria-haspopup="true" aria-expanded="false">
+              <span>Solutions</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="nav-simple-dropdown" aria-labelledby="solutionsDropdownToggle" role="menu">
+              <a href="../solutions/all-solutions-overview.html" class="nav-simple-item" role="menuitem">
+                <strong>All Solutions Overview</strong>
+                <span>Comprehensive end-to-end healthcare RCM suite</span>
+              </a>
+              <a href="../solutions/end-to-end-full-cycle-rcm.html" class="nav-simple-item" role="menuitem">
+                <strong>End-to-End Full-Cycle RCM</strong>
+                <span>Front-to-back revenue cycle operations</span>
+              </a>
+              <a href="../solutions/patient-access.html" class="nav-simple-item" role="menuitem">
+                <strong>Patient Access</strong>
+                <span>Pre-service clearance, eligibility &amp; auth</span>
+              </a>
+              <a href="../solutions/health-information-management.html" class="nav-simple-item" role="menuitem">
+                <strong>Health Information Management</strong>
+                <span>Inpatient, outpatient, profee &amp; HCC</span>
+              </a>
+              <a href="../solutions/extended-business-office.html" class="nav-simple-item" role="menuitem">
+                <strong>Extended Business Office</strong>
+                <span>Legacy resolution &amp; denial recovery</span>
+              </a>
+              <a href="../solutions/analytics-and-reporting.html" class="nav-simple-item" role="menuitem">
+                <strong>Analytics and Reporting</strong>
+                <span>Executive dashboards &amp; financial benchmarking</span>
+              </a>
+            </div>
+          </li>
+          
+          <!-- Item 2: Services Dropdown (Mega-Menu) with Pill Button Style from Screenshot -->
+          <li class="nav-item-dropdown nav-item-services">
+            <a href="../services.html" class="nav-dropdown-link nav-dropdown-toggle" id="servicesDropdownToggle" aria-haspopup="true" aria-expanded="false" aria-controls="servicesMegaMenu">
+              <span>Services</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+
+            <!-- Mega-Menu Light Panel -->
+            <div class="mega-menu-panel" id="servicesMegaMenu" role="menu" aria-labelledby="servicesDropdownToggle" aria-hidden="true">
+              <div class="mega-menu-inner container">
+                <div class="mega-menu-grid">
+                  <!-- Column 1: Patient Access Services -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-1-heading"><a href="patient-access-services.html" class="mega-heading-link">Patient Access</a></h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-1-heading">
+                      <li role="none">
+                        <a href="real-time-insurance-eligibility.html" class="mega-item standalone" role="menuitem">
+                          Insurance Eligibility &amp; Benefits Verification
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="prior-authorization-management.html" class="mega-item standalone" role="menuitem">
+                          Prior Authorization Management
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="patient-registration-verification.html" class="mega-item standalone" role="menuitem">
+                          Patient Scheduling &amp; Registration QA
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="financial-clearance-gfe.html" class="mega-item standalone" role="menuitem">
+                          Financial Clearance &amp; Good Faith Estimates
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="point-of-service-collections.html" class="mega-item standalone" role="menuitem">
+                          Point-of-Service Collections
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="referral-order-management.html" class="mega-item standalone" role="menuitem">
+                          Medical Necessity &amp; Order Verification
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Column 2: HIM & Coding -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-2-heading"><a href="him-coding-services.html" class="mega-heading-link">HIM &amp; Coding</a></h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-2-heading">
+                      <!-- Parent Item: Medical Coding Services -->
+                      <li role="none" class="mega-parent-group">
+                        <a href="full-cycle-medical-coding.html" class="mega-item parent" role="menuitem">
+                          Medical Coding Services
+                        </a>
+                        <ul class="mega-sub-list" role="none">
+                          <li role="none">
+                            <a href="hcc-risk-adjustment.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Risk Adjustment/HCC Coding
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a href="facility-drg-coding.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Facility/DRG Coding
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a href="professional-fee-coding.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Professional Fee Coding
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li role="none">
+                        <a href="cdi-chart-auditing.html" class="mega-item standalone" role="menuitem">
+                          Clinical Documentation Improvement
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="cac-review.html" class="mega-item standalone" role="menuitem">
+                          Computer-Assisted Coding (CAC) Review
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="compliance-audit-defense.html" class="mega-item standalone" role="menuitem">
+                          Coding Compliance &amp; Audit Support
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="cdm-charge-capture.html" class="mega-item standalone" role="menuitem">
+                          Charge Capture &amp; CDM Audit
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="physician-query-management.html" class="mega-item standalone" role="menuitem">
+                          Physician Query Management
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Column 3: Patient Financial Services (PFS) & Recovery -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-3-heading"><a href="patient-financial-services.html" class="mega-heading-link">Patient Financial Services &amp; Recovery</a></h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-3-heading">
+                      <!-- Parent Item: Claims Management Services -->
+                      <li role="none" class="mega-parent-group">
+                        <a href="claims-management-scrubbing.html" class="mega-item parent" role="menuitem">
+                          Claims Management Services
+                        </a>
+                        <ul class="mega-sub-list" role="none">
+                          <li role="none">
+                            <a href="claims-management-scrubbing.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Claims Submission &amp; Scrubbing EDI 837
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a href="payment-posting-reconciliation.html" class="mega-subitem" role="menuitem">
+                              <span class="sub-arrow" aria-hidden="true">&rsaquo;</span> Payment Posting &amp; Reconciliation EDI 835
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li role="none">
+                        <a href="ar-management.html" class="mega-item standalone" role="menuitem">
+                          A/R Management Services
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="denial-management.html" class="mega-item standalone" role="menuitem">
+                          Denial Management &amp; Appeals
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="payer-contract-modeling.html" class="mega-item standalone" role="menuitem">
+                          Underpayment Recovery &amp; Contract Compliance
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="patient-billing-collections.html" class="mega-item standalone" role="menuitem">
+                          Patient Billing &amp; Self-Pay Collections
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="credit-balance-resolution.html" class="mega-item standalone" role="menuitem">
+                          Credit Balance &amp; Refund Management
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a href="edi-enrollment.html" class="mega-item standalone" role="menuitem">
+                          EDI Enrollment Services
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Item 3: Nova Arc AI Platform with Dropdown -->
+          <li class="nav-item-dropdown nav-item-ai">
+            <a href="../ai-platform.html" class="nav-dropdown-link" id="aiDropdownToggle" aria-haspopup="true" aria-expanded="false">
+              <span>Nova Arc AI Platform</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="nav-simple-dropdown" aria-labelledby="aiDropdownToggle" role="menu">
+              <a href="../ai-platform.html" class="nav-simple-item" role="menuitem">
+                <strong>Platform Overview</strong>
+                <span>Sub-second healthcare adjudication engine</span>
+              </a>
+              <a href="../ai-platform.html#agents" class="nav-simple-item" role="menuitem">
+                <strong>AI Agents &amp; Intelligent Automation</strong>
+                <span>Autonomous bots handling repetitive workflows</span>
+              </a>
+              <a href="../ai-platform.html#auth" class="nav-simple-item" role="menuitem">
+                <strong>Intelligent Prior Authorization</strong>
+                <span>Real-time clinical guideline alignment</span>
+              </a>
+              <a href="../ai-platform.html#coding" class="nav-simple-item" role="menuitem">
+                <strong>Autonomous Coding Engine</strong>
+                <span>AI-driven chart review &amp; code generation</span>
+              </a>
+            </div>
+          </li>
+
+          <!-- Item 4: Who We Serve Link -->
+          <li><a href="../who-we-serve.html" class="nav-link">Who We Serve</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Action Buttons (Right side: Search icon + Connect with us button) -->
+      <div class="nav-actions">
+        <button class="nav-search-btn" id="siteSearchBtn" aria-label="Search Nova Arc services and solutions" title="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <a href="../contact.html" class="btn btn-connect-nav">Connect with us</a>
+      </div>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-list">
+        <li><a href="../solutions.html" class="mobile-nav-link">Solutions <span>&rarr;</span></a></li>
+        <li class="mobile-accordion-item">
+          <button class="mobile-nav-link mobile-accordion-toggle" id="mobileServicesToggle" aria-expanded="false" aria-controls="mobileServicesSubmenu">
+            <span>Services</span>
+            <svg class="mobile-accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="mobile-submenu-collapse" id="mobileServicesSubmenu" aria-hidden="true">
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title"><a href="patient-access-services.html">Patient Access</a></h4>
+              <a href="real-time-insurance-eligibility.html" class="mobile-submenu-link">Insurance Eligibility &amp; Benefits</a>
+              <a href="prior-authorization-management.html" class="mobile-submenu-link">Prior Authorization Management</a>
+              <a href="patient-registration-verification.html" class="mobile-submenu-link">Patient Scheduling &amp; Registration QA</a>
+              <a href="financial-clearance-gfe.html" class="mobile-submenu-link">Financial Clearance &amp; Good Faith Estimates</a>
+              <a href="point-of-service-collections.html" class="mobile-submenu-link">Point-of-Service Collections</a>
+              <a href="referral-order-management.html" class="mobile-submenu-link">Medical Necessity &amp; Order Verification</a>
+            </div>
+
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title"><a href="him-coding-services.html">HIM &amp; Coding</a></h4>
+              <a href="full-cycle-medical-coding.html" class="mobile-submenu-link parent">Medical Coding Services</a>
+              <a href="hcc-risk-adjustment.html" class="mobile-submenu-sublink">&rsaquo; Risk Adjustment/HCC Coding</a>
+              <a href="facility-drg-coding.html" class="mobile-submenu-sublink">&rsaquo; Facility/DRG Coding</a>
+              <a href="professional-fee-coding.html" class="mobile-submenu-sublink">&rsaquo; Professional Fee Coding</a>
+              <a href="cdi-chart-auditing.html" class="mobile-submenu-link">Clinical Documentation Improvement</a>
+              <a href="cac-review.html" class="mobile-submenu-link">Computer-Assisted Coding (CAC) Review</a>
+              <a href="compliance-audit-defense.html" class="mobile-submenu-link">Coding Compliance &amp; Audit Support</a>
+              <a href="cdm-charge-capture.html" class="mobile-submenu-link">Charge Capture &amp; CDM Audit</a>
+              <a href="physician-query-management.html" class="mobile-submenu-link">Physician Query Management</a>
+            </div>
+
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title"><a href="patient-financial-services.html">Patient Financial Services &amp; Recovery</a></h4>
+              <a href="claims-management-scrubbing.html" class="mobile-submenu-link parent">Claims Management Services</a>
+              <a href="claims-management-scrubbing.html" class="mobile-submenu-sublink">&rsaquo; Claims Submission &amp; Scrubbing EDI 837</a>
+              <a href="payment-posting-reconciliation.html" class="mobile-submenu-sublink">&rsaquo; Payment Posting &amp; Reconciliation EDI 835</a>
+              <a href="ar-management.html" class="mobile-submenu-link">A/R Management Services</a>
+              <a href="denial-management.html" class="mobile-submenu-link">Denial Management &amp; Appeals</a>
+              <a href="payer-contract-modeling.html" class="mobile-submenu-link">Underpayment Recovery &amp; Contract Compliance</a>
+              <a href="patient-billing-collections.html" class="mobile-submenu-link">Patient Billing &amp; Self-Pay Collections</a>
+              <a href="credit-balance-resolution.html" class="mobile-submenu-link">Credit Balance &amp; Refund Management</a>
+              <a href="edi-enrollment.html" class="mobile-submenu-link">EDI Enrollment Services</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="../ai-platform.html" class="mobile-nav-link">Nova Arc AI Platform <span>&rarr;</span></a></li>
+        <li><a href="../who-we-serve.html" class="mobile-nav-link">Who We Serve <span>&rarr;</span></a></li>
+      </ul>
+      <div class="mobile-nav-bottom">
+        <button class="btn btn-secondary mobile-search-trigger" id="mobileSearchTrigger" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          Search Services
+        </button>
+        <a href="tel:18005558942" class="btn btn-secondary" style="width: 100%; margin-bottom: 8px;">Call (800) 555-NOVA</a>
+        <a href="../contact.html" class="btn btn-primary" style="width: 100%;">Connect with us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       PAGE-SPECIFIC STYLES
+       ======================================================================== -->
+  <style>
+    /* Scoped Page Styles for Claims Submission & Scrubbing — EDI 837 */
+    .claims-hero {
+      text-align: center;
+      padding: 72px 0 64px;
+      background: radial-gradient(circle at 50% 0%, rgba(31, 111, 235, 0.08) 0%, transparent 70%),
+                  linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .claims-breadcrumbs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .claims-breadcrumbs a {
+      color: var(--blue-accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+    .claims-breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+    .claims-breadcrumbs .separator {
+      color: var(--text-light);
+      font-size: 0.75rem;
+    }
+    .claims-tag {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      margin-bottom: 16px;
+    }
+    .claims-title {
+      font-size: clamp(2.3rem, 4.4vw, 3.6rem);
+      font-weight: 800;
+      color: var(--navy-primary);
+      line-height: 1.16;
+      letter-spacing: -0.025em;
+      max-width: 980px;
+      margin: 0 auto 20px;
+    }
+    .claims-subtitle {
+      font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+      color: var(--text-secondary);
+      line-height: 1.55;
+      font-weight: 400;
+      max-width: 820px;
+      margin: 0 auto 36px;
+    }
+    .btn-connect {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--blue-accent);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 14px 38px;
+      border-radius: 6px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(31, 111, 235, 0.35);
+      transition: all 0.2s ease;
+    }
+    .btn-connect:hover {
+      background: var(--blue-accent-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(31, 111, 235, 0.45);
+      color: #FFFFFF;
+    }
+
+    /* Overview Section */
+    .overview-section {
+      padding: 96px 0;
+      background: #FFFFFF;
+    }
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .overview-tag {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      margin-bottom: 24px;
+    }
+    .overview-paragraph {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+    .overview-paragraph:last-child {
+      margin-bottom: 0;
+    }
+    .overview-image-container {
+      position: relative;
+    }
+    .overview-image {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 12px 32px rgba(11, 37, 69, 0.09);
+      border: 1px solid var(--border-light);
+      display: block;
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+    }
+
+    /* Services Provided Section */
+    .services-provided-section {
+      padding: 96px 0 104px;
+      background: #F8FAFC;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .services-tag {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .services-headline {
+      font-size: clamp(2rem, 3.2vw, 2.75rem);
+      font-weight: 800;
+      color: var(--navy-primary);
+      text-align: center;
+      max-width: 880px;
+      margin: 0 auto 56px;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+    .services-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .service-feature-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 8px rgba(11, 37, 69, 0.03);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .service-feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(11, 37, 69, 0.08);
+      border-color: var(--blue-accent-border);
+    }
+    .service-card-icon-box {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      background: var(--blue-accent-light);
+      color: var(--blue-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      flex-shrink: 0;
+    }
+    .service-card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy-primary);
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+    .service-card-desc {
+      font-size: 0.925rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
+      flex-grow: 1;
+      margin-bottom: 20px;
+    }
+    .service-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--blue-accent);
+      text-decoration: none;
+      transition: color 0.15s ease;
+      margin-top: auto;
+    }
+    .service-card-link:hover {
+      color: var(--blue-accent-hover);
+      text-decoration: underline;
+    }
+
+    /* Benefits Section */
+    .benefits-section {
+      padding: 96px 0;
+      background: #FFFFFF;
+    }
+    .benefits-tag {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .benefits-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+    .benefit-col {
+      display: flex;
+      flex-direction: column;
+    }
+    .benefit-icon-wrapper {
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 22px;
+      color: var(--blue-accent);
+    }
+    .benefit-heading {
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--navy-primary);
+      line-height: 1.35;
+      margin-bottom: 14px;
+    }
+    .benefit-copy {
+      font-size: 0.935rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
+    }
+
+    /* Dark CTA Section */
+    .dark-cta-section {
+      background: linear-gradient(135deg, #051324 0%, #0B2545 60%, #133B6C 100%);
+      padding: 104px 0;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .dark-cta-bg-art {
+      position: absolute;
+      right: -80px;
+      bottom: -100px;
+      width: 650px;
+      height: 480px;
+      opacity: 0.22;
+      pointer-events: none;
+    }
+    .dark-cta-title {
+      font-size: clamp(2.3rem, 4vw, 3.4rem);
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      max-width: 820px;
+      margin: 0 auto 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .dark-cta-subtitle {
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+      color: #CBD5E1;
+      line-height: 1.65;
+      max-width: 740px;
+      margin: 0 auto 38px;
+      position: relative;
+      z-index: 1;
+    }
+    .btn-cta-consult {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--blue-accent);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 16px 36px;
+      border-radius: 6px;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(31, 111, 235, 0.4);
+      transition: all 0.2s ease;
+      position: relative;
+      z-index: 1;
+    }
+    .btn-cta-consult:hover {
+      background: var(--blue-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(31, 111, 235, 0.5);
+      color: #FFFFFF;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 1080px) {
+      .services-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .benefits-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px;
+      }
+    }
+    @media (max-width: 860px) {
+      .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .overview-image {
+        height: 320px;
+      }
+    }
+    @media (max-width: 640px) {
+      .services-cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .benefits-row {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .claims-hero {
+        padding: 48px 0 44px;
+      }
+      .overview-section,
+      .services-provided-section,
+      .benefits-section,
+      .dark-cta-section {
+        padding: 64px 0;
+      }
+    }
+  </style>
+
+
+  <!-- ========================================================================
+       1. HERO SECTION
+       ======================================================================== -->
+  <section class="claims-hero" id="hero">
+    <div class="container">
+      <!-- Breadcrumb Navigation -->
+      <nav class="claims-breadcrumbs" aria-label="Breadcrumbs">
+        <a href="../index.html">Home</a>
+        <span class="separator">&gt;</span>
+        <a href="../services.html">Services</a>
+        <span class="separator">&gt;</span>
+        <a href="patient-financial-services.html">Claims Management</a>
+        <span class="separator">&gt;</span>
+        <span style="color: var(--text-primary); font-weight: 600;">Claims Submission &amp; Scrubbing &mdash; EDI 837</span>
+      </nav>
+
+      <!-- Eyebrow: SERVICES -->
+      <div>
+        <span class="claims-tag">SERVICES</span>
+      </div>
+
+      <!-- Main Title -->
+      <h1 class="claims-title">
+        Claims Submission &amp; Scrubbing &mdash; EDI 837
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="claims-subtitle">
+        Clean Claims In. Faster Processing. Fewer Preventable Errors.
+      </p>
+
+      <!-- Connect With Us Button -->
+      <div>
+        <a href="../contact.html?service=claims-management-scrubbing" class="btn-connect">
+          Connect with us
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       2. OVERVIEW SECTION
+       ======================================================================== -->
+  <section class="overview-section" id="overview">
+    <div class="container">
+      <div class="overview-grid">
+        <!-- Left: Text Content -->
+        <div class="overview-content">
+          <span class="overview-tag">OVERVIEW</span>
+          <p class="overview-paragraph">
+            Accurate claim submission is critical to timely reimbursement. Our Claims Submission and Scrubbing services help healthcare organizations validate claims before transmission and identify common demographic, coding, billing, and payer-related errors.
+          </p>
+          <p class="overview-paragraph">
+            We support electronic claim workflows using appropriate EDI transactions, including the 837 healthcare claim transaction, helping improve claim quality before submission.
+          </p>
+        </div>
+
+        <!-- Right: Pre-Bill Claims Imagery -->
+        <div class="overview-image-container">
+          <img src="../images/pillar-pre-bill.jpg" alt="Claims Submission &amp; Scrubbing Overview" class="overview-image" width="600" height="440">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       3. SERVICES PROVIDED SECTION
+       ======================================================================== -->
+  <section class="services-provided-section" id="services-provided">
+    <div class="container">
+      <!-- Section Header -->
+      <span class="services-tag">SERVICES PROVIDED</span>
+      <h2 class="services-headline">
+        Intelligent pre-submission scrubbing and seamless EDI 837 claim transmission.
+      </h2>
+
+      <!-- 10 Service Cards Grid -->
+      <div class="services-cards-grid">
+        <!-- Service 1 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Claim preparation and submission</h3>
+          <p class="service-card-desc">
+            Systematic compiling, formatting, and electronic dispatch of professional (837P) and institutional (837I) healthcare claims to commercial and government payers.
+          </p>
+          <a href="../contact.html?service=claims-management-scrubbing" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+              <line x1="12" y1="2" x2="12" y2="22"></line>
+            </svg>
+          </div>
+          <h3 class="service-card-title">EDI 837 transaction support</h3>
+          <p class="service-card-desc">
+            Comprehensive compliance with ANSI X12 837 standards, ensuring syntax validation, proper loop and segment formatting, and secure clearinghouse transmission.
+          </p>
+          <a href="../contact.html?service=claims-management-scrubbing" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Claim scrubbing</h3>
+          <p class="service-card-desc">
+            Multi-tiered algorithmic validation checking diagnosis-procedure crosswalks, gender and age consistency, medical necessity, and CCI bundling rules.
+          </p>
+          <a href="../contact.html?service=claims-management-scrubbing" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Demographic validation</h3>
+          <p class="service-card-desc">
+            Verification of patient demographics, subscriber details, policy numbers, and guarantor information to prevent avoidable registration discrepancies.
+          </p>
+          <a href="../contact.html?service=claims-management-scrubbing" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              <line x1="2" y1="10" x2="22" y2="10"></line>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Insurance information validation</h3>
+          <p class="service-card-desc">
+            Verification of active coverage, effective dates, primary/secondary coordination of benefits (COB), and payer ID routing before submission.
+          </p>
+          <a href="../contact.html?service=claims-management-scrubbing" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20h9"></path>
+              <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Coding and billing edits</h3>
+          <p class="service-card-desc">
+            Pre-submission audit rules verifying appropriate CPT/HCPCS codes, ICD-10 specificity, required billing modifiers, and accurate units of service.
+          </p>
+          <a href="../contact.html?service=claims-management-scrubbing" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 7 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Payer-specific validation</h3>
+          <p class="service-card-desc">
+            Custom rules engine applying distinct commercial, Medicare, Medicaid, and regional payer billing requirements and local coverage determinations (LCDs).
+          </p>
+          <a href="../contact.html?service=claims-management-scrubbing" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 8 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="8" width="12" height="12" rx="2"></rect>
+              <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Duplicate claim identification</h3>
+          <p class="service-card-desc">
+            Automated pre-transmission safeguards identifying identical or overlapping service dates, provider IDs, and procedures to prevent duplicate denials.
+          </p>
+          <a href="../contact.html?service=claims-management-scrubbing" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 9 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="15" y1="9" x2="9" y2="15"></line>
+              <line x1="9" y1="9" x2="15" y2="15"></line>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Claim rejection analysis</h3>
+          <p class="service-card-desc">
+            Rapid parsing of 277CA clearinghouse rejection notices and payer acknowledgment reports to quickly remediate errors before claims age.
+          </p>
+          <a href="../contact.html?service=claims-management-scrubbing" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 10 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Pre-submission quality checks</h3>
+          <p class="service-card-desc">
+            Final automated and expert quality-assurance reviews confirming complete documentation attachments, authorization numbers, and clean claim viability.
+          </p>
+          <a href="../contact.html?service=claims-management-scrubbing" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       4. BENEFITS SECTION
+       ======================================================================== -->
+  <section class="benefits-section" id="benefits">
+    <div class="container">
+      <!-- Section Tag -->
+      <span class="benefits-tag">BENEFITS</span>
+
+      <!-- 4 Columns Grid -->
+      <div class="benefits-row">
+        <!-- Benefit 1 -->
+        <div class="benefit-col">
+          <div class="benefit-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h3 class="benefit-heading">Improve First-Pass Claim Quality</h3>
+          <p class="benefit-copy">
+            Pre-submission validation helps identify preventable errors before claims reach the payer.
+          </p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="benefit-col">
+          <div class="benefit-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+          </div>
+          <h3 class="benefit-heading">Reduce Rejections</h3>
+          <p class="benefit-copy">
+            Systematic claim scrubbing can reduce common technical and data-related rejections.
+          </p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="benefit-col">
+          <div class="benefit-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <h3 class="benefit-heading">Accelerate Revenue Cycle Performance</h3>
+          <p class="benefit-copy">
+            Cleaner claims can move more efficiently through payer processing.
+          </p>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="benefit-col">
+          <div class="benefit-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 4 23 10 17 10"></polyline>
+              <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+            </svg>
+          </div>
+          <h3 class="benefit-heading">Reduce Manual Rework</h3>
+          <p class="benefit-copy">
+            Early error identification reduces downstream correction activities.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       5. DARK CTA SECTION
+       ======================================================================== -->
+  <section class="dark-cta-section" id="cta-contact">
+    <!-- Decorative Wave Contour Lines (Nova Arc Accent Colors) -->
+    <svg class="dark-cta-bg-art" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M0 360C160 320 290 190 460 240C550 270 590 330 610 360" stroke="#1F6FEB" stroke-width="1.5" stroke-opacity="0.4" />
+      <path d="M0 330C150 290 280 170 450 220C540 250 580 310 610 340" stroke="#1F6FEB" stroke-width="1.5" stroke-opacity="0.35" />
+      <path d="M0 300C140 260 270 150 440 200C530 230 570 290 610 320" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.3" />
+      <path d="M0 270C130 230 260 130 430 180C520 210 560 270 610 300" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.25" />
+      <path d="M0 240C120 200 250 110 420 160C510 190 550 250 610 280" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.2" />
+      <path d="M0 210C110 170 240 90 410 140C500 170 540 230 610 260" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.15" />
+    </svg>
+
+    <div class="container">
+      <h2 class="dark-cta-title">
+        Ready to eliminate claim rejections and accelerate cash flow?
+      </h2>
+      <p class="dark-cta-subtitle">
+        Connect with our claims submission and scrubbing specialists today to streamline EDI 837 transmission and elevate first-pass acceptance.
+      </p>
+      <div>
+        <a href="../contact.html?service=claims-management-scrubbing" class="btn-cta-consult">
+          Request a Free Consultation <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- ========================================================================
+       FOOTER (Standardized Across All Pages)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        
+        <!-- Col 1: Brand -->
+        <div>
+          <a href="../index.html" class="logo" aria-label="Nova Arc Homepage" style="margin-bottom: var(--space-md); display: inline-flex;">
+            <img src="../images/nova-arc-logo.png" alt="Nova Arc Logo" class="logo-img" width="38" height="33">
+            <span class="logo-text">Nova<span class="logo-highlight">Arc</span></span>
+          </a>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: var(--space-lg);">
+            AI-driven, human-in-the-loop revenue cycle management engineered for health systems, ambulatory surgery centers, and specialty physician groups across the United States.
+          </p>
+          <div style="font-size: 0.8rem; color: var(--text-muted);">
+            &copy; 2026 Nova Arc Healthcare Technologies. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Col 2: Solutions -->
+        <div>
+          <h4 class="footer-col-title">Solutions</h4>
+          <ul class="footer-links-list">
+            <li><a href="../solutions.html#patient-access" class="footer-link">Patient Access</a></li>
+            <li><a href="../solutions.html#him" class="footer-link">Health Info Management</a></li>
+            <li><a href="../solutions.html#ebo" class="footer-link">Extended Business Office</a></li>
+            <li><a href="../solutions.html#analytics" class="footer-link">Analytics &amp; Reporting</a></li>
+            <li><a href="../ai-platform.html" class="footer-link">Nova Arc AI Platform</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="real-time-insurance-eligibility.html" class="footer-link">Insurance Eligibility &amp; Auth</a></li>
+            <li><a href="full-cycle-medical-coding.html" class="footer-link">Medical Coding &amp; CDI</a></li>
+            <li><a href="claims-management-scrubbing.html" class="footer-link">Claims Management &amp; Scrubbing</a></li>
+            <li><a href="denial-management.html" class="footer-link">Denial &amp; Appeals Recovery</a></li>
+            <li><a href="ar-management.html" class="footer-link">A/R Management &amp; Collections</a></li>
+            <li><a href="../services.html" class="footer-link" style="color: #38BDF8; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">Explore All 24+ Services &rarr;</a></li>
+          </ul>
+        </div>
+
+                        <!-- Col 4: Who We Serve -->
+        <div>
+          <h4 class="footer-col-title">Who We Serve</h4>
+          <ul class="footer-links-list">
+            <li><a href="../who-we-serve.html#asc" class="footer-link">Ambulatory Surgery Centers</a></li>
+            <li><a href="../index.html#who-we-serve" class="footer-link">Health Systems &amp; Hospitals</a></li>
+            <li><a href="../who-we-serve.html#urgent-care" class="footer-link">Urgent Care Clinics</a></li>
+            <li><a href="../who-we-serve.html#pt-ot-rehab" class="footer-link">Physical &amp; Rehab Clinics</a></li>
+            <li><a href="../who-we-serve.html#behavioral-health" class="footer-link">Behavioral Health</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Contact Info -->
+        <div>
+          <h4 class="footer-col-title">Contact Us</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: var(--space-md);">
+            Headquarters: 100 Enterprise Way, Suite 400<br>
+            Nashville, TN 37203
+          </p>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: var(--space-md);">
+            Phone: (800) 555-NOVA<br>
+            Inquiries: <a href="mailto:contact@novaarc-rcm.com" style="color: var(--blue-accent);">contact@novaarc-rcm.com</a>
+          </p>
+          <div style="margin-top: var(--space-md);">
+            <a href="../contact.html" class="btn btn-secondary btn-sm" style="width: 100%;">Connect with an Advisor</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ========================================================================
+       JAVASCRIPT: WORKFLOW SWITCHER, PAYER EDIT SWITCHER & ACCORDION
+       ======================================================================== -->
+  <script src="../js/main.js"></script>
+  <script>
+    // --- 1. INTERACTIVE WORKFLOW CASE SWITCHER ---
+    const workflowCases = {
+      1: {
+        txId: "TX-837P-ASC-99120 • HIPAA 5010A1",
+        rawEdi: `CLM*ASC10492*4250.00***24:B:1*Y*A*Y*Y~
+SV1*HC:29881*2800.00*UN*1~
+SV1*HC:29877*950.00*UN*1~
+SV1*HC:C1713*500.00*UN*1~
+DTP*472*D8*20260918~`,
+        rawWarning: "⚠️ Fatal Flaw: CPT 29877 unbundled without modifier -XU; C1713 missing electronic PWK implant invoice segment; Modifier -SG missing from POS 24 facility line.",
+        cleanEdi: `CLM*ASC10492*4250.00***24:B:1*Y*A*Y*Y~
+PWK*OZ*BM***AC*INV-8839201~
+SV1*HC:29881:SG*2800.00*UN*1~
+SV1*HC:29877:XU:SG*950.00*UN*1~
+SV1*HC:C1713:SG*500.00*UN*1~
+DTP*472*D8*20260918~`,
+        cleanResolution: "✓ Auto-Corrected: Appended modifier -SG for ASC facility billing; added -XU to debridement in distinct patellofemoral compartment; embedded PWK electronic invoice attachment segment."
+      },
+      2: {
+        txId: "TX-837P-PRO-44281 • CMS-1500 Form",
+        rawEdi: `CLM*PRO77491*480.00***11:B:1*Y*A*Y*Y~
+SV1*HC:99214*240.00*UN*1~
+SV1*HC:11102*180.00*UN*1~
+SV1*HC:96372*60.00*UN*1~
+DTP*472*D8*20260920~`,
+        rawWarning: "⚠️ Fatal Flaw: Evaluation & Management code 99214 billed on the same date as skin biopsy 11102 without required Modifier -25; Injection 96372 missing NDC quantity segment.",
+        cleanEdi: `CLM*PRO77491*480.00***11:B:1*Y*A*Y*Y~
+SV1*HC:99214:25*240.00*UN*1~
+SV1*HC:11102*180.00*UN*1~
+LIN**N4*00069315001~
+CTP****1*UN~
+SV1*HC:96372*60.00*UN*1~
+DTP*472*D8*20260920~`,
+        cleanResolution: "✓ Auto-Corrected: Appended modifier -25 to significant separate E/M service; injected valid 11-digit NDC string (LIN/CTP segments) for pharmaceutical administration."
+      },
+      3: {
+        txId: "TX-837I-INST-11849 • UB-04 Form",
+        rawEdi: `CLM*HOSP99318*38500.00***11:A:1*Y*A*Y*Y~
+HI*BK:A419*BF:R6520*BF:N170~
+SV2*0110*HC:99223*4500.00*UN*1~
+SV2*0250**18000.00*UN*1~
+DTP*434*RD8*20260910-20260915~`,
+        rawWarning: "⚠️ Fatal Flaw: Inpatient sepsis admission billed with secondary R65.20 without Principal POA indicator; Revenue code 0250 missing mandatory sub-account charge breakdown.",
+        cleanEdi: `CLM*HOSP99318*38500.00***11:A:1*Y*A*Y*Y~
+HI*BK:A419:Y*BF:R6520:Y*BF:N170:Y~
+SV2*0110*HC:99223*4500.00*UN*1~
+SV2*0250**18000.00*UN*1~
+DTP*434*RD8*20260910-20260915~`,
+        cleanResolution: "✓ Auto-Corrected: Verified Present on Admission (POA) 'Y' indicator across all primary/secondary diagnoses, establishing MS-DRG 871 clean acceptance."
+      }
+    };
+
+    function switchWorkflowCase(caseNum) {
+      for (let i = 1; i <= 3; i++) {
+        const btn = document.getElementById('tab-flow-' + i);
+        if (btn) {
+          if (i === caseNum) {
+            btn.className = "btn btn-sm btn-primary active-spec-tab";
+          } else {
+            btn.className = "btn btn-sm btn-secondary";
+          }
+        }
+      }
+
+      const c = workflowCases[caseNum];
+      if (c) {
+        document.getElementById('case-transaction-id').innerText = c.txId;
+        document.getElementById('raw-edi-display').innerText = c.rawEdi;
+        document.getElementById('raw-edi-warning').innerText = c.rawWarning;
+        document.getElementById('scrubbed-edi-display').innerText = c.cleanEdi;
+        document.getElementById('scrubbed-edi-resolution').innerText = c.cleanResolution;
+      }
+    }
+
+
+    // --- 2. INTERACTIVE PAYER-SPECIFIC EDIT RULE ENGINE ---
+    const payerRuleData = {
+      1: {
+        tagline: "Medicare Part B • CMS NCCI & ASC Payment Policy",
+        title: "Medicare Part B: NCCI Mutually Exclusive Edit & Packaged Implant Rule",
+        codeRef: "CMS PTP Column 1/2 • Modifier Indicator: 1",
+        withoutDesc: "Generic scrubber submits CPT 29877 alongside 29881 without verifying compartment documentation. Medicare NCCI PTP edit triggers immediate line denial. Additionally, billing C1713 causes a claim-level rejection because Medicare packages ASC surgical implants into the primary APC rate.",
+        denialCarc: "CO-97 (Bundled) + N56",
+        denialLoss: "-$1,450.00 Lost Revenue",
+        denialRework: "35 Days Delayed Cash Flow",
+        withDesc: "Nova Arc's rule engine cross-references the operative report: since debridement was performed in a separate compartment (patellofemoral vs. lateral meniscus), it appends modifier -XU (or -59) pursuant to CMS Transmittal 1421. It automatically suppresses the unpayable C1713 charge from Medicare Part B, avoiding whole-claim rejection.",
+        fixEdi: "SV1*HC:29877:XU:SG",
+        fixRecovered: "100% ASC Allowed ($2,840.00)",
+        fixSpeed: "Paid in 13 Days via 835 ERA",
+        summary: "Automated NCCI PTP Edit Override with Modifier -XU & ASC Package Suppression",
+        policyTag: "CMS Manual Pub 100-04, Ch. 14 §40"
+      },
+      2: {
+        tagline: "UnitedHealthcare Commercial • Surgical Implant & Distinct Service Policy",
+        title: "UnitedHealthcare (UHC): Electronic PWK Invoice Requirement & Modifier -XU",
+        codeRef: "UHC Policy 2026R0049A • Commercial Outpatient",
+        withoutDesc: "UHC commercial policy disallows modifier -59 when more specific -X{EPSU} modifiers apply, and mandates electronic vendor invoice attachments for any surgical implant exceeding $500. Without PWK segment routing, the entire surgical claim is pended for medical records or denied outright.",
+        denialCarc: "PR-252 (Missing Records) + N29",
+        denialLoss: "-$2,450.00 Trapped in Appeals",
+        denialRework: "45-Day Timely Filing Countdown",
+        withDesc: "Nova Arc detects UHC commercial payer ID (87726). The scrubber auto-applies Modifier -XU to CPT 29877 and automatically constructs an electronic PWK segment linking to the vendor purchase invoice (INV-8839201) in loop 2300, delivering a zero-touch clean adjudication.",
+        fixEdi: "PWK*OZ*BM***AC*INV-8839201~",
+        fixRecovered: "100% Surgical + Invoice (+15%)",
+        fixSpeed: "Paid in 11 Days via EFT/ERA",
+        summary: "Automated PWK Electronic Attachment Generation & Targeted Modifier -XU Injection",
+        policyTag: "UHC Reimbursement Policy §2026-08"
+      },
+      3: {
+        tagline: "Blue Cross Blue Shield State Plan • Bilateral Surgical Billing Rules",
+        title: "BCBS: Strict Single-Line Modifier -50 (150% Charge) Rule",
+        codeRef: "BCBS Provider Manual Ch. 6 • Surgical Rules",
+        withoutDesc: "When bilateral arthroscopic procedures are billed as two separate line items with -RT and -LT modifiers, BCBS front-end gateway rejects the claim under 277CA rule A7:148. The claim is completely dropped from electronic adjudication, requiring manual void and re-bill.",
+        denialCarc: "277CA Edit A7:148 (Invalid Bilateral)",
+        denialLoss: "-$3,200.00 Blocked at Gateway",
+        denialRework: "14 Days Lost in Clearinghouse",
+        withDesc: "Nova Arc's payer engine recognizes BCBS's single-line bilateral mandate. It automatically consolidates dual -RT and -LT lines into a single line item with modifier -50, calculating the contractually required 150% billed charge multiplier before transmission.",
+        fixEdi: "SV1*HC:29881:50*4200.00*UN*1~",
+        fixRecovered: "150% Bilateral Rate Approved",
+        fixSpeed: "Zero Gateway Dropouts",
+        summary: "Automatic Dual-Line Consolidation to Single-Line Modifier -50 Billing",
+        policyTag: "BCBS Operating Guideline §14.2"
+      },
+      4: {
+        tagline: "Aetna Commercial • ASC Facility Modifier -SG & Line-Level Prior Auth",
+        title: "Aetna Commercial: Mandatory Modifier -SG & REF*G1 Line Prior Auth Link",
+        codeRef: "Aetna Clinical Policy Bulletin #0031",
+        withoutDesc: "Aetna strictly mandates modifier -SG on all Ambulatory Surgery Center facility charges (Place of Service 24) and requires the exact 10-digit prior authorization number mapped directly at the service-line loop (REF*G1). Omission results in immediate technical denial without appeal rights.",
+        denialCarc: "CO-197 (Pre-Auth Missing) + N382",
+        denialLoss: "-$3,680.00 Complete Line Forfeiture",
+        denialRework: "Zero Appeal Rights (Technical)",
+        withDesc: "Nova Arc validates the ASC facility place of service, injecting modifier -SG on all surgical charge lines. It automatically fetches the pre-service prior authorization reference number from the 278 repository and binds it into the line-level REF*G1 segment.",
+        fixEdi: "REF*G1*AUTH-9948201A~",
+        fixRecovered: "100% Contracted Fee Schedule",
+        fixSpeed: "Paid in 12 Days via Direct Deposit",
+        summary: "Automatic Modifier -SG Append & Line-Level Prior Authorization Crosswalking",
+        policyTag: "Aetna ASC Provider Terms §2026.3"
+      }
+    };
+
+    function switchPayerRule(ruleNum) {
+      for (let i = 1; i <= 4; i++) {
+        const btn = document.getElementById('tab-payer-' + i);
+        if (btn) {
+          if (i === ruleNum) {
+            btn.className = "btn btn-sm btn-primary active-spec-tab";
+          } else {
+            btn.className = "btn btn-sm btn-secondary";
+          }
+        }
+      }
+
+      const p = payerRuleData[ruleNum];
+      if (p) {
+        document.getElementById('payer-tagline').innerText = p.tagline;
+        document.getElementById('payer-title').innerText = p.title;
+        document.getElementById('payer-code-ref').innerText = p.codeRef;
+        document.getElementById('payer-without-desc').innerText = p.withoutDesc;
+        document.getElementById('payer-denial-carc').innerText = p.denialCarc;
+        document.getElementById('payer-denial-loss').innerText = p.denialLoss;
+        document.getElementById('payer-denial-rework').innerText = p.denialRework;
+        document.getElementById('payer-with-desc').innerText = p.withDesc;
+        document.getElementById('payer-fix-edi').innerText = p.fixEdi;
+        document.getElementById('payer-fix-recovered').innerText = p.fixRecovered;
+        document.getElementById('payer-fix-speed').innerText = p.fixSpeed;
+        document.getElementById('payer-rule-summary').innerText = p.summary;
+        document.getElementById('payer-policy-tag').innerText = p.policyTag;
+      }
+    }
+
+    // --- 2b. SECTOR SCORING SWITCHER (ASCs vs Hospital-Based Groups) ---
+    function setScoringSector(sector) {
+      const btnAsc = document.getElementById('btn-scrub-asc');
+      const btnHbg = document.getElementById('btn-scrub-hbg');
+      const rawFlaws = document.getElementById('scrub-raw-flaws');
+      const actions = document.getElementById('scrub-actions');
+      const outcomes = document.getElementById('scrub-outcomes');
+
+      if (!btnAsc || !btnHbg || !rawFlaws || !actions || !outcomes) return;
+
+      if (sector === 'asc') {
+        btnAsc.className = 'btn btn-sm btn-primary';
+        btnAsc.style.fontWeight = '700';
+        btnHbg.className = 'btn btn-sm btn-secondary';
+        btnHbg.style.fontWeight = '600';
+
+        rawFlaws.innerHTML = `
+          <li><strong>-16% PTP Unbundling:</strong> CPT 29877 debridement billed with 29881 meniscectomy lacking -XU distinct compartment modifier.</li>
+          <li><strong>-12% Missing Attachment:</strong> HCPCS C1713 anchor implant absent electronic PWK01/02 manufacturer invoice.</li>
+          <li><strong>-6% Missing Facility Indicator:</strong> POS 24 billed without commercial payer required modifier -SG.</li>
+          <li><strong>-4% COB Segment Imbalance:</strong> Secondary crossover adjustment CAS segments failing balancing rules.</li>
+        `;
+
+        actions.innerHTML = `
+          <li>Cross-references operative report; verifies separate patellofemoral compartment &amp; appends modifier -XU.</li>
+          <li>Extracts vendor implant invoice from materials management; embeds electronic PWK segment in Loop 2300.</li>
+          <li>Appends payer-mandated modifier -SG to line item pursuant to commercial contract terms.</li>
+          <li>Reconciles secondary payer coordination-of-benefits CAS segments (CO-45, PR-1, PR-2).</li>
+        `;
+
+        outcomes.innerHTML = `
+          <li>ANSI X12 837P batch dispatches with 100% SNIP Level 1–7 validation.</li>
+          <li>277CA clearinghouse acceptance returned as A1:19 (Adjudication Ready).</li>
+          <li>100% elimination of avoidable CARC CO-97 / N56 bundling claim rejections.</li>
+          <li>Accelerated cash collection into provider bank lockbox within 12–14 days.</li>
+        `;
+      } else {
+        btnHbg.className = 'btn btn-sm btn-primary';
+        btnHbg.style.fontWeight = '700';
+        btnAsc.className = 'btn btn-sm btn-secondary';
+        btnAsc.style.fontWeight = '600';
+
+        rawFlaws.innerHTML = `
+          <li><strong>-18% Concurrency Direction:</strong> Anesthesia CPT 00811 missing CRNA medical supervision modifier (-QZ vs -AA/-QK).</li>
+          <li><strong>-10% Unit Calculation Defect:</strong> Billed without exact anesthesia minutes (120 mins = 8 time units + 7 base units).</li>
+          <li><strong>-6% Split-Billing Omission:</strong> CT Abdomen/Pelvis CPT 74177 missing modifier -26 for hospitalist professional read.</li>
+          <li><strong>-4% LCD Medical Necessity Gap:</strong> Missing primary acute abdominal pain ICD-10 indication linkage.</li>
+        `;
+
+        actions.innerHTML = `
+          <li>Calculates ASA base units + 15-minute intervals and automatically appends modifier -QZ based on provider roster.</li>
+          <li>Splits facility technical charge (UB-04) and appends modifier -26 for physician group CMS-1500 dispatch.</li>
+          <li>Cross-references Medicare LCD L34458 and links valid ICD-10 diagnostic indications (R10.9).</li>
+          <li>Validates NCCI Multiple Procedure Payment Reduction (MPPR) rules across multi-line professional interpretation bills.</li>
+        `;
+
+        outcomes.innerHTML = `
+          <li>ANSI X12 837P professional fee claim dispatches with 99.4% first-pass acceptance.</li>
+          <li>100% prevention of commercial downcoding clawbacks on professional interpretation reads.</li>
+          <li>Elimination of anesthesia minute mismatch denials (CARC 96 / RARC M20).</li>
+          <li>Direct electronic remit (835) cash posted to group bank account in 11 days.</li>
+        `;
+      }
+    }
+
+    // --- 3. FAQ ACCORDION TOGGLE ---
+    function toggleFaq(button) {
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.accordion-icon');
+
+      document.querySelectorAll('#faqAccordion .accordion-header').forEach(hdr => {
+        hdr.setAttribute('aria-expanded', 'false');
+        hdr.nextElementSibling.style.maxHeight = null;
+        hdr.nextElementSibling.classList.remove('active');
+        const ic = hdr.querySelector('.accordion-icon');
+        if (ic) ic.innerText = '+';
+      });
+
+      if (!isExpanded) {
+        button.setAttribute('aria-expanded', 'true');
+        content.classList.add('active');
+        content.style.maxHeight = content.scrollHeight + "px";
+        if (icon) icon.innerText = '−';
+      }
+    }
+  </script>
+</body>
+</html>

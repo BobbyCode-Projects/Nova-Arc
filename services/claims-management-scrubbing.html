@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Claims Management &amp; Clearinghouse Scrubbing | Autonomous EDI 837 Engine | Nova Arc</title>
-  <meta name="description" content="Autonomous multi-layer EDI 837 claim scrubbing, instant 277CA rejection remediation, payer-specific edit validation, and ASC surgical billing optimization delivering 99.4% first-pass acceptance.">
+  <title>Claims Submission &amp; Scrubbing — EDI 837 | Nova Arc</title>
+  <meta name="description" content="Clean Claims In. Faster Processing. Fewer Preventable Errors. Accurate claims submission and multi-layer EDI 837 claim scrubbing services for healthcare organizations.">
   
   <!-- SEO & Social Meta Tags -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Nova Arc Healthcare Technologies">
-  <meta property="og:title" content="Claims Management &amp; Clearinghouse Scrubbing | 99.4% Clean Claims | Nova Arc">
-  <meta property="og:description" content="Continuous multi-layer EDI 837 validation, real-time NCCI/LCD rules adjudication, and automated 277CA rejection remediation driving 99.4% first-pass clean claim acceptance.">
+  <meta property="og:title" content="Claims Submission &amp; Scrubbing — EDI 837 | Nova Arc">
+  <meta property="og:description" content="Clean Claims In. Faster Processing. Fewer Preventable Errors. Accurate claims submission and multi-layer EDI 837 claim scrubbing services for healthcare organizations.">
   <meta property="og:url" content="https://novaarc-rcm.com/services/claims-management-scrubbing.html">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Claims Management &amp; Clearinghouse Scrubbing | Nova Arc">
-  <meta name="twitter:description" content="Multi-layer EDI 837 claim scrubbing, payer-specific edit validation, and instant 277CA rejection triage achieving 99.4% clean claims.">
+  <meta name="twitter:title" content="Claims Submission &amp; Scrubbing — EDI 837 | Nova Arc">
+  <meta name="twitter:description" content="Clean Claims In. Faster Processing. Fewer Preventable Errors. Accurate claims submission and multi-layer EDI 837 claim scrubbing services for healthcare organizations.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="../images/nova-arc-logo.png">
@@ -62,7 +62,13 @@
           {
             "@type": "ListItem",
             "position": 3,
-            "name": "Claims Management & Clearinghouse Scrubbing",
+            "name": "Patient Financial Services & Recovery",
+            "item": "https://novaarc-rcm.com/services/patient-financial-services.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Claims Submission & Scrubbing — EDI 837",
             "item": "https://novaarc-rcm.com/services/claims-management-scrubbing.html"
           }
         ]
@@ -70,15 +76,15 @@
       {
         "@type": "Service",
         "@id": "https://novaarc-rcm.com/services/claims-management-scrubbing.html#service",
-        "name": "Claims Management & Clearinghouse Scrubbing",
-        "serviceType": "Healthcare Revenue Cycle Management (RCM) - Back-End Billing & Clearinghouse Scrubbing",
+        "name": "Claims Submission & Scrubbing — EDI 837 Services",
+        "serviceType": "Healthcare Revenue Cycle Management (RCM) - Claims Management & Billing",
         "provider": {
           "@type": "Organization",
           "name": "Nova Arc Healthcare Technologies",
           "url": "https://novaarc-rcm.com/",
           "logo": "https://novaarc-rcm.com/images/nova-arc-logo.png"
         },
-        "description": "Continuous multi-layer EDI 837 validation, real-time NCCI/LCD rules adjudication, payer-specific edit validation, and automated 277CA rejection remediation.",
+        "description": "Clean claims in, faster processing, fewer preventable errors through pre-submission validation, multi-layer claim scrubbing, and EDI 837 transaction support.",
         "areaServed": {
           "@type": "Country",
           "name": "United States"
@@ -465,83 +471,428 @@
     </div>
   </header>
 
+  <!-- ========================================================================
+       PAGE-SPECIFIC STYLES
+       ======================================================================== -->
+  <style>
+    /* Scoped Page Styles for Claims Submission & Scrubbing — EDI 837 */
+    .claims-hero {
+      text-align: center;
+      padding: 72px 0 64px;
+      background: radial-gradient(circle at 50% 0%, rgba(31, 111, 235, 0.08) 0%, transparent 70%),
+                  linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .claims-breadcrumbs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .claims-breadcrumbs a {
+      color: var(--blue-accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+    .claims-breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+    .claims-breadcrumbs .separator {
+      color: var(--text-light);
+      font-size: 0.75rem;
+    }
+    .claims-tag {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      margin-bottom: 16px;
+    }
+    .claims-title {
+      font-size: clamp(2.3rem, 4.4vw, 3.6rem);
+      font-weight: 800;
+      color: var(--navy-primary);
+      line-height: 1.16;
+      letter-spacing: -0.025em;
+      max-width: 980px;
+      margin: 0 auto 20px;
+    }
+    .claims-subtitle {
+      font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+      color: var(--text-secondary);
+      line-height: 1.55;
+      font-weight: 400;
+      max-width: 820px;
+      margin: 0 auto 36px;
+    }
+    .btn-connect {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--blue-accent);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 14px 38px;
+      border-radius: 6px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(31, 111, 235, 0.35);
+      transition: all 0.2s ease;
+    }
+    .btn-connect:hover {
+      background: var(--blue-accent-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(31, 111, 235, 0.45);
+      color: #FFFFFF;
+    }
+
+    /* Overview Section */
+    .overview-section {
+      padding: 96px 0;
+      background: #FFFFFF;
+    }
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .overview-tag {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      margin-bottom: 24px;
+    }
+    .overview-paragraph {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+    .overview-paragraph:last-child {
+      margin-bottom: 0;
+    }
+    .overview-image-container {
+      position: relative;
+    }
+    .overview-image {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 12px 32px rgba(11, 37, 69, 0.09);
+      border: 1px solid var(--border-light);
+      display: block;
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+    }
+
+    /* Services Provided Section */
+    .services-provided-section {
+      padding: 96px 0 104px;
+      background: #F8FAFC;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .services-tag {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .services-headline {
+      font-size: clamp(2rem, 3.2vw, 2.75rem);
+      font-weight: 800;
+      color: var(--navy-primary);
+      text-align: center;
+      max-width: 880px;
+      margin: 0 auto 56px;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+    .services-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .service-feature-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 8px rgba(11, 37, 69, 0.03);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .service-feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(11, 37, 69, 0.08);
+      border-color: var(--blue-accent-border);
+    }
+    .service-card-icon-box {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      background: var(--blue-accent-light);
+      color: var(--blue-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      flex-shrink: 0;
+    }
+    .service-card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy-primary);
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+    .service-card-desc {
+      font-size: 0.925rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
+      flex-grow: 1;
+      margin-bottom: 20px;
+    }
+    .service-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--blue-accent);
+      text-decoration: none;
+      transition: color 0.15s ease;
+      margin-top: auto;
+    }
+    .service-card-link:hover {
+      color: var(--blue-accent-hover);
+      text-decoration: underline;
+    }
+
+    /* Benefits Section */
+    .benefits-section {
+      padding: 96px 0;
+      background: #FFFFFF;
+    }
+    .benefits-tag {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .benefits-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+    .benefit-col {
+      display: flex;
+      flex-direction: column;
+    }
+    .benefit-icon-wrapper {
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 22px;
+      color: var(--blue-accent);
+    }
+    .benefit-heading {
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--navy-primary);
+      line-height: 1.35;
+      margin-bottom: 14px;
+    }
+    .benefit-copy {
+      font-size: 0.935rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
+    }
+
+    /* Dark CTA Section */
+    .dark-cta-section {
+      background: linear-gradient(135deg, #051324 0%, #0B2545 60%, #133B6C 100%);
+      padding: 104px 0;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .dark-cta-bg-art {
+      position: absolute;
+      right: -80px;
+      bottom: -100px;
+      width: 650px;
+      height: 480px;
+      opacity: 0.22;
+      pointer-events: none;
+    }
+    .dark-cta-title {
+      font-size: clamp(2.3rem, 4vw, 3.4rem);
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      max-width: 820px;
+      margin: 0 auto 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .dark-cta-subtitle {
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+      color: #CBD5E1;
+      line-height: 1.65;
+      max-width: 740px;
+      margin: 0 auto 38px;
+      position: relative;
+      z-index: 1;
+    }
+    .btn-cta-consult {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--blue-accent);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 16px 36px;
+      border-radius: 6px;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(31, 111, 235, 0.4);
+      transition: all 0.2s ease;
+      position: relative;
+      z-index: 1;
+    }
+    .btn-cta-consult:hover {
+      background: var(--blue-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(31, 111, 235, 0.5);
+      color: #FFFFFF;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 1080px) {
+      .services-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .benefits-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px;
+      }
+    }
+    @media (max-width: 860px) {
+      .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .overview-image {
+        height: 320px;
+      }
+    }
+    @media (max-width: 640px) {
+      .services-cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .benefits-row {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .claims-hero {
+        padding: 48px 0 44px;
+      }
+      .overview-section,
+      .services-provided-section,
+      .benefits-section,
+      .dark-cta-section {
+        padding: 64px 0;
+      }
+    }
+  </style>
+
 
   <!-- ========================================================================
-       1. BREADCRUMB & 2. HERO SECTION
+       1. HERO SECTION
        ======================================================================== -->
-  <section class="page-hero" id="hero">
+  <section class="claims-hero" id="hero">
     <div class="container">
-      <!-- 1. Breadcrumb -->
-      <nav class="breadcrumb-nav" aria-label="Breadcrumbs">
+      <!-- Breadcrumb Navigation -->
+      <nav class="claims-breadcrumbs" aria-label="Breadcrumbs">
         <a href="../index.html">Home</a>
-        <span class="breadcrumb-separator">/</span>
+        <span class="separator">&gt;</span>
         <a href="../services.html">Services</a>
-        <span class="breadcrumb-separator">/</span>
-        <span style="color: var(--text-primary); font-weight: 600;">Claims Management &amp; Clearinghouse Scrubbing</span>
+        <span class="separator">&gt;</span>
+        <a href="patient-financial-services.html">Claims Management</a>
+        <span class="separator">&gt;</span>
+        <span style="color: var(--text-primary); font-weight: 600;">Claims Submission &amp; Scrubbing &mdash; EDI 837</span>
       </nav>
 
-      <!-- 2. Hero Content -->
-      <div class="page-hero-content">
-        <span class="section-tag">Back-End Gateway Intelligence • Service 03.1</span>
-        <h1 class="page-hero-title">
-          Claims Management &amp; Clearinghouse Scrubbing: Autonomous EDI 837 Engine
-        </h1>
-        <p class="page-hero-subtitle">
-          Continuous multi-tier EDI 837 scrubbing, instant 277CA rejection remediation, and payer-specific edit rule validation. Powered by our proprietary Autonomous Claims Scrubber AI to achieve 99.4% first-pass clean claim acceptance across Ambulatory Surgery Centers (ASCs), Health Systems, and Surgical Practices.
-        </p>
-
-        <!-- Master KPI Metric Banner -->
-        <div style="display: inline-flex; align-items: center; gap: 16px; background: rgba(31, 111, 235, 0.08); border: 1px solid var(--blue-accent-border); padding: 14px 24px; border-radius: var(--radius-lg); margin-bottom: var(--space-xl); box-shadow: var(--shadow-sm); flex-wrap: wrap;">
-          <div style="font-size: 2.1rem; font-weight: 800; color: var(--blue-accent); line-height: 1;">
-            99.4%
-          </div>
-          <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.4;">
-            <strong style="color: var(--navy-primary); display: block; font-size: 1rem;">Clean Claim First-Pass Acceptance</strong>
-            Validated across commercial, Medicare, and Medicaid clearinghouse gateways with SNIP Levels 1–7
-          </div>
-          <div style="border-left: 1px solid var(--border-medium); padding-left: 16px; margin-left: 4px;">
-            <a href="../ai-platform.html#ai-agents" class="preview-item-tag tag-blue" style="text-decoration: none; display: inline-flex; align-items: center; gap: 6px; font-weight: 700; padding: 6px 12px; font-size: 0.8rem;">
-              <span>Powered by Autonomous Scrubber AI</span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-            </a>
-          </div>
-        </div>
-
-        <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
-          <a href="../contact.html?service=claims-management-scrubbing" class="btn btn-primary btn-lg">
-            <span>Schedule a Claims Review</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-          <a href="#edi-workflow-visual" class="btn btn-secondary btn-lg">
-            <span>Interactive EDI 837 Workflow &darr;</span>
-          </a>
-          <a href="#payer-rules-engine" class="btn btn-secondary btn-lg">
-            <span>Payer Edit Rules Engine &darr;</span>
-          </a>
-        </div>
+      <!-- Eyebrow: SERVICES -->
+      <div>
+        <span class="claims-tag">SERVICES</span>
       </div>
 
-      <!-- 4 Hero Stat Cards -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-lg); margin-top: var(--space-2xl);">
-        <div class="pillar-card" style="padding: var(--space-lg); text-align: left;">
-          <div style="font-size: 2rem; font-weight: 800; color: var(--blue-accent); line-height: 1; margin-bottom: 4px;">99.4%</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: var(--navy-primary); margin-bottom: 2px;">First-Pass Clean Claim Rate</div>
-          <p style="font-size: 0.775rem; color: var(--text-secondary); margin: 0;">Verified across 15,000+ commercial and CMS gateway edits</p>
+      <!-- Main Title -->
+      <h1 class="claims-title">
+        Claims Submission &amp; Scrubbing &mdash; EDI 837
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="claims-subtitle">
+        Clean Claims In. Faster Processing. Fewer Preventable Errors.
+      </p>
+
+      <!-- Connect With Us Button -->
+      <div>
+        <a href="../contact.html?service=claims-management-scrubbing" class="btn-connect">
+          Connect with us
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       2. OVERVIEW SECTION
+       ======================================================================== -->
+  <section class="overview-section" id="overview">
+    <div class="container">
+      <div class="overview-grid">
+        <!-- Left: Text Content -->
+        <div class="overview-content">
+          <span class="overview-tag">OVERVIEW</span>
+          <p class="overview-paragraph">
+            Accurate claim submission is critical to timely reimbursement. Our Claims Submission and Scrubbing services help healthcare organizations validate claims before transmission and identify common demographic, coding, billing, and payer-related errors.
+          </p>
+          <p class="overview-paragraph">
+            We support electronic claim workflows using appropriate EDI transactions, including the 837 healthcare claim transaction, helping improve claim quality before submission.
+          </p>
         </div>
-        <div class="pillar-card" style="padding: var(--space-lg); text-align: left;">
-          <div style="font-size: 2rem; font-weight: 800; color: #10B981; line-height: 1; margin-bottom: 4px;">&lt; 12h</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: var(--navy-primary); margin-bottom: 2px;">Chart-to-Gateway Dispatch</div>
-          <p style="font-size: 0.775rem; color: var(--text-secondary); margin: 0;">Automated batching and streaming transmission</p>
-        </div>
-        <div class="pillar-card" style="padding: var(--space-lg); text-align: left;">
-          <div style="font-size: 2rem; font-weight: 800; color: #38BDF8; line-height: 1; margin-bottom: 4px;">&lt; 4h</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: var(--navy-primary); margin-bottom: 2px;">277CA Rejection Triage SLA</div>
-          <p style="font-size: 0.775rem; color: var(--text-secondary); margin: 0;">Same-day electronic error correction and re-drop</p>
-        </div>
-        <div class="pillar-card" style="padding: var(--space-lg); text-align: left;">
-          <div style="font-size: 2rem; font-weight: 800; color: #8B5CF6; line-height: 1; margin-bottom: 4px;">-14 Days</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: var(--navy-primary); margin-bottom: 2px;">Gross A/R Days Reduction</div>
-          <p style="font-size: 0.775rem; color: var(--text-secondary); margin: 0;">Eliminating gateway dropouts and timely filing write-offs</p>
+
+        <!-- Right: Pre-Bill Claims Imagery -->
+        <div class="overview-image-container">
+          <img src="../images/pillar-pre-bill.jpg" alt="Claims Submission &amp; Scrubbing Overview" class="overview-image" width="600" height="440">
         </div>
       </div>
     </div>
@@ -549,951 +900,277 @@
 
 
   <!-- ========================================================================
-       3. "THE PROBLEM" SECTION (Executive Pain Points)
+       3. SERVICES PROVIDED SECTION
        ======================================================================== -->
-  <section class="section section-dark" id="problem">
+  <section class="services-provided-section" id="services-provided">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag" style="background: rgba(239, 68, 68, 0.15); color: #FCA5A5; border-color: rgba(239, 68, 68, 0.3);">
-          Gateway Friction &amp; Revenue Traps
-        </span>
-        <h2 class="section-title">The High Cost of Front-End Gateway Friction</h2>
-        <p class="section-subtitle">
-          Traditional clearinghouse scrubbers rely on rudimentary syntax checks that miss complex clinical bundling and volatile commercial payer policies, leaving millions in limbo.
-        </p>
-      </div>
+      <!-- Section Header -->
+      <span class="services-tag">SERVICES PROVIDED</span>
+      <h2 class="services-headline">
+        Intelligent pre-submission scrubbing and seamless EDI 837 claim transmission.
+      </h2>
 
-      <div class="pillars-grid">
-        
-        <!-- Pain Point 1 -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div class="pillar-icon-box" style="background: rgba(239, 68, 68, 0.1); color: #EF4444; border: 1px solid rgba(239, 68, 68, 0.3);">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
-            </svg>
-          </div>
-          <span class="pillar-number" style="color: #EF4444;">EXPOSURE 01</span>
-          <h3 style="font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-sm);">
-            Clearinghouse Latency &amp; Unworked 277CA Rejections
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; margin-bottom: var(--space-md);">
-            Electronic claim rejections (EDI 277CA) linger in clearinghouse portals for an average of <strong>5.8 days</strong> before billing staff manually triage them. Because rejected claims never enter the payer's adjudication pipeline, timely filing windows expire while Discharged Not Final Billed (DNFB) balances balloon.
-          </p>
-          <div style="font-size: 0.8rem; font-weight: 700; color: #FCA5A5; background: rgba(239, 68, 68, 0.1); padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(239, 68, 68, 0.2);">
-            Financial Threat: $380,000+ Trapped in Unbilled Gateway Queues
-          </div>
-        </div>
-
-        <!-- Pain Point 2 -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div class="pillar-icon-box" style="background: rgba(245, 158, 11, 0.1); color: #F59E0B; border: 1px solid rgba(245, 158, 11, 0.3);">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-              <line x1="12" y1="9" x2="12" y2="13"></line>
-              <line x1="12" y1="17" x2="12.01" y2="17"></line>
-            </svg>
-          </div>
-          <span class="pillar-number" style="color: #F59E0B;">EXPOSURE 02</span>
-          <h3 style="font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-sm);">
-            Payer Policy Volatility &amp; NCCI Bundling Conflicts
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; margin-bottom: var(--space-md);">
-            CMS quarterly NCCI updates, Medically Unlikely Edits (MUEs), and proprietary commercial bulletin changes (UHC, BCBS, Aetna, Cigna) cause endless technical denials. Generic scrubbers fail to account for carrier-specific modifier rules (-50 vs -RT/-LT, -X{EPSU}, -SG), stripping surgical margins.
-          </p>
-          <div style="font-size: 0.8rem; font-weight: 700; color: #FCD34D; background: rgba(245, 158, 11, 0.1); padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(245, 158, 11, 0.2);">
-            Financial Threat: 8% to 12% Preventable Revenue Leakage on Surgeries
-          </div>
-        </div>
-
-        <!-- Pain Point 3 -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div class="pillar-icon-box" style="background: rgba(56, 189, 248, 0.1); color: #38BDF8; border: 1px solid rgba(56, 189, 248, 0.3);">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <!-- 10 Service Cards Grid -->
+      <div class="services-cards-grid">
+        <!-- Service 1 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
               <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="9" y1="15" x2="15" y2="15"></line>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
             </svg>
           </div>
-          <span class="pillar-number" style="color: #38BDF8;">EXPOSURE 03</span>
-          <h3 style="font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-sm);">
-            Disjointed Secondary Crossover &amp; COB Failures
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; margin-bottom: var(--space-md);">
-            When primary remit adjustments (CAS segments with CO, PR, OA groups) fail to translate cleanly into secondary 837 claims, secondary submissions stall. Without automated crossover engines, claims age past 90 days, turning collectible balances into administrative bad debt.
+          <h3 class="service-card-title">Claim preparation and submission</h3>
+          <p class="service-card-desc">
+            Systematic compiling, formatting, and electronic dispatch of professional (837P) and institutional (837I) healthcare claims to commercial and government payers.
           </p>
-          <div style="font-size: 0.8rem; font-weight: 700; color: #7DD3FC; background: rgba(56, 189, 248, 0.1); padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(56, 189, 248, 0.2);">
-            Financial Threat: Bloated Aged A/R &gt; 90 Days &amp; Expired Timely Filing
-          </div>
+          <a href="../contact.html?service=claims-management-scrubbing" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
         </div>
 
+        <!-- Service 2 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+              <line x1="12" y1="2" x2="12" y2="22"></line>
+            </svg>
+          </div>
+          <h3 class="service-card-title">EDI 837 transaction support</h3>
+          <p class="service-card-desc">
+            Comprehensive compliance with ANSI X12 837 standards, ensuring syntax validation, proper loop and segment formatting, and secure clearinghouse transmission.
+          </p>
+          <a href="../contact.html?service=claims-management-scrubbing" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Claim scrubbing</h3>
+          <p class="service-card-desc">
+            Multi-tiered algorithmic validation checking diagnosis-procedure crosswalks, gender and age consistency, medical necessity, and CCI bundling rules.
+          </p>
+          <a href="../contact.html?service=claims-management-scrubbing" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Demographic validation</h3>
+          <p class="service-card-desc">
+            Verification of patient demographics, subscriber details, policy numbers, and guarantor information to prevent avoidable registration discrepancies.
+          </p>
+          <a href="../contact.html?service=claims-management-scrubbing" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              <line x1="2" y1="10" x2="22" y2="10"></line>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Insurance information validation</h3>
+          <p class="service-card-desc">
+            Verification of active coverage, effective dates, primary/secondary coordination of benefits (COB), and payer ID routing before submission.
+          </p>
+          <a href="../contact.html?service=claims-management-scrubbing" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20h9"></path>
+              <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Coding and billing edits</h3>
+          <p class="service-card-desc">
+            Pre-submission audit rules verifying appropriate CPT/HCPCS codes, ICD-10 specificity, required billing modifiers, and accurate units of service.
+          </p>
+          <a href="../contact.html?service=claims-management-scrubbing" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 7 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Payer-specific validation</h3>
+          <p class="service-card-desc">
+            Custom rules engine applying distinct commercial, Medicare, Medicaid, and regional payer billing requirements and local coverage determinations (LCDs).
+          </p>
+          <a href="../contact.html?service=claims-management-scrubbing" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 8 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="8" width="12" height="12" rx="2"></rect>
+              <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Duplicate claim identification</h3>
+          <p class="service-card-desc">
+            Automated pre-transmission safeguards identifying identical or overlapping service dates, provider IDs, and procedures to prevent duplicate denials.
+          </p>
+          <a href="../contact.html?service=claims-management-scrubbing" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 9 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="15" y1="9" x2="9" y2="15"></line>
+              <line x1="9" y1="9" x2="15" y2="15"></line>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Claim rejection analysis</h3>
+          <p class="service-card-desc">
+            Rapid parsing of 277CA clearinghouse rejection notices and payer acknowledgment reports to quickly remediate errors before claims age.
+          </p>
+          <a href="../contact.html?service=claims-management-scrubbing" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 10 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Pre-submission quality checks</h3>
+          <p class="service-card-desc">
+            Final automated and expert quality-assurance reviews confirming complete documentation attachments, authorization numbers, and clean claim viability.
+          </p>
+          <a href="../contact.html?service=claims-management-scrubbing" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
       </div>
     </div>
   </section>
 
 
   <!-- ========================================================================
-       4. COMPREHENSIVE ARCHITECTURE: 6 PILLARS OF CLAIMS SCRUBBING
+       4. BENEFITS SECTION
        ======================================================================== -->
-  <section class="section section-light" id="pillars">
+  <section class="benefits-section" id="benefits">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Enterprise Architecture</span>
-        <h2 class="section-title">Comprehensive Architecture: 6 Pillars of Claims Scrubbing</h2>
-        <p class="section-subtitle">
-          How Nova Arc pairs machine-speed autonomous algorithmic validation with certified billing human oversight to ensure zero gateway dropouts.
-        </p>
-      </div>
+      <!-- Section Tag -->
+      <span class="benefits-tag">BENEFITS</span>
 
-      <div class="pillars-grid">
-        
-        <!-- Pillar 1 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+      <!-- 4 Columns Grid -->
+      <div class="benefits-row">
+        <!-- Benefit 1 -->
+        <div class="benefit-col">
+          <div class="benefit-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
           </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
-            1. Multi-Tier Scrubbing Engine (SNIP 1–7)
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            Claims pass through rigorous WEDI Strategic National Implementation Process (SNIP) validation: syntax (SNIP 1), syntactical requirements (SNIP 2), balance edits (SNIP 3), inter-segment situational rules (SNIP 4), external code set validation (SNIP 5), and line-of-business rules (SNIP 6–7).
+          <h3 class="benefit-heading">Improve First-Pass Claim Quality</h3>
+          <p class="benefit-copy">
+            Pre-submission validation helps identify preventable errors before claims reach the payer.
           </p>
-          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
-            • Complete WEDI SNIP 1 through 7 Testing<br>
-            • ANSI X12 837P &amp; 837I Universal Compatibility
-          </div>
         </div>
 
-        <!-- Pillar 2: Conceptual Link to Autonomous Claims Scrubber AI -->
-        <div class="pillar-card" style="border: 1px solid var(--blue-accent-border); background: #FAFBFD;">
-          <div class="pillar-icon-box" style="background: rgba(31, 111, 235, 0.1); color: var(--blue-accent);">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z"></path><path d="M12 6v6l4 2"></path></svg>
+        <!-- Benefit 2 -->
+        <div class="benefit-col">
+          <div class="benefit-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
           </div>
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-xs);">
-            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin: 0;">
-              2. Autonomous Claims Scrubber AI Integration
-            </h3>
-            <span class="preview-item-tag tag-blue" style="font-size: 0.7rem;">AI Platform Sync</span>
-          </div>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            Conceptually and technically linked to Nova Arc's AI Platform. Our machine-learning models pre-emptively predict carrier denials before transmission, auto-appending qualifying modifiers (-25, -59, -XU) and validating medical necessity with sub-second execution latency.
+          <h3 class="benefit-heading">Reduce Rejections</h3>
+          <p class="benefit-copy">
+            Systematic claim scrubbing can reduce common technical and data-related rejections.
           </p>
-          <div style="margin-top: var(--space-sm); padding-top: 10px; border-top: 1px solid var(--border-light);">
-            <a href="../ai-platform.html#ai-agents" class="link-arrow" style="font-size: 0.825rem; font-weight: 700; color: var(--blue-accent);">
-              Explore Autonomous Scrubber AI Platform &rarr;
-            </a>
-          </div>
         </div>
 
-        <!-- Pillar 3 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        <!-- Benefit 3 -->
+        <div class="benefit-col">
+          <div class="benefit-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
           </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
-            3. Direct Clearinghouse Gateway Dispatch
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            High-speed bi-directional EDI pipelines to Availity, Change Healthcare, Waystar, and Experian Health. Claims stream via secure REST APIs and SFTP connections within 12 hours of provider sign-off, guaranteeing zero timely filing expirations.
+          <h3 class="benefit-heading">Accelerate Revenue Cycle Performance</h3>
+          <p class="benefit-copy">
+            Cleaner claims can move more efficiently through payer processing.
           </p>
-          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
-            • &lt; 12 Hour Submission SLA from Chart Lock<br>
-            • Automated Clearinghouse Functional Acknowledgements (999)
-          </div>
         </div>
 
-        <!-- Pillar 4 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M16 12l-4-4-4 4M12 16V8"></path></svg>
+        <!-- Benefit 4 -->
+        <div class="benefit-col">
+          <div class="benefit-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 4 23 10 17 10"></polyline>
+              <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+            </svg>
           </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
-            4. Instant 277CA Rejection Auto-Triage (&lt; 4h)
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            Clearinghouse Claim Acknowledgement (277CA) rejections are ingested and categorized automatically. Missing subscriber IDs, demographic mismatches, and syntax errors are auto-corrected or routed to dedicated specialists within 4 operating hours.
+          <h3 class="benefit-heading">Reduce Manual Rework</h3>
+          <p class="benefit-copy">
+            Early error identification reduces downstream correction activities.
           </p>
-          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
-            • Zero Stagnant Gateway Dropouts<br>
-            • Automated Demographic &amp; Policy ID Self-Healing
-          </div>
         </div>
-
-        <!-- Pillar 5 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
-            5. Automated Secondary Crossover &amp; 835 Remit
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            Electronic Remittance Advice (ERA 835) postings dynamically trigger secondary claim creation. The system auto-populates Claim Adjustment Segments (CAS) with Contractual Obligation (CO) and Patient Responsibility (PR) amounts with zero manual lag.
-          </p>
-          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
-            • Same-Day Secondary Claim Generation<br>
-            • Accurate Coordination of Benefits (COB) Sequencing
-          </div>
-        </div>
-
-        <!-- Pillar 6 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-          </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
-            6. Continuous Payer Policy &amp; Bulletin Engine
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            Real-time synchronization with commercial carrier medical payment policies (UHC, BCBS, Aetna, Cigna, Humana) and quarterly CMS NCCI/MUE updates. Payer-specific bilateral rules, modifier hierarchies, and implant policies are codified instantly.
-          </p>
-          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
-            • Weekly Commercial Payer Bulletin Ingestion<br>
-            • ASC-Specific Payment Grouping &amp; Implant Rules
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
 
   <!-- ========================================================================
-       5. DYNAMIC VISUAL 1: INTERACTIVE EDI 837 SCRUBBING WORKFLOW
+       5. DARK CTA SECTION
        ======================================================================== -->
-  <section class="section section-dark" id="edi-workflow-visual">
+  <section class="dark-cta-section" id="cta-contact">
+    <!-- Decorative Wave Contour Lines (Nova Arc Accent Colors) -->
+    <svg class="dark-cta-bg-art" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M0 360C160 320 290 190 460 240C550 270 590 330 610 360" stroke="#1F6FEB" stroke-width="1.5" stroke-opacity="0.4" />
+      <path d="M0 330C150 290 280 170 450 220C540 250 580 310 610 340" stroke="#1F6FEB" stroke-width="1.5" stroke-opacity="0.35" />
+      <path d="M0 300C140 260 270 150 440 200C530 230 570 290 610 320" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.3" />
+      <path d="M0 270C130 230 260 130 430 180C520 210 560 270 610 300" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.25" />
+      <path d="M0 240C120 200 250 110 420 160C510 190 550 250 610 280" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.2" />
+      <path d="M0 210C110 170 240 90 410 140C500 170 540 230 610 260" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.15" />
+    </svg>
+
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Interactive Gateway Simulator</span>
-        <h2 class="section-title">EDI 837 Clean-Claim Scrubbing Workflow</h2>
-        <p class="section-subtitle">
-          Trace the automated lifecycle of an electronic claim from clinical EHR ingestion to clearinghouse 277CA acceptance and secondary crossover dispatch.
-        </p>
-      </div>
-
-      <!-- Scrubber Simulator Card -->
-      <div class="pillar-card" style="padding: 0; overflow: hidden; background: rgba(11, 19, 43, 0.95); box-shadow: var(--shadow-xl); border: 1px solid var(--border-medium); max-width: 1080px; margin: 0 auto var(--space-2xl);">
-        
-        <!-- Header Strip with AI Bridge Callout -->
-        <div style="background: var(--navy-primary); color: #FFFFFF; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; border-bottom: 2px solid var(--blue-accent);">
-          <div style="display: flex; align-items: center; gap: 12px;">
-            <div style="width: 10px; height: 10px; border-radius: 50%; background: #10B981; box-shadow: 0 0 8px #10B981;"></div>
-            <strong style="font-size: 1.05rem; color: #FFFFFF;">
-              Autonomous Claims Scrubber • EDI 837 Live Pipeline Monitor
-            </strong>
-          </div>
-          <div style="display: flex; align-items: center; gap: 12px;">
-            <span style="font-size: 0.8rem; color: var(--text-muted);">Gateway Status:</span>
-            <span style="font-size: 0.85rem; font-weight: 800; color: #10B981; background: rgba(16, 185, 129, 0.15); padding: 4px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(16, 185, 129, 0.3);">
-              99.4% First-Pass Clean
-            </span>
-            <a href="../ai-platform.html#ai-agents" class="btn btn-sm btn-secondary" style="font-size: 0.75rem; padding: 4px 10px; border-radius: var(--radius-sm); border-color: rgba(56, 189, 248, 0.4); color: #38BDF8;">
-              View AI Engine &rarr;
-            </a>
-          </div>
-        </div>
-
-        <!-- 4-Stage Workflow Steps Graphic -->
-        <div style="padding: var(--space-xl); border-bottom: 1px solid var(--border-light);">
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-md);">
-            
-            <div style="background: rgba(3, 7, 18, 0.6); padding: 16px; border-radius: var(--radius-md); border-left: 3px solid #38BDF8;">
-              <div style="font-size: 0.75rem; text-transform: uppercase; color: #38BDF8; font-weight: 800; margin-bottom: 4px;">Stage 01: Ingestion</div>
-              <strong style="font-size: 0.95rem; color: #FFFFFF; display: block; margin-bottom: 6px;">EHR Charge Intake &amp; SNIP 1–3</strong>
-              <p style="font-size: 0.8rem; color: #94A3B8; margin: 0; line-height: 1.4;">
-                Ingests locked charts from Epic, Cerner, and Athena. Validates mandatory loops, valid NPIs, and balancing segments.
-              </p>
-            </div>
-
-            <div style="background: rgba(3, 7, 18, 0.6); padding: 16px; border-radius: var(--radius-md); border-left: 3px solid #10B981;">
-              <div style="font-size: 0.75rem; text-transform: uppercase; color: #10B981; font-weight: 800; margin-bottom: 4px;">Stage 02: AI Scrubbing</div>
-              <strong style="font-size: 0.95rem; color: #FFFFFF; display: block; margin-bottom: 6px;">NCCI, LCD &amp; Payer Edit Engine</strong>
-              <p style="font-size: 0.8rem; color: #94A3B8; margin: 0; line-height: 1.4;">
-                Autonomous AI Scrubber executes 15,000+ rules, assigns modifiers (-25, -59, -XU), and verifies medical necessity.
-              </p>
-            </div>
-
-            <div style="background: rgba(3, 7, 18, 0.6); padding: 16px; border-radius: var(--radius-md); border-left: 3px solid #F59E0B;">
-              <div style="font-size: 0.75rem; text-transform: uppercase; color: #F59E0B; font-weight: 800; margin-bottom: 4px;">Stage 03: Gateway Dispatch</div>
-              <strong style="font-size: 0.95rem; color: #FFFFFF; display: block; margin-bottom: 6px;">Clearinghouse &amp; 277CA Triage</strong>
-              <p style="font-size: 0.8rem; color: #94A3B8; margin: 0; line-height: 1.4;">
-                Direct dispatch to Availity/Change. 277CA rejections trigger auto-remediation workflows within 4 operating hours.
-              </p>
-            </div>
-
-            <div style="background: rgba(3, 7, 18, 0.6); padding: 16px; border-radius: var(--radius-md); border-left: 3px solid #A855F7;">
-              <div style="font-size: 0.75rem; text-transform: uppercase; color: #A855F7; font-weight: 800; margin-bottom: 4px;">Stage 04: Adjudication</div>
-              <strong style="font-size: 0.95rem; color: #FFFFFF; display: block; margin-bottom: 6px;">835 Remit &amp; Crossover Split</strong>
-              <p style="font-size: 0.8rem; color: #94A3B8; margin: 0; line-height: 1.4;">
-                Payer approves claim. 835 ERA auto-populates CAS segments (CO/PR) to spawn instant secondary claim crossover.
-              </p>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Interactive Pipeline Case Switcher -->
-        <div style="padding: var(--space-lg) var(--space-xl); background: rgba(3, 7, 18, 0.4); border-bottom: 1px solid var(--border-light); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <span style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF;">Select Encounter Type:</span>
-            <div style="display: flex; gap: 6px; flex-wrap: wrap;">
-              <button type="button" class="btn btn-sm btn-primary active-spec-tab" id="tab-flow-1" onclick="switchWorkflowCase(1)" style="font-size: 0.75rem; padding: 6px 14px; border-radius: var(--radius-full);">
-                Ambulatory Surgery Center (ASC) Knee Arthroscopy
-              </button>
-              <button type="button" class="btn btn-sm btn-secondary" id="tab-flow-2" onclick="switchWorkflowCase(2)" style="font-size: 0.75rem; padding: 6px 14px; border-radius: var(--radius-full);">
-                Outpatient Multi-Specialty E/M + Minor Procedure
-              </button>
-              <button type="button" class="btn btn-sm btn-secondary" id="tab-flow-3" onclick="switchWorkflowCase(3)" style="font-size: 0.75rem; padding: 6px 14px; border-radius: var(--radius-full);">
-                Hospital Inpatient Institutional (837I / UB-04)
-              </button>
-            </div>
-          </div>
-          <span style="font-size: 0.75rem; font-family: monospace; color: #38BDF8;" id="case-transaction-id">
-            TX-837P-ASC-99120 • HIPAA 5010A1
-          </span>
-        </div>
-
-        <!-- Telemetry Data Stream View -->
-        <div style="padding: var(--space-xl);">
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-lg);">
-            
-            <!-- Raw vs Scrubbed EDI Segment Comparison -->
-            <div style="background: #030712; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 16px; font-family: 'Courier New', monospace; font-size: 0.75rem; color: #E2E8F0;">
-              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 8px; margin-bottom: 10px; font-weight: 700;">
-                <span style="color: #EF4444;">[Pre-Scrub Raw EDI Input]</span>
-                <span style="color: #94A3B8;">Status: Vulnerable</span>
-              </div>
-              <div style="color: #94A3B8; line-height: 1.5; white-space: pre-wrap;" id="raw-edi-display">CLM*ASC10492*4250.00***24:B:1*Y*A*Y*Y~
-SV1*HC:29881*2800.00*UN*1~
-SV1*HC:29877*950.00*UN*1~
-SV1*HC:C1713*500.00*UN*1~
-DTP*472*D8*20260918~</div>
-              <div style="margin-top: 12px; padding: 8px; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: var(--radius-sm); color: #FCA5A5; font-size: 0.72rem; line-height: 1.4;" id="raw-edi-warning">
-                ⚠️ Fatal Flaw: CPT 29877 unbundled without modifier -XU; C1713 missing electronic PWK implant invoice segment; Modifier -SG missing from POS 24 facility line.
-              </div>
-            </div>
-
-            <!-- Scrubbed Clean Claim Output -->
-            <div style="background: #030712; border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); padding: 16px; font-family: 'Courier New', monospace; font-size: 0.75rem; color: #E2E8F0;">
-              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(16, 185, 129, 0.2); padding-bottom: 8px; margin-bottom: 10px; font-weight: 700;">
-                <span style="color: #10B981;">[Nova Arc Autonomous Clean EDI Output]</span>
-                <span style="color: #10B981;">Status: 100% Validated</span>
-              </div>
-              <div style="color: #A7F3D0; line-height: 1.5; white-space: pre-wrap;" id="scrubbed-edi-display">CLM*ASC10492*4250.00***24:B:1*Y*A*Y*Y~
-PWK*OZ*BM***AC*INV-8839201~
-SV1*HC:29881:SG*2800.00*UN*1~
-SV1*HC:29877:XU:SG*950.00*UN*1~
-SV1*HC:C1713:SG*500.00*UN*1~
-DTP*472*D8*20260918~</div>
-              <div style="margin-top: 12px; padding: 8px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-sm); color: #6EE7B7; font-size: 0.72rem; line-height: 1.4;" id="scrubbed-edi-resolution">
-                ✓ Auto-Corrected: Appended modifier -SG for ASC facility billing; added -XU to debridement in distinct patellofemoral compartment; embedded PWK electronic invoice attachment segment.
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Bottom Telemetry Metric Strip -->
-          <div style="margin-top: var(--space-md); background: rgba(3, 7, 18, 0.5); padding: 12px 18px; border-radius: var(--radius-sm); border: 1px solid var(--border-light); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
-            <div style="font-size: 0.8rem; color: #94A3B8;">
-              <strong style="color: #FFFFFF;">Scrubber Latency:</strong> 0.24 seconds &nbsp;|&nbsp; 
-              <strong style="color: #FFFFFF;">Clearinghouse Acknowledgement:</strong> 999 Accepted &nbsp;|&nbsp; 
-              <strong style="color: #FFFFFF;">277CA Response:</strong> A1:19 (Adjudication Ready)
-            </div>
-            <span class="preview-item-tag tag-green" style="font-size: 0.75rem;">Adjudicated Clean</span>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
-       6. DYNAMIC VISUAL 2: PAYER-SPECIFIC EDIT RULE ENGINE
-       ======================================================================== -->
-  <section class="section section-light" id="payer-rules-engine">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Rule Engine Intelligence</span>
-        <h2 class="section-title">Payer-Specific Edit Rule Engine: Real-World Divergence</h2>
-        <p class="section-subtitle">
-          See how the EXACT same surgical encounter is scrubbed differently across commercial and government payers to prevent catastrophic technical rejections.
-        </p>
-      </div>
-
-      <!-- ====================================================================
-           PAYER-SPECIFIC RULE ENGINE EXPLAINER & 4-TIER ARCHITECTURE
-           ==================================================================== -->
-      <div style="background: #FFFFFF; border: 1px solid var(--border-medium); border-radius: var(--radius-lg); padding: var(--space-xl); margin-bottom: var(--space-xl); box-shadow: var(--shadow-sm);">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-md); flex-wrap: wrap; gap: 12px; border-bottom: 1px solid var(--border-light); padding-bottom: 14px;">
-          <div>
-            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--blue-accent); font-weight: 800; letter-spacing: 0.05em;">
-              Architectural Deep Dive &bull; 15,000+ Active Multi-Payer Rules
-            </span>
-            <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--navy-primary); margin: 4px 0 0 0;">
-              How the Payer-Specific Rule Engine Operates
-            </h3>
-          </div>
-          <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 6px 14px; border-radius: var(--radius-sm); font-size: 0.775rem; color: #065F46; font-weight: 700;">
-            Sub-Second Processing: 0.24s Per Encounter Batch
-          </div>
-        </div>
-
-        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: var(--space-lg);">
-          Unlike legacy clearinghouse scrubbers that only enforce rudimentary ANSI X12 syntax checks, Nova Arc's rule engine evaluates claims against a continuous library of <strong>15,000+ national, regional, and commercial payer policies</strong>. Our engine analyzes the unique contractual requirements of each payer ID (UnitedHealthcare, Anthem/BCBS, Aetna, Cigna, Humana, and Medicare Part A/B MACs), dynamically re-formatting billing loops, injecting required modifiers, and embedding digital attachments before initial transmission.
-        </p>
-
-        <!-- 4-Tier Pipeline Grid -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-md); margin-bottom: var(--space-lg);">
-          <div style="background: var(--bg-slate); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 16px;">
-            <div style="font-size: 0.725rem; font-weight: 800; color: var(--blue-accent); text-transform: uppercase; margin-bottom: 4px;">Tier 01: Ingestion</div>
-            <strong style="font-size: 0.9rem; color: var(--navy-primary); display: block; margin-bottom: 6px;">SNIP Levels 1–7 Validation</strong>
-            <p style="font-size: 0.775rem; color: var(--text-secondary); margin: 0; line-height: 1.45;">
-              Validates EDI syntax, segment structure, mandatory loop requirements, balancing segments, and valid NPI/taxonomy combinations.
-            </p>
-          </div>
-          <div style="background: var(--bg-slate); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 16px;">
-            <div style="font-size: 0.725rem; font-weight: 800; color: #10B981; text-transform: uppercase; margin-bottom: 4px;">Tier 02: Clinical Match</div>
-            <strong style="font-size: 0.9rem; color: var(--navy-primary); display: block; margin-bottom: 6px;">NCCI, LCD &amp; PTP Auditing</strong>
-            <p style="font-size: 0.775rem; color: var(--text-secondary); margin: 0; line-height: 1.45;">
-              Cross-references CMS National Correct Coding Initiative (NCCI) Procedure-to-Procedure (PTP) edits and Local Coverage Determinations.
-            </p>
-          </div>
-          <div style="background: var(--bg-slate); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 16px;">
-            <div style="font-size: 0.725rem; font-weight: 800; color: #F59E0B; text-transform: uppercase; margin-bottom: 4px;">Tier 03: Payer Rules</div>
-            <strong style="font-size: 0.9rem; color: var(--navy-primary); display: block; margin-bottom: 6px;">Commercial Policy Divergence</strong>
-            <p style="font-size: 0.775rem; color: var(--text-secondary); margin: 0; line-height: 1.45;">
-              Applies insurer-specific rules: single-line bilateral (-50) vs dual-line (-RT/-LT), mandatory modifier -SG, and PWK invoice linking.
-            </p>
-          </div>
-          <div style="background: var(--bg-slate); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 16px;">
-            <div style="font-size: 0.725rem; font-weight: 800; color: #8B5CF6; text-transform: uppercase; margin-bottom: 4px;">Tier 04: Scoring</div>
-            <strong style="font-size: 0.9rem; color: var(--navy-primary); display: block; margin-bottom: 6px;">Pre-Submission Confidence</strong>
-            <p style="font-size: 0.775rem; color: var(--text-secondary); margin: 0; line-height: 1.45;">
-              Assigns a machine-learning clean-claim probability score, guaranteeing only claims scoring &ge; 99.4% advance to gateway dispatch.
-            </p>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- ====================================================================
-           PRE-SUBMISSION CLEAN-CLAIM SCORING TELEMETRY (62% -> 99.4%)
-           ==================================================================== -->
-      <div style="background: #030712; border: 1px solid rgba(56, 189, 248, 0.25); border-radius: var(--radius-lg); padding: var(--space-xl); margin-bottom: var(--space-2xl); box-shadow: var(--shadow-xl);">
-        
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-md); flex-wrap: wrap; gap: 12px; border-bottom: 1px solid rgba(56, 189, 248, 0.2); padding-bottom: 16px;">
-          <div>
-            <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.3); padding: 4px 12px; border-radius: 999px; margin-bottom: 8px;">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-              <span style="font-size: 0.75rem; font-weight: 800; color: #38BDF8; text-transform: uppercase; letter-spacing: 0.05em;">
-                Telemetry Verification &bull; Matches AI Platform Standards
-              </span>
-            </div>
-            <h3 style="font-size: 1.35rem; font-weight: 800; color: #FFFFFF; margin: 0;">
-              Pre-Submission Clean-Claim Scoring: 62% &rarr; 99.4% Lift
-            </h3>
-          </div>
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <span style="font-size: 0.8rem; color: #94A3B8; font-weight: 600;">Sector Focus:</span>
-            <div style="display: flex; gap: 6px; background: rgba(15, 23, 42, 0.9); padding: 4px; border-radius: 8px; border: 1px solid rgba(56, 189, 248, 0.2);">
-              <button type="button" id="btn-scrub-asc" class="btn btn-sm btn-primary" onclick="setScoringSector('asc')" style="font-size: 0.75rem; padding: 4px 12px; border-radius: 6px; font-weight: 700;">
-                Ambulatory Surgery Centers (ASCs)
-              </button>
-              <button type="button" id="btn-scrub-hbg" class="btn btn-sm btn-secondary" onclick="setScoringSector('hbg')" style="font-size: 0.75rem; padding: 4px 12px; border-radius: 6px; font-weight: 600;">
-                Hospital-Based Groups (Anes/Rad)
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <p style="font-size: 0.875rem; color: #CBD5E1; line-height: 1.6; margin-bottom: 20px;">
-          Raw encounters ingested directly from scheduling systems have a baseline clean probability of <strong>62.0%</strong>. Nova Arc's rule engine executes sub-second remediation (<strong>0.24s</strong>), repairing fatal unbundling and missing invoice segments to boost the pre-submission score to <strong>99.4% clean claim confidence</strong>.
-        </p>
-
-        <!-- 3-Step Scoring Telemetry Cards -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px;">
-          
-          <!-- Step 1: Raw Ingestion Score (62.0%) -->
-          <div style="background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(239, 68, 68, 0.35); border-radius: 12px; padding: 20px; display: flex; flex-direction: column;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-              <span style="font-size: 0.75rem; font-weight: 700; color: #EF4444; text-transform: uppercase;">1. Raw Ingestion Baseline</span>
-              <span style="font-size: 0.725rem; background: rgba(239, 68, 68, 0.15); color: #EF4444; padding: 2px 8px; border-radius: 4px; font-weight: 700;">Fatal Denial Risk</span>
-            </div>
-            <div style="font-size: 2.35rem; font-weight: 800; color: #EF4444; line-height: 1; margin: 4px 0; font-family: monospace;">
-              62.0%
-            </div>
-            <div style="font-size: 0.775rem; color: #94A3B8; margin-bottom: 14px;">Pre-Scrub Clean Claim Probability</div>
-            <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 12px; flex-grow: 1;">
-              <strong style="color: #FCA5A5; font-size: 0.8rem; display: block; margin-bottom: 6px;">Identified Fatal Defects:</strong>
-              <ul id="scrub-raw-flaws" style="margin: 0; padding-left: 18px; font-size: 0.775rem; line-height: 1.55; color: #94A3B8;">
-                <li><strong>-16% PTP Unbundling:</strong> CPT 29877 debridement billed with 29881 meniscectomy lacking -XU distinct compartment modifier.</li>
-                <li><strong>-12% Missing Attachment:</strong> HCPCS C1713 anchor implant absent electronic PWK01/02 manufacturer invoice.</li>
-                <li><strong>-6% Missing Facility Indicator:</strong> POS 24 billed without commercial payer required modifier -SG.</li>
-                <li><strong>-4% COB Segment Imbalance:</strong> Secondary crossover adjustment CAS segments failing balancing rules.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Step 2: AI Rule Engine Remediation (0.24s) -->
-          <div style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.18) 0%, rgba(15, 23, 42, 0.95) 100%); border: 1.5px solid #38BDF8; border-radius: 12px; padding: 20px; display: flex; flex-direction: column;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-              <span style="font-size: 0.75rem; font-weight: 700; color: #38BDF8; text-transform: uppercase;">2. Sub-Second Autonomous Fix</span>
-              <span style="font-size: 0.725rem; background: rgba(56, 189, 248, 0.15); color: #38BDF8; padding: 2px 8px; border-radius: 4px; font-weight: 700;">+37.4% Score Lift</span>
-            </div>
-            <div style="font-size: 2.35rem; font-weight: 800; color: #38BDF8; line-height: 1; margin: 4px 0; font-family: monospace;">
-              0.24s
-            </div>
-            <div style="font-size: 0.775rem; color: #94A3B8; margin-bottom: 14px;">Automated Policy Remediation Latency</div>
-            <div style="border-top: 1px solid rgba(56, 189, 248, 0.2); padding-top: 12px; flex-grow: 1;">
-              <strong style="color: #38BDF8; font-size: 0.8rem; display: block; margin-bottom: 6px;">Payer-Specific Rule Actions:</strong>
-              <ul id="scrub-actions" style="margin: 0; padding-left: 18px; font-size: 0.775rem; line-height: 1.55; color: #CBD5E1;">
-                <li>Cross-references operative report; verifies separate patellofemoral compartment &amp; appends modifier -XU.</li>
-                <li>Extracts vendor implant invoice from materials management; embeds electronic PWK segment in Loop 2300.</li>
-                <li>Appends payer-mandated modifier -SG to line item pursuant to commercial contract terms.</li>
-                <li>Reconciles secondary payer coordination-of-benefits CAS segments (CO-45, PR-1, PR-2).</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Step 3: Clean Submission Score (99.4%) -->
-          <div style="background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(16, 185, 129, 0.35); border-radius: 12px; padding: 20px; display: flex; flex-direction: column;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-              <span style="font-size: 0.75rem; font-weight: 700; color: #34D399; text-transform: uppercase;">3. Pre-Submission Clean Score</span>
-              <span style="font-size: 0.725rem; background: rgba(16, 185, 129, 0.15); color: #34D399; padding: 2px 8px; border-radius: 4px; font-weight: 700;">Gateway Approved</span>
-            </div>
-            <div style="font-size: 2.35rem; font-weight: 800; color: #34D399; line-height: 1; margin: 4px 0; font-family: monospace;">
-              99.4%
-            </div>
-            <div style="font-size: 0.775rem; color: #94A3B8; margin-bottom: 14px;">First-Pass Clean Claim Acceptance</div>
-            <div style="border-top: 1px solid rgba(16, 185, 129, 0.2); padding-top: 12px; flex-grow: 1;">
-              <strong style="color: #34D399; font-size: 0.8rem; display: block; margin-bottom: 6px;">Gateway &amp; Adjudication Result:</strong>
-              <ul id="scrub-outcomes" style="margin: 0; padding-left: 18px; font-size: 0.775rem; line-height: 1.55; color: #A7F3D0;">
-                <li>ANSI X12 837P batch dispatches with 100% SNIP Level 1–7 validation.</li>
-                <li>277CA clearinghouse acceptance returned as A1:19 (Adjudication Ready).</li>
-                <li>100% elimination of avoidable CARC CO-97 / N56 bundling claim rejections.</li>
-                <li>Accelerated cash collection into provider bank lockbox within 12–14 days.</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Clinical Scenario Banner -->
-      <div style="background: #FFFFFF; border: 1px solid var(--border-medium); border-radius: var(--radius-lg); padding: var(--space-lg) var(--space-xl); margin-bottom: var(--space-xl); box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
-        <div>
-          <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--blue-accent); font-weight: 800; letter-spacing: 0.05em;">Benchmark Clinical Encounter</span>
-          <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--navy-primary); margin: 2px 0 4px 0;">
-            Ambulatory Surgery Center: Right Knee Arthroscopy with Lateral Meniscectomy &amp; Patellar Debridement
-          </h3>
-          <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">
-            Billed Codes: CPT 29881 (Meniscectomy), CPT 29877 (Chondroplasty Debridement), CPT C1713 (Implant Anchor), Place of Service 24 (ASC).
-          </p>
-        </div>
-        <div style="display: flex; gap: 8px;">
-          <span class="compliance-tag-pill" style="margin: 0; background: rgba(31, 111, 235, 0.08); color: var(--blue-accent); border-color: var(--blue-accent-border);">
-            High-Risk PTP Bundling Target
-          </span>
-        </div>
-      </div>
-
-      <!-- Payer Selection Tabs -->
-      <div style="display: flex; justify-content: center; gap: 8px; margin-bottom: var(--space-xl); flex-wrap: wrap;" role="tablist" aria-label="Payer Rule Specifics">
-        <button type="button" class="btn btn-sm btn-primary active-spec-tab" id="tab-payer-1" onclick="switchPayerRule(1)" style="font-weight: 700; border-radius: var(--radius-full); padding: 8px 18px;">
-          1. Medicare Part B (MAC Novitas / Palmetto)
-        </button>
-        <button type="button" class="btn btn-sm btn-secondary" id="tab-payer-2" onclick="switchPayerRule(2)" style="font-weight: 600; border-radius: var(--radius-full); padding: 8px 18px;">
-          2. UnitedHealthcare (UHC Commercial)
-        </button>
-        <button type="button" class="btn btn-sm btn-secondary" id="tab-payer-3" onclick="switchPayerRule(3)" style="font-weight: 600; border-radius: var(--radius-full); padding: 8px 18px;">
-          3. Blue Cross Blue Shield (BCBS State Plan)
-        </button>
-        <button type="button" class="btn btn-sm btn-secondary" id="tab-payer-4" onclick="switchPayerRule(4)" style="font-weight: 600; border-radius: var(--radius-full); padding: 8px 18px;">
-          4. Aetna Commercial ASC Policy
-        </button>
-      </div>
-
-      <!-- Payer Rule Deep-Dive Card -->
-      <div class="pillar-card" style="padding: 0; overflow: hidden; background: #FFFFFF; box-shadow: var(--shadow-xl); border: 1px solid var(--border-medium); max-width: 1080px; margin: 0 auto;">
-        
-        <!-- Payer Card Header -->
-        <div style="background: var(--navy-primary); color: #FFFFFF; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
-          <div>
-            <span style="font-size: 0.75rem; text-transform: uppercase; color: #38BDF8; font-weight: 700;" id="payer-tagline">
-              Medicare Part B • CMS NCCI &amp; ASC Payment Policy
-            </span>
-            <h4 style="font-size: 1.15rem; font-weight: 800; color: #FFFFFF; margin: 0;" id="payer-title">
-              Medicare Part B: NCCI Mutually Exclusive Edit &amp; Packaged Implant Rule
-            </h4>
-          </div>
-          <span style="font-size: 0.75rem; font-family: monospace; background: rgba(255, 255, 255, 0.1); padding: 4px 10px; border-radius: var(--radius-sm); color: #94A3B8;" id="payer-code-ref">
-            CMS PTP Column 1/2 • Modifier Indicator: 1
-          </span>
-        </div>
-
-        <!-- Comparative Grid: Without Scrubbing vs With Nova Arc -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
-          
-          <!-- Column 1: Conventional Scrubbing Result (Denial) -->
-          <div style="padding: var(--space-xl); background: #FFF5F5; border-right: 1px solid rgba(239, 68, 68, 0.2);">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md);">
-              <h4 style="font-size: 1rem; font-weight: 800; color: #991B1B; margin: 0;">
-                Generic Scrubber (Fatal Error)
-              </h4>
-              <span style="background: #FEE2E2; color: #991B1B; font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: var(--radius-sm);">
-                Denied &amp; Recouped
-              </span>
-            </div>
-
-            <div style="font-size: 0.85rem; color: #7F1D1D; line-height: 1.5; margin-bottom: var(--space-md);" id="payer-without-desc">
-              Generic scrubber submits CPT 29877 alongside 29881 without verifying compartment documentation. Medicare NCCI PTP edit triggers immediate line denial. Additionally, billing C1713 causes a claim-level rejection because Medicare packages ASC surgical implants into the primary APC rate.
-            </div>
-
-            <!-- Denial Metadata Box -->
-            <div style="background: #FFFFFF; border: 1px solid rgba(239, 68, 68, 0.3); border-radius: var(--radius-sm); padding: 12px; font-size: 0.78rem;">
-              <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                <span style="color: #991B1B; font-weight: 700;">Remit CARC/RARC:</span>
-                <span style="font-family: monospace;" id="payer-denial-carc">CO-97 (Bundled) + N56</span>
-              </div>
-              <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                <span style="color: #991B1B; font-weight: 700;">Financial Leakage:</span>
-                <span style="color: #EF4444; font-weight: 800;" id="payer-denial-loss">-$1,450.00 Lost Revenue</span>
-              </div>
-              <div style="display: flex; justify-content: space-between;">
-                <span style="color: #991B1B; font-weight: 700;">Re-Work Cost:</span>
-                <span style="color: #7F1D1D;" id="payer-denial-rework">35 Days Delayed Cash Flow</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Column 2: Nova Arc Payer-Specific Scrubber (Clean Pass) -->
-          <div style="padding: var(--space-xl); background: #F0FDF4;">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md);">
-              <h4 style="font-size: 1rem; font-weight: 800; color: #065F46; margin: 0;">
-                Nova Arc Payer Edit Engine (Clean Pass)
-              </h4>
-              <span style="background: #D1FAE5; color: #065F46; font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: var(--radius-sm);">
-                100% Adjudicated Clean
-              </span>
-            </div>
-
-            <div style="font-size: 0.85rem; color: #064E3B; line-height: 1.5; margin-bottom: var(--space-md);" id="payer-with-desc">
-              Nova Arc's rule engine cross-references the operative report: since debridement was performed in a separate compartment (patellofemoral vs. lateral meniscus), it appends modifier -XU (or -59) pursuant to CMS Transmittal 1421. It automatically suppresses the unpayable C1713 charge from Medicare Part B, avoiding whole-claim rejection.
-            </div>
-
-            <!-- Adjudication Metadata Box -->
-            <div style="background: #FFFFFF; border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-sm); padding: 12px; font-size: 0.78rem;">
-              <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                <span style="color: #065F46; font-weight: 700;">EDI Transformation:</span>
-                <span style="font-family: monospace; color: var(--blue-accent);" id="payer-fix-edi">SV1*HC:29877:XU:SG</span>
-              </div>
-              <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                <span style="color: #065F46; font-weight: 700;">Reimbursement Captured:</span>
-                <span style="color: #10B981; font-weight: 800;" id="payer-fix-recovered">100% ASC Allowed ($2,840.00)</span>
-              </div>
-              <div style="display: flex; justify-content: space-between;">
-                <span style="color: #065F46; font-weight: 700;">Remittance Speed:</span>
-                <span style="color: #065F46;" id="payer-fix-speed">Paid in 13 Days via 835 ERA</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Payer Policy Synthesis Bar -->
-        <div style="background: var(--bg-slate); padding: 16px 24px; border-top: 1px solid var(--border-medium); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
-          <div>
-            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-secondary); font-weight: 700;">Payer Rule Execution Note:</span>
-            <div style="font-size: 0.9rem; font-weight: 700; color: var(--navy-primary);" id="payer-rule-summary">
-              Automated NCCI PTP Edit Override with Modifier -XU &amp; ASC Package Suppression
-            </div>
-          </div>
-          <span class="preview-item-tag tag-blue" style="font-size: 0.75rem; font-weight: 700;" id="payer-policy-tag">
-            CMS Manual Pub 100-04, Ch. 14 §40
-          </span>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
-       7. SECTOR FOCUS: AMBULATORY SURGERY CENTERS (ASCs) & HOSPITAL-BASED GROUPS
-       ======================================================================== -->
-  <section class="section section-dark" id="sectors">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag" style="background: rgba(56, 189, 248, 0.15); color: #38BDF8; border-color: rgba(56, 189, 248, 0.3);">
-          Sector Focus: ASCs &amp; Hospital-Based Groups
-        </span>
-        <h2 class="section-title">Engineered for ASCs &amp; Hospital-Based Specialty Groups</h2>
-        <p class="section-subtitle">
-          High-complexity surgical facilities and hospital-based specialties require specialized multi-procedure discounting logic, concurrency calculations, and split-billing verification.
-        </p>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
-        
-        <!-- ASC Pillar 1 -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(31, 111, 235, 0.1); border: 1px solid var(--blue-accent-border); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: var(--blue-accent);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-          </div>
-          <span style="font-size: 0.75rem; font-weight: 700; color: #38BDF8; text-transform: uppercase;">ASC Setting</span>
-          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin: 4px 0 var(--space-xs) 0;">
-            Multi-Procedure Discounting &amp; Bilateral Sequencing
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
-            ASCs operate under strict multi-procedure discounting cascades (100% for primary, 50% for secondary). Nova Arc ranks CPT codes by fee schedule weight, avoiding downstream payer downcoding, and enforces carrier-specific bilateral rules (-50 vs -RT/-LT).
-          </p>
-          <ul style="margin-top: var(--space-md); padding-left: 18px; font-size: 0.8rem; color: #E2E8F0; line-height: 1.6;">
-            <li>Automated highest-value surgical procedure ranking (100% / 50% / 25%)</li>
-            <li>Payer-specific bilateral modifier translation (-50 single-line vs -RT/-LT dual-line)</li>
-            <li>Elimination of unbundled surgical tray and supply technical rejections</li>
-            <li>Accurate Place of Service 24 (ASC Facility) loop formatting</li>
-          </ul>
-        </div>
-
-        <!-- ASC Pillar 2 -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #10B981;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-          </div>
-          <span style="font-size: 0.75rem; font-weight: 700; color: #34D399; text-transform: uppercase;">ASC Setting</span>
-          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin: 4px 0 var(--space-xs) 0;">
-            Device-Intensive Procedures &amp; High-Cost Implants
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
-            High-cost surgical implants (HCPCS C1713, C1767, L8699) represent huge financial exposure when commercial carriers require manufacturer invoice attachments. Nova Arc's electronic PWK pipeline transmits invoices alongside the 837P file.
-          </p>
-          <ul style="margin-top: var(--space-md); padding-left: 18px; font-size: 0.8rem; color: #E2E8F0; line-height: 1.6;">
-            <li>Electronic invoice routing via EDI 275 and PWK01/02 segments</li>
-            <li>Commercial cost-plus reimbursement calculation (+10% to +15% margin)</li>
-            <li>Suppression of unpayable packaged implants on Medicare Part B</li>
-            <li>Device-to-procedure HCPCS code pairing verification</li>
-          </ul>
-        </div>
-
-        <!-- Hospital-Based Pillar 1: Anesthesia -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #F59E0B;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          </div>
-          <span style="font-size: 0.75rem; font-weight: 700; color: #F59E0B; text-transform: uppercase;">Hospital-Based Groups</span>
-          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin: 4px 0 var(--space-xs) 0;">
-            Anesthesia Base Units, Minutes &amp; Concurrency
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
-            Hospital anesthesia groups face massive underpayments from rounding errors, missing start/stop minutes, and flawed medical direction supervision modifiers (-AA, -QZ, -QK, -QX).
-          </p>
-          <ul style="margin-top: var(--space-md); padding-left: 18px; font-size: 0.8rem; color: #E2E8F0; line-height: 1.6;">
-            <li>Automated ASA base unit calculation + 15-minute exact block conversion</li>
-            <li>Medical direction concurrency auditing (1:1 to 1:4 ratios)</li>
-            <li>Physical status modifier capture (P1 through P6)</li>
-            <li>Add-on qualifying circumstances (+99100 extreme age, +99140 emergency)</li>
-          </ul>
-        </div>
-
-        <!-- Hospital-Based Pillar 2: Radiology -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(168, 85, 247, 0.1); border: 1px solid rgba(168, 85, 247, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #A855F7;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-          </div>
-          <span style="font-size: 0.75rem; font-weight: 700; color: #C084FC; text-transform: uppercase;">Hospital-Based Groups</span>
-          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin: 4px 0 var(--space-xs) 0;">
-            Radiology Split-Billing (26/TC) &amp; Imaging MPPR
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
-            Hospital radiologists must append Modifier -26 to separate professional interpretation from hospital technical facility costs, while defending against flawed commercial Multiple Procedure Payment Reductions.
-          </p>
-          <ul style="margin-top: var(--space-md); padding-left: 18px; font-size: 0.8rem; color: #E2E8F0; line-height: 1.6;">
-            <li>Automated Modifier -26 professional split verification for hospitalist reads</li>
-            <li>CT and MRI Multiple Procedure Payment Reduction (MPPR) contract audits</li>
-            <li>Clinical indication linkage for advanced diagnostic imaging LCD compliance</li>
-            <li>Zero commercial downcoding clawbacks on complex interventional radiology</li>
-          </ul>
-        </div>
-
-        <!-- Hospital-Based Pillar 3: Pathology -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #38BDF8;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-          </div>
-          <span style="font-size: 0.75rem; font-weight: 700; color: #38BDF8; text-transform: uppercase;">Hospital-Based Groups</span>
-          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin: 4px 0 var(--space-xs) 0;">
-            Pathology Specimen Container Blocks &amp; Stains
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
-            Surgical pathology groups lose significant revenue when payers inappropriately bundle multiple biopsy containers into a single surgical unit or reject secondary special stains.
-          </p>
-          <ul style="margin-top: var(--space-md); padding-left: 18px; font-size: 0.8rem; color: #E2E8F0; line-height: 1.6;">
-            <li>Exact specimen container unit auditing (CPT 88305 per separate tissue jar)</li>
-            <li>Special histochemical stains (CPT 88312, 88313) documentation verification</li>
-            <li>Immunohistochemistry (IHC) first-antibody vs each additional antibody validation</li>
-            <li>Payer-specific clinical diagnostic linkage to prevent bundling write-offs</li>
-          </ul>
-        </div>
-
+      <h2 class="dark-cta-title">
+        Ready to eliminate claim rejections and accelerate cash flow?
+      </h2>
+      <p class="dark-cta-subtitle">
+        Connect with our claims submission and scrubbing specialists today to streamline EDI 837 transmission and elevate first-pass acceptance.
+      </p>
+      <div>
+        <a href="../contact.html?service=claims-management-scrubbing" class="btn-cta-consult">
+          Request a Free Consultation <span aria-hidden="true">&rarr;</span>
+        </a>
       </div>
     </div>
   </section>
 
 
-  <!-- ========================================================================
-       8. SERVICE LEVEL AGREEMENTS (SLA STRIP)
-       ======================================================================== -->
-  <section style="background: var(--navy-deep); border-top: 1px solid var(--border-medium); border-bottom: 1px solid var(--border-medium); padding: var(--space-xl) 0;">
-    <div class="container">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-xl); text-align: center;">
-        
-        <div>
-          <div style="font-size: 2.2rem; font-weight: 800; color: #10B981; line-height: 1; margin-bottom: 6px;">99.4%</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">First-Pass Clean Claim Acceptance</div>
-          <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">Verified across all commercial and CMS clearinghouse portals</p>
-        </div>
-
-        <div>
-          <div style="font-size: 2.2rem; font-weight: 800; color: var(--blue-accent); line-height: 1; margin-bottom: 6px;">&lt; 12h</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Chart-to-Clearinghouse Dispatch</div>
-          <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">Automated streaming and hourly batch generation</p>
-        </div>
-
-        <div>
-          <div style="font-size: 2.2rem; font-weight: 800; color: #38BDF8; line-height: 1; margin-bottom: 6px;">&lt; 4h</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">277CA Rejection Triage SLA</div>
-          <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">Same-day electronic remediation and re-transmission</p>
-        </div>
-
-        <div>
-          <div style="font-size: 2.2rem; font-weight: 800; color: #A855F7; line-height: 1; margin-bottom: 6px;">100%</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Timely Filing Compliance SLA</div>
-          <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">Contractually backed zero-write-off covenant</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
-       9. FAQ ACCORDION (5 In-Depth Questions)
-       ======================================================================== -->
-  <section class="section section-light" id="faq">
-    <div class="container" style="max-width: 880px;">
-      <div class="section-header">
-        <span class="section-tag">Executive FAQ</span>
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">
-          Key operational questions regarding clearinghouse rejections, payer-specific edits, Autonomous Scrubber AI, and ASC billing.
-        </p>
-      </div>
-
-      <div class="accordion" id="faqAccordion">
-        
-        <!-- FAQ 1 -->
-        <div class="accordion-item">
-          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="accordion-title">What is the critical operational difference between a 277CA clearinghouse rejection and an 835 payer denial?</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>
-              A <strong>clearinghouse rejection (communicated via EDI 277CA or 999 Functional Acknowledgement)</strong> happens at the gateway level <em>before</em> the claim enters the payer's adjudication database. It is triggered by syntax errors, invalid member IDs, or unacknowledged NPIs. Because the claim was never formally received by the payer, the timely filing clock continues to run unchecked. A <strong>payer denial (communicated via EDI 835 remittance with CARC and RARC codes)</strong> occurs <em>after</em> the payer adjudicates the claim. Nova Arc triages 277CA rejections within <strong>4 operating hours</strong>, eliminating dormant gateway dropouts and preventing unnecessary administrative write-offs.
-            </p>
-          </div>
-        </div>
-
-        <!-- FAQ 2 -->
-        <div class="accordion-item">
-          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="accordion-title">How does this service integrate with the Autonomous Claims Scrubber AI Platform?</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>
-              Our Claims Management service is powered natively by the <a href="../ai-platform.html#ai-agents" style="color: var(--blue-accent); font-weight: 700;">Nova Arc Autonomous Claims Scrubber AI Platform</a>. The AI engine performs sub-second pre-bill predictive scoring against 15,000+ national and regional payer rules, dynamically suggesting or appending appropriate clinical modifiers (-25, -59, -XU), validating LCD/NCD diagnosis linkages, and flagging missing prior authorization numbers. Certified medical billing specialists oversee the AI queue, reviewing complex edge cases and maintaining 100% audit defensibility.
-            </p>
-          </div>
-        </div>
-
-        <!-- FAQ 3 -->
-        <div class="accordion-item">
-          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="accordion-title">How does Nova Arc manage ASC multiple procedure discounting and device-intensive implant pass-throughs?</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>
-              Ambulatory Surgery Centers operate under complex multi-procedure reduction cascades (e.g. 100% allowance for the highest-weighted surgical code, 50% for secondary codes). Nova Arc automatically sequences surgical procedures by contract allowance to protect maximum yield. For high-cost implants (such as anchors, screws, or mesh under HCPCS C1713 or L8699), our engine automatically suppresses packaged implant codes on Medicare claims while appending required manufacturer invoice attachments via electronic <strong>PWK01/PWK02 segments</strong> on commercial claims to ensure full pass-through payment.
-            </p>
-          </div>
-        </div>
-
-        <!-- FAQ 4 -->
-        <div class="accordion-item">
-          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="accordion-title">How frequently are payer-specific commercial edit rules (UHC, BCBS, Aetna, Cigna) updated?</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>
-              Our rules engine is maintained across three continuous tiers: (1) <strong>Federal CMS NCCI &amp; MUE Updates</strong> are synchronized quarterly upon official publication; (2) <strong>Medicare MAC Local and National Coverage Determinations (LCD/NCD)</strong> are refreshed weekly; and (3) <strong>Commercial Carrier Technical Bulletins (UHC, Anthem/BCBS, Aetna, Cigna, Humana)</strong> are reviewed and incorporated in real time as medical payment policies evolve.
-            </p>
-          </div>
-        </div>
-
-        <!-- FAQ 5 -->
-        <div class="accordion-item">
-          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="accordion-title">Does deploying Nova Arc require replacing our existing clearinghouse or practice management software?</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>
-              No. Nova Arc is an interoperable revenue intelligence layer that integrates seamlessly with your existing EHR and practice management technology (Epic, Cerner, MEDITECH, Athenahealth, eClinicalWorks, HST Pathways, SIS). We connect directly to your designated clearinghouses (Availity, Change Healthcare, Waystar, Experian) via secure SFTP feeds and real-time ANSI X12 endpoints without disrupting your payer contracts or bank deposit setups.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
-       10. CTA BAND & SHARED FOOTER
-       ======================================================================== -->
-  <section class="section" style="background: linear-gradient(135deg, #0B132B 0%, #1C2541 50%, #0B132B 100%); border-top: 1px solid var(--border-medium); padding: var(--space-3xl) 0;">
-    <div class="container">
-      <div style="max-width: 820px; margin: 0 auto; text-align: center;">
-        <span class="section-tag" style="background: rgba(31, 111, 235, 0.15); color: #38BDF8; border-color: rgba(56, 189, 248, 0.3);">
-          High-Velocity Claims Acceleration
-        </span>
-        <h2 style="font-size: 2.2rem; font-weight: 800; color: #FFFFFF; margin: var(--space-sm) 0 var(--space-md);">
-          Elevate Your First-Pass Clean Claim Rate to 99.4%
-        </h2>
-        <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.6; margin-bottom: var(--space-2xl);">
-          Eliminate clearinghouse dropouts, conquer payer-specific edit variations, and accelerate surgical cash flow with Nova Arc's Autonomous Claims Scrubber engine.
-        </p>
-        <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
-          <a href="../contact.html?service=claims-management-scrubbing" class="btn btn-primary btn-lg">
-            <span>Schedule a Confidential Claims Diagnostic</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-          <a href="../ai-platform.html#ai-agents" class="btn btn-secondary btn-lg">
-            <span>Explore Autonomous Scrubber AI Platform</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
+    <!-- ========================================================================
        FOOTER (Standardized Across All Pages)
        ======================================================================== -->
   <footer class="site-footer">
