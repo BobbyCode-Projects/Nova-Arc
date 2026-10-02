@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A/R Management &amp; Aged Claims Liquidation | 32% Days in A/R Reduction | Nova Arc</title>
-  <meta name="description" content="Systematic aged A/R work-queue prioritization, site-wide 32% reduction in Days in A/R, and contractual underpayment recovery engineered for Physician Groups and Specialty Practices.">
+  <title>Accounts Receivable (A/R) Management | Nova Arc</title>
+  <meta name="description" content="Accelerate A/R. Improve Resolution. Protect Revenue. Comprehensive accounts receivable management, insurance and patient follow-up, and aging analysis.">
   
   <!-- SEO & Social Meta Tags -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Nova Arc Healthcare Technologies">
-  <meta property="og:title" content="A/R Management &amp; Aged Claims Liquidation | Nova Arc">
-  <meta property="og:description" content="Algorithmic aged A/R work-queue prioritization, automated EDI 276/277 claim status checks, and 32% Days in A/R reduction for medical groups.">
+  <meta property="og:title" content="Accounts Receivable (A/R) Management | Nova Arc">
+  <meta property="og:description" content="Accelerate A/R. Improve Resolution. Protect Revenue. Comprehensive accounts receivable management, insurance and patient follow-up, and aging analysis.">
   <meta property="og:url" content="https://novaarc-rcm.com/services/ar-management.html">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="A/R Management &amp; Aged Claims Liquidation | Nova Arc">
+  <meta name="twitter:title" content="Accounts Receivable (A/R) Management | Nova Arc">
   <meta name="twitter:description" content="32% site-wide reduction in Days in A/R, algorithmic work-queue scoring, and underpayment recovery for Physician Groups.">
 
   <!-- Favicon -->
@@ -62,7 +62,13 @@
           {
             "@type": "ListItem",
             "position": 3,
-            "name": "A/R Management & Aged Claims Liquidation",
+            "name": "Patient Financial Services & Recovery",
+            "item": "https://novaarc-rcm.com/services/patient-financial-services.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Accounts Receivable (A/R) Management",
             "item": "https://novaarc-rcm.com/services/ar-management.html"
           }
         ]
@@ -70,7 +76,7 @@
       {
         "@type": "Service",
         "@id": "https://novaarc-rcm.com/services/ar-management.html#service",
-        "name": "A/R Management & Aged Claims Liquidation",
+        "name": "Accounts Receivable (A/R) Management Services",
         "serviceType": "Healthcare Revenue Cycle Management (RCM) - Accounts Receivable Recovery",
         "provider": {
           "@type": "Organization",
@@ -78,7 +84,7 @@
           "url": "https://novaarc-rcm.com/",
           "logo": "https://novaarc-rcm.com/images/nova-arc-logo.png"
         },
-        "description": "Comprehensive accounts receivable recovery platform delivering a 32% site-wide reduction in Days in A/R (DAR) through multi-factor work-queue prioritization, automated 276/277 status polling, and contractual underpayment recovery.",
+        "description": "Accelerate A/R, improve resolution, and protect revenue through structured insurance and patient follow-up, aging analysis, and account prioritization.",
         "areaServed": {
           "@type": "Country",
           "name": "United States"
@@ -465,82 +471,428 @@
     </div>
   </header>
 
+  <!-- ========================================================================
+       PAGE-SPECIFIC STYLES
+       ======================================================================== -->
+  <style>
+    /* Scoped Page Styles for Accounts Receivable (A/R) Management */
+    .ar-hero {
+      text-align: center;
+      padding: 72px 0 64px;
+      background: radial-gradient(circle at 50% 0%, rgba(31, 111, 235, 0.08) 0%, transparent 70%),
+                  linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .ar-breadcrumbs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .ar-breadcrumbs a {
+      color: var(--blue-accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+    .ar-breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+    .ar-breadcrumbs .separator {
+      color: var(--text-light);
+      font-size: 0.75rem;
+    }
+    .ar-tag {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      margin-bottom: 16px;
+    }
+    .ar-title {
+      font-size: clamp(2.3rem, 4.4vw, 3.6rem);
+      font-weight: 800;
+      color: var(--navy-primary);
+      line-height: 1.16;
+      letter-spacing: -0.025em;
+      max-width: 980px;
+      margin: 0 auto 20px;
+    }
+    .ar-subtitle {
+      font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+      color: var(--text-secondary);
+      line-height: 1.55;
+      font-weight: 400;
+      max-width: 820px;
+      margin: 0 auto 36px;
+    }
+    .btn-connect {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--blue-accent);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 14px 38px;
+      border-radius: 6px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(31, 111, 235, 0.35);
+      transition: all 0.2s ease;
+    }
+    .btn-connect:hover {
+      background: var(--blue-accent-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(31, 111, 235, 0.45);
+      color: #FFFFFF;
+    }
+
+    /* Overview Section */
+    .overview-section {
+      padding: 96px 0;
+      background: #FFFFFF;
+    }
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .overview-tag {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      margin-bottom: 24px;
+    }
+    .overview-paragraph {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+    .overview-paragraph:last-child {
+      margin-bottom: 0;
+    }
+    .overview-image-container {
+      position: relative;
+    }
+    .overview-image {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 12px 32px rgba(11, 37, 69, 0.09);
+      border: 1px solid var(--border-light);
+      display: block;
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+    }
+
+    /* Services Provided Section */
+    .services-provided-section {
+      padding: 96px 0 104px;
+      background: #F8FAFC;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .services-tag {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .services-headline {
+      font-size: clamp(2rem, 3.2vw, 2.75rem);
+      font-weight: 800;
+      color: var(--navy-primary);
+      text-align: center;
+      max-width: 880px;
+      margin: 0 auto 56px;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+    .services-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .service-feature-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 8px rgba(11, 37, 69, 0.03);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .service-feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(11, 37, 69, 0.08);
+      border-color: var(--blue-accent-border);
+    }
+    .service-card-icon-box {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      background: var(--blue-accent-light);
+      color: var(--blue-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      flex-shrink: 0;
+    }
+    .service-card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy-primary);
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+    .service-card-desc {
+      font-size: 0.925rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
+      flex-grow: 1;
+      margin-bottom: 20px;
+    }
+    .service-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--blue-accent);
+      text-decoration: none;
+      transition: color 0.15s ease;
+      margin-top: auto;
+    }
+    .service-card-link:hover {
+      color: var(--blue-accent-hover);
+      text-decoration: underline;
+    }
+
+    /* Benefits Section */
+    .benefits-section {
+      padding: 96px 0;
+      background: #FFFFFF;
+    }
+    .benefits-tag {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .benefits-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+    .benefit-col {
+      display: flex;
+      flex-direction: column;
+    }
+    .benefit-icon-wrapper {
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 22px;
+      color: var(--blue-accent);
+    }
+    .benefit-heading {
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--navy-primary);
+      line-height: 1.35;
+      margin-bottom: 14px;
+    }
+    .benefit-copy {
+      font-size: 0.935rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
+    }
+
+    /* Dark CTA Section */
+    .dark-cta-section {
+      background: linear-gradient(135deg, #051324 0%, #0B2545 60%, #133B6C 100%);
+      padding: 104px 0;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .dark-cta-bg-art {
+      position: absolute;
+      right: -80px;
+      bottom: -100px;
+      width: 650px;
+      height: 480px;
+      opacity: 0.22;
+      pointer-events: none;
+    }
+    .dark-cta-title {
+      font-size: clamp(2.3rem, 4vw, 3.4rem);
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      max-width: 820px;
+      margin: 0 auto 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .dark-cta-subtitle {
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+      color: #CBD5E1;
+      line-height: 1.65;
+      max-width: 740px;
+      margin: 0 auto 38px;
+      position: relative;
+      z-index: 1;
+    }
+    .btn-cta-consult {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--blue-accent);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 16px 36px;
+      border-radius: 6px;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(31, 111, 235, 0.4);
+      transition: all 0.2s ease;
+      position: relative;
+      z-index: 1;
+    }
+    .btn-cta-consult:hover {
+      background: var(--blue-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(31, 111, 235, 0.5);
+      color: #FFFFFF;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 1080px) {
+      .services-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .benefits-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px;
+      }
+    }
+    @media (max-width: 860px) {
+      .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .overview-image {
+        height: 320px;
+      }
+    }
+    @media (max-width: 640px) {
+      .services-cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .benefits-row {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .ar-hero {
+        padding: 48px 0 44px;
+      }
+      .overview-section,
+      .services-provided-section,
+      .benefits-section,
+      .dark-cta-section {
+        padding: 64px 0;
+      }
+    }
+  </style>
+
 
   <!-- ========================================================================
-       1. BREADCRUMB & 2. HERO SECTION
+       1. HERO SECTION
        ======================================================================== -->
-  <section class="page-hero" id="hero">
+  <section class="ar-hero" id="hero">
     <div class="container">
-      <!-- 1. Breadcrumb -->
-      <nav class="breadcrumb-nav" aria-label="Breadcrumbs">
+      <!-- Breadcrumb Navigation -->
+      <nav class="ar-breadcrumbs" aria-label="Breadcrumbs">
         <a href="../index.html">Home</a>
-        <span class="breadcrumb-separator">/</span>
+        <span class="separator">&gt;</span>
         <a href="../services.html">Services</a>
-        <span class="breadcrumb-separator">/</span>
-        <span style="color: var(--text-primary); font-weight: 600;">A/R Management &amp; Aged Claims Liquidation</span>
+        <span class="separator">&gt;</span>
+        <a href="patient-financial-services.html">Claims Management</a>
+        <span class="separator">&gt;</span>
+        <span style="color: var(--text-primary); font-weight: 600;">Accounts Receivable (A/R) Management</span>
       </nav>
 
-      <!-- 2. Hero Content -->
-      <div class="page-hero-content">
-        <span class="section-tag">Patient Financial Services • Service 03.2</span>
-        <h1 class="page-hero-title">
-          A/R Management &amp; Aged Claims Liquidation: Accelerate Cash Velocity
-        </h1>
-        <p class="page-hero-subtitle">
-          Transform dormant aged receivables into immediate working capital. Algorithmic work-queue prioritization, automated EDI 276/277 claim status tracking, and contractual underpayment recovery delivering a proven site-wide 32% reduction in Days in A/R for Physician Groups and Specialty Practices.
-        </p>
-
-        <!-- Master KPI Metric Banner -->
-        <div style="display: inline-flex; align-items: center; gap: 16px; background: rgba(31, 111, 235, 0.08); border: 1px solid var(--blue-accent-border); padding: 14px 24px; border-radius: var(--radius-lg); margin-bottom: var(--space-xl); box-shadow: var(--shadow-sm); flex-wrap: wrap;">
-          <div style="font-size: 2.1rem; font-weight: 800; color: #10B981; line-height: 1;">
-            -32%
-          </div>
-          <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.4;">
-            <strong style="color: var(--navy-primary); display: block; font-size: 1rem;">Site-Wide Days in A/R (DAR) Reduction</strong>
-            Compressing average receivable lifecycles from 48.2 days down to 27.4 days
-          </div>
-          <div style="border-left: 1px solid var(--border-medium); padding-left: 16px; margin-left: 4px;">
-            <span class="preview-item-tag tag-green" style="font-size: 0.8rem; font-weight: 800; padding: 6px 12px;">
-              $1.8B+ Recovered to Date
-            </span>
-          </div>
-        </div>
-
-        <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
-          <a href="../contact.html?service=ar-management" class="btn btn-primary btn-lg">
-            <span>Schedule an A/R Audit</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-          <a href="#workqueue-prioritization-visual" class="btn btn-secondary btn-lg">
-            <span>Aged Work-Queue Simulator &darr;</span>
-          </a>
-          <a href="#days-in-ar-explainer" class="btn btn-secondary btn-lg">
-            <span>32% Reduction Explainer &darr;</span>
-          </a>
-        </div>
+      <!-- Eyebrow: SERVICES -->
+      <div>
+        <span class="ar-tag">SERVICES</span>
       </div>
 
-      <!-- 4 Hero Stat Cards -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-lg); margin-top: var(--space-2xl);">
-        <div class="pillar-card" style="padding: var(--space-lg); text-align: left;">
-          <div style="font-size: 2rem; font-weight: 800; color: #10B981; line-height: 1; margin-bottom: 4px;">-32%</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: var(--navy-primary); margin-bottom: 2px;">Days in A/R Reduction</div>
-          <p style="font-size: 0.775rem; color: var(--text-secondary); margin: 0;">Average receivable drops from 48.2 to 27.4 days</p>
+      <!-- Main Title -->
+      <h1 class="ar-title">
+        Accounts Receivable (A/R) Management
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="ar-subtitle">
+        Accelerate A/R. Improve Resolution. Protect Revenue.
+      </p>
+
+      <!-- Connect With Us Button -->
+      <div>
+        <a href="../contact.html?service=ar-management" class="btn-connect">
+          Connect with us
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       2. OVERVIEW SECTION
+       ======================================================================== -->
+  <section class="overview-section" id="overview">
+    <div class="container">
+      <div class="overview-grid">
+        <!-- Left: Text Content -->
+        <div class="overview-content">
+          <span class="overview-tag">OVERVIEW</span>
+          <p class="overview-paragraph">
+            Effective A/R management requires disciplined follow-up, accurate account analysis, and timely resolution of outstanding balances. Our A/R Management services help healthcare organizations manage outstanding claims and balances across payer and patient accounts.
+          </p>
+          <p class="overview-paragraph">
+            Our teams analyze account status, identify barriers to payment, initiate appropriate follow-up, and work toward timely resolution.
+          </p>
         </div>
-        <div class="pillar-card" style="padding: var(--space-lg); text-align: left;">
-          <div style="font-size: 2rem; font-weight: 800; color: var(--blue-accent); line-height: 1; margin-bottom: 4px;">&lt; 9.5%</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: var(--navy-primary); margin-bottom: 2px;">A/R Over 90 Days</div>
-          <p style="font-size: 0.775rem; color: var(--text-secondary); margin: 0;">Reduced from MGMA industry average of 28.4%</p>
-        </div>
-        <div class="pillar-card" style="padding: var(--space-lg); text-align: left;">
-          <div style="font-size: 2rem; font-weight: 800; color: #38BDF8; line-height: 1; margin-bottom: 4px;">$1.8B+</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: var(--navy-primary); margin-bottom: 2px;">Liquidated Aged Cash</div>
-          <p style="font-size: 0.775rem; color: var(--text-secondary); margin: 0;">Uncollected aged claims converted to active liquidity</p>
-        </div>
-        <div class="pillar-card" style="padding: var(--space-lg); text-align: left;">
-          <div style="font-size: 2rem; font-weight: 800; color: #8B5CF6; line-height: 1; margin-bottom: 4px;">100%</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: var(--navy-primary); margin-bottom: 2px;">Fee Schedule Audit</div>
-          <p style="font-size: 0.775rem; color: var(--text-secondary); margin: 0;">Systematic recovery of silent contractual underpayments</p>
+
+        <!-- Right: Professional A/R Follow-Up Imagery -->
+        <div class="overview-image-container">
+          <img src="../images/pillar-denial-mitigation.jpg" alt="Accounts Receivable (A/R) Management Overview" class="overview-image" width="600" height="440">
         </div>
       </div>
     </div>
@@ -548,707 +900,276 @@
 
 
   <!-- ========================================================================
-       3. "THE PROBLEM" SECTION (The Aged A/R Drain on Medical Groups)
+       3. SERVICES PROVIDED SECTION
        ======================================================================== -->
-  <section class="section section-dark" id="problem">
+  <section class="services-provided-section" id="services-provided">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag" style="background: rgba(239, 68, 68, 0.15); color: #FCA5A5; border-color: rgba(239, 68, 68, 0.3);">
-          Aging Stagnation
-        </span>
-        <h2 class="section-title">The Silent Bleed of Unworked Aged Receivables</h2>
-        <p class="section-subtitle">
-          In medical practices and specialty clinics, billing staff are consumed by daily claim submission, leaving aged accounts to languish until statutory timely filing deadlines permanently eliminate cash recovery.
-        </p>
-      </div>
+      <!-- Section Header -->
+      <span class="services-tag">SERVICES PROVIDED</span>
+      <h2 class="services-headline">
+        Disciplined accounts receivable follow-up to resolve aged claims and protect earned revenue.
+      </h2>
 
-      <div class="pillars-grid">
-        
-        <!-- Pain Point 1 -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div class="pillar-icon-box" style="background: rgba(239, 68, 68, 0.1); color: #EF4444; border: 1px solid rgba(239, 68, 68, 0.3);">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <!-- 10 Service Cards Grid -->
+      <div class="services-cards-grid">
+        <!-- Service 1 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Insurance A/R follow-up</h3>
+          <p class="service-card-desc">
+            Systematic outreach and inquiries directed to commercial, Medicare, Medicaid, and managed care payers to resolve aged, delayed, and stalled claims.
+          </p>
+          <a href="../contact.html?service=ar-management" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Patient A/R follow-up</h3>
+          <p class="service-card-desc">
+            Compassionate, professional patient communication regarding deductibles, coinsurance balances, payment options, and transparent billing inquiries.
+          </p>
+          <a href="../contact.html?service=ar-management" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
               <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
           </div>
-          <span class="pillar-number" style="color: #EF4444;">EXPOSURE 01</span>
-          <h3 style="font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-sm);">
-            The 90+ Day Aging Black Hole &amp; Timely Filing Drops
-          </h3>
-          <p style="font-size: 0.875rem; color: #CBD5E1; line-height: 1.6; margin-bottom: var(--space-md);">
-            As claims age past 60 and 90 days, collectability drops exponentially. Without automated multi-factor prioritization, billing clerks cherry-pick easy low-dollar claims while high-value claims slip past payer timely filing deadlines (CARC 29), resulting in catastrophic, irreversible bad debt write-offs.
+          <h3 class="service-card-title">Aging analysis</h3>
+          <p class="service-card-desc">
+            Comprehensive segmentation and trend analysis across 30, 60, 90, and 120+ day aging buckets to isolate revenue bottlenecks.
           </p>
-          <div style="font-size: 0.8rem; font-weight: 700; color: #FCA5A5; background: rgba(239, 68, 68, 0.1); padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(239, 68, 68, 0.2);">
-            Financial Risk: Over 25% of Practice Cash Stalled in 90+ Day Aging
-          </div>
+          <a href="../contact.html?service=ar-management" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
         </div>
 
-        <!-- Pain Point 2 -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div class="pillar-icon-box" style="background: rgba(245, 158, 11, 0.1); color: #F59E0B; border: 1px solid rgba(245, 158, 11, 0.3);">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+        <!-- Service 4 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
             </svg>
           </div>
-          <span class="pillar-number" style="color: #F59E0B;">EXPOSURE 02</span>
-          <h3 style="font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-sm);">
-            Payer "Pending" Traps &amp; Wasted Manual Call Time
-          </h3>
-          <p style="font-size: 0.875rem; color: #CBD5E1; line-height: 1.6; margin-bottom: var(--space-md);">
-            Insurers frequently leave clean claims in "pending additional documentation" or "in review" status without issuing an official 835 denial. In-house billers waste 45+ minutes on hold per call just to hear scripted status responses, while practice days in A/R swell uncontrollably.
+          <h3 class="service-card-title">Account prioritization</h3>
+          <p class="service-card-desc">
+            Algorithmic scoring evaluating dollar thresholds, filing deadlines, payer behavior, and collection probability to target high-impact accounts first.
           </p>
-          <div style="font-size: 0.8rem; font-weight: 700; color: #FCD34D; background: rgba(245, 158, 11, 0.1); padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(245, 158, 11, 0.2);">
-            Operational Risk: 60+ Staff Hours Wasted Weekly on Routine Payer Status Calls
-          </div>
+          <a href="../contact.html?service=ar-management" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
         </div>
 
-        <!-- Pain Point 3 -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div class="pillar-icon-box" style="background: rgba(56, 189, 248, 0.1); color: #38BDF8; border: 1px solid rgba(56, 189, 248, 0.3);">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="12" y1="1" x2="12" y2="23"></line>
-              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+        <!-- Service 5 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
             </svg>
           </div>
-          <span class="pillar-number" style="color: #38BDF8;">EXPOSURE 03</span>
-          <h3 style="font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-sm);">
-            Silent Contractual Underpayments &amp; Short Pays
-          </h3>
-          <p style="font-size: 0.875rem; color: #CBD5E1; line-height: 1.6; margin-bottom: var(--space-md);">
-            Payers quietly short-pay physician claims by applying incorrect fee schedules, miscalculating multiple procedure payment reductions (MPPR), or ignoring bilateral surgical modifiers. Because a partial payment was received, the claim closes unnoticed, leaking 3% to 7% of net clinic revenue.
+          <h3 class="service-card-title">Claim status verification</h3>
+          <p class="service-card-desc">
+            Multi-channel status checks utilizing automated EDI 276/277 transactions, payer web portals, and direct representative verification.
           </p>
-          <div style="font-size: 0.8rem; font-weight: 700; color: #7DD3FC; background: rgba(56, 189, 248, 0.1); padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(56, 189, 248, 0.2);">
-            Revenue Leak: $75,000 to $180,000 Annually per Physician in Unclaimed Variances
-          </div>
+          <a href="../contact.html?service=ar-management" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
         </div>
 
+        <!-- Service 6 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Payer follow-up</h3>
+          <p class="service-card-desc">
+            Dedicated phone and portal follow-up with payer provider relations teams to expedite adjudication and resolve pending documentation requests.
+          </p>
+          <a href="../contact.html?service=ar-management" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 7 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="11" y1="8" x2="11" y2="14"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Outstanding balance research</h3>
+          <p class="service-card-desc">
+            Deep-dive forensic review identifying root causes for non-payment, including incorrect billing data, missing attachments, or eligibility discrepancies.
+          </p>
+          <a href="../contact.html?service=ar-management" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 8 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Account documentation</h3>
+          <p class="service-card-desc">
+            Thorough, standardized note-taking within EHR and billing systems detailing all contact attempts, reference numbers, and next actionable steps.
+          </p>
+          <a href="../contact.html?service=ar-management" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 9 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+              <polyline points="17 6 23 6 23 12"></polyline>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Escalation management</h3>
+          <p class="service-card-desc">
+            Structured workflows escalating uncooperative payers, chronic processing delays, or high-dollar balance disputes to senior supervisory specialists.
+          </p>
+          <a href="../contact.html?service=ar-management" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 10 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+          </div>
+          <h3 class="service-card-title">A/R reporting and productivity monitoring</h3>
+          <p class="service-card-desc">
+            Executive dashboards and operational KPIs tracking Days in A/R (DAR), cash velocity, collector productivity, and resolution turnaround times.
+          </p>
+          <a href="../contact.html?service=ar-management" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
       </div>
     </div>
   </section>
 
 
   <!-- ========================================================================
-       4. COMPREHENSIVE ARCHITECTURE: 6 PILLARS OF A/R LIQUIDATION
+       4. BENEFITS SECTION
        ======================================================================== -->
-  <section class="section section-light" id="pillars">
+  <section class="benefits-section" id="benefits">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Recovery Architecture</span>
-        <h2 class="section-title">Comprehensive Architecture: 6 Pillars of A/R Liquidation</h2>
-        <p class="section-subtitle">
-          How Nova Arc achieves an average 32% reduction in Days in A/R through algorithmic work-queue scoring, automated status checks, and systematic aged claims liquidation.
-        </p>
-      </div>
+      <!-- Section Tag -->
+      <span class="benefits-tag">BENEFITS</span>
 
-      <div class="pillars-grid">
-        
-        <!-- Pillar 1 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+      <!-- 4 Columns Grid -->
+      <div class="benefits-row">
+        <!-- Benefit 1 -->
+        <div class="benefit-col">
+          <div class="benefit-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+              <polyline points="17 6 23 6 23 12"></polyline>
+            </svg>
           </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
-            1. Multi-Factor Work-Queue Prioritization Engine
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            Proprietary scoring algorithms rank every outstanding claim daily based on recoverable dollar balance, payer timely filing countdown, historical collectibility velocity, and clinical urgency—ensuring high-yield claims are worked first.
+          <h3 class="benefit-heading">Improve A/R Performance</h3>
+          <p class="benefit-copy">
+            Structured follow-up helps move outstanding accounts toward resolution.
           </p>
-          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
-            • Dynamic Priority Scoring Algorithm<br>
-            • Elimination of Staff Cherry-Picking
-          </div>
         </div>
 
-        <!-- Pillar 2 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        <!-- Benefit 2 -->
+        <div class="benefit-col">
+          <div class="benefit-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
           </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
-            2. Automated EDI 276/277 Status Polling &amp; RPA Bots
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            Sub-second electronic claim status queries (EDI 276/277) combined with secure payer portal RPA bots interrogate claim adjudication pipelines 24/7, pulling adjudication dates, check numbers, and missing documentation notices without telephone delays.
+          <h3 class="benefit-heading">Reduce Aging Inventory</h3>
+          <p class="benefit-copy">
+            Prioritized work helps address older and higher-value accounts more effectively.
           </p>
-          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
-            • 100% Automated Claim Tracking<br>
-            • Zero Phone Hold Time on Routine Claims
-          </div>
         </div>
 
-        <!-- Pillar 3 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+        <!-- Benefit 3 -->
+        <div class="benefit-col">
+          <div class="benefit-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
           </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
-            3. Systematic Aging Bucket Liquidation (30–120+ Days)
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            Dedicated aged A/R task forces systematically sweep 30, 60, 90, and 120+ day buckets. Every claim receives definitive disposition—cleared for payment, appealed with evidence, or rebilled with corrections—driving &gt; 90-day A/R below 9.5%.
+          <h3 class="benefit-heading">Accelerate Reimbursement</h3>
+          <p class="benefit-copy">
+            Timely payer follow-up can help reduce unnecessary payment delays.
           </p>
-          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
-            • Bucket-Specific Resolution Playbooks<br>
-            • Sub-30-Day Liquidation Velocity
-          </div>
         </div>
 
-        <!-- Pillar 4 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        <!-- Benefit 4 -->
+        <div class="benefit-col">
+          <div class="benefit-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
           </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
-            4. Contractual Fee Schedule Underpayment Auditing
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            Automated remittance audits compare every paid line item against your practice's contracted commercial fee schedules. Underpayment variances trigger immediate automated demand letters and re-adjudication requests to reclaim short-paid revenue.
+          <h3 class="benefit-heading">Improve Financial Visibility</h3>
+          <p class="benefit-copy">
+            Consistent account documentation provides better insight into A/R status and barriers.
           </p>
-          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
-            • Line-Item Contract Rate Verification<br>
-            • Automated Underpayment Variance Claims
-          </div>
         </div>
-
-        <!-- Pillar 5 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-          </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
-            5. Senior Payer Escalation Task Forces
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            When claims stall due to payer clearinghouse snags or complex coordination of benefits disputes, senior RCM dispute coordinators engage payer provider-relations managers and medical directors directly to enforce timely settlement.
-          </p>
-          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
-            • Direct Payer Provider-Relations Escalation<br>
-            • State Prompt Pay Statutory Interest Demands
-          </div>
-        </div>
-
-        <!-- Pillar 6 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
-          </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
-            6. Closed-Loop Denial Prevention Feedback
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            A/R recovery insights feed directly back to front-end registration, clinical documentation, and claim scrubbers. Recurring payer delays are pinpointed and resolved before future encounters take place, permanently sustaining lower Days in A/R.
-          </p>
-          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
-            • Practice Executive A/R Dashboards<br>
-            • Root-Cause Feedback to Clinic Front Desks
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
 
   <!-- ========================================================================
-       5. DYNAMIC VISUAL 1: AGED A/R WORK-QUEUE PRIORITIZATION SIMULATOR
+       5. DARK CTA SECTION
        ======================================================================== -->
-  <section class="section section-dark" id="workqueue-prioritization-visual">
+  <section class="dark-cta-section" id="cta-contact">
+    <!-- Decorative Wave Contour Lines (Nova Arc Accent Colors) -->
+    <svg class="dark-cta-bg-art" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M0 360C160 320 290 190 460 240C550 270 590 330 610 360" stroke="#1F6FEB" stroke-width="1.5" stroke-opacity="0.4" />
+      <path d="M0 330C150 290 280 170 450 220C540 250 580 310 610 340" stroke="#1F6FEB" stroke-width="1.5" stroke-opacity="0.35" />
+      <path d="M0 300C140 260 270 150 440 200C530 230 570 290 610 320" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.3" />
+      <path d="M0 270C130 230 260 130 430 180C520 210 560 270 610 300" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.25" />
+      <path d="M0 240C120 200 250 110 420 160C510 190 550 250 610 280" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.2" />
+      <path d="M0 210C110 170 240 90 410 140C500 170 540 230 610 260" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.15" />
+    </svg>
+
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag" style="background: rgba(56, 189, 248, 0.15); color: #38BDF8; border-color: rgba(56, 189, 248, 0.3);">
-          Interactive Queue Simulator
-        </span>
-        <h2 class="section-title">Aged A/R Work-Queue Prioritization Engine</h2>
-        <p class="section-subtitle">
-          Experience how Nova Arc's algorithmic scoring engine prioritizes thousands of aged physician claims in real time—maximizing cash yield while preventing timely filing expirations.
-        </p>
-      </div>
-
-      <!-- Algorithmic Priority Formula Banner -->
-      <div style="background: rgba(31, 111, 235, 0.12); border: 1px solid var(--blue-accent-border); border-radius: var(--radius-lg); padding: var(--space-lg) var(--space-xl); margin-bottom: var(--space-xl); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; box-shadow: var(--shadow-sm);">
-        <div>
-          <span style="font-size: 0.75rem; text-transform: uppercase; color: #38BDF8; font-weight: 800; letter-spacing: 0.05em;">Multi-Factor Scoring Algorithm</span>
-          <h3 style="font-size: 1.05rem; font-weight: 800; color: #FFFFFF; margin: 2px 0 4px 0;">
-            Dynamic Priority Score = (Balance &times; 35%) + (Timely Filing Urgency &times; 30%) + (Payer Velocity &times; 20%) + (Aging Weight &times; 15%)
-          </h3>
-          <p style="font-size: 0.85rem; color: #CBD5E1; margin: 0;">
-            Every outstanding claim is dynamically evaluated each morning. Claims with impending statutory filing expirations or significant underpayments rise to the top of specialist workqueues.
-          </p>
-        </div>
-        <div>
-          <span class="preview-item-tag tag-green" style="font-size: 0.8rem; font-weight: 800; padding: 6px 14px;">
-            Active Liquidation Algorithm
-          </span>
-        </div>
-      </div>
-
-      <!-- Workqueue Simulator Card -->
-      <div class="pillar-card" style="padding: 0; overflow: hidden; background: rgba(11, 19, 43, 0.95); box-shadow: var(--shadow-xl); border: 1px solid var(--border-medium); max-width: 1080px; margin: 0 auto var(--space-2xl);">
-        
-        <!-- Header Strip -->
-        <div style="background: var(--navy-primary); color: #FFFFFF; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; border-bottom: 2px solid var(--blue-accent);">
-          <div style="display: flex; align-items: center; gap: 12px;">
-            <div style="width: 10px; height: 10px; border-radius: 50%; background: #10B981; box-shadow: 0 0 8px #10B981;"></div>
-            <strong style="font-size: 1.05rem; color: #FFFFFF;">
-              Live Practice Work-Queue • Algorithmic Claim Liquidation Pipeline
-            </strong>
-          </div>
-          <div style="display: flex; align-items: center; gap: 12px;">
-            <span style="font-size: 0.8rem; color: #94A3B8;">Queue Velocity:</span>
-            <span style="font-size: 0.85rem; font-weight: 800; color: #10B981; background: rgba(16, 185, 129, 0.15); padding: 4px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(16, 185, 129, 0.3);">
-              Sub-24h Action Cycle
-            </span>
-          </div>
-        </div>
-
-        <!-- Queue Bucket Switcher Tabs -->
-        <div style="padding: var(--space-lg) var(--space-xl); background: rgba(3, 7, 18, 0.4); border-bottom: 1px solid var(--border-light); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
-          <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-            <span style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF;">Select Work-Queue:</span>
-            <div style="display: flex; gap: 6px; flex-wrap: wrap;">
-              <button type="button" class="btn btn-sm btn-primary active-spec-tab" id="tab-queue-1" onclick="switchQueue(1)" style="font-size: 0.75rem; padding: 6px 14px; border-radius: var(--radius-full);">
-                Queue 1: Critical Timely Filing Urgency (90–120 Days)
-              </button>
-              <button type="button" class="btn btn-sm btn-secondary" id="tab-queue-2" onclick="switchQueue(2)" style="font-size: 0.75rem; padding: 6px 14px; border-radius: var(--radius-full);">
-                Queue 2: High-Dollar In-Office Surgical Claims (&gt; $5,000)
-              </button>
-              <button type="button" class="btn btn-sm btn-secondary" id="tab-queue-3" onclick="switchQueue(3)" style="font-size: 0.75rem; padding: 6px 14px; border-radius: var(--radius-full);">
-                Queue 3: Contractual Underpayment Variances (Short-Pays)
-              </button>
-              <button type="button" class="btn btn-sm btn-secondary" id="tab-queue-4" onclick="switchQueue(4)" style="font-size: 0.75rem; padding: 6px 14px; border-radius: var(--radius-full);">
-                Queue 4: Dormant Payer "Pending" Traps (EDI 277 Status)
-              </button>
-            </div>
-          </div>
-          <span style="font-size: 0.75rem; font-family: monospace; color: #38BDF8;" id="queue-status-metric">
-            Score Range: 94.8 / 100 • Highest Urgency
-          </span>
-        </div>
-
-        <!-- Telemetry Data Stream View -->
-        <div style="padding: var(--space-xl);">
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-lg);">
-            
-            <!-- Outstanding Claim Dossier -->
-            <div style="background: #030712; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 16px; font-family: 'Courier New', monospace; font-size: 0.75rem; color: #E2E8F0;">
-              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 8px; margin-bottom: 10px; font-weight: 700;">
-                <span style="color: #38BDF8;" id="queue-claim-id">[Claim ID: CLM-9024810]</span>
-                <span style="color: #EF4444;" id="queue-claim-urgency">Filing Deadline: 12 Days Left</span>
-              </div>
-              <div style="color: #94A3B8; line-height: 1.6; white-space: pre-wrap;" id="queue-claim-dossier">SPECIALTY:  Orthopedic Surgery Group (5 Providers)
-PAYER:      UnitedHealthcare Commercial PPO
-PROCEDURES: CPT 29881 (Meniscectomy) + CPT 29877 (Debridement)
-ORIG DATE:  06/18/2026 (Age: 98 Days in A/R)
-BALANCE:    $6,840.00 Outstanding
-STATUS:     Payer Stalled • Clearinghouse 277 Edit A4:19</div>
-              <div style="margin-top: 12px; padding: 8px; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: var(--radius-sm); color: #FCA5A5; font-size: 0.72rem; line-height: 1.4;" id="queue-risk-note">
-                ⚠️ Timely Filing Risk: UHC commercial policy enforces a strict 120-day filing cutoff. If not re-adjudicated within 12 days, $6,840.00 will become an unrecoverable contractual write-off.
-              </div>
-            </div>
-
-            <!-- Algorithmic Action Plan & Recovery Velocity -->
-            <div style="background: #030712; border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); padding: 16px; font-family: 'Courier New', monospace; font-size: 0.75rem; color: #E2E8F0;">
-              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(16, 185, 129, 0.2); padding-bottom: 8px; margin-bottom: 10px; font-weight: 700;">
-                <span style="color: #10B981;">[Nova Arc Targeted Action Plan]</span>
-                <span style="color: #10B981;" id="queue-score-badge">Priority Score: 96.4/100</span>
-              </div>
-              <div style="color: #A7F3D0; line-height: 1.6; white-space: pre-wrap;" id="queue-action-plan">ACTION:      Automated 276 Query + Escalated Phone Push
-DISPATCH:    Senior Surgical A/R Specialist Pod
-INTERVENTION:Payer claimed missing op-report; auto-harvested from
-             practice EHR and transmitted via EDI 275 attachment.
-TIMELINE:    Payment commitment confirmed in 3 business days
-PROJECTED:   $6,840.00 100% Recaptured without Write-Off</div>
-              <div style="margin-top: 12px; padding: 8px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-sm); color: #6EE7B7; font-size: 0.72rem; line-height: 1.4;" id="queue-resolution-note">
-                ✓ Liquidation Outcome: Operative records paired with proof of original timely electronic submission (277CA acceptance timestamp). Payer forced to adjudicate immediately.
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Bottom Telemetry Metric Strip -->
-          <div style="margin-top: var(--space-md); background: rgba(3, 7, 18, 0.5); padding: 12px 18px; border-radius: var(--radius-sm); border: 1px solid var(--border-light); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
-            <div style="font-size: 0.8rem; color: #94A3B8;" id="queue-meta-strip">
-              <strong style="color: #FFFFFF;">Batch Size:</strong> 42 Accounts in Queue &nbsp;|&nbsp; 
-              <strong style="color: #FFFFFF;">Total Exposure:</strong> $184,200.00 &nbsp;|&nbsp; 
-              <strong style="color: #FFFFFF;">Action SLA:</strong> Worked Within 4 Operating Hours
-            </div>
-            <span class="preview-item-tag tag-green" style="font-size: 0.75rem;" id="queue-action-tag">
-              Status: Active Priority Dispatch
-            </span>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
-       6. DYNAMIC VISUAL 2: DAYS-IN-A/R REDUCTION & FINANCIAL MODELING EXPLAINER
-       ======================================================================== -->
-  <section class="section section-light" id="days-in-ar-explainer">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Site-Wide Benchmark</span>
-        <h2 class="section-title">The 32% Days-in-A/R Reduction Explainer</h2>
-        <p class="section-subtitle">
-          How Nova Arc compresses the entire medical practice revenue cycle—moving groups from the industry average of 48.2 days down to an elite 27.4 days in A/R.
-        </p>
-      </div>
-
-      <!-- Master 32% Reduction Benchmark Card -->
-      <div style="background: #FFFFFF; border: 1px solid var(--border-medium); border-radius: var(--radius-lg); padding: var(--space-xl); margin-bottom: var(--space-xl); box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
-        <div style="display: flex; align-items: center; gap: 24px;">
-          <div style="text-align: center; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 18px 24px; border-radius: var(--radius-md);">
-            <div style="font-size: 2.8rem; font-weight: 800; color: #10B981; line-height: 1;">-32%</div>
-            <div style="font-size: 0.8rem; font-weight: 700; color: #065F46; text-transform: uppercase; margin-top: 4px;">Days in A/R Drop</div>
-          </div>
-          <div>
-            <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--navy-primary); margin: 0 0 6px 0;">
-              Site-Wide Operating Performance Covenant
-            </h3>
-            <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0; max-width: 650px; line-height: 1.5;">
-              Across hundreds of specialty practices and physician groups nationwide, Nova Arc reduces Days in A/R from an average of <strong>48.2 days down to 27.4 days</strong> within 90 days of onboarding—unlocking an average of <strong>$420,000 in immediate working capital</strong> per 10-physician group.
-            </p>
-          </div>
-        </div>
-        <div>
-          <span class="compliance-tag-pill" style="margin: 0; background: rgba(31, 111, 235, 0.08); color: var(--blue-accent); border-color: var(--blue-accent-border);">
-            MGMA Better Performer Benchmark
-          </span>
-        </div>
-      </div>
-
-      <!-- Specialty Practice Impact Switcher -->
-      <div style="display: flex; justify-content: center; gap: 8px; margin-bottom: var(--space-xl); flex-wrap: wrap;" role="tablist" aria-label="Specialty Modeling">
-        <button type="button" class="btn btn-sm btn-primary active-spec-tab" id="tab-model-1" onclick="switchModel(1)" style="font-weight: 700; border-radius: var(--radius-full); padding: 8px 18px;">
-          Orthopedic &amp; Spine Practice (8 Providers)
-        </button>
-        <button type="button" class="btn btn-sm btn-secondary" id="tab-model-2" onclick="switchModel(2)" style="font-weight: 600; border-radius: var(--radius-full); padding: 8px 18px;">
-          Cardiology &amp; Vascular Clinic (6 Providers)
-        </button>
-        <button type="button" class="btn btn-sm btn-secondary" id="tab-model-3" onclick="switchModel(3)" style="font-weight: 600; border-radius: var(--radius-full); padding: 8px 18px;">
-          Multi-Specialty Physician Network (15 Providers)
-        </button>
-      </div>
-
-      <!-- Comparative Modeling Card -->
-      <div class="pillar-card" style="padding: 0; overflow: hidden; background: #FFFFFF; box-shadow: var(--shadow-xl); border: 1px solid var(--border-medium); max-width: 1080px; margin: 0 auto;">
-        
-        <!-- Header Strip -->
-        <div style="background: var(--navy-primary); color: #FFFFFF; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
-          <div>
-            <span style="font-size: 0.75rem; text-transform: uppercase; color: #38BDF8; font-weight: 700;" id="model-specialty-tag">
-              Orthopedic &amp; Spine Group Financial Impact Model
-            </span>
-            <h4 style="font-size: 1.15rem; font-weight: 800; color: #FFFFFF; margin: 0;" id="model-title">
-              Days in A/R Compression &amp; Working Capital Liquidation Analysis
-            </h4>
-          </div>
-          <span style="font-size: 0.75rem; font-family: monospace; background: rgba(255, 255, 255, 0.1); padding: 4px 10px; border-radius: var(--radius-sm); color: #94A3B8;" id="model-annual-charges">
-            Annual Practice Collections: $14.2M
-          </span>
-        </div>
-
-        <!-- 4-Stat Comparison Grid (Before vs. After Nova Arc) -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); border-bottom: 1px solid var(--border-medium);">
-          
-          <div style="padding: var(--space-lg); text-align: center; border-right: 1px solid var(--border-light); background: #FFFBEB;">
-            <span style="font-size: 0.75rem; text-transform: uppercase; color: #92400E; font-weight: 700; display: block; margin-bottom: 4px;">Average Days in A/R</span>
-            <div style="font-size: 1.8rem; font-weight: 800; color: #B45309;" id="stat-dar-before">51.4 Days</div>
-            <div style="font-size: 0.8rem; color: #78350F; margin-top: 2px;">Before: Industry Stagnation</div>
-            <div style="margin-top: 10px; font-size: 1.4rem; font-weight: 800; color: #10B981;" id="stat-dar-after">26.8 Days (-48%)</div>
-            <div style="font-size: 0.75rem; color: #065F46; font-weight: 700;">After Nova Arc (32%+ Drop)</div>
-          </div>
-
-          <div style="padding: var(--space-lg); text-align: center; border-right: 1px solid var(--border-light); background: #F8FAFC;">
-            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--navy-primary); font-weight: 700; display: block; margin-bottom: 4px;">A/R Over 90 Days %</span>
-            <div style="font-size: 1.8rem; font-weight: 800; color: #EF4444;" id="stat-ar90-before">29.8%</div>
-            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;">Before: High Write-Off Risk</div>
-            <div style="margin-top: 10px; font-size: 1.4rem; font-weight: 800; color: #10B981;" id="stat-ar90-after">8.4% (-72%)</div>
-            <div style="font-size: 0.75rem; color: #065F46; font-weight: 700;">After Nova Arc (&lt; 9.5%)</div>
-          </div>
-
-          <div style="padding: var(--space-lg); text-align: center; border-right: 1px solid var(--border-light); background: #FFFBEB;">
-            <span style="font-size: 0.75rem; text-transform: uppercase; color: #92400E; font-weight: 700; display: block; margin-bottom: 4px;">Bad Debt Write-Offs</span>
-            <div style="font-size: 1.8rem; font-weight: 800; color: #B45309;" id="stat-baddebt-before">4.6% of Net</div>
-            <div style="font-size: 0.8rem; color: #78350F; margin-top: 2px;">Before: Timely Filing Drops</div>
-            <div style="margin-top: 10px; font-size: 1.4rem; font-weight: 800; color: #10B981;" id="stat-baddebt-after">1.1% (-76%)</div>
-            <div style="font-size: 0.75rem; color: #065F46; font-weight: 700;">After Nova Arc Defense</div>
-          </div>
-
-          <div style="padding: var(--space-lg); text-align: center; background: #F0FDF4;">
-            <span style="font-size: 0.75rem; text-transform: uppercase; color: #065F46; font-weight: 700; display: block; margin-bottom: 4px;">Immediate Cash Release</span>
-            <div style="font-size: 1.8rem; font-weight: 800; color: #10B981;" id="stat-cash-unlocked">+$542,000</div>
-            <div style="font-size: 0.8rem; color: #064E3B; margin-top: 2px;">Unlocked Working Capital</div>
-            <div style="margin-top: 10px; font-size: 1.4rem; font-weight: 800; color: var(--blue-accent);" id="stat-underpay-recov">+$114,800/yr</div>
-            <div style="font-size: 0.75rem; color: var(--blue-accent); font-weight: 700;">Contract Underpayment Recapture</div>
-          </div>
-
-        </div>
-
-        <!-- Explanatory Narrative Strip -->
-        <div style="padding: var(--space-xl); background: #FFFFFF;">
-          <h4 style="font-size: 1rem; font-weight: 800; color: var(--navy-primary); margin-bottom: var(--space-xs);" id="model-narrative-title">
-            How Nova Arc Drives the 32% DAR Reduction in Orthopedics
-          </h4>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin: 0;" id="model-narrative-desc">
-            Orthopedic practices struggle with high-dollar surgical claims sitting in "pending" status for implant invoice verifications and operative notes. Nova Arc eliminates this backlog by automating medical record attachments (EDI 275) within 24 hours of payer status requests, while auditing every meniscectomy, ligament repair, and arthroplasty against contracted commercial fee schedules to recover underpaid bilateral modifiers.
-          </p>
-        </div>
-
-        <!-- Protocol Summary Bar -->
-        <div style="background: var(--bg-slate); padding: 16px 24px; border-top: 1px solid var(--border-medium); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
-          <div>
-            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-secondary); font-weight: 700;">Liquidation Covenant:</span>
-            <div style="font-size: 0.9rem; font-weight: 700; color: var(--navy-primary);" id="model-covenant-note">
-              Guaranteed 32% DAR Reduction or Fee Rebate Within 90 Days of Onboarding
-            </div>
-          </div>
-          <span class="preview-item-tag tag-blue" style="font-size: 0.75rem; font-weight: 700;">
-            Proven Site-Wide Stat
-          </span>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
-       7. SECTOR FOCUS: PHYSICIAN GROUPS & SPECIALTY PRACTICES
-       ======================================================================== -->
-  <section class="section section-dark" id="sectors">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag" style="background: rgba(56, 189, 248, 0.15); color: #38BDF8; border-color: rgba(56, 189, 248, 0.3);">
-          Sector Focus: Physician Groups
-        </span>
-        <h2 class="section-title">Engineered for Physician Groups &amp; Specialty Practices</h2>
-        <p class="section-subtitle">
-          How Nova Arc coordinates high-velocity cash recovery, in-office procedure optimization, and contracted fee schedule defense for independent medical practices.
-        </p>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
-        
-        <!-- Physician Group Pillar 1 -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(31, 111, 235, 0.1); border: 1px solid var(--blue-accent-border); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: var(--blue-accent);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-          </div>
-          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
-            Relieving In-House Staff Burnout &amp; Turnover
-          </h3>
-          <p style="font-size: 0.875rem; color: #CBD5E1; line-height: 1.6;">
-            Small-to-medium medical practice billing offices are chronically understaffed. When billers quit, unworked claims pile up in 60 and 90-day aging buckets. Nova Arc acts as your dedicated extended business office, liquidating aged queues without overhead or hiring delays.
-          </p>
-          <ul style="margin-top: var(--space-md); padding-left: 18px; font-size: 0.8rem; color: #E2E8F0; line-height: 1.6;">
-            <li>Immediate deployment of certified aged A/R specialist pods</li>
-            <li>Zero billing staff turnover disruption to practice cash flow</li>
-            <li>Full integration into your existing EHR (AthenaHealth, eClinicalWorks, Epic, NextGen)</li>
-            <li>Complete transparency with daily productivity and collections logs</li>
-          </ul>
-        </div>
-
-        <!-- Physician Group Pillar 2 -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #10B981;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-          </div>
-          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
-            In-Office Procedures &amp; Modifier Recovery
-          </h3>
-          <p style="font-size: 0.875rem; color: #CBD5E1; line-height: 1.6;">
-            Cardiology, gastroenterology, dermatology, and orthopedic practices generate significant revenue from in-office surgical procedures and diagnostic tests. Payers routinely bundle these services or inappropriately downcode modifier 25 and 59 overrides.
-          </p>
-          <ul style="margin-top: var(--space-md); padding-left: 18px; font-size: 0.8rem; color: #E2E8F0; line-height: 1.6;">
-            <li>Audit of Multiple Procedure Payment Reductions (MPPR) for accuracy</li>
-            <li>Recovery of improperly disallowed Modifier 25 E/M visits performed on procedure days</li>
-            <li>Bilateral surgery modifier 50 / LT / RT payment verification</li>
-            <li>In-office diagnostic ultrasound and imaging technical component recovery</li>
-          </ul>
-        </div>
-
-        <!-- Physician Group Pillar 3 -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #38BDF8;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-          </div>
-          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
-            Commercial Contract &amp; Fee Schedule Enforcement
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
-            Independent physician practices often sign commercial payer contracts but lack the analytical tools to verify if payments match contracted rates. Nova Arc ingests your fee schedule tables and flags every negative contractual variance automatically.
-          </p>
-          <ul style="margin-top: var(--space-md); padding-left: 18px; font-size: 0.8rem; color: #E2E8F0; line-height: 1.6;">
-            <li>Automated comparison of 835 allowed amounts against practice contracted fee schedules</li>
-            <li>Recapture of silent payer downcoding and unauthorized fee schedule discounts</li>
-            <li>Preparation of batch dispute packets for commercial payer contract managers</li>
-            <li>Actionable payer scorecards providing leverage during annual contract renegotiations</li>
-          </ul>
-        </div>
-
+      <h2 class="dark-cta-title">
+        Ready to accelerate A/R recovery and protect your revenue?
+      </h2>
+      <p class="dark-cta-subtitle">
+        Connect with our accounts receivable management specialists today to reduce aging inventory and optimize cash flow.
+      </p>
+      <div>
+        <a href="../contact.html?service=ar-management" class="btn-cta-consult">
+          Request a Free Consultation <span aria-hidden="true">&rarr;</span>
+        </a>
       </div>
     </div>
   </section>
 
 
-  <!-- ========================================================================
-       8. SERVICE LEVEL AGREEMENTS (SLA STRIP)
-       ======================================================================== -->
-  <section style="background: var(--navy-deep); border-top: 1px solid var(--border-medium); border-bottom: 1px solid var(--border-medium); padding: var(--space-xl) 0;">
-    <div class="container">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-xl); text-align: center;">
-        
-        <div>
-          <div style="font-size: 2.2rem; font-weight: 800; color: #10B981; line-height: 1; margin-bottom: 6px;">-32%</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Days in A/R Reduction SLA</div>
-          <p style="font-size: 0.78rem; color: #94A3B8; margin: 0;">Contractually pledged within 90 days of onboarding</p>
-        </div>
-
-        <div>
-          <div style="font-size: 2.2rem; font-weight: 800; color: var(--blue-accent); line-height: 1; margin-bottom: 6px;">&lt; 9.5%</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">A/R Over 90 Days SLA</div>
-          <p style="font-size: 0.78rem; color: #94A3B8; margin: 0;">Sustained well below MGMA 20%+ industry benchmarks</p>
-        </div>
-
-        <div>
-          <div style="font-size: 2.2rem; font-weight: 800; color: #38BDF8; line-height: 1; margin-bottom: 6px;">100%</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Aged Bucket Sweeps</div>
-          <p style="font-size: 0.78rem; color: #94A3B8; margin: 0;">Every 30, 60, 90+ day claim receives definitive action</p>
-        </div>
-
-        <div>
-          <div style="font-size: 2.2rem; font-weight: 800; color: #A855F7; line-height: 1; margin-bottom: 6px;">$0.00</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Timely Filing Forfeitures</div>
-          <p style="font-size: 0.78rem; color: #94A3B8; margin: 0;">Zero unworked claims written off due to missed filing deadlines</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
-       9. FAQ ACCORDION (5 In-Depth Questions)
-       ======================================================================== -->
-  <section class="section section-light" id="faq">
-    <div class="container" style="max-width: 880px;">
-      <div class="section-header">
-        <span class="section-tag">Executive FAQ</span>
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">
-          Key insights into work-queue prioritization, Days in A/R reduction calculations, underpayment audits, and EHR integrations.
-        </p>
-      </div>
-
-      <div class="accordion" id="faqAccordion">
-        
-        <!-- FAQ 1 -->
-        <div class="accordion-item">
-          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="accordion-title">How does Nova Arc achieve a site-wide 32% reduction in Days in A/R?</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>
-              The 32% reduction in Days in A/R (DAR) is achieved through a combination of algorithmic work-queue scoring and automated electronic status interrogation (EDI 276/277). Rather than working claims in chronological or alphabetical order, our system scores outstanding claims daily by cash value, payer timely filing countdown, and collectibility velocity. By resolving high-dollar claims in the 30–60 day window and deploying robotic process automation (RPA) to clear "pending" payer queues without manual phone holds, the average receivable lifecycle compresses from 48.2 days to 27.4 days within 90 days of onboarding.
-            </p>
-          </div>
-        </div>
-
-        <!-- FAQ 2 -->
-        <div class="accordion-item">
-          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="accordion-title">What factors determine how claims are prioritized in your aged A/R work-queues?</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>
-              Nova Arc utilizes a proprietary multi-factor priority algorithm: <strong>Priority Score = (Balance &times; 35%) + (Timely Filing Urgency &times; 30%) + (Payer Velocity Index &times; 20%) + (Aging Multiplier &times; 15%)</strong>. Claims approaching insurer timely filing cutoffs (e.g., 90 or 120-day commercial deadlines) automatically receive top priority to prevent forfeiture. High-dollar surgical claims and identified contractual underpayment variances are immediately assigned to senior billing specialists, while routine status inquiries are resolved electronically.
-            </p>
-          </div>
-        </div>
-
-        <!-- FAQ 3 -->
-        <div class="accordion-item">
-          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="accordion-title">How do you detect and recover contractual underpayments from commercial insurers?</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>
-              Many practices assume that if an insurer paid a claim, the payment was accurate. However, commercial payers routinely short-pay claims by 3% to 7% due to misapplied fee schedule updates, improper downcoding, or flawed Multiple Procedure Payment Reduction (MPPR) calculations. Nova Arc loads your practice’s contracted commercial fee schedules into our auditing engine. Every electronic remittance (835) is matched line-by-line against your contract rate. When a variance is detected, the system auto-generates a formal contractual underpayment appeal with fee schedule citations, recapturing short-paid funds.
-            </p>
-          </div>
-        </div>
-
-        <!-- FAQ 4 -->
-        <div class="accordion-item">
-          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="accordion-title">Can Nova Arc work inside our existing Practice Management (PM) / EHR system?</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>
-              Yes. Nova Arc operates seamlessly inside all leading physician practice management platforms, including AthenaHealth, eClinicalWorks, Epic Community Connect, NextGen, ModMed, Greenway, AdvancedMD, and CareCloud. Our specialists work directly within your native workqueues, logging detailed adjudication notes, claim status updates, and appeal documentation in real time so your practice maintains 100% transparency and control.
-            </p>
-          </div>
-        </div>
-
-        <!-- FAQ 5 -->
-        <div class="accordion-item">
-          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="accordion-title">Do you offer contingency-based pricing for aged A/R clean-up projects?</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>
-              Yes. For practices with substantial aged A/R backlogs (&gt; 90 and 120+ days), Nova Arc offers zero-risk, contingency-based liquidation models. Under this structure, we only earn a agreed-upon percentage of the cash we successfully collect from previously written-off or dormant receivables. There are no upfront integration fees, making it completely risk-free for physician practices seeking to recover stalled working capital.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
-       10. CTA BAND & SHARED FOOTER
-       ======================================================================== -->
-  <section class="section" style="background: linear-gradient(135deg, #0B132B 0%, #1C2541 50%, #0B132B 100%); border-top: 1px solid var(--border-medium); padding: var(--space-3xl) 0;">
-    <div class="container">
-      <div style="max-width: 820px; margin: 0 auto; text-align: center;">
-        <span class="section-tag" style="background: rgba(31, 111, 235, 0.15); color: #38BDF8; border-color: rgba(56, 189, 248, 0.3);">
-          Cash Velocity Acceleration
-        </span>
-        <h2 style="font-size: 2.2rem; font-weight: 800; color: #FFFFFF; margin: var(--space-sm) 0 var(--space-md);">
-          Slash Days in A/R by 32% and Liquidate Stale Claims
-        </h2>
-        <p style="font-size: 1.05rem; color: #CBD5E1; line-height: 1.6; margin-bottom: var(--space-2xl);">
-          Eliminate timely filing write-offs, automate status tracking, and recapture contractual underpayments under our contractual performance covenants.
-        </p>
-        <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
-          <a href="../contact.html?service=ar-management" class="btn btn-primary btn-lg">
-            <span>Schedule an A/R Audit</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-          <a href="../index.html#roi-calculator" class="btn btn-secondary btn-lg">
-            <span>Calculate Practice ROI</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
+    <!-- ========================================================================
        FOOTER (Standardized Across All Pages)
        ======================================================================== -->
   <footer class="site-footer">
