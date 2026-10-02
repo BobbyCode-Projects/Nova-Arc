@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Denial &amp; Appeals Management | CARC/RARC Recovery &amp; Appeals Engine | Nova Arc</title>
-  <meta name="description" content="Enterprise denial management and clinical appeals engine for Health Systems. Automated CARC/RARC root-cause triage, evidence-based appeal letter generation, and 84.2% overturn rate.">
+  <title>Denial Management &amp; Appeals | Nova Arc</title>
+  <meta name="description" content="Turn Denials into Opportunities for Recovery. Comprehensive denial root-cause analysis, clinical and technical review, and structured appeal recovery.">
   
   <!-- SEO & Social Meta Tags -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Nova Arc Healthcare Technologies">
-  <meta property="og:title" content="Denial &amp; Appeals Management | CARC/RARC Root-Cause Recovery | Nova Arc">
-  <meta property="og:description" content="AI-driven CARC/RARC denial triage, nurse-authored clinical appeal packets, and multi-hospital network denial prevention.">
+  <meta property="og:title" content="Denial Management &amp; Appeals | Nova Arc">
+  <meta property="og:description" content="Turn Denials into Opportunities for Recovery. Comprehensive denial root-cause analysis, clinical and technical review, and structured appeal recovery.">
   <meta property="og:url" content="https://novaarc-rcm.com/services/denial-management.html">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Denial &amp; Appeals Management | Nova Arc">
+  <meta name="twitter:title" content="Denial Management &amp; Appeals | Nova Arc">
   <meta name="twitter:description" content="Automated CARC/RARC root-cause triage, clinical appeal letter generation, and 84.2% overturn rate for Health Systems.">
 
   <!-- Favicon -->
@@ -62,7 +62,13 @@
           {
             "@type": "ListItem",
             "position": 3,
-            "name": "Denial & Appeals Management",
+            "name": "Patient Financial Services & Recovery",
+            "item": "https://novaarc-rcm.com/services/patient-financial-services.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Denial Management & Appeals",
             "item": "https://novaarc-rcm.com/services/denial-management.html"
           }
         ]
@@ -70,7 +76,7 @@
       {
         "@type": "Service",
         "@id": "https://novaarc-rcm.com/services/denial-management.html#service",
-        "name": "Denial & Appeals Management (Root-Cause Recovery)",
+        "name": "Denial Management & Appeals Services",
         "serviceType": "Healthcare Revenue Cycle Management (RCM) - Claim Denial Recovery & Clinical Appeals",
         "provider": {
           "@type": "Organization",
@@ -78,7 +84,7 @@
           "url": "https://novaarc-rcm.com/",
           "logo": "https://novaarc-rcm.com/images/nova-arc-logo.png"
         },
-        "description": "Enterprise denial recovery platform combining automated ANSI X12 835 CARC/RARC triage, nurse-led clinical appeal letter generation, Milliman Care Guidelines citations, and multi-hospital root-cause prevention.",
+        "description": "Turn denials into opportunities for recovery through root-cause analysis, clinical and technical reviews, appeal preparation, and submission.",
         "areaServed": {
           "@type": "Country",
           "name": "United States"
@@ -465,85 +471,428 @@
     </div>
   </header>
 
+  <!-- ========================================================================
+       PAGE-SPECIFIC STYLES
+       ======================================================================== -->
+  <style>
+    /* Scoped Page Styles for Denial Management & Appeals */
+    .denial-hero {
+      text-align: center;
+      padding: 72px 0 64px;
+      background: radial-gradient(circle at 50% 0%, rgba(31, 111, 235, 0.08) 0%, transparent 70%),
+                  linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .denial-breadcrumbs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .denial-breadcrumbs a {
+      color: var(--blue-accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+    .denial-breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+    .denial-breadcrumbs .separator {
+      color: var(--text-light);
+      font-size: 0.75rem;
+    }
+    .denial-tag {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      margin-bottom: 16px;
+    }
+    .denial-title {
+      font-size: clamp(2.3rem, 4.4vw, 3.6rem);
+      font-weight: 800;
+      color: var(--navy-primary);
+      line-height: 1.16;
+      letter-spacing: -0.025em;
+      max-width: 980px;
+      margin: 0 auto 20px;
+    }
+    .denial-subtitle {
+      font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+      color: var(--text-secondary);
+      line-height: 1.55;
+      font-weight: 400;
+      max-width: 820px;
+      margin: 0 auto 36px;
+    }
+    .btn-connect {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--blue-accent);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 14px 38px;
+      border-radius: 6px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(31, 111, 235, 0.35);
+      transition: all 0.2s ease;
+    }
+    .btn-connect:hover {
+      background: var(--blue-accent-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(31, 111, 235, 0.45);
+      color: #FFFFFF;
+    }
+
+    /* Overview Section */
+    .overview-section {
+      padding: 96px 0;
+      background: #FFFFFF;
+    }
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .overview-tag {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      margin-bottom: 24px;
+    }
+    .overview-paragraph {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+    .overview-paragraph:last-child {
+      margin-bottom: 0;
+    }
+    .overview-image-container {
+      position: relative;
+    }
+    .overview-image {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 12px 32px rgba(11, 37, 69, 0.09);
+      border: 1px solid var(--border-light);
+      display: block;
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+    }
+
+    /* Services Provided Section */
+    .services-provided-section {
+      padding: 96px 0 104px;
+      background: #F8FAFC;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .services-tag {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .services-headline {
+      font-size: clamp(2rem, 3.2vw, 2.75rem);
+      font-weight: 800;
+      color: var(--navy-primary);
+      text-align: center;
+      max-width: 880px;
+      margin: 0 auto 56px;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+    .services-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .service-feature-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 8px rgba(11, 37, 69, 0.03);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .service-feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(11, 37, 69, 0.08);
+      border-color: var(--blue-accent-border);
+    }
+    .service-card-icon-box {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      background: var(--blue-accent-light);
+      color: var(--blue-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      flex-shrink: 0;
+    }
+    .service-card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy-primary);
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+    .service-card-desc {
+      font-size: 0.925rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
+      flex-grow: 1;
+      margin-bottom: 20px;
+    }
+    .service-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--blue-accent);
+      text-decoration: none;
+      transition: color 0.15s ease;
+      margin-top: auto;
+    }
+    .service-card-link:hover {
+      color: var(--blue-accent-hover);
+      text-decoration: underline;
+    }
+
+    /* Benefits Section */
+    .benefits-section {
+      padding: 96px 0;
+      background: #FFFFFF;
+    }
+    .benefits-tag {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .benefits-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+    .benefit-col {
+      display: flex;
+      flex-direction: column;
+    }
+    .benefit-icon-wrapper {
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 22px;
+      color: var(--blue-accent);
+    }
+    .benefit-heading {
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--navy-primary);
+      line-height: 1.35;
+      margin-bottom: 14px;
+    }
+    .benefit-copy {
+      font-size: 0.935rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
+    }
+
+    /* Dark CTA Section */
+    .dark-cta-section {
+      background: linear-gradient(135deg, #051324 0%, #0B2545 60%, #133B6C 100%);
+      padding: 104px 0;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .dark-cta-bg-art {
+      position: absolute;
+      right: -80px;
+      bottom: -100px;
+      width: 650px;
+      height: 480px;
+      opacity: 0.22;
+      pointer-events: none;
+    }
+    .dark-cta-title {
+      font-size: clamp(2.3rem, 4vw, 3.4rem);
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      max-width: 820px;
+      margin: 0 auto 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .dark-cta-subtitle {
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+      color: #CBD5E1;
+      line-height: 1.65;
+      max-width: 740px;
+      margin: 0 auto 38px;
+      position: relative;
+      z-index: 1;
+    }
+    .btn-cta-consult {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--blue-accent);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 16px 36px;
+      border-radius: 6px;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(31, 111, 235, 0.4);
+      transition: all 0.2s ease;
+      position: relative;
+      z-index: 1;
+    }
+    .btn-cta-consult:hover {
+      background: var(--blue-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(31, 111, 235, 0.5);
+      color: #FFFFFF;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 1080px) {
+      .services-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .benefits-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px;
+      }
+    }
+    @media (max-width: 860px) {
+      .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .overview-image {
+        height: 320px;
+      }
+    }
+    @media (max-width: 640px) {
+      .services-cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .benefits-row {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .denial-hero {
+        padding: 48px 0 44px;
+      }
+      .overview-section,
+      .services-provided-section,
+      .benefits-section,
+      .dark-cta-section {
+        padding: 64px 0;
+      }
+    }
+  </style>
+
 
   <!-- ========================================================================
-       1. BREADCRUMB & 2. HERO SECTION
+       1. HERO SECTION
        ======================================================================== -->
-  <section class="page-hero" id="hero">
+  <section class="denial-hero" id="hero">
     <div class="container">
-      <!-- 1. Breadcrumb -->
-      <nav class="breadcrumb-nav" aria-label="Breadcrumbs">
+      <!-- Breadcrumb Navigation -->
+      <nav class="denial-breadcrumbs" aria-label="Breadcrumbs">
         <a href="../index.html">Home</a>
-        <span class="breadcrumb-separator">/</span>
+        <span class="separator">&gt;</span>
         <a href="../services.html">Services</a>
-        <span class="breadcrumb-separator">/</span>
-        <span style="color: var(--text-primary); font-weight: 600;">Denial &amp; Appeals Management</span>
+        <span class="separator">&gt;</span>
+        <a href="patient-financial-services.html">Claims Management</a>
+        <span class="separator">&gt;</span>
+        <span style="color: var(--text-primary); font-weight: 600;">Denial Management &amp; Appeals</span>
       </nav>
 
-      <!-- 2. Hero Content -->
-      <div class="page-hero-content">
-        <span class="section-tag">Patient Financial Services • Service 03.3</span>
-        <h1 class="page-hero-title">
-          Denial &amp; Appeals Management: CARC/RARC Root-Cause Recovery
-        </h1>
-        <p class="page-hero-subtitle">
-          Turn commercial and Medicare Advantage claim rejections into realized cash. Autonomous ANSI X12 835 denial code triage, nurse-authored clinical appeal letters citing Milliman (MCG) guidelines, and multi-hospital root-cause prevention engineered for enterprise Health Systems.
-        </p>
-
-        <!-- Master KPI Metric Banner -->
-        <div style="display: inline-flex; align-items: center; gap: 16px; background: rgba(31, 111, 235, 0.08); border: 1px solid var(--blue-accent-border); padding: 14px 24px; border-radius: var(--radius-lg); margin-bottom: var(--space-xl); box-shadow: var(--shadow-sm); flex-wrap: wrap;">
-          <div style="font-size: 2.1rem; font-weight: 800; color: #10B981; line-height: 1;">
-            84.2%
-          </div>
-          <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.4;">
-            <strong style="color: var(--navy-primary); display: block; font-size: 1rem;">Clinical &amp; Technical Appeal Overturn Rate</strong>
-            Across commercial payers, Medicare Advantage HMO/PPO, and Medicaid managed care
-          </div>
-          <div style="border-left: 1px solid var(--border-medium); padding-left: 16px; margin-left: 4px;">
-            <span class="preview-item-tag tag-green" style="font-size: 0.8rem; font-weight: 800; padding: 6px 12px;">
-              Sub-48h Timely Filing SLA
-            </span>
-          </div>
-        </div>
-
-        <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
-          <a href="../contact.html?service=denial-management" class="btn btn-primary btn-lg">
-            <span>Schedule a Denial Diagnostic</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-          <a href="#pre-submission-scoring" class="btn btn-secondary btn-lg">
-            <span>Pre-Submission ML Scoring &darr;</span>
-          </a>
-          <a href="#carc-rarc-workflow-visual" class="btn btn-secondary btn-lg">
-            <span>CARC/RARC Triage Simulator &darr;</span>
-          </a>
-          <a href="#appeal-letter-explainer" class="btn btn-secondary btn-lg">
-            <span>Appeal Letter Generator &darr;</span>
-          </a>
-        </div>
+      <!-- Eyebrow: SERVICES -->
+      <div>
+        <span class="denial-tag">SERVICES</span>
       </div>
 
-      <!-- 4 Hero Stat Cards -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-lg); margin-top: var(--space-2xl);">
-        <div class="pillar-card" style="padding: var(--space-lg); text-align: left;">
-          <div style="font-size: 2rem; font-weight: 800; color: #10B981; line-height: 1; margin-bottom: 4px;">84.2%</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: var(--navy-primary); margin-bottom: 2px;">Appeal Overturn Rate</div>
-          <p style="font-size: 0.775rem; color: var(--text-secondary); margin: 0;">Certified RN clinical appeals and coding dispute wins</p>
+      <!-- Main Title -->
+      <h1 class="denial-title">
+        Denial Management &amp; Appeals
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="denial-subtitle">
+        Turn Denials into Opportunities for Recovery.
+      </p>
+
+      <!-- Connect With Us Button -->
+      <div>
+        <a href="../contact.html?service=denial-management" class="btn-connect">
+          Connect with us
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       2. OVERVIEW SECTION
+       ======================================================================== -->
+  <section class="overview-section" id="overview">
+    <div class="container">
+      <div class="overview-grid">
+        <!-- Left: Text Content -->
+        <div class="overview-content">
+          <span class="overview-tag">OVERVIEW</span>
+          <p class="overview-paragraph">
+            Denials can significantly affect reimbursement, cash flow, and revenue cycle performance. Our Denial Management and Appeals services help healthcare organizations identify denial causes, prioritize accounts, perform root-cause analysis, and pursue appropriate resolution.
+          </p>
+          <p class="overview-paragraph">
+            We support the complete denial lifecycle from identification and categorization through appeal preparation, submission, follow-up, and reporting.
+          </p>
         </div>
-        <div class="pillar-card" style="padding: var(--space-lg); text-align: left;">
-          <div style="font-size: 2rem; font-weight: 800; color: var(--blue-accent); line-height: 1; margin-bottom: 4px;">&lt; 48h</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: var(--navy-primary); margin-bottom: 2px;">Denial-to-Appeal Velocity</div>
-          <p style="font-size: 0.775rem; color: var(--text-secondary); margin: 0;">Sub-48h packet dispatch beating insurer filing clocks</p>
-        </div>
-        <div class="pillar-card" style="padding: var(--space-lg); text-align: left;">
-          <div style="font-size: 2rem; font-weight: 800; color: #38BDF8; line-height: 1; margin-bottom: 4px;">&lt; 1.8%</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: var(--navy-primary); margin-bottom: 2px;">Net Unrecovered Denials</div>
-          <p style="font-size: 0.775rem; color: var(--text-secondary); margin: 0;">Industry average exceeds 5.4% of total hospital charges</p>
-        </div>
-        <div class="pillar-card" style="padding: var(--space-lg); text-align: left;">
-          <div style="font-size: 2rem; font-weight: 800; color: #8B5CF6; line-height: 1; margin-bottom: 4px;">100%</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: var(--navy-primary); margin-bottom: 2px;">Closed-Loop Root-Cause Feedback</div>
-          <p style="font-size: 0.775rem; color: var(--text-secondary); margin: 0;">Root causes fed to scheduling, auth, and coding teams</p>
+
+        <!-- Right: Medical Necessity & Clinical Appeals Imagery -->
+        <div class="overview-image-container">
+          <img src="../images/med-necessity-team.jpg" alt="Denial Management &amp; Appeals Overview" class="overview-image" width="600" height="440">
         </div>
       </div>
     </div>
@@ -551,1119 +900,280 @@
 
 
   <!-- ========================================================================
-       3. "THE PROBLEM" SECTION (The Drain of Hospital Claim Denials)
+       3. SERVICES PROVIDED SECTION
        ======================================================================== -->
-  <section class="section section-dark" id="problem">
+  <section class="services-provided-section" id="services-provided">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag" style="background: rgba(239, 68, 68, 0.15); color: #FCA5A5; border-color: rgba(239, 68, 68, 0.3);">
-          The Revenue Leak
-        </span>
-        <h2 class="section-title">Why Health Systems Lose Millions to Algorithmic Denials</h2>
-        <p class="section-subtitle">
-          Commercial health plans and Medicare Advantage insurers have automated claim rejections using aggressive clinical AI filters. Traditional hospital business offices struggle to keep pace with mounting appeal deadlines and evidentiary burdens.
-        </p>
-      </div>
+      <!-- Section Header -->
+      <span class="services-tag">SERVICES PROVIDED</span>
+      <h2 class="services-headline">
+        Comprehensive root-cause analysis, clinical review, and structured appeal recovery.
+      </h2>
 
-      <div class="pillars-grid">
-        
-        <!-- Pain Point 1 -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div class="pillar-icon-box" style="background: rgba(239, 68, 68, 0.1); color: #EF4444; border: 1px solid rgba(239, 68, 68, 0.3);">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <!-- 10 Service Cards Grid -->
+      <div class="services-cards-grid">
+        <!-- Service 1 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Denial identification and categorization</h3>
+          <p class="service-card-desc">
+            Rapid ingestion and classification of ERA 835 adjustment codes into clear operational buckets, including clinical, technical, administrative, and eligibility denials.
+          </p>
+          <a href="../contact.html?service=denial-management" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="11" y1="8" x2="11" y2="14"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Denial root-cause analysis</h3>
+          <p class="service-card-desc">
+            Comprehensive diagnostic tracing to pinpoint underlying breakdown points across front-end registration, clinical documentation, coding, or billing edits.
+          </p>
+          <a href="../contact.html?service=denial-management" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Clinical and technical denial review</h3>
+          <p class="service-card-desc">
+            Specialized clinical evaluation by certified auditors and technical billing checks to determine viability and appeal strategy.
+          </p>
+          <a href="../contact.html?service=denial-management" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Appeal preparation</h3>
+          <p class="service-card-desc">
+            Drafting compelling, customized appeal letters backed by relevant medical records, operative notes, clinical practice guidelines, and payer policy citations.
+          </p>
+          <a href="../contact.html?service=denial-management" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Appeal submission</h3>
+          <p class="service-card-desc">
+            Multi-channel submission via direct payer portals, clearinghouses, certified mail, or secure electronic attachments within mandated appeal timeframes.
+          </p>
+          <a href="../contact.html?service=denial-management" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Payer follow-up</h3>
+          <p class="service-card-desc">
+            Persistent, structured status inquiries tracking open appeals through first-level reviews, reconsiderations, peer-to-peer discussions, and administrative hearings.
+          </p>
+          <a href="../contact.html?service=denial-management" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 7 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Authorization denial management</h3>
+          <p class="service-card-desc">
+            Forensic review and retro-authorization appeals addressing missing, expired, or truncated prior authorizations and procedural mismatch issues.
+          </p>
+          <a href="../contact.html?service=denial-management" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 8 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Medical necessity denial review</h3>
+          <p class="service-card-desc">
+            Evidence-based clinical defense defending inpatient admissions, high-cost imaging, and surgical procedures using Milliman and InterQual guidelines.
+          </p>
+          <a href="../contact.html?service=denial-management" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- Service 9 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
-              <line x1="12" y1="8" x2="12" y2="12"></line>
-              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
           </div>
-          <span class="pillar-number" style="color: #EF4444;">EXPOSURE 01</span>
-          <h3 style="font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-sm);">
-            Algorithmic Inpatient Downgrades &amp; Clinical Denials
-          </h3>
-          <p style="font-size: 0.875rem; color: #CBD5E1; line-height: 1.6; margin-bottom: var(--space-md);">
-            Payers deploy proprietary claim adjudication algorithms that automatically downgrade acute inpatient admissions (MS-DRG) to outpatient observation status (CARC 50 / 57), or reject high-acuity secondary diagnoses (Sepsis, Acute Kidney Injury, Encephalopathy) without human clinical review, slashing reimbursement by $12,000 to $35,000 per stay.
+          <h3 class="service-card-title">Timely filing denial analysis</h3>
+          <p class="service-card-desc">
+            Detailed validation of electronic EDI submission timestamps, clearinghouse 277 acceptance logs, and payer acknowledgment receipts to overturn untimely filing rejections.
           </p>
-          <div style="font-size: 0.8rem; font-weight: 700; color: #FCA5A5; background: rgba(239, 68, 68, 0.1); padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(239, 68, 68, 0.2);">
-            Financial Risk: 65% of Commercial Hospital DRG Denials Go Unappealed
-          </div>
+          <a href="../contact.html?service=denial-management" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
         </div>
 
-        <!-- Pain Point 2 -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div class="pillar-icon-box" style="background: rgba(245, 158, 11, 0.1); color: #F59E0B; border: 1px solid rgba(245, 158, 11, 0.3);">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-              <line x1="16" y1="2" x2="16" y2="6"></line>
-              <line x1="8" y1="2" x2="8" y2="6"></line>
-              <line x1="3" y1="10" x2="21" y2="10"></line>
+        <!-- Service 10 -->
+        <div class="service-feature-card">
+          <div class="service-card-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
             </svg>
           </div>
-          <span class="pillar-number" style="color: #F59E0B;">EXPOSURE 02</span>
-          <h3 style="font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-sm);">
-            Manual Assembly Fatigue &amp; Timely Filing Forfeiture
-          </h3>
-          <p style="font-size: 0.875rem; color: #CBD5E1; line-height: 1.6; margin-bottom: var(--space-md);">
-            Drafting clinical appeal packets requires pulling hundreds of pages: operative notes, vitals flowsheets, physician orders, and medical policy bulletins. Strained hospital CBO staff cannot keep up, resulting in generic "form letters" that are instantly rejected, or missing the insurer's strict 30 to 60-day timely filing window entirely.
+          <h3 class="service-card-title">Denial trend reporting</h3>
+          <p class="service-card-desc">
+            Executive reporting and actionable dashboards highlighting payer-specific denial rates, overturn success rates, recovery net dollars, and prevention opportunities.
           </p>
-          <div style="font-size: 0.8rem; font-weight: 700; color: #FCD34D; background: rgba(245, 158, 11, 0.1); padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(245, 158, 11, 0.2);">
-            Financial Risk: Permanent Timely Filing Write-Offs (CARC 29)
-          </div>
+          <a href="../contact.html?service=denial-management" class="service-card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Pain Point 3 -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div class="pillar-icon-box" style="background: rgba(56, 189, 248, 0.1); color: #38BDF8; border: 1px solid rgba(56, 189, 248, 0.3);">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="23 4 23 10 17 10"></polyline>
-              <polyline points="1 20 1 14 7 14"></polyline>
-              <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+
+  <!-- ========================================================================
+       4. BENEFITS SECTION
+       ======================================================================== -->
+  <section class="benefits-section" id="benefits">
+    <div class="container">
+      <!-- Section Tag -->
+      <span class="benefits-tag">BENEFITS</span>
+
+      <!-- 4 Columns Grid -->
+      <div class="benefits-row">
+        <!-- Benefit 1 -->
+        <div class="benefit-col">
+          <div class="benefit-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+              <polyline points="17 6 23 6 23 12"></polyline>
             </svg>
           </div>
-          <span class="pillar-number" style="color: #38BDF8;">EXPOSURE 03</span>
-          <h3 style="font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-sm);">
-            Repetitive Denial Loops &amp; Zero Root-Cause Feedback
-          </h3>
-          <p style="font-size: 0.875rem; color: #CBD5E1; line-height: 1.6; margin-bottom: var(--space-md);">
-            Hospitals treat denials reactively, re-working the same technical defects month after month—missing pre-authorizations (CARC 197), unbundled CPT codes (CARC 97), or invalid ordering NPIs (CARC 183)—without feeding root causes back to scheduling, patient access, or clinical documentation teams to prevent recurrence.
+          <h3 class="benefit-heading">Increase Denial Recovery</h3>
+          <p class="benefit-copy">
+            Structured follow-up and appeals help organizations recover appropriately payable claims.
           </p>
-          <div style="font-size: 0.8rem; font-weight: 700; color: #7DD3FC; background: rgba(56, 189, 248, 0.1); padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(56, 189, 248, 0.2);">
-            Financial Risk: Perpetual Cost-to-Collect Inflation &amp; Chronic Margin Erosion
-          </div>
         </div>
 
+        <!-- Benefit 2 -->
+        <div class="benefit-col">
+          <div class="benefit-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="11" y1="8" x2="11" y2="14"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+          </div>
+          <h3 class="benefit-heading">Identify Root Causes</h3>
+          <p class="benefit-copy">
+            Trend analysis helps identify recurring process issues contributing to denials.
+          </p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="benefit-col">
+          <div class="benefit-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
+          </div>
+          <h3 class="benefit-heading">Reduce Preventable Denials</h3>
+          <p class="benefit-copy">
+            Insights from denial analysis can support corrective actions at the front end.
+          </p>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="benefit-col">
+          <div class="benefit-icon-wrapper">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <h3 class="benefit-heading">Improve Revenue Performance</h3>
+          <p class="benefit-copy">
+            Effective denial management helps protect earned reimbursement and reduce revenue leakage.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
 
   <!-- ========================================================================
-       4. COMPREHENSIVE ARCHITECTURE: 6 PILLARS OF DENIAL RECOVERY
+       5. DARK CTA SECTION
        ======================================================================== -->
-  <section class="section section-light" id="pillars">
+  <section class="dark-cta-section" id="cta-contact">
+    <!-- Decorative Wave Contour Lines (Nova Arc Accent Colors) -->
+    <svg class="dark-cta-bg-art" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M0 360C160 320 290 190 460 240C550 270 590 330 610 360" stroke="#1F6FEB" stroke-width="1.5" stroke-opacity="0.4" />
+      <path d="M0 330C150 290 280 170 450 220C540 250 580 310 610 340" stroke="#1F6FEB" stroke-width="1.5" stroke-opacity="0.35" />
+      <path d="M0 300C140 260 270 150 440 200C530 230 570 290 610 320" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.3" />
+      <path d="M0 270C130 230 260 130 430 180C520 210 560 270 610 300" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.25" />
+      <path d="M0 240C120 200 250 110 420 160C510 190 550 250 610 280" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.2" />
+      <path d="M0 210C110 170 240 90 410 140C500 170 540 230 610 260" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.15" />
+    </svg>
+
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Recovery Architecture</span>
-        <h2 class="section-title">Comprehensive Architecture: 6 Pillars of Denial Recovery</h2>
-        <p class="section-subtitle">
-          How Nova Arc achieves an 84.2% overturn rate through automated ANSI 835 CARC/RARC ingestion, nurse-authored clinical appeals, and closed-loop prevention feedback.
-        </p>
-      </div>
-
-      <div class="pillars-grid">
-        
-        <!-- Pillar 1 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-          </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
-            1. Automated CARC / RARC Ingestion &amp; Classification
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            Sub-second parsing of inbound ANSI X12 835 CAS segments. Maps over 300 Claim Adjustment Reason Codes (CARC) and Remittance Advice Remark Codes (RARC) into five normalized operational categories, isolating technical flaws from complex clinical disputes.
-          </p>
-          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
-            • Sub-Second Multi-Payer Remittance Parsing<br>
-            • CAS Group Code Mapping (CO, PR, OA, PI)
-          </div>
-        </div>
-
-        <!-- Pillar 2 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-          </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
-            2. Multi-Disciplinary Workqueue Triage
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            Denials are routed dynamically based on clinical complexity and dollar value: Registered Nurse (RN) auditors handle medical necessity and DRG disputes; Certified Professional Coders (CPC) resolve NCCI unbundling; Technical RCM teams clear eligibility and auth issues.
-          </p>
-          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
-            • Dedicated RN Clinical Appeal Specialist Pods<br>
-            • Value-Weighted Workqueue Prioritization
-          </div>
-        </div>
-
-        <!-- Pillar 3 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-          </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
-            3. Evidence-Based Clinical Criteria Engine
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            Every clinical appeal integrates evidence-based benchmarks: Milliman Care Guidelines (MCG), InterQual criteria, CMS National/Local Coverage Determinations (NCD/LCD), Sepsis-3 definitions, and published specialty consensus guidelines to legally refute payer denials.
-          </p>
-          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
-            • Direct MCG &amp; InterQual Guideline Citation<br>
-            • Payer-Specific Medical Policy Bulletin Cross-Referencing
-          </div>
-        </div>
-
-        <!-- Pillar 4 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-          </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
-            4. Dynamic Legal &amp; Clinical Appeal Generation
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            Generates custom, tailored appeal letters combining clinical timelines, patient-specific lab values, highlighted chart excerpts, and legal citations (ERISA §503, CMS 2-Midnight Rule, Prompt Payment statutes) into indexed, court-defensible appeal packets.
-          </p>
-          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
-            • Zero Generic Form Letters • Case-Specific Tailoring<br>
-            • Statutory Prompt Pay &amp; ERISA Legal Citations
-          </div>
-        </div>
-
-        <!-- Pillar 5 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
-          </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
-            5. Multilevel Escalation &amp; Peer-to-Peer Support
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            When Level 1 appeals face wrongful upholdings, Nova Arc aggressively escalates to Level 2 (Reconsideration), external Independent Review Entities (IRE), and Medicare Administrative Law Judge (ALJ) hearings, preparing physician briefs for peer-to-peer discussions.
-          </p>
-          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
-            • Attending Physician Peer-to-Peer Talking Points<br>
-            • External IRE &amp; ALJ Hearing Legal Representation
-          </div>
-        </div>
-
-        <!-- Pillar 6 -->
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-          </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--navy-primary); margin-bottom: var(--space-xs);">
-            6. Closed-Loop Root-Cause Denial Prevention
-          </h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            Every overturned and upheld denial feeds back into Nova Arc’s root-cause telemetry. Granular insights flow directly into front-end patient registration, pre-authorization, and clinical documentation improvement (CDI) workflows to permanently shut down recurring denial patterns.
-          </p>
-          <div style="margin-top: var(--space-sm); font-size: 0.8rem; color: var(--blue-accent); font-weight: 600;">
-            • Continuous EHR Rule &amp; Scrubber Rule Updates<br>
-            • Health System Executive Denial Scorecards
-          </div>
-        </div>
-
+      <h2 class="dark-cta-title">
+        Ready to overturn denials and recover earned revenue?
+      </h2>
+      <p class="dark-cta-subtitle">
+        Connect with our denial management and appeals specialists today to conduct root-cause analysis and implement structured recovery workflows.
+      </p>
+      <div>
+        <a href="../contact.html?service=denial-management" class="btn-cta-consult">
+          Request a Free Consultation <span aria-hidden="true">&rarr;</span>
+        </a>
       </div>
     </div>
   </section>
 
 
-  <!-- ========================================================================
-       5. PRE-SUBMISSION ML DENIAL-PROBABILITY SCORING WORKFLOW
-          Sector Focus: Health Systems & Multi-Hospital Networks
-       ======================================================================== -->
-  <section class="section section-dark" id="pre-submission-scoring" style="border-top: 1px solid var(--border-medium); border-bottom: 1px solid var(--border-medium); background: radial-gradient(circle at 50% 0%, rgba(31, 111, 235, 0.12) 0%, rgba(11, 19, 43, 0.98) 75%);">
-    <div class="container">
-      
-      <div class="section-header" style="max-width: 920px; margin: 0 auto var(--space-2xl) auto; text-align: center;">
-        <span class="section-tag" style="background: rgba(56, 189, 248, 0.15); color: #38BDF8; border-color: rgba(56, 189, 248, 0.3);">
-          Predictive Revenue Protection &bull; Sector Focus: Health Systems
-        </span>
-        <h2 class="section-title" style="color: #FFFFFF;">
-          Pre-Submission ML Denial-Probability Scoring Workflow
-        </h2>
-        <p class="section-subtitle" style="color: #CBD5E1;">
-          Commercial insurers and Medicare Advantage plans deploy opaque AI algorithms to downgrade inpatient DRGs and deny high-dollar claims. Nova Arc equips Health Systems with an algorithmic defense: intercepting, scoring, and remediating high-risk claims <em>before</em> EDI clearinghouse transmission.
-        </p>
-      </div>
-
-      <!-- Health System ROI / Benchmark Banner -->
-      <div style="background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: var(--radius-lg); padding: var(--space-lg) var(--space-xl); margin-bottom: var(--space-2xl); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5);">
-        <div style="display: flex; align-items: center; gap: 16px;">
-          <div style="width: 48px; height: 48px; border-radius: var(--radius-md); background: rgba(56, 189, 248, 0.15); border: 1.5px solid #38BDF8; display: flex; align-items: center; justify-content: center; color: #38BDF8; flex-shrink: 0;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-          </div>
-          <div>
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <strong style="color: #FFFFFF; font-size: 1.05rem;">The Health System Inpatient Denial Epidemic</strong>
-              <span style="background: rgba(239, 68, 68, 0.2); color: #FCA5A5; border: 1px solid rgba(239, 68, 68, 0.4); font-size: 0.72rem; padding: 2px 8px; border-radius: 4px; font-weight: 700;">Average $118 Re-Work Cost Per Claim</span>
-            </div>
-            <p style="font-size: 0.85rem; color: #94A3B8; margin: 4px 0 0 0; line-height: 1.5;">
-              Over 65% of hospital inpatient denials (Sepsis-3 clinical validation, Two-Midnight short-stays, high-cost implants) stem from documentation gaps that could be resolved prior to billing. Proactive ML interception shifts revenue cycle teams from reactive appeals to pre-bill prevention.
-            </p>
-          </div>
-        </div>
-        <div style="display: flex; gap: 20px; flex-shrink: 0;">
-          <div style="text-align: right;">
-            <div style="font-size: 1.6rem; font-weight: 800; color: #38BDF8; font-family: monospace;">-48.2%</div>
-            <div style="font-size: 0.72rem; color: #94A3B8; text-transform: uppercase;">Initial Inpatient Denials</div>
-          </div>
-          <div style="text-align: right; border-left: 1px solid rgba(255,255,255,0.1); padding-left: 20px;">
-            <div style="font-size: 1.6rem; font-weight: 800; color: #10B981; font-family: monospace;">$14.2M</div>
-            <div style="font-size: 0.72rem; color: #94A3B8; text-transform: uppercase;">Annual Cash Flow Accelerated</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 5-Stage End-to-End Workflow Architecture Stepper -->
-      <div style="margin-bottom: var(--space-3xl);">
-        <h3 style="font-size: 1.25rem; font-weight: 800; color: #FFFFFF; margin-bottom: var(--space-md); display: flex; align-items: center; gap: 10px;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-          5-Stage Pre-Submission ML Denial Scoring Pipeline
-        </h3>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px;">
-          
-          <!-- Stage 1 -->
-          <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: var(--radius-md); padding: 18px; position: relative;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-              <span style="font-size: 0.72rem; font-weight: 800; color: #38BDF8; background: rgba(56, 189, 248, 0.15); padding: 2px 8px; border-radius: 4px;">STAGE 01</span>
-              <span style="font-size: 0.75rem; color: #64748B;">At Discharge</span>
-            </div>
-            <h4 style="font-size: 0.95rem; font-weight: 700; color: #FFFFFF; margin: 0 0 6px 0;">Multi-Modal Feature Ingestion</h4>
-            <p style="font-size: 0.775rem; color: #94A3B8; line-height: 1.5; margin: 0;">
-              Ingests 140+ clinical indicators: physician progress notes, ED triage, vitals flowsheets, discrete labs (lactate, PaO2/FiO2), midnight counts, and payer contract policy.
-            </p>
-          </div>
-
-          <!-- Stage 2 -->
-          <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: var(--radius-md); padding: 18px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-              <span style="font-size: 0.72rem; font-weight: 800; color: #38BDF8; background: rgba(56, 189, 248, 0.15); padding: 2px 8px; border-radius: 4px;">STAGE 02</span>
-              <span style="font-size: 0.75rem; color: #64748B;">0.32s Latency</span>
-            </div>
-            <h4 style="font-size: 0.95rem; font-weight: 700; color: #FFFFFF; margin: 0 0 6px 0;">Dual-Ensemble ML Scoring</h4>
-            <p style="font-size: 0.775rem; color: #94A3B8; line-height: 1.5; margin: 0;">
-              Clinical BERT evaluates MCG/InterQual criteria alignment, while an XGBoost classifier cross-references 4.2M historical health system remits to generate a 0%–100% Denial Probability.
-            </p>
-          </div>
-
-          <!-- Stage 3 -->
-          <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(239, 68, 68, 0.35); border-radius: var(--radius-md); padding: 18px; box-shadow: 0 0 15px rgba(239, 68, 68, 0.1);">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-              <span style="font-size: 0.72rem; font-weight: 800; color: #EF4444; background: rgba(239, 68, 68, 0.15); padding: 2px 8px; border-radius: 4px;">STAGE 03</span>
-              <span style="font-size: 0.75rem; color: #EF4444; font-weight: 700;">Gate Interception</span>
-            </div>
-            <h4 style="font-size: 0.95rem; font-weight: 700; color: #FFFFFF; margin: 0 0 6px 0;">Risk Stratification &amp; Hold</h4>
-            <p style="font-size: 0.775rem; color: #94A3B8; line-height: 1.5; margin: 0;">
-              Claims scored &ge;50% denial risk are automatically frozen in Epic Resolute / Cerner Soarian workqueues, isolating specific clinical and administrative vulnerability factors.
-            </p>
-          </div>
-
-          <!-- Stage 4 -->
-          <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: var(--radius-md); padding: 18px; box-shadow: 0 0 15px rgba(56, 189, 248, 0.1);">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-              <span style="font-size: 0.72rem; font-weight: 800; color: #38BDF8; background: rgba(56, 189, 248, 0.15); padding: 2px 8px; border-radius: 4px;">STAGE 04</span>
-              <span style="font-size: 0.75rem; color: #38BDF8; font-weight: 700;">Remediation</span>
-            </div>
-            <h4 style="font-size: 0.95rem; font-weight: 700; color: #FFFFFF; margin: 0 0 6px 0;">Concurrent CDI &amp; Physician Query</h4>
-            <p style="font-size: 0.775rem; color: #94A3B8; line-height: 1.5; margin: 0;">
-              Dispatches automated, compliant queries to attending physicians via EHR inbox (SOFA organ delta), adjusts Condition Code 44 if needed, and embeds electronic PWK documentation.
-            </p>
-          </div>
-
-          <!-- Stage 5 -->
-          <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(16, 185, 129, 0.35); border-radius: var(--radius-md); padding: 18px; box-shadow: 0 0 15px rgba(16, 185, 129, 0.1);">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-              <span style="font-size: 0.72rem; font-weight: 800; color: #34D399; background: rgba(16, 185, 129, 0.15); padding: 2px 8px; border-radius: 4px;">STAGE 05</span>
-              <span style="font-size: 0.75rem; color: #34D399; font-weight: 700;">Clean Release</span>
-            </div>
-            <h4 style="font-size: 0.95rem; font-weight: 700; color: #FFFFFF; margin: 0 0 6px 0;">Re-Score &amp; Gateway Dispatch</h4>
-            <p style="font-size: 0.775rem; color: #94A3B8; line-height: 1.5; margin: 0;">
-              Denial risk collapses from 86.4% down to &lt;2.5%. Claim unfreezes and dispatches via 837I/P gateway with guaranteed first-pass adjudication readiness.
-            </p>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Interactive Health System Pre-Submission Denial Simulator -->
-      <div style="background: #0B132B; border: 1px solid var(--border-medium); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-xl); margin-bottom: var(--space-xl);">
-        
-        <!-- Simulator Header -->
-        <div style="background: #030712; padding: 18px 24px; border-bottom: 1px solid var(--border-light); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
-          <div>
-            <span style="font-size: 0.75rem; font-weight: 800; color: #38BDF8; text-transform: uppercase; letter-spacing: 0.05em;">
-              Health System Inpatient &amp; Outpatient Predictive Telemetry
-            </span>
-            <h3 style="font-size: 1.25rem; font-weight: 800; color: #FFFFFF; margin: 2px 0 0 0;">
-              Live Pre-Submission Denial Probability Diagnostic
-            </h3>
-          </div>
-          <div style="display: flex; align-items: center; gap: 8px;">
-            <span class="pulse" style="width: 8px; height: 8px; border-radius: 50%; background: #10B981; display: inline-block;"></span>
-            <span style="font-size: 0.75rem; font-family: monospace; color: #10B981; font-weight: 700;">
-              MODEL: HealthSystem-DenialPredict-v4.8 (Active)
-            </span>
-          </div>
-        </div>
-
-        <!-- Scenario Selector Tabs -->
-        <div style="padding: 14px 24px; background: rgba(15, 23, 42, 0.9); border-bottom: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
-          <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-            <span style="font-size: 0.8rem; font-weight: 700; color: #94A3B8;">Select Inpatient / Outpatient Case:</span>
-            <div style="display: flex; gap: 6px; flex-wrap: wrap;" role="tablist">
-              <button type="button" class="btn btn-sm btn-primary active-spec-tab" id="tab-prescore-1" onclick="switchPreScoreCase(1)" style="font-size: 0.75rem; padding: 6px 14px; border-radius: 6px; font-weight: 700;">
-                1. Sepsis-3 Clinical Validation (DRG 871)
-              </button>
-              <button type="button" class="btn btn-sm btn-secondary" id="tab-prescore-2" onclick="switchPreScoreCase(2)" style="font-size: 0.75rem; padding: 6px 14px; border-radius: 6px; font-weight: 600;">
-                2. Short-Stay Two-Midnight Audit (CARC 49)
-              </button>
-              <button type="button" class="btn btn-sm btn-secondary" id="tab-prescore-3" onclick="switchPreScoreCase(3)" style="font-size: 0.75rem; padding: 6px 14px; border-radius: 6px; font-weight: 600;">
-                3. TAVR / High-Cost Device Carve-Out (C1882)
-              </button>
-              <button type="button" class="btn btn-sm btn-secondary" id="tab-prescore-4" onclick="switchPreScoreCase(4)" style="font-size: 0.75rem; padding: 6px 14px; border-radius: 6px; font-weight: 600;">
-                4. Post-Acute Transfer DRG (PAMT Status 06)
-              </button>
-            </div>
-          </div>
-          <span style="font-size: 0.75rem; font-family: monospace; color: #38BDF8;" id="prescore-case-meta">
-            EHR: Epic Resolute HB • Encounter #ENC-908124
-          </span>
-        </div>
-
-        <!-- Case Banner -->
-        <div style="background: rgba(3, 7, 18, 0.4); padding: 14px 24px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
-          <div>
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="font-size: 0.75rem; font-weight: 800; color: #38BDF8; text-transform: uppercase;" id="prescore-case-facility">
-                Memorial Health System • Tertiary Medical Center (650 Beds)
-              </span>
-              <span style="font-size: 0.7rem; background: rgba(56, 189, 248, 0.15); color: #38BDF8; padding: 1px 6px; border-radius: 3px;" id="prescore-case-type">
-                Inpatient Admission (UB-04)
-              </span>
-            </div>
-            <h4 style="font-size: 1.05rem; font-weight: 800; color: #FFFFFF; margin: 4px 0 0 0;" id="prescore-case-title">
-              Case 1: Severe Sepsis with Acute Organ Dysfunction Downgrade (MS-DRG 871 vs. 872)
-            </h4>
-          </div>
-          <div style="display: flex; gap: 16px; font-size: 0.8rem;">
-            <div>
-              <span style="color: #64748B; display: block; font-size: 0.7rem;">Targeted Payer:</span>
-              <strong style="color: #F8FAFC;" id="prescore-case-payer">UnitedHealthcare Medicare Advantage</strong>
-            </div>
-            <div>
-              <span style="color: #64748B; display: block; font-size: 0.7rem;">Billed Charges:</span>
-              <strong style="color: #F8FAFC;" id="prescore-case-charge">$34,800.00</strong>
-            </div>
-            <div>
-              <span style="color: #64748B; display: block; font-size: 0.7rem;">Expected DRG Net:</span>
-              <strong style="color: #34D399;" id="prescore-case-expected">$24,800.00</strong>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3-Column Diagnostic Workspace -->
-        <div style="padding: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 20px;">
-          
-          <!-- Column 1: Pre-Submission ML Denial Risk & SHAP Drivers -->
-          <div style="background: rgba(15, 23, 42, 0.85); border: 1.5px solid rgba(239, 68, 68, 0.4); border-radius: var(--radius-md); padding: 20px; display: flex; flex-direction: column;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-              <span style="font-size: 0.72rem; font-weight: 800; color: #EF4444; text-transform: uppercase;">
-                Pre-Submission Denial Risk
-              </span>
-              <span style="font-size: 0.72rem; background: rgba(239, 68, 68, 0.2); color: #EF4444; padding: 2px 8px; border-radius: 4px; font-weight: 700;" id="prescore-risk-badge">
-                CRITICAL VULNERABILITY
-              </span>
-            </div>
-            
-            <div style="display: flex; align-items: baseline; gap: 8px; margin: 4px 0 8px 0;">
-              <div style="font-size: 2.6rem; font-weight: 900; color: #EF4444; line-height: 1; font-family: monospace;" id="prescore-risk-pct">
-                86.4%
-              </div>
-              <span style="font-size: 0.8rem; color: #FCA5A5; font-weight: 600;">Denial Probability</span>
-            </div>
-
-            <div style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 14px;" id="prescore-predicted-denial">
-              Predicted Payer Rejection: <strong>CARC 252 / RARC N29</strong> (Clinical Validation Failure)
-            </div>
-
-            <!-- Risk Attribution Breakdown -->
-            <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 12px; flex-grow: 1;">
-              <span style="font-size: 0.75rem; font-weight: 700; color: #FCA5A5; text-transform: uppercase; display: block; margin-bottom: 8px;">
-                Top Predictive SHAP Risk Drivers:
-              </span>
-              <ul style="margin: 0; padding-left: 16px; font-size: 0.775rem; color: #CBD5E1; line-height: 1.6;" id="prescore-shap-list">
-                <li><strong style="color: #EF4444;">+38.2%</strong> Missing explicit sequential SOFA organ dysfunction delta in progress notes.</li>
-                <li><strong style="color: #EF4444;">+24.0%</strong> Payer historical audit profile: UHC MA denies 72% of DRG 871 lacking secondary vasopressor support.</li>
-                <li><strong style="color: #EF4444;">+16.1%</strong> Lab timing defect: Second serum lactate draw was delayed &gt;6 hours past ED admission.</li>
-                <li><strong style="color: #EF4444;">+8.1%</strong> Non-specific diagnosis: Attending documented "urosepsis" rather than "severe sepsis with acute kidney injury".</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Column 2: Pre-Submission Autonomous & CDI Intervention -->
-          <div style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.2) 0%, rgba(15, 23, 42, 0.95) 100%); border: 1.5px solid #38BDF8; border-radius: var(--radius-md); padding: 20px; display: flex; flex-direction: column;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-              <span style="font-size: 0.72rem; font-weight: 800; color: #38BDF8; text-transform: uppercase;">
-                Pre-Billing Intervention
-              </span>
-              <span style="font-size: 0.72rem; background: rgba(56, 189, 248, 0.2); color: #38BDF8; padding: 2px 8px; border-radius: 4px; font-weight: 700;" id="prescore-intervention-badge">
-                CLINICAL QUERY TRIGGERED
-              </span>
-            </div>
-
-            <div style="display: flex; align-items: baseline; gap: 8px; margin: 4px 0 8px 0;">
-              <div style="font-size: 2.6rem; font-weight: 900; color: #38BDF8; line-height: 1; font-family: monospace;">
-                0.28s
-              </div>
-              <span style="font-size: 0.8rem; color: #BAE6FD; font-weight: 600;">Interception Latency</span>
-            </div>
-
-            <div style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 14px;" id="prescore-action-summary">
-              Action: <strong>Concurrent Physician Query &amp; PWK Clinical Synthesis</strong>
-            </div>
-
-            <!-- Action Details -->
-            <div style="border-top: 1px solid rgba(56, 189, 248, 0.25); padding-top: 12px; flex-grow: 1;">
-              <span style="font-size: 0.75rem; font-weight: 700; color: #38BDF8; text-transform: uppercase; display: block; margin-bottom: 8px;">
-                Autonomous Engine Execution:
-              </span>
-              <ul style="margin: 0; padding-left: 16px; font-size: 0.775rem; color: #E2E8F0; line-height: 1.6;" id="prescore-actions-list">
-                <li>Dispatched non-leading electronic query to attending hospitalist via Epic In Basket within 4 hours of discharge.</li>
-                <li>Hospitalist updated chart: "Severe sepsis secondary to E. coli UTI with acute tubular necrosis (creatinine baseline 0.9 rose to 2.4, SOFA renal delta +2)."</li>
-                <li>Compiled 3-page clinical evidence packet (lactate clearance trend, IV broad-spectrum antibiotic flowsheet, ICU vitals).</li>
-                <li>Embedded digital attachment into ANSI X12 837I Loop 2300 PWK segment (Code OZ / By Electronic Transmission).</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Column 3: Post-Remediation Cleared Score & Financial Protection -->
-          <div style="background: rgba(15, 23, 42, 0.85); border: 1.5px solid rgba(16, 185, 129, 0.4); border-radius: var(--radius-md); padding: 20px; display: flex; flex-direction: column;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-              <span style="font-size: 0.72rem; font-weight: 800; color: #34D399; text-transform: uppercase;">
-                Post-Remediation Cleared Score
-              </span>
-              <span style="font-size: 0.72rem; background: rgba(16, 185, 129, 0.2); color: #34D399; padding: 2px 8px; border-radius: 4px; font-weight: 700;" id="prescore-cleared-badge">
-                GATEWAY APPROVED
-              </span>
-            </div>
-
-            <div style="display: flex; align-items: baseline; gap: 8px; margin: 4px 0 8px 0;">
-              <div style="font-size: 2.6rem; font-weight: 900; color: #34D399; line-height: 1; font-family: monospace;" id="prescore-cleared-pct">
-                1.4%
-              </div>
-              <span style="font-size: 0.8rem; color: #A7F3D0; font-weight: 600;">Residual Denial Risk</span>
-            </div>
-
-            <div style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 14px;" id="prescore-result-summary">
-              Claim Unfrozen: <strong>Dispatched to Clearinghouse with 98.6% Acceptance</strong>
-            </div>
-
-            <!-- Health System Impact -->
-            <div style="border-top: 1px solid rgba(16, 185, 129, 0.25); padding-top: 12px; flex-grow: 1;">
-              <span style="font-size: 0.75rem; font-weight: 700; color: #34D399; text-transform: uppercase; display: block; margin-bottom: 8px;">
-                Realized Health System Impact:
-              </span>
-              <ul style="margin: 0; padding-left: 16px; font-size: 0.775rem; color: #D1FAE5; line-height: 1.6;" id="prescore-impact-list">
-                <li><strong style="color: #34D399;">$24,800.00 Net Inpatient Cash Preserved:</strong> Prevented downcoding clawback to MS-DRG 872 (loss of $18,450).</li>
-                <li><strong style="color: #34D399;">60–90 Days AR Delay Eliminated:</strong> Claim adjudicated on first pass without post-payment audit suspension.</li>
-                <li><strong style="color: #34D399;">$118 Rework Cost Avoided:</strong> Zero post-submission RN appeal letters or peer-to-peer time required.</li>
-                <li><strong style="color: #34D399;">Audit Immunity:</strong> Sepsis-3 clinical indicators embedded into permanent billing record.</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Simulator Bottom Footer Strip -->
-        <div style="background: #030712; padding: 14px 24px; border-top: 1px solid rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
-          <div style="font-size: 0.8rem; color: #94A3B8;">
-            <strong style="color: #FFFFFF;">Health System Integration:</strong> Bi-directional HL7 / FHIR API integration with Epic Resolute HB, Cerner Soarian, and MEDITECH Expanse.
-          </div>
-          <div>
-            <a href="../contact.html?service=pre-submission-denial-scoring" class="btn btn-sm btn-primary" style="font-size: 0.75rem; padding: 6px 16px;">
-              Request Health System Diagnostic &rarr;
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
-       6. DYNAMIC VISUAL 1: INTERACTIVE CARC / RARC ROOT-CAUSE WORKFLOW
-       ======================================================================== -->
-  <section class="section section-dark" id="carc-rarc-workflow-visual">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag" style="background: rgba(56, 189, 248, 0.15); color: #38BDF8; border-color: rgba(56, 189, 248, 0.3);">
-          Interactive Denial Simulator
-        </span>
-        <h2 class="section-title">CARC / RARC Root-Cause Workflow &amp; Triage Engine</h2>
-        <p class="section-subtitle">
-          Experience how Nova Arc parses incoming 835 remittance codes, isolates the clinical or technical root cause, and routes claims to the optimal appeal strategy.
-        </p>
-      </div>
-
-      <!-- CARC / RARC Diagnostic Tool Cross-Link Banner -->
-      <div style="background: rgba(31, 111, 235, 0.12); border: 1px solid var(--blue-accent-border); border-radius: var(--radius-lg); padding: var(--space-lg) var(--space-xl); margin-bottom: var(--space-xl); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; box-shadow: var(--shadow-sm);">
-        <div style="display: flex; align-items: center; gap: 16px;">
-          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.4); display: flex; align-items: center; justify-content: center; color: #38BDF8;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          </div>
-          <div>
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <strong style="color: #FFFFFF; font-size: 1rem;">CARC / RARC Diagnostic Engine</strong>
-              <span class="preview-item-tag tag-blue" style="font-size: 0.72rem; padding: 2px 8px;">Interactive Simulator Below</span>
-            </div>
-            <p style="font-size: 0.85rem; color: #CBD5E1; margin: 4px 0 0 0;">
-              Our AI platform cross-references 300+ Claim Adjustment Reason Codes against insurer clinical policies. Use the interactive simulator below to test live denial scenarios.
-            </p>
-          </div>
-        </div>
-        <div>
-          <a href="../ai-platform.html" class="btn btn-secondary btn-sm" style="font-size: 0.8rem; padding: 8px 16px;">
-            <span>Explore AI Platform Tools &rarr;</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- CARC/RARC Interactive Card -->
-      <div class="pillar-card" style="padding: 0; overflow: hidden; background: rgba(11, 19, 43, 0.95); box-shadow: var(--shadow-xl); border: 1px solid var(--border-medium); max-width: 1080px; margin: 0 auto var(--space-2xl);">
-        
-        <!-- Header Strip -->
-        <div style="background: var(--navy-primary); color: #FFFFFF; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; border-bottom: 2px solid var(--blue-accent);">
-          <div style="display: flex; align-items: center; gap: 12px;">
-            <div style="width: 10px; height: 10px; border-radius: 50%; background: #EF4444; box-shadow: 0 0 8px #EF4444;"></div>
-            <strong style="font-size: 1.05rem; color: #FFFFFF;">
-              835 Denial Triage Pipeline • Live CARC/RARC Dissection
-            </strong>
-          </div>
-          <div style="display: flex; align-items: center; gap: 12px;">
-            <span style="font-size: 0.8rem; color: #94A3B8;">Triage SLA:</span>
-            <span style="font-size: 0.85rem; font-weight: 800; color: #10B981; background: rgba(16, 185, 129, 0.15); padding: 4px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(16, 185, 129, 0.3);">
-              Sub-4h Normalized Routing
-            </span>
-          </div>
-        </div>
-
-        <!-- 4-Stage Denial Triage Progression Steps -->
-        <div style="padding: var(--space-xl); border-bottom: 1px solid var(--border-light);">
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-md);">
-            
-            <div style="background: rgba(3, 7, 18, 0.6); padding: 16px; border-radius: var(--radius-md); border-left: 3px solid #EF4444;">
-              <div style="font-size: 0.75rem; text-transform: uppercase; color: #EF4444; font-weight: 800; margin-bottom: 4px;">Step 01: Ingestion</div>
-              <strong style="font-size: 0.95rem; color: #FFFFFF; display: block; margin-bottom: 6px;">835 CAS Code Extraction</strong>
-              <p style="font-size: 0.8rem; color: #94A3B8; margin: 0; line-height: 1.4;">
-                Parses CAS segment group codes (CO, OA, PI, PR), CARC reasons, and RARC remarks from electronic remit.
-              </p>
-            </div>
-
-            <div style="background: rgba(3, 7, 18, 0.6); padding: 16px; border-radius: var(--radius-md); border-left: 3px solid #F59E0B;">
-              <div style="font-size: 0.75rem; text-transform: uppercase; color: #F59E0B; font-weight: 800; margin-bottom: 4px;">Step 02: Triage</div>
-              <strong style="font-size: 0.95rem; color: #FFFFFF; display: block; margin-bottom: 6px;">Root-Cause Categorization</strong>
-              <p style="font-size: 0.8rem; color: #94A3B8; margin: 0; line-height: 1.4;">
-                Maps code combinations into 5 normalized buckets: Medical Necessity, Auth, Coding, COB, or Timely Filing.
-              </p>
-            </div>
-
-            <div style="background: rgba(3, 7, 18, 0.6); padding: 16px; border-radius: var(--radius-md); border-left: 3px solid #38BDF8;">
-              <div style="font-size: 0.75rem; text-transform: uppercase; color: #38BDF8; font-weight: 800; margin-bottom: 4px;">Step 03: Routing</div>
-              <strong style="font-size: 0.95rem; color: #FFFFFF; display: block; margin-bottom: 6px;">Specialist Workqueue</strong>
-              <p style="font-size: 0.8rem; color: #94A3B8; margin: 0; line-height: 1.4;">
-                Assigns clinical disputes to RN reviewers, coding denials to CPCs, and technical issues to RCM coordinators.
-              </p>
-            </div>
-
-            <div style="background: rgba(3, 7, 18, 0.6); padding: 16px; border-radius: var(--radius-md); border-left: 3px solid #10B981;">
-              <div style="font-size: 0.75rem; text-transform: uppercase; color: #10B981; font-weight: 800; margin-bottom: 4px;">Step 04: Action</div>
-              <strong style="font-size: 0.95rem; color: #FFFFFF; display: block; margin-bottom: 6px;">Targeted Appeal Generation</strong>
-              <p style="font-size: 0.8rem; color: #94A3B8; margin: 0; line-height: 1.4;">
-                Auto-assembles clinical records, guideline citations, and legal arguments for sub-48h transmission.
-              </p>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Denial Scenario Switcher -->
-        <div style="padding: var(--space-lg) var(--space-xl); background: rgba(3, 7, 18, 0.4); border-bottom: 1px solid var(--border-light); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
-          <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-            <span style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF;">Select Denial Scenario:</span>
-            <div style="display: flex; gap: 6px; flex-wrap: wrap;">
-              <button type="button" class="btn btn-sm btn-primary active-spec-tab" id="tab-denial-1" onclick="switchDenialCase(1)" style="font-size: 0.75rem; padding: 6px 14px; border-radius: var(--radius-full);">
-                Case 1: Medical Necessity Inpatient Downgrade (CARC 50 + N115)
-              </button>
-              <button type="button" class="btn btn-sm btn-secondary" id="tab-denial-2" onclick="switchDenialCase(2)" style="font-size: 0.75rem; padding: 6px 14px; border-radius: var(--radius-full);">
-                Case 2: Surgical Prior-Auth Omission (CARC 197 + N382)
-              </button>
-              <button type="button" class="btn btn-sm btn-secondary" id="tab-denial-3" onclick="switchDenialCase(3)" style="font-size: 0.75rem; padding: 6px 14px; border-radius: var(--radius-full);">
-                Case 3: Sepsis Clinical Validation Takeback (CARC 252 + N29)
-              </button>
-              <button type="button" class="btn btn-sm btn-secondary" id="tab-denial-4" onclick="switchDenialCase(4)" style="font-size: 0.75rem; padding: 6px 14px; border-radius: var(--radius-full);">
-                Case 4: Coding NCCI Unbundling Dispute (CARC 97 + M15)
-              </button>
-            </div>
-          </div>
-          <span style="font-size: 0.75rem; font-family: monospace; color: #38BDF8;" id="denial-case-code">
-            CAS*CO*50*18450.00~ | LQ*HE*N115~
-          </span>
-        </div>
-
-        <!-- Telemetry Data Stream View -->
-        <div style="padding: var(--space-xl);">
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-lg);">
-            
-            <!-- Inbound 835 Telemetry & Root-Cause Diagnosis -->
-            <div style="background: #030712; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 16px; font-family: 'Courier New', monospace; font-size: 0.75rem; color: #E2E8F0;">
-              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 8px; margin-bottom: 10px; font-weight: 700;">
-                <span style="color: #EF4444;">[Inbound EDI 835 Denial Segment]</span>
-                <span style="color: #94A3B8;" id="denial-payer-label">Payer: UnitedHealthcare MA</span>
-              </div>
-              <div style="color: #94A3B8; line-height: 1.5; white-space: pre-wrap;" id="inbound-denial-display">CLP*HOSP49201*1*24800.00*0.00*0.00*MB*CLM9021948~
-CAS*CO*50*24800.00~
-LQ*HE*N115~
-DTM*232*20260918~</div>
-              <div style="margin-top: 12px; padding: 8px; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: var(--radius-sm); color: #FCA5A5; font-size: 0.72rem; line-height: 1.4;" id="denial-diagnosis-note">
-                ⚠️ Diagnosis: Inpatient admission deemed not medically necessary; payer downgraded to observation level despite meeting CMS 2-Midnight benchmark.
-              </div>
-            </div>
-
-            <!-- Triage Resolution & Appeal Routing Action -->
-            <div style="background: #030712; border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); padding: 16px; font-family: 'Courier New', monospace; font-size: 0.75rem; color: #E2E8F0;">
-              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(16, 185, 129, 0.2); padding-bottom: 8px; margin-bottom: 10px; font-weight: 700;">
-                <span style="color: #10B981;">[Nova Arc Triage &amp; Action Plan]</span>
-                <span style="color: #10B981;" id="denial-overturn-prob">Overturn Prob: 88.4%</span>
-              </div>
-              <div style="color: #A7F3D0; line-height: 1.5; white-space: pre-wrap;" id="denial-action-display">ROUTED TO:   Registered Nurse (RN) Clinical Appeal Pod
-BENCHMARK:   Milliman Care Guidelines (MCG) Inpatient Level
-LEGAL BASIS: CMS 2-Midnight Rule (42 CFR §412.3) &amp; InterQual
-EVIDENCE:    Telemetry vitals, IV drip titration, order timestamp
-ACTION:      Automated Level 1 Redetermination Packet Prepared</div>
-              <div style="margin-top: 12px; padding: 8px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-sm); color: #6EE7B7; font-size: 0.72rem; line-height: 1.4;" id="denial-strategy-note">
-                ✓ Appeal Strategy: Nurse audit verified patient crossed two midnights with continuous IV cardiac monitoring. Full MCG inpatient criteria documentation synthesized.
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Bottom Telemetry Metric Strip -->
-          <div style="margin-top: var(--space-md); background: rgba(3, 7, 18, 0.5); padding: 12px 18px; border-radius: var(--radius-sm); border: 1px solid var(--border-light); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
-            <div style="font-size: 0.8rem; color: #94A3B8;" id="denial-meta-strip">
-              <strong style="color: #FFFFFF;">Timely Filing Clock:</strong> 45 Days Remaining &nbsp;|&nbsp; 
-              <strong style="color: #FFFFFF;">Assigned Specialist:</strong> Clinical RN Lead (Pod 02) &nbsp;|&nbsp; 
-              <strong style="color: #FFFFFF;">Dispatched Via:</strong> Availity EDI 275 Attachment
-            </div>
-            <span class="preview-item-tag tag-green" style="font-size: 0.75rem;" id="denial-status-badge">Action: Packet Generated</span>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
-       6. DYNAMIC VISUAL 2: APPEAL LETTER GENERATION EXPLAINER
-       ======================================================================== -->
-  <section class="section section-light" id="appeal-letter-explainer">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Clinical &amp; Legal Synthesis</span>
-        <h2 class="section-title">Automated Appeal Letter &amp; Packet Generation Explainer</h2>
-        <p class="section-subtitle">
-          How Nova Arc transforms raw medical records into airtight, legally cited clinical appeal packets with proven 84.2% overturn efficacy.
-        </p>
-      </div>
-
-      <!-- Explainer 4-Stage Assembly Flow -->
-      <div style="background: #FFFFFF; border: 1px solid var(--border-medium); border-radius: var(--radius-lg); padding: var(--space-lg) var(--space-xl); margin-bottom: var(--space-xl); box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
-        <div>
-          <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--blue-accent); font-weight: 800; letter-spacing: 0.05em;">Enterprise Appeal Engineering</span>
-          <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--navy-primary); margin: 2px 0 4px 0;">
-            4-Stage Clinical Document Assembly &amp; Statutory Citation Engine
-          </h3>
-          <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">
-            From raw chart ingestion to certified electronic EDI 275 packet delivery under strict payer deadlines.
-          </p>
-        </div>
-        <div style="display: flex; gap: 8px;">
-          <span class="compliance-tag-pill" style="margin: 0; background: rgba(16, 185, 129, 0.08); color: #065F46; border-color: rgba(16, 185, 129, 0.3);">
-            ERISA §503 &amp; CMS 42 CFR §422 Compliant
-          </span>
-        </div>
-      </div>
-
-      <!-- Mode Selection Tabs -->
-      <div style="display: flex; justify-content: center; gap: 8px; margin-bottom: var(--space-xl); flex-wrap: wrap;" role="tablist" aria-label="Appeal Letter Types">
-        <button type="button" class="btn btn-sm btn-primary active-spec-tab" id="tab-appeal-1" onclick="switchAppealLetter(1)" style="font-weight: 700; border-radius: var(--radius-full); padding: 8px 18px;">
-          1. Clinical Appeal: Sepsis-3 Medical Necessity
-        </button>
-        <button type="button" class="btn btn-sm btn-secondary" id="tab-appeal-2" onclick="switchAppealLetter(2)" style="font-weight: 600; border-radius: var(--radius-full); padding: 8px 18px;">
-          2. Surgical Appeal: Retrospective Prior-Auth (CARC 197)
-        </button>
-        <button type="button" class="btn btn-sm btn-secondary" id="tab-appeal-3" onclick="switchAppealLetter(3)" style="font-weight: 600; border-radius: var(--radius-full); padding: 8px 18px;">
-          3. Coding Appeal: NCCI Modifier 59 / XS Disallowance
-        </button>
-      </div>
-
-      <!-- Interactive Appeal Letter Deep-Dive Card -->
-      <div class="pillar-card" style="padding: 0; overflow: hidden; background: #FFFFFF; box-shadow: var(--shadow-xl); border: 1px solid var(--border-medium); max-width: 1080px; margin: 0 auto;">
-        
-        <!-- Header Strip -->
-        <div style="background: var(--navy-primary); color: #FFFFFF; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
-          <div>
-            <span style="font-size: 0.75rem; text-transform: uppercase; color: #38BDF8; font-weight: 700;" id="appeal-tagline">
-              Level 1 Clinical Redetermination • Inpatient Acuity Defense
-            </span>
-            <h4 style="font-size: 1.15rem; font-weight: 800; color: #FFFFFF; margin: 0;" id="appeal-title">
-              Formal Redetermination Request: Severe Sepsis with Acute Organ Dysfunction
-            </h4>
-          </div>
-          <span style="font-size: 0.75rem; font-family: monospace; background: rgba(255, 255, 255, 0.1); padding: 4px 10px; border-radius: var(--radius-sm); color: #94A3B8;" id="appeal-statute-ref">
-            Statute: 42 CFR §422.568 (Medicare Part C)
-          </span>
-        </div>
-
-        <!-- Comparative Grid: Letter Structure & Strategy Breakdown -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
-          
-          <!-- Column 1: Live Generated Appeal Letter Text -->
-          <div style="padding: var(--space-xl); background: #F8FAFC; border-right: 1px solid var(--border-medium); font-family: 'Georgia', serif; font-size: 0.85rem; color: #1E293B; line-height: 1.7;">
-            <div style="font-family: 'Inter', sans-serif; font-size: 0.75rem; text-transform: uppercase; color: var(--blue-accent); font-weight: 800; margin-bottom: 8px;">
-              [Generated Certified Appeal Excerpt]
-            </div>
-
-            <div id="appeal-letter-body" style="white-space: pre-wrap; background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 18px; box-shadow: var(--shadow-sm); max-height: 380px; overflow-y: auto;">RE: FORMAL LEVEL 1 APPEAL &amp; DEMAND FOR PAYMENT
-Patient: [REDACTED] | Claim ID: CLM-8830192 | Date of Service: 09/14/2026
-Payer: UnitedHealthcare Medicare Advantage | Denial: CARC 252 / RARC N29
-
-Dear Grievance &amp; Appeals Committee:
-
-Please accept this correspondence as Nova Arc's formal Level 1 Redetermination Appeal on behalf of Memorial Hospital System pursuant to 42 CFR §422.568. The claim referenced above was improperly denied citing "clinical validation failure for Sepsis (A41.9)." 
-
-1. CLINICAL TRAJECTORY &amp; OBJECTIVE INDICATORS:
-On 09/14/2026, the patient presented with acute hypoxemic respiratory distress secondary to severe pneumonia. Objective indicators documented in the certified record include:
-• Core Temperature: 102.4°F; Heart Rate: 118 bpm; Respiratory Rate: 26 bpm
-• Arterial Blood Gas: Lactate 3.2 mmol/L (elevated from baseline 0.8)
-• Creatinine acute rise from 0.9 mg/dL to 2.4 mg/dL meeting KDIGO Stage 2 Acute Kidney Injury
-• Sequential Organ Failure Assessment (SOFA) acute delta score of +3 (respiratory + renal)
-
-2. COMPLIANCE WITH PEER-REVIEWED CLINICAL CRITERIA:
-The patient unequivocally satisfied the international Third Consensus Definitions for Sepsis and Septic Shock (Sepsis-3), which mandates life-threatening organ dysfunction caused by a dysregulated host response to infection (SOFA increase &ge; 2). Furthermore, intravenous broad-spectrum piperacillin/tazobactam and aggressive crystalloid fluid boluses (30 mL/kg) were administered within 3 hours of ED admission.
-
-3. STATUTORY DEMAND:
-The payer's internal proprietary auditing rules cannot supersede established clinical definitions or the attending physician's clinical judgment. We demand full payment of MS-DRG 871 ($19,450.00) within thirty (30) days. Failure to remit will result in immediate escalation to the CMS Independent Review Entity (IRE).</div>
-          </div>
-
-          <!-- Column 2: Architectural Breakdown & Key Elements -->
-          <div style="padding: var(--space-xl); background: #FFFFFF;">
-            <div style="font-size: 0.75rem; text-transform: uppercase; color: #10B981; font-weight: 800; margin-bottom: 8px;">
-              [Why This Packet Wins: Evidentiary Elements]
-            </div>
-
-            <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--navy-primary); margin-bottom: var(--space-sm);" id="appeal-strategy-heading">
-              Sepsis-3 SOFA Delta &amp; Objective Diagnostic Validation
-            </h4>
-
-            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: var(--space-md);" id="appeal-strategy-desc">
-              Payer algorithms routinely disallow MS-DRG 871 by asserting that sepsis documentation is "not supported by clinical indicators." Nova Arc’s clinical engine highlights exact lab timestamps (lactate &gt; 2.0 mmol/L, KDIGO creatinine spike), proves organ failure using SOFA delta calculations, and cites the Surviving Sepsis Campaign bundle compliance.
-            </p>
-
-            <!-- 3 Evidentiary Highlights -->
-            <div style="background: #F8FAFC; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 14px; font-size: 0.8rem; margin-bottom: var(--space-md);">
-              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; border-bottom: 1px solid var(--border-light); padding-bottom: 6px;">
-                <span style="font-weight: 700; color: var(--navy-primary);">1. Legal Jurisdiction Cited:</span>
-                <span style="color: var(--blue-accent); font-weight: 700;" id="appeal-elem-1">42 CFR §422.568 (30-Day Limit)</span>
-              </div>
-              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; border-bottom: 1px solid var(--border-light); padding-bottom: 6px;">
-                <span style="font-weight: 700; color: var(--navy-primary);">2. Objective Clinical Benchmarks:</span>
-                <span style="color: #10B981; font-weight: 700;" id="appeal-elem-2">Sepsis-3 / SOFA Delta +3 / KDIGO</span>
-              </div>
-              <div style="display: flex; justify-content: space-between;">
-                <span style="font-weight: 700; color: var(--navy-primary);">3. Packet Evidence Attached:</span>
-                <span style="color: var(--text-secondary);" id="appeal-elem-3">Indexed 14-Page Chart &amp; Lab Trend</span>
-              </div>
-            </div>
-
-            <!-- Overturn Rate Metric Box -->
-            <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-sm); padding: 12px; display: flex; align-items: center; justify-content: space-between;">
-              <div>
-                <span style="font-size: 0.72rem; text-transform: uppercase; color: #065F46; font-weight: 800;">Target Overturn Probability:</span>
-                <div style="font-size: 1.25rem; font-weight: 800; color: #10B981;" id="appeal-overturn-stat">
-                  87.6% Level 1 Overturn Rate
-                </div>
-              </div>
-              <span class="preview-item-tag tag-green" style="font-size: 0.75rem;">Airtight Brief</span>
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- Protocol Summary Bar -->
-        <div style="background: var(--bg-slate); padding: 16px 24px; border-top: 1px solid var(--border-medium); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
-          <div>
-            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-secondary); font-weight: 700;">Submission Method:</span>
-            <div style="font-size: 0.9rem; font-weight: 700; color: var(--navy-primary);" id="appeal-delivery-method">
-              Electronic EDI 275 Additional Information Attachment &amp; Certified Courier Delivery
-            </div>
-          </div>
-          <span class="preview-item-tag tag-blue" style="font-size: 0.75rem; font-weight: 700;" id="appeal-turnaround-tag">
-            Sub-48h Assembly &amp; Filing
-          </span>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
-       7. SECTOR FOCUS: HEALTH SYSTEMS & MULTI-HOSPITAL NETWORKS
-       ======================================================================== -->
-  <section class="section section-dark" id="sectors">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag" style="background: rgba(56, 189, 248, 0.15); color: #38BDF8; border-color: rgba(56, 189, 248, 0.3);">
-          Sector Focus: Health Systems
-        </span>
-        <h2 class="section-title">Engineered for Enterprise Health Systems &amp; Hospital Networks</h2>
-        <p class="section-subtitle">
-          How Nova Arc coordinates centralized denial recovery, Medicare Advantage dispute escalations, and physician peer-to-peer coaching across multi-campus networks.
-        </p>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
-        
-        <!-- Health System Pillar 1 -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(31, 111, 235, 0.1); border: 1px solid var(--blue-accent-border); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: var(--blue-accent);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
-          </div>
-          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
-            CBO Enterprise Workqueue Harmonization
-          </h3>
-          <p style="font-size: 0.875rem; color: #CBD5E1; line-height: 1.6;">
-            Health systems with 5 to 50+ hospital campuses generate hundreds of thousands of annual claim denials across dozens of hospital Tax Identification Numbers (TINs). Nova Arc centralizes and balances denial workqueues into Epic Resolute and Cerner Soarian.
-          </p>
-          <ul style="margin-top: var(--space-md); padding-left: 18px; font-size: 0.8rem; color: #E2E8F0; line-height: 1.6;">
-            <li>Elimination of duplicative campus-level appeal submissions</li>
-            <li>Dynamic re-allocation of clinical appeal workloads during volume surges</li>
-            <li>Real-time denial scorecards benchmarked by facility, service line, and payer</li>
-            <li>Overturned cash proceeds mapped directly back into hospital general ledgers</li>
-          </ul>
-        </div>
-
-        <!-- Health System Pillar 2 -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #10B981;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-          </div>
-          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
-            Medicare Advantage &amp; Commercial Policy Countermeasures
-          </h3>
-          <p style="font-size: 0.875rem; color: #CBD5E1; line-height: 1.6;">
-            Medicare Advantage plans (UnitedHealthcare, Humana, Aetna MA) frequently enforce proprietary coverage restrictions that conflict with CMS National Coverage Determinations. Nova Arc defends hospital rights under CMS Final Rule 4201-F, enforcing parity between MA plans and Traditional Medicare.
-          </p>
-          <ul style="margin-top: var(--space-md); padding-left: 18px; font-size: 0.8rem; color: #E2E8F0; line-height: 1.6;">
-            <li>Enforcement of CMS 4201-F: MA plans must follow traditional Medicare coverage guidelines</li>
-            <li>Systematic defense of the CMS Two-Midnight Rule for short-stay inpatient admissions</li>
-            <li>Countermeasures against algorithmic claims-settlement software and AI denial bots</li>
-            <li>Automated interest calculation under state Prompt Payment statutes</li>
-          </ul>
-        </div>
-
-        <!-- Health System Pillar 3 -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #38BDF8;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
-          </div>
-          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
-            Multilevel Escalations &amp; Peer-to-Peer Coaching
-          </h3>
-          <p style="font-size: 0.875rem; color: #CBD5E1; line-height: 1.6;">
-            Hospital physicians waste precious clinical hours navigating frustrating payer peer-to-peer phone calls. Nova Arc equips hospitalists and surgeons with concise, 1-page clinical talking briefs citing objective vitals, diagnostic criteria, and payer medical policy loopholes.
-          </p>
-          <ul style="margin-top: var(--space-md); padding-left: 18px; font-size: 0.8rem; color: #E2E8F0; line-height: 1.6;">
-            <li>Turnkey Peer-to-Peer Physician Briefs highlighting decisive clinical indicators</li>
-            <li>Coordination of Level 2 Reconsiderations and Independent Review Entity (IRE) filings</li>
-            <li>Preparation and presentation of high-value disputes at Administrative Law Judge (ALJ) hearings</li>
-            <li>Tracking of insurer Medical Director uphold rates to spot bad-faith patterns</li>
-          </ul>
-        </div>
-
-        <!-- Health System Pillar 4 -->
-        <div class="pillar-card" style="background: rgba(11, 19, 43, 0.7); border: 1px solid var(--border-light); padding: var(--space-xl);">
-          <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #F59E0B;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-          </div>
-          <h3 style="font-size: 1.2rem; color: #FFFFFF; font-weight: 700; margin-bottom: var(--space-xs);">
-            Pre-Submission Denial Interception &amp; ML Scoring
-          </h3>
-          <p style="font-size: 0.875rem; color: #CBD5E1; line-height: 1.6;">
-            Rather than waiting for remittance takebacks 60 days post-discharge, Nova Arc embeds predictive ML scoring directly into health system pre-bill workqueues. High-risk inpatient DRGs (Sepsis-3, Two-Midnight short-stays, cardiology devices) are frozen and remediated before gateway release.
-          </p>
-          <ul style="margin-top: var(--space-md); padding-left: 18px; font-size: 0.8rem; color: #E2E8F0; line-height: 1.6;">
-            <li>Zero-latency scoring (0.28s) across 100% of hospital inpatient UB-04 and outpatient claims</li>
-            <li>Automated, non-leading electronic physician queries routed via Epic and Cerner EHR inboxes</li>
-            <li>Elimination of 48.2% of initial commercial and Medicare Advantage claim denials</li>
-            <li>Executive C-Suite denial telemetry dashboard benchmarked across all network facilities</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
-       8. SERVICE LEVEL AGREEMENTS (SLA STRIP)
-       ======================================================================== -->
-  <section style="background: var(--navy-deep); border-top: 1px solid var(--border-medium); border-bottom: 1px solid var(--border-medium); padding: var(--space-xl) 0;">
-    <div class="container">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-xl); text-align: center;">
-        
-        <div>
-          <div style="font-size: 2.2rem; font-weight: 800; color: #10B981; line-height: 1; margin-bottom: 6px;">84.2%</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Appeal Overturn Rate SLA</div>
-          <p style="font-size: 0.78rem; color: #94A3B8; margin: 0;">Contractually backed across clinical and technical disputes</p>
-        </div>
-
-        <div>
-          <div style="font-size: 2.2rem; font-weight: 800; color: var(--blue-accent); line-height: 1; margin-bottom: 6px;">&lt; 48h</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Denial-to-Appeal Filing SLA</div>
-          <p style="font-size: 0.78rem; color: #94A3B8; margin: 0;">Sub-48h packet dispatch preserving statutory deadlines</p>
-        </div>
-
-        <div>
-          <div style="font-size: 2.2rem; font-weight: 800; color: #38BDF8; line-height: 1; margin-bottom: 6px;">&lt; 1.8%</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Net Unrecovered Denials</div>
-          <p style="font-size: 0.78rem; color: #94A3B8; margin: 0;">Reduces hospital net denial write-offs by over 66%</p>
-        </div>
-
-        <div>
-          <div style="font-size: 2.2rem; font-weight: 800; color: #A855F7; line-height: 1; margin-bottom: 6px;">100%</div>
-          <div style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Timely Filing Compliance</div>
-          <p style="font-size: 0.78rem; color: #94A3B8; margin: 0;">Zero unappealed claims forfeited to insurer deadline expirations</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
-       9. FAQ ACCORDION (5 In-Depth Questions)
-       ======================================================================== -->
-  <section class="section section-light" id="faq">
-    <div class="container" style="max-width: 880px;">
-      <div class="section-header">
-        <span class="section-tag">Executive FAQ</span>
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">
-          Key insights into CARC/RARC triage, clinical appeal letter construction, Medicare Advantage parity, and closed-loop denial prevention.
-        </p>
-      </div>
-
-      <div class="accordion" id="faqAccordion">
-        
-        <!-- FAQ 1 -->
-        <div class="accordion-item">
-          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="accordion-title">How does Nova Arc categorize and prioritize inbound 835 claim denials?</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>
-              When an electronic remittance advice (EDI 835) arrives, Nova Arc’s intake engine scans every Claim Adjustment Segment (CAS). The system extracts the Claim Adjustment Group Code (such as <code>CO</code> for Contractual Obligation or <code>PR</code> for Patient Responsibility), the primary Claim Adjustment Reason Code (CARC), and Remittance Advice Remark Codes (RARC). Denials are mapped into five core workqueues: (1) Medical Necessity &amp; Level of Care; (2) Prior Authorization &amp; Pre-Certification; (3) Coding &amp; NCCI Unbundling; (4) Coordination of Benefits &amp; Eligibility; and (5) Timely Filing &amp; Gateway Rejections. Workqueues are prioritized algorithmically by recoverable dollar value, payer timely filing deadlines, and historical overturn probability.
-            </p>
-          </div>
-        </div>
-
-        <!-- FAQ 2 -->
-        <div class="accordion-item">
-          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="accordion-title">How does your appeal letter generator differ from generic template software?</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>
-              Commercial payers routinely use optical scanning algorithms to instantly reject boilerplate "form" appeal letters. Nova Arc creates fully custom, patient-specific appeal briefs authored and audited by Registered Nurse (RN) clinical appeal specialists. Each letter incorporates: (1) An exact clinical timeline referencing objective vital signs, nursing notes, and diagnostic test timestamps; (2) Direct citations of recognized clinical benchmarks (such as Milliman Care Guidelines, InterQual, or specialty clinical consensus criteria); (3) Cross-references to the payer’s specific published Clinical Policy Bulletin; and (4) Legal citations under federal statutes (such as ERISA §503 for commercial plans and 42 CFR §422 for Medicare Advantage).
-            </p>
-          </div>
-        </div>
-
-        <!-- FAQ 3 -->
-        <div class="accordion-item">
-          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="accordion-title">How do you combat Medicare Advantage plans that refuse to follow Traditional Medicare rules?</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>
-              Under CMS Final Rule 4201-F (effective January 2024), Medicare Advantage Organizations (MAOs) are federally required to provide coverage for basic benefits that is at least equivalent to Traditional Medicare National Coverage Determinations (NCDs) and Local Coverage Determinations (LCDs). MAOs cannot use internal proprietary criteria to restrict coverage when an NCD or LCD exists. For short-stay inpatient admissions, Nova Arc strictly enforces compliance with the CMS Two-Midnight Rule (42 CFR §412.3). If an MA plan wrongfully upholds an inpatient denial, we escalate directly to the CMS Independent Review Entity (IRE), where provider overturn rates historically exceed 75%.
-            </p>
-          </div>
-        </div>
-
-        <!-- FAQ 4 -->
-        <div class="accordion-item">
-          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="accordion-title">What is your turnaround time for drafting and submitting appeal packets?</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>
-              Nova Arc operates under a strict contractual <strong>Sub-48-Hour Appeal Submission SLA</strong>. As soon as an 835 denial remit posts, our automated pipeline harvests the corresponding clinical chart notes, lab reports, and billing data from the hospital EHR. High-priority clinical appeals are assigned to dedicated RN auditor pods within 4 operating hours, drafted, peer-reviewed, and transmitted electronically via EDI 275 Additional Information attachments or secure payer clearinghouse portals well in advance of insurer timely filing deadlines.
-            </p>
-          </div>
-        </div>
-
-        <!-- FAQ 5 -->
-        <div class="accordion-item">
-          <button type="button" class="accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="accordion-title">How does denial recovery data prevent future claim rejections across our health system?</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>
-              Nova Arc closes the loop between back-end dispute resolution and front-end revenue cycle operations. Every overturned and upheld denial is tagged with root-cause metadata (e.g., ordering clinic, attending physician, CPT code combination, or payer policy version). Granular reports are fed back to: (1) <strong>Patient Access:</strong> Updating front-end eligibility and authorization workqueues; (2) <strong>Clinical Documentation Improvement (CDI):</strong> Coaching physicians on documenting specific clinical acuity indicators; and (3) <strong>Clearinghouse Scrubbers:</strong> Creating custom payer edit rules that intercept flawed claims before initial submission.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
-       10. CTA BAND & SHARED FOOTER
-       ======================================================================== -->
-  <section class="section" style="background: linear-gradient(135deg, #0B132B 0%, #1C2541 50%, #0B132B 100%); border-top: 1px solid var(--border-medium); padding: var(--space-3xl) 0;">
-    <div class="container">
-      <div style="max-width: 820px; margin: 0 auto; text-align: center;">
-        <span class="section-tag" style="background: rgba(31, 111, 235, 0.15); color: #38BDF8; border-color: rgba(56, 189, 248, 0.3);">
-          Enterprise Cash Recovery
-        </span>
-        <h2 style="font-size: 2.2rem; font-weight: 800; color: #FFFFFF; margin: var(--space-sm) 0 var(--space-md);">
-          Recapture Lost Hospital Revenue with 84.2% Overturn Velocity
-        </h2>
-        <p style="font-size: 1.05rem; color: #CBD5E1; line-height: 1.6; margin-bottom: var(--space-2xl);">
-          Eliminate untimely denial write-offs, automate airtight clinical appeal generation, and enforce payer compliance under our contractual performance covenants.
-        </p>
-        <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
-          <a href="../contact.html?service=denial-management" class="btn btn-primary btn-lg">
-            <span>Schedule a Denial Diagnostic</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-          <a href="../index.html#roi-calculator" class="btn btn-secondary btn-lg">
-            <span>Calculate Health System ROI</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================================================================
+    <!-- ========================================================================
        FOOTER (Standardized Across All Pages)
        ======================================================================== -->
   <footer class="site-footer">
