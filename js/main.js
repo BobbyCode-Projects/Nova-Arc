@@ -145,57 +145,158 @@ function initServicesMegaMenu() {
 }
 
 /* --------------------------------------------------------------------------
-   2. Mobile Navigation Drawer & Services Accordion
+   2. Mobile Navigation Sidebar & Services Accordion
    -------------------------------------------------------------------------- */
 function initMobileNavigation() {
   const toggleBtn = document.querySelector('.mobile-toggle');
   const drawer = document.querySelector('.mobile-nav-drawer') || document.querySelector('.mobile-nav');
-  // Exclude accordion toggle buttons from auto-closing the drawer
-  const navLinks = document.querySelectorAll(
-    '.mobile-nav-link:not(.mobile-accordion-toggle), .mobile-nav-drawer .btn, .mobile-submenu-link, .mobile-submenu-sublink, .mobile-overview-btn'
-  );
 
   if (!toggleBtn || !drawer) return;
 
-  const toggleMenu = () => {
-    const isActive = drawer.classList.contains('active');
-    if (isActive) {
-      drawer.classList.remove('active');
-      toggleBtn.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-      toggleBtn.innerHTML = `
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      `;
-    } else {
-      drawer.classList.add('active');
-      toggleBtn.setAttribute('aria-expanded', 'true');
-      document.body.style.overflow = 'hidden';
-      toggleBtn.innerHTML = `
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  // Move drawer to document.body to escape header backdrop-filter, sticky, and containing block bugs
+  if (drawer.parentElement && drawer.parentElement !== document.body) {
+    document.body.appendChild(drawer);
+  }
+
+  // Ensure high-z-index dark backdrop exists
+  let backdrop = document.getElementById('mobileNavBackdrop');
+  if (!backdrop) {
+    backdrop = document.createElement('div');
+    backdrop.id = 'mobileNavBackdrop';
+    backdrop.className = 'mobile-nav-backdrop';
+    backdrop.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(backdrop);
+  }
+
+  // Ensure drawer has a clean top header with brand and dedicated close button
+  let drawerHeader = drawer.querySelector('.mobile-drawer-header');
+  if (!drawerHeader) {
+    drawerHeader = document.createElement('div');
+    drawerHeader.className = 'mobile-drawer-header';
+    drawerHeader.innerHTML = `
+      <div class="mobile-drawer-brand">
+        <span class="mobile-drawer-logo-text">Nova<strong>Arc</strong></span>
+      </div>
+      <button type="button" class="mobile-drawer-close" id="mobileDrawerCloseBtn" aria-label="Close navigation menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
-      `;
+      </button>
+    `;
+    drawer.insertBefore(drawerHeader, drawer.firstChild);
+  }
+
+  const closeBtn = document.getElementById('mobileDrawerCloseBtn');
+
+  // Add "Explore All Services" link inside the services accordion if not already present
+  const mobileServicesSubmenu = drawer.querySelector('#mobileServicesSubmenu');
+  if (mobileServicesSubmenu && !mobileServicesSubmenu.querySelector('.mobile-all-services-link')) {
+    const isSubdir = window.location.pathname.includes('/services/') || window.location.pathname.includes('/solutions/');
+    const servicesPath = isSubdir ? '../services.html' : 'services.html';
+    const overviewWrap = document.createElement('div');
+    overviewWrap.className = 'mobile-submenu-overview-wrap';
+    overviewWrap.innerHTML = `
+      <a href="${servicesPath}" class="mobile-all-services-link">
+        <span>Explore All Services</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    `;
+    mobileServicesSubmenu.insertBefore(overviewWrap, mobileServicesSubmenu.firstChild);
+  }
+
+  const openMenu = () => {
+    drawer.classList.add('active');
+    backdrop.classList.add('active');
+    toggleBtn.classList.add('active');
+    toggleBtn.setAttribute('aria-expanded', 'true');
+    drawer.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('mobile-nav-open');
+    toggleBtn.innerHTML = `
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    `;
+  };
+
+  const closeMenu = () => {
+    drawer.classList.remove('active');
+    backdrop.classList.remove('active');
+    toggleBtn.classList.remove('active');
+    toggleBtn.setAttribute('aria-expanded', 'false');
+    drawer.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('mobile-nav-open');
+    toggleBtn.innerHTML = `
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    `;
+  };
+
+  const toggleMenu = (e) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    if (drawer.classList.contains('active')) {
+      closeMenu();
+    } else {
+      openMenu();
     }
   };
 
   toggleBtn.addEventListener('click', toggleMenu);
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeMenu();
+    });
+  }
+  backdrop.addEventListener('click', (e) => {
+    e.preventDefault();
+    closeMenu();
+  });
 
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer.classList.contains('active')) {
+      closeMenu();
+      toggleBtn.focus();
+    }
+  });
+
+  // Close when screen resizes to desktop width
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900 && drawer.classList.contains('active')) {
+      closeMenu();
+    }
+  });
+
+  // Navigation links inside drawer: auto-close on click (except accordion toggle)
+  const navLinks = drawer.querySelectorAll(
+    'a.mobile-nav-link, .mobile-submenu-link, .mobile-submenu-sublink, .mobile-category-title a, .mobile-nav-bottom a, .mobile-all-services-link, .mobile-overview-btn'
+  );
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       if (drawer.classList.contains('active')) {
-        toggleMenu();
+        closeMenu();
       }
     });
   });
 
+  // Mobile search trigger inside drawer
+  const mobileSearchTrigger = drawer.querySelector('#mobileSearchTrigger');
+  if (mobileSearchTrigger) {
+    mobileSearchTrigger.addEventListener('click', () => {
+      closeMenu();
+    });
+  }
+
   // Mobile accordion toggle for Services submenu
-  const mobileServicesToggle = document.getElementById('mobileServicesToggle');
-  const mobileServicesSubmenu = document.getElementById('mobileServicesSubmenu');
+  const mobileServicesToggle = drawer.querySelector('#mobileServicesToggle');
   if (mobileServicesToggle && mobileServicesSubmenu) {
     mobileServicesToggle.addEventListener('click', (e) => {
       e.preventDefault();
