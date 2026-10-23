@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style.css?v=2.2">
 </head>
 <body>
 
@@ -191,11 +191,62 @@
     <div class="mobile-nav-drawer" id="mobileDrawer">
       <ul class="mobile-nav-list">
         <li><a href="../solutions.html" class="mobile-nav-link">Solutions <span>&rarr;</span></a></li>
-        <li><a href="../services.html" class="mobile-nav-link">Services <span>&rarr;</span></a></li>
+        <li class="mobile-accordion-item">
+          <button class="mobile-nav-link mobile-accordion-toggle" id="mobileServicesToggle" aria-expanded="false" aria-controls="mobileServicesSubmenu">
+            <span>Services</span>
+            <svg class="mobile-accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="mobile-submenu-collapse" id="mobileServicesSubmenu" aria-hidden="true">
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title"><a href="../services/patient-access-services.html">Patient Access</a></h4>
+              <a href="../services/real-time-insurance-eligibility.html" class="mobile-submenu-link">Insurance Eligibility &amp; Benefits</a>
+              <a href="../services/prior-authorization-management.html" class="mobile-submenu-link">Prior Authorization Management</a>
+              <a href="../services/patient-registration-verification.html" class="mobile-submenu-link">Patient Scheduling &amp; Registration QA</a>
+              <a href="../services/financial-clearance-gfe.html" class="mobile-submenu-link">Financial Clearance &amp; Good Faith Estimates</a>
+              <a href="../services/point-of-service-collections.html" class="mobile-submenu-link">Point-of-Service Collections</a>
+              <a href="../services/referral-order-management.html" class="mobile-submenu-link">Medical Necessity &amp; Order Verification</a>
+            </div>
+
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title"><a href="../services/him-coding-services.html">HIM &amp; Coding</a></h4>
+              <a href="../services/full-cycle-medical-coding.html" class="mobile-submenu-link parent">Medical Coding Services</a>
+              <a href="../services/hcc-risk-adjustment.html" class="mobile-submenu-sublink">&rsaquo; Risk Adjustment/HCC Coding</a>
+              <a href="../services/facility-drg-coding.html" class="mobile-submenu-sublink">&rsaquo; Facility/DRG Coding</a>
+              <a href="../services/professional-fee-coding.html" class="mobile-submenu-sublink">&rsaquo; Professional Fee Coding</a>
+              <a href="../services/cdi-chart-auditing.html" class="mobile-submenu-link">Clinical Documentation Improvement</a>
+              <a href="../services/cac-review.html" class="mobile-submenu-link">Computer-Assisted Coding (CAC) Review</a>
+              <a href="../services/compliance-audit-defense.html" class="mobile-submenu-link">Coding Compliance &amp; Audit Support</a>
+              <a href="../services/cdm-charge-capture.html" class="mobile-submenu-link">Charge Capture &amp; CDM Audit</a>
+              <a href="../services/physician-query-management.html" class="mobile-submenu-link">Physician Query Management</a>
+            </div>
+
+            <div class="mobile-submenu-section">
+              <h4 class="mobile-category-title"><a href="../services/patient-financial-services.html">Patient Financial Services &amp; Recovery</a></h4>
+              <a href="../services/claims-management-scrubbing.html" class="mobile-submenu-link parent">Claims Management Services</a>
+              <a href="../services/claims-management-scrubbing.html" class="mobile-submenu-sublink">&rsaquo; Claims Submission &amp; Scrubbing EDI 837</a>
+              <a href="../services/payment-posting-reconciliation.html" class="mobile-submenu-sublink">&rsaquo; Payment Posting &amp; Reconciliation EDI 835</a>
+              <a href="../services/ar-management.html" class="mobile-submenu-link">A/R Management Services</a>
+              <a href="../services/denial-management.html" class="mobile-submenu-link">Denial Management &amp; Appeals</a>
+              <a href="../services/payer-contract-modeling.html" class="mobile-submenu-link">Underpayment Recovery &amp; Contract Compliance</a>
+              <a href="../services/patient-billing-collections.html" class="mobile-submenu-link">Patient Billing &amp; Self-Pay Collections</a>
+              <a href="../services/credit-balance-resolution.html" class="mobile-submenu-link">Credit Balance &amp; Refund Management</a>
+              <a href="../services/edi-enrollment.html" class="mobile-submenu-link">EDI Enrollment Services</a>
+            </div>
+          </div>
+        </li>
         <li><a href="../ai-platform.html" class="mobile-nav-link">Nova Arc AI Platform <span>&rarr;</span></a></li>
         <li><a href="../who-we-serve.html" class="mobile-nav-link">Who We Serve <span>&rarr;</span></a></li>
       </ul>
       <div class="mobile-nav-bottom">
+        <button class="btn btn-secondary mobile-search-trigger" id="mobileSearchTrigger" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          Search Services
+        </button>
         <a href="tel:18005558942" class="btn btn-secondary" style="width: 100%; margin-bottom: 8px;">Call (800) 555-NOVA</a>
         <a href="../contact.html" class="btn btn-primary" style="width: 100%;">Connect with us</a>
       </div>
@@ -516,7 +567,7 @@
     </div>
   </footer>
 
-  <script src="../js/main.js"></script>
+  <script src="../js/main.js?v=2.2"></script>
 </body>
 </html>
 

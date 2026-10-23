@@ -1175,16 +1175,18 @@ button, input, select, textarea {
   visibility: hidden;
   pointer-events: none;
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, visibility 0.35s ease;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  touch-action: pan-y !important;
+  overscroll-behavior: contain;
   border-left: 1px solid rgba(226, 232, 240, 0.85);
 }
 
 .mobile-nav-drawer.active {
-  transform: translateX(0);
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
 }
 
 /* Sidebar Top Header with Brand and Close Button */
@@ -1225,16 +1227,21 @@ button, input, select, textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  min-height: 42px;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: #FFFFFF;
   cursor: pointer;
   transition: all 0.2s ease;
   padding: 0;
   touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .mobile-drawer-close:hover {
@@ -1309,7 +1316,7 @@ button, input, select, textarea {
 
 body.mobile-nav-open {
   overflow: hidden !important;
-  touch-action: none;
+  overscroll-behavior: contain;
 }
 
 /* ==========================================================================
@@ -3036,7 +3043,7 @@ body.mobile-nav-open {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .nav-menu,
   .nav-actions {
     display: none !important;

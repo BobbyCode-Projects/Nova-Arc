@@ -8,23 +8,37 @@
  *  - Smooth In-Page Anchor Navigation
  */
 
-document.addEventListener('DOMContentLoaded', () => {
-  initStickyHeader();
-  initServicesMegaMenu();
-  initMobileNavigation();
-  initStatsCounter();
-  initAITabs();
-  initDemoForm();
-  initSmoothScroll();
-  initSolutionModals();
-  initServicesAccordions();
-  initCategoryPills();
-  initContactPageForm();
-  initAnalyticsTracking();
-  initWaveformInteraction();
-  initNavSimpleDropdowns();
-  initSiteSearchModal();
-});
+function safeInit(name, fn) {
+  try {
+    fn();
+  } catch (err) {
+    console.warn(`[NovaArc] Init error for ${name}:`, err);
+  }
+}
+
+function initAllComponents() {
+  safeInit('MobileNavigation', initMobileNavigation);
+  safeInit('StickyHeader', initStickyHeader);
+  safeInit('ServicesMegaMenu', initServicesMegaMenu);
+  safeInit('StatsCounter', initStatsCounter);
+  safeInit('AITabs', initAITabs);
+  safeInit('DemoForm', initDemoForm);
+  safeInit('SmoothScroll', initSmoothScroll);
+  safeInit('SolutionModals', initSolutionModals);
+  safeInit('ServicesAccordions', initServicesAccordions);
+  safeInit('CategoryPills', initCategoryPills);
+  safeInit('ContactPageForm', initContactPageForm);
+  safeInit('AnalyticsTracking', initAnalyticsTracking);
+  safeInit('WaveformInteraction', initWaveformInteraction);
+  safeInit('NavSimpleDropdowns', initNavSimpleDropdowns);
+  safeInit('SiteSearchModal', initSiteSearchModal);
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initAllComponents);
+} else {
+  initAllComponents();
+}
 
 /* --------------------------------------------------------------------------
    1. Sticky Header
@@ -236,11 +250,25 @@ function initMobileNavigation() {
     `;
   };
 
-  const toggleMenu = (e) => {
-    if (e) {
-      e.preventDefault();
-      e.stopPropagation();
-    }
+  // Helper for 0ms tap responsiveness on touchscreens + desktop click without ghost double-triggers
+  let actionLock = false;
+  const bindAction = (el, action) => {
+    if (!el) return;
+    const trigger = (e) => {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      if (actionLock) return;
+      actionLock = true;
+      setTimeout(() => { actionLock = false; }, 260);
+      action(e);
+    };
+    el.addEventListener('click', trigger);
+    el.addEventListener('touchend', trigger);
+  };
+
+  const toggleMenu = () => {
     if (drawer.classList.contains('active')) {
       closeMenu();
     } else {
@@ -248,17 +276,9 @@ function initMobileNavigation() {
     }
   };
 
-  toggleBtn.addEventListener('click', toggleMenu);
-  if (closeBtn) {
-    closeBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      closeMenu();
-    });
-  }
-  backdrop.addEventListener('click', (e) => {
-    e.preventDefault();
-    closeMenu();
-  });
+  bindAction(toggleBtn, toggleMenu);
+  if (closeBtn) bindAction(closeBtn, closeMenu);
+  bindAction(backdrop, closeMenu);
 
   // Close on Escape key
   document.addEventListener('keydown', (e) => {
@@ -268,21 +288,38 @@ function initMobileNavigation() {
     }
   });
 
-  // Close when screen resizes to desktop width
+  // Close when screen resizes to desktop width (>1024px)
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 900 && drawer.classList.contains('active')) {
+    if (window.innerWidth > 1024 && drawer.classList.contains('active')) {
       closeMenu();
     }
   });
 
-  // Navigation links inside drawer: auto-close on click (except accordion toggle)
+  // Handle iOS Safari back-forward cache (bfcache)
+  window.addEventListener('pageshow', (event) => {
+    if (event.persisted && drawer.classList.contains('active')) {
+      closeMenu();
+    }
+  });
+
+  // Navigation links inside drawer:
+  // For in-page anchor links (e.g. href="#..."), close the drawer and let smooth scroll work.
+  // For page navigation links, DO NOT close the drawer synchronously or disable pointer-events,
+  // which cancels the browser's navigation request on iOS Safari.
   const navLinks = drawer.querySelectorAll(
     'a.mobile-nav-link, .mobile-submenu-link, .mobile-submenu-sublink, .mobile-category-title a, .mobile-nav-bottom a, .mobile-all-services-link, .mobile-overview-btn'
   );
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      if (drawer.classList.contains('active')) {
+      const href = link.getAttribute('href');
+      if (href && href.startsWith('#')) {
         closeMenu();
+      } else {
+        setTimeout(() => {
+          if (drawer.classList.contains('active')) {
+            closeMenu();
+          }
+        }, 150);
       }
     });
   });
@@ -298,9 +335,7 @@ function initMobileNavigation() {
   // Mobile accordion toggle for Services submenu
   const mobileServicesToggle = drawer.querySelector('#mobileServicesToggle');
   if (mobileServicesToggle && mobileServicesSubmenu) {
-    mobileServicesToggle.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
+    bindAction(mobileServicesToggle, () => {
       const isOpen = mobileServicesSubmenu.classList.contains('open');
       if (isOpen) {
         mobileServicesSubmenu.classList.remove('open');
