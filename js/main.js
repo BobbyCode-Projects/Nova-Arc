@@ -1223,7 +1223,6 @@ function initSiteSearchModal() {
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
           <input type="text" class="site-search-input" id="siteSearchInput" placeholder="Search services, solutions, coding, prior auth..." autocomplete="off">
-          <button type="button" class="site-search-close" id="siteSearchCloseBtn" aria-label="Close search">ESC</button>
         </div>
         <div class="site-search-body">
           <div id="siteSearchDefaultView">
