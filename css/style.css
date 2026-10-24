@@ -4721,7 +4721,9 @@ body.mobile-nav-open {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 12px;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  padding: 12px 14px;
   background: #F8FAFC;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-light);
