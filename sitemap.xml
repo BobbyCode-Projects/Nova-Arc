@@ -3,255 +3,47 @@
   <!-- Homepage -->
   <url>
     <loc>https://novaarctech.in/index.html</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- Solutions Suite -->
-  <url>
-    <loc>https://novaarctech.in/solutions.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <!-- Services Catalog -->
+
+  <!-- Technology Services Catalog -->
   <url>
     <loc>https://novaarctech.in/services.html</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  
-  <!-- Dedicated Deep-Dive Service: Scheduling & Patient Registration Verification -->
-  <url>
-    <loc>https://novaarctech.in/services/patient-registration-verification.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
 
-  <!-- Dedicated Deep-Dive Service: Claims Management & Clearinghouse Scrubbing -->
+  <!-- Connected Digital Solutions -->
   <url>
-    <loc>https://novaarctech.in/services/claims-management-scrubbing.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Dedicated Deep-Dive Service: Payment Posting & Electronic Remittance (ERA / 835) -->
-  <url>
-    <loc>https://novaarctech.in/services/payment-posting-reconciliation.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Dedicated Deep-Dive Service: Denial & Appeals Management (Root-Cause Recovery) -->
-  <url>
-    <loc>https://novaarctech.in/services/denial-management.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Dedicated Deep-Dive Service: A/R Management & Aged Claims Liquidation -->
-  <url>
-    <loc>https://novaarctech.in/services/ar-management.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Dedicated Deep-Dive Service: Payer Contract Modeling & Underpayment Variance Recovery -->
-  <url>
-    <loc>https://novaarctech.in/services/payer-contract-modeling.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Dedicated Deep-Dive Service: Patient Billing, Self-Pay & Omnichannel Collections -->
-  <url>
-    <loc>https://novaarctech.in/services/patient-billing-collections.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Dedicated Deep-Dive Service: Credit Balance Resolution & Overpayment Compliance -->
-  <url>
-    <loc>https://novaarctech.in/services/credit-balance-resolution.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Dedicated Flagship Service: End-to-End Enterprise Full-Cycle RCM (Single SLA) -->
-  <url>
-    <loc>https://novaarctech.in/services/full-cycle-rcm.html</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://novaarctech.in/solutions.html</loc>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Dedicated Advisory Service: RCM Workflow Audit & Tech Stack Advisory -->
-  <url>
-    <loc>https://novaarctech.in/services/rcm-workflow-audit-benchmarking.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Dedicated EBO Service: Extended Business Office Surge & Aged A/R Cleanup -->
-  <url>
-    <loc>https://novaarctech.in/services/extended-business-office.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Dedicated Executive Advisory: Fractional CFO & Interim RCM Leadership -->
-  <url>
-    <loc>https://novaarctech.in/services/fractional-rcm-leadership.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Dedicated Deep-Dive Service: Real-Time Insurance Eligibility & Benefits (270/271) -->
-  <url>
-    <loc>https://novaarctech.in/services/real-time-insurance-eligibility.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Dedicated Deep-Dive Service: Prior Authorization & Referral Management -->
-  <url>
-    <loc>https://novaarctech.in/services/prior-authorization-management.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Dedicated Deep-Dive Service: Pre-Service Financial Clearance & Good Faith Estimates (GFE) -->
-  <url>
-    <loc>https://novaarctech.in/services/financial-clearance-gfe.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Dedicated Deep-Dive Service: Point-of-Service (POS) Collection Assistance -->
-  <url>
-    <loc>https://novaarctech.in/services/point-of-service-collections.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Dedicated Deep-Dive Service: Referral & Order Management (LCD/NCD & ABN) -->
-  <url>
-    <loc>https://novaarctech.in/services/referral-order-management.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Dedicated Deep-Dive Service: Full-Cycle Medical Coding (Inpatient, Outpatient, ProFee) -->
-  <url>
-    <loc>https://novaarctech.in/services/full-cycle-medical-coding.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Dedicated Deep-Dive Service: Clinical Documentation Improvement (CDI) & Chart Auditing -->
-  <url>
-    <loc>https://novaarctech.in/services/cdi-chart-auditing.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Dedicated Deep-Dive Service: Physician Query Management & Education Coaching -->
-  <url>
-    <loc>https://novaarctech.in/services/physician-query-management.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Dedicated Deep-Dive Service: Inpatient DRG Validation & HCC Risk Adjustment -->
-  <url>
-    <loc>https://novaarctech.in/services/hcc-risk-adjustment.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Dedicated Deep-Dive Service: CDM Pricing Audit & Missed-Charge Reconciliation -->
-  <url>
-    <loc>https://novaarctech.in/services/cdm-charge-capture.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Dedicated Deep-Dive Service: OIG & RAC Audit Defense & Compliance Management -->
-  <url>
-    <loc>https://novaarctech.in/services/compliance-audit-defense.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Nova Arc AI Platform -->
+  <!-- Technology & AI Platform -->
   <url>
     <loc>https://novaarctech.in/ai-platform.html</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
-  <!-- Who We Serve / Care Settings -->
+  <!-- Target Industries / Who We Serve -->
   <url>
     <loc>https://novaarctech.in/who-we-serve.html</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
 
-  <!-- Dedicated Pillar Page: Patient Access Services -->
-  <url>
-    <loc>https://novaarctech.in/services/patient-access-services.html</loc>
-    <lastmod>2026-09-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Dedicated Pillar Page: HIM & Coding Services -->
-  <url>
-    <loc>https://novaarctech.in/services/him-coding-services.html</loc>
-    <lastmod>2026-09-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Dedicated Pillar Page: Patient Financial Services & Recovery -->
-  <url>
-    <loc>https://novaarctech.in/services/patient-financial-services.html</loc>
-    <lastmod>2026-09-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Contact & Demo Request -->
+  <!-- Contact & Project Inquiries -->
   <url>
     <loc>https://novaarctech.in/contact.html</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

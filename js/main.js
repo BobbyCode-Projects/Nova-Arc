@@ -542,7 +542,7 @@ function initDemoForm() {
       el: document.getElementById('demo-company'),
       err: document.getElementById('error-company'),
       validate: (val) => val.trim().length >= 2,
-      msg: 'Please specify your healthcare organization.'
+      msg: 'Please specify your company or organization.'
     }
   };
 
@@ -597,7 +597,7 @@ function initDemoForm() {
         <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
         <path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"></path>
       </svg>
-      Scheduling Demo...
+      Sending Inquiry...
     `;
 
     setTimeout(() => {
@@ -795,30 +795,32 @@ function initContactPageForm() {
       const messageField = document.getElementById('contact-message');
       
       const serviceNameMap = {
-        'physician-query-management': 'Physician Query Management & Education Coaching',
-        'hcc-risk-adjustment': 'Inpatient DRG Validation & HCC Risk Adjustment',
-        'cdm-charge-capture': 'CDM Pricing Audit & Missed-Charge Reconciliation',
-        'compliance-audit-defense': 'OIG & RAC Audit Defense & Compliance Management',
-        'cdi-chart-auditing': 'Clinical Documentation Improvement (CDI) & Chart Auditing',
-        'full-cycle-medical-coding': 'Full-Cycle Medical Coding (Inpatient, Outpatient, ProFee)',
-        'referral-order-management': 'Referral & Order Management (LCD/NCD & ABN)',
-        'point-of-service-collections': 'Point-of-Service (POS) Collection Assistance',
-        'financial-clearance-gfe': 'Pre-Service Financial Clearance & Good Faith Estimates (GFE)',
-        'patient-registration-verification': 'Scheduling & Patient Registration Verification',
-        'real-time-insurance-eligibility': 'Real-Time Insurance Eligibility & Benefits (270/271)',
-        'claims-management-scrubbing': 'Claims Management & Clearinghouse Scrubbing',
-        'payment-posting-reconciliation': 'Payment Posting & Electronic Remittance (ERA / 835)',
-        'prior-authorization': 'Prior Authorization & Referral Management',
-        'patient-access': 'Patient Access Services',
-        'ar-management': 'A/R Management & Aged Claims Liquidation',
-        'denial-management': 'Denial & Appeals Management (Root-Cause Recovery)',
-        'payer-contract-modeling': 'Payer Contract Modeling & Underpayment Variance Recovery',
-        'patient-billing-collections': 'Patient Billing, Self-Pay & Omnichannel Collections',
-        'credit-balance-resolution': 'Credit Balance Resolution & Overpayment Refund Compliance',
-        'extended-business-office': 'Extended Business Office (EBO) Surge & Aged A/R Cleanup',
-        'full-cycle-rcm': 'End-to-End Enterprise Full-Cycle RCM (Single SLA)',
-        'rcm-workflow-audit': 'RCM Workflow Audit, KPI Benchmarking & Tech Stack Advisory',
-        'fractional-rcm-leadership': 'Fractional CFO & Interim RCM Leadership (EHR Surge Staffing)'
+        'commerce': 'Digital Commerce & Supply Chain',
+        'enterprise': 'Enterprise Business Solutions',
+        'monitoring': 'Intelligent Monitoring & Automation',
+        'ai-healthcare': 'AI & Healthcare Technology',
+        'commerce-platforms': 'Digital Commerce Platforms',
+        'foodtech': 'FoodTech Solutions',
+        'supply-chain': 'Supply Chain Management',
+        'procurement': 'Procurement & Vendor Management',
+        'logistics': 'Logistics & Distribution',
+        'crm': 'Customer Relationship Management (CRM)',
+        'hrms': 'Human Resource Management Systems (HRMS)',
+        'bpa': 'Business Process Automation',
+        'enterprise-apps': 'Enterprise Application Development',
+        'system-integration': 'System Integration & Data Connectivity',
+        'real-time-monitoring': 'Real-Time Monitoring',
+        'iot': 'Internet of Things (IoT) Solutions',
+        'operational-analytics': 'Operational Analytics',
+        'workflow-automation': 'Intelligent Workflow Automation',
+        'infra-monitoring': 'System & Infrastructure Monitoring',
+        'agentic-ai': 'Agentic AI & Intelligent Agents',
+        'gen-ai': 'Generative AI Applications',
+        'intelligent-automation': 'Intelligent Business Automation',
+        'healthcare-tech': 'Healthcare Technology Solutions',
+        'ai-governance': 'AI Integration & Governance',
+        'multiple': 'Multiple Services',
+        'other': 'Other Inquiries'
       };
       
       const serviceDisplayName = serviceNameMap[serviceParam] || serviceParam.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
@@ -835,7 +837,7 @@ function initContactPageForm() {
       }
 
       if (messageField && !messageField.value.trim()) {
-        messageField.value = `Hello Nova Arc team, I would like to schedule an operational review for ${serviceDisplayName}. Please provide your detailed workflow specifications and SLA benchmarks.`;
+        messageField.value = `Hello Nova Arc team, I would like to discuss our project requirements for ${serviceDisplayName}. Please connect with us to review technical specifications and solution architecture.`;
       }
     }
   } catch (e) {
@@ -877,7 +879,7 @@ function initContactPageForm() {
       el: document.getElementById('contact-company'),
       err: document.getElementById('error-contact-company'),
       validate: (val) => val.trim().length >= 2,
-      msg: 'Please specify your healthcare organization.'
+      msg: 'Please enter your company or organization name.'
     },
     interest: {
       el: document.getElementById('contact-interest'),
@@ -1222,19 +1224,19 @@ function initSiteSearchModal() {
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
-          <input type="text" class="site-search-input" id="siteSearchInput" placeholder="Search services, solutions, coding, prior auth..." autocomplete="off">
+          <input type="text" class="site-search-input" id="siteSearchInput" placeholder="Search services, solutions, IoT, AI, commerce..." autocomplete="off">
         </div>
         <div class="site-search-body">
           <div id="siteSearchDefaultView">
             <div class="site-search-section-title">Quick Suggestions</div>
             <div class="site-search-tags">
-              <button type="button" class="site-search-tag" data-query="Eligibility">Eligibility &amp; Benefits</button>
-              <button type="button" class="site-search-tag" data-query="Prior Authorization">Prior Authorization</button>
-              <button type="button" class="site-search-tag" data-query="Medical Coding">Medical Coding</button>
-              <button type="button" class="site-search-tag" data-query="Medical Necessity">Medical Necessity</button>
-              <button type="button" class="site-search-tag" data-query="Denial Management">Denials &amp; Appeals</button>
-              <button type="button" class="site-search-tag" data-query="AI Platform">AI Platform</button>
-              <button type="button" class="site-search-tag" data-query="Collections">Point-of-Service</button>
+              <button type="button" class="site-search-tag" data-query="Commerce">Digital Commerce</button>
+              <button type="button" class="site-search-tag" data-query="Supply Chain">Supply Chain</button>
+              <button type="button" class="site-search-tag" data-query="CRM">CRM &amp; HRMS</button>
+              <button type="button" class="site-search-tag" data-query="Automation">Intelligent Automation</button>
+              <button type="button" class="site-search-tag" data-query="Monitoring">IoT &amp; Monitoring</button>
+              <button type="button" class="site-search-tag" data-query="AI">Agentic AI</button>
+              <button type="button" class="site-search-tag" data-query="Healthcare">Healthcare Tech</button>
             </div>
             <div class="site-search-section-title">Featured Services</div>
           </div>
@@ -1247,190 +1249,251 @@ function initSiteSearchModal() {
 
   const isServicesDir = window.location.pathname.includes('/services/');
   const rootPrefix = isServicesDir ? '../' : '';
-  const servicesPrefix = isServicesDir ? '' : 'services/';
 
   const searchIndex = [
+    // 4 Core Domains
     {
-      title: 'Insurance Eligibility & Benefits Verification',
-      category: 'Patient Access',
-      desc: 'Real-time 270/271 EDI coverage verification and co-pay validation.',
-      url: servicesPrefix + 'real-time-insurance-eligibility.html',
-      tags: ['eligibility', 'benefits', 'insurance', 'coverage', '270', '271', 'copay']
+      title: 'Digital Commerce & Supply Chain',
+      category: 'Core Service Domain',
+      desc: 'B2B/B2C commerce platforms, FoodTech solutions, inventory, procurement, and logistics distribution.',
+      url: rootPrefix + 'services.html#commerce',
+      tags: ['commerce', 'supply chain', 'foodtech', 'procurement', 'logistics', 'b2b', 'b2c', 'ordering']
     },
     {
-      title: 'Prior Authorization Management',
-      category: 'Patient Access',
-      desc: 'Proactive requirement verification, tracking, and end-to-end payer submission.',
-      url: servicesPrefix + 'prior-authorization-management.html',
-      tags: ['prior auth', 'authorization', 'precertification', 'stat auth', 'peer to peer']
+      title: 'Enterprise Business Solutions',
+      category: 'Core Service Domain',
+      desc: 'Modernize business operations with CRM, HRMS, custom enterprise applications, and system integration.',
+      url: rootPrefix + 'services.html#enterprise',
+      tags: ['enterprise', 'crm', 'hrms', 'automation', 'apps', 'integration', 'workflows', 'custom software']
     },
     {
-      title: 'Patient Scheduling & Registration QA',
-      category: 'Patient Access',
-      desc: 'Demographic validation and appointment QA preventing front-end rework.',
-      url: servicesPrefix + 'patient-registration-verification.html',
-      tags: ['scheduling', 'registration', 'qa', 'demographics', 'intake', 'patient access']
+      title: 'Intelligent Monitoring & Automation',
+      category: 'Core Service Domain',
+      desc: 'IoT device connectivity, real-time operational telemetry, predictive analytics, and automated response workflows.',
+      url: rootPrefix + 'services.html#monitoring',
+      tags: ['iot', 'monitoring', 'telemetry', 'analytics', 'automation', 'real-time', 'sensors', 'alerting']
     },
     {
-      title: 'Financial Clearance & Good Faith Estimates',
-      category: 'Patient Access',
-      desc: 'Pre-service liability calculation, No Surprises Act compliance, and GFE generation.',
-      url: servicesPrefix + 'financial-clearance-gfe.html',
-      tags: ['financial clearance', 'gfe', 'good faith estimates', 'no surprises act', 'estimates']
+      title: 'AI & Healthcare Technology',
+      category: 'Core Service Domain',
+      desc: 'Agentic AI workflows, generative AI assistants, enterprise document intelligence, and healthcare administration automation.',
+      url: rootPrefix + 'services.html#ai-healthcare',
+      tags: ['ai', 'agentic ai', 'healthcare', 'agents', 'genai', 'rag', 'llm', 'administrative automation']
+    },
+
+    // Sub-capabilities: Commerce & SCM
+    {
+      title: 'Digital Commerce Platforms',
+      category: 'Digital Commerce',
+      desc: 'B2B/B2C digital ordering, customer portals, product catalog management, and payment fulfillment integration.',
+      url: rootPrefix + 'services.html#commerce-platforms',
+      tags: ['commerce', 'b2b', 'b2c', 'storefront', 'catalog', 'ordering', 'portals']
     },
     {
-      title: 'Point-of-Service Collections',
-      category: 'Patient Access',
-      desc: 'Compassionate upfront patient payment collection and financial counseling.',
-      url: servicesPrefix + 'point-of-service-collections.html',
-      tags: ['pos', 'collections', 'point of service', 'upfront', 'copays', 'self-pay']
+      title: 'FoodTech Solutions',
+      category: 'Digital Commerce',
+      desc: 'Digital food ordering, batch and expiry tracking, supplier coordination, and food supply chain traceability.',
+      url: rootPrefix + 'services.html#foodtech',
+      tags: ['foodtech', 'food ordering', 'batch tracking', 'expiry', 'traceability', 'food distribution']
     },
     {
-      title: 'Medical Necessity & Order Verification',
-      category: 'Patient Access',
-      desc: 'LCD/NCD validation, order signatures, and clinical compliance checks before care.',
-      url: servicesPrefix + 'referral-order-management.html',
-      tags: ['medical necessity', 'order verification', 'lcd', 'ncd', 'abn', 'referral']
+      title: 'Supply Chain Management',
+      category: 'Digital Commerce',
+      desc: 'Warehouse management, inventory optimization, demand forecasting workflows, and multi-node replenishment.',
+      url: rootPrefix + 'services.html#supply-chain',
+      tags: ['supply chain', 'warehouse', 'inventory', 'wms', 'demand forecasting', 'replenishment']
     },
     {
-      title: 'Full-Cycle Medical Coding Services',
-      category: 'HIM & Coding',
-      desc: 'Inpatient DRG, outpatient surgery, and profee multi-specialty coding.',
-      url: servicesPrefix + 'full-cycle-medical-coding.html',
-      tags: ['medical coding', 'drg', 'cpt', 'icd-10', 'profee', 'inpatient']
+      title: 'Procurement & Vendor Management',
+      category: 'Digital Commerce',
+      desc: 'Digital purchase requisitions, supplier onboarding portals, approval hierarchies, and automated invoice reconciliation.',
+      url: rootPrefix + 'services.html#procurement',
+      tags: ['procurement', 'vendor management', 'po', 'requisition', 'invoicing', 'spend visibility']
     },
     {
-      title: 'Risk Adjustment & HCC Coding',
-      category: 'HIM & Coding',
-      desc: 'Hierarchical Condition Category capture ensuring Medicare Advantage revenue integrity.',
-      url: servicesPrefix + 'hcc-risk-adjustment.html',
-      tags: ['hcc', 'risk adjustment', 'medicare advantage', 'raf', 'chart audit']
+      title: 'Logistics & Distribution',
+      category: 'Digital Commerce',
+      desc: 'Dispatch coordination, route optimization, real-time shipment tracking, and carrier performance analytics.',
+      url: rootPrefix + 'services.html#logistics',
+      tags: ['logistics', 'distribution', 'fleet', 'tracking', 'dispatch', 'route planning', 'shipment']
+    },
+
+    // Sub-capabilities: Enterprise
+    {
+      title: 'Customer Relationship Management (CRM)',
+      category: 'Enterprise Solutions',
+      desc: 'Lead pipelines, multi-touch account journeys, automated engagement, and omnichannel customer support desks.',
+      url: rootPrefix + 'services.html#crm',
+      tags: ['crm', 'sales pipeline', 'leads', 'customer engagement', 'support desk', 'account management']
     },
     {
-      title: 'Clinical Documentation Improvement (CDI)',
-      category: 'HIM & Coding',
-      desc: 'Concurrent and retrospective chart auditing to capture true patient acuity.',
-      url: servicesPrefix + 'cdi-chart-auditing.html',
-      tags: ['cdi', 'chart auditing', 'acuity', 'clinical documentation', 'query']
+      title: 'Human Resource Management Systems (HRMS)',
+      category: 'Enterprise Solutions',
+      desc: 'Workforce lifecycle, digital recruitment, employee self-service, leave and attendance, and payroll integration.',
+      url: rootPrefix + 'services.html#hrms',
+      tags: ['hrms', 'hr', 'workforce', 'onboarding', 'attendance', 'payroll', 'employee self service']
     },
     {
-      title: 'Computer-Assisted Coding (CAC) Review',
-      category: 'HIM & Coding',
-      desc: 'Expert human validation optimizing NLP and AI auto-suggested coding pipelines.',
-      url: servicesPrefix + 'cac-review.html',
-      tags: ['cac', 'nlp', 'computer-assisted', 'validation', 'automation']
+      title: 'Business Process Automation',
+      category: 'Enterprise Solutions',
+      desc: 'Dynamic approval chains, multi-department task routing, document intake, and policy-driven escalation rules.',
+      url: rootPrefix + 'services.html#bpa',
+      tags: ['bpa', 'process automation', 'workflows', 'approvals', 'orchestration', 'task routing']
     },
     {
-      title: 'Coding Compliance & Audit Defense',
-      category: 'HIM & Coding',
-      desc: 'External quality audits, RAC defense, and OIG workplan risk mitigation.',
-      url: servicesPrefix + 'compliance-audit-defense.html',
-      tags: ['compliance', 'audit', 'defense', 'rac', 'oig', 'quality']
+      title: 'Enterprise Application Development',
+      category: 'Enterprise Solutions',
+      desc: 'Custom web portals, executive dashboards, internal operations tooling, and legacy modernization.',
+      url: rootPrefix + 'services.html#enterprise-apps',
+      tags: ['enterprise apps', 'custom software', 'portals', 'modernization', 'dashboards', 'internal tools']
     },
     {
-      title: 'Charge Capture & CDM Audit',
-      category: 'HIM & Coding',
-      desc: 'Reconciling clinical administration against chargemaster entries to eliminate revenue leakage.',
-      url: servicesPrefix + 'cdm-charge-capture.html',
-      tags: ['cdm', 'charge capture', 'chargemaster', 'leakage', 'reconciliation']
+      title: 'System Integration & Data Connectivity',
+      category: 'Enterprise Solutions',
+      desc: 'Robust REST/GraphQL API connectors, bidirectional ERP/CRM synchronization, and federated data pipelines.',
+      url: rootPrefix + 'services.html#system-integration',
+      tags: ['integration', 'api', 'data sync', 'erp', 'crm', 'webhooks', 'connectivity']
+    },
+
+    // Sub-capabilities: Monitoring & IoT
+    {
+      title: 'Real-Time Monitoring',
+      category: 'Monitoring & Automation',
+      desc: 'Operational control centers, low-latency telemetry dashboards, equipment health, and threshold alerts.',
+      url: rootPrefix + 'services.html#real-time-monitoring',
+      tags: ['monitoring', 'telemetry', 'dashboards', 'equipment health', 'alerts', 'real-time']
     },
     {
-      title: 'Physician Query Management',
-      category: 'HIM & Coding',
-      desc: 'Compliant clinical clarification workflows for non-leading provider queries.',
-      url: servicesPrefix + 'physician-query-management.html',
-      tags: ['physician query', 'clarification', 'ahima', 'acdis', 'queries']
+      title: 'Internet of Things (IoT) Solutions',
+      category: 'Monitoring & Automation',
+      desc: 'Industrial sensor ingestion, MQTT/CoAP connectivity, environmental tracking, and edge-to-cloud security.',
+      url: rootPrefix + 'services.html#iot',
+      tags: ['iot', 'sensors', 'mqtt', 'edge computing', 'telemetry', 'connected devices']
     },
     {
-      title: 'Claims Submission & Scrubbing (EDI 837)',
-      category: 'Patient Financial Services',
-      desc: '98%+ first-pass clean claim rates through automated multi-payer rules engines.',
-      url: servicesPrefix + 'claims-management-scrubbing.html',
-      tags: ['claims', 'scrubbing', '837', 'clean claim', 'edi', 'submission']
+      title: 'Operational Analytics',
+      category: 'Monitoring & Automation',
+      desc: 'Fleet and machine KPIs, anomaly detection algorithms, historical trend analysis, and predictive maintenance.',
+      url: rootPrefix + 'services.html#operational-analytics',
+      tags: ['analytics', 'kpi', 'anomaly detection', 'predictive maintenance', 'trends', 'reporting']
     },
     {
-      title: 'Payment Posting & Reconciliation (EDI 835)',
-      category: 'Patient Financial Services',
-      desc: 'Automated ERA posting, manual EOB indexing, and zero-balance banking reconciliation.',
-      url: servicesPrefix + 'payment-posting-reconciliation.html',
-      tags: ['payment posting', '835', 'era', 'eob', 'reconciliation', 'remittance']
+      title: 'Intelligent Workflow Automation',
+      category: 'Monitoring & Automation',
+      desc: 'Event-triggered auto-remediation, ticketing integrations, incident escalation, and human-in-the-loop approvals.',
+      url: rootPrefix + 'services.html#workflow-automation',
+      tags: ['event driven', 'incident response', 'remediation', 'orchestration', 'alerting', 'escalation']
     },
     {
-      title: 'A/R Management Services',
-      category: 'Patient Financial Services',
-      desc: 'Targeted aging bucket resolution across commercial, Medicare, and Medicaid accounts.',
-      url: servicesPrefix + 'ar-management.html',
-      tags: ['ar', 'accounts receivable', 'aging', 'follow-up', 'payer']
+      title: 'System & Infrastructure Monitoring',
+      category: 'Monitoring & Automation',
+      desc: 'Synthetic API monitoring, microservice health, latency tracing, centralized log analysis, and uptime tracking.',
+      url: rootPrefix + 'services.html#infra-monitoring',
+      tags: ['infrastructure', 'devops', 'api monitoring', 'uptime', 'logs', 'microservices']
+    },
+
+    // Sub-capabilities: AI & Healthcare Tech
+    {
+      title: 'Agentic AI & Intelligent Agents',
+      category: 'AI & Healthcare',
+      desc: 'Autonomous multi-step task orchestration, API-connected reasoning agents, and enterprise knowledge retrieval (RAG).',
+      url: rootPrefix + 'services.html#agentic-ai',
+      tags: ['agentic ai', 'agents', 'rag', 'orchestration', 'autonomous', 'llm agents']
     },
     {
-      title: 'Denial Management & Appeals',
-      category: 'Patient Financial Services',
-      desc: 'Root-cause CARC/RARC analysis, clinical appeals, and overturned recovery workflows.',
-      url: servicesPrefix + 'denial-management.html',
-      tags: ['denials', 'appeals', 'carc', 'rarc', 'overturn', 'recovery']
+      title: 'Generative AI Applications',
+      category: 'AI & Healthcare',
+      desc: 'Enterprise domain knowledge assistants, semantic search over unstructured docs, and intelligent summarization.',
+      url: rootPrefix + 'services.html#gen-ai',
+      tags: ['gen ai', 'generative ai', 'llm', 'knowledge assistant', 'semantic search', 'summarization']
     },
     {
-      title: 'Underpayment Recovery & Contract Compliance',
-      category: 'Patient Financial Services',
-      desc: 'Fee schedule modeling and forensic variance audits recovering unpaid contractual balances.',
-      url: servicesPrefix + 'payer-contract-modeling.html',
-      tags: ['underpayment', 'contract modeling', 'variance', 'fee schedule']
+      title: 'Intelligent Business Automation',
+      category: 'AI & Healthcare',
+      desc: 'Automated document extraction, OCR pipelines, intelligent email triage, and multi-system RPA execution.',
+      url: rootPrefix + 'services.html#intelligent-automation',
+      tags: ['ocr', 'document understanding', 'email triage', 'rpa', 'intelligent automation']
     },
     {
-      title: 'Patient Billing & Self-Pay Collections',
-      category: 'Patient Financial Services',
-      desc: 'Clear statements, digital payment portals, and patient-friendly financial resolution.',
-      url: servicesPrefix + 'patient-billing-collections.html',
-      tags: ['patient billing', 'self-pay', 'statements', 'portal', 'balances']
+      title: 'Healthcare Technology Solutions',
+      category: 'AI & Healthcare',
+      desc: 'Digital patient registration, scheduling workflows, clinical documentation support, and administrative billing assistance.',
+      url: rootPrefix + 'services.html#healthcare-tech',
+      tags: ['healthcare', 'patient intake', 'scheduling', 'claims assistance', 'administrative healthcare', 'ehr integration']
     },
     {
-      title: 'Credit Balance & Refund Management',
-      category: 'Patient Financial Services',
-      desc: 'Auditing overpayments and processing CMS-compliant refunds to prevent compliance penalties.',
-      url: servicesPrefix + 'credit-balance-resolution.html',
-      tags: ['credit balance', 'refunds', 'overpayments', 'compliance']
+      title: 'AI Integration & Governance',
+      category: 'AI & Healthcare',
+      desc: 'Enterprise guardrails, prompt evaluation pipelines, RBAC controls, and strict human-in-the-loop oversight.',
+      url: rootPrefix + 'services.html#ai-governance',
+      tags: ['ai governance', 'guardrails', 'responsible ai', 'auditability', 'compliance', 'security']
+    },
+
+    // Target Industries
+    {
+      title: 'FoodTech & Food Distribution',
+      category: 'Industries',
+      desc: 'End-to-end digital ordering, cold chain telemetry, multi-warehouse distribution, and batch traceability.',
+      url: rootPrefix + 'who-we-serve.html#foodtech-distribution',
+      tags: ['foodtech', 'distribution', 'food', 'cold chain', 'inventory', 'restaurants']
     },
     {
-      title: 'Extended Business Office (EBO)',
-      category: 'Patient Financial Services',
-      desc: 'Scalable revenue cycle staffing extending your internal business office operations.',
-      url: servicesPrefix + 'extended-business-office.html',
-      tags: ['ebo', 'extended business office', 'staffing', 'scaling']
+      title: 'Retail & Digital Commerce',
+      category: 'Industries',
+      desc: 'Omnichannel B2B/B2C commerce portals, catalog sync, real-time inventory visibility, and checkout optimization.',
+      url: rootPrefix + 'who-we-serve.html#retail-commerce',
+      tags: ['retail', 'ecommerce', 'commerce', 'storefront', 'omnichannel', 'b2b']
     },
     {
-      title: 'Full-Cycle RCM Management',
-      category: 'Solutions',
-      desc: 'Comprehensive front-to-back revenue cycle management for hospitals and health systems.',
-      url: servicesPrefix + 'full-cycle-rcm.html',
-      tags: ['full cycle', 'end-to-end', 'operations', 'comprehensive rcm']
+      title: 'Manufacturing & Industrial Operations',
+      category: 'Industries',
+      desc: 'Industrial IoT monitoring, predictive maintenance, automated defect logging, and factory floor telemetry.',
+      url: rootPrefix + 'who-we-serve.html#manufacturing-industrial',
+      tags: ['manufacturing', 'industrial', 'factory', 'iiot', 'maintenance', 'telemetry']
     },
     {
-      title: 'Nova Arc AI Platform',
-      category: 'Technology',
-      desc: 'Sub-second autonomous AI agents, intelligent prior auth, and autonomous clinical coding.',
+      title: 'Logistics & Supply Chain',
+      category: 'Industries',
+      desc: 'Real-time fleet tracking, dynamic route optimization, carrier management, and freight milestone reporting.',
+      url: rootPrefix + 'who-we-serve.html#logistics-supply-chain',
+      tags: ['logistics', 'freight', 'fleet', 'carriers', 'tracking', 'dispatch', 'shipping']
+    },
+    {
+      title: 'Enterprise & Professional Services',
+      category: 'Industries',
+      desc: 'Unified CRM, automated HR onboarding, multi-tier approvals, custom portals, and connected business tooling.',
+      url: rootPrefix + 'who-we-serve.html#enterprise-professional-services',
+      tags: ['enterprise', 'professional services', 'consulting', 'crm', 'hrms', 'workflows']
+    },
+    {
+      title: 'Healthcare & Health Technology',
+      category: 'Industries',
+      desc: 'Administrative automation, patient intake workflows, EHR connectivity, and billing assistance tooling.',
+      url: rootPrefix + 'who-we-serve.html#healthcare-technology',
+      tags: ['healthcare', 'health systems', 'administrative automation', 'patient registration', 'ehr']
+    },
+
+    // Technology Platform & Solutions
+    {
+      title: 'Technology & AI Platform Overview',
+      category: 'Platform',
+      desc: 'Intelligent technology, connected systems, agentic AI, and practical enterprise engineering outcomes.',
       url: rootPrefix + 'ai-platform.html',
-      tags: ['ai', 'platform', 'agents', 'automation', 'intelligence', 'autonomous']
+      tags: ['platform', 'ai', 'architecture', 'agents', 'integration', 'iot', 'workflows']
     },
     {
-      title: 'All Solutions Overview',
+      title: 'Connected Digital Solutions Suite',
       category: 'Solutions',
-      desc: 'Discover Nova Arc’s complete enterprise healthcare revenue cycle portfolio.',
+      desc: 'Explore end-to-end digital solutions spanning commerce, enterprise systems, and operational automation.',
       url: rootPrefix + 'solutions.html',
-      tags: ['solutions', 'overview', 'suite', 'services portfolio']
+      tags: ['solutions', 'suite', 'architecture', 'digital systems', 'connected solutions']
     },
     {
-      title: 'Who We Serve',
-      category: 'Organization',
-      desc: 'Health systems, academic medical centers, ambulatory groups, and specialty practices.',
-      url: rootPrefix + 'who-we-serve.html',
-      tags: ['who we serve', 'health systems', 'hospitals', 'physician groups', 'specialties']
-    },
-    {
-      title: 'Connect with Us / Request Consultation',
+      title: 'Discuss Your Project / Contact Nova Arc',
       category: 'Contact',
-      desc: 'Get in touch with Nova Arc revenue cycle leadership for tailored consultations.',
+      desc: 'Connect with Nova Arc technology architects to discuss your digital transformation or project roadmap.',
       url: rootPrefix + 'contact.html',
-      tags: ['contact', 'consultation', 'demo', 'connect', 'phone', 'email']
+      tags: ['contact', 'consultation', 'project discussion', 'inquiry', 'phone', 'email']
     }
   ];
 
@@ -1457,7 +1520,7 @@ function initSiteSearchModal() {
   const renderResults = (items) => {
     resultsList.innerHTML = '';
     if (!items.length) {
-      resultsList.innerHTML = `<li class="site-search-empty">No matching services found. Try searching for "Prior Auth", "Coding", or "Eligibility".</li>`;
+      resultsList.innerHTML = `<li class="site-search-empty">No matching services found. Try searching for "Commerce", "CRM", "IoT", or "AI".</li>`;
       return;
     }
     items.forEach(item => {

@@ -653,8 +653,8 @@ button, input, select, textarea {
 
 .mega-menu-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(240px, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(4, minmax(210px, 1fr));
+  gap: 24px;
   align-items: stretch;
 }
 
@@ -663,11 +663,10 @@ button, input, select, textarea {
   flex-direction: column;
 }
 
-/* Thin 1px vertical border between columns (Column 2 and 3 only; no border on Column 1) */
-.mega-menu-grid > .mega-col:nth-child(2),
-.mega-menu-grid > .mega-col:nth-child(3) {
+/* Thin 1px vertical border between columns */
+.mega-menu-grid > .mega-col + .mega-col {
   border-left: 1px solid #E2E8F0;
-  padding-left: 28px;
+  padding-left: 20px;
 }
 
 /* Column Headings: Bold Section Headers in Services Mega Menu */
@@ -2130,8 +2129,15 @@ body.mobile-nav-open {
    ========================================================================== */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-xl);
+}
+
+@media (min-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+  }
 }
 
 .service-card {
@@ -2534,7 +2540,7 @@ body.mobile-nav-open {
    ========================================================================== */
 .who-we-serve-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-lg);
 }
 
@@ -5997,11 +6003,17 @@ body.mobile-nav-open {
   width: 100%;
 }
 
-/* 3. SERVICES PROVIDED (3 Main Megamenu Headings) */
+/* 3. SERVICES PROVIDED (4 Core Service Domains) */
 .services-provided-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+@media (min-width: 1200px) {
+  .services-provided-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .service-prov-card {
@@ -6258,12 +6270,14 @@ body.mobile-nav-open {
 }
 
 /* Responsive adjustments */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .services-provided-grid {
     grid-template-columns: 1fr;
-    max-width: 600px;
+    max-width: 550px;
     margin: 0 auto;
   }
+}
+@media (max-width: 1024px) {
   .process-grid-layout {
     grid-template-columns: 1fr;
     gap: 40px;
