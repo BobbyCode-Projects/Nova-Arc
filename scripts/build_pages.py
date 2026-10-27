@@ -15,8 +15,7 @@ def get_shared_header(root_prefix, active_section=""):
     ind_active = ' active' if active_section == 'industries' else ''
     con_active = ' active' if active_section == 'connect' else ''
 
-    return f"""  <!-- Header / Navigation -->
-  <header class="site-header" id="top">
+    return f"""  <header class="site-header" id="top">
     <div class="container navbar">
       <!-- Logo -->
       <a href="{root_prefix}index.html" class="logo" aria-label="Nova Arc Homepage">
@@ -27,10 +26,7 @@ def get_shared_header(root_prefix, active_section=""):
       <!-- Desktop Navigation Menu -->
       <nav class="desktop-nav" aria-label="Main Navigation">
         <ul class="nav-menu">
-          <!-- Item 1: Home -->
-          <li><a href="{root_prefix}index.html" class="nav-link">Home</a></li>
-
-          <!-- Item 2: Solutions Dropdown -->
+          <!-- Item 1: Solutions Dropdown -->
           <li class="nav-item-dropdown nav-item-solutions">
             <a href="{root_prefix}solutions.html" class="nav-dropdown-link{sol_active}" id="solutionsDropdownToggle" aria-haspopup="true" aria-expanded="false">
               <span>Solutions</span>
@@ -70,7 +66,7 @@ def get_shared_header(root_prefix, active_section=""):
             </div>
           </li>
 
-          <!-- Item 3: Services Mega-Menu -->
+          <!-- Item 2: Services Mega-Menu -->
           <li class="nav-item-dropdown nav-item-services">
             <a href="{root_prefix}services.html" class="nav-dropdown-link nav-pill-services{serv_active}" id="servicesDropdownToggle" aria-haspopup="true" aria-expanded="false">
               <span>Services</span>
@@ -134,7 +130,7 @@ def get_shared_header(root_prefix, active_section=""):
             </div>
           </li>
 
-          <!-- Item 4: Technology Dropdown -->
+          <!-- Item 3: Technology Dropdown -->
           <li class="nav-item-dropdown nav-item-tech">
             <a href="{root_prefix}technology.html" class="nav-dropdown-link{tech_active}" id="techDropdownToggle" aria-haspopup="true" aria-expanded="false">
               <span>Technology</span>
@@ -174,7 +170,7 @@ def get_shared_header(root_prefix, active_section=""):
             </div>
           </li>
 
-          <!-- Item 5: Industries Dropdown -->
+          <!-- Item 4: Industries Dropdown -->
           <li class="nav-item-dropdown nav-item-industries">
             <a href="{root_prefix}industries.html" class="nav-dropdown-link{ind_active}" id="industriesDropdownToggle" aria-haspopup="true" aria-expanded="false">
               <span>Industries</span>
@@ -213,38 +209,6 @@ def get_shared_header(root_prefix, active_section=""):
               </a>
             </div>
           </li>
-
-          <!-- Item 6: Connect With Us Dropdown -->
-          <li class="nav-item-dropdown nav-item-connect">
-            <a href="{root_prefix}contact.html" class="nav-dropdown-link{con_active}" id="connectDropdownToggle" aria-haspopup="true" aria-expanded="false">
-              <span>Connect With Us</span>
-              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </a>
-            <div class="nav-simple-dropdown" aria-labelledby="connectDropdownToggle" role="menu">
-              <a href="{root_prefix}contact.html" class="nav-simple-item" role="menuitem">
-                <strong>Connect Overview &amp; Consultation</strong>
-                <span>Main contact center &amp; technology consultation portal</span>
-              </a>
-              <a href="{root_prefix}connect/general-enquiries.html" class="nav-simple-item" role="menuitem">
-                <strong>General Enquiries</strong>
-                <span>General company information, press &amp; corporate communications</span>
-              </a>
-              <a href="{root_prefix}connect/project-enquiry.html" class="nav-simple-item" role="menuitem">
-                <strong>Discuss a Project</strong>
-                <span>Explore custom software, architecture &amp; technical requirements</span>
-              </a>
-              <a href="{root_prefix}connect/service-enquiry.html" class="nav-simple-item" role="menuitem">
-                <strong>Service Enquiries</strong>
-                <span>Request specific service domain details and engagement models</span>
-              </a>
-              <a href="{root_prefix}connect/technical-support.html" class="nav-simple-item" role="menuitem">
-                <strong>Technical Support</strong>
-                <span>Submit product tickets and operational helpdesk issues</span>
-              </a>
-            </div>
-          </li>
         </ul>
       </nav>
 
@@ -272,8 +236,6 @@ def get_shared_header(root_prefix, active_section=""):
     <!-- Mobile Drawer Menu -->
     <div class="mobile-nav-drawer" id="mobileDrawer">
       <ul class="mobile-nav-list">
-        <li><a href="{root_prefix}index.html" class="mobile-nav-link">Home</a></li>
-        
         <!-- Mobile Solutions Accordion -->
         <li class="mobile-accordion-item">
           <button class="mobile-nav-link mobile-accordion-toggle" id="mobileSolutionsToggle" aria-expanded="false" aria-controls="mobileSolutionsSubmenu">
@@ -335,7 +297,7 @@ def get_shared_header(root_prefix, active_section=""):
               <h4 class="mobile-category-title"><a href="{root_prefix}services/ai-healthcare.html">AI &amp; Healthcare Technology</a></h4>
               <a href="{root_prefix}services/agentic-ai.html" class="mobile-submenu-link">Agentic AI &amp; Intelligent Agents</a>
               <a href="{root_prefix}services/generative-ai.html" class="mobile-submenu-link">Generative AI &amp; Enterprise Assistants</a>
-              <a href="{root_prefix}services/document-processing.html" class="mobile-submenu-link">Intelligent Document Processing</a>
+              <a href="{root_prefix}document-processing.html" class="mobile-submenu-link">Intelligent Document Processing</a>
               <a href="{root_prefix}services/ai-workflow-automation.html" class="mobile-submenu-link">AI-Powered Workflow Automation</a>
               <a href="{root_prefix}services/healthcare-automation.html" class="mobile-submenu-link">Healthcare Technology &amp; Automation</a>
               <a href="{root_prefix}services/healthcare-data-analytics.html" class="mobile-submenu-link">Healthcare Data Integration &amp; Analytics</a>
@@ -384,25 +346,6 @@ def get_shared_header(root_prefix, active_section=""):
             </div>
           </div>
         </li>
-
-        <!-- Mobile Connect Accordion -->
-        <li class="mobile-accordion-item">
-          <button class="mobile-nav-link mobile-accordion-toggle" id="mobileConnectToggle" aria-expanded="false" aria-controls="mobileConnectSubmenu">
-            <span>Connect With Us</span>
-            <svg class="mobile-accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-          <div class="mobile-submenu-collapse" id="mobileConnectSubmenu" aria-hidden="true">
-            <div class="mobile-submenu-section">
-              <a href="{root_prefix}contact.html" class="mobile-submenu-link" style="font-weight: 700; color: #38BDF8;">Contact Portal Overview</a>
-              <a href="{root_prefix}connect/general-enquiries.html" class="mobile-submenu-link">General Enquiries</a>
-              <a href="{root_prefix}connect/project-enquiry.html" class="mobile-submenu-link">Discuss a Project</a>
-              <a href="{root_prefix}connect/service-enquiry.html" class="mobile-submenu-link">Service Enquiries</a>
-              <a href="{root_prefix}connect/technical-support.html" class="mobile-submenu-link">Technical Support</a>
-            </div>
-          </div>
-        </li>
       </ul>
       <div class="mobile-nav-bottom">
         <button class="btn btn-secondary mobile-search-trigger" id="mobileSearchTrigger" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 8px;">
@@ -420,10 +363,7 @@ def get_shared_header(root_prefix, active_section=""):
 """
 
 def get_shared_footer(root_prefix):
-    return f"""  <!-- ========================================================================
-       FOOTER
-       ======================================================================== -->
-  <footer class="site-footer">
+    return f"""  <footer class="site-footer">
     <div class="container footer-container">
       <div class="footer-grid">
         <!-- Col 1: Brand & Positioning -->
@@ -531,9 +471,6 @@ def get_shared_footer(root_prefix):
       </div>
     </div>
   </footer>
-
-  <!-- Scripts -->
-  <script src="{root_prefix}js/main.js?v=3.1"></script>
 """
 
 def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_subtitle,
@@ -832,6 +769,8 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
 
 {get_shared_footer(root_prefix)}
 
+  <!-- Scripts -->
+  <script src="{root_prefix}js/main.js?v=3.1"></script>
 </body>
 </html>
 """

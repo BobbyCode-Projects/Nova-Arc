@@ -289,6 +289,8 @@ def generate_404_page():
 
 {footer_html}
 
+  <!-- Scripts -->
+  <script src="js/main.js?v=3.1"></script>
 </body>
 </html>
 """
