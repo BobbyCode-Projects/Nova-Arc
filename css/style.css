@@ -419,7 +419,10 @@ button, input, select, textarea {
 }
 
 .nav-item-dropdown.nav-item-solutions,
-.nav-item-dropdown.nav-item-ai {
+.nav-item-dropdown.nav-item-ai,
+.nav-item-dropdown.nav-item-tech,
+.nav-item-dropdown.nav-item-industries,
+.nav-item-dropdown.nav-item-connect {
   position: relative !important;
 }
 
@@ -514,7 +517,7 @@ button, input, select, textarea {
   transform: none !important;
 }
 
-/* Simple Dropdown for Solutions & AI Platform */
+/* Simple Dropdown for Solutions, Tech, Industries & Connect */
 .nav-simple-dropdown {
   position: absolute;
   top: calc(100% + 10px);
@@ -533,8 +536,24 @@ button, input, select, textarea {
   pointer-events: none;
 }
 
+.nav-simple-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  height: 14px;
+}
+
+.nav-item-dropdown.nav-item-industries .nav-simple-dropdown,
+.nav-item-dropdown.nav-item-connect .nav-simple-dropdown {
+  left: auto;
+  right: 0;
+}
+
 @media (min-width: 992px) {
-  .nav-item-dropdown:hover .nav-simple-dropdown {
+  .nav-item-dropdown:hover .nav-simple-dropdown,
+  .nav-item-dropdown.open .nav-simple-dropdown {
     visibility: visible;
     opacity: 1;
     transform: translateY(0);

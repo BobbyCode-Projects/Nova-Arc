@@ -85,16 +85,23 @@ function initServicesMegaMenu() {
     megaPanel.setAttribute('aria-hidden', 'true');
   };
 
-  // Hover support: open on mouseenter
-  // Persistent Display When Cursor Leaves: do NOT close on mouseleave!
+  // Hover support: open on mouseenter, close on mouseleave (unless pinned by chevron click)
   if (navItem) {
     navItem.addEventListener('mouseenter', () => {
+      // Close any open simple dropdowns
+      document.querySelectorAll('.nav-item-dropdown.open').forEach(p => p.classList.remove('open'));
       openMenu();
+    });
+
+    navItem.addEventListener('mouseleave', () => {
+      if (!megaPanel.classList.contains('pinned')) {
+        closeMenu();
+      }
     });
   }
 
   // Clicking the Services dropdown toggle:
-  // - If clicking the chevron arrow: toggle the megamenu open/close
+  // - If clicking the chevron arrow: toggle the megamenu open/close and pin state
   // - If clicking "Services" link text:
   //   * If already on services.html, close megamenu so page content is visible
   //   * If on another page, navigate to services.html!
@@ -103,10 +110,14 @@ function initServicesMegaMenu() {
     if (isChevron) {
       e.preventDefault();
       e.stopPropagation();
+      // Close other dropdowns
+      document.querySelectorAll('.nav-item-dropdown.open').forEach(p => p.classList.remove('open'));
       const isOpen = megaPanel.classList.contains('open');
       if (isOpen) {
+        megaPanel.classList.remove('pinned');
         closeMenu();
       } else {
+        megaPanel.classList.add('pinned');
         openMenu();
       }
       return;
@@ -332,24 +343,28 @@ function initMobileNavigation() {
     });
   }
 
-  // Mobile accordion toggle for Services submenu
-  const mobileServicesToggle = drawer.querySelector('#mobileServicesToggle');
-  if (mobileServicesToggle && mobileServicesSubmenu) {
-    bindAction(mobileServicesToggle, () => {
-      const isOpen = mobileServicesSubmenu.classList.contains('open');
-      if (isOpen) {
-        mobileServicesSubmenu.classList.remove('open');
-        mobileServicesToggle.classList.remove('open');
-        mobileServicesToggle.setAttribute('aria-expanded', 'false');
-        mobileServicesSubmenu.setAttribute('aria-hidden', 'true');
-      } else {
-        mobileServicesSubmenu.classList.add('open');
-        mobileServicesToggle.classList.add('open');
-        mobileServicesToggle.setAttribute('aria-expanded', 'true');
-        mobileServicesSubmenu.setAttribute('aria-hidden', 'false');
-      }
-    });
-  }
+  // Mobile accordion toggles for all submenus
+  const mobileAccordionToggles = drawer.querySelectorAll('.mobile-accordion-toggle');
+  mobileAccordionToggles.forEach(toggle => {
+    const targetId = toggle.getAttribute('aria-controls');
+    const submenu = targetId ? document.getElementById(targetId) : toggle.nextElementSibling;
+    if (submenu) {
+      bindAction(toggle, () => {
+        const isOpen = submenu.classList.contains('open');
+        if (isOpen) {
+          submenu.classList.remove('open');
+          toggle.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+          submenu.setAttribute('aria-hidden', 'true');
+        } else {
+          submenu.classList.add('open');
+          toggle.classList.add('open');
+          toggle.setAttribute('aria-expanded', 'true');
+          submenu.setAttribute('aria-hidden', 'false');
+        }
+      });
+    }
+  });
 }
 
 /* --------------------------------------------------------------------------
@@ -1189,17 +1204,84 @@ function initWaveformInteraction() {
 function initNavSimpleDropdowns() {
   const toggles = document.querySelectorAll('.nav-dropdown-link');
   toggles.forEach(toggle => {
+    const parent = toggle.closest('.nav-item-dropdown');
+    if (!parent) return;
+
+    const closeServicesIfOpen = () => {
+      const servicesMega = document.getElementById('servicesMegaMenu');
+      if (servicesMega && (servicesMega.classList.contains('open') || servicesMega.classList.contains('pinned'))) {
+        servicesMega.classList.remove('open', 'pinned');
+        servicesMega.setAttribute('aria-hidden', 'true');
+        const servicesToggle = document.getElementById('servicesDropdownToggle');
+        if (servicesToggle) {
+          servicesToggle.classList.remove('active');
+          servicesToggle.setAttribute('aria-expanded', 'false');
+        }
+      }
+    };
+
+    // Chevron click toggles dropdown open/close on both desktop and mobile
     toggle.addEventListener('click', (e) => {
-      if (window.innerWidth < 992) {
+      const isChevron = e.target.closest('.dropdown-chevron');
+      if (isChevron) {
         e.preventDefault();
-        const parent = toggle.closest('.nav-item-dropdown');
-        if (parent) {
-          parent.classList.toggle('open');
-          const isExpanded = parent.classList.contains('open');
-          toggle.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+        e.stopPropagation();
+        closeServicesIfOpen();
+        const isOpen = parent.classList.contains('open');
+        // Close other simple dropdowns
+        document.querySelectorAll('.nav-item-dropdown.open').forEach(p => {
+          if (p !== parent) p.classList.remove('open');
+        });
+        if (isOpen) {
+          parent.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        } else {
+          parent.classList.add('open');
+          toggle.setAttribute('aria-expanded', 'true');
         }
       }
     });
+
+    // Desktop hover: add open class on mouseenter, remove on mouseleave
+    parent.addEventListener('mouseenter', () => {
+      if (window.innerWidth >= 992) {
+        closeServicesIfOpen();
+        document.querySelectorAll('.nav-item-dropdown.open').forEach(p => {
+          if (p !== parent) p.classList.remove('open');
+        });
+        parent.classList.add('open');
+        toggle.setAttribute('aria-expanded', 'true');
+      }
+    });
+
+    parent.addEventListener('mouseleave', () => {
+      if (window.innerWidth >= 992) {
+        parent.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  // Close open dropdowns when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-item-dropdown')) {
+      document.querySelectorAll('.nav-item-dropdown.open').forEach(p => {
+        p.classList.remove('open');
+        const link = p.querySelector('.nav-dropdown-link');
+        if (link) link.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  // Close open dropdowns on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.nav-item-dropdown.open').forEach(p => {
+        p.classList.remove('open');
+        const link = p.querySelector('.nav-dropdown-link');
+        if (link) link.setAttribute('aria-expanded', 'false');
+      });
+    }
   });
 }
 
@@ -1247,253 +1329,384 @@ function initSiteSearchModal() {
     document.body.appendChild(backdrop);
   }
 
-  const isServicesDir = window.location.pathname.includes('/services/');
-  const rootPrefix = isServicesDir ? '../' : '';
+  const isSubDir = window.location.pathname.includes('/services/') ||
+                   window.location.pathname.includes('/solutions/') ||
+                   window.location.pathname.includes('/technology/') ||
+                   window.location.pathname.includes('/industries/') ||
+                   window.location.pathname.includes('/connect/');
+  const rootPrefix = isSubDir ? '../' : '';
 
   const searchIndex = [
-    // 4 Core Domains
     {
-      title: 'Digital Commerce & Supply Chain',
-      category: 'Core Service Domain',
-      desc: 'B2B/B2C commerce platforms, FoodTech solutions, inventory, procurement, and logistics distribution.',
-      url: rootPrefix + 'services.html#commerce',
-      tags: ['commerce', 'supply chain', 'foodtech', 'procurement', 'logistics', 'b2b', 'b2c', 'ordering']
+      title: 'Nova Arc Homepage',
+      category: 'Main Navigation',
+      desc: 'Engineering intelligent solutions for a connected business world. Digital commerce, enterprise systems, and AI automation.',
+      url: rootPrefix + 'index.html',
+      tags: ['home', 'overview', 'nova arc', 'engineering', 'solutions']
+    },
+    {
+      title: 'All Solutions Overview',
+      category: 'Solutions',
+      desc: 'Unified architecture combining commerce, enterprise systems, intelligent monitoring, and AI automation.',
+      url: rootPrefix + 'solutions.html',
+      tags: ['solutions', 'overview', 'enterprise solutions', 'digital commerce', 'supply chain', 'monitoring']
+    },
+    {
+      title: 'Full Services Catalog',
+      category: 'Services',
+      desc: 'Complete engineering services across 4 core domains: Digital Commerce, Enterprise, Monitoring, and AI.',
+      url: rootPrefix + 'services.html',
+      tags: ['services', 'catalog', 'engineering', 'consulting', 'capabilities']
+    },
+    {
+      title: 'Technology Platform & Architecture',
+      category: 'Technology',
+      desc: 'Agentic AI, IoT telemetry, real-time analytics, and enterprise data integration architecture.',
+      url: rootPrefix + 'technology.html',
+      tags: ['technology', 'platform', 'ai', 'iot', 'architecture', 'data', 'analytics']
+    },
+    {
+      title: 'Industries We Serve',
+      category: 'Industries',
+      desc: 'Specialized technology solutions for FoodTech, Retail Commerce, Manufacturing, Logistics, and Healthcare.',
+      url: rootPrefix + 'industries.html',
+      tags: ['industries', 'foodtech', 'retail', 'manufacturing', 'logistics', 'healthcare']
+    },
+    {
+      title: 'Connect With Us & Directory',
+      category: 'Contact',
+      desc: 'Get in touch with Nova Arc. Hyderabad headquarters, direct departmental emails, and phone contact.',
+      url: rootPrefix + 'contact.html',
+      tags: ['contact', 'connect', 'phone', 'email', 'hyderabad', 'support', 'sales']
+    },
+    {
+      title: 'Digital Commerce Solutions',
+      category: 'Connected Digital Solutions',
+      desc: 'End-to-end B2B and B2C commerce architectures engineered for rapid digital ordering, customer engagement, dynamic pricing, and ...',
+      url: rootPrefix + 'solutions/digital-commerce.html',
+      tags: ['digital', 'commerce', 'solutions', 'platforms', 'ordering', 'customer', 'portals']
+    },
+    {
+      title: 'Supply Chain & Procurement Solutions',
+      category: 'Connected Digital Solutions',
+      desc: 'End-to-end supply chain visibility, intelligent warehouse coordination, automated purchase requisitions, and vendor collaborati...',
+      url: rootPrefix + 'solutions/supply-chain.html',
+      tags: ['supply', 'chain', 'procurement', 'solutions', 'end', 'visibility', 'digital', 'vendor', 'portals']
     },
     {
       title: 'Enterprise Business Solutions',
-      category: 'Core Service Domain',
-      desc: 'Modernize business operations with CRM, HRMS, custom enterprise applications, and system integration.',
-      url: rootPrefix + 'services.html#enterprise',
-      tags: ['enterprise', 'crm', 'hrms', 'automation', 'apps', 'integration', 'workflows', 'custom software']
+      category: 'Connected Digital Solutions',
+      desc: 'Modernize core operations with synchronized CRM, HRMS, custom business applications, and automated cross-departmental workflows.',
+      url: rootPrefix + 'solutions/enterprise-business.html',
+      tags: ['enterprise', 'business', 'solutions', 'customer', 'relationship', 'management', 'crm', 'human', 'resource', 'hrms']
     },
     {
-      title: 'Intelligent Monitoring & Automation',
-      category: 'Core Service Domain',
-      desc: 'IoT device connectivity, real-time operational telemetry, predictive analytics, and automated response workflows.',
-      url: rootPrefix + 'services.html#monitoring',
-      tags: ['iot', 'monitoring', 'telemetry', 'analytics', 'automation', 'real-time', 'sensors', 'alerting']
+      title: 'Intelligent Monitoring Solutions',
+      category: 'Connected Digital Solutions',
+      desc: 'Real-time IoT sensor telemetry, low-latency operational dashboards, threshold alerting, and automated incident escalation workf...',
+      url: rootPrefix + 'solutions/intelligent-monitoring.html',
+      tags: ['intelligent', 'monitoring', 'solutions', 'real', 'time', 'operational', 'dashboards', 'iot', 'device', 'sensor']
     },
     {
-      title: 'AI & Healthcare Technology',
-      category: 'Core Service Domain',
-      desc: 'Agentic AI workflows, generative AI assistants, enterprise document intelligence, and healthcare administration automation.',
-      url: rootPrefix + 'services.html#ai-healthcare',
-      tags: ['ai', 'agentic ai', 'healthcare', 'agents', 'genai', 'rag', 'llm', 'administrative automation']
-    },
-
-    // Sub-capabilities: Commerce & SCM
-    {
-      title: 'Digital Commerce Platforms',
-      category: 'Digital Commerce',
-      desc: 'B2B/B2C digital ordering, customer portals, product catalog management, and payment fulfillment integration.',
-      url: rootPrefix + 'services.html#commerce-platforms',
-      tags: ['commerce', 'b2b', 'b2c', 'storefront', 'catalog', 'ordering', 'portals']
-    },
-    {
-      title: 'FoodTech Solutions',
-      category: 'Digital Commerce',
-      desc: 'Digital food ordering, batch and expiry tracking, supplier coordination, and food supply chain traceability.',
-      url: rootPrefix + 'services.html#foodtech',
-      tags: ['foodtech', 'food ordering', 'batch tracking', 'expiry', 'traceability', 'food distribution']
-    },
-    {
-      title: 'Supply Chain Management',
-      category: 'Digital Commerce',
-      desc: 'Warehouse management, inventory optimization, demand forecasting workflows, and multi-node replenishment.',
-      url: rootPrefix + 'services.html#supply-chain',
-      tags: ['supply chain', 'warehouse', 'inventory', 'wms', 'demand forecasting', 'replenishment']
-    },
-    {
-      title: 'Procurement & Vendor Management',
-      category: 'Digital Commerce',
-      desc: 'Digital purchase requisitions, supplier onboarding portals, approval hierarchies, and automated invoice reconciliation.',
-      url: rootPrefix + 'services.html#procurement',
-      tags: ['procurement', 'vendor management', 'po', 'requisition', 'invoicing', 'spend visibility']
-    },
-    {
-      title: 'Logistics & Distribution',
-      category: 'Digital Commerce',
-      desc: 'Dispatch coordination, route optimization, real-time shipment tracking, and carrier performance analytics.',
-      url: rootPrefix + 'services.html#logistics',
-      tags: ['logistics', 'distribution', 'fleet', 'tracking', 'dispatch', 'route planning', 'shipment']
-    },
-
-    // Sub-capabilities: Enterprise
-    {
-      title: 'Customer Relationship Management (CRM)',
-      category: 'Enterprise Solutions',
-      desc: 'Lead pipelines, multi-touch account journeys, automated engagement, and omnichannel customer support desks.',
-      url: rootPrefix + 'services.html#crm',
-      tags: ['crm', 'sales pipeline', 'leads', 'customer engagement', 'support desk', 'account management']
-    },
-    {
-      title: 'Human Resource Management Systems (HRMS)',
-      category: 'Enterprise Solutions',
-      desc: 'Workforce lifecycle, digital recruitment, employee self-service, leave and attendance, and payroll integration.',
-      url: rootPrefix + 'services.html#hrms',
-      tags: ['hrms', 'hr', 'workforce', 'onboarding', 'attendance', 'payroll', 'employee self service']
-    },
-    {
-      title: 'Business Process Automation',
-      category: 'Enterprise Solutions',
-      desc: 'Dynamic approval chains, multi-department task routing, document intake, and policy-driven escalation rules.',
-      url: rootPrefix + 'services.html#bpa',
-      tags: ['bpa', 'process automation', 'workflows', 'approvals', 'orchestration', 'task routing']
-    },
-    {
-      title: 'Enterprise Application Development',
-      category: 'Enterprise Solutions',
-      desc: 'Custom web portals, executive dashboards, internal operations tooling, and legacy modernization.',
-      url: rootPrefix + 'services.html#enterprise-apps',
-      tags: ['enterprise apps', 'custom software', 'portals', 'modernization', 'dashboards', 'internal tools']
-    },
-    {
-      title: 'System Integration & Data Connectivity',
-      category: 'Enterprise Solutions',
-      desc: 'Robust REST/GraphQL API connectors, bidirectional ERP/CRM synchronization, and federated data pipelines.',
-      url: rootPrefix + 'services.html#system-integration',
-      tags: ['integration', 'api', 'data sync', 'erp', 'crm', 'webhooks', 'connectivity']
-    },
-
-    // Sub-capabilities: Monitoring & IoT
-    {
-      title: 'Real-Time Monitoring',
-      category: 'Monitoring & Automation',
-      desc: 'Operational control centers, low-latency telemetry dashboards, equipment health, and threshold alerts.',
-      url: rootPrefix + 'services.html#real-time-monitoring',
-      tags: ['monitoring', 'telemetry', 'dashboards', 'equipment health', 'alerts', 'real-time']
-    },
-    {
-      title: 'Internet of Things (IoT) Solutions',
-      category: 'Monitoring & Automation',
-      desc: 'Industrial sensor ingestion, MQTT/CoAP connectivity, environmental tracking, and edge-to-cloud security.',
-      url: rootPrefix + 'services.html#iot',
-      tags: ['iot', 'sensors', 'mqtt', 'edge computing', 'telemetry', 'connected devices']
-    },
-    {
-      title: 'Operational Analytics',
-      category: 'Monitoring & Automation',
-      desc: 'Fleet and machine KPIs, anomaly detection algorithms, historical trend analysis, and predictive maintenance.',
-      url: rootPrefix + 'services.html#operational-analytics',
-      tags: ['analytics', 'kpi', 'anomaly detection', 'predictive maintenance', 'trends', 'reporting']
-    },
-    {
-      title: 'Intelligent Workflow Automation',
-      category: 'Monitoring & Automation',
-      desc: 'Event-triggered auto-remediation, ticketing integrations, incident escalation, and human-in-the-loop approvals.',
-      url: rootPrefix + 'services.html#workflow-automation',
-      tags: ['event driven', 'incident response', 'remediation', 'orchestration', 'alerting', 'escalation']
-    },
-    {
-      title: 'System & Infrastructure Monitoring',
-      category: 'Monitoring & Automation',
-      desc: 'Synthetic API monitoring, microservice health, latency tracing, centralized log analysis, and uptime tracking.',
-      url: rootPrefix + 'services.html#infra-monitoring',
-      tags: ['infrastructure', 'devops', 'api monitoring', 'uptime', 'logs', 'microservices']
-    },
-
-    // Sub-capabilities: AI & Healthcare Tech
-    {
-      title: 'Agentic AI & Intelligent Agents',
-      category: 'AI & Healthcare',
-      desc: 'Autonomous multi-step task orchestration, API-connected reasoning agents, and enterprise knowledge retrieval (RAG).',
-      url: rootPrefix + 'services.html#agentic-ai',
-      tags: ['agentic ai', 'agents', 'rag', 'orchestration', 'autonomous', 'llm agents']
-    },
-    {
-      title: 'Generative AI Applications',
-      category: 'AI & Healthcare',
-      desc: 'Enterprise domain knowledge assistants, semantic search over unstructured docs, and intelligent summarization.',
-      url: rootPrefix + 'services.html#gen-ai',
-      tags: ['gen ai', 'generative ai', 'llm', 'knowledge assistant', 'semantic search', 'summarization']
-    },
-    {
-      title: 'Intelligent Business Automation',
-      category: 'AI & Healthcare',
-      desc: 'Automated document extraction, OCR pipelines, intelligent email triage, and multi-system RPA execution.',
-      url: rootPrefix + 'services.html#intelligent-automation',
-      tags: ['ocr', 'document understanding', 'email triage', 'rpa', 'intelligent automation']
+      title: 'AI & Agentic Automation Solutions',
+      category: 'Connected Digital Solutions',
+      desc: 'Apply agentic AI workflows, generative enterprise assistants, intelligent document extraction, and governed business automation.',
+      url: rootPrefix + 'solutions/ai-automation.html',
+      tags: ['agentic', 'automation', 'solutions', 'multi', 'step', 'orchestration', 'generative', 'enterprise', 'assistants']
     },
     {
       title: 'Healthcare Technology Solutions',
-      category: 'AI & Healthcare',
-      desc: 'Digital patient registration, scheduling workflows, clinical documentation support, and administrative billing assistance.',
-      url: rootPrefix + 'services.html#healthcare-tech',
-      tags: ['healthcare', 'patient intake', 'scheduling', 'claims assistance', 'administrative healthcare', 'ehr integration']
+      category: 'Connected Digital Solutions',
+      desc: 'Administrative workflow automation, digital patient intake, scheduling coordination, healthcare document processing, and secure...',
+      url: rootPrefix + 'solutions/healthcare-technology.html',
+      tags: ['healthcare', 'technology', 'solutions', 'digital', 'patient', 'intake', 'registration', 'scheduling', 'operational', 'coordination']
     },
     {
-      title: 'AI Integration & Governance',
-      category: 'AI & Healthcare',
-      desc: 'Enterprise guardrails, prompt evaluation pipelines, RBAC controls, and strict human-in-the-loop oversight.',
-      url: rootPrefix + 'services.html#ai-governance',
-      tags: ['ai governance', 'guardrails', 'responsible ai', 'auditability', 'compliance', 'security']
+      title: 'Digital Commerce & Supply Chain',
+      category: 'Service Domain 01',
+      desc: 'Connect commerce, procurement, inventory, distribution, and logistics through integrated digital platforms that improve operati...',
+      url: rootPrefix + 'services/digital-commerce.html',
+      tags: ['digital', 'commerce', 'supply', 'chain', 'platforms', 'foodtech', 'solutions']
     },
-
-    // Target Industries
+    {
+      title: 'Digital Commerce Platforms',
+      category: 'Digital Commerce & Supply Ch',
+      desc: 'B2B and B2C commerce platforms, digital ordering, customer portals, product catalog management, pricing workflows, order proces...',
+      url: rootPrefix + 'services/digital-commerce-platforms.html',
+      tags: ['digital', 'commerce', 'platforms', 'enterprise', 'portals', 'omnichannel', 'storefronts']
+    },
+    {
+      title: 'FoodTech Solutions',
+      category: 'Digital Commerce & Supply Ch',
+      desc: 'Digital food ordering and distribution, food procurement, supplier coordination, batch and expiry tracking, inventory visibilit...',
+      url: rootPrefix + 'services/foodtech.html',
+      tags: ['foodtech', 'solutions', 'digital', 'food', 'ordering', 'distribution', 'batch', 'expiry', 'date', 'management']
+    },
+    {
+      title: 'Supply Chain Management',
+      category: 'Digital Commerce & Supply Ch',
+      desc: 'Inventory and warehouse management, order lifecycle tracking, demand forecasting workflows, replenishment, supplier collaborati...',
+      url: rootPrefix + 'services/supply-chain-management.html',
+      tags: ['supply', 'chain', 'management', 'multi', 'node', 'inventory', 'tracking', 'order', 'lifecycle', 'orchestration']
+    },
+    {
+      title: 'Procurement & Vendor Management',
+      category: 'Digital Commerce & Supply Ch',
+      desc: 'Digital purchase requisitions, approval workflows, supplier onboarding, vendor portals, purchase order management, invoice work...',
+      url: rootPrefix + 'services/procurement.html',
+      tags: ['procurement', 'vendor', 'management', 'digital', 'purchase', 'requisitions', 'configurable', 'approval', 'hierarchies']
+    },
+    {
+      title: 'Logistics & Distribution',
+      category: 'Digital Commerce & Supply Ch',
+      desc: 'Transportation management, shipment tracking, dispatch coordination, route planning, delivery visibility, and logistics perform...',
+      url: rootPrefix + 'services/logistics.html',
+      tags: ['logistics', 'distribution', 'transportation', 'management', 'tms', 'real', 'time', 'shipment', 'visibility']
+    },
+    {
+      title: 'Enterprise Business Solutions',
+      category: 'Service Domain 02',
+      desc: 'Modernize business operations with connected CRM, HRMS, enterprise applications, and workflow automation designed to simplify p...',
+      url: rootPrefix + 'services/enterprise-business.html',
+      tags: ['enterprise', 'business', 'solutions', 'customer', 'relationship', 'management', 'crm', 'human', 'resource', 'hrms']
+    },
+    {
+      title: 'Customer Relationship Management (CRM)',
+      category: 'Enterprise Business Solution',
+      desc: 'Lead management, sales pipeline tracking, account management, customer onboarding, engagement workflows, customer service proce...',
+      url: rootPrefix + 'services/crm.html',
+      tags: ['customer', 'relationship', 'management', 'crm', 'lead', 'scoring', 'sales', 'pipeline', 'deal', 'tracking']
+    },
+    {
+      title: 'Human Resource Management Systems (HRMS)',
+      category: 'Enterprise Business Solution',
+      desc: 'Employee lifecycle management, recruitment, onboarding, attendance, leave management, employee self-service, performance workfl...',
+      url: rootPrefix + 'services/hrms.html',
+      tags: ['human', 'resource', 'management', 'systems', 'hrms', 'recruitment', 'digital', 'onboarding', 'employee', 'self']
+    },
+    {
+      title: 'Business Process Automation (BPA)',
+      category: 'Enterprise Business Solution',
+      desc: 'Approval workflows, task assignment, notifications, document processing, workflow orchestration, exception handling, escalation...',
+      url: rootPrefix + 'services/business-process-automation.html',
+      tags: ['business', 'process', 'automation', 'bpa', 'dynamic', 'approval', 'orchestration', 'automated', 'task', 'routing']
+    },
+    {
+      title: 'Custom Enterprise Applications',
+      category: 'Enterprise Business Solution',
+      desc: 'Custom business applications, enterprise portals, operational dashboards, internal business systems, legacy application moderni...',
+      url: rootPrefix + 'services/enterprise-applications.html',
+      tags: ['custom', 'enterprise', 'applications', 'business', 'portals', 'operational', 'dashboards']
+    },
+    {
+      title: 'Enterprise Integration & Business Intelligence',
+      category: 'Enterprise Business Solution',
+      desc: 'API integration, CRM/HRMS/ERP connectivity, third-party application integration, data synchronization, centralized reporting, a...',
+      url: rootPrefix + 'services/enterprise-integration.html',
+      tags: ['enterprise', 'integration', 'business', 'intelligence', 'robust', 'api', 'connectors', 'rest', 'graphql', 'bidirectional']
+    },
+    {
+      title: 'Intelligent Monitoring & Automation',
+      category: 'Service Domain 03',
+      desc: 'Connect IoT devices, operational systems, real-time data, and intelligent workflows to improve visibility, identify issues fast...',
+      url: rootPrefix + 'services/intelligent-monitoring.html',
+      tags: ['intelligent', 'monitoring', 'automation', 'real', 'time', 'dashboards', 'internet', 'things', 'iot', 'solutions']
+    },
+    {
+      title: 'Real-Time Monitoring & Dashboards',
+      category: 'Intelligent Monitoring & Aut',
+      desc: 'Live operational dashboards, equipment status monitoring, event-based alerts, centralized monitoring, operational reporting, an...',
+      url: rootPrefix + 'services/real-time-monitoring.html',
+      tags: ['real', 'time', 'monitoring', 'dashboards', 'sub', 'second', 'telemetry', 'visualization', 'equipment', 'status']
+    },
+    {
+      title: 'IoT & Device Integration',
+      category: 'Intelligent Monitoring & Aut',
+      desc: 'IoT device integration, sensor connectivity, telemetry collection, device data visualization, asset monitoring, environmental c...',
+      url: rootPrefix + 'services/iot-integration.html',
+      tags: ['iot', 'device', 'integration', 'industrial', 'sensor', 'connectivity', 'edge', 'gateway', 'protocol', 'translation']
+    },
+    {
+      title: 'Operational Analytics',
+      category: 'Intelligent Monitoring & Aut',
+      desc: 'KPI dashboards, historical trend analysis, operational performance reporting, anomaly detection, exception identification, and ...',
+      url: rootPrefix + 'services/operational-analytics.html',
+      tags: ['operational', 'analytics', 'kpi', 'dashboards', 'statistical', 'anomaly', 'detection']
+    },
+    {
+      title: 'Intelligent Workflow Automation',
+      category: 'Intelligent Monitoring & Aut',
+      desc: 'Event-triggered actions, automated task creation, incident escalation, resolution workflows, rule-based responses, and human ap...',
+      url: rootPrefix + 'services/workflow-automation.html',
+      tags: ['intelligent', 'workflow', 'automation', 'event', 'triggered', 'automated', 'actions', 'work', 'order', 'generation']
+    },
+    {
+      title: 'System & Infrastructure Monitoring',
+      category: 'Intelligent Monitoring & Aut',
+      desc: 'Application health monitoring, API monitoring, availability tracking, error monitoring, centralized logs, incident reporting, a...',
+      url: rootPrefix + 'services/infrastructure-monitoring.html',
+      tags: ['system', 'infrastructure', 'monitoring', 'synthetic', 'api', 'endpoint', 'centralized', 'log', 'aggregation']
+    },
+    {
+      title: 'AI & Healthcare Technology',
+      category: 'Service Domain 04',
+      desc: 'Apply agentic AI, intelligent information processing, workflow automation, and healthcare technology to simplify complex busine...',
+      url: rootPrefix + 'services/ai-healthcare.html',
+      tags: ['healthcare', 'technology', 'agentic', 'intelligent', 'agents', 'generative', 'applications']
+    },
+    {
+      title: 'Agentic AI & Intelligent Agents',
+      category: 'Ai & Healthcare Technology',
+      desc: 'AI agents for defined business workflows, multi-step task orchestration, API-connected agents, retrieval-augmented generation (...',
+      url: rootPrefix + 'services/agentic-ai.html',
+      tags: ['agentic', 'intelligent', 'agents', 'multi', 'step', 'task', 'orchestration', 'api', 'connected', 'tool']
+    },
+    {
+      title: 'Generative AI & Enterprise Assistants',
+      category: 'Ai & Healthcare Technology',
+      desc: 'Enterprise knowledge assistants, intelligent search, document understanding, information extraction, automated summaries, repor...',
+      url: rootPrefix + 'services/generative-ai.html',
+      tags: ['generative', 'enterprise', 'assistants', 'knowledge', 'rag', 'semantic', 'document', 'search']
+    },
+    {
+      title: 'Intelligent Document Processing',
+      category: 'Ai & Healthcare Technology',
+      desc: 'Document processing, intelligent classification, information routing, automated validation, AI-assisted support workflows, repe...',
+      url: rootPrefix + 'services/document-processing.html',
+      tags: ['intelligent', 'document', 'processing', 'automated', 'classification', 'complex', 'table', 'entity', 'extraction']
+    },
+    {
+      title: 'AI-Powered Workflow Automation',
+      category: 'Ai & Healthcare Technology',
+      desc: 'Combining generative reasoning, document intelligence, and deterministic business rules to automate cross-system administrative...',
+      url: rootPrefix + 'services/ai-workflow-automation.html',
+      tags: ['powered', 'workflow', 'automation', 'inbound', 'email', 'communication', 'triage', 'cross', 'system', 'administrative']
+    },
+    {
+      title: 'Healthcare Technology & Automation',
+      category: 'Ai & Healthcare Technology',
+      desc: 'Healthcare administrative automation, digital patient intake, appointment coordination, healthcare document processing, operati...',
+      url: rootPrefix + 'services/healthcare-automation.html',
+      tags: ['healthcare', 'technology', 'automation', 'digital', 'patient', 'pre', 'registration', 'appointment', 'coordination', 'scheduling']
+    },
+    {
+      title: 'Healthcare Data Integration & Analytics',
+      category: 'Ai & Healthcare Technology',
+      desc: 'Healthcare administrative dashboards, EHR data connectivity, operational clinic metrics, and administrative billing assistance ...',
+      url: rootPrefix + 'services/healthcare-data-analytics.html',
+      tags: ['healthcare', 'data', 'integration', 'analytics', 'operational', 'clinic', 'dashboards', 'ehr', 'practice', 'management']
+    },
+    {
+      title: 'Agentic AI',
+      category: 'Technology Platform Architec',
+      desc: 'AI agents for defined business tasks, multi-step task orchestration, tool and API integrations, knowledge retrieval, and human ...',
+      url: rootPrefix + 'technology/agentic-ai.html',
+      tags: ['agentic', 'goal', 'decomposition', 'task', 'planning', 'safe', 'api', 'tool', 'calling']
+    },
+    {
+      title: 'Generative AI',
+      category: 'Technology Platform Architec',
+      desc: 'Enterprise AI assistants, conversational interfaces, document summarization, information extraction, enterprise knowledge searc...',
+      url: rootPrefix + 'technology/generative-ai.html',
+      tags: ['generative', 'retrieval', 'augmented', 'generation', 'rag', 'private', 'enterprise', 'knowledge', 'search']
+    },
+    {
+      title: 'Intelligent Automation',
+      category: 'Technology Platform Architec',
+      desc: 'Rule-based automation, AI-assisted workflows, document and data processing, workflow routing and approvals, exception handling,...',
+      url: rootPrefix + 'technology/intelligent-automation.html',
+      tags: ['intelligent', 'automation', 'deterministic', 'business', 'rule', 'engines', 'event', 'driven', 'webhook', 'orchestration']
+    },
+    {
+      title: 'Internet of Things (IoT)',
+      category: 'Technology Platform Architec',
+      desc: 'Connected devices and sensors, device and asset data, real-time telemetry, equipment monitoring, IoT data visualization, and ed...',
+      url: rootPrefix + 'technology/iot.html',
+      tags: ['internet', 'things', 'iot', 'lightweight', 'edge', 'protocols', 'gateway', 'computing']
+    },
+    {
+      title: 'Enterprise Integration',
+      category: 'Technology Platform Architec',
+      desc: 'API integrations, third-party system connectivity, data synchronization, application interoperability, enterprise system modern...',
+      url: rootPrefix + 'technology/enterprise-integration.html',
+      tags: ['enterprise', 'integration', 'api', 'gateways', 'rest', 'graphql', 'bidirectional', 'data', 'buses']
+    },
+    {
+      title: 'Data Analytics & Operational Intelligence',
+      category: 'Technology Platform Architec',
+      desc: 'Operational dashboards, KPI monitoring, trend analysis, reporting and visualization, anomaly detection where supported, and dat...',
+      url: rootPrefix + 'technology/data-analytics.html',
+      tags: ['data', 'analytics', 'operational', 'intelligence', 'interactive', 'dashboards', 'automated', 'etl', 'warehousing']
+    },
     {
       title: 'FoodTech & Food Distribution',
-      category: 'Industries',
-      desc: 'End-to-end digital ordering, cold chain telemetry, multi-warehouse distribution, and batch traceability.',
-      url: rootPrefix + 'who-we-serve.html#foodtech-distribution',
-      tags: ['foodtech', 'distribution', 'food', 'cold chain', 'inventory', 'restaurants']
+      category: 'Target Industry Focus',
+      desc: 'Digital food commerce, supplier coordination, procurement, inventory management, batch and expiry traceability, and cold chain ...',
+      url: rootPrefix + 'industries/foodtech.html',
+      tags: ['foodtech', 'food', 'distribution', 'digital', 'ordering', 'portals', 'fefo', 'inventory', 'batch', 'traceability']
     },
     {
       title: 'Retail & Digital Commerce',
-      category: 'Industries',
-      desc: 'Omnichannel B2B/B2C commerce portals, catalog sync, real-time inventory visibility, and checkout optimization.',
-      url: rootPrefix + 'who-we-serve.html#retail-commerce',
-      tags: ['retail', 'ecommerce', 'commerce', 'storefront', 'omnichannel', 'b2b']
+      category: 'Target Industry Focus',
+      desc: 'Digital storefronts, B2B/B2C commerce platforms, catalog management, customer portals, order fulfillment, and inventory integra...',
+      url: rootPrefix + 'industries/retail-ecommerce.html',
+      tags: ['retail', 'digital', 'commerce', 'unified', 'omnichannel', 'storefronts', 'dynamic', 'product', 'information', 'pim']
     },
     {
       title: 'Manufacturing & Industrial Operations',
-      category: 'Industries',
-      desc: 'Industrial IoT monitoring, predictive maintenance, automated defect logging, and factory floor telemetry.',
-      url: rootPrefix + 'who-we-serve.html#manufacturing-industrial',
-      tags: ['manufacturing', 'industrial', 'factory', 'iiot', 'maintenance', 'telemetry']
+      category: 'Target Industry Focus',
+      desc: 'Industrial IoT monitoring, connected equipment, operational dashboards, event-driven alerts, predictive maintenance, and proces...',
+      url: rootPrefix + 'industries/manufacturing.html',
+      tags: ['manufacturing', 'industrial', 'operations', 'iot', 'telemetry', 'ingestion', 'real', 'time', 'oee', 'plant']
     },
     {
       title: 'Logistics & Supply Chain',
-      category: 'Industries',
-      desc: 'Real-time fleet tracking, dynamic route optimization, carrier management, and freight milestone reporting.',
-      url: rootPrefix + 'who-we-serve.html#logistics-supply-chain',
-      tags: ['logistics', 'freight', 'fleet', 'carriers', 'tracking', 'dispatch', 'shipping']
+      category: 'Target Industry Focus',
+      desc: 'Shipment visibility, warehouse management, supplier collaboration, procurement workflows, logistics analytics, and dispatch coo...',
+      url: rootPrefix + 'industries/logistics.html',
+      tags: ['logistics', 'supply', 'chain', 'real', 'time', 'freight', 'fleet', 'tracking', 'dynamic', 'route']
     },
     {
       title: 'Enterprise & Professional Services',
-      category: 'Industries',
-      desc: 'Unified CRM, automated HR onboarding, multi-tier approvals, custom portals, and connected business tooling.',
-      url: rootPrefix + 'who-we-serve.html#enterprise-professional-services',
-      tags: ['enterprise', 'professional services', 'consulting', 'crm', 'hrms', 'workflows']
+      category: 'Target Industry Focus',
+      desc: 'CRM, HRMS, business process automation, custom enterprise applications, and connected business systems for corporate and consul...',
+      url: rootPrefix + 'industries/enterprise.html',
+      tags: ['enterprise', 'professional', 'services', 'client', 'relationship', 'management', 'crm', 'workforce', 'hrms', 'platforms']
     },
     {
       title: 'Healthcare & Health Technology',
-      category: 'Industries',
-      desc: 'Administrative automation, patient intake workflows, EHR connectivity, and billing assistance tooling.',
-      url: rootPrefix + 'who-we-serve.html#healthcare-technology',
-      tags: ['healthcare', 'health systems', 'administrative automation', 'patient registration', 'ehr']
-    },
-
-    // Technology Platform & Solutions
-    {
-      title: 'Technology & AI Platform Overview',
-      category: 'Platform',
-      desc: 'Intelligent technology, connected systems, agentic AI, and practical enterprise engineering outcomes.',
-      url: rootPrefix + 'ai-platform.html',
-      tags: ['platform', 'ai', 'architecture', 'agents', 'integration', 'iot', 'workflows']
+      category: 'Target Industry Focus',
+      desc: 'Healthcare administrative automation, patient intake, scheduling workflows, healthcare document processing, system integration,...',
+      url: rootPrefix + 'industries/healthcare.html',
+      tags: ['healthcare', 'health', 'technology', 'digital', 'patient', 'pre', 'registration', 'appointment', 'coordination', 'scheduling']
     },
     {
-      title: 'Connected Digital Solutions Suite',
-      category: 'Solutions',
-      desc: 'Explore end-to-end digital solutions spanning commerce, enterprise systems, and operational automation.',
-      url: rootPrefix + 'solutions.html',
-      tags: ['solutions', 'suite', 'architecture', 'digital systems', 'connected solutions']
+      title: 'General Enquiries',
+      category: 'Connect With Nova Arc',
+      desc: 'Get in touch with Nova Arc for general corporate communications, media inquiries, partnership discussions, or company information.',
+      url: rootPrefix + 'connect/general-enquiries.html',
+      tags: ['general', 'enquiries', 'corporate', 'communications', 'strategic', 'partnerships']
     },
     {
-      title: 'Discuss Your Project / Contact Nova Arc',
-      category: 'Contact',
-      desc: 'Connect with Nova Arc technology architects to discuss your digital transformation or project roadmap.',
-      url: rootPrefix + 'contact.html',
-      tags: ['contact', 'consultation', 'project discussion', 'inquiry', 'phone', 'email']
+      title: 'Discuss a Project',
+      category: 'Connect With Nova Arc',
+      desc: 'Schedule a technical consultation to explore your business requirements, software architecture, and implementation roadmap.',
+      url: rootPrefix + 'connect/project-enquiry.html',
+      tags: ['discuss', 'project', 'architecture', 'discovery', 'sessions', 'tailored', 'solution', 'roadmaps']
+    },
+    {
+      title: 'Service Enquiries',
+      category: 'Connect With Nova Arc',
+      desc: 'Inquire about specific technical capabilities across Digital Commerce, Enterprise Systems, Intelligent Monitoring, or AI & Heal...',
+      url: rootPrefix + 'connect/service-enquiry.html',
+      tags: ['service', 'enquiries', 'digital', 'commerce', 'scm', 'advisory', 'enterprise', 'business']
+    },
+    {
+      title: 'Technical Support',
+      category: 'Connect With Nova Arc',
+      desc: 'Submit product tickets, report operational anomalies, or access dedicated client technical helpdesk resources.',
+      url: rootPrefix + 'connect/technical-support.html',
+      tags: ['technical', 'support', 'ticket', 'submission', 'tracking', 'direct', 'helpdesk', 'channels']
     }
   ];
 
