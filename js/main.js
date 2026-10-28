@@ -60,7 +60,7 @@ function initStickyHeader() {
 }
 
 /* --------------------------------------------------------------------------
-   Services Mega-Menu Dropdown (Desktop & Keyboard/A11y)
+   Services Mega-Menu Dropdown (Desktop & Touch Click-to-Pin)
    -------------------------------------------------------------------------- */
 function initServicesMegaMenu() {
   const toggleBtn = document.getElementById('servicesDropdownToggle');
@@ -69,8 +69,12 @@ function initServicesMegaMenu() {
 
   if (!toggleBtn || !megaPanel) return;
 
-  const openMenu = () => {
+  const openMenu = (pinned = false) => {
     megaPanel.classList.add('open');
+    if (pinned) {
+      megaPanel.classList.add('pinned');
+      if (navItem) navItem.classList.add('pinned');
+    }
     if (navItem) navItem.classList.add('open');
     toggleBtn.classList.add('active');
     toggleBtn.setAttribute('aria-expanded', 'true');
@@ -78,64 +82,91 @@ function initServicesMegaMenu() {
   };
 
   const closeMenu = () => {
-    megaPanel.classList.remove('open');
-    if (navItem) navItem.classList.remove('open');
+    megaPanel.classList.remove('open', 'pinned');
+    if (navItem) navItem.classList.remove('open', 'pinned');
     toggleBtn.classList.remove('active');
     toggleBtn.setAttribute('aria-expanded', 'false');
     megaPanel.setAttribute('aria-hidden', 'true');
   };
 
-  // Hover support: open on mouseenter, close on mouseleave (unless pinned by chevron click)
+  // 1. CLICK on the Services dropdown toggle (text or chevron):
+  // Toggles the megamenu. When opened by click, IT STAYS PINNED until clicked outside!
+  toggleBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    // Close any other open dropdowns (Solutions, Tech, Industries)
+    document.querySelectorAll('.nav-item-dropdown.open').forEach(p => {
+      if (p !== navItem) {
+        p.classList.remove('open');
+        const link = p.querySelector('.nav-dropdown-link');
+        if (link) link.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    const isOpen = megaPanel.classList.contains('open') || megaPanel.classList.contains('pinned');
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu(true);
+    }
+  });
+
+  // 2. DESKTOP HOVER:
+  let hoverTimer = null;
   if (navItem) {
     navItem.addEventListener('mouseenter', () => {
-      // Close any open simple dropdowns
-      document.querySelectorAll('.nav-item-dropdown.open').forEach(p => p.classList.remove('open'));
-      openMenu();
+      if (window.innerWidth >= 992) {
+        if (hoverTimer) {
+          clearTimeout(hoverTimer);
+          hoverTimer = null;
+        }
+        // Close other simple dropdowns
+        document.querySelectorAll('.nav-item-dropdown.open').forEach(p => {
+          if (p !== navItem) {
+            p.classList.remove('open');
+            const link = p.querySelector('.nav-dropdown-link');
+            if (link) link.setAttribute('aria-expanded', 'false');
+          }
+        });
+        if (!megaPanel.classList.contains('pinned')) {
+          openMenu(false);
+        }
+      }
     });
 
     navItem.addEventListener('mouseleave', () => {
-      if (!megaPanel.classList.contains('pinned')) {
-        closeMenu();
+      if (window.innerWidth >= 992) {
+        // If pinned by click, it stays open!
+        if (megaPanel.classList.contains('pinned')) return;
+        hoverTimer = setTimeout(() => {
+          if (!megaPanel.classList.contains('pinned')) {
+            closeMenu();
+          }
+        }, 180);
       }
     });
   }
 
-  // Clicking the Services dropdown toggle:
-  // - If clicking the chevron arrow: toggle the megamenu open/close and pin state
-  // - If clicking "Services" link text:
-  //   * If already on services.html, close megamenu so page content is visible
-  //   * If on another page, navigate to services.html!
-  toggleBtn.addEventListener('click', (e) => {
-    const isChevron = e.target.closest('.dropdown-chevron');
-    if (isChevron) {
-      e.preventDefault();
-      e.stopPropagation();
-      // Close other dropdowns
-      document.querySelectorAll('.nav-item-dropdown.open').forEach(p => p.classList.remove('open'));
-      const isOpen = megaPanel.classList.contains('open');
-      if (isOpen) {
-        megaPanel.classList.remove('pinned');
-        closeMenu();
-      } else {
-        megaPanel.classList.add('pinned');
-        openMenu();
-      }
-      return;
-    }
-
-    const isCurrentServicesPage = window.location.pathname.endsWith('services.html') || 
-                                  window.location.pathname.endsWith('/services') ||
-                                  window.location.pathname === '/services.html';
-    if (isCurrentServicesPage) {
-      if (megaPanel.classList.contains('open')) {
-        closeMenu();
-      }
-    } else {
-      closeMenu();
+  megaPanel.addEventListener('mouseenter', () => {
+    if (hoverTimer) {
+      clearTimeout(hoverTimer);
+      hoverTimer = null;
     }
   });
 
-  // If user clicks a link inside the mega menu, close menu on navigation
+  megaPanel.addEventListener('mouseleave', () => {
+    if (window.innerWidth >= 992) {
+      if (megaPanel.classList.contains('pinned')) return;
+      hoverTimer = setTimeout(() => {
+        if (!megaPanel.classList.contains('pinned')) {
+          closeMenu();
+        }
+      }, 180);
+    }
+  });
+
+  // 3. CLICK ON CATEGORY OR LINK INSIDE THE MEGA MENU:
   megaPanel.addEventListener('click', (e) => {
     const link = e.target.closest('a');
     if (link) {
@@ -143,28 +174,23 @@ function initServicesMegaMenu() {
     }
   });
 
-  // If user enters another dropdown in navbar (e.g. Solutions or AI Platform), close Services
-  const otherDropdowns = document.querySelectorAll('.nav-item-dropdown:not(.nav-item-services)');
-  otherDropdowns.forEach(otherItem => {
-    otherItem.addEventListener('mouseenter', () => {
-      closeMenu();
-    });
-  });
-
-  // Close when clicking outside navbar and megamenu so user can interact with the page
+  // 4. CLICK ANYWHERE OUTSIDE TO DISMISS:
   document.addEventListener('click', (e) => {
-    if (navItem && !navItem.contains(e.target) && !megaPanel.contains(e.target)) {
-      if (megaPanel.classList.contains('open')) {
+    if (megaPanel.classList.contains('open') || megaPanel.classList.contains('pinned')) {
+      const clickedInside = megaPanel.contains(e.target) || toggleBtn.contains(e.target);
+      if (!clickedInside) {
         closeMenu();
       }
     }
   });
 
-  // Close on Escape key and return focus
+  // 5. ESCAPE KEY DISMISSAL:
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && megaPanel.classList.contains('open')) {
-      closeMenu();
-      toggleBtn.focus();
+    if (e.key === 'Escape') {
+      if (megaPanel.classList.contains('open') || megaPanel.classList.contains('pinned')) {
+        closeMenu();
+        toggleBtn.focus();
+      }
     }
   });
 }
@@ -541,23 +567,17 @@ function initDemoForm() {
       validate: (val) => val.replace(/[^0-9]/g, '').length >= 10,
       msg: 'Please enter a valid 10-digit phone number.'
     },
-    state: {
-      el: document.getElementById('demo-state'),
-      err: document.getElementById('error-state'),
-      validate: (val) => val.trim() !== '',
-      msg: 'Please select your state.'
-    },
-    title: {
-      el: document.getElementById('demo-title'),
-      err: document.getElementById('error-title'),
-      validate: (val) => val.trim() !== '',
-      msg: 'Please select your professional role.'
-    },
     company: {
       el: document.getElementById('demo-company'),
       err: document.getElementById('error-company'),
       validate: (val) => val.trim().length >= 2,
       msg: 'Please specify your company or organization.'
+    },
+    domain: {
+      el: document.getElementById('demo-domain'),
+      err: document.getElementById('error-domain'),
+      validate: (val) => val.trim() !== '',
+      msg: 'Please select a service domain.'
     }
   };
 
@@ -565,7 +585,8 @@ function initDemoForm() {
   Object.keys(fields).forEach(key => {
     const item = fields[key];
     if (item.el) {
-      item.el.addEventListener('input', () => {
+      const eventName = item.el.tagName === 'SELECT' ? 'change' : 'input';
+      item.el.addEventListener(eventName, () => {
         if (item.validate(item.el.value)) {
           item.el.classList.remove('error');
           if (item.err) item.err.classList.remove('visible');
@@ -616,22 +637,23 @@ function initDemoForm() {
     `;
 
     setTimeout(() => {
-      const applicantName = fields.name.el.value.trim();
-      const applicantOrg = fields.company.el.value.trim();
-      const applicantEmail = fields.email.el.value.trim();
-      const applicantPhone = fields.phone.el.value.trim();
-      const applicantState = fields.state.el.value;
-      const applicantTitle = fields.title.el.value;
+      const applicantName = fields.name.el ? fields.name.el.value.trim() : '';
+      const applicantOrg = fields.company.el ? fields.company.el.value.trim() : '';
+      const applicantEmail = fields.email.el ? fields.email.el.value.trim() : '';
+      const applicantPhone = fields.phone.el ? fields.phone.el.value.trim() : '';
+      const applicantDomain = fields.domain.el ? fields.domain.el.value : '';
+      const messageEl = document.getElementById('demo-message');
+      const applicantMessage = messageEl ? messageEl.value.trim() : '';
 
       // Save submission to persistent storage
       const record = saveSubmission('demo', {
         name: applicantName,
         email: applicantEmail,
         phone: applicantPhone,
-        state: applicantState,
-        title: applicantTitle,
+        domain: applicantDomain,
+        requirements: applicantMessage,
         company: applicantOrg,
-        source: 'Homepage Demo Request Form'
+        source: 'Homepage Project Discussion Form'
       });
 
       // Populate success card details
@@ -1199,28 +1221,31 @@ function initWaveformInteraction() {
 }
 
 /* --------------------------------------------------------------------------
-   Simple Dropdown Toggles (Solutions & AI Platform)
+   Simple Dropdown Toggles (Solutions, Technology, Industries)
    -------------------------------------------------------------------------- */
 function initNavSimpleDropdowns() {
-  const toggles = document.querySelectorAll('.nav-dropdown-link');
+  const toggles = document.querySelectorAll('.nav-dropdown-link:not(#servicesDropdownToggle)');
+
+  const closeServicesIfOpen = () => {
+    const servicesMega = document.getElementById('servicesMegaMenu');
+    if (servicesMega && (servicesMega.classList.contains('open') || servicesMega.classList.contains('pinned'))) {
+      servicesMega.classList.remove('open', 'pinned');
+      servicesMega.setAttribute('aria-hidden', 'true');
+      const servicesToggle = document.getElementById('servicesDropdownToggle');
+      if (servicesToggle) {
+        servicesToggle.classList.remove('active');
+        servicesToggle.setAttribute('aria-expanded', 'false');
+      }
+      const servicesItem = document.querySelector('.nav-item-services');
+      if (servicesItem) servicesItem.classList.remove('open', 'pinned');
+    }
+  };
+
   toggles.forEach(toggle => {
     const parent = toggle.closest('.nav-item-dropdown');
     if (!parent) return;
 
-    const closeServicesIfOpen = () => {
-      const servicesMega = document.getElementById('servicesMegaMenu');
-      if (servicesMega && (servicesMega.classList.contains('open') || servicesMega.classList.contains('pinned'))) {
-        servicesMega.classList.remove('open', 'pinned');
-        servicesMega.setAttribute('aria-hidden', 'true');
-        const servicesToggle = document.getElementById('servicesDropdownToggle');
-        if (servicesToggle) {
-          servicesToggle.classList.remove('active');
-          servicesToggle.setAttribute('aria-expanded', 'false');
-        }
-      }
-    };
-
-    // Chevron click toggles dropdown open/close on both desktop and mobile
+    // Chevron click toggles dropdown open/close on desktop & mobile
     toggle.addEventListener('click', (e) => {
       const isChevron = e.target.closest('.dropdown-chevron');
       if (isChevron) {
@@ -1230,7 +1255,11 @@ function initNavSimpleDropdowns() {
         const isOpen = parent.classList.contains('open');
         // Close other simple dropdowns
         document.querySelectorAll('.nav-item-dropdown.open').forEach(p => {
-          if (p !== parent) p.classList.remove('open');
+          if (p !== parent) {
+            p.classList.remove('open');
+            const link = p.querySelector('.nav-dropdown-link');
+            if (link) link.setAttribute('aria-expanded', 'false');
+          }
         });
         if (isOpen) {
           parent.classList.remove('open');
@@ -1247,7 +1276,11 @@ function initNavSimpleDropdowns() {
       if (window.innerWidth >= 992) {
         closeServicesIfOpen();
         document.querySelectorAll('.nav-item-dropdown.open').forEach(p => {
-          if (p !== parent) p.classList.remove('open');
+          if (p !== parent) {
+            p.classList.remove('open');
+            const link = p.querySelector('.nav-dropdown-link');
+            if (link) link.setAttribute('aria-expanded', 'false');
+          }
         });
         parent.classList.add('open');
         toggle.setAttribute('aria-expanded', 'true');
@@ -1271,6 +1304,17 @@ function initNavSimpleDropdowns() {
         if (link) link.setAttribute('aria-expanded', 'false');
       });
     }
+  });
+
+  // Close open dropdowns when clicking any item inside a dropdown
+  document.querySelectorAll('.nav-simple-item').forEach(item => {
+    item.addEventListener('click', () => {
+      document.querySelectorAll('.nav-item-dropdown.open').forEach(p => {
+        p.classList.remove('open');
+        const link = p.querySelector('.nav-dropdown-link');
+        if (link) link.setAttribute('aria-expanded', 'false');
+      });
+    });
   });
 
   // Close open dropdowns on Escape key

@@ -297,7 +297,7 @@ def get_shared_header(root_prefix, active_section=""):
               <h4 class="mobile-category-title"><a href="{root_prefix}services/ai-healthcare.html">AI &amp; Healthcare Technology</a></h4>
               <a href="{root_prefix}services/agentic-ai.html" class="mobile-submenu-link">Agentic AI &amp; Intelligent Agents</a>
               <a href="{root_prefix}services/generative-ai.html" class="mobile-submenu-link">Generative AI &amp; Enterprise Assistants</a>
-              <a href="{root_prefix}document-processing.html" class="mobile-submenu-link">Intelligent Document Processing</a>
+              <a href="{root_prefix}services/document-processing.html" class="mobile-submenu-link">Intelligent Document Processing</a>
               <a href="{root_prefix}services/ai-workflow-automation.html" class="mobile-submenu-link">AI-Powered Workflow Automation</a>
               <a href="{root_prefix}services/healthcare-automation.html" class="mobile-submenu-link">Healthcare Technology &amp; Automation</a>
               <a href="{root_prefix}services/healthcare-data-analytics.html" class="mobile-submenu-link">Healthcare Data Integration &amp; Analytics</a>
@@ -475,9 +475,10 @@ def get_shared_footer(root_prefix):
 
 def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_subtitle,
                      breadcrumbs, overview_paragraphs, capabilities, challenges,
-                     workflow_steps, outcomes, related_links, seo_desc):
+                     workflow_steps, outcomes, related_links, seo_desc,
+                     use_cases=None, integrations=None, considerations=None, faqs=None):
     """
-    Generates a complete, beautiful subpage that perfectly fits Nova Arc's design system.
+    Generates a complete, informative enterprise subpage that perfectly fits Nova Arc's design system.
     """
     active_sec = "services"
     if "solutions/" in rel_path:
@@ -535,12 +536,42 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
           <h4 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-sm);">{ch['challenge']}</h4>
           <p style="color: #94A3B8; font-size: 0.925rem; line-height: 1.6; margin-bottom: var(--space-md);">{ch['impact']}</p>
           <div style="padding: var(--space-md); background: rgba(14, 165, 233, 0.08); border-left: 3px solid #38BDF8; border-radius: 4px;">
-            <strong style="color: #38BDF8; font-size: 0.85rem; display: block; margin-bottom: 4px;">Nova Arc Implementation Solution:</strong>
+            <strong style="color: #38BDF8; font-size: 0.85rem; display: block; margin-bottom: 4px;">Nova Arc Solution:</strong>
             <span style="color: #E2E8F0; font-size: 0.9rem; line-height: 1.5;">{ch['solution']}</span>
           </div>
         </div>
         """)
     challenges_html = "".join(chal_cards)
+
+    # Practical Use Cases HTML
+    use_cases_html = ""
+    if use_cases:
+        uc_cards = []
+        for uc in use_cases:
+            ex_box = f"<div style='margin-top: 10px; padding: 8px 12px; background: rgba(56, 189, 248, 0.08); border-radius: 6px; border-left: 2px solid #38BDF8; font-size: 0.875rem; color: #E2E8F0;'><strong>Practical Example:</strong> {uc['example']}</div>" if uc.get('example') else ""
+            uc_cards.append(f"""
+            <div class="card" style="padding: var(--space-xl); background: rgba(15, 23, 42, 0.55); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg);">
+              <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #38BDF8; margin-bottom: 6px; display: inline-block;">USE CASE</span>
+              <h4 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-xs);">{uc['title']}</h4>
+              <p style="color: #94A3B8; font-size: 0.925rem; line-height: 1.6; margin-bottom: var(--space-xs);">{uc['desc']}</p>
+              {ex_box}
+            </div>
+            """)
+        use_cases_html = f"""
+  <!-- Section: Practical Use Cases -->
+  <section style="padding: var(--space-4xl) 0; border-bottom: 1px solid rgba(255,255,255,0.06);">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
+        <span class="eyebrow-ags" style="color: #38BDF8;">PRACTICAL APPLICATIONS</span>
+        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Real-World Enterprise Use Cases</h2>
+        <p style="color: #94A3B8; font-size: 1.05rem;">Realistic ways organizations apply these capabilities to solve tangible operational challenges.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
+        {"".join(uc_cards)}
+      </div>
+    </div>
+  </section>
+        """
 
     # Workflow Steps HTML
     steps_html = []
@@ -553,6 +584,60 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
         </div>
         """)
     workflow_html = "".join(steps_html)
+
+    # System Integrations HTML
+    integrations_html = ""
+    if integrations:
+        int_cards = []
+        for item in integrations:
+            int_cards.append(f"""
+            <div style="background: rgba(11, 25, 44, 0.6); border: 1px solid rgba(56, 189, 248, 0.16); border-radius: var(--radius-md); padding: var(--space-lg);">
+              <h4 style="font-size: 1.05rem; font-weight: 700; color: #38BDF8; margin-bottom: 6px;">{item['category']}</h4>
+              <p style="color: #CBD5E1; font-size: 0.9rem; line-height: 1.5; margin: 0;">{item['details']}</p>
+            </div>
+            """)
+        integrations_html = f"""
+  <!-- Section: System Integrations -->
+  <section style="padding: var(--space-4xl) 0; background: rgba(11, 25, 44, 0.35); border-bottom: 1px solid rgba(255,255,255,0.06);">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
+        <span class="eyebrow-ags" style="color: #38BDF8;">SYSTEM CONNECTIVITY</span>
+        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Enterprise System Integration</h2>
+        <p style="color: #94A3B8; font-size: 1.05rem;">Configurable interfaces connecting with your existing enterprise infrastructure, databases, and APIs.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-lg);">
+        {"".join(int_cards)}
+      </div>
+    </div>
+  </section>
+        """
+
+    # Considerations & Governance HTML
+    considerations_html = ""
+    if considerations:
+        cons_cards = []
+        for c in considerations:
+            cons_cards.append(f"""
+            <div style="padding: var(--space-lg); background: rgba(15, 23, 42, 0.55); border-radius: var(--radius-md); border-left: 3px solid #38BDF8; border-top: 1px solid rgba(255,255,255,0.06); border-right: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06);">
+              <h4 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin-bottom: 6px;">{c['title']}</h4>
+              <p style="color: #94A3B8; font-size: 0.9rem; line-height: 1.5; margin: 0;">{c['desc']}</p>
+            </div>
+            """)
+        considerations_html = f"""
+  <!-- Section: Implementation Considerations & Governance -->
+  <section style="padding: var(--space-4xl) 0; border-bottom: 1px solid rgba(255,255,255,0.06);">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
+        <span class="eyebrow-ags" style="color: #38BDF8;">DEPLOYMENT &amp; OVERSIGHT</span>
+        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Implementation Considerations &amp; Governance</h2>
+        <p style="color: #94A3B8; font-size: 1.05rem;">Prerequisites, security safeguards, and human review gates required for dependable execution.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-lg);">
+        {"".join(cons_cards)}
+      </div>
+    </div>
+  </section>
+        """
 
     # Outcomes HTML
     outcomes_html = []
@@ -567,6 +652,38 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
         </div>
         """)
     outcomes_grid_html = "".join(outcomes_html)
+
+    # FAQs HTML
+    faqs_html = ""
+    if faqs:
+        faq_items = []
+        for q in faqs:
+            faq_items.append(f"""
+            <details style="background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-md); padding: var(--space-md) var(--space-lg); margin-bottom: var(--space-sm);">
+              <summary style="font-weight: 700; color: #FFFFFF; font-size: 1.05rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                <span>{q['q']}</span>
+                <span style="color: #38BDF8; font-size: 1.25rem; font-weight: 400; margin-left: 12px;">+</span>
+              </summary>
+              <div style="color: #94A3B8; font-size: 0.925rem; line-height: 1.6; margin-top: var(--space-sm); border-top: 1px solid rgba(255,255,255,0.06); padding-top: var(--space-sm);">
+                {q['a']}
+              </div>
+            </details>
+            """)
+        faqs_html = f"""
+  <!-- Section: Frequently Asked Questions -->
+  <section style="padding: var(--space-4xl) 0; background: rgba(11, 25, 44, 0.4); border-bottom: 1px solid rgba(255,255,255,0.06);">
+    <div class="container" style="max-width: 860px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: var(--space-3xl);">
+        <span class="eyebrow-ags" style="color: #38BDF8;">FREQUENTLY ASKED QUESTIONS</span>
+        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Common Questions About This Service</h2>
+        <p style="color: #94A3B8; font-size: 1.05rem;">Practical guidance regarding project scope, integrations, and operational requirements.</p>
+      </div>
+      <div>
+        {"".join(faq_items)}
+      </div>
+    </div>
+  </section>
+        """
 
     # Related Links HTML
     related_html = []
@@ -608,7 +725,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{root_prefix}css/style.css?v=3.1">
+  <link rel="stylesheet" href="{root_prefix}css/style.css?v=3.4">
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -663,7 +780,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
     <div class="container">
       <div class="overview-content-centered" style="max-width: 840px;">
         <span class="eyebrow-ags">STRATEGIC OVERVIEW</span>
-        <h2 class="overview-heading-ags" style="font-size: 2rem; margin-bottom: var(--space-lg);">Engineered for Seamless Operations &amp; Measurable Business Outcomes</h2>
+        <h2 class="overview-heading-ags" style="font-size: 2rem; margin-bottom: var(--space-lg);">Engineered for Seamless Operations &amp; Measurable Outcomes</h2>
         <div class="overview-body-wrap">
           {overview_html}
         </div>
@@ -676,7 +793,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
         <span class="eyebrow-ags" style="color: #38BDF8;">KEY CAPABILITIES</span>
-        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Core Architecture &amp; Technical Capabilities</h2>
+        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Core Architecture &amp; Functional Capabilities</h2>
         <p style="color: #94A3B8; font-size: 1.05rem;">Purpose-built engineering modules designed to integrate cleanly into your existing enterprise stack.</p>
       </div>
 
@@ -701,12 +818,14 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
     </div>
   </section>
 
-  <!-- Section 4: Implementation Lifecycle -->
+  {use_cases_html}
+
+  <!-- Section 5: Implementation Lifecycle -->
   <section style="padding: var(--space-4xl) 0; background: rgba(11, 25, 44, 0.4); border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
         <span class="eyebrow-ags" style="color: #38BDF8;">ENGINEERING METHODOLOGY</span>
-        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Implementation &amp; Delivery Lifecycle</h2>
+        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Implementation &amp; Delivery Approach</h2>
         <p style="color: #94A3B8; font-size: 1.05rem;">A disciplined, agile deployment framework ensuring stability, security, and immediate operational value.</p>
       </div>
 
@@ -716,13 +835,17 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
     </div>
   </section>
 
-  <!-- Section 5: Measured Value & Outcomes -->
+  {integrations_html}
+
+  {considerations_html}
+
+  <!-- Section 8: Measured Value & Outcomes -->
   <section style="padding: var(--space-4xl) 0; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
-        <span class="eyebrow-ags" style="color: #38BDF8;">BUSINESS VALUE</span>
-        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Measurable Enterprise Outcomes</h2>
-        <p style="color: #94A3B8; font-size: 1.05rem;">Transforming daily administrative overhead into sustained operational velocity.</p>
+        <span class="eyebrow-ags" style="color: #38BDF8;">POTENTIAL BUSINESS BENEFITS</span>
+        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Operational Improvements &amp; Value</h2>
+        <p style="color: #94A3B8; font-size: 1.05rem;">Streamlining repetitive administrative overhead into sustained operational velocity.</p>
       </div>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-lg);">
@@ -731,7 +854,9 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
     </div>
   </section>
 
-  <!-- Section 6: Related Technology & Ecosystem Links -->
+  {faqs_html}
+
+  <!-- Section 10: Related Technology & Ecosystem Links -->
   <section style="padding: var(--space-4xl) 0; background: rgba(11, 25, 44, 0.4); border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
@@ -750,10 +875,10 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   <section class="cta-strip-ags" style="padding: var(--space-4xl) 0; background: linear-gradient(135deg, rgba(14, 165, 233, 0.12) 0%, rgba(31, 111, 235, 0.18) 100%); text-align: center;">
     <div class="container" style="max-width: 760px; margin: 0 auto;">
       <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 800; color: #FFFFFF; margin-bottom: var(--space-md); letter-spacing: -0.02em;">
-        Let’s Build Your Next Competitive Advantage.
+        Let’s Build Your Next Business Solution.
       </h2>
       <p style="font-size: 1.1rem; color: #CBD5E1; line-height: 1.65; margin-bottom: var(--space-2xl);">
-        Tell us about your business challenge, operational requirements, or technology goals. Our team can help you explore the right solution across digital commerce, enterprise systems, intelligent automation, and AI-powered technology.
+        Discuss your business challenges, operational needs, and technology goals with our team. We evaluate your existing system architecture and help you plan the right solution.
       </p>
       <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
         <a href="{root_prefix}contact.html" class="btn btn-consultation-ags" style="font-size: 1.05rem; padding: 14px 34px;">
@@ -770,7 +895,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
 {get_shared_footer(root_prefix)}
 
   <!-- Scripts -->
-  <script src="{root_prefix}js/main.js?v=3.1"></script>
+  <script src="{root_prefix}js/main.js?v=3.4"></script>
 </body>
 </html>
 """

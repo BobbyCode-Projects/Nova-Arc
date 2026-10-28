@@ -21,8 +21,57 @@ SERVICES_DOMAIN_2 = [
         ],
         "challenges": [
             {"challenge": "Departmental Information Silos", "impact": "Sales, customer service, HR, and finance operate on disconnected platforms, creating blind spots and manual reconciliation.", "solution": "We connect your disparate business software into a synchronized enterprise architecture with unified customer and employee records."},
-            {"challenge": "Repetitive Administrative Overhead", "impact": "Valuable knowledge workers spend 30%+ of their time on manual data entry, status emails, and paperwork routing.", "solution": "Our BPA platforms automate routine document intake, notification routing, and approval handoffs across departments."},
+            {"challenge": "Repetitive Administrative Overhead", "impact": "Valuable knowledge workers spend a significant portion of their time on manual data entry, status emails, and paperwork routing.", "solution": "Our BPA platforms automate routine document intake, notification routing, and approval handoffs across departments."},
             {"challenge": "Inflexible Legacy Software", "impact": "Outdated monolithic applications cannot adapt to new business models, mobile workforces, or modern API standards.", "solution": "We modernize legacy software through modular cloud architectures, preserving business logic while deploying modern, responsive user experiences."}
+        ],
+        "use_cases": [
+            {
+                "title": "Cross-Departmental Deal-to-Delivery Orchestration",
+                "desc": "When sales deals close in the CRM, project provisioning in operations, billing schedules in finance, and client portal credentials trigger automatically.",
+                "example": "A technology consulting firm automated project kickoffs from sales stage updates, generating contract agreements and provisioning team workspaces within minutes."
+            },
+            {
+                "title": "Automated Workforce Lifecycle & Compliance",
+                "desc": "Digital self-service portals manage employee onboarding, equipment provisioning, leave accruals, and annual performance reviews with policy compliance.",
+                "example": "An enterprise with 800 distributed employees eliminated paper onboarding packets, reducing HR administrative overhead and maintaining 100% policy acknowledgment records."
+            },
+            {
+                "title": "Centralized Multi-Entity Operations Dashboard",
+                "desc": "Executive leaders view consolidated financial KPIs, sales pipelines, and departmental staffing metrics across regional subsidiaries from a single interface.",
+                "example": "A corporate holding group integrated five subsidiary databases into one unified executive console, delivering real-time revenue and operational reports without manual Excel merging."
+            }
+        ],
+        "integrations": [
+            {
+                "category": "Customer Relationship Management (CRM)",
+                "details": "Integration with Salesforce, HubSpot Enterprise, Microsoft Dynamics 365, and Zoho CRM."
+            },
+            {
+                "category": "Human Capital & Payroll (HRMS)",
+                "details": "Direct data connectivity with Workday, BambooHR, ADP Workforce Now, and SAP SuccessFactors."
+            },
+            {
+                "category": "Enterprise ERP & Ledgers",
+                "details": "Bi-directional transactional synchronization with NetSuite, SAP S/4HANA, QuickBooks Enterprise, and Sage Intacct."
+            },
+            {
+                "category": "Authentication & Identity Management",
+                "details": "Single Sign-On (SSO) integration via Okta, Microsoft Azure AD (Entra ID), Google Workspace, and SAML 2.0."
+            }
+        ],
+        "considerations": [
+            {
+                "title": "Data Governance & Permission Boundaries",
+                "desc": "Granular role-based access controls ensure that sensitive employee compensation, sales margins, and executive records are visible only to authorized personnel."
+            },
+            {
+                "title": "Change Management & Adoption",
+                "desc": "Phased rollout schedules, intuitive UI designs, and hands-on department workshops prevent operational disruption during system modernization."
+            },
+            {
+                "title": "System Redundancy & Disaster Recovery",
+                "desc": "Mission-critical business software requires automated database snapshots, geo-redundant backups, and verified failover protocols."
+            }
         ],
         "workflow_steps": [
             {"step": "01", "title": "Operational Assessment", "desc": "Mapping business processes, departmental touchpoints, software silos, and regulatory requirements."},
@@ -35,6 +84,20 @@ SERVICES_DOMAIN_2 = [
             {"title": "Reduced Administrative Costs", "desc": "Automate repetitive data transfers, document routing, and routine approvals to lower operational overhead."},
             {"title": "Faster Process Cycle Times", "desc": "Accelerate customer onboarding, contract approvals, and internal requests from days to hours."},
             {"title": "Scalable Digital Foundation", "desc": "Deploy modular software systems designed to accommodate rapid business expansion without performance bottlenecks."}
+        ],
+        "faqs": [
+            {
+                "q": "Can Nova Arc modernize our internal business tools without forcing a complete system rewrite?",
+                "a": "Yes. We frequently adopt a strangler-pattern modernization approach, wrapping existing legacy databases in secure REST APIs and replacing outdated user interfaces module by module to preserve business continuity."
+            },
+            {
+                "q": "How do you ensure data security across integrated cloud and on-premise tools?",
+                "a": "All data in transit is encrypted using TLS 1.3, data at rest uses AES-256 encryption, and API communication relies on authenticated tokens with strict rate limiting and role-based permissions."
+            },
+            {
+                "q": "Can our existing identity provider (like Okta or Azure AD) manage user logins?",
+                "a": "Yes. We integrate enterprise Single Sign-On (SSO) via SAML 2.0 or OpenID Connect, enabling centralized employee credential management and immediate access revocation upon departure."
+            }
         ],
         "related_links": [
             {"title": "Customer Relationship Management", "link": "services/crm.html", "tag": "Sub-Capability", "desc": "Explore our dedicated CRM platforms and sales pipeline automation."},
@@ -65,6 +128,55 @@ SERVICES_DOMAIN_2 = [
             {"challenge": "Inaccurate Revenue Forecasting", "impact": "Sales leaders cannot accurately predict quarterly revenue due to unstandardized deal stages and outdated pipeline notes.", "solution": "Our CRM enforces structured stage completion criteria and automatically calculates weighted pipeline forecasts based on deal velocity."},
             {"challenge": "Disconnected Sales & Support Data", "impact": "Support agents are unaware of active sales negotiations, while sales reps fail to notice pending customer complaints.", "solution": "We unify customer interaction histories, support tickets, and sales opportunities in a single comprehensive account overview."}
         ],
+        "use_cases": [
+            {
+                "title": "B2B Sales Pipeline & Proposal Management",
+                "desc": "Sales teams manage multi-month enterprise deals with visual stage tracking, automated task reminders, and direct quote PDF generation.",
+                "example": "A specialized equipment provider replaced spreadsheets with a tailored CRM pipeline, tracking deal progression from discovery to contract execution."
+            },
+            {
+                "title": "Client Onboarding & Project Transition",
+                "desc": "When a deal closes, the customer is invited to a secure onboarding portal where they upload requirements, review project schedules, and track deployment milestones.",
+                "example": "A digital marketing agency automated client onboarding questionnaires, cutting project kickoff delays from two weeks to under three days."
+            },
+            {
+                "title": "Omnichannel Customer Support & SLA Tracking",
+                "desc": "Support teams resolve technical and billing inquiries across email and web forms, with automated ticket prioritization and SLA breach alerts.",
+                "example": "A B2B software vendor deployed custom support queues with automated severity routing, meeting client SLA response times consistently."
+            }
+        ],
+        "integrations": [
+            {
+                "category": "Corporate Email & Calendars",
+                "details": "Bi-directional email tracking and calendar sync with Microsoft Outlook / 365 and Google Workspace."
+            },
+            {
+                "category": "Digital Document Signing",
+                "details": "Seamless contract generation and electronic signature integration with DocuSign, Adobe Sign, and HelloSign."
+            },
+            {
+                "category": "ERP & Invoicing Systems",
+                "details": "Real-time client credit and billing status checks with NetSuite, QuickBooks Enterprise, and Xero."
+            },
+            {
+                "category": "Marketing Automation Platforms",
+                "details": "Lead capture and campaign attribution syncing with HubSpot, Marketo, Mailchimp, and ActiveCampaign."
+            }
+        ],
+        "considerations": [
+            {
+                "title": "Custom Data Modeling vs. Over-Engineering",
+                "desc": "CRM fields and pipeline stages must reflect daily sales realities rather than burdening reps with excessive administrative entry requirements."
+            },
+            {
+                "title": "Territory & Account Ownership Rules",
+                "desc": "Clear automated lead distribution algorithms (round-robin, geographic, or industry-based) prevent territory disputes among sales reps."
+            },
+            {
+                "title": "Data Hygiene & De-duplication",
+                "desc": "Automated email and domain matching prevents duplicate company and contact records from entering the database."
+            }
+        ],
         "workflow_steps": [
             {"step": "01", "title": "Sales Process Mapping", "desc": "Analyzing your sales funnel, deal stages, qualification criteria, and customer support requirements."},
             {"step": "02", "title": "Custom Data Modeling", "desc": "Designing tailored account schemas, opportunity attributes, pipeline stages, and user permission roles."},
@@ -76,6 +188,20 @@ SERVICES_DOMAIN_2 = [
             {"title": "Accurate Revenue Projections", "desc": "Real-time pipeline analytics provide executive leadership with reliable forward-looking revenue forecasts."},
             {"title": "Accelerated Deal Velocity", "desc": "Automated task creation and document generation shorten sales cycles and reduce administrative friction."},
             {"title": "Improved Customer Retention", "desc": "Omnichannel support visibility and SLA enforcement ensure customer issues are resolved swiftly and completely."}
+        ],
+        "faqs": [
+            {
+                "q": "Can Nova Arc build a CRM that replaces our expensive Salesforce or HubSpot subscription?",
+                "a": "Yes. If your organization uses only a fraction of commercial CRM capabilities but pays high per-seat license fees, we build lean, tailored custom CRMs that you own completely, eliminating recurring user seat costs."
+            },
+            {
+                "q": "How are existing customer contacts and deal history migrated into the new system?",
+                "a": "We handle end-to-end data migration: extracting historical contacts, accounts, notes, and deals from your legacy tool, cleansing duplicates, and importing them into your new CRM database."
+            },
+            {
+                "q": "Does the CRM work smoothly on mobile devices for traveling sales reps?",
+                "a": "Yes. All our CRM interfaces are engineered with responsive mobile layouts and offline caching, allowing reps to log call notes, update deals, and review client details on smartphones and tablets."
+            }
         ],
         "related_links": [
             {"title": "Business Process Automation", "link": "services/business-process-automation.html", "tag": "Related Service", "desc": "Automate contract generation, approval routing, and customer notifications."},
@@ -106,6 +232,55 @@ SERVICES_DOMAIN_2 = [
             {"challenge": "Disputed Leave Balances & Attendance", "impact": "Spreadsheet-based leave tracking leads to calculation errors, policy violations, and employee dissatisfaction.", "solution": "We deploy automated leave rules that calculate pro-rated accruals dynamically and prevent unauthorized leave submissions."},
             {"challenge": "Scattered Employee Records", "impact": "Personnel files stored across physical filing cabinets and local drives make audit compliance difficult and breach privacy rules.", "solution": "We provide centralized, encrypted digital employee files with strict role-based access permissions and audit logging."}
         ],
+        "use_cases": [
+            {
+                "title": "Paperless Pre-Boarding & Day-One Readiness",
+                "desc": "Selected candidates receive a digital welcome link, review and sign their offer letter, submit direct deposit info, and acknowledge employee handbooks before their start date.",
+                "example": "A logistics enterprise with multiple branch depots onboarded 150 seasonal drivers digitally, ensuring all license checks and safety waivers were completed before their first shift."
+            },
+            {
+                "title": "Automated Policy-Governed Leave Approvals",
+                "desc": "Employees request vacation via mobile; the system verifies remaining accruals against company policy and routes the request to their direct manager with one-click approval.",
+                "example": "A professional services company eliminated monthly leave balance discrepancies by automating accruals and integrating leave calendars with team availability schedules."
+            },
+            {
+                "title": "Structured Semi-Annual Performance Appraisals",
+                "desc": "Managers and employees complete self-evaluations and goal assessments through standardized digital appraisal forms with automated HR review checkpoints.",
+                "example": "A technology firm conducted company-wide review cycles digitally, tracking completion rates in real time and archiving reviews directly to employee permanent files."
+            }
+        ],
+        "integrations": [
+            {
+                "category": "Payroll & Tax Filing Services",
+                "details": "Integration with ADP, Paychex, Gusto, QuickBooks Payroll, and localized direct-deposit banking networks."
+            },
+            {
+                "category": "Biometric & Time Clock Hardware",
+                "details": "Direct sync with biometric thumbprint scanners, facial recognition kiosks, and RFID badge readers for clock-in/out logging."
+            },
+            {
+                "category": "Identity & Single Sign-On (SSO)",
+                "details": "Automated IT user provisioning and de-provisioning via Okta, Microsoft Azure AD (Entra ID), and Google Workspace."
+            },
+            {
+                "category": "Internal Communications & Chat",
+                "details": "Leave approval notifications and birthday/anniversary announcements delivered to Slack and Microsoft Teams."
+            }
+        ],
+        "considerations": [
+            {
+                "title": "Confidentiality & Compensation Isolation",
+                "desc": "Employee salary data, performance ratings, and disciplinary notes must be strictly protected with field-level encryption and access permissions."
+            },
+            {
+                "title": "Multi-Jurisdiction Labor Rules",
+                "desc": "Organizations operating across multiple states or countries require configurable leave policies that comply with localized statutory holidays and sick leave mandates."
+            },
+            {
+                "title": "Audit Logs for Employment Changes",
+                "desc": "Every salary adjustment, title promotion, and managerial change must generate an immutable, timestamped record for audit compliance."
+            }
+        ],
         "workflow_steps": [
             {"step": "01", "title": "HR Policy Audit", "desc": "Reviewing organizational charts, leave entitlements, approval hierarchies, and local labor law compliance."},
             {"step": "02", "title": "System Architecture", "desc": "Configuring company structures, designation levels, leave types, evaluation templates, and security roles."},
@@ -114,9 +289,23 @@ SERVICES_DOMAIN_2 = [
         ],
         "outcomes": [
             {"title": "Paperless HR Operations", "desc": "Eliminate physical paperwork with 100% digital onboarding, document signing, and records storage."},
-            {"title": "50% Reduction in HR Inquiries", "desc": "Self-service portals allow employees to access payslips, leave balances, and policies independently."},
-            {"title": "Zero Leave Calculation Errors", "desc": "Automated accrual calculations prevent unearned leave taken and eliminate manual spreadsheet mistakes."},
+            {"title": "Substantial Reduction in HR Inquiries", "desc": "Self-service portals allow employees to access payslips, leave balances, and policies independently."},
+            {"title": "Consistent Leave Calculation Accuracy", "desc": "Automated accrual calculations prevent unearned leave taken and eliminate manual spreadsheet mistakes."},
             {"title": "Audit-Ready Employment Records", "desc": "Maintain secure, timestamped histories of all employment changes, policy acknowledgments, and reviews."}
+        ],
+        "faqs": [
+            {
+                "q": "How does the HRMS calculate leave balances for employees with variable tenure or part-time hours?",
+                "a": "Our policy engine supports configurable accrual formulas: pro-rated monthly or annual accruals, tenure-based bonus days, carryover caps, and custom calculations for part-time or hourly team members."
+            },
+            {
+                "q": "Can the system export timesheet and attendance data directly into our payroll software?",
+                "a": "Yes. Approved hours, overtime, and unpaid leave records can be automatically validated and exported in formats directly compatible with ADP, Paychex, QuickBooks, or custom bank payroll files."
+            },
+            {
+                "q": "What security controls protect confidential employee personal information?",
+                "a": "All personnel data, tax documents, and banking information are stored with AES-256 encryption at rest, secured by role-based access control (RBAC), and protected by multi-factor authentication (MFA)."
+            }
         ],
         "related_links": [
             {"title": "Business Process Automation", "link": "services/business-process-automation.html", "tag": "Complementary Service", "desc": "Automate multi-departmental approvals and internal notifications."},
@@ -147,6 +336,55 @@ SERVICES_DOMAIN_2 = [
             {"challenge": "Inconsistent Policy Compliance", "impact": "Manual approvals allow unauthorized spending exceptions and missed procedural compliance checks.", "solution": "We embed strict validation rules into digital forms, preventing submission of non-compliant requests before they reach approvers."},
             {"challenge": "Lack of Process Velocity Metrics", "impact": "Executive leadership cannot identify which departments or operational steps are slowing down corporate workflows.", "solution": "Our platforms provide operational analytics that highlight approval cycle times, average delays, and specific team bottlenecks."}
         ],
+        "use_cases": [
+            {
+                "title": "Multi-Level Capital Expenditure (CapEx) Approvals",
+                "desc": "Equipment purchase requests route dynamically to department heads, finance controllers, and executive VPs based on expenditure thresholds, checking budget allocations automatically.",
+                "example": "A manufacturing company automated capital spend requests, enforcing multi-level director sign-offs with one-click mobile approvals and budget balance deduction."
+            },
+            {
+                "title": "Vendor Contract & Legal Review Workflow",
+                "desc": "Proposed vendor contracts are routed through procurement, legal review, cybersecurity assessment, and executive sign-off with clear version control.",
+                "example": "A financial firm deployed structured contract intake forms that flag high-risk terms and route clauses automatically to specialized legal counsel."
+            },
+            {
+                "title": "Automated Customer Credit Limit Requests",
+                "desc": "Sales requests for extended customer payment terms evaluate past payment history from the ERP and route to the risk committee for fast approval.",
+                "example": "A wholesale supplier cut credit check review times from five days to four hours, with automated background financial checks and manager sign-off."
+            }
+        ],
+        "integrations": [
+            {
+                "category": "Enterprise Collaboration & Messaging",
+                "details": "Interactive approval cards and status notifications delivered in Slack, Microsoft Teams, and email."
+            },
+            {
+                "category": "ERP & Core Ledger Systems",
+                "details": "Automated transaction posting and status updates in NetSuite, SAP, Oracle Cloud, and Microsoft Dynamics."
+            },
+            {
+                "category": "Document & E-Signature Platforms",
+                "details": "Integration with DocuSign, Adobe Acrobat Sign, SharePoint, and Google Drive for contract routing."
+            },
+            {
+                "category": "IT Service Management (ITSM)",
+                "details": "Automated incident and service request handoffs with ServiceNow, Jira Service Management, and Zendesk."
+            }
+        ],
+        "considerations": [
+            {
+                "title": "Deadlock & Timeout Handling",
+                "desc": "Every approval workflow must define timeout parameters and automated fallback re-routing to prevent requests from stalling indefinitely when approvers are unavailable."
+            },
+            {
+                "title": "Audit Logging for Regulatory Compliance",
+                "desc": "Every step, approval, rejection, and comment must be permanently recorded with immutable timestamps and user identities."
+            },
+            {
+                "title": "Form Validation at the Source",
+                "desc": "Digital request forms must enforce required documentation, budget codes, and justification before submission to avoid time wasted on incomplete requests."
+            }
+        ],
         "workflow_steps": [
             {"step": "01", "title": "Workflow Mapping", "desc": "Documenting existing business processes, decision nodes, required documentation, and organizational hierarchies."},
             {"step": "02", "title": "Logic & Rule Definition", "desc": "Configuring conditional routing rules, spending thresholds, SLA deadlines, and escalation criteria."},
@@ -154,10 +392,24 @@ SERVICES_DOMAIN_2 = [
             {"step": "04", "title": "Testing & Deployment", "desc": "Simulating complex edge cases and approvals, verifying audit trails, and rolling out across departments."}
         ],
         "outcomes": [
-            {"title": "80% Faster Cycle Times", "desc": "Automated task routing and instant notifications compress approval workflows from days to minutes."},
+            {"title": "Accelerated Approval Cycle Times", "desc": "Automated task routing and instant notifications compress approval workflows from days to minutes."},
             {"title": "100% Policy Adherence", "desc": "Enforce mandatory validation rules and authorized approval thresholds on every operational transaction."},
             {"title": "Complete Audit Accountability", "desc": "Maintain tamper-proof, timestamped records of every request, review, approval, and system modification."},
             {"title": "Identified Process Bottlenecks", "desc": "Leverage operational reporting to discover and resolve systemic organizational workflow delays."}
+        ],
+        "faqs": [
+            {
+                "q": "Can managers approve requests directly from email or chat without logging into a separate portal?",
+                "a": "Yes. We configure actionable email buttons and Slack/Teams message cards that allow authorized managers to review details and approve or reject requests securely in one click."
+            },
+            {
+                "q": "What happens if a required approver is out of office or leaves the company?",
+                "a": "The system includes automated delegation settings where managers can assign temporary approval proxies. In addition, SLA escalation timers automatically route overdue tasks to designated supervisors."
+            },
+            {
+                "q": "How does the platform prevent unauthorized changes to approval rules?",
+                "a": "Rule editing and threshold configurations are restricted to system administrators with strict role-based permissions, and every rule modification is recorded in a tamper-proof audit trail."
+            }
         ],
         "related_links": [
             {"title": "Custom Enterprise Applications", "link": "services/enterprise-applications.html", "tag": "Related Service", "desc": "Build tailored operations portals powered by automated business workflows."},
@@ -188,6 +440,55 @@ SERVICES_DOMAIN_2 = [
             {"challenge": "Fragile Legacy Monoliths", "impact": "Aging internal systems are slow, difficult to maintain, incompatible with modern APIs, and vulnerable to security exploits.", "solution": "We decompose monolithic applications into modular microservices, wrapping existing data in secure modern APIs and modern web UIs."},
             {"challenge": "Scattered Data Across Disparate Tools", "impact": "Managers must log into 5 different tools to piece together an understanding of daily operational performance.", "solution": "Our custom dashboards aggregate data across all internal systems into a single centralized operational control center."}
         ],
+        "use_cases": [
+            {
+                "title": "Specialized Field Service & Dispatch Portal",
+                "desc": "A custom web application coordinating field technicians, work orders, parts inventory, and digital customer sign-offs.",
+                "example": "A commercial HVAC maintenance firm replaced paper work tickets with a custom mobile portal, tracking job status and technician location in real time."
+            },
+            {
+                "title": "Legacy Desktop Database to Cloud Web Migration",
+                "desc": "Re-engineering an on-premises Microsoft Access or FoxPro operational system into a secure React/Python web application hosted in a private cloud.",
+                "example": "An industrial parts distributor migrated a 15-year-old on-premise inventory system into a modern cloud portal without losing historical order records."
+            },
+            {
+                "title": "B2B Partner Collaboration & Ordering Hub",
+                "desc": "An authenticated portal where corporate clients track production orders, access compliance documentation, and request custom product quotes.",
+                "example": "A contract manufacturing firm provided enterprise clients with real-time visibility into production batches and quality assurance test certificates."
+            }
+        ],
+        "integrations": [
+            {
+                "category": "Enterprise Relational & Document Databases",
+                "details": "Integration with PostgreSQL, MySQL, Microsoft SQL Server, Oracle Database, and MongoDB."
+            },
+            {
+                "category": "Cloud Infrastructure & Containerization",
+                "details": "Deployment on AWS, Microsoft Azure, Google Cloud, Docker, and Kubernetes with auto-scaling."
+            },
+            {
+                "category": "Single Sign-On & Directory Services",
+                "details": "Support for SAML 2.0, OpenID Connect, Microsoft Entra ID (Azure AD), Okta, and Ping Identity."
+            },
+            {
+                "category": "Third-Party SaaS APIs",
+                "details": "REST and GraphQL connectors for billing, communication, maps, and document generation tools."
+            }
+        ],
+        "considerations": [
+            {
+                "title": "Maintainability & Clean Architecture",
+                "desc": "Enterprise codebases must adhere to modular design patterns, comprehensive unit testing, and documented API contracts to facilitate long-term maintenance."
+            },
+            {
+                "title": "Zero-Downtime Migration Strategy",
+                "desc": "Transitioning from legacy business applications requires parallel-run verification and automated data synchronizers to prevent operational interruptions."
+            },
+            {
+                "title": "Role-Based Security & Audit Trails",
+                "desc": "Granular user permissions ensure employees access only authorized operational modules, with full logging of data exports and administrative actions."
+            }
+        ],
         "workflow_steps": [
             {"step": "01", "title": "Requirements Engineering", "desc": "Conducting deep stakeholder interviews, user journey mapping, and technical architecture feasibility reviews."},
             {"step": "02", "title": "UX Wireframing & Prototyping", "desc": "Designing intuitive, role-based user interfaces and interactive prototypes before writing production code."},
@@ -199,6 +500,20 @@ SERVICES_DOMAIN_2 = [
             {"title": "Eliminated SaaS Licensing Waste", "desc": "Own your core business applications and eliminate expensive per-user monthly SaaS fees."},
             {"title": "Extended System Lifespans", "desc": "Modernize legacy systems without losing decades of accrued business logic and historical data."},
             {"title": "Unified Executive Oversight", "desc": "Gain real-time clarity into operations through centralized, live dashboards updating across all systems."}
+        ],
+        "faqs": [
+            {
+                "q": "Who owns the intellectual property (IP) and source code of custom applications built by Nova Arc?",
+                "a": "You do. All custom software, database schemas, and source code developed for your organization are 100% your intellectual property upon project completion."
+            },
+            {
+                "q": "How do you ensure zero data loss when modernizing an old legacy database?",
+                "a": "We build automated extraction and transformation pipelines that run in parallel with your legacy system, cross-verifying record counts, financial balances, and data integrity prior to the final cutover."
+            },
+            {
+                "q": "What technology stack do you use for building custom enterprise web applications?",
+                "a": "We select proven, maintainable enterprise technologies: modern React or Vue frontends, Python (FastAPI/Django) or Node.js microservices, PostgreSQL or SQL Server databases, and containerized Docker deployments."
+            }
         ],
         "related_links": [
             {"title": "System Integration & Data Connectivity", "link": "services/enterprise-integration.html", "tag": "Core Service", "desc": "Connect custom applications with existing ERPs, CRMs, and external partner APIs."},
@@ -229,6 +544,55 @@ SERVICES_DOMAIN_2 = [
             {"challenge": "Fragile Point-to-Point Integrations", "impact": "Spaghetti connections between applications break whenever any single software vendor updates an API endpoint.", "solution": "Our integration architectures use standardized middleware and message queues that decouple systems and handle API changes gracefully."},
             {"challenge": "Manual Export-Import Overhead", "impact": "Staff waste hours daily downloading CSV reports from one tool and manually uploading them into another.", "solution": "We replace manual exports with automated API synchronization that updates records in real time without human intervention."}
         ],
+        "use_cases": [
+            {
+                "title": "ERP to E-Commerce Live Inventory & Order Bus",
+                "desc": "Real-time bidirectional synchronization ensuring digital storefronts display exact warehouse inventory and new online orders transmit instantly to the ERP ledger.",
+                "example": "A multi-brand retailer synchronized NetSuite ERP with three online storefronts, eliminating out-of-stock orders and manual order re-entry."
+            },
+            {
+                "title": "Automated ETL Pipeline to Enterprise Data Warehouse",
+                "desc": "Daily automated extraction of transactional records from CRM, billing, and operational databases into Snowflake or BigQuery for executive BI reports.",
+                "example": "A financial services group consolidated data from 4 transactional databases into a central data warehouse, enabling real-time executive Power BI dashboards."
+            },
+            {
+                "title": "Secure Third-Party Partner API Gateway",
+                "desc": "Providing authorized corporate partners with secure, rate-limited REST APIs to query inventory availability and submit wholesale purchase orders.",
+                "example": "A logistics supplier deployed an authenticated API gateway for 40 enterprise clients, reducing customer service order status inquiries."
+            }
+        ],
+        "integrations": [
+            {
+                "category": "Message Brokers & Event Buses",
+                "details": "High-throughput asynchronous queuing using Apache Kafka, RabbitMQ, AWS SQS/SNS, and Redis Pub/Sub."
+            },
+            {
+                "category": "Enterprise Data Warehouses",
+                "details": "Integration and ETL modeling for Snowflake, Google BigQuery, Amazon Redshift, and Databricks."
+            },
+            {
+                "category": "Business Intelligence & Visualization",
+                "details": "Semantic layer and dashboard integrations for Microsoft Power BI, Tableau, Metabase, and Looker."
+            },
+            {
+                "category": "Core Enterprise ERPs",
+                "details": "Certified connectors for SAP S/4HANA, Oracle NetSuite, Microsoft Dynamics 365, and Infor."
+            }
+        ],
+        "considerations": [
+            {
+                "title": "Asynchronous Decoupling & Queueing",
+                "desc": "Message queues prevent cascading failures by buffering inbound transactions if a receiving system experiences temporary downtime or rate limits."
+            },
+            {
+                "title": "Idempotency & Duplicate Prevention",
+                "desc": "All transaction webhooks must include unique idempotency keys so network retries never create duplicate invoices, orders, or journal entries."
+            },
+            {
+                "title": "API Rate Limiting & Quota Management",
+                "desc": "Integration middleware must implement token bucket rate-limiting algorithms to avoid exceeding third-party SaaS API quotas."
+            }
+        ],
         "workflow_steps": [
             {"step": "01", "title": "API & Data Audit", "desc": "Cataloging existing application endpoints, data schemas, sync frequencies, and security protocols."},
             {"step": "02", "title": "Interface Architecture", "desc": "Designing integration message formats, mapping data fields, and establishing conflict resolution rules."},
@@ -240,6 +604,20 @@ SERVICES_DOMAIN_2 = [
             {"title": "Single Source of Truth", "desc": "Ensure all teams operate from the same verified customer, inventory, and financial figures."},
             {"title": "Resilient System Connectivity", "desc": "Asynchronous message queuing guarantees that temporary third-party API outages never result in lost business transactions."},
             {"title": "Real-Time Executive Intelligence", "desc": "Access live company-wide KPIs and operational performance metrics through centralized dashboards."}
+        ],
+        "faqs": [
+            {
+                "q": "What happens if our ERP system goes down during peak business hours?",
+                "a": "Our integration middleware utilizes persistent message queues (such as Kafka or RabbitMQ). Inbound transactions from e-commerce, CRM, or external partners are safely buffered in queue storage and processed automatically once the ERP is restored, with zero data loss."
+            },
+            {
+                "q": "How do you handle data discrepancies between two systems (for example, CRM vs. ERP customer addresses)?",
+                "a": "We define clear Master Data Management (MDM) rules during architecture. For instance, the ERP can be designated the authoritative master for billing addresses, while the CRM is the master for contact telephone and email records."
+            },
+            {
+                "q": "Can Nova Arc build custom reports connecting data across multiple different databases?",
+                "a": "Yes. We engineer automated ETL/ELT pipelines that ingest data from multiple systems into a unified analytical data warehouse, enabling real-time cross-functional dashboards in Power BI, Tableau, or custom web portals."
+            }
         ],
         "related_links": [
             {"title": "Technology: Enterprise Integration", "link": "technology/enterprise-integration.html", "tag": "Tech Architecture", "desc": "In-depth review of our API integration patterns, protocols, and security models."},

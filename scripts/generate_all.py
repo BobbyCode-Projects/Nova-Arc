@@ -60,6 +60,14 @@ def replace_header_and_footer(html_content, root_prefix, active_section=""):
     else:
         print("    [WARN] Footer pattern not found in file")
 
+    # Clean up any duplicate script tags and normalize main.js and style.css
+    html_content = re.sub(r'<script[^>]*main\.js[^>]*></script>', '', html_content)
+    html_content = re.sub(r'<!--\s*Scripts\s*-->\s*', '', html_content)
+    html_content = re.sub(r'\s*</body>', f'\n\n  <!-- Scripts -->\n  <script src="{root_prefix}js/main.js?v=3.4"></script>\n</body>', html_content)
+
+    # Normalize style.css to v=3.4
+    html_content = re.sub(r'href="[^"]*css/style\.css(\?v=[^"]*)?"', f'href="{root_prefix}css/style.css?v=3.4"', html_content)
+
     return html_content
 
 def generate_all_subpages():
@@ -89,7 +97,11 @@ def generate_all_subpages():
             workflow_steps=page_def["workflow_steps"],
             outcomes=page_def["outcomes"],
             related_links=page_def["related_links"],
-            seo_desc=page_def["seo_desc"]
+            seo_desc=page_def["seo_desc"],
+            use_cases=page_def.get("use_cases"),
+            integrations=page_def.get("integrations"),
+            considerations=page_def.get("considerations"),
+            faqs=page_def.get("faqs")
         )
         write_page(rel_path, html)
         generated_count += 1
@@ -208,6 +220,12 @@ def generate_directory_indexes():
 
             write_page(rel_target, content)
 
+    # Ensure industries/retail.html exists as alias of industries/retail-ecommerce.html
+    retail_src = os.path.join(REPO_ROOT, "industries", "retail-ecommerce.html")
+    if os.path.exists(retail_src):
+        with open(retail_src, "r", encoding="utf-8") as f:
+            write_page("industries/retail.html", f.read())
+
 def generate_404_page():
     print("\n--- Generating 404 Error Page ---")
     header_html = get_shared_header("", "")
@@ -229,7 +247,7 @@ def generate_404_page():
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=3.1">
+  <link rel="stylesheet" href="css/style.css?v=3.4">
 </head>
 <body>
 
@@ -290,7 +308,7 @@ def generate_404_page():
 {footer_html}
 
   <!-- Scripts -->
-  <script src="js/main.js?v=3.1"></script>
+  <script src="js/main.js?v=3.4"></script>
 </body>
 </html>
 """
@@ -418,7 +436,7 @@ def update_search_index(all_subpages):
     new_index_str = "  const searchIndex = [\n" + ",\n".join(entries) + "\n  ];"
 
     # Replace in js/main.js
-    pattern = re.compile(r'  const isServicesDir =.*?;.*?const searchIndex = \[.*?\];', re.DOTALL)
+    pattern = re.compile(r'  const (?:isServicesDir|isSubDir) =.*?;.*?const searchIndex = \[.*?\];', re.DOTALL)
     replacement = f"""  const isSubDir = window.location.pathname.includes('/services/') ||
                    window.location.pathname.includes('/solutions/') ||
                    window.location.pathname.includes('/technology/') ||
