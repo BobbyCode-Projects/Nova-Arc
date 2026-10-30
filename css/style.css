@@ -7113,6 +7113,7 @@ body.mobile-nav-open {
   }
   .solution-hero-actions {
     flex-direction: column;
+  }
 }
 
 /* ==========================================================================
@@ -7792,3 +7793,374 @@ body.mobile-nav-open {
 }
 
 
+
+/* ==========================================================================
+   Homepage Redesign & Quality Enhancements (Nova Arc Enterprise Architecture)
+   ========================================================================== */
+
+/* --- 1. About Nova Arc 2-Column Section --- */
+.about-overview-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(32px, 4vw, 56px);
+  align-items: start;
+  margin-top: 32px;
+}
+
+.about-content-col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.about-lead-text {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0B2545;
+  line-height: 1.6;
+}
+
+.about-body-text {
+  font-size: 0.98rem;
+  color: #475569;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.about-different-card {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-left: 4px solid #1F6FEB;
+  border-radius: 12px;
+  padding: 22px 24px;
+  margin-top: 6px;
+}
+
+.about-different-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0B2545;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.about-different-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 18px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-different-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: #334155;
+  line-height: 1.45;
+}
+
+.about-different-item svg {
+  flex-shrink: 0;
+  color: #10B981;
+  margin-top: 2px;
+}
+
+.about-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.about-pillar-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(11, 37, 69, 0.04);
+}
+
+.about-pillar-card:hover {
+  transform: translateY(-3px);
+  border-color: #1F6FEB;
+  box-shadow: 0 10px 20px rgba(11, 37, 69, 0.08);
+}
+
+.about-pillar-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(31, 111, 235, 0.08);
+  color: #1F6FEB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.about-pillar-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0B2545;
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.about-pillar-desc {
+  font-size: 0.88rem;
+  color: #64748B;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* --- 2. Our Methodology 5-Step Timeline --- */
+.methodology-timeline-container {
+  position: relative;
+  margin-top: 48px;
+}
+
+.methodology-timeline-track {
+  position: absolute;
+  top: 44px;
+  left: 6%;
+  right: 6%;
+  height: 2px;
+  background: linear-gradient(90deg, #1F6FEB 0%, #38BDF8 50%, #1F6FEB 100%);
+  opacity: 0.35;
+  z-index: 1;
+}
+
+.methodology-timeline-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+.methodology-step-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 26px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(11, 37, 69, 0.04);
+  position: relative;
+}
+
+.methodology-step-card:hover {
+  transform: translateY(-4px);
+  border-color: #1F6FEB;
+  box-shadow: 0 12px 24px rgba(11, 37, 69, 0.08);
+}
+
+.methodology-step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.methodology-step-badge {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #1F6FEB;
+  background: rgba(31, 111, 235, 0.08);
+  padding: 5px 12px;
+  border-radius: 8px;
+  letter-spacing: -0.01em;
+}
+
+.methodology-step-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #F1F5F9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0B2545;
+  transition: all 0.2s ease;
+}
+
+.methodology-step-card:hover .methodology-step-icon {
+  background: #1F6FEB;
+  color: #FFFFFF;
+}
+
+.methodology-step-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0B2545;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.methodology-step-desc {
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* --- 3. Technology Domain Connections Matrix --- */
+.tech-domain-section {
+  margin-top: 56px;
+  padding-top: 48px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-domain-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.tech-domain-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #38BDF8;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.tech-domain-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.tech-domain-subtitle {
+  font-size: 0.95rem;
+  color: #94A3B8;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.tech-domain-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.tech-domain-card {
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
+}
+
+.tech-domain-card:hover {
+  transform: translateY(-3px);
+  border-color: #38BDF8;
+  background: rgba(15, 23, 42, 0.9);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.tech-domain-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: rgba(56, 189, 248, 0.12);
+  color: #38BDF8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.tech-domain-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.tech-domain-desc {
+  font-size: 0.85rem;
+  color: #94A3B8;
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+
+.tech-domain-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #38BDF8;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  margin-top: auto;
+  transition: gap 0.2s ease;
+}
+
+.tech-domain-link:hover {
+  gap: 9px;
+  color: #7DD3FC;
+}
+
+/* --- Section CTA Wrapper --- */
+.section-cta-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 44px;
+}
+
+/* --- Responsive Adjustments for Homepage Enhancements --- */
+@media (max-width: 1100px) {
+  .methodology-timeline-5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .methodology-timeline-track {
+    display: none;
+  }
+  .tech-domain-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .about-overview-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .methodology-timeline-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .about-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-different-list {
+    grid-template-columns: 1fr;
+  }
+  .methodology-timeline-5 {
+    grid-template-columns: 1fr;
+  }
+  .tech-domain-grid {
+    grid-template-columns: 1fr;
+  }
+  .tech-domain-title {
+    font-size: 1.35rem;
+  }
+}
