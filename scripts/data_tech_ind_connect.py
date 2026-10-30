@@ -43,6 +43,13 @@ TECH_IND_CONNECT_PAGES = [
                 "example": "An engineering enterprise automated developer repository access provisioning, completing routine requests in under two minutes with complete audit logging."
             }
         ],
+        "workflow_steps": [
+            {"step": "01", "title": "Requirement Discovery", "desc": "Map deterministic business goals, API tool interfaces, database permission scopes, token expenditure budgets, and approval trigger boundaries."},
+            {"step": "02", "title": "Solution Architecture", "desc": "Design state machine execution graphs, LangGraph coordination frameworks, Pydantic tool schemas, and human-in-the-loop review consoles."},
+            {"step": "03", "title": "Design & Development", "desc": "Build autonomous reasoning runtimes, secure sandbox tool execution environments, vector memory stores, and immutable tracing pipelines."},
+            {"step": "04", "title": "Integration & Validation", "desc": "Conduct adversarial edge-case testing, simulate malformed API responses, verify loop prevention boundaries, and audit permission controls."},
+            {"step": "05", "title": "Deployment & Improvement", "desc": "Deploy in supervised production mode with real-time token telemetry, latency monitoring, supervisor audit consoles, and iterative tool prompt tuning."}
+        ],
         "integrations": [
             {
                 "category": "Enterprise Model APIs",
@@ -75,12 +82,6 @@ TECH_IND_CONNECT_PAGES = [
                 "desc": "Every prompt, reasoning thought, tool call argument, and output must be persisted in immutable storage for regulatory and operational auditing."
             }
         ],
-        "workflow_steps": [
-            {"step": "01", "title": "Boundary & Tool Definition", "desc": "Specifying allowed agent goals, API tool interfaces, database access permissions, and approval triggers."},
-            {"step": "02", "title": "Agent Reasoning Engineering", "desc": "Configuring system prompt architectures, planning algorithms, state databases, and memory vector stores."},
-            {"step": "03", "title": "Adversarial Testing & Guardrails", "desc": "Simulating system failures, invalid API responses, and edge cases to verify safe recovery and containment."},
-            {"step": "04", "title": "Governed Production Deployment", "desc": "Deploying agents into production with real-time observability, latency monitoring, and supervisor review consoles."}
-        ],
         "outcomes": [
             {"title": "Autonomous Operational Workflows", "desc": "Automate multi-step business operations that previously required hours of manual human coordination."},
             {"title": "Zero Unauthorized Actions", "desc": "Strict tool whitelisting and human approval gates guarantee complete organizational control."},
@@ -99,6 +100,18 @@ TECH_IND_CONNECT_PAGES = [
             {
                 "q": "What level of human oversight is maintained in agentic deployments?",
                 "a": "Human supervisors define the governance policy. High-consequence actions (such as publishing contracts, transferring funds, or changing client data) are hard-coded to require explicit human sign-off before committing."
+            },
+            {
+                "q": "How do agents maintain state and context across multi-step business operations?",
+                "a": "We utilize persistent state machines backed by PostgreSQL and Redis. Every completed action, intermediate variable, and tool return value is serialized to persistent storage, allowing agents to resume seamlessly even after server restarts or network drops."
+            },
+            {
+                "q": "What safeguards prevent autonomous agents from entering infinite execution loops?",
+                "a": "Our agent execution engine enforces hard maximum step limits, execution timeouts, and cycle detection heuristics. If an agent repeats identical tool calls or fails to make forward progress within designated bounds, execution halts and alerts a supervisor."
+            },
+            {
+                "q": "Can multiple specialized agents collaborate on a complex enterprise objective?",
+                "a": "Yes. We implement hierarchical multi-agent architectures using LangGraph where a supervisor agent breaks down a project and delegates sub-tasks to specialized domain agents (such as an ERP specialist, document extractor, and data validator) with isolated execution contexts."
             }
         ],
         "related_links": [
@@ -147,6 +160,13 @@ TECH_IND_CONNECT_PAGES = [
                 "example": "A corporate legal team automated preliminary contract screening, instantly highlighting non-standard liability terms across 50-page supplier agreements."
             }
         ],
+        "workflow_steps": [
+            {"step": "01", "title": "Requirement Discovery", "desc": "Audit internal corporate knowledge repositories, unstructured document formats, employee query patterns, and role-based access rules."},
+            {"step": "02", "title": "Solution Architecture", "desc": "Design dense vector embedding pipelines, hierarchical chunking boundaries, hybrid keyword-vector search indices, and zero-data-retention security boundaries."},
+            {"step": "03", "title": "Design & Development", "desc": "Develop automated document parsers, cross-encoder rerankers, verified source citation engines, and role-based access filtering layers."},
+            {"step": "04", "title": "Integration & Validation", "desc": "Benchmark answer faithfulness against source documents, test hallucination resistance, measure retrieval latency, and validate SSO integration."},
+            {"step": "05", "title": "Deployment & Improvement", "desc": "Deploy authenticated enterprise conversational portals, monitor employee feedback and retrieval telemetry, and continuously update vector indexes."}
+        ],
         "integrations": [
             {
                 "category": "Vector Databases & Search",
@@ -179,12 +199,6 @@ TECH_IND_CONNECT_PAGES = [
                 "desc": "Vector stores and retrieval pipelines should remain decoupled from any single foundation model provider to allow seamless upgrades as newer models emerge."
             }
         ],
-        "workflow_steps": [
-            {"step": "01", "title": "Data Corpus Ingestion", "desc": "Aggregating internal documents, performing OCR on scanned files, and chunking text with semantic boundary preservation."},
-            {"step": "02", "title": "Embedding & Vector Indexing", "desc": "Generating high-dimensional vector embeddings and indexing content into private, secure vector databases."},
-            {"step": "03", "title": "RAG Engine & Guardrail Tuning", "desc": "Configuring retrieval rerankers, citation generation pipelines, hallucination filters, and PII redaction rules."},
-            {"step": "04", "title": "Enterprise Portal Rollout", "desc": "Deploying responsive conversational search interfaces, integrating single sign-on (SSO), and tracking search quality."}
-        ],
         "outcomes": [
             {"title": "Instant Information Access", "desc": "Empower staff to extract vital procedures, contract clauses, and technical specs in seconds with direct citations."},
             {"title": "100% Data Confidentiality", "desc": "Ensure enterprise IP and customer communications are never exposed to public models or unauthorized employees."},
@@ -203,6 +217,18 @@ TECH_IND_CONNECT_PAGES = [
             {
                 "q": "Is our private data protected from public AI model training?",
                 "a": "Yes. We deploy exclusively on dedicated enterprise cloud instances (Azure OpenAI, Google Vertex AI, AWS Bedrock) where data privacy agreements contractually guarantee that prompts and document embeddings are never used to train or improve foundation models."
+            },
+            {
+                "q": "How does the platform handle complex documents like tables, charts, and scanned PDFs?",
+                "a": "We deploy layout-aware document vision models and OCR pipelines that preserve tabular structures, convert spreadsheet grids into structured markdown tables, and maintain heading hierarchies for accurate chunking."
+            },
+            {
+                "q": "How are employee access permissions and document confidentiality maintained?",
+                "a": "Every document chunk in the vector database is tagged with access control lists (ACLs) derived from Microsoft Entra ID or Okta. Queries execute pre-filtering so employees can only retrieve answers from documents their user account is authorized to view."
+            },
+            {
+                "q": "Can foundation models be deployed on our private cloud or on-premise hardware?",
+                "a": "Yes. For organizations with strict data residency mandates, we deploy containerized open-weights models (such as Llama 3, Mistral, or Qwen) on private vLLM clusters within your virtual private cloud (VPC) or local GPU servers."
             }
         ],
         "related_links": [
@@ -251,6 +277,13 @@ TECH_IND_CONNECT_PAGES = [
                 "example": "An IT department eliminated lingering access permissions by automating immediate credential revocation across 12 SaaS platforms upon HR employee status update."
             }
         ],
+        "workflow_steps": [
+            {"step": "01", "title": "Requirement Discovery", "desc": "Map existing manual operational handoffs, data dependencies, conditional business policies, and failure scenarios."},
+            {"step": "02", "title": "Solution Architecture", "desc": "Design asynchronous message queue pipelines, decision table hierarchies, saga pattern rollback logic, and dead-letter exception queues."},
+            {"step": "03", "title": "Design & Development", "desc": "Engineer deterministic rule evaluation engines, schema validation adapters, automated document parsers, and management consoles."},
+            {"step": "04", "title": "Integration & Validation", "desc": "Execute stress tests under peak transaction loads, verify transaction idempotency, and test failure recovery and human escalation workflows."},
+            {"step": "05", "title": "Deployment & Improvement", "desc": "Deploy across production endpoints, track end-to-end processing velocities, monitor dead-letter queues, and tune business logic rules."}
+        ],
         "integrations": [
             {
                 "category": "Message Brokers & Queues",
@@ -283,12 +316,6 @@ TECH_IND_CONNECT_PAGES = [
                 "desc": "Every automated trigger, intermediate evaluation, and external write must be recorded with immutable timestamps for financial and operational audits."
             }
         ],
-        "workflow_steps": [
-            {"step": "01", "title": "Workflow Mapping", "desc": "Documenting existing manual data handoffs, system dependencies, error conditions, and required business rules."},
-            {"step": "02", "title": "Engine & Queue Architecture", "desc": "Deploying asynchronous message queues, schema transformation pipelines, and rule evaluation engines."},
-            {"step": "03", "title": "Connector Engineering", "desc": "Building secure API connectors to internal databases, cloud applications, and external partner endpoints."},
-            {"step": "04", "title": "Testing & Deployment", "desc": "Simulating high transaction volumes, verifying automated rollback on errors, and deploying continuous monitoring."}
-        ],
         "outcomes": [
             {"title": "Accelerated Processing Times", "desc": "Compress multi-day cross-departmental data transfers and approvals into automated sub-minute transactions."},
             {"title": "Guaranteed Transaction Delivery", "desc": "Asynchronous message queues ensure that temporary server downtime never results in lost customer or financial records."},
@@ -307,6 +334,18 @@ TECH_IND_CONNECT_PAGES = [
             {
                 "q": "How do you ensure data integrity during multi-step automated transactions?",
                 "a": "We use saga-pattern orchestration and transactional outbox patterns. If any step in a multi-system workflow fails permanently, compensating transactions roll back previous steps to maintain data consistency across all systems."
+            },
+            {
+                "q": "What prevents automated workflows from duplicating transactions during network retries?",
+                "a": "We assign cryptographic idempotency keys to every unique transaction at initiation. Target database adapters verify the idempotency key before committing; if the key was already processed, the duplicate call returns the cached confirmation without executing a second time."
+            },
+            {
+                "q": "How does the architecture manage high-volume transaction spikes without system degradation?",
+                "a": "By using decoupled message queues (Apache Kafka or RabbitMQ), incoming webhooks are acknowledged immediately and placed into buffered queues. Worker microservices consume tasks at a stable, controlled throughput that prevents downstream ERPs or databases from being overwhelmed."
+            },
+            {
+                "q": "How are automated decisions audited for financial and compliance reporting?",
+                "a": "Every transaction produces a structured JSON audit event containing the triggering event, input payload, evaluated business rules, user approvals, and target API responses, permanently archived in write-once audit storage."
             }
         ],
         "related_links": [
@@ -355,6 +394,13 @@ TECH_IND_CONNECT_PAGES = [
                 "example": "A facility management operator consolidated HVAC telemetry across 5 office buildings, automatically adjusting dampers during peak electrical tariff windows."
             }
         ],
+        "workflow_steps": [
+            {"step": "01", "title": "Requirement Discovery", "desc": "Audit machinery electrical interfaces, sensor placement requirements, network availability, ambient temperatures, and power budgets."},
+            {"step": "02", "title": "Solution Architecture", "desc": "Design edge gateway hardware specs, MQTT topic hierarchies, local disk buffer capacities, and mTLS zero-trust security architecture."},
+            {"step": "03", "title": "Design & Development", "desc": "Configure protocol translation adapters (Modbus/OPC-UA to MQTT), edge deadband filtering microservices, and time-series cloud ingestion."},
+            {"step": "04", "title": "Integration & Validation", "desc": "Calibrate sensor readings against physical reference gauges, test offline network buffering, and stress-test high-concurrency ingestion brokers."},
+            {"step": "05", "title": "Deployment & Improvement", "desc": "Deploy edge gateways across facilities, activate live operational control room monitors, and establish automated anomaly detection baselines."}
+        ],
         "integrations": [
             {
                 "category": "Edge Gateways & Hardware Standards",
@@ -387,12 +433,6 @@ TECH_IND_CONNECT_PAGES = [
                 "desc": "Firmware update routines must support dual-partition bootloaders so an interrupted update rolls back safely to the previous working firmware version."
             }
         ],
-        "workflow_steps": [
-            {"step": "01", "title": "Sensor & RF Topology Survey", "desc": "Auditing sensor electrical interfaces, ambient temperature ranges, battery requirements, and network coverage."},
-            {"step": "02", "title": "Edge Gateway Deployment", "desc": "Installing edge gateway hardware, configuring protocol translation rules, local buffer sizes, and mTLS security."},
-            {"step": "03", "title": "Cloud Broker & Ingestion Setup", "desc": "Deploying high-concurrency MQTT brokers, message routing pipelines, and time-series analytical databases."},
-            {"step": "04", "title": "Calibration & Verification", "desc": "Benchmarking sensor telemetry against calibrated physical gauges, verifying failover buffers, and going live."}
-        ],
         "outcomes": [
             {"title": "High Data Completeness & Continuity", "desc": "Local edge caching guarantees zero telemetry data loss during network dropouts or server maintenance."},
             {"title": "Sub-Second Incident Detection", "desc": "Stream real-time sensor measurements directly to control room dashboards with latency under 500 milliseconds."},
@@ -411,6 +451,18 @@ TECH_IND_CONNECT_PAGES = [
             {
                 "q": "How do you protect industrial IoT hardware from cyber attacks?",
                 "a": "We enforce mutual TLS (mTLS) where both the edge gateway and cloud broker cryptographically verify each other's certificates. In addition, devices reside on isolated VLANs without public inbound ports, preventing unauthorized access."
+            },
+            {
+                "q": "What happens when internet or cellular connectivity is interrupted at a remote facility?",
+                "a": "Our edge gateways maintain persistent local disk buffers that continuously store sequential sensor readings. Once internet connectivity is restored, the gateway automatically replays cached records in chronological order with zero data loss."
+            },
+            {
+                "q": "How do you minimize cellular data transmission costs for remote sensor arrays?",
+                "a": "We implement edge deadband filtering and Delta compression algorithms. Sensor readings within normal baseline variance are aggregated and reported hourly, while deviations immediately transmit high-resolution alerts."
+            },
+            {
+                "q": "Can older factory machinery without modern digital interfaces be connected to IoT?",
+                "a": "Yes. We install non-invasive external sensors such as split-core current transducers on main power leads, surface magnetic vibration probes, and optical pulse counters that capture machine state without modifying machine wiring."
             }
         ],
         "related_links": [
@@ -459,6 +511,13 @@ TECH_IND_CONNECT_PAGES = [
                 "example": "A SaaS business eliminated 3 days of manual monthly financial matching by automating payment gateway ledger reconciliation."
             }
         ],
+        "workflow_steps": [
+            {"step": "01", "title": "Requirement Discovery", "desc": "Catalog all enterprise applications, data schemas, authentication protocols, transaction throughputs, and latency SLAs."},
+            {"step": "02", "title": "Solution Architecture", "desc": "Formulate canonical enterprise data models, API gateway policies, message bus schemas, and transactional conflict resolution rules."},
+            {"step": "03", "title": "Design & Development", "desc": "Engineer secure REST and GraphQL API gateways, OAuth2 token validators, asynchronous event queues, and ERP/CRM connectors."},
+            {"step": "04", "title": "Integration & Validation", "desc": "Conduct end-to-end sandbox load testing, verify two-way data reconciliation, simulate partner downtime, and validate schema versioning."},
+            {"step": "05", "title": "Deployment & Improvement", "desc": "Execute phased production cutover, establish real-time API observability dashboards, and automate periodic credential and secret rotation."}
+        ],
         "integrations": [
             {
                 "category": "API Gateway Platforms",
@@ -491,12 +550,6 @@ TECH_IND_CONNECT_PAGES = [
                 "desc": "APIs should follow strict semantic versioning (v1, v2) and validate payloads against OpenAPI schemas to avoid breaking existing integrations during updates."
             }
         ],
-        "workflow_steps": [
-            {"step": "01", "title": "Integration Landscape Mapping", "desc": "Cataloging applications, data schemas, API protocols, transaction volumes, and latency requirements."},
-            {"step": "02", "title": "Data Schema & Bus Design", "desc": "Designing canonical data models, event schemas, API gateway policies, and conflict resolution rules."},
-            {"step": "03", "title": "Connector Development", "desc": "Engineering secure API endpoints, webhook listeners, asynchronous message queues, and error-handling routines."},
-            {"step": "04", "title": "Load Testing & Go-Live", "desc": "Executing high-concurrency transaction tests, verifying rollback safety, and deploying 24/7 API monitoring."}
-        ],
         "outcomes": [
             {"title": "Single Source of Truth", "desc": "Ensure customer, inventory, and financial records stay synchronized in real time across all software tools."},
             {"title": "Zero Lost Transactions", "desc": "Asynchronous message buffering guarantees that temporary partner API outages never result in dropped orders."},
@@ -515,6 +568,18 @@ TECH_IND_CONNECT_PAGES = [
             {
                 "q": "Can you integrate older systems that do not have modern REST APIs?",
                 "a": "Yes. We engineer integration adapters that interact directly with legacy SQL databases, consume SOAP/XML web services, or parse batch flat-file SFTP exports, translating them into modern REST/JSON interfaces."
+            },
+            {
+                "q": "How does the integration layer handle data conflicts when two systems update the same record simultaneously?",
+                "a": "We implement event-driven conflict resolution rules based on microsecond-accurate event timestamps and canonical system ownership rules (e.g., ERP owns financial balances; CRM owns contact details)."
+            },
+            {
+                "q": "What prevents a third-party partner API outage from halting internal applications?",
+                "a": "We use asynchronous message queue buffering and circuit breaker design patterns. If a third-party endpoint becomes unavailable, outgoing messages queue safely, and the client receives a graceful deferred response."
+            },
+            {
+                "q": "How are API schema updates managed without breaking connected partner applications?",
+                "a": "We enforce strict semantic API versioning (v1, v2) with backward-compatible OpenAPI contracts, maintaining deprecated versions alongside newer endpoints until partner migration timelines conclude."
             }
         ],
         "related_links": [
@@ -538,30 +603,37 @@ TECH_IND_CONNECT_PAGES = [
         "capabilities": [
             {"title": "Interactive Operational Dashboards", "desc": "Dynamic visual consoles displaying real-time business KPIs, department performance metrics, and operational throughput.", "points": ["Drill-down interactive charts", "Customizable executive views", "Mobile-optimized reporting", "Real-time query acceleration"]},
             {"title": "Automated ETL & Data Warehousing", "desc": "Scalable data ingestion pipelines extracting data from ERPs, CRMs, IoT brokers, and web databases into structured data warehouses.", "points": ["Automated scheduled ETL jobs", "Data deduplication & cleansing", "Normalized relational schemas", "High-concurrency analytical queries"]},
-            {"title": "Statistical Trend & Variance Analysis", "desc": "Longitudinal modeling evaluating sales velocities, inventory turnover, machine degradation, and customer retention trends.", "points": ["Seasonal variance modeling", "Year-over-year comparative views", "Lead time distribution analysis", "Cohort retention tracking"]},
-            {"title": "Automated Operational Reporting", "desc": "Scheduled generation and distribution of PDF and Excel briefings to department heads and executive stakeholders.", "points": ["Automated email report delivery", "Pixel-perfect PDF exports", "Role-based report filtering", "Audit compliance records"]}
+            {"title": "Statistical Trend Modeling", "desc": "Historical trend analysis and moving-average forecasting identifying seasonal demand shifts and operational bottlenecks.", "points": ["Moving-average trend curves", "Seasonal variance modeling", "Inventory depletion forecasts", "Capacity planning metrics"]},
+            {"title": "Data Governance & Role-Based Access", "desc": "Enterprise security frameworks enforcing row and column-level data security to protect sensitive financial and personal records.", "points": ["Row-level security policies", "PII/PHI data masking", "Departmental access filtering", "SOC 2-compliant query logs"]}
         ],
         "challenges": [
-            {"challenge": "Scattered & Inconsistent Reports", "impact": "Different departments generate conflicting revenue or inventory metrics using disconnected spreadsheets.", "solution": "We establish a single source of truth through unified data warehouse schemas with standardized KPI definitions across the organization."},
-            {"challenge": "Slow Query Performance", "impact": "Running business intelligence reports directly on production transactional databases slows down live operations.", "solution": "Our architectures separate transactional databases from analytical data warehouses, ensuring zero impact on live customer operations."},
-            {"challenge": "Lagging Rearview Analytics", "impact": "Waiting for monthly financial closes leaves leadership unaware of operational issues until weeks after they occur.", "solution": "We deploy real-time and daily automated ETL pipelines that provide leadership with current operational performance data."}
+            {"challenge": "Fragmented Data Silos", "impact": "Sales data sits in CRM, inventory data in ERP, and customer queries in helpdesk, making consolidated reporting impossible.", "solution": "Our automated ETL pipelines ingest data from all business platforms into a centralized analytical data warehouse."},
+            {"challenge": "Slow, Resource-Intensive Queries", "impact": "Running large analytical queries against live transactional production databases slows down customer-facing systems.", "solution": "We decouple analytical queries into dedicated columnar data warehouses optimized for high-speed aggregations."},
+            {"challenge": "Manual Spreadsheet Compilation", "impact": "Analysts spend days copying numbers between spreadsheets to generate weekly management reports.", "solution": "We deploy automated scheduled reporting that generates and emails executive briefings automatically."}
         ],
         "use_cases": [
             {
-                "title": "Cross-Departmental Executive KPI Cockpit",
-                "desc": "Leadership monitors sales pipeline velocity, active project margins, inventory turnover, and cash flow on a unified real-time dashboard.",
-                "example": "A corporate executive team eliminated manual end-of-month spreadsheet consolidation, accessing live consolidated financial and operational metrics."
+                "title": "Executive Operational Control Center",
+                "desc": "A consolidated dashboard displaying real-time revenue, order volume, gross margin percentages, and warehouse fulfillment velocities.",
+                "example": "A multi-brand retail enterprise consolidated 4 business units onto a single real-time executive dashboard, reducing weekly reporting time from 16 hours to zero."
             },
             {
-                "title": "Supply Chain Lead-Time Variance Analysis",
-                "desc": "Modeling historical supplier transit times, port customs delays, and carrier reliability to predict stockout risks and optimize safety stock.",
-                "example": "A wholesale distributor adjusted reorder points dynamically based on historical freight lead-time variances, preventing unexpected out-of-stock events."
+                "title": "Inventory Depletion & Stockout Forecasting",
+                "desc": "Correlating historical sales velocity, supplier transit times, and current stock counts to forecast stockout risk 30 days in advance.",
+                "example": "A wholesale distributor prevented stockouts on fast-moving seasonal SKUs by implementing statistical lead-time modeling."
             },
             {
-                "title": "Customer Cohort Retention & Churn Analytics",
-                "desc": "Evaluating buyer repurchase frequency, average order value changes, and account activity drops to trigger proactive account manager check-ins.",
-                "example": "A B2B commerce company identified early churn indicators across commercial customer accounts, enabling sales reps to intervene before accounts lapsed."
+                "title": "Customer Service SLA & Resolution Telemetry",
+                "desc": "Tracking ticket response times, first-contact resolution percentages, and recurring complaint categories across regional support centers.",
+                "example": "A technology services firm identified a recurring onboarding defect through ticket trend analytics, decreasing support ticket volume by 25%."
             }
+        ],
+        "workflow_steps": [
+            {"step": "01", "title": "Requirement Discovery", "desc": "Identify business KPI definitions, source database structures, reporting cadences, query concurrency, and role-based data visibility needs."},
+            {"step": "02", "title": "Solution Architecture", "desc": "Design automated ETL/ELT pipelines, dimensional warehouse schemas (star/snowflake), caching layers, and security policies."},
+            {"step": "03", "title": "Design & Development", "desc": "Build automated data extraction workers, schema normalizers, aggregations, interactive dashboard widgets, and scheduled report export jobs."},
+            {"step": "04", "title": "Integration & Validation", "desc": "Verify data reconciliation against production source ledgers, validate query execution speeds, and test role-based row security."},
+            {"step": "05", "title": "Deployment & Improvement", "desc": "Roll out executive and operational dashboards, provide stakeholder training, and establish continuous data quality monitoring."}
         ],
         "integrations": [
             {
@@ -569,62 +641,68 @@ TECH_IND_CONNECT_PAGES = [
                 "details": "Integration with Snowflake, Google BigQuery, Amazon Redshift, and Databricks."
             },
             {
-                "category": "ETL & Data Transformation Tools",
-                "details": "Pipelines built with dbt (data build tool), Apache Airflow, Fivetran, and custom Python ETL scripts."
+                "category": "Data Transformation & ETL Frameworks",
+                "details": "Pipelines engineered with dbt (data build tool), Apache Airflow, Dagster, and custom Python worker pools."
             },
             {
-                "category": "Business Intelligence & Visualization",
-                "details": "Dashboard modeling and semantic layers in Microsoft Power BI, Tableau, Looker, and Metabase."
+                "category": "Business Intelligence (BI) Engines",
+                "details": "Direct connectivity with Microsoft Power BI, Looker, Tableau, Metabase, and custom React charting suites."
             },
             {
-                "category": "Operational Source Databases",
-                "details": "Change Data Capture (CDC) from PostgreSQL, MySQL, SQL Server, and Oracle via Debezium."
+                "category": "Transactional Databases",
+                "details": "Change Data Capture (CDC) from PostgreSQL, MySQL, Microsoft SQL Server, and Oracle DB via Debezium."
             }
         ],
         "considerations": [
             {
-                "title": "Separation of Transactional and Analytical Workloads",
-                "desc": "Heavy analytical aggregations must run exclusively against read-replicas or dedicated data warehouses to protect production transactional performance."
+                "title": "Columnar Decoupling from Production",
+                "desc": "Analytical queries must never run directly on live production transactional databases; ETL pipelines must sync data to dedicated columnar storage."
             },
             {
-                "title": "Data Hygiene & Transformation Validation",
-                "desc": "ETL pipelines must include automated assertions (null checks, foreign key tests, value boundary checks) to prevent corrupt data from reaching executive dashboards."
+                "title": "Data Governance & PII Masking",
+                "desc": "Sensitive employee salary details, customer credit numbers, and health records must be hashed or masked before entering analytical data lakes."
             },
             {
-                "title": "Role-Based Data Masking",
-                "desc": "Granular column-level masking must obscure confidential customer PII and sensitive compensation numbers based on the viewing user's security role."
+                "title": "Incremental Change Data Capture (CDC)",
+                "desc": "ETL jobs should ingest only updated or newly created records rather than performing full table dumps to minimize network and database overhead."
             }
         ],
-        "workflow_steps": [
-            {"step": "01", "title": "KPI & Metric Definition", "desc": "Identifying core business metrics, data sources, update frequencies, and stakeholder reporting requirements."},
-            {"step": "02", "title": "Data Pipeline Architecture", "desc": "Configuring automated ETL pipelines, data cleansing rules, analytical database schemas, and aggregation queries."},
-            {"step": "03", "title": "Dashboard & Visualization Design", "desc": "Developing interactive visualization widgets, role-based security filters, and automated report generators."},
-            {"step": "04", "title": "Validation & Deployment", "desc": "Verifying calculation precision against financial ledgers, conducting executive training, and deploying 24/7."}
-        ],
         "outcomes": [
-            {"title": "Evidence-Based Decisions", "desc": "Replace guesswork with verifiable historical trend data and real-time operational performance metrics."},
-            {"title": "Eliminated Data Silos", "desc": "View consolidated business performance across sales, operations, inventory, and finance in a single console."},
-            {"title": "Zero Production Impact", "desc": "Execute complex analytical queries on dedicated data warehouses without slowing down customer checkout or ERP systems."},
-            {"title": "Automated Executive Briefings", "desc": "Receive automated daily and weekly operational performance reports directly in your inbox without manual preparation."}
+            {"title": "Unified Operational Visibility", "desc": "Consolidate sales, operational, inventory, and financial performance onto a single real-time screen."},
+            {"title": "Instant Data-Backed Decisions", "desc": "Empower executives and department heads with accurate, self-service operational analytics."},
+            {"title": "Zero Transactional Database Impact", "desc": "Decoupled data warehouses ensure complex analytical queries never slow down customer-facing web applications."},
+            {"title": "Automated Management Briefings", "desc": "Eliminate manual spreadsheet preparation with scheduled, automated PDF and email report distribution."}
         ],
         "faqs": [
             {
-                "q": "How often can data be refreshed in our analytical dashboards?",
-                "a": "Refresh cadence depends on operational needs: streaming architectures support near-real-time updates (sub-minute deltas), while comprehensive executive reporting typically refreshes on hourly or daily batch schedules to optimize cloud computational costs."
+                "q": "How frequently is operational dashboard data refreshed?",
+                "a": "Data refresh intervals can be configured based on business requirements: near real-time streaming for critical operational telemetry, micro-batches every 5–15 minutes, or scheduled daily warehouse syncs for financial ledgers."
             },
             {
-                "q": "Can our business analysts build their own custom reports using the data warehouse?",
-                "a": "Yes. We structure normalized dimensional schemas (star schemas) with clean semantic naming and documentation, allowing analysts to query tables via standard SQL or connect directly with Power BI and Tableau."
+                "q": "Can different departments have restricted views of sensitive financial or HR data?",
+                "a": "Yes. We enforce role-based access control (RBAC), row-level security, and column-level masking synchronized with your single sign-on provider, ensuring managers only view metrics relevant to their department."
             },
             {
-                "q": "How do you ensure calculations match our financial accounting ledgers?",
-                "a": "During the data architecture phase, we define standardized metric formulas collaboratively with your finance and operations teams, validating automated ETL calculation outputs against verified historical ledger closes."
+                "q": "How does the platform handle high-concurrency queries during executive peak hours?",
+                "a": "We deploy columnar storage warehouses, pre-aggregated OLAP data cubes, and in-memory Redis caching layers that return complex multi-million row aggregations in milliseconds without database strain."
+            },
+            {
+                "q": "Can business users create custom reports or export raw data to spreadsheets?",
+                "a": "Yes. Our dashboards feature self-service ad-hoc report builders, configurable date range filters, and one-click exports to Excel, CSV, and presentation-ready PDF formats."
+            },
+            {
+                "q": "How does statistical anomaly detection identify operational issues before they escalate?",
+                "a": "The system applies statistical process control algorithms and moving-average baseline tracking. When metrics (such as order cancel rates or payment failures) deviate beyond standard standard deviations, automated alerts notify on-call managers."
+            },
+            {
+                "q": "Can data from legacy on-premise databases be integrated with modern cloud warehouses?",
+                "a": "Yes. We deploy lightweight, secure Change Data Capture (CDC) agents that read transactional database binlogs over encrypted VPN tunnels, incrementally replicating records to cloud data warehouses without impacting legacy systems."
             }
         ],
         "related_links": [
-            {"title": "Enterprise Integration", "link": "technology/enterprise-integration.html", "tag": "Data Layer", "desc": "Extract and synchronize data from core enterprise applications into analytical pipelines."},
-            {"title": "Real-Time Monitoring", "link": "services/real-time-monitoring.html", "tag": "Live Console", "desc": "Sub-second telemetry displays for active control room operations."},
-            {"title": "Operational Analytics Service", "link": "services/operational-analytics.html", "tag": "Service Domain", "desc": "Discover our commercial operational analytics and KPI consulting services."}
+            {"title": "Operational Analytics & Intelligence", "link": "services/operational-analytics.html", "tag": "Core Service", "desc": "Explore our commercial operational analytics and telemetry engineering services."},
+            {"title": "Real-Time Monitoring & Dashboards", "link": "services/real-time-monitoring.html", "tag": "Core Service", "desc": "Sub-second operational control centers and equipment health visualization."},
+            {"title": "Enterprise Integration", "link": "technology/enterprise-integration.html", "tag": "Data Layer", "desc": "API gateways and event-driven data buses connecting corporate data silos."}
         ]
     },
 
@@ -671,6 +749,13 @@ TECH_IND_CONNECT_PAGES = [
                 "example": "A prepared salads brand traced an affected lettuce lot across 3 distribution hubs within 5 minutes, notifying commercial buyers before consumption."
             }
         ],
+        "workflow_steps": [
+            {"step": "01", "title": "Requirement Discovery", "desc": "Audit commissary prep workflows, cold storage locations, ingredient turnover velocities, regulatory HACCP mandates, and supplier interfaces."},
+            {"step": "02", "title": "Solution Architecture", "desc": "Design recipe database schemas, FEFO picking state logic, customer portal pricing tiers, and wireless sensor network topology."},
+            {"step": "03", "title": "Design & Development", "desc": "Develop digital B2B ordering portals, mobile barcode inventory picking apps, commissary yield engines, and IoT telemetry pipelines."},
+            {"step": "04", "title": "Integration & Validation", "desc": "Integrate point-of-sale systems, accounting ERPs, and thermal IoT probes; conduct simulated lot recall and offline scanning tests."},
+            {"step": "05", "title": "Deployment & Improvement", "desc": "Train kitchen supervisors and pickers, execute phased multi-unit rollout, and continuously monitor food spoilage metrics."}
+        ],
         "integrations": [
             {
                 "category": "Point of Sale (POS) & Kitchen Display",
@@ -703,12 +788,6 @@ TECH_IND_CONNECT_PAGES = [
                 "desc": "Replenishment algorithms must factor in vendor transit times to prevent ingredients from arriving with insufficient remaining shelf life."
             }
         ],
-        "workflow_steps": [
-            {"step": "01", "title": "Supply Chain & Facility Audit", "desc": "Assessing kitchen workflows, cold storage locations, ingredient turnover velocities, and regulatory standards."},
-            {"step": "02", "title": "System Architecture Design", "desc": "Configuring recipe databases, FEFO picking rules, customer portal pricing tiers, and sensor network topologies."},
-            {"step": "03", "title": "Deployment & IoT Installation", "desc": "Installing cold chain sensors, deploying the digital ordering portal, and integrating with existing accounting ERPs."},
-            {"step": "04", "title": "Staff Training & Go-Live", "desc": "Training kitchen supervisors and warehouse pickers on mobile barcode scanning and automated reordering."}
-        ],
         "outcomes": [
             {"title": "Substantial Reduction in Spoilage", "desc": "Automated FEFO rotation and proactive expiry warnings eliminate preventable perishable food waste."},
             {"title": "Instant Recall Compliance", "desc": "Generate complete regulatory lot trace reports across suppliers and customers within seconds."},
@@ -727,6 +806,18 @@ TECH_IND_CONNECT_PAGES = [
             {
                 "q": "How does recipe-level costing calculate ingredient price fluctuations?",
                 "a": "Our recipe engine updates unit meal costs dynamically based on the weighted-average purchase cost of incoming raw ingredients from recent supplier invoices."
+            },
+            {
+                "q": "How does the platform manage food safety recalls across suppliers and retail nodes?",
+                "a": "The system provides instant forward and backward lot tracing. Entering a supplier lot number generates a report identifying every prepared batch, delivery route, and wholesale customer who received the product within seconds."
+            },
+            {
+                "q": "What prevents warehouse workers from accidentally picking newer inventory before older stock?",
+                "a": "Mobile barcode scanners enforce strict First-Expired, First-Out (FEFO) logic. If a picker scans a carton from a newer batch, the mobile application sounds an audible alert and locks the scan until the older lot is confirmed."
+            },
+            {
+                "q": "How does the system handle internet interruptions in underground prep kitchens or walk-in coolers?",
+                "a": "Mobile warehouse applications utilize offline-first local SQLite databases. Pickers continue scanning cartons uninterrupted, and all transactional data synchronizes automatically once Wi-Fi re-establishes."
             }
         ],
         "related_links": [
@@ -775,6 +866,13 @@ TECH_IND_CONNECT_PAGES = [
                 "example": "A regional retail chain unified online and physical store inventory, allowing same-day store pickup and reducing overall shipping costs."
             }
         ],
+        "workflow_steps": [
+            {"step": "01", "title": "Requirement Discovery", "desc": "Analyze omnichannel consumer traffic patterns, SKU variant complexity, multi-currency payment options, POS infrastructure, and warehouse nodes."},
+            {"step": "02", "title": "Solution Architecture", "desc": "Formulate headless commerce architecture, sub-second inventory reservation logic, dynamic pricing matrices, and global CDN caching."},
+            {"step": "03", "title": "Design & Development", "desc": "Engineer high-performance mobile storefronts, faceted Elasticsearch catalog filters, B2B account portals, and automated fulfillment routing queues."},
+            {"step": "04", "title": "Integration & Validation", "desc": "Connect payment gateways, ERP ledgers, warehouse WMS, and carrier label APIs; conduct high-concurrency flash sale stress tests."},
+            {"step": "05", "title": "Deployment & Improvement", "desc": "Execute zero-downtime cutover, track conversion funnels and checkout telemetry, and continuously optimize catalog search relevance."}
+        ],
         "integrations": [
             {
                 "category": "Commerce Engines & Headless Backends",
@@ -807,12 +905,6 @@ TECH_IND_CONNECT_PAGES = [
                 "desc": "Static catalog pages and images should be cached globally on edge networks (Cloudflare/Fastly) to maintain sub-second browsing regardless of user location."
             }
         ],
-        "workflow_steps": [
-            {"step": "01", "title": "Commerce Architecture Audit", "desc": "Analyzing traffic patterns, SKU complexity, payment requirements, and existing ERP/WMS back-end tools."},
-            {"step": "02", "title": "UX & Pipeline Engineering", "desc": "Designing high-converting mobile interfaces, fast catalog search clusters, and payment gateway integrations."},
-            {"step": "03", "title": "Inventory & ERP Connectivity", "desc": "Connecting real-time stock feeds, warehouse picking queues, and shipping carrier label APIs."},
-            {"step": "04", "title": "Concurrency Testing & Launch", "desc": "Conducting peak holiday traffic load testing, security audits, and executing zero-downtime cutover."}
-        ],
         "outcomes": [
             {"title": "Higher Checkout Conversion", "desc": "Accelerated page load speeds and friction-free mobile checkouts directly increase completed purchases."},
             {"title": "Zero Overselling Incidents", "desc": "Real-time inventory reservation prevents customers from purchasing depleted stock."},
@@ -831,6 +923,18 @@ TECH_IND_CONNECT_PAGES = [
             {
                 "q": "Does the platform support international currencies and localized taxes?",
                 "a": "Yes. Our platforms support multi-currency checkouts with automated geolocation, localized address forms, and real-time regional sales tax calculation via Avalara or Vertex."
+            },
+            {
+                "q": "How does intelligent order routing select the optimal warehouse for fulfillment?",
+                "a": "Our fulfillment engine analyzes customer shipping address, line-item availability across regional warehouses, carrier freight rates, and shipping cutoff times to route orders to the lowest-cost, fastest delivery facility."
+            },
+            {
+                "q": "How are customer returns and exchanges managed to reduce support workload?",
+                "a": "We deploy self-service customer returns portals where buyers input order numbers, select return reasons, generate prepaid carrier shipping labels, and initiate instant replacement orders without manual customer service calls."
+            },
+            {
+                "q": "Can physical store associates fulfill online orders for in-store pickup (BOPIS)?",
+                "a": "Yes. We build mobile-optimized store associate portals that receive pick-and-pack alerts for online orders, allowing store staff to scan items from retail shelves and stage them for customer curbside or counter pickup."
             }
         ],
         "related_links": [
@@ -879,6 +983,13 @@ TECH_IND_CONNECT_PAGES = [
                 "example": "A plastics molding facility automated technician dispatch for overheating hydraulic pumps, reducing machine downtime."
             }
         ],
+        "workflow_steps": [
+            {"step": "01", "title": "Requirement Discovery", "desc": "Catalog critical production machinery, historical failure modes, electrical interfaces, factory network topology, and shift schedules."},
+            {"step": "02", "title": "Solution Architecture", "desc": "Design edge gateway network topologies, PLC protocol translation adapters, OEE metric calculation formulas, and CMMS integration hooks."},
+            {"step": "03", "title": "Design & Development", "desc": "Install non-invasive sensor arrays, deploy industrial edge gateways, build live control room OEE dashboards, and configure automated dispatch logic."},
+            {"step": "04", "title": "Integration & Validation", "desc": "Benchmark telemetry accuracy against physical gauges, verify OT network air-gap isolation, and test automated work order creation."},
+            {"step": "05", "title": "Deployment & Improvement", "desc": "Train plant operators and maintenance engineers, go live across production lines, and continuously tune predictive maintenance baselines."}
+        ],
         "integrations": [
             {
                 "category": "Industrial Programmable Logic Controllers (PLCs)",
@@ -911,12 +1022,6 @@ TECH_IND_CONNECT_PAGES = [
                 "desc": "Industrial gateways and sensor enclosures must withstand heavy electromagnetic interference (EMI), high vibration, dust, and washdown spray."
             }
         ],
-        "workflow_steps": [
-            {"step": "01", "title": "Plant & Asset Survey", "desc": "Cataloging critical production machinery, failure history, electrical interfaces, and factory network infrastructure."},
-            {"step": "02", "title": "Edge Gateway Deployment", "desc": "Installing industrial edge gateways, sensor arrays, and secure local network data buses."},
-            {"step": "03", "title": "OEE & Alert Configuration", "desc": "Configuring OEE calculation formulas, anomaly thresholds, and automated CMMS work order integration."},
-            {"step": "04", "title": "Plant Floor Go-Live", "desc": "Deploying control room monitors, training plant supervisors, and validating automated alerting protocols."}
-        ],
         "outcomes": [
             {"title": "Substantial Reduction in Downtime", "desc": "Proactive condition-based maintenance prevents unexpected machine failures and assembly line stoppages."},
             {"title": "Increased Plant OEE", "desc": "Real-time bottleneck identification allows supervisors to optimize machine cycle speeds and reduce idle time."},
@@ -935,6 +1040,18 @@ TECH_IND_CONNECT_PAGES = [
             {
                 "q": "Does connecting IoT sensors to our plant floor create cybersecurity risks?",
                 "a": "No. Our edge gateways operate on an isolated subnet with no incoming listening ports. Telemetry is transmitted outbound over encrypted TLS channels using mutual certificate authentication."
+            },
+            {
+                "q": "How does the platform eliminate false alarms and nuisance alerts?",
+                "a": "We implement multi-condition validation and persistence windows. An alert is only triggered when sensor readings breach dynamic statistical limits for a sustained duration or across multiple correlated variables (such as simultaneous rise in motor current and vibration)."
+            },
+            {
+                "q": "What CMMS platforms can automatically receive maintenance dispatch tickets?",
+                "a": "Our integration layer features certified bidirectional connectors for IBM Maximo, SAP Plant Maintenance (PM), UpKeep, MaintainX, and custom SQL databases, attaching telemetry wave graphs directly to work orders."
+            },
+            {
+                "q": "Can executive leadership benchmark productivity across multiple factory locations?",
+                "a": "Yes. Our enterprise dashboards standardize operational metrics across different plant facilities, providing normalized OEE comparisons, downtime category breakdowns, and machine availability rankings in real time."
             }
         ],
         "related_links": [
@@ -983,6 +1100,13 @@ TECH_IND_CONNECT_PAGES = [
                 "example": "A freight delivery company accelerated billing cycles to same-day by uploading signed digital delivery receipts immediately upon delivery."
             }
         ],
+        "workflow_steps": [
+            {"step": "01", "title": "Requirement Discovery", "desc": "Audit fleet classifications, commercial freight corridors, carrier EDI agreements, dock labor capacities, and existing TMS/WMS software."},
+            {"step": "02", "title": "Solution Architecture", "desc": "Design route sequencing algorithms, dock appointment booking engines, mobile ePOD architecture, and geofencing alert boundaries."},
+            {"step": "03", "title": "Design & Development", "desc": "Build dynamic route optimization microservices, self-service dock calendars, mobile driver applications, and freight tracking portals."},
+            {"step": "04", "title": "Integration & Validation", "desc": "Connect commercial ELD telematics, carrier EDI feeds (204, 214, 210), and ERP sales orders; validate driver mobile offline caching."},
+            {"step": "05", "title": "Deployment & Improvement", "desc": "Roll out mobile driver apps, train warehouse dock dispatchers, launch customer tracking links, and continuously optimize fuel efficiency."}
+        ],
         "integrations": [
             {
                 "category": "Electronic Logging Devices (ELD) & Telematics",
@@ -1015,12 +1139,6 @@ TECH_IND_CONNECT_PAGES = [
                 "desc": "Geofencing parameters around logistics hubs must require a sustained duration inside the perimeter to avoid false arrival triggers from passing highway traffic."
             }
         ],
-        "workflow_steps": [
-            {"step": "01", "title": "Fleet & Network Assessment", "desc": "Analyzing fleet size, freight corridors, carrier agreements, dock capacities, and existing TMS/WMS software."},
-            {"step": "02", "title": "Routing & Portal Architecture", "desc": "Configuring route optimization algorithms, dock appointment calendars, and carrier rate comparison tools."},
-            {"step": "03", "title": "ELD & Carrier Integration", "desc": "Connecting commercial ELD feeds, GPS telematics, carrier EDI/API networks, and ERP sales orders."},
-            {"step": "04", "title": "Driver Rollout & Go-Live", "desc": "Deploying the mobile driver application, training warehouse dock staff, and launching public tracking portals."}
-        ],
         "outcomes": [
             {"title": "Reduced Fleet Fuel Expenditures", "desc": "Optimized delivery routing reduces total fleet mileage and eliminates redundant transit loops."},
             {"title": "Eliminated Detention Penalties", "desc": "Scheduled dock appointments ensure trucks are unloaded promptly upon arrival, avoiding carrier detention fees."},
@@ -1039,6 +1157,18 @@ TECH_IND_CONNECT_PAGES = [
             {
                 "q": "How does dock scheduling reduce warehouse labor costs?",
                 "a": "By scheduling truck arrivals across balanced time slots, warehouse managers can align staffing schedules with actual incoming pallet volume, eliminating idle dock time and avoiding costly overtime spikes."
+            },
+            {
+                "q": "What happens when drivers lose cellular reception in remote delivery locations?",
+                "a": "Our mobile driver app operates offline-first using local device storage. Drivers capture signatures, scan barcodes, and photograph cargo without network connectivity; records synchronize automatically once cellular reception resumes."
+            },
+            {
+                "q": "How does electronic proof of delivery accelerate client invoicing?",
+                "a": "Completed ePOD records upload immediately upon customer signature capture, automatically attaching digital receipts to ERP invoices and initiating billing workflows within minutes of handoff."
+            },
+            {
+                "q": "Can the platform integrate with commercial freight visibility networks?",
+                "a": "Yes. We maintain native API connectors for project44, FourKites, and MacroPoint, along with standard EDI 204, 214, and 210 transaction sets, giving shippers unified multi-modal visibility."
             }
         ],
         "related_links": [
@@ -1087,6 +1217,13 @@ TECH_IND_CONNECT_PAGES = [
                 "example": "A technical consulting group identified unprofitable project scope creep early, adjusting milestone staffing to protect target margins."
             }
         ],
+        "workflow_steps": [
+            {"step": "01", "title": "Requirement Discovery", "desc": "Review existing client engagement lifecycles, billing structures, organizational hierarchy matrices, software tools, and compliance needs."},
+            {"step": "02", "title": "Solution Architecture", "desc": "Design unified client data schemas, multi-tier approval hierarchies, role-based security boundaries, and executive dashboard metrics."},
+            {"step": "03", "title": "Design & Development", "desc": "Develop tailored CRM engagement portals, HRMS employee onboarding modules, automated approval engines, and billing data connectors."},
+            {"step": "04", "title": "Integration & Validation", "desc": "Synchronize corporate ERP accounting ledgers, single sign-on (SSO/SAML) identity providers, and digital signature platforms."},
+            {"step": "05", "title": "Deployment & Improvement", "desc": "Conduct department training, migrate historical client and personnel records, launch systems, and monitor billable utilization."}
+        ],
         "integrations": [
             {
                 "category": "Enterprise CRM & Account Management",
@@ -1119,12 +1256,6 @@ TECH_IND_CONNECT_PAGES = [
                 "desc": "Every billed hour, expense receipt, and client approval must be permanently linked to invoices for rapid dispute resolution during billing audits."
             }
         ],
-        "workflow_steps": [
-            {"step": "01", "title": "Operational Assessment", "desc": "Reviewing existing billing workflows, engagement lifecycles, software tools, and compliance requirements."},
-            {"step": "02", "title": "Solution Architecture", "desc": "Designing unified client data schemas, approval hierarchies, employee portals, and executive dashboard views."},
-            {"step": "03", "title": "Development & Integration", "desc": "Engineering custom CRM/HRMS modules, workflow automation triggers, and accounting system sync."},
-            {"step": "04", "title": "Staff Onboarding & Rollout", "desc": "Conducting department-specific training sessions, migrating historical records, and deploying live systems."}
-        ],
         "outcomes": [
             {"title": "Unified Client Transparency", "desc": "Provide delivery and billing teams with real-time insight into project milestones, contracts, and accounts receivable."},
             {"title": "Increased Billable Efficiency", "desc": "Automate routine administrative paperwork to allow senior professionals to dedicate more time to client service."},
@@ -1143,6 +1274,18 @@ TECH_IND_CONNECT_PAGES = [
             {
                 "q": "Can we customize the approval thresholds for different offices or business units?",
                 "a": "Yes. Approval hierarchies can be configured per legal entity, regional office, practice group, or project type, supporting custom expenditure tiers and currency rules."
+            },
+            {
+                "q": "How does the platform track consultant billable utilization and project margins in real time?",
+                "a": "By correlating logged timesheet hours against engagement fee structures and project expenses, executive dashboards calculate real-time gross margins per matter and highlight scope creep before budget overruns occur."
+            },
+            {
+                "q": "What safeguards ensure that historical billing and client records remain tamper-proof?",
+                "a": "We maintain immutable audit logs that record all timesheet submissions, expense approvals, invoice generations, and rate adjustments with cryptographic timestamps to satisfy rigorous financial audits."
+            },
+            {
+                "q": "How smoothly does the platform integrate with corporate Single Sign-On (SSO)?",
+                "a": "We provide native integration with SAML 2.0, Okta, Microsoft Entra ID (Azure AD), and Ping Identity, supporting SCIM user provisioning so employee departures immediately suspend system access."
             }
         ],
         "related_links": [
@@ -1191,6 +1334,13 @@ TECH_IND_CONNECT_PAGES = [
                 "example": "An ambulatory surgery center decreased administrative claim rejections by screening outbound billing files against payer formatting rules."
             }
         ],
+        "workflow_steps": [
+            {"step": "01", "title": "Requirement Discovery", "desc": "Map clinic front-desk procedures, digital intake forms, scheduling logic, EHR integration interfaces, and patient privacy standards."},
+            {"step": "02", "title": "Solution Architecture", "desc": "Design secure patient intake workflows, HL7/FHIR communication adapters, referral classification queues, and HIPAA-compliant data storage."},
+            {"step": "03", "title": "Design & Development", "desc": "Build mobile-friendly digital pre-registration portals, automated appointment reminder pipelines, and administrative claim scrubbing checks."},
+            {"step": "04", "title": "Integration & Validation", "desc": "Connect EHR registration queues, test clearinghouse EDI formatting (837/835), and verify end-to-end TLS 1.3/AES-256 encryption and audit logging."},
+            {"step": "05", "title": "Deployment & Improvement", "desc": "Train front-desk coordinators and billing staff, roll out digital intake across clinic locations, and monitor patient check-in velocity."}
+        ],
         "integrations": [
             {
                 "category": "Electronic Health Record (EHR) Systems",
@@ -1223,12 +1373,6 @@ TECH_IND_CONNECT_PAGES = [
                 "desc": "Extracted demographic and insurance information must be presented in a verification interface for clinic staff confirmation before EHR committing."
             }
         ],
-        "workflow_steps": [
-            {"step": "01", "title": "Administrative Workflow Audit", "desc": "Mapping clinic front-desk procedures, intake documents, scheduling rules, and EHR integration requirements."},
-            {"step": "02", "title": "Portal & Ingestion Setup", "desc": "Configuring digital patient intake forms, automated referral classification queues, and HL7/FHIR connectors."},
-            {"step": "03", "title": "Security & Privacy Certification", "desc": "Validating end-to-end data encryption, access permissions, audit logging, and strict data privacy protections."},
-            {"step": "04", "title": "Clinic Deployment", "desc": "Training front-desk and scheduling staff, activating digital intake queues, and monitoring registration velocity."}
-        ],
         "outcomes": [
             {"title": "Significantly Shorter Check-In Times", "desc": "Pre-registered patients check in with a quick scan, significantly reducing waiting room congestion."},
             {"title": "Eliminated Manual Transcription", "desc": "Patient-entered demographic and insurance details flow directly into EHR records without manual re-typing."},
@@ -1247,6 +1391,18 @@ TECH_IND_CONNECT_PAGES = [
             {
                 "q": "Can the digital intake system integrate with our existing EHR?",
                 "a": "Yes. We connect with leading EHRs through HL7 v2 interfaces, FHIR REST APIs, or certified integration adapters, allowing patient demographic and insurance card data to flow directly into your registration queues."
+            },
+            {
+                "q": "How does digital pre-registration reduce waiting room dwell times?",
+                "a": "Patients receive a secure link 48 hours prior to their visit to complete demographic questionnaires, upload photo IDs, and sign consent forms on their smartphones, enabling front-desk check-in in under 60 seconds."
+            },
+            {
+                "q": "What prevents claims from being rejected by insurance clearinghouses?",
+                "a": "Our administrative validation engine screens billing data against payer EDI formatting rules and subscriber demographic checks before files are submitted to clearinghouses, preventing avoidable formatting rejections."
+            },
+            {
+                "q": "How does the system handle incoming physician referral faxes and document packets?",
+                "a": "Incoming digital faxes are processed by layout-aware document models that extract patient name, referring physician NPI, requested modality, and priority, automatically attaching the referral order to the EHR patient chart."
             }
         ],
         "related_links": [
@@ -1279,7 +1435,8 @@ TECH_IND_CONNECT_PAGES = [
         ],
         "challenges": [
             {"challenge": "Unclear Inquiry Routing", "impact": "General inquiries sent to generic inboxes get lost without reaching the responsible department.", "solution": "Our administrative team routes every incoming general communication directly to the appropriate executive lead."},
-            {"challenge": "Delayed Corporate Responses", "impact": "Organizations waiting weeks for simple corporate or partnership clarifications.", "solution": "We maintain strict internal communication standards, ensuring general inquiries receive written acknowledgment promptly."}
+            {"challenge": "Delayed Corporate Responses", "impact": "Organizations waiting weeks for simple corporate or partnership clarifications.", "solution": "We maintain strict internal communication standards, ensuring general inquiries receive written acknowledgment promptly."},
+            {"challenge": "Fragmented Communication Records", "impact": "Important corporate discussions and partner agreements scattered across personal email inboxes.", "solution": "All general and corporate inquiries are logged in a centralized communications management system with traceable follow-up histories."}
         ],
         "use_cases": [
             {
@@ -1297,6 +1454,13 @@ TECH_IND_CONNECT_PAGES = [
                 "desc": "Enterprise procurement departments requesting official corporate registration documents, GSTIN verification, and legal details.",
                 "example": "A corporate client completed vendor onboarding compliance review, receiving verified MCA filings and corporate credentials within one business day."
             }
+        ],
+        "workflow_steps": [
+            {"step": "01", "title": "Inquiry Intake & Classification", "desc": "Receipt and structured categorization of incoming general corporate, media, academic, or strategic partnership requests."},
+            {"step": "02", "title": "Administrative Assessment", "desc": "Initial review by the administrative team to evaluate the nature of the inquiry and determine required corporate documentation."},
+            {"step": "03", "title": "Departmental Routing", "desc": "Direct handover to executive leadership or practice directors across Nova Arc's four primary technology service domains."},
+            {"step": "04", "title": "Consultation & Information Exchange", "desc": "Structured briefing, video conference, or documentation delivery with authorized Nova Arc corporate representatives."},
+            {"step": "05", "title": "Relationship Onboarding & Follow-Up", "desc": "Formalization of ongoing communications, partner agreement execution, or scheduling operational follow-up milestones."}
         ],
         "integrations": [
             {
@@ -1320,18 +1484,17 @@ TECH_IND_CONNECT_PAGES = [
             {
                 "title": "Official Communication Security",
                 "desc": "All official corporate notices and contracts are confirmed through authorized corporate @novaarctech.in email domains."
+            },
+            {
+                "title": "Business Hours & Operating Time Zones",
+                "desc": "Corporate headquarters operates 9:00 AM to 6:00 PM IST (UTC+5:30), Monday through Friday, with asynchronous web intake active 24/7."
             }
-        ],
-        "workflow_steps": [
-            {"step": "01", "title": "Inquiry Submission", "desc": "Submit your general inquiry through our contact form or official email channels."},
-            {"step": "02", "title": "Administrative Review", "desc": "Our corporate team reviews your inquiry and identifies the relevant department."},
-            {"step": "03", "title": "Executive Routing", "desc": "Your request is routed to appropriate leadership for review and response formulation."},
-            {"step": "04", "title": "Follow-Up Communication", "desc": "We connect with you directly via email or telephone to discuss your inquiry."}
         ],
         "outcomes": [
             {"title": "Direct Executive Access", "desc": "Connect directly with Nova Arc leadership for partnerships and strategic collaboration."},
             {"title": "Verified Corporate Details", "desc": "Communicate directly with registered corporate headquarters and verified company representatives."},
-            {"title": "Prompt Communication", "desc": "Receive structured, professional follow-up on all legitimate corporate and media inquiries."}
+            {"title": "Prompt Communication", "desc": "Receive structured, professional follow-up on all legitimate corporate and media inquiries."},
+            {"title": "Structured Partner Onboarding", "desc": "Clear pathways to evaluate system integrator alliances and technology co-development opportunities."}
         ],
         "faqs": [
             {
@@ -1344,7 +1507,19 @@ TECH_IND_CONNECT_PAGES = [
             },
             {
                 "q": "What is the typical response timeline for general inquiries?",
-                "a": "All legitimate corporate communications are reviewed during standard business hours and acknowledged promptly with routing to the appropriate departmental lead."
+                "a": "All legitimate corporate communications are reviewed during standard business hours and acknowledged within one business day with routing to the appropriate departmental lead."
+            },
+            {
+                "q": "How do technology vendors or software providers explore partnership opportunities?",
+                "a": "Submit a company overview, product capabilities, and proposed partnership model via admin@novaarctech.in; our strategic alliances team reviews submissions and coordinates introductory discussions."
+            },
+            {
+                "q": "Where should vendors submit corporate registration or compliance verification requests?",
+                "a": "Send GSTIN, MCA registration, or vendor onboarding questionnaire requests to admin@novaarctech.in. Our legal and administrative team provides certified corporate documentation promptly."
+            },
+            {
+                "q": "Can I request product demonstrations through the general enquiry channel?",
+                "a": "Yes. General demonstration requests are classified and routed directly to the relevant practice lead for your requested service domain, who will coordinate a tailored walkthrough."
             }
         ],
         "related_links": [
@@ -1373,7 +1548,8 @@ TECH_IND_CONNECT_PAGES = [
         ],
         "challenges": [
             {"challenge": "Ambiguous Project Requirements", "impact": "Projects start without clear technical specifications, leading to scope creep, delays, and budget overruns.", "solution": "Our discovery sessions establish clear, unambiguous architectural blueprints and scope boundaries before development begins."},
-            {"challenge": "Uncertain Integration Feasibility", "impact": "Worry that modern software platforms will fail to connect with legacy ERPs or proprietary databases.", "solution": "Our senior architects evaluate your existing API landscape upfront to design verified, resilient integration adapters."}
+            {"challenge": "Uncertain Integration Feasibility", "impact": "Worry that modern software platforms will fail to connect with legacy ERPs or proprietary databases.", "solution": "Our senior architects evaluate your existing API landscape upfront to design verified, resilient integration adapters."},
+            {"challenge": "Unpredictable Timeline Overruns", "impact": "Software projects dragging on indefinitely without clear intermediate deliverables or transparency.", "solution": "We enforce phased, sprint-based milestone delivery with working software demonstrations at the end of each development cycle."}
         ],
         "use_cases": [
             {
@@ -1391,6 +1567,13 @@ TECH_IND_CONNECT_PAGES = [
                 "desc": "Structuring private RAG knowledge assistants, API tool whitelists, and mandatory human approval gates for corporate operations.",
                 "example": "A professional services group designed an internal document understanding pipeline with strict data privacy and zero public training retention."
             }
+        ],
+        "workflow_steps": [
+            {"step": "01", "title": "Requirement Discovery & Brief", "desc": "Submit your operational challenges, desired feature scope, integration landscape, and target launch window."},
+            {"step": "02", "title": "Architecture Feasibility & Scoping", "desc": "Senior architects review specifications, assess API dependencies, evaluate risks, and define clear system boundaries."},
+            {"step": "03", "title": "Solution Blueprint & Roadmap", "desc": "Receive a comprehensive technical architecture blueprint, integration plan, and phased agile delivery schedule."},
+            {"step": "04", "title": "Commercial Proposal & Contract", "desc": "Transparent milestone-based pricing, resource allocation framework, SLA terms, and mutual NDA execution."},
+            {"step": "05", "title": "Engineering Kickoff & Sprint Setup", "desc": "Dedicated engineering pod onboarding, repository setup, architecture baseline review, and sprint 1 kickoff."}
         ],
         "integrations": [
             {
@@ -1414,18 +1597,17 @@ TECH_IND_CONNECT_PAGES = [
             {
                 "title": "Clear Project Ownership",
                 "desc": "All custom software code, database schemas, and intellectual property developed by Nova Arc become 100% client property upon project completion."
+            },
+            {
+                "title": "Existing Architecture Documentation",
+                "desc": "Providing API documentation, database schemas, and sample workflows accelerates discovery and proposal accuracy."
             }
-        ],
-        "workflow_steps": [
-            {"step": "01", "title": "Project Inquiry Submission", "desc": "Submit your business challenge, desired scope, and timeline via our project discussion form."},
-            {"step": "02", "title": "NDA & Initial Discovery", "desc": "We execute a mutual NDA and conduct an initial discovery call with our technical architects."},
-            {"step": "03", "title": "Architecture Blueprint", "desc": "We provide a high-level solution blueprint, integration approach, and phased delivery roadmap."},
-            {"step": "04", "title": "Commercial Proposal", "desc": "Our team delivers a transparent commercial proposal and kickoff plan for your project."}
         ],
         "outcomes": [
             {"title": "Architectural Certainty", "desc": "Gain complete technical clarity on how your software solution will be engineered, integrated, and scaled."},
             {"title": "Predictable Delivery Timelines", "desc": "Phased delivery milestones provide full transparency into project velocity and release dates."},
-            {"title": "Protected Confidentiality", "desc": "All project discussions and proprietary business workflows are protected under strict mutual NDAs."}
+            {"title": "Protected Confidentiality", "desc": "All project discussions and proprietary business workflows are protected under strict mutual NDAs."},
+            {"title": "100% Code & IP Ownership", "desc": "Full transfer of source repositories, build pipelines, and documentation to your organization upon project completion."}
         ],
         "faqs": [
             {
@@ -1439,6 +1621,18 @@ TECH_IND_CONNECT_PAGES = [
             {
                 "q": "What engagement models does Nova Arc offer for project delivery?",
                 "a": "We offer flexible models tailored to client needs: fixed-scope milestone deliverables with clear requirements, or dedicated engineering squads providing agile sprint-based development."
+            },
+            {
+                "q": "Who owns the source code and intellectual property developed during the project?",
+                "a": "All custom software code, database schemas, architectural artifacts, and intellectual property developed by Nova Arc become 100% client property upon milestone completion."
+            },
+            {
+                "q": "How do you manage project scope changes during development?",
+                "a": "We manage changes through formal agile sprint planning. Any new requirement is scoped, estimated for effort and timeline impact, and prioritized collaboratively before implementation begins."
+            },
+            {
+                "q": "What level of technical support is provided after the project goes live?",
+                "a": "Every deployment includes a standard warranty period covering defect remediation, followed by optional SLA-backed ongoing maintenance agreements for security updates and continuous enhancements."
             }
         ],
         "related_links": [
@@ -1466,7 +1660,9 @@ TECH_IND_CONNECT_PAGES = [
             {"title": "AI & Healthcare Tech Advisory", "desc": "Inquiries regarding agentic AI workflows, private generative RAG assistants, document extraction, and healthcare intake.", "points": ["Agentic AI workflow design", "Private enterprise RAG portals", "Intelligent document processing", "Healthcare administrative automation"]}
         ],
         "challenges": [
-            {"challenge": "Selecting the Right Technology Approach", "impact": "Organizations struggle to decide between off-the-shelf SaaS, custom software development, or hybrid integration.", "solution": "Our service practice leads provide unbiased technical guidance on the most cost-effective architecture for your scale."}
+            {"challenge": "Selecting the Right Technology Approach", "impact": "Organizations struggle to decide between off-the-shelf SaaS, custom software development, or hybrid integration.", "solution": "Our service practice leads provide unbiased technical guidance on the most cost-effective architecture for your scale."},
+            {"challenge": "Aligning Complex Cross-Domain Capabilities", "impact": "Challenges connecting disparate requirements across IoT telemetry, digital commerce, and ERP integration.", "solution": "Our multi-disciplinary engineering pods bridge physical hardware, cloud backend, and business software in a single cohesive engagement."},
+            {"challenge": "Inadequate In-House Technical Specialization", "impact": "Internal IT teams lack specialized bandwidth in emerging domains like agentic AI or high-throughput IoT.", "solution": "Nova Arc delivers specialized domain expertise that seamlessly complements and empowers your internal technical leadership."}
         ],
         "use_cases": [
             {
@@ -1485,14 +1681,25 @@ TECH_IND_CONNECT_PAGES = [
                 "example": "A factory operator consulted on non-invasive temperature and vibration sensor options for machine health monitoring."
             }
         ],
+        "workflow_steps": [
+            {"step": "01", "title": "Domain Alignment & Assessment", "desc": "Select your target engineering domain and outline your specific operational, integration, and technical goals."},
+            {"step": "02", "title": "Technical Capability Mapping", "desc": "We evaluate requirements against our specialized service modules, architecture patterns, and pre-built connectors."},
+            {"step": "03", "title": "Practice Lead Consultation", "desc": "Conduct an in-depth session with our domain practice lead to explore technical feasibility and design approaches."},
+            {"step": "04", "title": "Scope & Architecture Specification", "desc": "Formulate a detailed technical specification defining interfaces, data flows, and security requirements."},
+            {"step": "05", "title": "Commercial Modeling & Engagement", "desc": "Deliver a transparent commercial proposal tailored to your operational scale and delivery cadence."}
+        ],
         "integrations": [
             {
                 "category": "Domain Advisory Desks",
                 "details": "Direct service inquiries routed to practice leads at sales@novaarctech.in."
             },
             {
-                "category": "Cross-Domain Engineering Teams",
-                "details": "Access to engineers specializing in cloud, mobile, IoT hardware, and AI model orchestration."
+                "category": "Cross-Domain Engineering Pods",
+                "details": "Access to specialized engineers across cloud microservices, mobile apps, IoT hardware, and AI model orchestration."
+            },
+            {
+                "category": "Solution Architecture Blueprints",
+                "details": "Detailed component diagrams, interface schemas, and technical implementation roadmaps for your chosen domain."
             }
         ],
         "considerations": [
@@ -1503,17 +1710,17 @@ TECH_IND_CONNECT_PAGES = [
             {
                 "title": "Practical Fit Assessment",
                 "desc": "We evaluate whether your operational goals are best met by custom software, commercial platform integration, or a hybrid approach."
+            },
+            {
+                "title": "Legacy System Dependencies",
+                "desc": "Identifying existing third-party platforms, ERP versions, and databases early ensures accurate compatibility assessments."
             }
-        ],
-        "workflow_steps": [
-            {"step": "01", "title": "Service Selection", "desc": "Choose your specific service domain of interest and submit your inquiry details."},
-            {"step": "02", "title": "Practice Lead Assignment", "desc": "Your inquiry is routed directly to the specialized engineering practice lead for that domain."},
-            {"step": "03", "title": "Technical Consultation", "desc": "We schedule a focused consultation to review technical capabilities, case studies, and architecture."},
-            {"step": "04", "title": "Engagement Proposal", "desc": "We formulate a tailored engagement scope matching your exact operational requirements."}
         ],
         "outcomes": [
             {"title": "Domain-Specific Expertise", "desc": "Communicate directly with engineers who specialize in your specific technology domain."},
-            {"title": "Targeted Architecture Briefs", "desc": "Receive relevant technical specifications and integration blueprints for your target service."}
+            {"title": "Targeted Architecture Briefs", "desc": "Receive relevant technical specifications and integration blueprints for your target service."},
+            {"title": "Objective Build vs Buy Clarity", "desc": "Clear financial and technical comparison of custom development versus commercial SaaS licensing."},
+            {"title": "Faster Project Initiation", "desc": "Streamlined capability alignment allows your team to move from exploration to project kickoff efficiently."}
         ],
         "faqs": [
             {
@@ -1527,6 +1734,18 @@ TECH_IND_CONNECT_PAGES = [
             {
                 "q": "Can you handle projects that combine capabilities from multiple service domains?",
                 "a": "Yes. Many enterprise solutions combine multiple domains—such as IoT sensor monitoring feeding automated workflow dispatch, or digital commerce portals connecting with custom CRM and ERP integrations."
+            },
+            {
+                "q": "What deliverables can we expect from an initial service inquiry consultation?",
+                "a": "You receive a high-level architecture brief, technical approach summary, recommended technology stack, and preliminary timeline estimate tailored to your requirements."
+            },
+            {
+                "q": "Can we engage Nova Arc for a small proof-of-concept (PoC) before committing to a full deployment?",
+                "a": "Yes. We offer focused 4–6 week proof-of-concept engagements designed to validate technical feasibility, test system integrations, and measure operational ROI before broader rollout."
+            },
+            {
+                "q": "Does Nova Arc offer ongoing maintenance for systems built within specific service domains?",
+                "a": "Yes. We offer comprehensive SLA-backed maintenance agreements covering proactive monitoring, dependency patching, security updates, and feature enhancements across all four service domains."
             }
         ],
         "related_links": [
@@ -1554,7 +1773,9 @@ TECH_IND_CONNECT_PAGES = [
             {"title": "System Patching & Maintenance", "desc": "Scheduled security updates, dependency patches, database maintenance, and performance optimization.", "points": ["Scheduled maintenance windows", "Advance maintenance notices", "Zero-downtime rolling updates", "Post-patch verification tests"]}
         ],
         "challenges": [
-            {"challenge": "Unclear Severity Prioritization", "impact": "Critical production outages getting queued behind minor visual adjustments, delaying urgent fixes.", "solution": "Our helpdesk ticketing enforces explicit severity classifications, immediately alerting on-call engineers for critical issues."}
+            {"challenge": "Unclear Severity Prioritization", "impact": "Critical production outages getting queued behind minor visual adjustments, delaying urgent fixes.", "solution": "Our helpdesk ticketing enforces explicit severity classifications, immediately alerting on-call engineers for critical issues."},
+            {"challenge": "Ambiguous Incident Diagnosis", "impact": "Support tickets submitted without error logs or reproduction steps, prolonging investigation times.", "solution": "Our intake portal guides users through structured incident submissions, capturing browser environment, timestamps, and error codes."},
+            {"challenge": "Recurring Infrastructure Vulnerabilities", "impact": "Fixes applied to symptoms without addressing underlying software defects, causing issues to re-occur.", "solution": "Every resolved incident undergoes a root-cause analysis (RCA) to implement permanent code and infrastructure hardenings."}
         ],
         "use_cases": [
             {
@@ -1572,6 +1793,13 @@ TECH_IND_CONNECT_PAGES = [
                 "desc": "Routine requests for user role permissions, approval hierarchy modifications, or new report configuration.",
                 "example": "A corporate client adjusted spending approval limits and added new department cost centers across their procurement portal."
             }
+        ],
+        "workflow_steps": [
+            {"step": "01", "title": "Ticket Intake & Classification", "desc": "Log incident report via helpdesk portal or email with logs, reproduction steps, and severity tagging."},
+            {"step": "02", "title": "Incident Triage & SLA Assignment", "desc": "Helpdesk triages ticket, verifies severity level (Severity 1 to 4), and assigns primary on-call support engineer."},
+            {"step": "03", "title": "Diagnostic Investigation & Reproduction", "desc": "Engineering reproduces issue in staging sandbox, analyzes telemetry logs, and identifies root cause."},
+            {"step": "04", "title": "Staging Validation & Patch Deployment", "desc": "Hotfix or patch is thoroughly tested in staging, approved by QA, and rolled out to production."},
+            {"step": "05", "title": "Stakeholder Sign-Off & Root-Cause Documentation", "desc": "Client confirms operational restoration, and a formal Post-Incident Review (PIR) report is published."}
         ],
         "integrations": [
             {
@@ -1595,18 +1823,17 @@ TECH_IND_CONNECT_PAGES = [
             {
                 "title": "Reproduction Steps and Logs",
                 "desc": "Providing specific error codes, timestamps, user IDs, and screenshots accelerates root-cause investigation and patch deployment."
+            },
+            {
+                "title": "Authorized Support Contacts",
+                "desc": "Tickets modifying user permissions or database records must originate from designated client administrative contacts."
             }
-        ],
-        "workflow_steps": [
-            {"step": "01", "title": "Ticket Submission", "desc": "Submit your technical ticket with reproduction steps, system URL, and error screenshots."},
-            {"step": "02", "title": "Triage & SLA Assignment", "desc": "Our helpdesk triages the ticket, confirms severity level, and assigns a primary support engineer."},
-            {"step": "03", "title": "Investigation & Patching", "desc": "The engineering team reproduces the issue, identifies root cause, and tests a patch in staging."},
-            {"step": "04", "title": "Resolution & Verification", "desc": "The patch is deployed to production, verified with client stakeholders, and the ticket is resolved."}
         ],
         "outcomes": [
             {"title": "Rapid Outage Resolution", "desc": "SLA-backed response ensures that critical system interruptions receive immediate engineering intervention."},
             {"title": "Auditable Ticket Records", "desc": "Maintain permanent histories of all reported technical issues, resolution steps, and post-mortems."},
-            {"title": "Continuous System Stability", "desc": "Ongoing maintenance and security patching ensure your enterprise software operates reliably."}
+            {"title": "Continuous System Stability", "desc": "Ongoing maintenance and security patching ensure your enterprise software operates reliably."},
+            {"title": "Transparent RCA Reporting", "desc": "Detailed root-cause analysis documentation outlining remediation steps to prevent recurrence."}
         ],
         "faqs": [
             {
@@ -1620,6 +1847,18 @@ TECH_IND_CONNECT_PAGES = [
             {
                 "q": "Are software maintenance and bug fixes covered under our warranty?",
                 "a": "All custom software built by Nova Arc includes a post-launch warranty period covering defect remediation, followed by optional SLA-backed ongoing maintenance agreements."
+            },
+            {
+                "q": "What are the standard SLA response times for non-critical tickets?",
+                "a": "Severity 2 (High) receives responses within 4 hours; Severity 3 (Medium) within 1 business day; and Severity 4 (Low requests/queries) within 2 business days."
+            },
+            {
+                "q": "What details should be included in a support ticket to expedite resolution?",
+                "a": "To accelerate triage, provide the exact application URL, user account ID, timestamp of occurrence, step-by-step reproduction sequence, full error message text, and screenshots or screen recordings."
+            },
+            {
+                "q": "Does Nova Arc provide proactive system monitoring in addition to ticket-based support?",
+                "a": "Yes. Our managed support plans include 24/7 automated synthetic uptime probes, API latency alerts, error rate tracking, and resource exhaustion warnings that often detect and resolve issues before users notice."
             }
         ],
         "related_links": [
@@ -1629,4 +1868,5 @@ TECH_IND_CONNECT_PAGES = [
         ]
     }
 ]
+
 print(f"Loaded {len(TECH_IND_CONNECT_PAGES)} Tech, Industries & Connect subpages.")

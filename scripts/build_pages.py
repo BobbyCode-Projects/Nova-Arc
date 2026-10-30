@@ -582,6 +582,16 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
                      use_cases=None, integrations=None, considerations=None, faqs=None):
     """
     Generates a complete, informative enterprise subpage that perfectly fits Nova Arc's design system.
+    Renders all 9 standardized enterprise sections:
+    1. Key Capabilities
+    2. Problem & Resolution
+    3. Practical Applications
+    4. Engineering Methodology (5-Stage Lifecycle)
+    5. System Connectivity
+    6. Deployment & Oversight
+    7. Potential Business Benefits
+    8. Frequently Asked Questions
+    9. Connected Ecosystem
     """
     active_sec = "services"
     if "solutions/" in rel_path:
@@ -603,13 +613,13 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
     breadcrumbs_html = '<span class="breadcrumb-separator">/</span>'.join(bc_items)
 
     # Overview HTML
-    overview_html = "".join([f'<p class="overview-body-text">{p}</p>' for p in overview_paragraphs])
+    overview_html = "".join([f'<p style="font-size: 1.05rem; line-height: 1.8; color: #CBD5E1; margin-bottom: 18px;">{p}</p>' for p in overview_paragraphs])
 
-    # Capabilities Cards HTML
+    # 1. Key Capabilities HTML
     cap_cards = []
     for cap in capabilities:
         cap_cards.append(f"""
-        <div class="card" style="padding: var(--space-2xl); display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="card" style="padding: var(--space-2xl); display: flex; flex-direction: column; justify-content: space-between; background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg);">
           <div>
             <div style="width: 48px; height: 48px; border-radius: 10px; background: rgba(14, 165, 233, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #38BDF8;">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -628,45 +638,56 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
         """)
     capabilities_html = "".join(cap_cards)
 
-    # Challenges HTML
+    # 2. Problem & Resolution HTML
     chal_cards = []
     for ch in challenges:
         chal_cards.append(f"""
-        <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); padding: var(--space-xl);">
-          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: var(--space-sm);">
-            <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 8px; border-radius: 4px; background: rgba(239, 68, 68, 0.15); color: #F87171;">Operational Challenge</span>
+        <div class="card" style="background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); padding: var(--space-xl); display: flex; flex-direction: column;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-sm);">
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px; border-radius: 999px; background: rgba(239, 68, 68, 0.15); color: #F87171;">Business Challenge</span>
           </div>
-          <h4 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-sm);">{ch['challenge']}</h4>
-          <p style="color: #94A3B8; font-size: 0.925rem; line-height: 1.6; margin-bottom: var(--space-md);">{ch['impact']}</p>
-          <div style="padding: var(--space-md); background: rgba(14, 165, 233, 0.08); border-left: 3px solid #38BDF8; border-radius: 4px;">
-            <strong style="color: #38BDF8; font-size: 0.85rem; display: block; margin-bottom: 4px;">Nova Arc Solution:</strong>
-            <span style="color: #E2E8F0; font-size: 0.9rem; line-height: 1.5;">{ch['solution']}</span>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-xs);">Business Problem</h3>
+          <p style="color: #CBD5E1; font-size: 0.95rem; line-height: 1.55; margin-bottom: var(--space-md);">{ch['challenge']}</p>
+          
+          <div style="margin-bottom: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid rgba(255,255,255,0.06);">
+            <span style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #F59E0B; display: block; margin-bottom: 4px;">Why It Matters:</span>
+            <p style="color: #94A3B8; font-size: 0.9rem; line-height: 1.55; margin: 0;">{ch['impact']}</p>
+          </div>
+
+          <div style="margin-top: auto; padding: var(--space-md); background: rgba(14, 165, 233, 0.08); border-left: 3px solid #38BDF8; border-radius: 6px;">
+            <strong style="color: #38BDF8; font-size: 0.85rem; display: block; margin-bottom: 4px;">Proposed Resolution:</strong>
+            <span style="color: #E2E8F0; font-size: 0.9rem; line-height: 1.55;">{ch['solution']}</span>
           </div>
         </div>
         """)
     challenges_html = "".join(chal_cards)
 
-    # Practical Use Cases HTML
+    # 3. Practical Applications HTML
     use_cases_html = ""
     if use_cases:
         uc_cards = []
         for uc in use_cases:
-            ex_box = f"<div style='margin-top: 10px; padding: 8px 12px; background: rgba(56, 189, 248, 0.08); border-radius: 6px; border-left: 2px solid #38BDF8; font-size: 0.875rem; color: #E2E8F0;'><strong>Practical Example:</strong> {uc['example']}</div>" if uc.get('example') else ""
+            ex_box = f"<div style='margin-top: auto; padding: 12px 14px; background: rgba(56, 189, 248, 0.08); border-radius: 6px; border-left: 3px solid #38BDF8; font-size: 0.875rem; color: #E2E8F0; line-height: 1.55;'><strong style='color: #38BDF8; display: block; margin-bottom: 3px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;'>Expected Operational Value:</strong>{uc['example']}</div>" if uc.get('example') else ""
             uc_cards.append(f"""
-            <div class="card" style="padding: var(--space-xl); background: rgba(15, 23, 42, 0.55); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg);">
-              <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #38BDF8; margin-bottom: 6px; display: inline-block;">USE CASE</span>
-              <h4 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-xs);">{uc['title']}</h4>
-              <p style="color: #94A3B8; font-size: 0.925rem; line-height: 1.6; margin-bottom: var(--space-xs);">{uc['desc']}</p>
+            <div class="card" style="padding: var(--space-xl); background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); display: flex; flex-direction: column;">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #38BDF8; background: rgba(56, 189, 248, 0.1); padding: 4px 10px; border-radius: 999px;">PRACTICAL APPLICATION</span>
+              </div>
+              <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-xs);"><span style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #94A3B8; font-weight: 600; margin-bottom: 2px;">Application Name</span>{uc['title']}</h3>
+              <div style="margin-bottom: var(--space-md);">
+                <strong style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #94A3B8; font-weight: 600; margin-bottom: 2px;">Business Scenario &amp; How It Is Used:</strong>
+                <p style="color: #94A3B8; font-size: 0.925rem; line-height: 1.6; margin: 0;">{uc['desc']}</p>
+              </div>
               {ex_box}
             </div>
             """)
         use_cases_html = f"""
-  <!-- Section: Practical Use Cases -->
-  <section style="padding: var(--space-4xl) 0; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <!-- Section 3: Practical Applications -->
+  <section style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
         <span class="eyebrow-ags" style="color: #38BDF8;">PRACTICAL APPLICATIONS</span>
-        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Real-World Enterprise Use Cases</h2>
+        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Real-World Enterprise Applications &amp; Workflows</h2>
         <p style="color: #94A3B8; font-size: 1.05rem;">Realistic ways organizations apply these capabilities to solve tangible operational challenges.</p>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
@@ -676,36 +697,42 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   </section>
         """
 
-    # Workflow Steps HTML
+    # 4. Engineering Methodology HTML (5-Stage Lifecycle)
     steps_html = []
     for st in workflow_steps:
         steps_html.append(f"""
-        <div style="background: #111D33; border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); padding: var(--space-xl); position: relative;">
-          <span style="font-size: 1.8rem; font-weight: 900; color: rgba(56, 189, 248, 0.3); position: absolute; top: var(--space-md); right: var(--space-md);">{st['step']}</span>
-          <h4 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-sm);">{st['title']}</h4>
-          <p style="color: #94A3B8; font-size: 0.925rem; line-height: 1.6;">{st['desc']}</p>
+        <div class="subpage-methodology-card">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+            <span class="subpage-methodology-badge">{st['step']}</span>
+            <div style="width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; color: #38BDF8;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+          </div>
+          <h4 class="subpage-methodology-title">{st['title']}</h4>
+          <p class="subpage-methodology-desc">{st['desc']}</p>
         </div>
         """)
     workflow_html = "".join(steps_html)
 
-    # System Integrations HTML
+    # 5. System Connectivity HTML
     integrations_html = ""
     if integrations:
         int_cards = []
         for item in integrations:
             int_cards.append(f"""
-            <div style="background: rgba(11, 25, 44, 0.6); border: 1px solid rgba(56, 189, 248, 0.16); border-radius: var(--radius-md); padding: var(--space-lg);">
-              <h4 style="font-size: 1.05rem; font-weight: 700; color: #38BDF8; margin-bottom: 6px;">{item['category']}</h4>
-              <p style="color: #CBD5E1; font-size: 0.9rem; line-height: 1.5; margin: 0;">{item['details']}</p>
+            <div style="background: rgba(11, 25, 44, 0.65); border: 1px solid rgba(56, 189, 248, 0.16); border-radius: var(--radius-md); padding: var(--space-lg);">
+              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #38BDF8; background: rgba(56, 189, 248, 0.1); padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px;">Integration Boundary</span>
+              <h4 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin-bottom: 6px;">{item['category']}</h4>
+              <p style="color: #CBD5E1; font-size: 0.9rem; line-height: 1.55; margin: 0;">{item['details']}</p>
             </div>
             """)
         integrations_html = f"""
-  <!-- Section: System Integrations -->
-  <section style="padding: var(--space-4xl) 0; background: rgba(11, 25, 44, 0.35); border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <!-- Section 5: System Connectivity -->
+  <section style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
         <span class="eyebrow-ags" style="color: #38BDF8;">SYSTEM CONNECTIVITY</span>
-        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Enterprise System Integration</h2>
+        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Enterprise System Connectivity &amp; Data Flow</h2>
         <p style="color: #94A3B8; font-size: 1.05rem;">Configurable interfaces connecting with your existing enterprise infrastructure, databases, and APIs.</p>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-lg);">
@@ -715,48 +742,49 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   </section>
         """
 
-    # Considerations & Governance HTML
+    # 6. Deployment & Oversight HTML
     considerations_html = ""
     if considerations:
         cons_cards = []
         for c in considerations:
             cons_cards.append(f"""
-            <div style="padding: var(--space-lg); background: rgba(15, 23, 42, 0.55); border-radius: var(--radius-md); border-left: 3px solid #38BDF8; border-top: 1px solid rgba(255,255,255,0.06); border-right: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <div style="padding: var(--space-lg); background: rgba(15, 23, 42, 0.6); border-radius: var(--radius-md); border-left: 3px solid #38BDF8; border-top: 1px solid rgba(255,255,255,0.06); border-right: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06);">
+              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #94A3B8; display: inline-block; margin-bottom: 4px;">Governance &amp; Controls</span>
               <h4 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin-bottom: 6px;">{c['title']}</h4>
-              <p style="color: #94A3B8; font-size: 0.9rem; line-height: 1.5; margin: 0;">{c['desc']}</p>
+              <p style="color: #94A3B8; font-size: 0.9rem; line-height: 1.55; margin: 0;">{c['desc']}</p>
             </div>
             """)
         considerations_html = f"""
-  <!-- Section: Implementation Considerations & Governance -->
-  <section style="padding: var(--space-4xl) 0; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <!-- Section 6: Deployment & Oversight -->
+  <section style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
         <span class="eyebrow-ags" style="color: #38BDF8;">DEPLOYMENT &amp; OVERSIGHT</span>
-        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Implementation Considerations &amp; Governance</h2>
+        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Implementation Lifecycle, Security &amp; Human Oversight</h2>
         <p style="color: #94A3B8; font-size: 1.05rem;">Prerequisites, security safeguards, and human review gates required for dependable execution.</p>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-lg);">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-lg);">
         {"".join(cons_cards)}
       </div>
     </div>
   </section>
         """
 
-    # Outcomes HTML
+    # 7. Potential Business Benefits HTML
     outcomes_html = []
     for out in outcomes:
         outcomes_html.append(f"""
-        <div style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: var(--radius-lg); padding: var(--space-xl);">
+        <div style="background: rgba(15, 23, 42, 0.55); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: var(--radius-lg); padding: var(--space-xl);">
           <div style="width: 36px; height: 36px; border-radius: 8px; background: rgba(56, 189, 248, 0.15); display: flex; align-items: center; justify-content: center; color: #38BDF8; margin-bottom: var(--space-md);">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
           <h4 style="font-size: 1.1rem; font-weight: 700; color: #FFFFFF; margin-bottom: 6px;">{out['title']}</h4>
-          <p style="color: #94A3B8; font-size: 0.9rem; line-height: 1.5;">{out['desc']}</p>
+          <p style="color: #94A3B8; font-size: 0.9rem; line-height: 1.55;">{out['desc']}</p>
         </div>
         """)
     outcomes_grid_html = "".join(outcomes_html)
 
-    # FAQs HTML
+    # 8. Frequently Asked Questions HTML
     faqs_html = ""
     if faqs:
         faq_items = []
@@ -773,12 +801,12 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
             </details>
             """)
         faqs_html = f"""
-  <!-- Section: Frequently Asked Questions -->
-  <section style="padding: var(--space-4xl) 0; background: rgba(11, 25, 44, 0.4); border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <!-- Section 8: Frequently Asked Questions -->
+  <section style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container" style="max-width: 860px; margin: 0 auto;">
       <div style="text-align: center; margin-bottom: var(--space-3xl);">
         <span class="eyebrow-ags" style="color: #38BDF8;">FREQUENTLY ASKED QUESTIONS</span>
-        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Common Questions About This Service</h2>
+        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Frequently Asked Questions</h2>
         <p style="color: #94A3B8; font-size: 1.05rem;">Practical guidance regarding project scope, integrations, and operational requirements.</p>
       </div>
       <div>
@@ -788,14 +816,14 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   </section>
         """
 
-    # Related Links HTML
+    # 9. Connected Ecosystem HTML
     related_html = []
     for rel in related_links:
         related_html.append(f"""
-        <a href="{root_prefix}{rel['link']}" class="card" style="padding: var(--space-lg); text-decoration: none; display: block; transition: all 0.2s ease;">
-          <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #38BDF8; font-weight: 700;">{rel.get('tag', 'Service Domain')}</span>
+        <a href="{root_prefix}{rel['link']}" class="card" style="padding: var(--space-lg); text-decoration: none; display: block; transition: all 0.2s ease; background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg);">
+          <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #38BDF8; font-weight: 700; background: rgba(56, 189, 248, 0.1); padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 6px;">{rel.get('tag', 'Service Domain')}</span>
           <h4 style="font-size: 1.1rem; color: #FFFFFF; margin: 6px 0 4px;">{rel['title']} &rarr;</h4>
-          <p style="color: #94A3B8; font-size: 0.85rem; margin: 0; line-height: 1.4;">{rel['desc']}</p>
+          <p style="color: #94A3B8; font-size: 0.85rem; margin: 0; line-height: 1.45;">{rel['desc']}</p>
         </a>
         """)
     related_grid_html = "".join(related_html)
@@ -845,7 +873,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   }}
   </script>
 </head>
-<body>
+<body style="background: #08111F; color: #E2E8F0;">
 
 {get_shared_header(root_prefix, active_sec)}
 
@@ -892,20 +920,20 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   </section>
 
   <!-- Section 1: Strategic Overview -->
-  <section class="section-overview-ags" style="padding: var(--space-4xl) 0; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <section style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
-      <div class="overview-content-centered" style="max-width: 840px;">
-        <span class="eyebrow-ags">STRATEGIC OVERVIEW</span>
-        <h2 class="overview-heading-ags" style="font-size: 2rem; margin-bottom: var(--space-lg);">Engineered for Seamless Operations &amp; Measurable Outcomes</h2>
-        <div class="overview-body-wrap">
+      <div style="max-width: 860px; margin: 0 auto; text-align: center;">
+        <span class="eyebrow-ags" style="color: #38BDF8;">STRATEGIC OVERVIEW</span>
+        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 20px; line-height: 1.3;">Engineered for Seamless Operations &amp; Measurable Outcomes</h2>
+        <div style="text-align: left;">
           {overview_html}
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 2: Core Capabilities -->
-  <section style="padding: var(--space-4xl) 0; background: rgba(11, 25, 44, 0.4); border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <!-- Section 2: Key Capabilities -->
+  <section style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
         <span class="eyebrow-ags" style="color: #38BDF8;">KEY CAPABILITIES</span>
@@ -919,13 +947,13 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
     </div>
   </section>
 
-  <!-- Section 3: Operational Challenges & Solutions -->
-  <section style="padding: var(--space-4xl) 0; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <!-- Section 3: Problem & Resolution -->
+  <section style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
         <span class="eyebrow-ags" style="color: #38BDF8;">PROBLEM &amp; RESOLUTION</span>
-        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Addressing Critical Operational Friction</h2>
-        <p style="color: #94A3B8; font-size: 1.05rem;">How Nova Arc overcomes systemic process inefficiencies and technology bottlenecks.</p>
+        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Operational Challenges &amp; Technical Resolutions</h2>
+        <p style="color: #94A3B8; font-size: 1.05rem;">How Nova Arc overcomes systemic process inefficiencies, operational friction, and technology bottlenecks.</p>
       </div>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
@@ -936,16 +964,16 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
 
   {use_cases_html}
 
-  <!-- Section 5: Implementation Lifecycle -->
-  <section style="padding: var(--space-4xl) 0; background: rgba(11, 25, 44, 0.4); border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <!-- Section 4: Engineering Methodology (5-Stage Lifecycle) -->
+  <section style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
         <span class="eyebrow-ags" style="color: #38BDF8;">ENGINEERING METHODOLOGY</span>
-        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Implementation &amp; Delivery Approach</h2>
-        <p style="color: #94A3B8; font-size: 1.05rem;">A disciplined, agile deployment framework ensuring stability, security, and immediate operational value.</p>
+        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Disciplined 5-Stage Engineering Lifecycle</h2>
+        <p style="color: #94A3B8; font-size: 1.05rem;">A structured implementation approach tailored to your systems, workflows, and governance requirements.</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-lg);">
+      <div class="subpage-methodology-grid">
         {workflow_html}
       </div>
     </div>
@@ -955,12 +983,12 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
 
   {considerations_html}
 
-  <!-- Section 8: Measured Value & Outcomes -->
-  <section style="padding: var(--space-4xl) 0; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <!-- Section 7: Potential Business Benefits -->
+  <section style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
         <span class="eyebrow-ags" style="color: #38BDF8;">POTENTIAL BUSINESS BENEFITS</span>
-        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Operational Improvements &amp; Value</h2>
+        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Operational Advantages &amp; Measured Business Value</h2>
         <p style="color: #94A3B8; font-size: 1.05rem;">Streamlining repetitive administrative overhead into sustained operational velocity.</p>
       </div>
 
@@ -972,12 +1000,12 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
 
   {faqs_html}
 
-  <!-- Section 10: Related Technology & Ecosystem Links -->
-  <section style="padding: var(--space-4xl) 0; background: rgba(11, 25, 44, 0.4); border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <!-- Section 9: Connected Ecosystem -->
+  <section style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
         <span class="eyebrow-ags" style="color: #38BDF8;">CONNECTED ECOSYSTEM</span>
-        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Explore Related Solutions &amp; Capabilities</h2>
+        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Cross-Domain Enterprise Ecosystem Integration</h2>
         <p style="color: #94A3B8; font-size: 1.05rem;">Integrate complementary enterprise modules across our four core service domains.</p>
       </div>
 
@@ -1017,4 +1045,3 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
 """
     return html
 
-print("Shared templates loaded successfully.")
