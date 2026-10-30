@@ -1417,6 +1417,13 @@ function initSiteSearchModal() {
       tags: ['industries', 'foodtech', 'retail', 'manufacturing', 'logistics', 'healthcare']
     },
     {
+      title: 'About Nova Arc',
+      category: 'Company',
+      desc: 'Enterprise technology partner headquartered in Hyderabad. Systems engineering across commerce, enterprise systems, IoT, and AI.',
+      url: rootPrefix + 'about.html',
+      tags: ['about', 'company', 'hyderabad', 'engineering', 'leadership', 'principles', 'mission']
+    },
+    {
       title: 'Connect With Us & Directory',
       category: 'Contact',
       desc: 'Get in touch with Nova Arc. Hyderabad headquarters, direct departmental emails, and phone contact.',

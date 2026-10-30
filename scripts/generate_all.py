@@ -63,10 +63,10 @@ def replace_header_and_footer(html_content, root_prefix, active_section=""):
     # Clean up any duplicate script tags and normalize main.js and style.css
     html_content = re.sub(r'<script[^>]*main\.js[^>]*></script>', '', html_content)
     html_content = re.sub(r'<!--\s*Scripts\s*-->\s*', '', html_content)
-    html_content = re.sub(r'\s*</body>', f'\n\n  <!-- Scripts -->\n  <script src="{root_prefix}js/main.js?v=3.4"></script>\n</body>', html_content)
+    html_content = re.sub(r'\s*</body>', f'\n\n  <!-- Scripts -->\n  <script src="{root_prefix}js/main.js?v=3.5"></script>\n</body>', html_content)
 
-    # Normalize style.css to v=3.4
-    html_content = re.sub(r'href="[^"]*css/style\.css(\?v=[^"]*)?"', f'href="{root_prefix}css/style.css?v=3.4"', html_content)
+    # Normalize style.css to v=3.5
+    html_content = re.sub(r'href="[^"]*css/style\.css(\?v=[^"]*)?"', f'href="{root_prefix}css/style.css?v=3.5"', html_content)
 
     return html_content
 
@@ -226,6 +226,397 @@ def generate_directory_indexes():
         with open(retail_src, "r", encoding="utf-8") as f:
             write_page("industries/retail.html", f.read())
 
+def generate_about_page():
+    print("\n--- Generating About Us Page (about.html) ---")
+    header_html = get_shared_header("", "")
+    footer_html = get_shared_footer("")
+
+    about_html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Nova Arc | Enterprise Technology &amp; Systems Engineering</title>
+  <meta name="description" content="Nova Arc is an enterprise technology engineering firm headquartered in Hyderabad. We build connected commerce platforms, enterprise business solutions, real-time IoT monitoring, and governed AI automation.">
+  <link rel="canonical" href="https://novaarctech.in/about.html">
+
+  <!-- SEO & Social Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nova Arc Technologies">
+  <meta property="og:title" content="About Nova Arc | Enterprise Technology &amp; Systems Engineering">
+  <meta property="og:description" content="Nova Arc is an enterprise technology engineering firm headquartered in Hyderabad. We build connected commerce platforms, enterprise business solutions, real-time IoT monitoring, and governed AI automation.">
+  <meta property="og:url" content="https://novaarctech.in/about.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Nova Arc | Enterprise Technology &amp; Systems Engineering">
+  <meta name="twitter:description" content="Nova Arc is an enterprise technology engineering firm headquartered in Hyderabad. We build connected commerce platforms, enterprise business solutions, real-time IoT monitoring, and governed AI automation.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/nova-arc-logo.png">
+
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=3.5">
+
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NOVAARC001"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag('js', new Date());
+    gtag('config', 'G-NOVAARC001', {{
+      'anonymize_ip': true,
+      'cookie_flags': 'SameSite=None;Secure'
+    }});
+  </script>
+</head>
+<body>
+
+{header_html}
+
+  <main>
+    <!-- ========================================================================
+         HERO SECTION: ABOUT NOVA ARC (2-COLUMN BALANCED)
+         ======================================================================== -->
+    <section class="solutions-hero-ags" style="padding-top: calc(70px + var(--space-3xl)); padding-bottom: var(--space-4xl);">
+      <div class="container">
+        <div class="hero-subpage-grid">
+          <!-- Left Column -->
+          <div class="hero-left-col">
+            <div class="hero-category-badge">
+              <span class="badge-dot"></span>
+              COMPANY OVERVIEW &bull; ENTERPRISE SYSTEMS ENGINEERING
+            </div>
+
+            <h1 class="hero-title">
+              Engineering Connected Systems for the Modern Enterprise
+            </h1>
+
+            <p class="hero-description">
+              Nova Arc is an enterprise technology engineering firm headquartered in Laxmi Cyber City, Hyderabad. We design, build, and deploy high-performance software platforms across digital commerce, enterprise operational systems, intelligent IoT telemetry, and governed artificial intelligence.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="contact.html" class="btn btn-consultation-ags">
+                <span>Discuss Your Project</span>
+                <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              </a>
+              <a href="services.html" class="btn btn-outline-white">
+                <span>Explore Services</span>
+              </a>
+              <a href="tel:04046146093" class="btn btn-outline-white" style="border-color: rgba(56, 189, 248, 0.4); color: #38BDF8;">
+                <span>Call 040-46146093</span>
+              </a>
+            </div>
+
+            <div class="hero-highlights-strip">
+              <span class="hero-highlight-pill">&bull; 4 Integrated Technology Domains</span>
+              <span class="hero-highlight-pill">&bull; Deterministic Architecture</span>
+              <span class="hero-highlight-pill">&bull; Human-in-the-Loop Governance</span>
+              <span class="hero-highlight-pill">&bull; Hyderabad HQ &bull; Kondapur</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Enterprise Telemetry & Architectural Profile -->
+          <div class="hero-visual-col">
+            <div class="hero-arch-window">
+              <div class="arch-window-topbar">
+                <div class="arch-window-dots">
+                  <span class="arch-dot red"></span>
+                  <span class="arch-dot yellow"></span>
+                  <span class="arch-dot green"></span>
+                </div>
+                <div class="arch-window-title">Nova Arc &bull; Enterprise Profile</div>
+                <div class="arch-window-status">
+                  <span class="arch-pulse-dot"></span>
+                  OPERATIONAL
+                </div>
+              </div>
+
+              <div class="arch-window-body">
+                <div class="arch-stage-card">
+                  <div class="arch-stage-header">
+                    <span class="arch-stage-num">01</span>
+                    <span class="arch-stage-name">Digital Commerce &amp; Supply Chain</span>
+                    <span class="arch-stage-tag tag-ready">Integrated</span>
+                  </div>
+                  <div class="arch-stage-desc">High-performance B2B/B2C storefronts, dynamic ordering, and inventory orchestration.</div>
+                </div>
+
+                <div class="arch-stage-card">
+                  <div class="arch-stage-header">
+                    <span class="arch-stage-num">02</span>
+                    <span class="arch-stage-name">Enterprise Business Solutions</span>
+                    <span class="arch-stage-tag tag-active">Connected</span>
+                  </div>
+                  <div class="arch-stage-desc">Unified CRM, modern HRMS, approval hierarchies, and cross-departmental data sync.</div>
+                </div>
+
+                <div class="arch-stage-card">
+                  <div class="arch-stage-header">
+                    <span class="arch-stage-num">03</span>
+                    <span class="arch-stage-name">Intelligent Monitoring &amp; IoT</span>
+                    <span class="arch-stage-tag tag-ready">Live Stream</span>
+                  </div>
+                  <div class="arch-stage-desc">Sub-second telemetry ingestion, operational dashboards, and event-based alerts.</div>
+                </div>
+
+                <div class="arch-stage-card">
+                  <div class="arch-stage-header">
+                    <span class="arch-stage-num">04</span>
+                    <span class="arch-stage-name">AI &amp; Governed Automation</span>
+                    <span class="arch-stage-tag tag-active">Governed</span>
+                  </div>
+                  <div class="arch-stage-desc">Autonomous task orchestration, document processing, and strict human approvals.</div>
+                </div>
+
+                <div class="arch-telemetry-strip">
+                  <div class="arch-telemetry-cell">
+                    <div class="telemetry-label">Architecture</div>
+                    <div class="telemetry-val">Deterministic</div>
+                  </div>
+                  <div class="arch-telemetry-cell">
+                    <div class="telemetry-label">Security</div>
+                    <div class="telemetry-val">Role-Based RBAC</div>
+                  </div>
+                  <div class="arch-telemetry-cell">
+                    <div class="telemetry-label">Availability</div>
+                    <div class="telemetry-val">99.9% Target</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 1: MISSION & PHILOSOPHY
+         ======================================================================== -->
+    <section class="section" style="background: #FFFFFF; border-bottom: 1px solid #E2E8F0;">
+      <div class="container">
+        <div style="max-width: 860px; margin: 0 auto; text-align: center;">
+          <span class="eyebrow-ags" style="color: #1F6FEB; font-weight: 700; letter-spacing: 0.1em; font-size: 0.85rem;">OUR MISSION</span>
+          <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 800; color: #0B2545; margin: 12px 0 20px; letter-spacing: -0.02em;">
+            Building Deterministic Technology That Connects Every Facet of Your Enterprise
+          </h2>
+          <p style="color: #475569; font-size: 1.12rem; line-height: 1.7; margin-bottom: 24px;">
+            Modern enterprises face an operational dilemma: inflexible legacy systems that cannot keep up with digital demands, and experimental technologies that lack the reliability required for mission-critical operations.
+          </p>
+          <p style="color: #64748B; font-size: 1.02rem; line-height: 1.7;">
+            At Nova Arc, we believe technology should be dependable, verifiable, and purpose-built. We bridge front-end customer touchpoints directly with backend transactional systems, creating seamless operational continuity that scales with your business.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 2: CORE ENGINEERING PRINCIPLES
+         ======================================================================== -->
+    <section class="section" style="background: #F8FAFC; border-bottom: 1px solid #E2E8F0;">
+      <div class="container">
+        <div class="section-header-centered">
+          <span class="eyebrow-ags">OUR PHILOSOPHY</span>
+          <h2 class="section-heading-ags">Four Core Engineering Principles</h2>
+          <p class="section-desc-ags">
+            The foundational architectural standards that guide every software system, integration connector, and AI workflow we engineer.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-top: 40px;">
+          <!-- Principle 1 -->
+          <div class="card" style="padding: 32px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+            <div style="width: 48px; height: 48px; border-radius: 10px; background: rgba(31, 111, 235, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="2.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: #0B2545; margin-bottom: 12px;">Deterministic Design</h3>
+            <p style="font-size: 0.92rem; color: #475569; line-height: 1.6; margin: 0;">
+              Production systems cannot rely on guesswork. We design deterministic finite state machines, comprehensive error recovery routines, and rigorous idempotency across every data transaction.
+            </p>
+          </div>
+
+          <!-- Principle 2 -->
+          <div class="card" style="padding: 32px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+            <div style="width: 48px; height: 48px; border-radius: 10px; background: rgba(31, 111, 235, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: #0B2545; margin-bottom: 12px;">Operational Continuity</h3>
+            <p style="font-size: 0.92rem; color: #475569; line-height: 1.6; margin: 0;">
+              Eliminate information silos. We engineer bi-directional connectors that synchronize digital storefronts, warehouse inventory, billing ledgers, and CRM records without manual re-entry.
+            </p>
+          </div>
+
+          <!-- Principle 3 -->
+          <div class="card" style="padding: 32px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+            <div style="width: 48px; height: 48px; border-radius: 10px; background: rgba(31, 111, 235, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="2.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: #0B2545; margin-bottom: 12px;">Real-Time Observability</h3>
+            <p style="font-size: 0.92rem; color: #475569; line-height: 1.6; margin: 0;">
+              Operational blind spots lead to costly downtime. We embed continuous telemetry, IoT sensor feeds, and automated threshold alerts directly into intuitive executive dashboards.
+            </p>
+          </div>
+
+          <!-- Principle 4 -->
+          <div class="card" style="padding: 32px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+            <div style="width: 48px; height: 48px; border-radius: 10px; background: rgba(31, 111, 235, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: #0B2545; margin-bottom: 12px;">Governed AI &amp; Oversight</h3>
+            <p style="font-size: 0.92rem; color: #475569; line-height: 1.6; margin: 0;">
+              AI must be auditable and safe. We build intelligent agents and document processing pipelines bounded by deterministic business rules, strict RBAC, and human-in-the-loop signoffs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 3: HOW WE DELIVER (5-STAGE METHODOLOGY)
+         ======================================================================== -->
+    <section class="section" style="background: #FFFFFF; border-bottom: 1px solid #E2E8F0;">
+      <div class="container">
+        <div class="section-header-centered">
+          <span class="eyebrow-ags">STRUCTURED LIFECYCLE</span>
+          <h2 class="section-heading-ags">Our Engineering &amp; Delivery Methodology</h2>
+          <p class="section-desc-ags">
+            A disciplined, transparent delivery framework engineered to minimize operational disruption and guarantee measurable ROI.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 40px;">
+          <!-- Stage 1 -->
+          <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 24px;">
+            <div style="font-size: 0.8rem; font-weight: 800; color: #1F6FEB; text-transform: uppercase; margin-bottom: 8px;">Phase 01</div>
+            <h4 style="font-size: 1.1rem; color: #0B2545; margin-bottom: 8px;">Discovery &amp; Systems Audit</h4>
+            <p style="font-size: 0.88rem; color: #64748B; line-height: 1.5; margin: 0;">Detailed assessment of your current workflows, APIs, legacy software, and operational pain points.</p>
+          </div>
+
+          <!-- Stage 2 -->
+          <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 24px;">
+            <div style="font-size: 0.8rem; font-weight: 800; color: #1F6FEB; text-transform: uppercase; margin-bottom: 8px;">Phase 02</div>
+            <h4 style="font-size: 1.1rem; color: #0B2545; margin-bottom: 8px;">Architecture Blueprint</h4>
+            <p style="font-size: 0.88rem; color: #64748B; line-height: 1.5; margin: 0;">Creation of comprehensive data schemas, state transition diagrams, interface mocks, and integration specs.</p>
+          </div>
+
+          <!-- Stage 3 -->
+          <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 24px;">
+            <div style="font-size: 0.8rem; font-weight: 800; color: #1F6FEB; text-transform: uppercase; margin-bottom: 8px;">Phase 03</div>
+            <h4 style="font-size: 1.1rem; color: #0B2545; margin-bottom: 8px;">Modular Development</h4>
+            <p style="font-size: 0.88rem; color: #64748B; line-height: 1.5; margin: 0;">Agile software engineering with automated unit testing, continuous integration, and security scanning.</p>
+          </div>
+
+          <!-- Stage 4 -->
+          <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 24px;">
+            <div style="font-size: 0.8rem; font-weight: 800; color: #1F6FEB; text-transform: uppercase; margin-bottom: 8px;">Phase 04</div>
+            <h4 style="font-size: 1.1rem; color: #0B2545; margin-bottom: 8px;">Staged Integration</h4>
+            <p style="font-size: 0.88rem; color: #64748B; line-height: 1.5; margin: 0;">Safe parallel testing, canary deployments, and automated validation alongside legacy systems.</p>
+          </div>
+
+          <!-- Stage 5 -->
+          <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 24px;">
+            <div style="font-size: 0.8rem; font-weight: 800; color: #1F6FEB; text-transform: uppercase; margin-bottom: 8px;">Phase 05</div>
+            <h4 style="font-size: 1.1rem; color: #0B2545; margin-bottom: 8px;">Telemetry &amp; Scaling</h4>
+            <p style="font-size: 0.88rem; color: #64748B; line-height: 1.5; margin: 0;">Continuous observability, automated incident response, performance profiling, and capacity scaling.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 4: HEADQUARTERS & GLOBAL REACH
+         ======================================================================== -->
+    <section class="section" style="background: #F8FAFC; border-bottom: 1px solid #E2E8F0;">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 36px; align-items: center;">
+          <div>
+            <span class="eyebrow-ags">HYDERABAD HEADQUARTERS</span>
+            <h2 class="section-heading-ags" style="margin-bottom: 16px;">Engineered in Hyderabad’s Technology Corridor</h2>
+            <p style="color: #475569; font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px;">
+              Nova Arc is located in Laxmi Cyber City, Whitefields, Kondapur &mdash; the heart of Hyderabad’s enterprise technology and innovation ecosystem.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 24px;">
+              <div style="display: flex; gap: 12px; align-items: flex-start;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="2.5" style="flex-shrink: 0; margin-top: 2px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <div>
+                  <strong style="color: #0B2545; display: block;">Office Address</strong>
+                  <span style="color: #64748B; font-size: 0.92rem;">BP Raju Marg, Laxmi Cyber City, Whitefields, Kondapur, Telangana &ndash; 500081</span>
+                </div>
+              </div>
+              <div style="display: flex; gap: 12px; align-items: flex-start;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="2.5" style="flex-shrink: 0; margin-top: 2px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <div>
+                  <strong style="color: #0B2545; display: block;">Direct Telephone</strong>
+                  <a href="tel:04046146093" style="color: #1F6FEB; text-decoration: none; font-size: 0.92rem; font-weight: 600;">040-46146093</a>
+                </div>
+              </div>
+              <div style="display: flex; gap: 12px; align-items: flex-start;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="2.5" style="flex-shrink: 0; margin-top: 2px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <div>
+                  <strong style="color: #0B2545; display: block;">Electronic Mail</strong>
+                  <span style="color: #64748B; font-size: 0.92rem;">info@novaarctech.in &bull; support@novaarctech.in</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: linear-gradient(135deg, #0B2545 0%, #0F172A 100%); border-radius: 16px; padding: 36px; color: #FFFFFF; border: 1px solid rgba(56, 189, 248, 0.3);">
+            <span style="color: #38BDF8; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 8px;">GET IN TOUCH</span>
+            <h3 style="font-size: 1.6rem; font-weight: 800; color: #FFFFFF; margin-bottom: 12px;">Partner with Nova Arc</h3>
+            <p style="color: #CBD5E1; font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">
+              Ready to modernize your operations or integrate intelligent automation into your tech stack? Our engineering leads are ready to collaborate.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <a href="contact.html" class="btn btn-primary" style="justify-content: center; padding: 12px 20px;">
+                <span>Start a Project Discussion</span>
+                <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              </a>
+              <a href="connect/project-enquiry.html" class="btn btn-outline-white" style="justify-content: center; padding: 12px 20px;">
+                <span>Detailed Project RFP Form</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 5: BOTTOM CALL-TO-ACTION BANNER
+         ======================================================================== -->
+    <section class="section" style="background: linear-gradient(135deg, #0B2545 0%, #0284C7 100%); padding: 60px 0; text-align: center; color: #FFFFFF;">
+      <div class="container" style="max-width: 800px;">
+        <h2 style="font-size: clamp(2rem, 3.2vw, 2.6rem); font-weight: 800; color: #FFFFFF; margin-bottom: 14px;">
+          Build Smarter. Operate Better. Scale Faster.
+        </h2>
+        <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px;">
+          Join forward-thinking enterprises that trust Nova Arc to power their digital commerce, enterprise systems, and intelligent automation.
+        </p>
+        <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+          <a href="contact.html" class="btn btn-consultation-ags" style="background: #FFFFFF; color: #0B2545;">
+            <span>Connect With Our Team</span>
+            <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+          <a href="solutions.html" class="btn btn-outline-white" style="border-color: #FFFFFF; color: #FFFFFF;">
+            <span>Explore Solutions</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+{footer_html}
+
+  <!-- Scripts -->
+  <script src="js/main.js?v=3.5"></script>
+</body>
+</html>
+"""
+    write_page("about.html", about_html)
+
 def generate_404_page():
     print("\n--- Generating 404 Error Page ---")
     header_html = get_shared_header("", "")
@@ -247,7 +638,7 @@ def generate_404_page():
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=3.4">
+  <link rel="stylesheet" href="css/style.css?v=3.5">
 </head>
 <body>
 
@@ -308,7 +699,7 @@ def generate_404_page():
 {footer_html}
 
   <!-- Scripts -->
-  <script src="js/main.js?v=3.4"></script>
+  <script src="js/main.js?v=3.5"></script>
 </body>
 </html>
 """
@@ -320,6 +711,7 @@ def generate_sitemap(all_subpages):
         # Root & Core Landing Pages
         ("https://novaarctech.in/", "1.0", "weekly"),
         ("https://novaarctech.in/index.html", "1.0", "weekly"),
+        ("https://novaarctech.in/about.html", "0.85", "monthly"),
         ("https://novaarctech.in/solutions.html", "0.9", "weekly"),
         ("https://novaarctech.in/services.html", "0.9", "weekly"),
         ("https://novaarctech.in/technology.html", "0.9", "weekly"),
@@ -400,6 +792,13 @@ def update_search_index(all_subpages):
       tags: ['industries', 'foodtech', 'retail', 'manufacturing', 'logistics', 'healthcare']
     }""")
     entries.append("""    {
+      title: 'About Nova Arc',
+      category: 'Company',
+      desc: 'Enterprise technology partner headquartered in Hyderabad. Systems engineering across commerce, enterprise systems, IoT, and AI.',
+      url: rootPrefix + 'about.html',
+      tags: ['about', 'company', 'hyderabad', 'engineering', 'leadership', 'principles', 'mission']
+    }""")
+    entries.append("""    {
       title: 'Connect With Us & Directory',
       category: 'Contact',
       desc: 'Get in touch with Nova Arc. Hyderabad headquarters, direct departmental emails, and phone contact.',
@@ -459,6 +858,7 @@ def main():
     print("NOVA ARC - FULL MULTI-PAGE WEBSITE GENERATOR")
     print("==================================================================")
     all_subpages = generate_all_subpages()
+    generate_about_page()
     update_root_pages()
     generate_directory_indexes()
     generate_404_page()

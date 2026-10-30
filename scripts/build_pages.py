@@ -407,6 +407,7 @@ def get_shared_footer(root_prefix):
         <div>
           <h4 class="footer-col-title">Company</h4>
           <ul class="footer-links-list">
+            <li><a href="{root_prefix}about.html" class="footer-link">About Nova Arc</a></li>
             <li><a href="{root_prefix}technology.html" class="footer-link">Technology Platform</a></li>
             <li><a href="{root_prefix}industries.html" class="footer-link">Industries We Serve</a></li>
             <li><a href="{root_prefix}contact.html" class="footer-link">Connect With Us</a></li>
@@ -472,6 +473,108 @@ def get_shared_footer(root_prefix):
     </div>
   </footer>
 """
+
+def get_hero_highlights_html(capabilities):
+    """Generates 3 compact highlights pills from the page capabilities."""
+    pills = []
+    icons = [
+        '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>',
+        '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+        '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
+        '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>'
+    ]
+    
+    for idx, cap in enumerate(capabilities[:3]):
+        icon = icons[idx % len(icons)]
+        title = cap['title'].split('&')[0].strip()
+        pills.append(f'<span class="hero-highlight-pill">{icon} {title}</span>')
+    
+    return f'<div class="hero-highlights-strip">{"".join(pills)}</div>' if pills else ""
+
+def get_hero_visual_html(rel_path, page_title, category_badge, capabilities):
+    """
+    Generates a domain-specific, interactive glassmorphic system architecture preview window
+    for the right-hand column of the subpage hero section.
+    """
+    # Determine window title and status based on path and subject
+    if "solutions/" in rel_path:
+        arch_title = "Enterprise Solution Flow"
+        badge_text = "● CONNECTED SYSTEM"
+    elif "technology/" in rel_path:
+        arch_title = "Platform Engine Stack"
+        badge_text = "● RUNTIME READY"
+    elif "industries/" in rel_path:
+        arch_title = "Industry Operations Flow"
+        badge_text = "● DOMAIN VALIDATED"
+    elif "connect/" in rel_path:
+        arch_title = "Direct Concierge Intake"
+        badge_text = "● DIRECT DISPATCH"
+    else:
+        arch_title = "Service Architecture"
+        badge_text = "● ACTIVE WORKFLOW"
+
+    tag_classes = ["synced", "active", "governed", "secure"]
+    tag_labels = ["Synchronized", "Orchestrated", "Governed", "Automated"]
+
+    stage_items = []
+    # Build up to 4 pipeline stages from capabilities or fallbacks
+    for idx, cap in enumerate(capabilities[:4]):
+        num = idx + 1
+        name = cap['title']
+        sub = cap['desc'][:68] + "..." if len(cap['desc']) > 70 else cap['desc']
+        tag_cls = tag_classes[idx % len(tag_classes)]
+        tag_lbl = tag_labels[idx % len(tag_labels)]
+
+        stage_items.append(f"""
+          <div class="hero-stage-item">
+            <div class="hero-stage-left">
+              <span class="hero-stage-num">{num}</span>
+              <div>
+                <div class="hero-stage-name">{name}</div>
+                <div class="hero-stage-sub">{sub}</div>
+              </div>
+            </div>
+            <span class="hero-stage-tag {tag_cls}">{tag_lbl}</span>
+          </div>
+        """)
+
+    stages_html = "".join(stage_items)
+
+    return f"""
+      <div class="hero-arch-window">
+        <div class="hero-arch-topbar">
+          <div class="hero-arch-dots">
+            <span class="hero-arch-dot red"></span>
+            <span class="hero-arch-dot amber"></span>
+            <span class="hero-arch-dot green"></span>
+          </div>
+          <span class="hero-arch-title">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            {arch_title}
+          </span>
+          <span class="hero-arch-badge">{badge_text}</span>
+        </div>
+        <div class="hero-arch-body">
+          <div class="hero-pipeline-stages">
+            {stages_html}
+          </div>
+          <div class="hero-arch-footer">
+            <div class="hero-arch-footer-item">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Latency: <strong>&lt; 250ms</strong></span>
+            </div>
+            <div class="hero-arch-footer-item">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Security: <strong>Zero-Trust</strong></span>
+            </div>
+            <div class="hero-arch-footer-item">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              <span>Uptime: <strong>99.99%</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    """
 
 def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_subtitle,
                      breadcrumbs, overview_paragraphs, capabilities, challenges,
@@ -697,6 +800,10 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
         """)
     related_grid_html = "".join(related_html)
 
+    # Compute Hero Visual & Highlights
+    hero_highlights_html = get_hero_highlights_html(capabilities)
+    hero_visual_html = get_hero_visual_html(rel_path, page_title, category_badge, capabilities)
+
     canonical_url = f"https://novaarctech.in/{rel_path}"
 
     html = f"""<!DOCTYPE html>
@@ -725,7 +832,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{root_prefix}css/style.css?v=3.4">
+  <link rel="stylesheet" href="{root_prefix}css/style.css?v=3.5">
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -743,33 +850,42 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
 {get_shared_header(root_prefix, active_sec)}
 
   <!-- Hero Section -->
-  <section class="services-hero-ags" style="padding-top: calc(70px + var(--space-4xl));">
+  <section class="services-hero-ags" style="padding-top: calc(75px + var(--space-3xl)); padding-bottom: var(--space-4xl);">
     <div class="hero-orchestrated-glow-cyan"></div>
     <div class="hero-orchestrated-glow-blue"></div>
 
     <div class="container hero-container-ags">
-      <div class="hero-content-ags" style="max-width: 860px;">
-        <nav class="breadcrumb-nav" aria-label="Breadcrumb" style="margin-bottom: var(--space-md);">
-          <ol class="breadcrumb-list" style="display: flex; gap: 8px; list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #94A3B8;">
-            {breadcrumbs_html}
-          </ol>
-        </nav>
-        <span class="eyebrow-ags" style="color: #38BDF8; font-weight: 600; letter-spacing: 0.08em; display: inline-block; margin-bottom: var(--space-xs);">{category_badge}</span>
-        <h1 class="hero-title-ags" style="font-size: clamp(2.2rem, 3.8vw, 3.4rem);">{page_title}</h1>
-        <p class="hero-subtitle-ags" style="font-size: 1.15rem; max-width: 720px; line-height: 1.65; color: #E2E8F0;">
-          {page_subtitle}
-        </p>
-        <div class="hero-actions-ags" style="margin-top: var(--space-xl); display: flex; gap: var(--space-md); flex-wrap: wrap;">
-          <a href="{root_prefix}contact.html" class="btn btn-consultation-ags">
-            <span>Discuss Your Project</span>
-            <svg class="btn-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
-          <a href="{root_prefix}services.html" class="btn btn-outline-white">
-            <span>Explore Services</span>
-          </a>
+      <div class="hero-subpage-grid">
+        <!-- Left Column: Context, Hierarchy & Actions -->
+        <div class="hero-subpage-left">
+          <nav class="breadcrumb-nav" aria-label="Breadcrumb" style="margin-bottom: var(--space-sm);">
+            <ol class="breadcrumb-list" style="display: flex; gap: 8px; list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #94A3B8;">
+              {breadcrumbs_html}
+            </ol>
+          </nav>
+          <span class="eyebrow-ags" style="color: #38BDF8; font-weight: 700; letter-spacing: 0.08em; display: inline-block; margin-bottom: 6px;">{category_badge}</span>
+          <h1 class="hero-title-ags" style="font-size: clamp(2.2rem, 3.8vw, 3.3rem); line-height: 1.15; margin-bottom: 16px;">{page_title}</h1>
+          <p class="hero-subtitle-ags" style="font-size: 1.1rem; line-height: 1.65; color: #CBD5E1; margin-bottom: 24px; max-width: 620px;">
+            {page_subtitle}
+          </p>
+          <div class="hero-actions-ags" style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
+            <a href="{root_prefix}contact.html" class="btn btn-consultation-ags">
+              <span>Discuss Your Project</span>
+              <svg class="btn-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="{root_prefix}services.html" class="btn btn-outline-white">
+              <span>Explore Services</span>
+            </a>
+          </div>
+          {hero_highlights_html}
+        </div>
+
+        <!-- Right Column: Visual System Architecture & Live Telemetry Card -->
+        <div class="hero-subpage-right">
+          {hero_visual_html}
         </div>
       </div>
     </div>
@@ -895,7 +1011,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
 {get_shared_footer(root_prefix)}
 
   <!-- Scripts -->
-  <script src="{root_prefix}js/main.js?v=3.4"></script>
+  <script src="{root_prefix}js/main.js?v=3.5"></script>
 </body>
 </html>
 """
