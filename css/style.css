@@ -2409,6 +2409,13 @@ body.mobile-nav-open {
   padding: 8px 16px 0;
   gap: 8px;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.ai-console-tabs::-webkit-scrollbar {
+  display: none;
 }
 
 .ai-tab-btn {
@@ -3138,6 +3145,7 @@ body.mobile-nav-open {
 }
 
 @media (max-width: 1024px) {
+  .desktop-nav,
   .nav-menu,
   .nav-actions {
     display: none !important;
@@ -6003,7 +6011,7 @@ body.mobile-nav-open {
 .solutions-hero-ags,
 .services-hero-ags {
   position: relative;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .solutions-hero-ags .ecg-waveform-container,
@@ -8234,5 +8242,309 @@ body.mobile-nav-open {
 @media (max-width: 540px) {
   .subpage-methodology-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Mobile-First Quality Enhancements & Responsive Layout Hardening
+   Prevents horizontal overflow, optimizes touch targets, and balances typography
+   ========================================================================== */
+
+/* --- Global Viewport & Container Hardening --- */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+/* --- Subpage Responsive Layout & Section Spacing --- */
+.subpage-section {
+  padding: var(--space-4xl) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.subpage-section-alt {
+  background: #0A1628;
+}
+
+.subpage-section-base {
+  background: #08111F;
+}
+
+.subpage-section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto var(--space-3xl);
+}
+
+.subpage-section-heading {
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 8px 0 12px;
+  line-height: 1.25;
+}
+
+.subpage-section-desc {
+  color: #94A3B8;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .subpage-section {
+    padding: 48px 0 !important;
+  }
+  .subpage-section-header {
+    margin-bottom: 28px !important;
+  }
+  .subpage-section-heading {
+    font-size: 1.45rem !important;
+    margin: 6px 0 10px !important;
+  }
+  .subpage-section-desc {
+    font-size: 0.92rem !important;
+    line-height: 1.55 !important;
+  }
+}
+
+/* --- Responsive Subpage Grids --- */
+.subpage-grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-xl);
+}
+
+.subpage-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.subpage-grid-outcomes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-lg);
+}
+
+.subpage-grid-related {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+}
+
+@media (max-width: 768px) {
+  .subpage-grid-cards,
+  .subpage-grid-2col,
+  .subpage-grid-outcomes,
+  .subpage-grid-related {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  
+  .subpage-card-padded {
+    padding: 20px 18px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .subpage-card-padded {
+    padding: 18px 14px !important;
+  }
+}
+
+/* --- Subpage Hero Mobile Refinements --- */
+@media (max-width: 768px) {
+  .hero-subpage-grid,
+  .hero-subpage-left,
+  .hero-subpage-right {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .services-hero-ags {
+    padding-top: calc(70px + 24px) !important;
+    padding-bottom: 40px !important;
+  }
+  
+  .hero-title-ags {
+    font-size: clamp(1.85rem, 6.5vw, 2.5rem) !important;
+    line-height: 1.18 !important;
+    margin-bottom: 14px !important;
+    word-break: break-word;
+  }
+  
+  .hero-subtitle-ags {
+    font-size: 0.98rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 20px !important;
+  }
+
+  .breadcrumb-list {
+    flex-wrap: wrap !important;
+    font-size: 0.78rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-actions-ags {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 10px !important;
+  }
+  
+  .hero-actions-ags .btn {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 12px 20px !important;
+    font-size: 0.95rem !important;
+  }
+  
+  .hero-highlights-strip {
+    gap: 6px !important;
+    margin-top: 16px !important;
+  }
+  
+  .hero-highlight-pill {
+    font-size: 0.74rem !important;
+    padding: 4px 10px !important;
+  }
+}
+
+/* --- Glassmorphic Architecture Window Mobile Adaptation --- */
+@media (max-width: 600px) {
+  .hero-arch-window {
+    border-radius: 14px !important;
+    margin-top: 10px !important;
+  }
+  
+  .hero-arch-topbar {
+    padding: 10px 14px !important;
+  }
+  
+  .hero-arch-title {
+    font-size: 0.7rem !important;
+    gap: 4px !important;
+  }
+  
+  .hero-arch-badge {
+    font-size: 0.62rem !important;
+    padding: 2px 6px !important;
+  }
+  
+  .hero-arch-body {
+    padding: 12px !important;
+  }
+  
+  .hero-pipeline-stages {
+    gap: 8px !important;
+  }
+  
+  .hero-stage-item {
+    padding: 8px 10px !important;
+    gap: 8px !important;
+  }
+  
+  .hero-stage-left {
+    min-width: 0 !important;
+    flex: 1 !important;
+    gap: 8px !important;
+  }
+  
+  .hero-stage-num {
+    width: 22px !important;
+    height: 22px !important;
+    font-size: 0.7rem !important;
+  }
+  
+  .hero-stage-name {
+    font-size: 0.8rem !important;
+    line-height: 1.25 !important;
+    white-space: normal !important;
+  }
+  
+  .hero-stage-sub {
+    font-size: 0.68rem !important;
+    line-height: 1.2 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    max-width: 140px !important;
+  }
+  
+  .hero-stage-tag {
+    font-size: 0.62rem !important;
+    padding: 2px 6px !important;
+    flex-shrink: 0 !important;
+  }
+  
+  .hero-arch-footer {
+    margin-top: 10px !important;
+    padding-top: 10px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px 12px !important;
+    justify-content: flex-start !important;
+    font-size: 0.68rem !important;
+  }
+}
+
+/* --- Mobile Interactive Elements & CTA Refinement --- */
+@media (max-width: 640px) {
+  details summary {
+    font-size: 0.95rem !important;
+  }
+  
+  .cta-strip-ags {
+    padding: 48px 0 !important;
+  }
+  
+  .cta-strip-ags h2 {
+    font-size: 1.55rem !important;
+  }
+  
+  .cta-strip-ags p {
+    font-size: 0.95rem !important;
+    margin-bottom: 24px !important;
+  }
+  
+  .cta-strip-ags .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+/* --- Ambient Glow Containment & Heading Clamp on Mobile --- */
+@media (max-width: 768px) {
+  .hero-orchestrated-glow-cyan,
+  .hero-orchestrated-glow-blue,
+  .solution-detail-hero .hero-orchestrated-glow-cyan,
+  .solution-detail-hero .hero-orchestrated-glow-blue {
+    width: 240px !important;
+    height: 240px !important;
+    right: 0 !important;
+    max-width: 80vw !important;
+    pointer-events: none !important;
+  }
+
+  .subpage-section-heading {
+    font-size: clamp(1.55rem, 5vw, 2.1rem) !important;
+    line-height: 1.25 !important;
+    word-break: break-word !important;
+    hyphens: auto !important;
   }
 }

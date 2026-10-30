@@ -619,7 +619,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
     cap_cards = []
     for cap in capabilities:
         cap_cards.append(f"""
-        <div class="card" style="padding: var(--space-2xl); display: flex; flex-direction: column; justify-content: space-between; background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg);">
+        <div class="card subpage-card-padded" style="padding: var(--space-2xl); display: flex; flex-direction: column; justify-content: space-between; background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg);">
           <div>
             <div style="width: 48px; height: 48px; border-radius: 10px; background: rgba(14, 165, 233, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #38BDF8;">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -642,7 +642,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
     chal_cards = []
     for ch in challenges:
         chal_cards.append(f"""
-        <div class="card" style="background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); padding: var(--space-xl); display: flex; flex-direction: column;">
+        <div class="card subpage-card-padded" style="background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); padding: var(--space-xl); display: flex; flex-direction: column;">
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-sm);">
             <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px; border-radius: 999px; background: rgba(239, 68, 68, 0.15); color: #F87171;">Business Challenge</span>
           </div>
@@ -669,7 +669,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
         for uc in use_cases:
             ex_box = f"<div style='margin-top: auto; padding: 12px 14px; background: rgba(56, 189, 248, 0.08); border-radius: 6px; border-left: 3px solid #38BDF8; font-size: 0.875rem; color: #E2E8F0; line-height: 1.55;'><strong style='color: #38BDF8; display: block; margin-bottom: 3px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;'>Expected Operational Value:</strong>{uc['example']}</div>" if uc.get('example') else ""
             uc_cards.append(f"""
-            <div class="card" style="padding: var(--space-xl); background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); display: flex; flex-direction: column;">
+            <div class="card subpage-card-padded" style="padding: var(--space-xl); background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); display: flex; flex-direction: column;">
               <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
                 <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #38BDF8; background: rgba(56, 189, 248, 0.1); padding: 4px 10px; border-radius: 999px;">PRACTICAL APPLICATION</span>
               </div>
@@ -683,14 +683,14 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
             """)
         use_cases_html = f"""
   <!-- Section 3: Practical Applications -->
-  <section style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <section id="practical-applications" style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
         <span class="eyebrow-ags" style="color: #38BDF8;">PRACTICAL APPLICATIONS</span>
-        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Real-World Enterprise Applications &amp; Workflows</h2>
+        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Real-World Enterprise Applications &amp; Workflows</h2>
         <p style="color: #94A3B8; font-size: 1.05rem;">Realistic ways organizations apply these capabilities to solve tangible operational challenges.</p>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
+      <div class="subpage-grid-cards">
         {"".join(uc_cards)}
       </div>
     </div>
@@ -728,14 +728,14 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
             """)
         integrations_html = f"""
   <!-- Section 5: System Connectivity -->
-  <section style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <section id="system-connectivity" style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
         <span class="eyebrow-ags" style="color: #38BDF8;">SYSTEM CONNECTIVITY</span>
-        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Enterprise System Connectivity &amp; Data Flow</h2>
+        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Enterprise System Connectivity &amp; Data Flow</h2>
         <p style="color: #94A3B8; font-size: 1.05rem;">Configurable interfaces connecting with your existing enterprise infrastructure, databases, and APIs.</p>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-lg);">
+      <div class="subpage-grid-2col">
         {"".join(int_cards)}
       </div>
     </div>
@@ -748,7 +748,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
         cons_cards = []
         for c in considerations:
             cons_cards.append(f"""
-            <div style="padding: var(--space-lg); background: rgba(15, 23, 42, 0.6); border-radius: var(--radius-md); border-left: 3px solid #38BDF8; border-top: 1px solid rgba(255,255,255,0.06); border-right: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <div class="subpage-card-padded" style="padding: var(--space-lg); background: rgba(15, 23, 42, 0.6); border-radius: var(--radius-md); border-left: 3px solid #38BDF8; border-top: 1px solid rgba(255,255,255,0.06); border-right: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06);">
               <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #94A3B8; display: inline-block; margin-bottom: 4px;">Governance &amp; Controls</span>
               <h4 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin-bottom: 6px;">{c['title']}</h4>
               <p style="color: #94A3B8; font-size: 0.9rem; line-height: 1.55; margin: 0;">{c['desc']}</p>
@@ -756,14 +756,14 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
             """)
         considerations_html = f"""
   <!-- Section 6: Deployment & Oversight -->
-  <section style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <section id="deployment-oversight" style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
         <span class="eyebrow-ags" style="color: #38BDF8;">DEPLOYMENT &amp; OVERSIGHT</span>
-        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Implementation Lifecycle, Security &amp; Human Oversight</h2>
+        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Implementation Lifecycle, Security &amp; Human Oversight</h2>
         <p style="color: #94A3B8; font-size: 1.05rem;">Prerequisites, security safeguards, and human review gates required for dependable execution.</p>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-lg);">
+      <div class="subpage-grid-2col">
         {"".join(cons_cards)}
       </div>
     </div>
@@ -774,7 +774,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
     outcomes_html = []
     for out in outcomes:
         outcomes_html.append(f"""
-        <div style="background: rgba(15, 23, 42, 0.55); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: var(--radius-lg); padding: var(--space-xl);">
+        <div class="subpage-card-padded" style="background: rgba(15, 23, 42, 0.55); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: var(--radius-lg); padding: var(--space-xl);">
           <div style="width: 36px; height: 36px; border-radius: 8px; background: rgba(56, 189, 248, 0.15); display: flex; align-items: center; justify-content: center; color: #38BDF8; margin-bottom: var(--space-md);">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
@@ -802,11 +802,11 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
             """)
         faqs_html = f"""
   <!-- Section 8: Frequently Asked Questions -->
-  <section style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <section id="frequently-asked-questions" style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container" style="max-width: 860px; margin: 0 auto;">
       <div style="text-align: center; margin-bottom: var(--space-3xl);">
         <span class="eyebrow-ags" style="color: #38BDF8;">FREQUENTLY ASKED QUESTIONS</span>
-        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Frequently Asked Questions</h2>
+        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Frequently Asked Questions</h2>
         <p style="color: #94A3B8; font-size: 1.05rem;">Practical guidance regarding project scope, integrations, and operational requirements.</p>
       </div>
       <div>
@@ -920,11 +920,11 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   </section>
 
   <!-- Section 1: Strategic Overview -->
-  <section style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <section id="strategic-overview" style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div style="max-width: 860px; margin: 0 auto; text-align: center;">
         <span class="eyebrow-ags" style="color: #38BDF8;">STRATEGIC OVERVIEW</span>
-        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 20px; line-height: 1.3;">Engineered for Seamless Operations &amp; Measurable Outcomes</h2>
+        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 20px; line-height: 1.3;">Engineered for Seamless Operations &amp; Measurable Outcomes</h2>
         <div style="text-align: left;">
           {overview_html}
         </div>
@@ -933,30 +933,30 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   </section>
 
   <!-- Section 2: Key Capabilities -->
-  <section style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <section id="key-capabilities" style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
         <span class="eyebrow-ags" style="color: #38BDF8;">KEY CAPABILITIES</span>
-        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Core Architecture &amp; Functional Capabilities</h2>
+        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Core Architecture &amp; Functional Capabilities</h2>
         <p style="color: #94A3B8; font-size: 1.05rem;">Purpose-built engineering modules designed to integrate cleanly into your existing enterprise stack.</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
+      <div class="subpage-grid-cards">
         {capabilities_html}
       </div>
     </div>
   </section>
 
   <!-- Section 3: Problem & Resolution -->
-  <section style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <section id="problem-resolution" style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
         <span class="eyebrow-ags" style="color: #38BDF8;">PROBLEM &amp; RESOLUTION</span>
-        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Operational Challenges &amp; Technical Resolutions</h2>
+        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Operational Challenges &amp; Technical Resolutions</h2>
         <p style="color: #94A3B8; font-size: 1.05rem;">How Nova Arc overcomes systemic process inefficiencies, operational friction, and technology bottlenecks.</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl);">
+      <div class="subpage-grid-cards">
         {challenges_html}
       </div>
     </div>
@@ -965,11 +965,11 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   {use_cases_html}
 
   <!-- Section 4: Engineering Methodology (5-Stage Lifecycle) -->
-  <section style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <section id="engineering-methodology" style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
         <span class="eyebrow-ags" style="color: #38BDF8;">ENGINEERING METHODOLOGY</span>
-        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Disciplined 5-Stage Engineering Lifecycle</h2>
+        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Disciplined 5-Stage Engineering Lifecycle</h2>
         <p style="color: #94A3B8; font-size: 1.05rem;">A structured implementation approach tailored to your systems, workflows, and governance requirements.</p>
       </div>
 
@@ -984,15 +984,15 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   {considerations_html}
 
   <!-- Section 7: Potential Business Benefits -->
-  <section style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <section id="business-benefits" style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
         <span class="eyebrow-ags" style="color: #38BDF8;">POTENTIAL BUSINESS BENEFITS</span>
-        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Operational Advantages &amp; Measured Business Value</h2>
+        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Operational Advantages &amp; Measured Business Value</h2>
         <p style="color: #94A3B8; font-size: 1.05rem;">Streamlining repetitive administrative overhead into sustained operational velocity.</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-lg);">
+      <div class="subpage-grid-outcomes">
         {outcomes_grid_html}
       </div>
     </div>
@@ -1001,15 +1001,15 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   {faqs_html}
 
   <!-- Section 9: Connected Ecosystem -->
-  <section style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <section id="connected-ecosystem" style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
         <span class="eyebrow-ags" style="color: #38BDF8;">CONNECTED ECOSYSTEM</span>
-        <h2 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Cross-Domain Enterprise Ecosystem Integration</h2>
+        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Cross-Domain Enterprise Ecosystem Integration</h2>
         <p style="color: #94A3B8; font-size: 1.05rem;">Integrate complementary enterprise modules across our four core service domains.</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-md);">
+      <div class="subpage-grid-related">
         {related_grid_html}
       </div>
     </div>
