@@ -90,6 +90,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
   font-family: var(--font-family);
   font-size: 16px;
   color: var(--text-primary);
@@ -301,11 +302,11 @@ button, input, select, textarea {
    Header & Sticky Navbar (Dark Deep Navy #0B2545)
    ========================================================================== */
 .site-header {
-  position: sticky;
+  position: fixed !important;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 10000 !important;
   background-color: #0B2545 !important;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
