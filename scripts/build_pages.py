@@ -473,12 +473,11 @@ def get_hero_highlights_html(capabilities):
     pills_html = "".join(pills)
     return f'<div class="hero-highlights-strip">{pills_html}</div>' if pills else ""
 
-def get_hero_showcase_card(capabilities, outcomes, category_badge, page_title):
+def get_hero_text_data_html(capabilities, outcomes, category_badge, page_title):
     """
-    Generates an authoritative enterprise capabilities & outcomes console
-    for the right column of the subpage hero. Uses authentic data from
-    outcomes or capabilities to ensure the hero is balanced and filled with
-    valuable domain-specific information.
+    Generates pure enterprise text data (capabilities, impact, and architectural outcomes)
+    for the right column of the subpage hero. Uses clean typography without windows, cards,
+    or UI containers.
     """
     candidates = []
     if outcomes:
@@ -490,39 +489,37 @@ def get_hero_showcase_card(capabilities, outcomes, category_badge, page_title):
 
     items = []
     for idx, (title, desc) in enumerate(candidates[:4]):
-        num = f"0{idx + 1}"
-        clean_desc = desc
-        if len(clean_desc) > 85:
-            clean_desc = clean_desc[:82] + "..."
+        num = f"0{idx + 1}."
         items.append(f"""
-          <div style="display: flex; align-items: flex-start; gap: 12px; padding: 10px 14px; background: rgba(15, 23, 42, 0.55); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 10px; transition: all 0.2s ease;">
-            <span style="font-size: 0.74rem; font-weight: 800; color: #38BDF8; background: rgba(56, 189, 248, 0.14); padding: 3px 7px; border-radius: 5px; flex-shrink: 0; margin-top: 1px;">{num}</span>
-            <div style="min-width: 0;">
-              <h4 style="font-size: 0.92rem; font-weight: 700; color: #FFFFFF; margin: 0 0 2px 0; line-height: 1.25;">{title}</h4>
-              <p style="font-size: 0.8rem; color: #94A3B8; margin: 0; line-height: 1.45;">{clean_desc}</p>
+          <div class="hero-text-data-item">
+            <div style="display: flex; align-items: baseline; gap: 8px;">
+              <span style="color: #38BDF8; font-weight: 800; font-size: 0.92rem; flex-shrink: 0;">{num}</span>
+              <h4 style="font-size: 1.02rem; font-weight: 700; color: #F8FAFC; margin: 0; line-height: 1.3;">{title}</h4>
             </div>
+            <p style="font-size: 0.88rem; color: #94A3B8; line-height: 1.55; margin: 4px 0 0 24px;">{desc}</p>
           </div>""")
 
-    items_html = "\n".join(items)
+    items_html = chr(10).join(items)
 
     return f"""
-      <div class="hero-showcase-console" style="background: rgba(11, 23, 44, 0.78); border: 1px solid rgba(56, 189, 248, 0.28); border-radius: 16px; padding: 22px 24px; backdrop-filter: blur(14px); box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.45);">
-        <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 12px; margin-bottom: 14px;">
-          <div style="display: flex; align-items: center; gap: 8px;">
-            <span style="width: 8px; height: 8px; border-radius: 50%; background: #38BDF8; box-shadow: 0 0 8px #38BDF8;"></span>
-            <span style="font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #38BDF8;">SYSTEM CAPABILITIES &amp; OUTCOMES</span>
-          </div>
-          <span style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #94A3B8; background: rgba(56, 189, 248, 0.08); padding: 3px 8px; border-radius: 6px; border: 1px solid rgba(56, 189, 248, 0.16);">ENTERPRISE GRADE</span>
+      <div class="hero-subpage-text-data" style="max-width: 580px;">
+        <div style="margin-bottom: 20px;">
+          <span style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #38BDF8; display: block; margin-bottom: 6px;">
+            KEY CAPABILITIES &amp; OUTCOMES
+          </span>
+          <h3 style="font-size: 1.35rem; font-weight: 700; color: #FFFFFF; line-height: 1.3; margin: 0;">
+            Engineered for Operational Scale
+          </h3>
         </div>
 
-        <div style="display: flex; flex-direction: column; gap: 9px;">
+        <div style="display: flex; flex-direction: column; gap: 16px;">
           {items_html}
         </div>
 
-        <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; color: #94A3B8;">
-          <span style="display: inline-flex; align-items: center; gap: 4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 99.99% Availability</span>
-          <span style="display: inline-flex; align-items: center; gap: 4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Zero-Trust RBAC</span>
-          <span style="display: inline-flex; align-items: center; gap: 4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Deterministic</span>
+        <div style="margin-top: 22px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.12); font-size: 0.82rem; color: #94A3B8; display: flex; gap: 20px; flex-wrap: wrap;">
+          <span><strong style="color: #38BDF8;">99.99%</strong> Availability SLA</span>
+          <span><strong style="color: #38BDF8;">Zero-Trust</strong> Architecture</span>
+          <span><strong style="color: #38BDF8;">Deterministic</strong> Execution</span>
         </div>
       </div>"""
 
@@ -1180,7 +1177,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
 
     # Compute Hero Visual & Highlights
     hero_highlights_html = get_hero_highlights_html(capabilities)
-    hero_showcase_card_html = get_hero_showcase_card(capabilities, outcomes, category_badge, page_title)
+    hero_text_data_html = get_hero_text_data_html(capabilities, outcomes, category_badge, page_title)
     
     canonical_url = f"https://novaarctech.in/{rel_path}"
 
@@ -1262,7 +1259,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
         </div>
 
         <div class="hero-subpage-right">
-          {hero_showcase_card_html}
+          {hero_text_data_html}
         </div>
       </div>
     </div>
