@@ -473,55 +473,6 @@ def get_hero_highlights_html(capabilities):
     pills_html = "".join(pills)
     return f'<div class="hero-highlights-strip">{pills_html}</div>' if pills else ""
 
-def get_hero_text_data_html(capabilities, outcomes, category_badge, page_title):
-    """
-    Generates pure enterprise text data (capabilities, impact, and architectural outcomes)
-    for the right column of the subpage hero. Uses clean typography without windows, cards,
-    or UI containers.
-    """
-    candidates = []
-    if outcomes:
-        for o in outcomes:
-            candidates.append((o.get('title', ''), o.get('desc', '')))
-    if len(candidates) < 4 and capabilities:
-        for c in capabilities:
-            candidates.append((c.get('title', ''), c.get('desc', '')))
-
-    items = []
-    for idx, (title, desc) in enumerate(candidates[:4]):
-        num = f"0{idx + 1}."
-        items.append(f"""
-          <div class="hero-text-data-item">
-            <div style="display: flex; align-items: baseline; gap: 8px;">
-              <span style="color: #38BDF8; font-weight: 800; font-size: 0.92rem; flex-shrink: 0;">{num}</span>
-              <h4 style="font-size: 1.02rem; font-weight: 700; color: #F8FAFC; margin: 0; line-height: 1.3;">{title}</h4>
-            </div>
-            <p style="font-size: 0.88rem; color: #94A3B8; line-height: 1.55; margin: 4px 0 0 24px;">{desc}</p>
-          </div>""")
-
-    items_html = chr(10).join(items)
-
-    return f"""
-      <div class="hero-subpage-text-data" style="max-width: 580px;">
-        <div style="margin-bottom: 20px;">
-          <span style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #38BDF8; display: block; margin-bottom: 6px;">
-            KEY CAPABILITIES &amp; OUTCOMES
-          </span>
-          <h3 style="font-size: 1.35rem; font-weight: 700; color: #FFFFFF; line-height: 1.3; margin: 0;">
-            Engineered for Operational Scale
-          </h3>
-        </div>
-
-        <div style="display: flex; flex-direction: column; gap: 16px;">
-          {items_html}
-        </div>
-
-        <div style="margin-top: 22px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.12); font-size: 0.82rem; color: #94A3B8; display: flex; gap: 20px; flex-wrap: wrap;">
-          <span><strong style="color: #38BDF8;">99.99%</strong> Availability SLA</span>
-          <span><strong style="color: #38BDF8;">Zero-Trust</strong> Architecture</span>
-          <span><strong style="color: #38BDF8;">Deterministic</strong> Execution</span>
-        </div>
-      </div>"""
 
 # New generate_subpage implementation for two-colour theme
 
@@ -1177,7 +1128,6 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
 
     # Compute Hero Visual & Highlights
     hero_highlights_html = get_hero_highlights_html(capabilities)
-    hero_text_data_html = get_hero_text_data_html(capabilities, outcomes, category_badge, page_title)
     
     canonical_url = f"https://novaarctech.in/{rel_path}"
 
@@ -1231,36 +1181,30 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
     {get_ecg_waveform_html()}
 
     <div class="container hero-container-ags">
-      <div class="hero-subpage-grid">
-        <div class="hero-subpage-left">
-          <nav class="breadcrumb-nav" aria-label="Breadcrumb" style="margin-bottom: var(--space-sm);">
-            <ol class="breadcrumb-list" style="display: flex; gap: 8px; list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #94A3B8;">
-              {breadcrumbs_html}
-            </ol>
-          </nav>
-          <span class="eyebrow-ags" style="color: #38BDF8; font-weight: 700; letter-spacing: 0.08em; display: inline-block; margin-bottom: 6px;">{category_badge}</span>
-          <h1 class="hero-title-ags" style="font-size: clamp(2.1rem, 3.4vw, 3.2rem); line-height: 1.15; margin-bottom: 14px;">{page_title}</h1>
-          <p class="hero-subtitle-ags" style="font-size: 1.08rem; line-height: 1.65; color: #CBD5E1; margin-bottom: 22px; max-width: 680px;">
-            {page_subtitle}
-          </p>
-          <div class="hero-actions-ags" style="display: flex; gap: var(--space-md); flex-wrap: wrap; margin-bottom: var(--space-md);">
-            <a href="{root_prefix}contact.html" class="btn btn-consultation-ags">
-              <span>Discuss Your Project</span>
-              <svg class="btn-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-            <a href="#key-capabilities" class="btn btn-outline-white">
-              <span>Explore Capabilities</span>
-            </a>
-          </div>
-          {hero_highlights_html}
+      <div class="hero-content-ags" style="max-width: 900px;">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb" style="margin-bottom: var(--space-sm);">
+          <ol class="breadcrumb-list" style="display: flex; gap: 8px; list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #94A3B8;">
+            {breadcrumbs_html}
+          </ol>
+        </nav>
+        <span class="eyebrow-ags" style="color: #38BDF8; font-weight: 700; letter-spacing: 0.08em; display: inline-block; margin-bottom: 8px;">{category_badge}</span>
+        <h1 class="hero-title-ags" style="font-size: clamp(2.2rem, 3.8vw, 3.6rem); line-height: 1.15; margin-bottom: 16px;">{page_title}</h1>
+        <p class="hero-subtitle-ags" style="font-size: 1.12rem; line-height: 1.7; color: #CBD5E1; margin-bottom: 26px; max-width: 820px;">
+          {page_subtitle}
+        </p>
+        <div class="hero-actions-ags" style="display: flex; gap: var(--space-md); flex-wrap: wrap; margin-bottom: var(--space-lg);">
+          <a href="{root_prefix}contact.html" class="btn btn-consultation-ags">
+            <span>Discuss Your Project</span>
+            <svg class="btn-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#key-capabilities" class="btn btn-outline-white">
+            <span>Explore Capabilities</span>
+          </a>
         </div>
-
-        <div class="hero-subpage-right">
-          {hero_text_data_html}
-        </div>
+        {hero_highlights_html}
       </div>
     </div>
   </section>
