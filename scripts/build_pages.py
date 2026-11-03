@@ -557,23 +557,16 @@ def get_hero_visual_html(rel_path, page_title, category_badge, capabilities):
       </div>
     """
 
+# New generate_subpage implementation for two-colour theme
+
 def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_subtitle,
                      breadcrumbs, overview_paragraphs, capabilities, challenges,
                      workflow_steps, outcomes, related_links, seo_desc,
                      use_cases=None, integrations=None, considerations=None, faqs=None,
                      what_we_deliver=None, industries_served=None, why_choose_us=None):
     """
-    Generates a complete, informative enterprise subpage that perfectly fits Nova Arc's design system.
-    Renders all 9 standardized enterprise sections:
-    1. Key Capabilities
-    2. Problem & Resolution
-    3. Practical Applications
-    4. Engineering Methodology (5-Stage Lifecycle)
-    5. System Connectivity
-    6. Deployment & Oversight
-    7. Potential Business Benefits
-    8. Frequently Asked Questions
-    9. Connected Ecosystem
+    Generates a complete, informative enterprise subpage that follows Nova Arc's
+    two-colour theme (Dark Navy Blue + White / Light Background) with strict alternation.
     """
     active_sec = "services"
     if "solutions/" in rel_path:
@@ -585,7 +578,9 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
     elif "connect/" in rel_path:
         active_sec = "connect"
 
-    # Breadcrumbs HTML
+    is_domain_page = bool(what_we_deliver)
+
+    # Breadcrumbs HTML (inside dark hero)
     bc_items = []
     for idx, (label, link) in enumerate(breadcrumbs):
         if link:
@@ -594,10 +589,10 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
             bc_items.append(f'<li aria-current="page">{label}</li>')
     breadcrumbs_html = '<span class="breadcrumb-separator">/</span>'.join(bc_items)
 
-    # Overview HTML
-    overview_html = "".join([f'<p style="font-size: 1.05rem; line-height: 1.8; color: #CBD5E1; margin-bottom: 18px;">{p}</p>' for p in overview_paragraphs])
+    # 1. Overview HTML (in light section)
+    overview_html = "".join([f'<p style="font-size: 1.05rem; line-height: 1.8; color: #334155; margin-bottom: 18px;">{p}</p>' for p in overview_paragraphs])
 
-    # 1. Key Capabilities HTML with Read More / Show Less Toggle
+    # 2. Key Capabilities HTML with Read More / Show Less Toggle (ALWAYS in dark section)
     cap_cards = []
     for idx, cap in enumerate(capabilities):
         all_points = cap.get('points', [])
@@ -615,7 +610,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
             btn_html = f'<button type="button" class="btn-read-more-caps" data-read-more-text="Read More (+{len(remaining)} more)" onclick="toggleCaps(this, \'{clean_id}\')" aria-expanded="false">Read More (+{len(remaining)} more) <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>'
 
         cap_cards.append(f"""
-        <div class="card subpage-card-padded capability-card" style="padding: var(--space-2xl); display: flex; flex-direction: column; background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); align-self: start; height: auto;">
+        <div class="card subpage-card-padded capability-card" style="padding: var(--space-2xl); display: flex; flex-direction: column; background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); align-self: start !important; height: auto !important;">
           <div>
             <div style="width: 48px; height: 48px; border-radius: 10px; background: rgba(14, 165, 233, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #38BDF8;">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -638,19 +633,19 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
         """)
     capabilities_html = "".join(cap_cards)
 
-    # What We Deliver Section HTML
+    # 3. What We Deliver Section HTML (Present on domain pages -> LIGHT SLATE)
     what_we_deliver_html = ""
     if what_we_deliver:
         del_cards = []
         for d in what_we_deliver:
-            items_html = "".join([f'<li style="color: #CBD5E1; font-size: 0.875rem; margin-bottom: 7px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>{it}</span></li>' for it in d.get('deliverables', [])])
-            tech_tag = f'<div class="deliver-card-tech"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span>Stack: {d["tech_stack"]}</span></div>' if d.get('tech_stack') else ""
+            items_html = "".join([f'<li style="color: #334155; font-size: 0.875rem; margin-bottom: 7px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>{it}</span></li>' for it in d.get('deliverables', [])])
+            tech_tag = f'<div class="deliver-card-tech" style="background: #F1F5F9; border: 1px solid #E2E8F0; color: #334155; border-radius: 6px; padding: 6px 12px; font-size: 0.8rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; margin-top: auto;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span>Stack: {d["tech_stack"]}</span></div>' if d.get('tech_stack') else ""
             del_cards.append(f"""
-            <div class="deliver-card">
-              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #38BDF8; background: rgba(56, 189, 248, 0.1); padding: 4px 10px; border-radius: 999px; display: inline-block; margin-bottom: 12px; align-self: flex-start;">PRODUCTION DELIVERABLE</span>
-              <h3 style="font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">{d['title']}</h3>
-              <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.6; margin-bottom: var(--space-md);">{d['desc']}</p>
-              <ul style="list-style: none; padding: 0; margin: 0 0 var(--space-md) 0; border-top: 1px solid rgba(255,255,255,0.08); padding-top: var(--space-md);">
+            <div class="deliver-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); padding: var(--space-xl); display: flex; flex-direction: column; box-shadow: 0 4px 16px -2px rgba(11, 37, 69, 0.05);">
+              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #0284C7; background: #E0F2FE; padding: 4px 10px; border-radius: 999px; display: inline-block; margin-bottom: 12px; align-self: flex-start;">PRODUCTION DELIVERABLE</span>
+              <h3 style="font-size: 1.25rem; font-weight: 700; color: #0F172A; margin-bottom: 8px;">{d['title']}</h3>
+              <p style="color: #475569; font-size: 0.95rem; line-height: 1.6; margin-bottom: var(--space-md);">{d['desc']}</p>
+              <ul style="list-style: none; padding: 0; margin: 0 0 var(--space-md) 0; border-top: 1px solid #E2E8F0; padding-top: var(--space-md);">
                 {items_html}
               </ul>
               {tech_tag}
@@ -659,12 +654,12 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
         del_cards_str = "".join(del_cards)
         what_we_deliver_html = f"""
   <!-- What We Build / What We Deliver Section -->
-  <section id="what-we-deliver" style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <section id="what-we-deliver" class="subpage-section-light-alt" style="padding: var(--space-4xl) 0; background: #F8FAFC; border-bottom: 1px solid #E2E8F0;">
     <div class="container">
       <div style="text-align: center; max-width: 760px; margin: 0 auto var(--space-3xl);">
-        <span class="eyebrow-ags" style="color: #38BDF8;">WHAT WE BUILD &amp; DELIVER</span>
-        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Production-Grade Platforms, Portals &amp; Engines</h2>
-        <p style="color: #94A3B8; font-size: 1.05rem;">Concrete software architectures designed, built, integrated, and maintained for enterprise scale.</p>
+        <span class="eyebrow-ags" style="color: #0284C7;">WHAT WE BUILD &amp; DELIVER</span>
+        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #0F172A; margin: 8px 0 12px;">Production-Grade Platforms, Portals &amp; Engines</h2>
+        <p class="subpage-section-desc" style="color: #475569; font-size: 1.05rem;">Concrete software architectures designed, built, integrated, and maintained for enterprise scale.</p>
       </div>
       <div class="subpage-grid-cards">
         {del_cards_str}
@@ -673,21 +668,21 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   </section>
         """
 
-    # Industries Served Section HTML
+    # 4. Industries Served Section HTML (Present on domain pages -> LIGHT SLATE)
     industries_served_html = ""
     if industries_served:
         ind_cards = []
         for ind in industries_served:
             ind_cards.append(f"""
-            <div class="industry-served-card">
-              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #38BDF8; background: rgba(56, 189, 248, 0.1); padding: 3px 10px; border-radius: 999px; display: inline-block; margin-bottom: 10px; align-self: flex-start;">INDUSTRY VERTICAL</span>
-              <h3 style="font-size: 1.2rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">{ind['industry']}</h3>
+            <div class="industry-served-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); padding: var(--space-xl); display: flex; flex-direction: column; box-shadow: 0 4px 16px -2px rgba(11, 37, 69, 0.05);">
+              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #0284C7; background: #E0F2FE; padding: 3px 10px; border-radius: 999px; display: inline-block; margin-bottom: 10px; align-self: flex-start;">INDUSTRY VERTICAL</span>
+              <h3 style="font-size: 1.2rem; font-weight: 700; color: #0F172A; margin-bottom: 8px;">{ind['industry']}</h3>
               <div style="margin-bottom: var(--space-sm);">
-                <strong style="color: #94A3B8; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Vertical Implementation:</strong>
-                <p style="color: #CBD5E1; font-size: 0.925rem; line-height: 1.55; margin: 0;">{ind['application']}</p>
+                <strong style="color: #64748B; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Vertical Implementation:</strong>
+                <p style="color: #334155; font-size: 0.925rem; line-height: 1.55; margin: 0;">{ind['application']}</p>
               </div>
-              <div style="margin-top: auto; padding: 10px 14px; background: rgba(56, 189, 248, 0.08); border-left: 3px solid #38BDF8; border-radius: 6px; font-size: 0.85rem; color: #E2E8F0; line-height: 1.5;">
-                <strong style="color: #38BDF8; display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px;">Key Business Outcome:</strong>
+              <div style="margin-top: auto; padding: 10px 14px; background: #F0F9FF; border-left: 3px solid #0284C7; border-radius: 6px; font-size: 0.85rem; color: #0C4A6E; line-height: 1.5;">
+                <strong style="color: #0284C7; display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px;">Key Business Outcome:</strong>
                 <span>{ind['outcome']}</span>
               </div>
             </div>
@@ -695,12 +690,12 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
         ind_cards_str = "".join(ind_cards)
         industries_served_html = f"""
   <!-- Industries Served Section -->
-  <section id="industries-served" style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <section id="industries-served" class="subpage-section-light-alt" style="padding: var(--space-4xl) 0; background: #F8FAFC; border-bottom: 1px solid #E2E8F0;">
     <div class="container">
       <div style="text-align: center; max-width: 760px; margin: 0 auto var(--space-3xl);">
-        <span class="eyebrow-ags" style="color: #38BDF8;">INDUSTRIES SERVED</span>
-        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Domain-Specific Vertical Applications</h2>
-        <p style="color: #94A3B8; font-size: 1.05rem;">Proven engineering architectures tailored to the operational demands and regulatory standards of each sector.</p>
+        <span class="eyebrow-ags" style="color: #0284C7;">INDUSTRIES SERVED</span>
+        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #0F172A; margin: 8px 0 12px;">Domain-Specific Vertical Applications</h2>
+        <p class="subpage-section-desc" style="color: #475569; font-size: 1.05rem;">Proven engineering architectures tailored to the operational demands and regulatory standards of each sector.</p>
       </div>
       <div class="subpage-grid-cards">
         {ind_cards_str}
@@ -709,29 +704,29 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   </section>
         """
 
-    # Why Choose Us Section HTML
+    # 5. Why Choose Us Section HTML (Present on domain pages -> LIGHT)
     why_choose_us_html = ""
     if why_choose_us:
         why_cards = []
         for w in why_choose_us:
             why_cards.append(f"""
-            <div class="why-choose-card">
-              <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(56, 189, 248, 0.12); display: flex; align-items: center; justify-content: center; color: #38BDF8; margin-bottom: 14px;">
+            <div class="why-choose-card" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); padding: var(--space-xl); position: relative; overflow: hidden; box-shadow: 0 4px 16px -2px rgba(11, 37, 69, 0.05);">
+              <div style="width: 44px; height: 44px; border-radius: 10px; background: #E0F2FE; display: flex; align-items: center; justify-content: center; color: #0284C7; margin-bottom: 14px;">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
               </div>
-              <h3 style="font-size: 1.2rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">{w['title']}</h3>
-              <p style="color: #94A3B8; font-size: 0.925rem; line-height: 1.6; margin: 0;">{w['desc']}</p>
+              <h3 style="font-size: 1.2rem; font-weight: 700; color: #0F172A; margin-bottom: 8px;">{w['title']}</h3>
+              <p style="color: #475569; font-size: 0.925rem; line-height: 1.6; margin: 0;">{w['desc']}</p>
             </div>
             """)
         why_choose_us_str = "".join(why_cards)
         why_choose_us_html = f"""
   <!-- Why Choose Us Section -->
-  <section id="why-choose-us" style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <section id="why-choose-us" class="subpage-section-light" style="padding: var(--space-4xl) 0; background: #FFFFFF; border-bottom: 1px solid #E2E8F0;">
     <div class="container">
       <div style="text-align: center; max-width: 760px; margin: 0 auto var(--space-3xl);">
-        <span class="eyebrow-ags" style="color: #38BDF8;">WHY CHOOSE NOVA ARC</span>
-        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Architectural Rigor, Zero Lock-In &amp; Engineering Excellence</h2>
-        <p style="color: #94A3B8; font-size: 1.05rem;">Built by senior architects and engineers committed to clean code, production reliability, and client code ownership.</p>
+        <span class="eyebrow-ags" style="color: #0284C7;">WHY CHOOSE NOVA ARC</span>
+        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #0F172A; margin: 8px 0 12px;">Architectural Rigor, Zero Lock-In &amp; Engineering Excellence</h2>
+        <p class="subpage-section-desc" style="color: #475569; font-size: 1.05rem;">Built by senior architects and engineers committed to clean code, production reliability, and client code ownership.</p>
       </div>
       <div class="subpage-grid-2col">
         {why_choose_us_str}
@@ -768,57 +763,130 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   </nav>
         """
 
-    # 2. Problem & Resolution HTML
+    # Problem & Resolution HTML:
+    # If domain page: DARK (#0A1628)
+    # If standard page: LIGHT SLATE (#F8FAFC)
     chal_cards = []
     for ch in challenges:
-        chal_cards.append(f"""
-        <div class="card subpage-card-padded" style="background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); padding: var(--space-xl); display: flex; flex-direction: column;">
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-sm);">
-            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px; border-radius: 999px; background: rgba(239, 68, 68, 0.15); color: #F87171;">Business Challenge</span>
-          </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-xs);">Business Problem</h3>
-          <p style="color: #CBD5E1; font-size: 0.95rem; line-height: 1.55; margin-bottom: var(--space-md);">{ch['challenge']}</p>
-          
-          <div style="margin-bottom: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid rgba(255,255,255,0.06);">
-            <span style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #F59E0B; display: block; margin-bottom: 4px;">Why It Matters:</span>
-            <p style="color: #94A3B8; font-size: 0.9rem; line-height: 1.55; margin: 0;">{ch['impact']}</p>
-          </div>
+        if is_domain_page:
+            chal_cards.append(f"""
+            <div class="card subpage-card-padded" style="background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); padding: var(--space-xl); display: flex; flex-direction: column;">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-sm);">
+                <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px; border-radius: 999px; background: rgba(239, 68, 68, 0.15); color: #F87171;">Business Challenge</span>
+              </div>
+              <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-xs);">Business Problem</h3>
+              <p style="color: #CBD5E1; font-size: 0.95rem; line-height: 1.55; margin-bottom: var(--space-md);">{ch['challenge']}</p>
+              
+              <div style="margin-bottom: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid rgba(255,255,255,0.06);">
+                <span style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #F59E0B; display: block; margin-bottom: 4px;">Why It Matters:</span>
+                <p style="color: #94A3B8; font-size: 0.9rem; line-height: 1.55; margin: 0;">{ch['impact']}</p>
+              </div>
 
-          <div style="margin-top: auto; padding: var(--space-md); background: rgba(14, 165, 233, 0.08); border-left: 3px solid #38BDF8; border-radius: 6px;">
-            <strong style="color: #38BDF8; font-size: 0.85rem; display: block; margin-bottom: 4px;">Proposed Resolution:</strong>
-            <span style="color: #E2E8F0; font-size: 0.9rem; line-height: 1.55;">{ch['solution']}</span>
-          </div>
-        </div>
-        """)
+              <div style="margin-top: auto; padding: var(--space-md); background: rgba(14, 165, 233, 0.08); border-left: 3px solid #38BDF8; border-radius: 6px;">
+                <strong style="color: #38BDF8; font-size: 0.85rem; display: block; margin-bottom: 4px;">Proposed Resolution:</strong>
+                <span style="color: #E2E8F0; font-size: 0.9rem; line-height: 1.55;">{ch['solution']}</span>
+              </div>
+            </div>
+            """)
+        else:
+            chal_cards.append(f"""
+            <div class="card subpage-card-padded" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); padding: var(--space-xl); display: flex; flex-direction: column; box-shadow: 0 4px 16px -2px rgba(11, 37, 69, 0.05);">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-sm);">
+                <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px; border-radius: 999px; background: #FEE2E2; color: #DC2626;">Business Challenge</span>
+              </div>
+              <h3 style="font-size: 1.15rem; font-weight: 700; color: #0F172A; margin-bottom: var(--space-xs);">Business Problem</h3>
+              <p style="color: #334155; font-size: 0.95rem; line-height: 1.55; margin-bottom: var(--space-md);">{ch['challenge']}</p>
+              
+              <div style="margin-bottom: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid #E2E8F0;">
+                <span style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #D97706; display: block; margin-bottom: 4px;">Why It Matters:</span>
+                <p style="color: #475569; font-size: 0.9rem; line-height: 1.55; margin: 0;">{ch['impact']}</p>
+              </div>
+
+              <div style="margin-top: auto; padding: var(--space-md); background: #F0F9FF; border-left: 3px solid #0284C7; border-radius: 6px;">
+                <strong style="color: #0284C7; font-size: 0.85rem; display: block; margin-bottom: 4px;">Proposed Resolution:</strong>
+                <span style="color: #0C4A6E; font-size: 0.9rem; line-height: 1.55;">{ch['solution']}</span>
+              </div>
+            </div>
+            """)
     challenges_html = "".join(chal_cards)
 
-    # 3. Practical Applications HTML
+    chal_sec_cls = "subpage-section-dark-alt" if is_domain_page else "subpage-section-light-alt"
+    chal_sec_bg = "#0A1628" if is_domain_page else "#F8FAFC"
+    chal_sec_border = "rgba(255,255,255,0.06)" if is_domain_page else "#E2E8F0"
+    chal_eyebrow = "#38BDF8" if is_domain_page else "#0284C7"
+    chal_heading = "#FFFFFF" if is_domain_page else "#0F172A"
+    chal_desc = "#94A3B8" if is_domain_page else "#475569"
+
+    section_problem_resolution_html = f"""
+  <!-- Section 3: Problem & Resolution -->
+  <section id="problem-resolution" class="{chal_sec_cls}" style="padding: var(--space-4xl) 0; background: {chal_sec_bg}; border-bottom: 1px solid {chal_sec_border};">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
+        <span class="eyebrow-ags" style="color: {chal_eyebrow};">PROBLEM &amp; RESOLUTION</span>
+        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: {chal_heading}; margin: 8px 0 12px;">Operational Challenges &amp; Technical Resolutions</h2>
+        <p class="subpage-section-desc" style="color: {chal_desc}; font-size: 1.05rem;">How Nova Arc overcomes systemic process inefficiencies, operational friction, and technology bottlenecks.</p>
+      </div>
+
+      <div class="subpage-grid-cards">
+        {challenges_html}
+      </div>
+    </div>
+  </section>
+    """
+
+    # Practical Applications HTML:
+    # If domain page: LIGHT (#FFFFFF)
+    # If standard page: DARK (#08111F)
     use_cases_html = ""
     if use_cases:
         uc_cards = []
         for uc in use_cases:
-            ex_box = f"<div style='margin-top: auto; padding: 12px 14px; background: rgba(56, 189, 248, 0.08); border-radius: 6px; border-left: 3px solid #38BDF8; font-size: 0.875rem; color: #E2E8F0; line-height: 1.55;'><strong style='color: #38BDF8; display: block; margin-bottom: 3px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;'>Expected Operational Value:</strong>{uc['example']}</div>" if uc.get('example') else ""
-            uc_cards.append(f"""
-            <div class="card subpage-card-padded" style="padding: var(--space-xl); background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); display: flex; flex-direction: column;">
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
-                <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #38BDF8; background: rgba(56, 189, 248, 0.1); padding: 4px 10px; border-radius: 999px;">PRACTICAL APPLICATION</span>
-              </div>
-              <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-xs);"><span style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #94A3B8; font-weight: 600; margin-bottom: 2px;">Application Name</span>{uc['title']}</h3>
-              <div style="margin-bottom: var(--space-md);">
-                <strong style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #94A3B8; font-weight: 600; margin-bottom: 2px;">Business Scenario &amp; How It Is Used:</strong>
-                <p style="color: #94A3B8; font-size: 0.925rem; line-height: 1.6; margin: 0;">{uc['desc']}</p>
-              </div>
-              {ex_box}
-            </div>
-            """)
+            if is_domain_page:
+                ex_box = f"<div style='margin-top: auto; padding: 12px 14px; background: #F0F9FF; border-radius: 6px; border-left: 3px solid #0284C7; font-size: 0.875rem; color: #0C4A6E; line-height: 1.55;'><strong style='color: #0284C7; display: block; margin-bottom: 3px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;'>Expected Operational Value:</strong>{uc['example']}</div>" if uc.get('example') else ""
+                uc_cards.append(f"""
+                <div class="card subpage-card-padded" style="padding: var(--space-xl); background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); display: flex; flex-direction: column; box-shadow: 0 4px 16px -2px rgba(11, 37, 69, 0.04);">
+                  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                    <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #0284C7; background: #E0F2FE; padding: 4px 10px; border-radius: 999px;">PRACTICAL APPLICATION</span>
+                  </div>
+                  <h3 style="font-size: 1.15rem; font-weight: 700; color: #0F172A; margin-bottom: var(--space-xs);"><span style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #64748B; font-weight: 600; margin-bottom: 2px;">Application Name</span>{uc['title']}</h3>
+                  <div style="margin-bottom: var(--space-md);">
+                    <strong style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #64748B; font-weight: 600; margin-bottom: 2px;">Business Scenario &amp; How It Is Used:</strong>
+                    <p style="color: #334155; font-size: 0.925rem; line-height: 1.6; margin: 0;">{uc['desc']}</p>
+                  </div>
+                  {ex_box}
+                </div>
+                """)
+            else:
+                ex_box = f"<div style='margin-top: auto; padding: 12px 14px; background: rgba(56, 189, 248, 0.08); border-radius: 6px; border-left: 3px solid #38BDF8; font-size: 0.875rem; color: #E2E8F0; line-height: 1.55;'><strong style='color: #38BDF8; display: block; margin-bottom: 3px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;'>Expected Operational Value:</strong>{uc['example']}</div>" if uc.get('example') else ""
+                uc_cards.append(f"""
+                <div class="card subpage-card-padded" style="padding: var(--space-xl); background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); display: flex; flex-direction: column;">
+                  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                    <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #38BDF8; background: rgba(56, 189, 248, 0.1); padding: 4px 10px; border-radius: 999px;">PRACTICAL APPLICATION</span>
+                  </div>
+                  <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-xs);"><span style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #94A3B8; font-weight: 600; margin-bottom: 2px;">Application Name</span>{uc['title']}</h3>
+                  <div style="margin-bottom: var(--space-md);">
+                    <strong style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #94A3B8; font-weight: 600; margin-bottom: 2px;">Business Scenario &amp; How It Is Used:</strong>
+                    <p style="color: #94A3B8; font-size: 0.925rem; line-height: 1.6; margin: 0;">{uc['desc']}</p>
+                  </div>
+                  {ex_box}
+                </div>
+                """)
+
+        uc_sec_cls = "subpage-section-light" if is_domain_page else "subpage-section-dark"
+        uc_sec_bg = "#FFFFFF" if is_domain_page else "#08111F"
+        uc_sec_border = "#E2E8F0" if is_domain_page else "rgba(255,255,255,0.06)"
+        uc_eyebrow = "#0284C7" if is_domain_page else "#38BDF8"
+        uc_heading = "#0F172A" if is_domain_page else "#FFFFFF"
+        uc_desc = "#475569" if is_domain_page else "#94A3B8"
+
         use_cases_html = f"""
-  <!-- Section 3: Practical Applications -->
-  <section id="practical-applications" style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <!-- Section: Practical Applications -->
+  <section id="practical-applications" class="{uc_sec_cls}" style="padding: var(--space-4xl) 0; background: {uc_sec_bg}; border-bottom: 1px solid {uc_sec_border};">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
-        <span class="eyebrow-ags" style="color: #38BDF8;">PRACTICAL APPLICATIONS</span>
-        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Real-World Enterprise Applications &amp; Workflows</h2>
-        <p style="color: #94A3B8; font-size: 1.05rem;">Realistic ways organizations apply these capabilities to solve tangible operational challenges.</p>
+        <span class="eyebrow-ags" style="color: {uc_eyebrow};">PRACTICAL APPLICATIONS</span>
+        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: {uc_heading}; margin: 8px 0 12px;">Real-World Enterprise Applications &amp; Workflows</h2>
+        <p class="subpage-section-desc" style="color: {uc_desc}; font-size: 1.05rem;">Realistic ways organizations apply these capabilities to solve tangible operational challenges.</p>
       </div>
       <div class="subpage-grid-cards">
         {"".join(uc_cards)}
@@ -827,24 +895,64 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   </section>
         """
 
-    # 4. Engineering Methodology HTML (5-Stage Lifecycle)
+    # Engineering Methodology HTML (5-Stage Lifecycle):
+    # If domain page: DARK (#0A1628)
+    # If standard page: LIGHT (#FFFFFF)
     steps_html = []
     for st in workflow_steps:
-        steps_html.append(f"""
-        <div class="subpage-methodology-card">
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-            <span class="subpage-methodology-badge">{st['step']}</span>
-            <div style="width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; color: #38BDF8;">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        if is_domain_page:
+            steps_html.append(f"""
+            <div class="subpage-methodology-card" style="background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--radius-lg); padding: 24px 18px; display: flex; flex-direction: column; position: relative;">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span class="subpage-methodology-badge" style="font-size: 0.95rem; font-weight: 800; color: #38BDF8; background: rgba(56, 189, 248, 0.12); padding: 4px 10px; border-radius: 6px; display: inline-block; width: fit-content;">{st['step']}</span>
+                <div style="width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; color: #38BDF8;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+              </div>
+              <h4 class="subpage-methodology-title" style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin: 8px 0;">{st['title']}</h4>
+              <p class="subpage-methodology-desc" style="color: #94A3B8; font-size: 0.9rem; line-height: 1.55; margin: 0;">{st['desc']}</p>
             </div>
-          </div>
-          <h4 class="subpage-methodology-title">{st['title']}</h4>
-          <p class="subpage-methodology-desc">{st['desc']}</p>
-        </div>
-        """)
+            """)
+        else:
+            steps_html.append(f"""
+            <div class="subpage-methodology-card" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); padding: 24px 18px; display: flex; flex-direction: column; position: relative; box-shadow: 0 2px 8px -2px rgba(11, 37, 69, 0.05);">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span class="subpage-methodology-badge" style="font-size: 0.95rem; font-weight: 800; color: #0284C7; background: #E0F2FE; padding: 4px 10px; border-radius: 6px; display: inline-block; width: fit-content;">{st['step']}</span>
+                <div style="width: 28px; height: 28px; border-radius: 50%; background: #FFFFFF; border: 1px solid #E2E8F0; display: flex; align-items: center; justify-content: center; color: #0284C7;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+              </div>
+              <h4 class="subpage-methodology-title" style="font-size: 1.05rem; font-weight: 700; color: #0F172A; margin: 8px 0;">{st['title']}</h4>
+              <p class="subpage-methodology-desc" style="color: #475569; font-size: 0.9rem; line-height: 1.55; margin: 0;">{st['desc']}</p>
+            </div>
+            """)
     workflow_html = "".join(steps_html)
 
-    # 5. System Connectivity HTML
+    wf_sec_cls = "subpage-section-dark-alt" if is_domain_page else "subpage-section-light"
+    wf_sec_bg = "#0A1628" if is_domain_page else "#FFFFFF"
+    wf_sec_border = "rgba(255,255,255,0.06)" if is_domain_page else "#E2E8F0"
+    wf_eyebrow = "#38BDF8" if is_domain_page else "#0284C7"
+    wf_heading = "#FFFFFF" if is_domain_page else "#0F172A"
+    wf_desc = "#94A3B8" if is_domain_page else "#475569"
+
+    section_methodology_html = f"""
+  <!-- Section 4: Engineering Methodology (5-Stage Lifecycle) -->
+  <section id="engineering-methodology" class="{wf_sec_cls}" style="padding: var(--space-4xl) 0; background: {wf_sec_bg}; border-bottom: 1px solid {wf_sec_border};">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
+        <span class="eyebrow-ags" style="color: {wf_eyebrow};">ENGINEERING METHODOLOGY</span>
+        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: {wf_heading}; margin: 8px 0 12px;">Disciplined 5-Stage Engineering Lifecycle</h2>
+        <p class="subpage-section-desc" style="color: {wf_desc}; font-size: 1.05rem;">A structured implementation approach tailored to your systems, workflows, and governance requirements.</p>
+      </div>
+
+      <div class="subpage-methodology-grid">
+        {workflow_html}
+      </div>
+    </div>
+  </section>
+    """
+
+    # System Connectivity HTML (ALWAYS DARK NAVY)
     integrations_html = ""
     if integrations:
         int_cards = []
@@ -856,14 +964,15 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
               <p style="color: #CBD5E1; font-size: 0.9rem; line-height: 1.55; margin: 0;">{item['details']}</p>
             </div>
             """)
+        int_sec_bg = "#08111F" if is_domain_page else "#0A1628"
         integrations_html = f"""
-  <!-- Section 5: System Connectivity -->
-  <section id="system-connectivity" style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <!-- Section: System Connectivity -->
+  <section id="system-connectivity" class="subpage-section-dark" style="padding: var(--space-4xl) 0; background: {int_sec_bg}; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
         <span class="eyebrow-ags" style="color: #38BDF8;">SYSTEM CONNECTIVITY</span>
         <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Enterprise System Connectivity &amp; Data Flow</h2>
-        <p style="color: #94A3B8; font-size: 1.05rem;">Configurable interfaces connecting with your existing enterprise infrastructure, databases, and APIs.</p>
+        <p class="subpage-section-desc" style="color: #94A3B8; font-size: 1.05rem;">Configurable interfaces connecting with your existing enterprise infrastructure, databases, and APIs.</p>
       </div>
       <div class="subpage-grid-2col">
         {"".join(int_cards)}
@@ -872,26 +981,45 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   </section>
         """
 
-    # 6. Deployment & Oversight HTML
+    # Deployment & Oversight HTML:
+    # If domain page: DARK (#0A1628)
+    # If standard page: LIGHT SLATE (#F8FAFC)
     considerations_html = ""
     if considerations:
         cons_cards = []
         for c in considerations:
-            cons_cards.append(f"""
-            <div class="subpage-card-padded" style="padding: var(--space-lg); background: rgba(15, 23, 42, 0.6); border-radius: var(--radius-md); border-left: 3px solid #38BDF8; border-top: 1px solid rgba(255,255,255,0.06); border-right: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06);">
-              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #94A3B8; display: inline-block; margin-bottom: 4px;">Governance &amp; Controls</span>
-              <h4 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin-bottom: 6px;">{c['title']}</h4>
-              <p style="color: #94A3B8; font-size: 0.9rem; line-height: 1.55; margin: 0;">{c['desc']}</p>
-            </div>
-            """)
+            if is_domain_page:
+                cons_cards.append(f"""
+                <div class="subpage-card-padded" style="padding: var(--space-lg); background: rgba(15, 23, 42, 0.6); border-radius: var(--radius-md); border-left: 3px solid #38BDF8; border-top: 1px solid rgba(255,255,255,0.06); border-right: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06);">
+                  <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #94A3B8; display: inline-block; margin-bottom: 4px;">Governance &amp; Controls</span>
+                  <h4 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin-bottom: 6px;">{c['title']}</h4>
+                  <p style="color: #94A3B8; font-size: 0.9rem; line-height: 1.55; margin: 0;">{c['desc']}</p>
+                </div>
+                """)
+            else:
+                cons_cards.append(f"""
+                <div class="subpage-card-padded" style="padding: var(--space-lg); background: #FFFFFF; border-radius: var(--radius-md); border: 1px solid #E2E8F0; border-left: 3px solid #0284C7; box-shadow: 0 2px 8px -2px rgba(11, 37, 69, 0.04);">
+                  <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #64748B; display: inline-block; margin-bottom: 4px;">Governance &amp; Controls</span>
+                  <h4 style="font-size: 1.05rem; font-weight: 700; color: #0F172A; margin-bottom: 6px;">{c['title']}</h4>
+                  <p style="color: #475569; font-size: 0.9rem; line-height: 1.55; margin: 0;">{c['desc']}</p>
+                </div>
+                """)
+
+        cons_sec_cls = "subpage-section-dark-alt" if is_domain_page else "subpage-section-light-alt"
+        cons_sec_bg = "#0A1628" if is_domain_page else "#F8FAFC"
+        cons_sec_border = "rgba(255,255,255,0.06)" if is_domain_page else "#E2E8F0"
+        cons_eyebrow = "#38BDF8" if is_domain_page else "#0284C7"
+        cons_heading = "#FFFFFF" if is_domain_page else "#0F172A"
+        cons_desc = "#94A3B8" if is_domain_page else "#475569"
+
         considerations_html = f"""
-  <!-- Section 6: Deployment & Oversight -->
-  <section id="deployment-oversight" style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <!-- Section: Deployment & Oversight -->
+  <section id="deployment-oversight" class="{cons_sec_cls}" style="padding: var(--space-4xl) 0; background: {cons_sec_bg}; border-bottom: 1px solid {cons_sec_border};">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
-        <span class="eyebrow-ags" style="color: #38BDF8;">DEPLOYMENT &amp; OVERSIGHT</span>
-        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Implementation Lifecycle, Security &amp; Human Oversight</h2>
-        <p style="color: #94A3B8; font-size: 1.05rem;">Prerequisites, security safeguards, and human review gates required for dependable execution.</p>
+        <span class="eyebrow-ags" style="color: {cons_eyebrow};">DEPLOYMENT &amp; OVERSIGHT</span>
+        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: {cons_heading}; margin: 8px 0 12px;">Implementation Lifecycle, Security &amp; Human Oversight</h2>
+        <p class="subpage-section-desc" style="color: {cons_desc}; font-size: 1.05rem;">Prerequisites, security safeguards, and human review gates required for dependable execution.</p>
       </div>
       <div class="subpage-grid-2col">
         {"".join(cons_cards)}
@@ -900,44 +1028,104 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   </section>
         """
 
-    # 7. Potential Business Benefits HTML
-    outcomes_html = []
+    # Potential Business Benefits HTML:
+    # If domain page: LIGHT (#FFFFFF)
+    # If standard page: DARK (#08111F)
+    outcomes_html_list = []
     for out in outcomes:
-        outcomes_html.append(f"""
-        <div class="subpage-card-padded" style="background: rgba(15, 23, 42, 0.55); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: var(--radius-lg); padding: var(--space-xl);">
-          <div style="width: 36px; height: 36px; border-radius: 8px; background: rgba(56, 189, 248, 0.15); display: flex; align-items: center; justify-content: center; color: #38BDF8; margin-bottom: var(--space-md);">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <h4 style="font-size: 1.1rem; font-weight: 700; color: #FFFFFF; margin-bottom: 6px;">{out['title']}</h4>
-          <p style="color: #94A3B8; font-size: 0.9rem; line-height: 1.55;">{out['desc']}</p>
-        </div>
-        """)
-    outcomes_grid_html = "".join(outcomes_html)
+        if is_domain_page:
+            outcomes_html_list.append(f"""
+            <div class="subpage-card-padded" style="background: #F8FAFC; border: 1px solid #BAE6FD; border-radius: var(--radius-lg); padding: var(--space-xl); box-shadow: 0 4px 16px -2px rgba(11, 37, 69, 0.05);">
+              <div style="width: 36px; height: 36px; border-radius: 8px; background: #E0F2FE; display: flex; align-items: center; justify-content: center; color: #0284C7; margin-bottom: var(--space-md);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <h4 style="font-size: 1.1rem; font-weight: 700; color: #0F172A; margin-bottom: 6px;">{out['title']}</h4>
+              <p style="color: #475569; font-size: 0.9rem; line-height: 1.55; margin: 0;">{out['desc']}</p>
+            </div>
+            """)
+        else:
+            outcomes_html_list.append(f"""
+            <div class="subpage-card-padded" style="background: rgba(15, 23, 42, 0.55); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: var(--radius-lg); padding: var(--space-xl);">
+              <div style="width: 36px; height: 36px; border-radius: 8px; background: rgba(56, 189, 248, 0.15); display: flex; align-items: center; justify-content: center; color: #38BDF8; margin-bottom: var(--space-md);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <h4 style="font-size: 1.1rem; font-weight: 700; color: #FFFFFF; margin-bottom: 6px;">{out['title']}</h4>
+              <p style="color: #94A3B8; font-size: 0.9rem; line-height: 1.55; margin: 0;">{out['desc']}</p>
+            </div>
+            """)
+    outcomes_grid_html = "".join(outcomes_html_list)
 
-    # 8. Frequently Asked Questions HTML
+    out_sec_cls = "subpage-section-light" if is_domain_page else "subpage-section-dark"
+    out_sec_bg = "#FFFFFF" if is_domain_page else "#08111F"
+    out_sec_border = "#E2E8F0" if is_domain_page else "rgba(255,255,255,0.06)"
+    out_eyebrow = "#0284C7" if is_domain_page else "#38BDF8"
+    out_heading = "#0F172A" if is_domain_page else "#FFFFFF"
+    out_desc = "#475569" if is_domain_page else "#94A3B8"
+
+    section_benefits_html = f"""
+  <!-- Section 7: Potential Business Benefits -->
+  <section id="business-benefits" class="{out_sec_cls}" style="padding: var(--space-4xl) 0; background: {out_sec_bg}; border-bottom: 1px solid {out_sec_border};">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
+        <span class="eyebrow-ags" style="color: {out_eyebrow};">POTENTIAL BUSINESS BENEFITS</span>
+        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: {out_heading}; margin: 8px 0 12px;">Operational Advantages &amp; Measured Business Value</h2>
+        <p class="subpage-section-desc" style="color: {out_desc}; font-size: 1.05rem;">Streamlining repetitive administrative overhead into sustained operational velocity.</p>
+      </div>
+
+      <div class="subpage-grid-outcomes">
+        {outcomes_grid_html}
+      </div>
+    </div>
+  </section>
+    """
+
+    # Frequently Asked Questions HTML:
+    # If domain page: DARK (#0A1628)
+    # If standard page: LIGHT (#FFFFFF)
     faqs_html = ""
     if faqs:
         faq_items = []
         for q in faqs:
-            faq_items.append(f"""
-            <details style="background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-md); padding: var(--space-md) var(--space-lg); margin-bottom: var(--space-sm);">
-              <summary style="font-weight: 700; color: #FFFFFF; font-size: 1.05rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                <span>{q['q']}</span>
-                <span style="color: #38BDF8; font-size: 1.25rem; font-weight: 400; margin-left: 12px;">+</span>
-              </summary>
-              <div style="color: #94A3B8; font-size: 0.925rem; line-height: 1.6; margin-top: var(--space-sm); border-top: 1px solid rgba(255,255,255,0.06); padding-top: var(--space-sm);">
-                {q['a']}
-              </div>
-            </details>
-            """)
+            if is_domain_page:
+                faq_items.append(f"""
+                <details style="background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-md); padding: var(--space-md) var(--space-lg); margin-bottom: var(--space-sm);">
+                  <summary style="font-weight: 700; color: #FFFFFF; font-size: 1.05rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                    <span>{q['q']}</span>
+                    <span style="color: #38BDF8; font-size: 1.25rem; font-weight: 400; margin-left: 12px;">+</span>
+                  </summary>
+                  <div style="color: #94A3B8; font-size: 0.925rem; line-height: 1.6; margin-top: var(--space-sm); border-top: 1px solid rgba(255,255,255,0.06); padding-top: var(--space-sm);">
+                    {q['a']}
+                  </div>
+                </details>
+                """)
+            else:
+                faq_items.append(f"""
+                <details style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: var(--radius-md); padding: var(--space-md) var(--space-lg); margin-bottom: var(--space-sm); box-shadow: 0 1px 4px rgba(11,37,69,0.03);">
+                  <summary style="font-weight: 700; color: #0F172A; font-size: 1.05rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                    <span>{q['q']}</span>
+                    <span style="color: #0284C7; font-size: 1.25rem; font-weight: 400; margin-left: 12px;">+</span>
+                  </summary>
+                  <div style="color: #475569; font-size: 0.925rem; line-height: 1.6; margin-top: var(--space-sm); border-top: 1px solid #E2E8F0; padding-top: var(--space-sm);">
+                    {q['a']}
+                  </div>
+                </details>
+                """)
+
+        faq_sec_cls = "subpage-section-dark-alt" if is_domain_page else "subpage-section-light"
+        faq_sec_bg = "#0A1628" if is_domain_page else "#FFFFFF"
+        faq_sec_border = "rgba(255,255,255,0.06)" if is_domain_page else "#E2E8F0"
+        faq_eyebrow = "#38BDF8" if is_domain_page else "#0284C7"
+        faq_heading = "#FFFFFF" if is_domain_page else "#0F172A"
+        faq_desc = "#94A3B8" if is_domain_page else "#475569"
+
         faqs_html = f"""
-  <!-- Section 8: Frequently Asked Questions -->
-  <section id="frequently-asked-questions" style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <!-- Section: Frequently Asked Questions -->
+  <section id="frequently-asked-questions" class="{faq_sec_cls}" style="padding: var(--space-4xl) 0; background: {faq_sec_bg}; border-bottom: 1px solid {faq_sec_border};">
     <div class="container" style="max-width: 860px; margin: 0 auto;">
       <div style="text-align: center; margin-bottom: var(--space-3xl);">
-        <span class="eyebrow-ags" style="color: #38BDF8;">FREQUENTLY ASKED QUESTIONS</span>
-        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Frequently Asked Questions</h2>
-        <p style="color: #94A3B8; font-size: 1.05rem;">Practical guidance regarding project scope, integrations, and operational requirements.</p>
+        <span class="eyebrow-ags" style="color: {faq_eyebrow};">FREQUENTLY ASKED QUESTIONS</span>
+        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: {faq_heading}; margin: 8px 0 12px;">Frequently Asked Questions</h2>
+        <p class="subpage-section-desc" style="color: {faq_desc}; font-size: 1.05rem;">Practical guidance regarding project scope, integrations, and operational requirements.</p>
       </div>
       <div>
         {"".join(faq_items)}
@@ -946,17 +1134,104 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   </section>
         """
 
-    # 9. Connected Ecosystem HTML
+    # Connected Ecosystem HTML:
+    # If domain page: LIGHT SLATE (#F8FAFC)
+    # If standard page: DARK (#08111F)
     related_html = []
     for rel in related_links:
-        related_html.append(f"""
-        <a href="{root_prefix}{rel['link']}" class="card" style="padding: var(--space-lg); text-decoration: none; display: block; transition: all 0.2s ease; background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg);">
-          <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #38BDF8; font-weight: 700; background: rgba(56, 189, 248, 0.1); padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 6px;">{rel.get('tag', 'Service Domain')}</span>
-          <h4 style="font-size: 1.1rem; color: #FFFFFF; margin: 6px 0 4px;">{rel['title']} &rarr;</h4>
-          <p style="color: #94A3B8; font-size: 0.85rem; margin: 0; line-height: 1.45;">{rel['desc']}</p>
-        </a>
-        """)
+        if is_domain_page:
+            related_html.append(f"""
+            <a href="{root_prefix}{rel['link']}" class="card" style="padding: var(--space-lg); text-decoration: none; display: block; transition: all 0.2s ease; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); box-shadow: 0 2px 8px -2px rgba(11, 37, 69, 0.05);">
+              <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #0284C7; font-weight: 700; background: #E0F2FE; padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 6px;">{rel.get('tag', 'Service Domain')}</span>
+              <h4 style="font-size: 1.1rem; color: #0F172A; margin: 6px 0 4px;">{rel['title']} &rarr;</h4>
+              <p style="color: #475569; font-size: 0.85rem; margin: 0; line-height: 1.45;">{rel['desc']}</p>
+            </a>
+            """)
+        else:
+            related_html.append(f"""
+            <a href="{root_prefix}{rel['link']}" class="card" style="padding: var(--space-lg); text-decoration: none; display: block; transition: all 0.2s ease; background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg);">
+              <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #38BDF8; font-weight: 700; background: rgba(56, 189, 248, 0.1); padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 6px;">{rel.get('tag', 'Service Domain')}</span>
+              <h4 style="font-size: 1.1rem; color: #FFFFFF; margin: 6px 0 4px;">{rel['title']} &rarr;</h4>
+              <p style="color: #94A3B8; font-size: 0.85rem; margin: 0; line-height: 1.45;">{rel['desc']}</p>
+            </a>
+            """)
     related_grid_html = "".join(related_html)
+
+    rel_sec_cls = "subpage-section-light-alt" if is_domain_page else "subpage-section-dark"
+    rel_sec_bg = "#F8FAFC" if is_domain_page else "#08111F"
+    rel_sec_border = "#E2E8F0" if is_domain_page else "rgba(255,255,255,0.06)"
+    rel_eyebrow = "#0284C7" if is_domain_page else "#38BDF8"
+    rel_heading = "#0F172A" if is_domain_page else "#FFFFFF"
+    rel_desc = "#475569" if is_domain_page else "#94A3B8"
+
+    section_ecosystem_html = f"""
+  <!-- Section 9: Connected Ecosystem -->
+  <section id="connected-ecosystem" class="{rel_sec_cls}" style="padding: var(--space-4xl) 0; background: {rel_sec_bg}; border-bottom: 1px solid {rel_sec_border};">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
+        <span class="eyebrow-ags" style="color: {rel_eyebrow};">CONNECTED ECOSYSTEM</span>
+        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: {rel_heading}; margin: 8px 0 12px;">Cross-Domain Enterprise Ecosystem Integration</h2>
+        <p class="subpage-section-desc" style="color: {rel_desc}; font-size: 1.05rem;">Integrate complementary enterprise modules across our four core service domains.</p>
+      </div>
+
+      <div class="subpage-grid-related">
+        {related_grid_html}
+      </div>
+    </div>
+  </section>
+    """
+
+    # Bottom CTA:
+    # If domain page (connected ecosystem is light): DARK GRADIENT BANNER
+    # If standard page (connected ecosystem is dark): LIGHT CONTAINER WITH FLOATING DARK GRADIENT CARD
+    if is_domain_page:
+        bottom_cta_html = f"""
+  <!-- Bottom CTA Banner (Dark Gradient) -->
+  <section class="cta-strip-ags subpage-section-dark" style="padding: var(--space-4xl) 0; background: linear-gradient(135deg, #07172B 0%, #0B2545 60%, #0E2E56 100%); text-align: center; border-top: 1px solid rgba(255,255,255,0.08);">
+    <div class="container" style="max-width: 760px; margin: 0 auto;">
+      <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 800; color: #FFFFFF; margin-bottom: var(--space-md); letter-spacing: -0.02em;">
+        Let’s Build Your Next Business Solution.
+      </h2>
+      <p style="font-size: 1.1rem; color: #CBD5E1; line-height: 1.65; margin-bottom: var(--space-2xl);">
+        Discuss your business challenges, operational needs, and technology goals with our team. We evaluate your existing system architecture and help you plan the right solution.
+      </p>
+      <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+        <a href="{root_prefix}contact.html" class="btn btn-consultation-ags" style="font-size: 1.05rem; padding: 14px 34px;">
+          <span>Discuss Your Project</span>
+          <svg class="btn-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <a href="tel:04046146093" class="btn btn-outline-white" style="font-size: 1.05rem; padding: 14px 28px;">
+          <span>Call 040-46146093</span>
+        </a>
+      </div>
+    </div>
+  </section>
+        """
+    else:
+        bottom_cta_html = f"""
+  <!-- Bottom CTA Container (Light Background with Floating Dark Gradient Card) -->
+  <section class="subpage-cta-section subpage-section-light-alt" style="padding: var(--space-4xl) 0; background: #F8FAFC; border-top: 1px solid #E2E8F0; text-align: center;">
+    <div class="container" style="max-width: 960px; margin: 0 auto;">
+      <div style="background: linear-gradient(135deg, #07172B 0%, #0B2545 60%, #0E2E56 100%); border-radius: var(--radius-xl); padding: var(--space-3xl) var(--space-2xl); text-align: center; box-shadow: 0 20px 45px -10px rgba(11,37,69,0.22); border: 1px solid rgba(56, 189, 248, 0.25);">
+        <h2 style="font-size: clamp(2rem, 3.5vw, 2.7rem); font-weight: 800; color: #FFFFFF; margin-bottom: var(--space-md); letter-spacing: -0.02em;">
+          Let’s Build Your Next Business Solution.
+        </h2>
+        <p style="font-size: 1.05rem; color: #CBD5E1; line-height: 1.65; max-width: 680px; margin: 0 auto var(--space-2xl);">
+          Discuss your business challenges, operational needs, and technology goals with our team. We evaluate your existing system architecture and help you plan the right solution.
+        </p>
+        <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+          <a href="{root_prefix}contact.html" class="btn btn-consultation-ags" style="font-size: 1.05rem; padding: 14px 34px;">
+            <span>Discuss Your Project</span>
+            <svg class="btn-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="tel:04046146093" class="btn btn-outline-white" style="font-size: 1.05rem; padding: 14px 28px;">
+            <span>Call 040-46146093</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+        """
 
     # Compute Hero Visual & Highlights
     hero_highlights_html = get_hero_highlights_html(capabilities)
@@ -1003,7 +1278,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   }}
   </script>
 </head>
-<body style="background: #08111F; color: #E2E8F0;">
+<body class="subpage-body">
 
 {get_shared_header(root_prefix, active_sec)}
 
@@ -1051,12 +1326,12 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
 
   {services_domain_nav_html}
 
-  <!-- Section 1: Strategic Overview -->
-  <section id="strategic-overview" style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <!-- Section 1: Strategic Overview (LIGHT) -->
+  <section id="strategic-overview" class="subpage-section-light" style="padding: var(--space-4xl) 0; background: #FFFFFF; border-bottom: 1px solid #E2E8F0;">
     <div class="container">
       <div style="max-width: 860px; margin: 0 auto; text-align: center;">
-        <span class="eyebrow-ags" style="color: #38BDF8;">STRATEGIC OVERVIEW</span>
-        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 20px; line-height: 1.3;">Engineered for Seamless Operations &amp; Measurable Outcomes</h2>
+        <span class="eyebrow-ags" style="color: #0284C7;">STRATEGIC OVERVIEW</span>
+        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #0F172A; margin: 8px 0 20px; line-height: 1.3;">Engineered for Seamless Operations &amp; Measurable Outcomes</h2>
         <div style="text-align: left;">
           {overview_html}
         </div>
@@ -1064,13 +1339,13 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
     </div>
   </section>
 
-  <!-- Section 2: Key Capabilities -->
-  <section id="key-capabilities" style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <!-- Section 2: Key Capabilities (DARK NAVY) -->
+  <section id="key-capabilities" class="subpage-section-dark" style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
         <span class="eyebrow-ags" style="color: #38BDF8;">KEY CAPABILITIES</span>
         <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Core Architecture &amp; Functional Capabilities</h2>
-        <p style="color: #94A3B8; font-size: 1.05rem;">Purpose-built engineering modules designed to integrate cleanly into your existing enterprise stack.</p>
+        <p class="subpage-section-desc" style="color: #94A3B8; font-size: 1.05rem;">Purpose-built engineering modules designed to integrate cleanly into your existing enterprise stack.</p>
       </div>
 
       <div class="subpage-grid-cards">
@@ -1081,37 +1356,11 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
 
   {what_we_deliver_html}
 
-  <!-- Section 3: Problem & Resolution -->
-  <section id="problem-resolution" style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
-    <div class="container">
-      <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
-        <span class="eyebrow-ags" style="color: #38BDF8;">PROBLEM &amp; RESOLUTION</span>
-        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Operational Challenges &amp; Technical Resolutions</h2>
-        <p style="color: #94A3B8; font-size: 1.05rem;">How Nova Arc overcomes systemic process inefficiencies, operational friction, and technology bottlenecks.</p>
-      </div>
-
-      <div class="subpage-grid-cards">
-        {challenges_html}
-      </div>
-    </div>
-  </section>
+  {section_problem_resolution_html}
 
   {use_cases_html}
 
-  <!-- Section 4: Engineering Methodology (5-Stage Lifecycle) -->
-  <section id="engineering-methodology" style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
-    <div class="container">
-      <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
-        <span class="eyebrow-ags" style="color: #38BDF8;">ENGINEERING METHODOLOGY</span>
-        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Disciplined 5-Stage Engineering Lifecycle</h2>
-        <p style="color: #94A3B8; font-size: 1.05rem;">A structured implementation approach tailored to your systems, workflows, and governance requirements.</p>
-      </div>
-
-      <div class="subpage-methodology-grid">
-        {workflow_html}
-      </div>
-    </div>
-  </section>
+  {section_methodology_html}
 
   {industries_served_html}
 
@@ -1121,58 +1370,13 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
 
   {considerations_html}
 
-  <!-- Section 7: Potential Business Benefits -->
-  <section id="business-benefits" style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
-    <div class="container">
-      <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
-        <span class="eyebrow-ags" style="color: #38BDF8;">POTENTIAL BUSINESS BENEFITS</span>
-        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Operational Advantages &amp; Measured Business Value</h2>
-        <p style="color: #94A3B8; font-size: 1.05rem;">Streamlining repetitive administrative overhead into sustained operational velocity.</p>
-      </div>
-
-      <div class="subpage-grid-outcomes">
-        {outcomes_grid_html}
-      </div>
-    </div>
-  </section>
+  {section_benefits_html}
 
   {faqs_html}
 
-  <!-- Section 9: Connected Ecosystem -->
-  <section id="connected-ecosystem" style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
-    <div class="container">
-      <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
-        <span class="eyebrow-ags" style="color: #38BDF8;">CONNECTED ECOSYSTEM</span>
-        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Cross-Domain Enterprise Ecosystem Integration</h2>
-        <p style="color: #94A3B8; font-size: 1.05rem;">Integrate complementary enterprise modules across our four core service domains.</p>
-      </div>
+  {section_ecosystem_html}
 
-      <div class="subpage-grid-related">
-        {related_grid_html}
-      </div>
-    </div>
-  </section>
-
-  <!-- Bottom CTA Strip -->
-  <section class="cta-strip-ags" style="padding: var(--space-4xl) 0; background: linear-gradient(135deg, rgba(14, 165, 233, 0.12) 0%, rgba(31, 111, 235, 0.18) 100%); text-align: center;">
-    <div class="container" style="max-width: 760px; margin: 0 auto;">
-      <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 800; color: #FFFFFF; margin-bottom: var(--space-md); letter-spacing: -0.02em;">
-        Let’s Build Your Next Business Solution.
-      </h2>
-      <p style="font-size: 1.1rem; color: #CBD5E1; line-height: 1.65; margin-bottom: var(--space-2xl);">
-        Discuss your business challenges, operational needs, and technology goals with our team. We evaluate your existing system architecture and help you plan the right solution.
-      </p>
-      <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
-        <a href="{root_prefix}contact.html" class="btn btn-consultation-ags" style="font-size: 1.05rem; padding: 14px 34px;">
-          <span>Discuss Your Project</span>
-          <svg class="btn-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </a>
-        <a href="tel:04046146093" class="btn btn-outline-white" style="font-size: 1.05rem; padding: 14px 28px;">
-          <span>Call 040-46146093</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  {bottom_cta_html}
 
 {get_shared_footer(root_prefix)}
 
@@ -1182,4 +1386,3 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
 </html>
 """
     return html
-

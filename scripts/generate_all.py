@@ -643,12 +643,13 @@ def generate_404_page():
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css?v=3.5">
 </head>
-<body>
+<body class="subpage-body">
 
 {header_html}
 
-  <main style="padding-top: calc(70px + var(--space-4xl)); padding-bottom: var(--space-4xl); min-height: 80vh; display: flex; align-items: center;">
-    <div class="container" style="max-width: 860px; text-align: center; margin: 0 auto;">
+  <!-- Error 404 Hero (Dark Navy) -->
+  <section style="background: radial-gradient(circle at 50% 30%, rgba(31, 111, 235, 0.15) 0%, transparent 70%), #08111F; color: #FFFFFF; padding: calc(75px + var(--space-4xl)) 0 var(--space-3xl); text-align: center;">
+    <div class="container" style="max-width: 860px; margin: 0 auto;">
       <span class="eyebrow-ags" style="color: #38BDF8; font-weight: 700; letter-spacing: 0.1em; font-size: 0.95rem;">ERROR 404</span>
       <h1 style="font-size: clamp(2.5rem, 5vw, 4.2rem); font-weight: 900; color: #FFFFFF; margin: 12px 0 18px; letter-spacing: -0.02em;">
         Page Not Found
@@ -657,7 +658,7 @@ def generate_404_page():
         The page you are looking for may have been moved, renamed, or is temporarily unavailable. Let us help you find what you need across Nova Arc’s technology suite.
       </p>
 
-      <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-bottom: var(--space-3xl);">
+      <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
         <a href="index.html" class="btn btn-consultation-ags" style="padding: 12px 28px;">
           <span>Return to Homepage</span>
           <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
@@ -669,35 +670,41 @@ def generate_404_page():
           <span>Contact Our Team</span>
         </a>
       </div>
+    </div>
+  </section>
 
-      <!-- Quick Navigation Cards Grid -->
-      <div style="text-align: left; margin-top: var(--space-2xl);">
-        <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-lg); text-align: center;">Popular Areas of Exploration:</h3>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-lg);">
-          <a href="solutions.html" class="card" style="padding: var(--space-lg); text-decoration: none; display: block;">
-            <span style="font-size: 0.75rem; color: #38BDF8; font-weight: 700; text-transform: uppercase;">Overview</span>
-            <h4 style="font-size: 1.1rem; color: #FFFFFF; margin: 6px 0 4px;">Solutions Suite &rarr;</h4>
-            <p style="color: #94A3B8; font-size: 0.85rem; margin: 0; line-height: 1.4;">Comprehensive digital commerce, supply chain, monitoring, and AI platforms.</p>
-          </a>
-          <a href="services.html" class="card" style="padding: var(--space-lg); text-decoration: none; display: block;">
-            <span style="font-size: 0.75rem; color: #38BDF8; font-weight: 700; text-transform: uppercase;">Catalog</span>
-            <h4 style="font-size: 1.1rem; color: #FFFFFF; margin: 6px 0 4px;">Services Catalog &rarr;</h4>
-            <p style="color: #94A3B8; font-size: 0.85rem; margin: 0; line-height: 1.4;">Detailed implementation capabilities across 4 technology domains.</p>
-          </a>
-          <a href="technology.html" class="card" style="padding: var(--space-lg); text-decoration: none; display: block;">
-            <span style="font-size: 0.75rem; color: #38BDF8; font-weight: 700; text-transform: uppercase;">Architecture</span>
-            <h4 style="font-size: 1.1rem; color: #FFFFFF; margin: 6px 0 4px;">Technology Platform &rarr;</h4>
-            <p style="color: #94A3B8; font-size: 0.85rem; margin: 0; line-height: 1.4;">Agentic AI, real-time IoT telemetry, enterprise integration, and data analytics.</p>
-          </a>
-          <a href="industries.html" class="card" style="padding: var(--space-lg); text-decoration: none; display: block;">
-            <span style="font-size: 0.75rem; color: #38BDF8; font-weight: 700; text-transform: uppercase;">Sectors</span>
-            <h4 style="font-size: 1.1rem; color: #FFFFFF; margin: 6px 0 4px;">Industries We Serve &rarr;</h4>
-            <p style="color: #94A3B8; font-size: 0.85rem; margin: 0; line-height: 1.4;">FoodTech, retail commerce, manufacturing, logistics, healthcare, and enterprise.</p>
-          </a>
-        </div>
+  <!-- Popular Exploration Cards Grid (Light Slate) -->
+  <section class="subpage-section-light-alt" style="background: #F8FAFC; border-top: 1px solid #E2E8F0; padding: var(--space-4xl) 0;">
+    <div class="container" style="max-width: 960px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: var(--space-2xl);">
+        <span class="eyebrow-ags" style="color: #0284C7; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.825rem;">NAVIGATE NOVA ARC</span>
+        <h2 style="font-size: 2rem; font-weight: 800; color: #0F172A; margin: 8px 0 10px;">Popular Areas of Exploration</h2>
+        <p style="color: #475569; font-size: 1.05rem;">Quick links to key enterprise platforms and service domains.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-lg);">
+        <a href="solutions.html" class="card" style="padding: var(--space-lg); text-decoration: none; display: block; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); box-shadow: 0 4px 16px -2px rgba(11,37,69,0.05); transition: all 0.2s ease;">
+          <span style="font-size: 0.72rem; color: #0284C7; background: #E0F2FE; font-weight: 700; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px;">Overview</span>
+          <h4 style="font-size: 1.1rem; color: #0F172A; margin: 6px 0 4px; font-weight: 700;">Solutions Suite &rarr;</h4>
+          <p style="color: #475569; font-size: 0.85rem; margin: 0; line-height: 1.45;">Comprehensive digital commerce, supply chain, monitoring, and AI platforms.</p>
+        </a>
+        <a href="services.html" class="card" style="padding: var(--space-lg); text-decoration: none; display: block; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); box-shadow: 0 4px 16px -2px rgba(11,37,69,0.05); transition: all 0.2s ease;">
+          <span style="font-size: 0.72rem; color: #0284C7; background: #E0F2FE; font-weight: 700; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px;">Catalog</span>
+          <h4 style="font-size: 1.1rem; color: #0F172A; margin: 6px 0 4px; font-weight: 700;">Services Catalog &rarr;</h4>
+          <p style="color: #475569; font-size: 0.85rem; margin: 0; line-height: 1.45;">Detailed implementation capabilities across 4 technology domains.</p>
+        </a>
+        <a href="technology.html" class="card" style="padding: var(--space-lg); text-decoration: none; display: block; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); box-shadow: 0 4px 16px -2px rgba(11,37,69,0.05); transition: all 0.2s ease;">
+          <span style="font-size: 0.72rem; color: #0284C7; background: #E0F2FE; font-weight: 700; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px;">Architecture</span>
+          <h4 style="font-size: 1.1rem; color: #0F172A; margin: 6px 0 4px; font-weight: 700;">Technology Platform &rarr;</h4>
+          <p style="color: #475569; font-size: 0.85rem; margin: 0; line-height: 1.45;">Agentic AI, real-time IoT telemetry, enterprise integration, and data analytics.</p>
+        </a>
+        <a href="industries.html" class="card" style="padding: var(--space-lg); text-decoration: none; display: block; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); box-shadow: 0 4px 16px -2px rgba(11,37,69,0.05); transition: all 0.2s ease;">
+          <span style="font-size: 0.72rem; color: #0284C7; background: #E0F2FE; font-weight: 700; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px;">Sectors</span>
+          <h4 style="font-size: 1.1rem; color: #0F172A; margin: 6px 0 4px; font-weight: 700;">Industries We Serve &rarr;</h4>
+          <p style="color: #475569; font-size: 0.85rem; margin: 0; line-height: 1.45;">FoodTech, retail commerce, manufacturing, logistics, healthcare, and enterprise.</p>
+        </a>
       </div>
     </div>
-  </main>
+  </section>
 
 {footer_html}
 

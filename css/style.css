@@ -4914,11 +4914,12 @@ body.mobile-nav-open {
 
 /* Enterprise Security Box in Sidebar */
 .contact-sidebar-trust-box {
-  background: linear-gradient(135deg, var(--navy-primary) 0%, var(--navy-surface) 100%);
+  background: linear-gradient(135deg, var(--navy-primary) 0%, #051324 100%);
   color: #FFFFFF;
   border-radius: var(--radius-xl);
   padding: var(--space-2xl);
   box-shadow: var(--shadow-md);
+  border: 1px solid rgba(56, 189, 248, 0.2);
 }
 
 .trust-box-title {
@@ -8781,4 +8782,217 @@ html, body {
 #key-capabilities .card.subpage-card-padded {
   align-self: start !important;
   height: auto !important;
+}
+
+/* ==========================================================================
+   Two-Colour Theme System (Dark Navy Blue + White / Light)
+   ========================================================================== */
+
+/* Subpage Base Body */
+.subpage-body {
+  background-color: var(--bg-white);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subpage Section Themes */
+.subpage-section-light {
+  background-color: #FFFFFF !important;
+  color: var(--text-primary) !important;
+  border-bottom: 1px solid var(--border-light);
+  position: relative;
+}
+
+.subpage-section-light-alt {
+  background-color: #F8FAFC !important;
+  color: var(--text-primary) !important;
+  border-bottom: 1px solid var(--border-light);
+  position: relative;
+}
+
+.subpage-section-dark {
+  background-color: #08111F !important;
+  color: #E2E8F0 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+}
+
+.subpage-section-dark-alt {
+  background-color: #0A1628 !important;
+  color: #E2E8F0 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+}
+
+/* Light Section Typography */
+.subpage-section-light .eyebrow-ags,
+.subpage-section-light-alt .eyebrow-ags {
+  color: #0284C7 !important;
+}
+
+.subpage-section-light .subpage-section-heading,
+.subpage-section-light-alt .subpage-section-heading {
+  color: #0F172A !important;
+}
+
+.subpage-section-light .subpage-section-desc,
+.subpage-section-light-alt .subpage-section-desc {
+  color: #475569 !important;
+}
+
+/* Light Section Methodology Cards */
+.subpage-section-light .subpage-methodology-card,
+.subpage-section-light-alt .subpage-methodology-card {
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-light) !important;
+  box-shadow: 0 2px 8px -2px rgba(11, 37, 69, 0.05) !important;
+}
+
+.subpage-section-light .subpage-methodology-card:hover,
+.subpage-section-light-alt .subpage-methodology-card:hover {
+  background: #FFFFFF !important;
+  border-color: #0284C7 !important;
+  box-shadow: 0 10px 24px rgba(11, 37, 69, 0.1) !important;
+}
+
+.subpage-section-light .subpage-methodology-title,
+.subpage-section-light-alt .subpage-methodology-title {
+  color: #0F172A !important;
+}
+
+.subpage-section-light .subpage-methodology-desc,
+.subpage-section-light-alt .subpage-methodology-desc {
+  color: #475569 !important;
+}
+
+.subpage-section-light .subpage-methodology-badge,
+.subpage-section-light-alt .subpage-methodology-badge {
+  background: #E0F2FE !important;
+  color: #0284C7 !important;
+}
+
+/* Light Section Deliver Cards */
+.subpage-section-light .deliver-card,
+.subpage-section-light-alt .deliver-card {
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-light) !important;
+  box-shadow: 0 4px 16px -2px rgba(11, 37, 69, 0.06) !important;
+}
+
+.subpage-section-light .deliver-card:hover,
+.subpage-section-light-alt .deliver-card:hover {
+  border-color: #38BDF8 !important;
+  box-shadow: 0 12px 28px -6px rgba(11, 37, 69, 0.12) !important;
+}
+
+/* Light Section Industry Cards */
+.subpage-section-light .industry-served-card,
+.subpage-section-light-alt .industry-served-card {
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-light) !important;
+  box-shadow: 0 4px 16px -2px rgba(11, 37, 69, 0.05) !important;
+}
+
+.subpage-section-light .industry-served-card:hover,
+.subpage-section-light-alt .industry-served-card:hover {
+  border-color: #38BDF8 !important;
+  box-shadow: 0 12px 28px -6px rgba(11, 37, 69, 0.12) !important;
+}
+
+/* Light Section Why Choose Us Cards */
+.subpage-section-light .why-choose-card,
+.subpage-section-light-alt .why-choose-card {
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-light) !important;
+  box-shadow: 0 4px 16px -2px rgba(11, 37, 69, 0.05) !important;
+}
+
+.subpage-section-light .why-choose-card:hover,
+.subpage-section-light-alt .why-choose-card:hover {
+  border-color: #38BDF8 !important;
+  box-shadow: 0 12px 28px -6px rgba(11, 37, 69, 0.12) !important;
+}
+
+/* Read More Button Light Variant */
+.btn-read-more-caps.light-mode {
+  background: #F1F5F9;
+  border: 1px solid var(--border-light);
+  color: #0284C7;
+}
+
+.btn-read-more-caps.light-mode:hover {
+  background: #0284C7;
+  color: #FFFFFF;
+  border-color: #0284C7;
+}
+
+/* Solutions Showcase List in Dark Navy Section */
+#solutions-areas.section-dark-navy {
+  background-color: #08111F;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: #E2E8F0;
+}
+
+#solutions-areas.section-dark-navy .section-heading-ags {
+  color: #FFFFFF;
+}
+
+#solutions-areas.section-dark-navy .section-desc-ags {
+  color: #94A3B8;
+}
+
+#solutions-areas.section-dark-navy .eyebrow-ags {
+  color: #38BDF8;
+}
+
+/* Page Hero Dark Variant (for Technology, Industries, Contact) */
+.page-hero-dark {
+  background: linear-gradient(135deg, #07172B 0%, #0B2545 60%, #0E2E56 100%) !important;
+  color: #FFFFFF !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero-dark .page-hero-title {
+  color: #FFFFFF !important;
+}
+
+.page-hero-dark .page-hero-subtitle {
+  color: #CBD5E1 !important;
+}
+
+.page-hero-dark .breadcrumb-nav {
+  color: #94A3B8;
+}
+
+.page-hero-dark .breadcrumb-nav a {
+  color: #38BDF8 !important;
+}
+
+.page-hero-dark .section-tag {
+  background: rgba(56, 189, 248, 0.12) !important;
+  color: #38BDF8 !important;
+  border: 1px solid rgba(56, 189, 248, 0.28) !important;
+}
+
+.page-hero-dark .ai-hero-stats-strip {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.page-hero-dark .ai-hero-stat-box {
+  background: rgba(15, 23, 42, 0.65) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.page-hero-dark .ai-stat-highlight {
+  color: #38BDF8 !important;
+}
+
+.page-hero-dark .ai-stat-sublabel {
+  color: #CBD5E1 !important;
 }
