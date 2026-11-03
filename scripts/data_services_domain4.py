@@ -227,7 +227,7 @@ SERVICES_DOMAIN_4 = [   {   'breadcrumbs': [('Home', 'index.html'), ('Services',
                             'title': 'Zero Corporate IP Exposure'},
                         {   'desc': 'Mandatory approval triggers ensure no critical financial, legal, or '
                                     'administrative action occurs without explicit human authorization.',
-                            'title': 'Guaranteed Human Oversight'},
+                            'title': 'Mandatory Human Oversight'},
                         {   'desc': 'Healthcare solutions remain cleanly focused on administrative efficiency without '
                                     'diagnostic or clinical claims.',
                             'title': 'Strict Administrative Separation'}],

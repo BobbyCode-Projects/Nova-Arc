@@ -116,15 +116,8 @@ def generate_all_subpages():
 def update_root_pages():
     print("\n--- Updating Root Pages with Unified Header & Footer ---")
 
-    # 1. index.html
-    index_path = os.path.join(REPO_ROOT, "index.html")
-    if os.path.exists(index_path):
-        with open(index_path, "r", encoding="utf-8") as f:
-            idx_html = f.read()
-        idx_html = replace_header_and_footer(idx_html, "", "")
-        with open(index_path, "w", encoding="utf-8") as f:
-            f.write(idx_html)
-        print("  [OK] Updated index.html header & footer")
+    # 1. index.html - Strictly excluded per Project Requirements
+    print("  [EXCLUDED] index.html (Homepage strictly preserved and untouched)")
 
     # 2. solutions.html
     solutions_path = os.path.join(REPO_ROOT, "solutions.html")

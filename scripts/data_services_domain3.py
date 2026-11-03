@@ -173,7 +173,7 @@ SERVICES_DOMAIN_3 = [   {   'breadcrumbs': [   ('Home', 'index.html'),
                                  {   'application': 'Automated temperature and humidity telemetry for perishable food, '
                                                     'pharmaceuticals, and sensitive cargo.',
                                      'industry': 'Cold Chain Logistics & Warehousing',
-                                     'outcome': 'Guaranteed 100% regulatory compliance logging and eliminated spoiled '
+                                     'outcome': 'Maintained auditable regulatory compliance logging and eliminated cold chain spoilage '
                                                 'shipment losses.'},
                                  {   'application': 'Smart energy meter telemetry, HVAC automation, occupancy '
                                                     'tracking, and building management system (BMS) integration.',

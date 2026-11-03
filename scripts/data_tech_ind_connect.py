@@ -318,7 +318,7 @@ TECH_IND_CONNECT_PAGES = [
         ],
         "outcomes": [
             {"title": "Accelerated Processing Times", "desc": "Compress multi-day cross-departmental data transfers and approvals into automated sub-minute transactions."},
-            {"title": "Guaranteed Transaction Delivery", "desc": "Asynchronous message queues ensure that temporary server downtime never results in lost customer or financial records."},
+            {"title": "Reliable Transaction Delivery", "desc": "Asynchronous message queues ensure that temporary server downtime never results in lost customer or financial records."},
             {"title": "100% Policy Adherence", "desc": "Enforce strict organizational rules and approval thresholds automatically on every operational transaction."},
             {"title": "Audit-Ready Transparency", "desc": "Maintain permanent, timestamped records of every data payload, transformation step, and system execution."}
         ],
@@ -1769,7 +1769,7 @@ TECH_IND_CONNECT_PAGES = [
         "capabilities": [
             {"title": "Ticket Submission & Tracking", "desc": "Submit detailed technical incident reports with error logs, screenshots, and severity classifications.", "points": ["Severity 1 to 4 classification", "Automated ticket confirmation", "Real-time status updates", "Dedicated engineer assignment"]},
             {"title": "Direct Helpdesk Channels", "desc": "Reach out directly to our operational support engineering team for urgent system assistance.", "points": ["Email: helpdesk@novaarctech.in", "General Support: support@novaarctech.in", "Phone: 04046146093", "Hours: 24/7 for Critical Severity 1"]},
-            {"title": "SLA-Backed Response Times", "desc": "Guaranteed response and resolution windows aligned with your enterprise software maintenance agreement.", "points": ["Critical Severity 1: < 1 Hour", "High Severity 2: < 4 Hours", "Medium Severity 3: < 1 Business Day", "Low Severity 4: < 2 Business Days"]},
+            {"title": "SLA-Defined Response Times", "desc": "Defined response and resolution windows aligned with your enterprise software maintenance agreement.", "points": ["Critical Severity 1: < 1 Hour", "High Severity 2: < 4 Hours", "Medium Severity 3: < 1 Business Day", "Low Severity 4: < 2 Business Days"]},
             {"title": "System Patching & Maintenance", "desc": "Scheduled security updates, dependency patches, database maintenance, and performance optimization.", "points": ["Scheduled maintenance windows", "Advance maintenance notices", "Zero-downtime rolling updates", "Post-patch verification tests"]}
         ],
         "challenges": [
