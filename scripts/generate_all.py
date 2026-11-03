@@ -101,7 +101,10 @@ def generate_all_subpages():
             use_cases=page_def.get("use_cases"),
             integrations=page_def.get("integrations"),
             considerations=page_def.get("considerations"),
-            faqs=page_def.get("faqs")
+            faqs=page_def.get("faqs"),
+            what_we_deliver=page_def.get("what_we_deliver"),
+            industries_served=page_def.get("industries_served"),
+            why_choose_us=page_def.get("why_choose_us")
         )
         write_page(rel_path, html)
         generated_count += 1

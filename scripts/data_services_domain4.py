@@ -3,47 +3,142 @@ Services Page Data - Domain 4: AI & Healthcare Technology
 """
 
 SERVICES_DOMAIN_4 = [   {   'breadcrumbs': [('Home', 'index.html'), ('Services', 'services.html'), ('AI & Healthcare Technology', None)],
-        'capabilities': [   {   'desc': 'Goal-oriented AI agents executing defined business tasks, multi-step '
-                                        'orchestration, and API tool calling under human oversight.',
-                                'points': [   'Deterministic task execution',
-                                              'Enterprise API tool calling',
-                                              'Human approval checkpoints',
-                                              'Complete agent action logging'],
+        'capabilities': [   {   'desc': 'Autonomous goal-seeking software agents capable of multi-step task planning, '
+                                        'tool execution, and self-evaluation.',
+                                'points': [   'Autonomous goal-seeking software agents capable of multi-step task '
+                                              'planning and execution',
+                                              'Tool-augmented LLM reasoning integrating external APIs, databases, and '
+                                              'enterprise software',
+                                              'Self-correcting workflows where agents evaluate outputs against '
+                                              'predefined validation rubrics',
+                                              'Multi-agent collaboration networks dividing complex projects into '
+                                              'specialized agent roles',
+                                              'Continuous contextual memory retention across long-running enterprise '
+                                              'workflows',
+                                              'Deterministic guardrails and safety filters preventing hallucination '
+                                              'and unauthorized actions',
+                                              'Human-in-the-loop review checkpoints for high-stakes financial, '
+                                              'operational, or clinical decisions',
+                                              'Agentic workflow orchestration via modern frameworks (LangChain, '
+                                              'LlamaIndex, AutoGen)',
+                                              'Dynamic prompt optimization and few-shot example selection based on '
+                                              'query semantics',
+                                              'Enterprise audit logging capturing full agent reasoning chains, tool '
+                                              'inputs, and decision outputs'],
                                 'title': 'Agentic AI & Intelligent Agents'},
-                            {   'desc': 'Private enterprise knowledge assistants, semantic search, document '
-                                        'understanding, and conversational business applications.',
-                                'points': [   'Retrieval-Augmented Generation (RAG)',
-                                              'Enterprise document indexing',
-                                              'Source-attributed answers',
-                                              'Zero public model retention'],
+                            {   'desc': 'Enterprise RAG architectures, specialized domain LLMs, semantic search, and '
+                                        'private cloud model deployments.',
+                                'points': [   'Enterprise Retrieval-Augmented Generation (RAG) engines querying '
+                                              'internal knowledge bases',
+                                              'High-dimensional vector database indexing and hybrid semantic search '
+                                              '(Pinecone, Weaviate, pgvector)',
+                                              'Document chunking, metadata tagging, and dense embedding generation '
+                                              'pipelines',
+                                              'Enterprise-grade chat assistants with role-based access control to '
+                                              'confidential documents',
+                                              'Automated synthesis of complex contracts, compliance documents, and '
+                                              'operational reports',
+                                              'Domain-specific LLM fine-tuning on proprietary enterprise documentation '
+                                              'and terminology',
+                                              'Multimodal generative models interpreting technical schematics, '
+                                              'invoices, and blueprints',
+                                              'Automated multilingual content localization and terminology '
+                                              'preservation',
+                                              'Data privacy and PII/PHI sanitization layers scrubbing sensitive data '
+                                              'before model ingestion',
+                                              'On-premises and private cloud LLM deployment (Llama 3, Mistral) for '
+                                              'strict data residency'],
                                 'title': 'Generative AI Applications'},
-                            {   'desc': 'Automated OCR extraction, classification, and validation of complex forms, '
-                                        'contracts, and invoices.',
-                                'points': [   'Advanced OCR & table extraction',
-                                              'Confidence score thresholds',
-                                              'Automated entity recognition',
-                                              'Human exception review queues'],
+                            {   'desc': 'Machine learning document extraction, automated classification, table '
+                                        'normalization, and zero-rekeying data entry.',
+                                'points': [   'High-accuracy OCR extraction from structured, semi-structured, and '
+                                              'unstructured business documents',
+                                              'Automated medical record, lab report, and prescription data extraction '
+                                              'into structured JSON',
+                                              'Invoice, bill of lading, and purchase order data capture with automated '
+                                              'field verification',
+                                              'Handwriting recognition (ICR) for doctor clinical notes and paper '
+                                              'intake forms',
+                                              'Automated document classification and routing based on visual layout '
+                                              'and semantic content',
+                                              'Table extraction and line-item reconciliation against enterprise '
+                                              'database records',
+                                              'Confidence scoring on extracted fields with low-confidence routing to '
+                                              'human review queues',
+                                              'Redaction of sensitive personal identifiers (PII/PHI) for HIPAA and '
+                                              'GDPR compliance',
+                                              'Seamless document ingestion via email inboxes, FTP drops, cloud '
+                                              'storage, and mobile scanners',
+                                              'Direct integration into ERP, EHR, and CRM systems without manual '
+                                              'rekeying'],
                                 'title': 'Intelligent Document Processing'},
-                            {   'desc': 'Combining generative reasoning with deterministic business rules to automate '
-                                        'cross-system administrative data routing.',
-                                'points': [   'Unstructured email triage',
-                                              'Cross-system data entry',
-                                              'Policy compliance validation',
-                                              'Audit-ready transaction records'],
+                            {   'desc': 'Natural language process automation, intelligent inquiry triage, smart '
+                                        'scheduling, and predictive anomaly detection.',
+                                'points': [   'Natural language process automation translating conversational '
+                                              'instructions into system actions',
+                                              'Automated triage and sentiment analysis of inbound customer and patient '
+                                              'inquiries',
+                                              'Predictive scheduling algorithms matching appointment slots with '
+                                              'provider availability and patient acuity',
+                                              'Automated claims pre-adjudication checking procedure codes against '
+                                              'payer coverage policies',
+                                              'Automated inventory reordering and supply depletion tracking powered by '
+                                              'computer vision',
+                                              'Anomaly detection in financial transactions identifying billing '
+                                              'irregularities and potential fraud',
+                                              'Smart form autofill pulling verified profile data across disparate '
+                                              'legacy databases',
+                                              'Intelligent email response drafting with automated context assembly and '
+                                              'approval requests',
+                                              'Automated clinical trial patient eligibility matching based on '
+                                              'structured inclusion criteria',
+                                              'Continuous workflow optimization analytics identifying bottlenecks and '
+                                              'process latency'],
                                 'title': 'AI-Powered Workflow Automation'},
-                            {   'desc': 'Administrative workflow automation, digital patient intake, scheduling '
-                                        'coordination, and healthcare document processing.',
-                                'points': [   'Digital patient self-intake',
-                                              'Provider scheduling rules',
-                                              'Referral document routing',
-                                              'HL7/FHIR EHR connectivity'],
+                            {   'desc': 'FHIR R4 APIs, HL7 v2/v3 message pipelines, clinical decision support (CDS) '
+                                        'hooks, and HIPAA-compliant platforms.',
+                                'points': [   'Modern FHIR (Fast Healthcare Interoperability Resources) R4 API servers '
+                                              'and client applications',
+                                              'HL7 v2 / v3 message transformation, normalization, and secure MLLP '
+                                              'socket connectivity',
+                                              'DICOM medical imaging viewer integration and cloud PACS archive '
+                                              'connectivity',
+                                              'Telehealth consultation platforms with encrypted WebRTC video, chat, '
+                                              'and virtual waiting rooms',
+                                              'Remote Patient Monitoring (RPM) dashboards ingesting vital signs from '
+                                              'wearable medical devices',
+                                              'Patient engagement portals for appointment booking, test results, and '
+                                              'prescription refills',
+                                              'Clinical decision support (CDS) hooks surfacing evidence-based clinical '
+                                              'guidance at point-of-care',
+                                              'Provider directory management and credentialing verification workflows',
+                                              'Medical equipment telemetry tracking operating room device status and '
+                                              'calibration dates',
+                                              'HIPAA and HITECH compliant infrastructure architecture with BAA '
+                                              'execution readiness'],
                                 'title': 'Healthcare Technology Solutions'},
-                            {   'desc': 'Administrative dashboards, EHR data connectivity, and billing assistance file '
-                                        'formatting (EDI 837/835).',
-                                'points': [   'EDI formatting validation',
-                                              'Operational clinic dashboards',
-                                              'Patient access QA metrics',
-                                              'Administrative denial tracking'],
+                            {   'desc': 'Enterprise Master Patient Indexing (EMPI), longitudinal record aggregation, '
+                                        'population health, and quality measures.',
+                                'points': [   'Enterprise Master Patient Index (EMPI) algorithms resolving duplicate '
+                                              'patient identities',
+                                              'Longitudinal patient record aggregation across disparate hospital EHRs '
+                                              'and clinic databases',
+                                              'Population health analytics identifying chronic disease risk cohorts '
+                                              'and care gaps',
+                                              'Healthcare quality measure calculation (HEDIS, MIPS) with automated '
+                                              'reporting generation',
+                                              'Clinical registry data mapping and automated regulatory submission '
+                                              'pipelines',
+                                              'Real-time hospital bed management and emergency department throughput '
+                                              'dashboards',
+                                              'Pharmacy inventory analytics tracking medication dispensing rates and '
+                                              'controlled substance audits',
+                                              'Readmission risk scoring algorithms alerting care teams prior to '
+                                              'patient discharge',
+                                              'De-identification and pseudonymization engines enabling safe medical '
+                                              'research data sharing',
+                                              'SOC 2 Type II, HIPAA, and HITRUST aligned data encryption in transit '
+                                              'and at rest'],
                                 'title': 'Healthcare Data Integration & Analytics'}],
         'category_badge': 'SERVICE DOMAIN 04',
         'challenges': [   {   'challenge': 'Unstructured Document Inundation',
@@ -91,6 +186,27 @@ SERVICES_DOMAIN_4 = [   {   'breadcrumbs': [('Home', 'index.html'), ('Services',
                     {   'a': 'Initial pilots for document processing or administrative intake typically deploy in 4 to '
                              '8 weeks, with enterprise-wide rollout in 10 to 14 weeks.',
                         'q': 'What is the typical deployment timeline for an AI or healthcare solution?'}],
+        'industries_served': [   {   'application': 'FHIR API interoperability, automated patient intake processing, '
+                                                    'and point-of-care clinical decision support hooks.',
+                                     'industry': 'Hospital Health Systems & Clinical Networks',
+                                     'outcome': 'Eliminated duplicate data entry and reduced patient registration wait '
+                                                'times by 60%.'},
+                                 {   'application': 'Encrypted telehealth video platforms, remote patient monitoring '
+                                                    '(RPM) telemetry ingestion, and wearable device integration.',
+                                     'industry': 'HealthTech & Digital Health Innovators',
+                                     'outcome': 'Accelerated HIPAA-compliant product launch timelines from months to '
+                                                'weeks.'},
+                                 {   'application': 'Automated claims pre-adjudication, medical policy rule '
+                                                    'evaluation, and high-frequency billing anomaly detection.',
+                                     'industry': 'Insurance Payers & Third-Party Administrators',
+                                     'outcome': 'Boosted first-pass claims processing speed by 40% while identifying '
+                                                'billing anomalies.'},
+                                 {   'application': 'Automated trial candidate matching from structured EHRs, '
+                                                    'longitudinal registry mapping, and certified HIPAA '
+                                                    'de-identification.',
+                                     'industry': 'Life Sciences & Clinical Research Organizations',
+                                     'outcome': 'Tripled patient recruitment screening speed for multi-site clinical '
+                                                'trials.'}],
         'integrations': [   {   'category': 'Enterprise Large Language Models (LLMs)',
                                 'details': 'Integration with Azure OpenAI Service, Google Cloud Vertex AI, Anthropic '
                                            'Claude, and self-hosted open-weights models.'},
@@ -168,6 +284,56 @@ SERVICES_DOMAIN_4 = [   {   'breadcrumbs': [('Home', 'index.html'), ('Services',
                                         'clipboards, routing validated patient demographic records directly into '
                                         'practice management queues.',
                              'title': 'Digital Patient Intake & Administrative Coordination'}],
+        'what_we_deliver': [   {   'deliverables': [   'Autonomous task planning and tool-calling agent orchestrator',
+                                                       'Deterministic guardrail and safety filter verification '
+                                                       'pipeline',
+                                                       'Human-in-the-loop review dashboard for high-stakes decisions',
+                                                       'Complete agent execution trace & reasoning step audit logger'],
+                                   'desc': 'Multi-agent reasoning systems that coordinate complex business processes, '
+                                           'document intake, and enterprise tool execution.',
+                                   'tech_stack': 'Python, LangChain, LlamaIndex, FastAPI, PostgreSQL, Redis',
+                                   'title': 'Enterprise Agentic Orchestration Platforms'},
+                               {   'deliverables': [   'FHIR R4 compliant REST API gateway with SMART-on-FHIR OAuth2',
+                                                       'HL7 v2 to FHIR JSON bi-directional message conversion engine',
+                                                       'Enterprise Master Patient Index (EMPI) patient identity '
+                                                       'resolver',
+                                                       'Secure MLLP TLS proxy for clinical socket communication'],
+                                   'desc': 'Production-grade health data pipelines bridging hospital EHRs (Epic, '
+                                           'Cerner), diagnostic labs, and telehealth portals.',
+                                   'tech_stack': 'Java, HAPI FHIR, Docker / Kubernetes, AWS HealthLake, PostgreSQL',
+                                   'title': 'HIPAA-Compliant FHIR/HL7 Interoperability Middleware'},
+                               {   'deliverables': [   'Layout-aware document classification and field extraction '
+                                                       'pipeline',
+                                                       'Medical record ICR extractor for handwritten physician notes',
+                                                       'Confidence threshold routing to human exception review queues',
+                                                       'Automated PII/PHI de-identification and redaction module'],
+                                   'desc': 'High-accuracy OCR & semantic extraction engines processing clinical '
+                                           'records, claims, invoices, and complex contracts.',
+                                   'tech_stack': 'Python, Tesseract, LayoutLM, PyTorch, AWS Textract, S3',
+                                   'title': 'Intelligent Document Processing (IDP) Pipelines'},
+                               {   'deliverables': [   'Hybrid semantic search pipeline using vector and keyword '
+                                                       'search',
+                                                       'Enterprise document chunking and metadata enrichment engine',
+                                                       'Role-based access controlled AI chat interface',
+                                                       'Private cloud LLM deployment (Llama 3, Mistral) with zero '
+                                                       'external egress'],
+                                   'desc': 'Secure, zero-data-retention AI deployments querying proprietary knowledge '
+                                           'bases while strictly preventing data leakage.',
+                                   'tech_stack': 'Next.js, FastAPI, Pinecone / pgvector, vLLM, Hugging Face',
+                                   'title': 'Private Generative AI & Enterprise RAG Clusters'}],
+        'why_choose_us': [   {   'desc': 'Zero-data-retention LLM integrations, PHI redaction at the ingestion edge, '
+                                         'BAA execution readiness, and end-to-end data encryption.',
+                                 'title': 'Strict HIPAA, HITECH & SOC 2 Compliance'},
+                             {   'desc': 'Native engineering proficiency with FHIR R4, HL7 v2, DICOM, SMART on FHIR, '
+                                         'and standard clinical ontologies (ICD-10, CPT, SNOMED CT).',
+                                 'title': 'Deep Healthcare Standards Fluency'},
+                             {   'desc': 'Enterprise-grade output validation rubrics, citation attribution, and '
+                                         'human-in-the-loop review safeguards to eliminate hallucination risks.',
+                                 'title': 'Deterministic AI Guardrails'},
+                             {   'desc': 'Capability to deploy open-source foundation models (Llama 3, Mistral) '
+                                         'entirely within your private VPC or on-premises hardware for absolute data '
+                                         'residency.',
+                                 'title': 'Private Cloud & On-Premises LLM Readiness'}],
         'workflow_steps': [   {   'desc': 'Audit repetitive information workflows, administrative healthcare intake, '
                                           'regulatory boundaries (HIPAA), and system integration endpoints.',
                                   'step': '01',
@@ -1218,4 +1384,4 @@ SERVICES_DOMAIN_4 = [   {   'breadcrumbs': [('Home', 'index.html'), ('Services',
                                   'step': '05',
                                   'title': 'Deployment & Improvement'}]}]
 
-print("Loaded 7 Domain 4 services pages.")
+print(f"Loaded {len(SERVICES_DOMAIN_4)} Domain 4 services pages.")

@@ -3,40 +3,118 @@ Services Page Data - Domain 2: Enterprise Business Solutions
 """
 
 SERVICES_DOMAIN_2 = [   {   'breadcrumbs': [('Home', 'index.html'), ('Services', 'services.html'), ('Enterprise Business Solutions', None)],
-        'capabilities': [   {   'desc': 'Custom lead management, sales pipeline tracking, customer onboarding, '
-                                        'engagement workflows, and support desks.',
-                                'points': [   'Sales pipeline visibility',
-                                              'Automated lead scoring',
-                                              'Customer support queues',
-                                              'Contract renewal tracking'],
+        'capabilities': [   {   'desc': 'Omnichannel lead management, sales pipeline tracking, customer support '
+                                        'ticketing, and relationship intelligence.',
+                                'points': [   '360-degree customer profile consolidation across omni-channel '
+                                              'touchpoints',
+                                              'Intelligent lead scoring, automated routing, and sales territory '
+                                              'management',
+                                              'Configurable B2B sales pipeline stages with opportunity stage '
+                                              'probability forecasting',
+                                              'CPQ (Configure, Price, Quote) automation with multi-tier approval '
+                                              'hierarchies',
+                                              'Omnichannel customer support ticketing with SLA countdowns and '
+                                              'escalation protocols',
+                                              'Field service management with mobile job assignment, parts tracking, '
+                                              'and work order signoffs',
+                                              'Automated email campaign orchestration and interaction history '
+                                              'synchronization',
+                                              'Contract renewal tracking and automated customer churn risk detection',
+                                              'Deep CRM integration with ERP backends (Salesforce, HubSpot, Microsoft '
+                                              'Dynamics, Zoho)',
+                                              'Real-time executive sales performance dashboards and revenue conversion '
+                                              'reporting'],
                                 'title': 'Customer Relationship Management (CRM)'},
-                            {   'desc': 'Employee lifecycle management, recruitment, digital onboarding, attendance, '
-                                        'leave management, and reporting.',
-                                'points': [   'Self-service employee portal',
-                                              'Automated leave approval logic',
-                                              'Digital onboarding checklists',
-                                              'Workforce analytics'],
+                            {   'desc': 'Complete workforce lifecycle administration, onboarding, attendance, payroll '
+                                        'automation, and performance reviews.',
+                                'points': [   'Complete employee lifecycle management from recruitment through '
+                                              'offboarding',
+                                              'Automated applicant tracking system (ATS) with resume parsing and '
+                                              'interview scheduling',
+                                              'Digital onboarding checklists, e-document signing, and asset allocation '
+                                              'tracking',
+                                              'Biometric and geofenced attendance tracking with automated overtime '
+                                              'calculation',
+                                              'Multi-country payroll computation with statutory tax deductions and '
+                                              'direct bank transfers',
+                                              'Flexible leave policy configuration with automated approval matrices '
+                                              'and balance ledgers',
+                                              'Performance management systems with OKR tracking, 360-degree feedback, '
+                                              'and appraisal cycles',
+                                              'Employee self-service (ESS) portals for payslips, tax declarations, and '
+                                              'expense claims',
+                                              'Learning Management System (LMS) integration with compliance training '
+                                              'certifications',
+                                              'HR analytics dashboards for workforce attrition, headcount forecasting, '
+                                              'and diversity metrics'],
                                 'title': 'Human Resource Management (HRMS)'},
-                            {   'desc': 'Approval workflows, task assignment, notifications, document processing, '
-                                        'exception handling, and business rules.',
-                                'points': [   'Multi-tier approval logic',
-                                              'Task escalation triggers',
-                                              'Audit logging & compliance',
-                                              'Cross-system webhook sync'],
+                            {   'desc': 'Automated approval hierarchies, robotic task execution, document workflows, '
+                                        'and operational bottleneck reduction.',
+                                'points': [   'Visual drag-and-drop workflow builders for cross-departmental business '
+                                              'processes',
+                                              'Robotic Process Automation (RPA) bots for high-volume repetitive '
+                                              'administrative tasks',
+                                              'Document approval matrices with conditional branching and automated '
+                                              'reminder escalation',
+                                              'Automated financial reconciliation between payment gateways, banks, and '
+                                              'general ledgers',
+                                              'Customer credit verification and risk scoring automation for loan and '
+                                              'trade accounts',
+                                              'Employee expense report auditing with OCR receipt scanning and policy '
+                                              'validation',
+                                              'Automated contract compliance auditing and regulatory deadline tracking',
+                                              'Cross-system data synchronization eliminating duplicate manual data '
+                                              'entry',
+                                              'Event-driven webhook triggers and scheduled batch job execution '
+                                              'pipelines',
+                                              'Comprehensive audit logging and compliance reporting for ISO and SOC 2 '
+                                              'audits'],
                                 'title': 'Business Process Automation (BPA)'},
-                            {   'desc': 'Custom business portals, operational dashboards, internal tooling, and legacy '
-                                        'modernization.',
-                                'points': [   'Microservices architecture',
-                                              'Role-based access control',
-                                              'Responsive enterprise portals',
-                                              'Cloud-native deployments'],
+                            {   'desc': 'Custom cloud-native web and mobile applications engineered to replace rigid '
+                                        'legacy software.',
+                                'points': [   'Custom cloud-native microservices architecture designed for enterprise '
+                                              'scalability',
+                                              'Responsive web applications built with modern frontend frameworks '
+                                              '(React, Angular, Next.js)',
+                                              'Native and cross-platform enterprise mobile apps (iOS, Android, '
+                                              'Flutter, React Native)',
+                                              'Secure role-based access control (RBAC), multi-factor authentication '
+                                              '(MFA), and Single Sign-On (SSO)',
+                                              'High-performance relational and NoSQL database modeling (PostgreSQL, '
+                                              'MongoDB, Redis)',
+                                              'Automated CI/CD pipelines with automated unit, integration, and '
+                                              'security vulnerability testing',
+                                              'Containerized application orchestration via Kubernetes, Docker, and AWS '
+                                              'ECS',
+                                              'High-availability clustering with auto-scaling, load balancing, and '
+                                              'multi-region failover',
+                                              'Legacy system modernization, code refactoring, and database schema '
+                                              'migration',
+                                              'Comprehensive API documentation via OpenAPI/Swagger and automated '
+                                              'developer portals'],
                                 'title': 'Enterprise Application Development'},
-                            {   'desc': 'REST/GraphQL API connectivity, CRM/HRMS/ERP synchronization, and centralized '
-                                        'reporting.',
-                                'points': [   'Bidirectional data buses',
-                                              'Webhook event orchestration',
-                                              'Secure token authentication',
-                                              'Legacy database modernization'],
+                            {   'desc': 'Secure API gateways, ERP/CRM bi-directional data synchronization, and '
+                                        'enterprise middleware pipelines.',
+                                'points': [   'Enterprise Service Bus (ESB) and modern event-driven API gateway '
+                                              'architectures',
+                                              'Pre-built connectors for leading enterprise ERPs (SAP, Oracle, '
+                                              'NetSuite, Dynamics 365)',
+                                              'Bi-directional ETL and ELT data pipelines for cloud data warehouses '
+                                              '(Snowflake, BigQuery, Redshift)',
+                                              'Real-time pub/sub messaging architectures using Apache Kafka and '
+                                              'RabbitMQ',
+                                              'Secure EDI (Electronic Data Interchange) processing for X12, EDIFACT, '
+                                              'and AS2 standards',
+                                              'RESTful and GraphQL API design with rate limiting, throttling, and '
+                                              'OAuth2 security',
+                                              'Master Data Management (MDM) with golden record deduplication and '
+                                              'entity resolution',
+                                              'Legacy mainframe and on-premise database bridge connectors with '
+                                              'low-latency polling',
+                                              'Data transformation engines converting XML, JSON, CSV, and proprietary '
+                                              'binary payloads',
+                                              'Real-time integration health monitoring, payload dead-letter queues, '
+                                              'and automated retry mechanisms'],
                                 'title': 'System Integration & Data Connectivity'}],
         'category_badge': 'SERVICE DOMAIN 02',
         'challenges': [   {   'challenge': 'Departmental Information Silos',
@@ -84,6 +162,25 @@ SERVICES_DOMAIN_2 = [   {   'breadcrumbs': [('Home', 'index.html'), ('Services',
                     {   'a': 'Core CRM or HRMS foundations deploy within 6 to 10 weeks, with full multi-departmental '
                              'process automation completing in 12 to 16 weeks.',
                         'q': 'What is the typical implementation timeline for an enterprise business suite?'}],
+        'industries_served': [   {   'application': 'Automated customer KYC verification, loan origination workflow '
+                                                    'pipelines, and audit-compliant transactional processing.',
+                                     'industry': 'Financial Services & Banking',
+                                     'outcome': 'Reduced loan underwriting turnaround from 5 days to under 4 hours.'},
+                                 {   'application': 'Automated resource scheduling, timesheet approval hierarchies, '
+                                                    'project milestone billing, and client collaboration portals.',
+                                     'industry': 'Professional Services & Consulting',
+                                     'outcome': 'Increased billable utilization by 15% and eliminated end-of-month '
+                                                'invoicing delays.'},
+                                 {   'application': 'Staff credentialing management, HIPAA-compliant patient '
+                                                    'communication routing, and medical device asset tracking.',
+                                     'industry': 'Healthcare & Life Sciences',
+                                     'outcome': 'Streamlined administrative compliance reporting and reduced clerical '
+                                                'errors by 35%.'},
+                                 {   'application': 'Plant-to-headquarters ERP reporting, maintenance work order '
+                                                    'ticketing, and cross-departmental engineering change approvals.',
+                                     'industry': 'Industrial Manufacturing & Engineering',
+                                     'outcome': 'Consolidated operational reporting into real-time executive '
+                                                'visibility dashboards.'}],
         'integrations': [   {   'category': 'Customer Relationship Management (CRM)',
                                 'details': 'Integration with Salesforce, HubSpot Enterprise, Microsoft Dynamics 365, '
                                            'and Zoho CRM.'},
@@ -156,6 +253,62 @@ SERVICES_DOMAIN_2 = [   {   'breadcrumbs': [('Home', 'index.html'), ('Services',
                                         'unified executive console, delivering real-time revenue and operational '
                                         'reports without manual Excel merging.',
                              'title': 'Centralized Multi-Entity Operations Dashboard'}],
+        'what_we_deliver': [   {   'deliverables': [   'Enterprise web portals with granular Role-Based Access Control '
+                                                       '(RBAC)',
+                                                       'Single Sign-On (SSO) integration supporting SAML 2.0, Okta, '
+                                                       'and Azure AD',
+                                                       'High-performance REST & GraphQL microservices middleware',
+                                                       'Cross-platform mobile applications for field operations and '
+                                                       'leadership'],
+                                   'desc': 'Bespoke web and mobile applications designed to replace off-the-shelf '
+                                           'software with tailored business logic.',
+                                   'tech_stack': 'React, Node.js, Spring Boot, PostgreSQL, Docker / Kubernetes, AWS',
+                                   'title': 'Custom Enterprise Portals & Core Applications'},
+                               {   'deliverables': [   'Multi-department approval matrix engine with conditional '
+                                                       'routing',
+                                                       'Robotic process automation bots for financial reconciliation & '
+                                                       'ledger posting',
+                                                       'Automated contract renewal and SLA breach alert triggers',
+                                                       'OCR-assisted invoice & receipt audit automation pipeline'],
+                                   'desc': 'Intelligent process orchestration engines eliminating manual handoffs, '
+                                           'data re-entry, and administrative lag.',
+                                   'tech_stack': 'Python, Celery, Redis, Apache Airflow, Temporal, AWS SQS',
+                                   'title': 'Enterprise Workflow & RPA Automation Engines'},
+                               {   'deliverables': [   'Lead scoring and automated deal pipeline routing engine',
+                                                       'Omnichannel customer support ticketing with automated SLA '
+                                                       'countdowns',
+                                                       'End-to-end employee onboarding and multi-country payroll '
+                                                       'calculator',
+                                                       'Interactive executive KPI & revenue conversion dashboards'],
+                                   'desc': 'Unified CRM and HRMS systems providing 360-degree operational visibility '
+                                           'across accounts and employees.',
+                                   'tech_stack': 'Next.js, TypeScript, PostgreSQL, Elasticsearch, Tailwind CSS',
+                                   'title': 'Integrated Workforce & Customer Relationship Hubs'},
+                               {   'deliverables': [   'Event-driven Kafka message broker cluster for real-time '
+                                                       'pub/sub',
+                                                       'Pre-configured ERP connectors for SAP S/4HANA, NetSuite, and '
+                                                       'Dynamics 365',
+                                                       'Master Data Management deduplication & golden record '
+                                                       'synchronizer',
+                                                       'Dead-letter queue management and automated retry '
+                                                       'orchestration'],
+                                   'desc': 'Secure, high-throughput middleware connecting legacy on-premise '
+                                           'infrastructure with modern cloud applications.',
+                                   'tech_stack': 'Apache Kafka, RabbitMQ, Go, Kong API Gateway, Snowflake',
+                                   'title': 'Enterprise Integration Bus & Data Synchronization'}],
+        'why_choose_us': [   {   'desc': 'Microservices, decoupled frontends, and hardened API gateways designed for '
+                                         'SOC 2, ISO 27001, and GDPR compliance.',
+                                 'title': 'Enterprise Architectural Standards'},
+                             {   'desc': 'We do not force risky rip-and-replace rollouts. We integrate cleanly with '
+                                         'your existing AS400, SAP, or SQL databases while delivering modern user '
+                                         'interfaces.',
+                                 'title': 'Seamless Legacy Coexistence'},
+                             {   'desc': 'Complete source code ownership, standard open-source frameworks, and fully '
+                                         'containerized deployment blueprints you can host anywhere.',
+                                 'title': 'Zero Vendor Lock-In'},
+                             {   'desc': 'Proven modular components and reusable enterprise patterns enabling initial '
+                                         'production rollouts within 8 to 12 weeks.',
+                                 'title': 'High-Velocity Delivery Cycles'}],
         'workflow_steps': [   {   'desc': 'Analyze enterprise operational structures, departmental silos, data '
                                           'isolation points, and legacy CRM/HRMS/ERP dependencies.',
                                   'step': '01',
@@ -1013,4 +1166,4 @@ SERVICES_DOMAIN_2 = [   {   'breadcrumbs': [('Home', 'index.html'), ('Services',
                                   'step': '05',
                                   'title': 'Deployment & Improvement'}]}]
 
-print("Loaded 6 Domain 2 services pages.")
+print(f"Loaded {len(SERVICES_DOMAIN_2)} Domain 2 services pages.")

@@ -469,7 +469,8 @@ def get_hero_highlights_html(capabilities):
         title = cap['title'].split('&')[0].strip()
         pills.append(f'<span class="hero-highlight-pill">{icon} {title}</span>')
     
-    return f'<div class="hero-highlights-strip">{"".join(pills)}</div>' if pills else ""
+    pills_html = "".join(pills)
+    return f'<div class="hero-highlights-strip">{pills_html}</div>' if pills else ""
 
 def get_hero_visual_html(rel_path, page_title, category_badge, capabilities):
     """
@@ -559,7 +560,8 @@ def get_hero_visual_html(rel_path, page_title, category_badge, capabilities):
 def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_subtitle,
                      breadcrumbs, overview_paragraphs, capabilities, challenges,
                      workflow_steps, outcomes, related_links, seo_desc,
-                     use_cases=None, integrations=None, considerations=None, faqs=None):
+                     use_cases=None, integrations=None, considerations=None, faqs=None,
+                     what_we_deliver=None, industries_served=None, why_choose_us=None):
     """
     Generates a complete, informative enterprise subpage that perfectly fits Nova Arc's design system.
     Renders all 9 standardized enterprise sections:
@@ -595,9 +597,23 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
     # Overview HTML
     overview_html = "".join([f'<p style="font-size: 1.05rem; line-height: 1.8; color: #CBD5E1; margin-bottom: 18px;">{p}</p>' for p in overview_paragraphs])
 
-    # 1. Key Capabilities HTML
+    # 1. Key Capabilities HTML with Read More / Show Less Toggle
     cap_cards = []
-    for cap in capabilities:
+    for idx, cap in enumerate(capabilities):
+        all_points = cap.get('points', [])
+        first_4 = all_points[:4]
+        remaining = all_points[4:]
+
+        first_4_html = "".join([f'<li style="color: #CBD5E1; font-size: 0.875rem; margin-bottom: 7px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>{item}</span></li>' for item in first_4])
+
+        more_html = ""
+        btn_html = ""
+        if remaining:
+            clean_id = f"cap-more-{rel_path.replace('/', '-').replace('.', '-')}-{idx}"
+            rem_items_html = "".join([f'<li style="color: #CBD5E1; font-size: 0.875rem; margin-bottom: 7px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>{item}</span></li>' for item in remaining])
+            more_html = f'<div id="{clean_id}" class="capability-more-wrap" style="display: none;"><ul style="list-style: none; padding: 0; margin: 0; padding-top: 4px;">{rem_items_html}</ul></div>'
+            btn_html = f'<button type="button" class="btn-read-more-caps" data-read-more-text="Read More (+{len(remaining)} more)" onclick="toggleCaps(this, \'{clean_id}\')" aria-expanded="false">Read More (+{len(remaining)} more) <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>'
+
         cap_cards.append(f"""
         <div class="card subpage-card-padded" style="padding: var(--space-2xl); display: flex; flex-direction: column; justify-content: space-between; background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg);">
           <div>
@@ -611,12 +627,146 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
             <h3 style="font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-sm);">{cap['title']}</h3>
             <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.6; margin-bottom: var(--space-md);">{cap['desc']}</p>
           </div>
-          <ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid rgba(255,255,255,0.08); padding-top: var(--space-md);">
-            {"".join([f'<li style="color: #CBD5E1; font-size: 0.875rem; margin-bottom: 6px; display: flex; align-items: center; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>{item}</li>' for item in cap.get('points', [])])}
-          </ul>
+          <div>
+            <ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid rgba(255,255,255,0.08); padding-top: var(--space-md);">
+              {first_4_html}
+            </ul>
+            {more_html}
+            {btn_html}
+          </div>
         </div>
         """)
     capabilities_html = "".join(cap_cards)
+
+    # What We Deliver Section HTML
+    what_we_deliver_html = ""
+    if what_we_deliver:
+        del_cards = []
+        for d in what_we_deliver:
+            items_html = "".join([f'<li style="color: #CBD5E1; font-size: 0.875rem; margin-bottom: 7px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>{it}</span></li>' for it in d.get('deliverables', [])])
+            tech_tag = f'<div class="deliver-card-tech"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span>Stack: {d["tech_stack"]}</span></div>' if d.get('tech_stack') else ""
+            del_cards.append(f"""
+            <div class="deliver-card">
+              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #38BDF8; background: rgba(56, 189, 248, 0.1); padding: 4px 10px; border-radius: 999px; display: inline-block; margin-bottom: 12px; align-self: flex-start;">PRODUCTION DELIVERABLE</span>
+              <h3 style="font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">{d['title']}</h3>
+              <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.6; margin-bottom: var(--space-md);">{d['desc']}</p>
+              <ul style="list-style: none; padding: 0; margin: 0 0 var(--space-md) 0; border-top: 1px solid rgba(255,255,255,0.08); padding-top: var(--space-md);">
+                {items_html}
+              </ul>
+              {tech_tag}
+            </div>
+            """)
+        del_cards_str = "".join(del_cards)
+        what_we_deliver_html = f"""
+  <!-- What We Build / What We Deliver Section -->
+  <section id="what-we-deliver" style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
+    <div class="container">
+      <div style="text-align: center; max-width: 760px; margin: 0 auto var(--space-3xl);">
+        <span class="eyebrow-ags" style="color: #38BDF8;">WHAT WE BUILD &amp; DELIVER</span>
+        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Production-Grade Platforms, Portals &amp; Engines</h2>
+        <p style="color: #94A3B8; font-size: 1.05rem;">Concrete software architectures designed, built, integrated, and maintained for enterprise scale.</p>
+      </div>
+      <div class="subpage-grid-cards">
+        {del_cards_str}
+      </div>
+    </div>
+  </section>
+        """
+
+    # Industries Served Section HTML
+    industries_served_html = ""
+    if industries_served:
+        ind_cards = []
+        for ind in industries_served:
+            ind_cards.append(f"""
+            <div class="industry-served-card">
+              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #38BDF8; background: rgba(56, 189, 248, 0.1); padding: 3px 10px; border-radius: 999px; display: inline-block; margin-bottom: 10px; align-self: flex-start;">INDUSTRY VERTICAL</span>
+              <h3 style="font-size: 1.2rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">{ind['industry']}</h3>
+              <div style="margin-bottom: var(--space-sm);">
+                <strong style="color: #94A3B8; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Vertical Implementation:</strong>
+                <p style="color: #CBD5E1; font-size: 0.925rem; line-height: 1.55; margin: 0;">{ind['application']}</p>
+              </div>
+              <div style="margin-top: auto; padding: 10px 14px; background: rgba(56, 189, 248, 0.08); border-left: 3px solid #38BDF8; border-radius: 6px; font-size: 0.85rem; color: #E2E8F0; line-height: 1.5;">
+                <strong style="color: #38BDF8; display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px;">Key Business Outcome:</strong>
+                <span>{ind['outcome']}</span>
+              </div>
+            </div>
+            """)
+        ind_cards_str = "".join(ind_cards)
+        industries_served_html = f"""
+  <!-- Industries Served Section -->
+  <section id="industries-served" style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
+    <div class="container">
+      <div style="text-align: center; max-width: 760px; margin: 0 auto var(--space-3xl);">
+        <span class="eyebrow-ags" style="color: #38BDF8;">INDUSTRIES SERVED</span>
+        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Domain-Specific Vertical Applications</h2>
+        <p style="color: #94A3B8; font-size: 1.05rem;">Proven engineering architectures tailored to the operational demands and regulatory standards of each sector.</p>
+      </div>
+      <div class="subpage-grid-cards">
+        {ind_cards_str}
+      </div>
+    </div>
+  </section>
+        """
+
+    # Why Choose Us Section HTML
+    why_choose_us_html = ""
+    if why_choose_us:
+        why_cards = []
+        for w in why_choose_us:
+            why_cards.append(f"""
+            <div class="why-choose-card">
+              <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(56, 189, 248, 0.12); display: flex; align-items: center; justify-content: center; color: #38BDF8; margin-bottom: 14px;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <h3 style="font-size: 1.2rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">{w['title']}</h3>
+              <p style="color: #94A3B8; font-size: 0.925rem; line-height: 1.6; margin: 0;">{w['desc']}</p>
+            </div>
+            """)
+        why_choose_us_str = "".join(why_cards)
+        why_choose_us_html = f"""
+  <!-- Why Choose Us Section -->
+  <section id="why-choose-us" style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
+    <div class="container">
+      <div style="text-align: center; max-width: 760px; margin: 0 auto var(--space-3xl);">
+        <span class="eyebrow-ags" style="color: #38BDF8;">WHY CHOOSE NOVA ARC</span>
+        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Architectural Rigor, Zero Lock-In &amp; Engineering Excellence</h2>
+        <p style="color: #94A3B8; font-size: 1.05rem;">Built by senior architects and engineers committed to clean code, production reliability, and client code ownership.</p>
+      </div>
+      <div class="subpage-grid-2col">
+        {why_choose_us_str}
+      </div>
+    </div>
+  </section>
+        """
+
+    # Core Service Domains Switcher
+    core_domains = [
+        ("01", "Digital Commerce & Supply Chain", "services/digital-commerce.html"),
+        ("02", "Enterprise Business Solutions", "services/enterprise-business.html"),
+        ("03", "Intelligent Monitoring & Automation", "services/intelligent-monitoring.html"),
+        ("04", "AI & Healthcare Technology", "services/ai-healthcare.html"),
+    ]
+    services_domain_nav_html = ""
+    if rel_path in [d[2] for d in core_domains]:
+        pills = []
+        for num, d_title, d_path in core_domains:
+            active_cls = " active" if rel_path == d_path else ""
+            pills.append(f'<a href="{root_prefix}{d_path}" class="service-domain-pill{active_cls}"><span class="domain-num">{num}</span><span>{d_title}</span></a>')
+        pills_str = "".join(pills)
+        services_domain_nav_html = f"""
+  <!-- Core Service Domains Switcher -->
+  <nav class="services-domain-nav" aria-label="Core Service Domains Quick Switcher">
+    <div class="container">
+      <div class="services-domain-nav-inner">
+        <span class="services-domain-label">Core Domains:</span>
+        <div class="services-domain-pills">
+          {pills_str}
+        </div>
+      </div>
+    </div>
+  </nav>
+        """
 
     # 2. Problem & Resolution HTML
     chal_cards = []
@@ -899,6 +1049,8 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
     </div>
   </section>
 
+  {services_domain_nav_html}
+
   <!-- Section 1: Strategic Overview -->
   <section id="strategic-overview" style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
@@ -926,6 +1078,8 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
       </div>
     </div>
   </section>
+
+  {what_we_deliver_html}
 
   <!-- Section 3: Problem & Resolution -->
   <section id="problem-resolution" style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
@@ -959,7 +1113,11 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
     </div>
   </section>
 
+  {industries_served_html}
+
   {integrations_html}
+
+  {why_choose_us_html}
 
   {considerations_html}
 

@@ -1852,3 +1852,47 @@ function initSiteSearchModal() {
     });
   });
 }
+
+// ---------------------------------------------------------------------------
+// Capability Cards "Read More / Show Less" Interactive Toggle
+// ---------------------------------------------------------------------------
+function toggleCaps(btn, containerId) {
+  var wrap = document.getElementById(containerId);
+  if (!wrap) return;
+  var isExpanded = btn.getAttribute('aria-expanded') === 'true';
+
+  if (isExpanded) {
+    // Collapse to initial 4 points
+    wrap.style.maxHeight = wrap.scrollHeight + 'px';
+    wrap.offsetHeight; // force reflow
+    wrap.style.transition = 'max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease';
+    wrap.style.maxHeight = '0px';
+    wrap.style.opacity = '0';
+    btn.setAttribute('aria-expanded', 'false');
+    var originalText = btn.getAttribute('data-read-more-text') || 'Read More';
+    btn.innerHTML = originalText + ' <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>';
+    setTimeout(function() {
+      if (btn.getAttribute('aria-expanded') === 'false') {
+        wrap.style.display = 'none';
+      }
+    }, 300);
+  } else {
+    // Expand to reveal all 10 points
+    wrap.style.display = 'block';
+    wrap.style.maxHeight = '0px';
+    wrap.style.opacity = '0';
+    wrap.offsetHeight; // force reflow
+    wrap.style.transition = 'max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease';
+    wrap.style.maxHeight = (wrap.scrollHeight + 30) + 'px';
+    wrap.style.opacity = '1';
+    btn.setAttribute('aria-expanded', 'true');
+    btn.innerHTML = 'Show Less <svg class="chevron-icon chevron-up" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="transform: rotate(180deg);"><polyline points="6 9 12 15 18 9"/></svg>';
+    setTimeout(function() {
+      if (btn.getAttribute('aria-expanded') === 'true') {
+        wrap.style.maxHeight = 'none';
+      }
+    }, 360);
+  }
+}
+window.toggleCaps = toggleCaps;
+

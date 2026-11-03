@@ -7,38 +7,112 @@ SERVICES_PAGES = [   {   'breadcrumbs': [   ('Home', 'index.html'),
                            ('Digital Commerce & Supply Chain', None)],
         'capabilities': [   {   'desc': 'B2B/B2C storefronts, digital ordering portals, customer account management, '
                                         'and pricing workflows.',
-                                'points': [   'Multi-storefront architecture',
-                                              'Dynamic pricing matrices',
-                                              'Self-service buyer portals',
-                                              'ERP checkout integration'],
+                                'points': [   'Headless storefront engineering (Next.js, Remix, Shopify Plus, '
+                                              'commercetools)',
+                                              'Multi-currency, multi-language internationalization & tax calculation '
+                                              'engines',
+                                              'Unified omnichannel catalog management & variant synchronizer',
+                                              'Real-time stock reservation and distributed inventory allocation',
+                                              'Custom checkout pipelines with PCI-DSS Level 1 compliant payment '
+                                              'gateways',
+                                              'B2B customer tier pricing, credit limits, and negotiated contract '
+                                              'catalogs',
+                                              'Personalized product recommendations and search indexing via '
+                                              'Elasticsearch/Algolia',
+                                              'Omnichannel returns, exchange workflows, and automated RMA processing',
+                                              'High-throughput flash sales architecture with edge caching and queue '
+                                              'throttling',
+                                              'Customer account self-service portals with order tracking and invoice '
+                                              'retrieval'],
                                 'title': 'Digital Commerce Platforms'},
                             {   'desc': 'Specialized digital food ordering, supplier coordination, batch/expiry '
                                         'tracking, and food supply traceability.',
-                                'points': [   'Cold chain traceability',
-                                              'Batch & expiry management',
-                                              'Commissary inventory sync',
-                                              'Restaurant supplier portals'],
+                                'points': [   'Cloud kitchen and multi-brand ghost kitchen management systems',
+                                              'Real-time order aggregation across third-party delivery aggregators '
+                                              '(Swiggy, Zomato, UberEats, DoorDash)',
+                                              'Dynamic Kitchen Display Systems (KDS) with station-based ticket routing '
+                                              'and preparation timers',
+                                              'Recipe costing, ingredient batch tracking, and raw material inventory '
+                                              'depletion',
+                                              'Table reservation, QR code digital dining, and contactless payment '
+                                              'settlement',
+                                              'Rider dispatch optimization and real-time hyperlocal fleet tracking',
+                                              'Central commissary production planning and inter-branch replenishment '
+                                              'transfers',
+                                              'Dynamic menu pricing based on peak hours, ingredient seasonality, and '
+                                              'channel demand',
+                                              'Automated food safety, temperature compliance logging, and expiry waste '
+                                              'prevention',
+                                              'Loyalty program orchestration, reward tier management, and guest '
+                                              'retention analytics'],
                                 'title': 'FoodTech Solutions'},
                             {   'desc': 'Warehouse inventory optimization, multi-node tracking, demand forecasting '
                                         'workflows, and replenishment.',
-                                'points': [   'Live multi-node stock views',
-                                              'Automated replenishment rules',
-                                              'Safety stock calculations',
-                                              'Dead-stock identification'],
+                                'points': [   'End-to-end multi-echelon supply chain visibility and tracking '
+                                              'dashboards',
+                                              'Machine learning demand forecasting based on historical sales, '
+                                              'seasonality, and market trends',
+                                              'Dynamic reorder point calculation, safety stock optimization, and '
+                                              'lead-time monitoring',
+                                              'Centralized Warehouse Management Systems (WMS) with bin allocation and '
+                                              'wave picking',
+                                              'Multi-warehouse inventory synchronization and automated cross-docking '
+                                              'workflows',
+                                              'Serialized inventory tracking, barcode/RFID scanning, and batch lot '
+                                              'control',
+                                              'Automated stock transfer orders between distribution hubs and regional '
+                                              'fulfillment centers',
+                                              'Supplier scorecarding, on-time in-full (OTIF) delivery tracking, and '
+                                              'lead-time deviation alerts',
+                                              'Reverse logistics workflow automation and salvage/refurbishment routing',
+                                              'Real-time supply chain disruption detection and alternative sourcing '
+                                              'recommendations'],
                                 'title': 'Supply Chain Management'},
                             {   'desc': 'Digital purchase requisitions, approval hierarchies, vendor onboarding '
                                         'portals, and invoice workflows.',
-                                'points': [   '3-way invoice matching',
-                                              'Vendor scorecard tracking',
-                                              'Contract compliance rules',
-                                              'PO requisition pipelines'],
+                                'points': [   'Digital Request for Proposal (RFP), RFQ, and competitive bidding '
+                                              'portals',
+                                              'Vendor onboarding workflows with automated compliance, tax '
+                                              'verification, and banking KYC',
+                                              'Centralized contract lifecycle management with milestone tracking and '
+                                              'renewal alerts',
+                                              'Tiered purchase requisition approval workflows with budget threshold '
+                                              'validations',
+                                              'Automated 3-way purchase order (PO), goods receipt (GRN), and invoice '
+                                              'matching',
+                                              'Real-time vendor performance dashboards tracking quality defect rates '
+                                              'and SLA adherence',
+                                              'Supplier self-service collaboration portals for PO acknowledgement and '
+                                              'shipping notices',
+                                              'Automated spend analytics and category-level cost optimization '
+                                              'recommendations',
+                                              'Dynamic early payment discount negotiations and automated trade credit '
+                                              'terms',
+                                              'Multi-ERP procurement connectivity (SAP S/4HANA, Oracle ERP Cloud, '
+                                              'Microsoft Dynamics 365)'],
                                 'title': 'Procurement & Vendor Management'},
                             {   'desc': 'Dispatch coordination, shipment tracking, carrier route optimization, and '
                                         'logistics performance analytics.',
-                                'points': [   'Carrier API integrations',
-                                              'Real-time freight milestones',
-                                              'Dynamic route planning',
-                                              'Proof of delivery capture'],
+                                'points': [   'Intelligent multi-stop route planning and vehicle load optimization '
+                                              'algorithms',
+                                              'Real-time GPS fleet tracking, geo-fencing alerts, and driver behavior '
+                                              'telemetry',
+                                              'Automated 3PL carrier selection based on freight rates, transit times, '
+                                              'and delivery SLAs',
+                                              'First-mile pickup coordination, middle-mile transit tracking, and '
+                                              'last-mile proof-of-delivery (e-POD)',
+                                              'Cold chain temperature monitoring and IoT environmental sensors for '
+                                              'perishable freight',
+                                              'Automated freight bill audit, rate validation, and demurrage dispute '
+                                              'reconciliation',
+                                              'Cross-border customs documentation generation and international tariff '
+                                              'compliance',
+                                              'Customer-facing live tracking notifications via SMS, WhatsApp, and '
+                                              'Webhooks',
+                                              'Automated distribution center dispatch scheduling and loading dock door '
+                                              'management',
+                                              'Carbon emission estimation and fleet fuel efficiency analytics for '
+                                              'sustainable logistics'],
                                 'title': 'Logistics & Distribution'}],
         'category_badge': 'SERVICE DOMAIN 01',
         'challenges': [   {   'challenge': 'Disconnected Order & Inventory Data',
@@ -84,6 +158,30 @@ SERVICES_PAGES = [   {   'breadcrumbs': [   ('Home', 'index.html'),
                     {   'a': 'Initial portal architecture and core ERP integrations typically go live within 8 to 14 '
                              'weeks depending on catalog complexity.',
                         'q': 'What is the estimated deployment timeframe for an enterprise commerce rollout?'}],
+        'industries_served': [   {   'application': 'Omnichannel digital storefronts with real-time distributed '
+                                                    'inventory reservation across physical stores and fulfillment '
+                                                    'centers.',
+                                     'industry': 'Retail & Consumer E-Commerce',
+                                     'outcome': 'Eliminated stockout discrepancies by 40% and accelerated checkout '
+                                                'conversion rates.'},
+                                 {   'application': 'Unified aggregator order intake, automated kitchen display '
+                                                    'station routing, and central commissary raw material '
+                                                    'replenishment.',
+                                     'industry': 'Quick-Service Restaurants & Cloud Kitchens',
+                                     'outcome': 'Reduced ticket preparation times by 30% and slashed perishable '
+                                                'ingredient spoilage.'},
+                                 {   'application': 'B2B contract pricing catalogs, automated purchase order '
+                                                    'processing, multi-warehouse routing, and tiered customer credit '
+                                                    'checks.',
+                                     'industry': 'Industrial Manufacturing & Wholesale Distribution',
+                                     'outcome': 'Accelerated order-to-dispatch turnaround from 48 hours to under 6 '
+                                                'hours.'},
+                                 {   'application': 'Automated carrier API tendering, dynamic multi-stop route '
+                                                    'optimization, live freight telemetry, and electronic proof of '
+                                                    'delivery.',
+                                     'industry': 'Logistics & Third-Party Warehousing (3PL)',
+                                     'outcome': 'Cut middle-mile freight costs by 18% and improved on-time in-full '
+                                                'delivery compliance.'}],
         'integrations': [   {   'category': 'Enterprise ERP & Finance',
                                 'details': 'Bi-directional connectors for SAP S/4HANA, Oracle NetSuite, Microsoft '
                                            'Dynamics 365, and Sage Intacct.'},
@@ -157,6 +255,54 @@ SERVICES_PAGES = [   {   'breadcrumbs': [   ('Home', 'index.html'),
                                         'digital procurement system, eliminating unapproved maverick spend and '
                                         'automating invoice reconciliations.',
                              'title': 'Enterprise Procure-to-Pay Automation'}],
+        'what_we_deliver': [   {   'deliverables': [   'Custom Next.js & React storefronts with edge caching',
+                                                       'Multi-currency, internationalized checkout engine',
+                                                       'Elasticsearch catalog search & real-time inventory reservation',
+                                                       'Omnichannel customer account management portal'],
+                                   'desc': 'Headless, high-availability storefronts and purchasing portals integrated '
+                                           'with enterprise backends.',
+                                   'tech_stack': 'Next.js, Node.js, GraphQL, Redis, PostgreSQL, Stripe / Adyen',
+                                   'title': 'B2B & B2C Digital Commerce Engines'},
+                               {   'deliverables': [   'Multi-channel order aggregator gateway (Swiggy, Zomato, '
+                                                       'UberEats)',
+                                                       'Station-based Kitchen Display Systems (KDS) with SLA timers',
+                                                       'Central commissary recipe costing & ingredient depletion '
+                                                       'module',
+                                                       'Hyperlocal rider dispatch & live GPS delivery tracking engine'],
+                                   'desc': 'Centralized kitchen operating systems connecting order aggregators, POS '
+                                           'terminals, and commissary supply chains.',
+                                   'tech_stack': 'React Native, Python, WebSockets, Kafka, MongoDB, AWS',
+                                   'title': 'Enterprise FoodTech & Commissary Platforms'},
+                               {   'deliverables': [   'Multi-warehouse inventory synchronization hub',
+                                                       'Dynamic reorder point & safety stock calculation pipeline',
+                                                       'Barcode & RFID scanning mobile terminal application',
+                                                       '3PL carrier dispatch integration suite & rate comparator'],
+                                   'desc': 'Distributed inventory synchronization platforms providing real-time '
+                                           'multi-node stock allocation and automated reordering.',
+                                   'tech_stack': 'Java / Spring Boot, Kafka, Docker / K8s, PostgreSQL, TimescaleDB',
+                                   'title': 'Intelligent WMS & Inventory Allocation Engines'},
+                               {   'deliverables': [   'Supplier self-service onboarding & KYC compliance portal',
+                                                       'Automated 3-way PO-GRN-invoice matching engine',
+                                                       'Multi-tier spend approval workflow engine with budget guards',
+                                                       'Real-time vendor SLA scorecarding & spend analytics console'],
+                                   'desc': 'Digital procurement and supplier collaboration networks with automated '
+                                           'approval hierarchies and invoice reconciliation.',
+                                   'tech_stack': 'TypeScript, NestJS, React, AWS Lambda, PostgreSQL, SAP/NetSuite '
+                                                 'Connectors',
+                                   'title': 'Strategic Procurement & Vendor Portals'}],
+        'why_choose_us': [   {   'desc': 'We engineer clean, modular architectures using modern open standards. You '
+                                         'retain 100% intellectual property, source code, and deployment control.',
+                                 'title': 'Zero Vendor Lock-In & Full IP Ownership'},
+                             {   'desc': 'Pre-built connectors and proven integration patterns for SAP S/4HANA, Oracle '
+                                         'NetSuite, Microsoft Dynamics 365, Manhattan Associates, and custom legacy '
+                                         'databases.',
+                                 'title': 'Deep Enterprise ERP & WMS Connectivity'},
+                             {   'desc': 'Engineered to handle high-throughput seasonal spikes, flash sales, and '
+                                         'continuous multi-node synchronization with sub-second response times.',
+                                 'title': 'High-Concurrency Cloud Architecture'},
+                             {   'desc': 'From business process discovery and architectural design to full production '
+                                         'deployment, automated testing, and ongoing SLA-backed technical oversight.',
+                                 'title': 'End-to-End Engineering Ownership'}],
         'workflow_steps': [   {   'desc': 'Audit commerce operations, B2B account hierarchies, contract pricing '
                                           'models, ERP product catalogs, and warehouse fulfillment networks.',
                                   'step': '01',
@@ -1031,4 +1177,4 @@ SERVICES_PAGES = [   {   'breadcrumbs': [   ('Home', 'index.html'),
                                   'step': '05',
                                   'title': 'Deployment & Improvement'}]}]
 
-print("Loaded 6 services pages (Domain 1 + subpages).")
+print(f"Loaded {len(SERVICES_PAGES)} services pages (Domain 1 + subpages).")

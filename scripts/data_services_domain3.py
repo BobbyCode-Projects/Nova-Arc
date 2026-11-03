@@ -5,40 +5,120 @@ Services Page Data - Domain 3: Intelligent Monitoring & Automation
 SERVICES_DOMAIN_3 = [   {   'breadcrumbs': [   ('Home', 'index.html'),
                            ('Services', 'services.html'),
                            ('Intelligent Monitoring & Automation', None)],
-        'capabilities': [   {   'desc': 'Live operational control centers displaying equipment health, telemetry '
-                                        'feeds, and event-based alerting rules.',
-                                'points': [   'Sub-second telemetry updates',
-                                              'Customizable executive views',
-                                              'Multi-facility floor mapping',
-                                              'Live operational alerting'],
+        'capabilities': [   {   'desc': 'Interactive operations consoles, real-time KPI streaming, telemetry '
+                                        'visualization, and unified multi-facility oversight.',
+                                'points': [   'High-frequency telemetry ingestion engines handling tens of thousands '
+                                              'of metrics per second',
+                                              'Customizable enterprise executive dashboards with sub-second live data '
+                                              'refresh',
+                                              'Multi-layer geospatial mapping for distributed warehouses, retail '
+                                              'stores, and logistics fleets',
+                                              'Dynamic threshold configuration with multi-condition alerting rules '
+                                              '(critical, warning, nominal)',
+                                              'Incident escalation matrices routing alerts via SMS, WhatsApp, Slack, '
+                                              'PagerDuty, and email',
+                                              'Interactive metric trend analysis with historical drill-downs and '
+                                              'comparative time series',
+                                              'Anomaly visualization highlighting variance spikes against moving '
+                                              'baseline averages',
+                                              'Role-tailored dashboard views for operations teams, engineering leads, '
+                                              'and C-level executives',
+                                              'Embedded live CCTV, video telemetry, and sensor status correlation '
+                                              'widgets',
+                                              'Automated daily and weekly operational performance summary PDF report '
+                                              'distribution'],
                                 'title': 'Real-Time Monitoring & Dashboards'},
-                            {   'desc': 'Industrial sensor connectivity, telemetry ingestion, asset condition '
-                                        'monitoring, and edge-to-cloud integration.',
-                                'points': [   'Industrial sensor integration',
-                                              'MQTT/CoAP edge protocols',
-                                              'Environmental monitoring',
-                                              'Edge computing telemetry'],
+                            {   'desc': 'Hardware-agnostic sensor telemetry ingestion, edge compute processing, '
+                                        'environmental monitoring, and asset tracking.',
+                                'points': [   'Industrial IoT (IIoT) sensor telemetry integration via MQTT, Modbus, '
+                                              'BACnet, and OPC-UA',
+                                              'Edge computing firmware running lightweight anomaly detection '
+                                              'algorithms directly on gateway hardware',
+                                              'Fleet telematics tracking vehicle engine diagnostics (OBD-II), fuel '
+                                              'levels, and tire pressures',
+                                              'Environmental condition monitoring (temperature, humidity, vibration, '
+                                              'ambient light) for warehouses',
+                                              'Smart energy meter monitoring tracking consumption spikes and power '
+                                              'factor anomalies',
+                                              'Automated remote device provisioning, secure over-the-air (OTA) '
+                                              'firmware updates, and key rotation',
+                                              'Cold chain temperature compliance monitoring with instant excursion '
+                                              'alarms',
+                                              'Machine run-hour logging and automated predictive maintenance trigger '
+                                              'alerts',
+                                              'Asset tracking using BLE beacons, RFID readers, and cellular GPS '
+                                              'trackers',
+                                              'Secure device certificate management adhering to TLS 1.3 and zero-trust '
+                                              'hardware identity'],
                                 'title': 'Internet of Things (IoT) Solutions'},
-                            {   'desc': 'KPI dashboards, anomaly detection, historical trend analysis, and predictive '
-                                        'maintenance where supported by suitable data.',
-                                'points': [   'Historical trend analysis',
-                                              'Dynamic baseline anomaly detection',
-                                              'Equipment degradation models',
-                                              'Throughput performance metrics'],
+                            {   'desc': 'Historical trend intelligence, root cause failure analysis, machine downtime '
+                                        'prediction, and throughput modeling.',
+                                'points': [   'Automated calculation and live visualization of Overall Equipment '
+                                              'Effectiveness (OEE)',
+                                              'Machine downtime root cause analysis categorizing mechanical, '
+                                              'electrical, and operator stoppages',
+                                              'Production line throughput tracking versus scheduled operational '
+                                              'targets',
+                                              'Predictive asset failure modeling forecasting component breakdown '
+                                              'probability',
+                                              'Energy usage intensity correlation against production output to '
+                                              'identify waste',
+                                              'Warehouse worker pick-rate analytics and travel-time path optimization '
+                                              'modeling',
+                                              'Quality control defect trend analysis linked to machine settings and '
+                                              'raw material batches',
+                                              'Fleet turnaround time (TAT) tracking at loading docks and customer '
+                                              'delivery hubs',
+                                              'Capacity utilization forecasting for manufacturing lines, server racks, '
+                                              'and storage zones',
+                                              'Automated operational anomaly detection flagging deviations from '
+                                              'standard operating procedures'],
                                 'title': 'Operational Analytics'},
-                            {   'desc': 'Event-triggered actions, automated task creation, incident escalation, '
-                                        'rule-based responses, and human approval mechanisms.',
-                                'points': [   'Automated work order dispatch',
-                                              'Multi-tier escalation rules',
-                                              'Human approval checkpoints',
-                                              'Resolution verification logs'],
+                            {   'desc': 'Event-driven triggers, automated incident escalation, cross-system alerts, '
+                                        'and closed-loop process remediation.',
+                                'points': [   'Event-driven automated incident ticket creation in Jira, ServiceNow, '
+                                              'and internal ticketing systems',
+                                              'Automated machine shutdown protocols triggered upon critical thermal or '
+                                              'pressure threshold breaches',
+                                              'Automated dispatch of mobile technician work orders with spare parts '
+                                              'pick lists',
+                                              'Escalation countdown timers re-routing unresolved incidents to senior '
+                                              'operations managers',
+                                              'Automated customer notification workflows when shipment ETA delays are '
+                                              'detected',
+                                              'Dynamic cooling and ventilation adjustment based on real-time ambient '
+                                              'temperature sensors',
+                                              'Self-healing server infrastructure scripts restarting degraded '
+                                              'containers and services',
+                                              'Shift handover automated report generation summarizing open incidents '
+                                              'and throughput metrics',
+                                              'Automated inventory replenishment orders triggered when storage bin '
+                                              'weight sensors drop below minimum',
+                                              'Continuous closed-loop feedback loops measuring resolution times and '
+                                              'process adherence'],
                                 'title': 'Intelligent Workflow Automation'},
-                            {   'desc': 'Application health monitoring, API tracking, availability, centralized logs, '
-                                        'error monitoring, and incident reporting.',
-                                'points': [   'Synthetic API monitoring',
-                                              'Latency & error tracing',
-                                              'Centralized audit logs',
-                                              'Uptime & SLA tracking'],
+                            {   'desc': 'Full-stack application health, database query profiling, cloud infrastructure '
+                                        'telemetry, and synthetic transaction tracking.',
+                                'points': [   'Full-stack application performance monitoring (APM) tracking '
+                                              'transaction traces and database latencies',
+                                              'Server health monitoring across hybrid cloud, AWS, Azure, GCP, and '
+                                              'on-premises bare metal',
+                                              'Kubernetes cluster health, pod restart tracking, node memory pressure, '
+                                              'and ingress error monitoring',
+                                              'Database query performance profiling identifying slow queries, lock '
+                                              'contention, and index bloat',
+                                              'SSL/TLS certificate expiry monitoring with automated renewal '
+                                              'notifications',
+                                              'Synthetic user transaction monitoring verifying checkout, login, and '
+                                              'search availability 24/7/365',
+                                              'Network bandwidth, packet drop, latency, and firewall throughput '
+                                              'telemetry',
+                                              'Centralized log aggregation with real-time regex search, filtering, and '
+                                              'indexing',
+                                              'Security event and anomaly monitoring tracking brute force attempts and '
+                                              'unauthorized API access',
+                                              'Uptime SLA calculation and public/internal status page publishing with '
+                                              'incident audit history'],
                                 'title': 'System & Infrastructure Monitoring'}],
         'category_badge': 'SERVICE DOMAIN 03',
         'challenges': [   {   'challenge': 'Unplanned Equipment Downtime',
@@ -85,6 +165,27 @@ SERVICES_DOMAIN_3 = [   {   'breadcrumbs': [   ('Home', 'index.html'),
                     {   'a': 'Initial gateway connectivity and live telemetry dashboards typically go live within 2 to '
                              '4 weeks for standard sensor deployments.',
                         'q': 'How quickly can a monitoring pilot be deployed in a facility?'}],
+        'industries_served': [   {   'application': 'Continuous machine telemetry ingestion, automated OEE '
+                                                    'calculation, and predictive component wear alerts.',
+                                     'industry': 'Industrial Manufacturing & Smart Factories',
+                                     'outcome': 'Reduced unexpected factory downtime by 45% and improved overall '
+                                                'machine utilization.'},
+                                 {   'application': 'Automated temperature and humidity telemetry for perishable food, '
+                                                    'pharmaceuticals, and sensitive cargo.',
+                                     'industry': 'Cold Chain Logistics & Warehousing',
+                                     'outcome': 'Guaranteed 100% regulatory compliance logging and eliminated spoiled '
+                                                'shipment losses.'},
+                                 {   'application': 'Smart energy meter telemetry, HVAC automation, occupancy '
+                                                    'tracking, and building management system (BMS) integration.',
+                                     'industry': 'Commercial Real Estate & Smart Facilities',
+                                     'outcome': 'Lowered facility energy consumption by 22% and streamlined tenant '
+                                                'maintenance workflows.'},
+                                 {   'application': 'Hybrid cloud server health, Kubernetes pod monitoring, '
+                                                    'distributed database latency profiling, and synthetic user '
+                                                    'checks.',
+                                     'industry': 'Cloud Infrastructure & Mission-Critical IT',
+                                     'outcome': 'Maintained 99.99% system availability and cut mean time to resolution '
+                                                '(MTTR) by half.'}],
         'integrations': [   {   'category': 'Industrial Protocols & Edge Standards',
                                 'details': 'MQTT, OPC UA, Modbus TCP/RTU, BACnet, and REST APIs for edge controller '
                                            'and PLC connectivity.'},
@@ -156,6 +257,56 @@ SERVICES_DOMAIN_3 = [   {   'breadcrumbs': [   ('Home', 'index.html'),
                                         'payment gateway latency spikes before end users experienced transaction '
                                         'timeouts.',
                              'title': 'Distributed Cloud & Edge Service Observability'}],
+        'what_we_deliver': [   {   'deliverables': [   'Hardware-agnostic IoT edge daemon with local data buffering',
+                                                       'High-throughput MQTT & Kafka ingestion gateway',
+                                                       'Remote Over-The-Air (OTA) firmware update manager',
+                                                       'mTLS device certificate lifecycle management infrastructure'],
+                                   'desc': 'Edge-to-cloud industrial telemetry ingestion engines and remote hardware '
+                                           'fleet management systems.',
+                                   'tech_stack': 'Go, C++, Mosquitto MQTT, Apache Kafka, TimescaleDB, AWS IoT Core',
+                                   'title': 'Enterprise IoT Telemetry & Edge Gateways'},
+                               {   'deliverables': [   'Low-latency WebSocket streaming dashboard with sub-second '
+                                                       'update frequency',
+                                                       'Interactive multi-layer facility & fleet geospatial mapping '
+                                                       'console',
+                                                       'Customizable alert rule builder with multi-tier notification '
+                                                       'routing',
+                                                       'Automated daily operations summary PDF report generator'],
+                                   'desc': 'Real-time operational consoles visualizing multi-facility equipment '
+                                           'telemetry, alerts, and geospatial maps.',
+                                   'tech_stack': 'React, TypeScript, Mapbox GL, D3.js, WebSockets, Node.js',
+                                   'title': 'Operational Command Center Dashboards'},
+                               {   'deliverables': [   'Automated Overall Equipment Effectiveness (OEE) calculation '
+                                                       'service',
+                                                       'Vibration and thermal anomaly detection ML model',
+                                                       'Predictive asset remaining useful life (RUL) estimator',
+                                                       'Root cause machine downtime categorization engine'],
+                                   'desc': 'Machine learning analytics pipelines forecasting mechanical component '
+                                           'failures before downtime occurs.',
+                                   'tech_stack': 'Python, Scikit-learn, TensorFlow Lite, FastAPI, PostgreSQL',
+                                   'title': 'Predictive Maintenance & OEE Analytics Engines'},
+                               {   'deliverables': [   'ServiceNow, Jira & PagerDuty automated incident dispatch '
+                                                       'connectors',
+                                                       'Self-healing infrastructure automation runbooks',
+                                                       'Critical threshold emergency equipment shutdown protocols',
+                                                       'Field technician mobile dispatch application with task '
+                                                       'checklists'],
+                                   'desc': 'Automated event triggers executing immediate corrective actions and '
+                                           'dispatching field service tickets.',
+                                   'tech_stack': 'Temporal, Python, REST APIs, Webhooks, Twilio SMS',
+                                   'title': 'Closed-Loop Incident Remediation Pipelines'}],
+        'why_choose_us': [   {   'desc': 'Time-series streaming architecture capable of ingesting tens of thousands of '
+                                         'sensor readings per second with sub-second alert dispatch.',
+                                 'title': 'Sub-Second Ingestion at Scale'},
+                             {   'desc': 'Edge caching and offline buffering ensure that zero telemetry is lost during '
+                                         'intermittent network or internet outages.',
+                                 'title': 'Edge-to-Cloud Architectural Resilience'},
+                             {   'desc': 'Pre-built adapters for MQTT, OPC-UA, Modbus, BACnet, HTTP/REST, and '
+                                         'industrial PLC hardware without vendor lock-in.',
+                                 'title': 'Hardware & Protocol Agnostic'},
+                             {   'desc': 'End-to-end TLS 1.3 encryption, mutual authentication (mTLS), and zero-trust '
+                                         'device identity lifecycle management.',
+                                 'title': 'Production-Ready Security Standards'}],
         'workflow_steps': [   {   'desc': 'Audit plant equipment, server fleets, IoT edge gateways, communication '
                                           'protocols, telemetry sampling intervals, and failure thresholds.',
                                   'step': '01',
@@ -1020,4 +1171,4 @@ SERVICES_DOMAIN_3 = [   {   'breadcrumbs': [   ('Home', 'index.html'),
                                   'step': '05',
                                   'title': 'Deployment & Improvement'}]}]
 
-print("Loaded 6 Domain 3 services pages.")
+print(f"Loaded {len(SERVICES_DOMAIN_3)} Domain 3 services pages.")
