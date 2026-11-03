@@ -120,7 +120,7 @@ SERVICES_DOMAIN_3 = [   {   'breadcrumbs': [   ('Home', 'index.html'),
                                               'Uptime SLA calculation and public/internal status page publishing with '
                                               'incident audit history'],
                                 'title': 'System & Infrastructure Monitoring'}],
-        'category_badge': 'SERVICE DOMAIN 03',
+        'category_badge': 'INTELLIGENT MONITORING & AUTOMATION',
         'challenges': [   {   'challenge': 'Unplanned Equipment Downtime',
                               'impact': 'Critical machinery fails unexpectedly, idling production crews and costing '
                                         'tens of thousands of dollars in lost throughput.',

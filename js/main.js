@@ -1474,7 +1474,7 @@ function initSiteSearchModal() {
     },
     {
       title: 'Digital Commerce & Supply Chain',
-      category: 'Service Domain 01',
+      category: 'Digital Commerce & Supply Ch',
       desc: 'Connect commerce, procurement, inventory, distribution, and logistics through integrated digital platforms that improve operati...',
       url: rootPrefix + 'services/digital-commerce.html',
       tags: ['digital', 'commerce', 'supply', 'chain', 'platforms', 'foodtech', 'solutions']
@@ -1516,7 +1516,7 @@ function initSiteSearchModal() {
     },
     {
       title: 'Enterprise Business Solutions',
-      category: 'Service Domain 02',
+      category: 'Enterprise Business Solution',
       desc: 'Modernize business operations with connected CRM, HRMS, enterprise applications, and workflow automation designed to simplify p...',
       url: rootPrefix + 'services/enterprise-business.html',
       tags: ['enterprise', 'business', 'solutions', 'customer', 'relationship', 'management', 'crm', 'human', 'resource', 'hrms']
@@ -1558,7 +1558,7 @@ function initSiteSearchModal() {
     },
     {
       title: 'Intelligent Monitoring & Automation',
-      category: 'Service Domain 03',
+      category: 'Intelligent Monitoring & Aut',
       desc: 'Connect IoT devices, operational systems, real-time data, and intelligent workflows to improve visibility, identify issues fast...',
       url: rootPrefix + 'services/intelligent-monitoring.html',
       tags: ['intelligent', 'monitoring', 'automation', 'real', 'time', 'dashboards', 'internet', 'things', 'iot', 'solutions']
@@ -1600,7 +1600,7 @@ function initSiteSearchModal() {
     },
     {
       title: 'AI & Healthcare Technology',
-      category: 'Service Domain 04',
+      category: 'Ai & Healthcare Technology',
       desc: 'Apply agentic AI, intelligent information processing, workflow automation, and healthcare technology to simplify complex busine...',
       url: rootPrefix + 'services/ai-healthcare.html',
       tags: ['healthcare', 'technology', 'agentic', 'intelligent', 'agents', 'generative', 'applications']

@@ -640,7 +640,8 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
         del_cards = []
         for d in what_we_deliver:
             items_html = "".join([f'<li style="color: #334155; font-size: 0.875rem; margin-bottom: 7px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>{it}</span></li>' for it in d.get('deliverables', [])])
-            tech_tag = f'<div class="deliver-card-tech" style="background: #F1F5F9; border: 1px solid #E2E8F0; color: #334155; border-radius: 6px; padding: 6px 12px; font-size: 0.8rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; margin-top: auto;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span>Stack: {d["tech_stack"]}</span></div>' if d.get('tech_stack') else ""
+            # Stack data removed per user request
+            tech_tag = ""
             del_cards.append(f"""
             <div class="deliver-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); padding: var(--space-xl); display: flex; flex-direction: column; box-shadow: 0 4px 16px -2px rgba(11, 37, 69, 0.05);">
               <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #0284C7; background: #E0F2FE; padding: 4px 10px; border-radius: 999px; display: inline-block; margin-bottom: 12px; align-self: flex-start;">PRODUCTION DELIVERABLE</span>
@@ -736,33 +737,8 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   </section>
         """
 
-    # Core Service Domains Switcher
-    core_domains = [
-        ("01", "Digital Commerce & Supply Chain", "services/digital-commerce.html"),
-        ("02", "Enterprise Business Solutions", "services/enterprise-business.html"),
-        ("03", "Intelligent Monitoring & Automation", "services/intelligent-monitoring.html"),
-        ("04", "AI & Healthcare Technology", "services/ai-healthcare.html"),
-    ]
+    # Core Service Domains Switcher removed per user request
     services_domain_nav_html = ""
-    if rel_path in [d[2] for d in core_domains]:
-        pills = []
-        for num, d_title, d_path in core_domains:
-            active_cls = " active" if rel_path == d_path else ""
-            pills.append(f'<a href="{root_prefix}{d_path}" class="service-domain-pill{active_cls}"><span class="domain-num">{num}</span><span>{d_title}</span></a>')
-        pills_str = "".join(pills)
-        services_domain_nav_html = f"""
-  <!-- Core Service Domains Switcher -->
-  <nav class="services-domain-nav" aria-label="Core Service Domains Quick Switcher">
-    <div class="container">
-      <div class="services-domain-nav-inner">
-        <span class="services-domain-label">Core Domains:</span>
-        <div class="services-domain-pills">
-          {pills_str}
-        </div>
-      </div>
-    </div>
-  </nav>
-        """
 
     # Problem & Resolution HTML:
     # If domain page: DARK (#0A1628)
@@ -1290,38 +1266,30 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
     {get_ecg_waveform_html()}
 
     <div class="container hero-container-ags">
-      <div class="hero-subpage-grid">
-        <!-- Left Column: Context, Hierarchy & Actions -->
-        <div class="hero-subpage-left">
-          <nav class="breadcrumb-nav" aria-label="Breadcrumb" style="margin-bottom: var(--space-sm);">
-            <ol class="breadcrumb-list" style="display: flex; gap: 8px; list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #94A3B8;">
-              {breadcrumbs_html}
-            </ol>
-          </nav>
-          <span class="eyebrow-ags" style="color: #38BDF8; font-weight: 700; letter-spacing: 0.08em; display: inline-block; margin-bottom: 6px;">{category_badge}</span>
-          <h1 class="hero-title-ags" style="font-size: clamp(2.2rem, 3.8vw, 3.3rem); line-height: 1.15; margin-bottom: 16px;">{page_title}</h1>
-          <p class="hero-subtitle-ags" style="font-size: 1.1rem; line-height: 1.65; color: #CBD5E1; margin-bottom: 24px; max-width: 620px;">
-            {page_subtitle}
-          </p>
-          <div class="hero-actions-ags" style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
-            <a href="{root_prefix}contact.html" class="btn btn-consultation-ags">
-              <span>Discuss Your Project</span>
-              <svg class="btn-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-            <a href="{root_prefix}services.html" class="btn btn-outline-white">
-              <span>Explore Services</span>
-            </a>
-          </div>
-          {hero_highlights_html}
+      <div class="hero-content-ags" style="max-width: 860px;">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb" style="margin-bottom: var(--space-sm);">
+          <ol class="breadcrumb-list" style="display: flex; gap: 8px; list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #94A3B8;">
+            {breadcrumbs_html}
+          </ol>
+        </nav>
+        <span class="eyebrow-ags" style="color: #38BDF8; font-weight: 700; letter-spacing: 0.08em; display: inline-block; margin-bottom: 6px;">{category_badge}</span>
+        <h1 class="hero-title-ags" style="font-size: clamp(2.2rem, 3.8vw, 3.5rem); line-height: 1.15; margin-bottom: 16px;">{page_title}</h1>
+        <p class="hero-subtitle-ags" style="font-size: 1.12rem; line-height: 1.65; color: #CBD5E1; margin-bottom: 26px; max-width: 780px;">
+          {page_subtitle}
+        </p>
+        <div class="hero-actions-ags" style="display: flex; gap: var(--space-md); flex-wrap: wrap; margin-bottom: var(--space-lg);">
+          <a href="{root_prefix}contact.html" class="btn btn-consultation-ags">
+            <span>Discuss Your Project</span>
+            <svg class="btn-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="{root_prefix}services.html" class="btn btn-outline-white">
+            <span>Explore Services</span>
+          </a>
         </div>
-
-        <!-- Right Column: Visual System Architecture & Live Telemetry Card -->
-        <div class="hero-subpage-right">
-          {hero_visual_html}
-        </div>
+        {hero_highlights_html}
       </div>
     </div>
   </section>

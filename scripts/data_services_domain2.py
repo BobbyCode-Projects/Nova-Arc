@@ -116,7 +116,7 @@ SERVICES_DOMAIN_2 = [   {   'breadcrumbs': [('Home', 'index.html'), ('Services',
                                               'Real-time integration health monitoring, payload dead-letter queues, '
                                               'and automated retry mechanisms'],
                                 'title': 'System Integration & Data Connectivity'}],
-        'category_badge': 'SERVICE DOMAIN 02',
+        'category_badge': 'ENTERPRISE BUSINESS SOLUTIONS',
         'challenges': [   {   'challenge': 'Departmental Information Silos',
                               'impact': 'Sales, customer service, HR, and finance operate on disconnected platforms, '
                                         'creating blind spots and manual reconciliation.',

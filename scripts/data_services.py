@@ -114,7 +114,7 @@ SERVICES_PAGES = [   {   'breadcrumbs': [   ('Home', 'index.html'),
                                               'Carbon emission estimation and fleet fuel efficiency analytics for '
                                               'sustainable logistics'],
                                 'title': 'Logistics & Distribution'}],
-        'category_badge': 'SERVICE DOMAIN 01',
+        'category_badge': 'DIGITAL COMMERCE & SUPPLY CHAIN',
         'challenges': [   {   'challenge': 'Disconnected Order & Inventory Data',
                               'impact': 'Orders taken online fail to reflect actual warehouse availability, leading to '
                                         'backorders and customer dissatisfaction.',

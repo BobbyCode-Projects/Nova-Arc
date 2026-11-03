@@ -5230,7 +5230,9 @@ body.mobile-nav-open {
   color: #FFFFFF;
   padding: calc(75px + clamp(36px, 4.5vw, 64px)) 0 0;
   overflow: hidden;
-  min-height: clamp(680px, 86vh, 840px);
+  min-height: 100vh;
+  min-height: 100dvh;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
 }
@@ -8967,6 +8969,75 @@ html, body {
 
 #solutions-areas.section-dark-navy .eyebrow-ags {
   color: #38BDF8;
+}
+
+/* About Nova Arc Section in Dark Navy */
+#about.section-dark-navy {
+  background-color: #08111F !important;
+  color: #FFFFFF !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+#about.section-dark-navy .section-title {
+  color: #FFFFFF !important;
+}
+
+#about.section-dark-navy .section-subtitle {
+  color: #CBD5E1 !important;
+}
+
+#about.section-dark-navy .section-tag {
+  background: rgba(56, 189, 248, 0.12) !important;
+  color: #38BDF8 !important;
+  border: 1px solid rgba(56, 189, 248, 0.28) !important;
+}
+
+#about.section-dark-navy .about-lead-text {
+  color: #FFFFFF !important;
+}
+
+#about.section-dark-navy .about-body-text {
+  color: #94A3B8 !important;
+}
+
+#about.section-dark-navy .about-different-card {
+  background: rgba(15, 23, 42, 0.75) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-left: 4px solid #38BDF8 !important;
+}
+
+#about.section-dark-navy .about-different-title {
+  color: #FFFFFF !important;
+}
+
+#about.section-dark-navy .about-different-item {
+  color: #CBD5E1 !important;
+}
+
+#about.section-dark-navy .about-pillar-card {
+  background: rgba(15, 23, 42, 0.65) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+#about.section-dark-navy .about-pillar-card:hover {
+  border-color: #38BDF8 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.15) !important;
+}
+
+#about.section-dark-navy .about-pillar-title {
+  color: #FFFFFF !important;
+}
+
+#about.section-dark-navy .about-pillar-desc {
+  color: #94A3B8 !important;
+}
+
+#about.section-dark-navy .about-pillar-icon {
+  background: rgba(56, 189, 248, 0.12) !important;
+  color: #38BDF8 !important;
 }
 
 /* Page Hero Dark Variant (for Technology, Industries, Contact) */

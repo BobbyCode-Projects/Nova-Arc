@@ -140,7 +140,7 @@ SERVICES_DOMAIN_4 = [   {   'breadcrumbs': [('Home', 'index.html'), ('Services',
                                               'SOC 2 Type II, HIPAA, and HITRUST aligned data encryption in transit '
                                               'and at rest'],
                                 'title': 'Healthcare Data Integration & Analytics'}],
-        'category_badge': 'SERVICE DOMAIN 04',
+        'category_badge': 'AI & HEALTHCARE TECHNOLOGY',
         'challenges': [   {   'challenge': 'Unstructured Document Inundation',
                               'impact': 'Staff spend thousands of hours manually reading, copying, and validating data '
                                         'from PDFs, scanned forms, and emails.',
