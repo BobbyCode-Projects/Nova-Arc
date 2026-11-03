@@ -285,7 +285,7 @@ def generate_about_page():
     <!-- ========================================================================
          HERO SECTION: ABOUT NOVA ARC (EXECUTIVE CENTERED WITH ECG WAVE)
          ======================================================================== -->
-    <section class="solutions-hero-ags" style="padding-top: calc(75px + var(--space-4xl)); padding-bottom: var(--space-4xl);">
+    <section class="solutions-hero-ags" style="min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; padding-top: calc(75px + clamp(16px, 2.5vw, 36px)); padding-bottom: clamp(20px, 3vw, 40px);">
       <div class="hero-orchestrated-glow-cyan"></div>
       <div class="hero-orchestrated-glow-blue"></div>
       {get_ecg_waveform_html()}

@@ -473,90 +473,58 @@ def get_hero_highlights_html(capabilities):
     pills_html = "".join(pills)
     return f'<div class="hero-highlights-strip">{pills_html}</div>' if pills else ""
 
-def get_hero_visual_html(rel_path, page_title, category_badge, capabilities):
+def get_hero_showcase_card(capabilities, outcomes, category_badge, page_title):
     """
-    Generates a domain-specific, interactive glassmorphic system architecture preview window
-    for the right-hand column of the subpage hero section.
+    Generates an authoritative enterprise capabilities & outcomes console
+    for the right column of the subpage hero. Uses authentic data from
+    outcomes or capabilities to ensure the hero is balanced and filled with
+    valuable domain-specific information.
     """
-    # Determine window title and status based on path and subject
-    if "solutions/" in rel_path:
-        arch_title = "Enterprise Solution Flow"
-        badge_text = "● CONNECTED SYSTEM"
-    elif "technology/" in rel_path:
-        arch_title = "Platform Engine Stack"
-        badge_text = "● RUNTIME READY"
-    elif "industries/" in rel_path:
-        arch_title = "Industry Operations Flow"
-        badge_text = "● DOMAIN VALIDATED"
-    elif "connect/" in rel_path:
-        arch_title = "Direct Concierge Intake"
-        badge_text = "● DIRECT DISPATCH"
-    else:
-        arch_title = "Service Architecture"
-        badge_text = "● ACTIVE WORKFLOW"
+    candidates = []
+    if outcomes:
+        for o in outcomes:
+            candidates.append((o.get('title', ''), o.get('desc', '')))
+    if len(candidates) < 4 and capabilities:
+        for c in capabilities:
+            candidates.append((c.get('title', ''), c.get('desc', '')))
 
-    tag_classes = ["synced", "active", "governed", "secure"]
-    tag_labels = ["Synchronized", "Orchestrated", "Governed", "Automated"]
-
-    stage_items = []
-    # Build up to 4 pipeline stages from capabilities or fallbacks
-    for idx, cap in enumerate(capabilities[:4]):
-        num = idx + 1
-        name = cap['title']
-        sub = cap['desc'][:68] + "..." if len(cap['desc']) > 70 else cap['desc']
-        tag_cls = tag_classes[idx % len(tag_classes)]
-        tag_lbl = tag_labels[idx % len(tag_labels)]
-
-        stage_items.append(f"""
-          <div class="hero-stage-item">
-            <div class="hero-stage-left">
-              <span class="hero-stage-num">{num}</span>
-              <div>
-                <div class="hero-stage-name">{name}</div>
-                <div class="hero-stage-sub">{sub}</div>
-              </div>
+    items = []
+    for idx, (title, desc) in enumerate(candidates[:4]):
+        num = f"0{idx + 1}"
+        clean_desc = desc
+        if len(clean_desc) > 85:
+            clean_desc = clean_desc[:82] + "..."
+        items.append(f"""
+          <div style="display: flex; align-items: flex-start; gap: 12px; padding: 10px 14px; background: rgba(15, 23, 42, 0.55); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 10px; transition: all 0.2s ease;">
+            <span style="font-size: 0.74rem; font-weight: 800; color: #38BDF8; background: rgba(56, 189, 248, 0.14); padding: 3px 7px; border-radius: 5px; flex-shrink: 0; margin-top: 1px;">{num}</span>
+            <div style="min-width: 0;">
+              <h4 style="font-size: 0.92rem; font-weight: 700; color: #FFFFFF; margin: 0 0 2px 0; line-height: 1.25;">{title}</h4>
+              <p style="font-size: 0.8rem; color: #94A3B8; margin: 0; line-height: 1.45;">{clean_desc}</p>
             </div>
-            <span class="hero-stage-tag {tag_cls}">{tag_lbl}</span>
-          </div>
-        """)
+          </div>""")
 
-    stages_html = "".join(stage_items)
+    items_html = "\n".join(items)
 
     return f"""
-      <div class="hero-arch-window">
-        <div class="hero-arch-topbar">
-          <div class="hero-arch-dots">
-            <span class="hero-arch-dot red"></span>
-            <span class="hero-arch-dot amber"></span>
-            <span class="hero-arch-dot green"></span>
+      <div class="hero-showcase-console" style="background: rgba(11, 23, 44, 0.78); border: 1px solid rgba(56, 189, 248, 0.28); border-radius: 16px; padding: 22px 24px; backdrop-filter: blur(14px); box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.45);">
+        <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 12px; margin-bottom: 14px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: #38BDF8; box-shadow: 0 0 8px #38BDF8;"></span>
+            <span style="font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #38BDF8;">SYSTEM CAPABILITIES &amp; OUTCOMES</span>
           </div>
-          <span class="hero-arch-title">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-            {arch_title}
-          </span>
-          <span class="hero-arch-badge">{badge_text}</span>
+          <span style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #94A3B8; background: rgba(56, 189, 248, 0.08); padding: 3px 8px; border-radius: 6px; border: 1px solid rgba(56, 189, 248, 0.16);">ENTERPRISE GRADE</span>
         </div>
-        <div class="hero-arch-body">
-          <div class="hero-pipeline-stages">
-            {stages_html}
-          </div>
-          <div class="hero-arch-footer">
-            <div class="hero-arch-footer-item">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              <span>Latency: <strong>&lt; 250ms</strong></span>
-            </div>
-            <div class="hero-arch-footer-item">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              <span>Security: <strong>Zero-Trust</strong></span>
-            </div>
-            <div class="hero-arch-footer-item">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-              <span>Uptime: <strong>99.99%</strong></span>
-            </div>
-          </div>
+
+        <div style="display: flex; flex-direction: column; gap: 9px;">
+          {items_html}
         </div>
-      </div>
-    """
+
+        <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; color: #94A3B8;">
+          <span style="display: inline-flex; align-items: center; gap: 4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 99.99% Availability</span>
+          <span style="display: inline-flex; align-items: center; gap: 4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Zero-Trust RBAC</span>
+          <span style="display: inline-flex; align-items: center; gap: 4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Deterministic</span>
+        </div>
+      </div>"""
 
 # New generate_subpage implementation for two-colour theme
 
@@ -1212,8 +1180,8 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
 
     # Compute Hero Visual & Highlights
     hero_highlights_html = get_hero_highlights_html(capabilities)
-    hero_visual_html = get_hero_visual_html(rel_path, page_title, category_badge, capabilities)
-
+    hero_showcase_card_html = get_hero_showcase_card(capabilities, outcomes, category_badge, page_title)
+    
     canonical_url = f"https://novaarctech.in/{rel_path}"
 
     html = f"""<!DOCTYPE html>
@@ -1260,36 +1228,42 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
 {get_shared_header(root_prefix, active_sec)}
 
   <!-- Hero Section -->
-  <section class="services-hero-ags" style="padding-top: calc(75px + var(--space-3xl)); padding-bottom: var(--space-4xl);">
+  <section class="services-hero-ags" style="min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; padding-top: calc(75px + clamp(16px, 2.5vw, 36px)); padding-bottom: clamp(20px, 3vw, 40px);">
     <div class="hero-orchestrated-glow-cyan"></div>
     <div class="hero-orchestrated-glow-blue"></div>
     {get_ecg_waveform_html()}
 
     <div class="container hero-container-ags">
-      <div class="hero-content-ags" style="max-width: 860px;">
-        <nav class="breadcrumb-nav" aria-label="Breadcrumb" style="margin-bottom: var(--space-sm);">
-          <ol class="breadcrumb-list" style="display: flex; gap: 8px; list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #94A3B8;">
-            {breadcrumbs_html}
-          </ol>
-        </nav>
-        <span class="eyebrow-ags" style="color: #38BDF8; font-weight: 700; letter-spacing: 0.08em; display: inline-block; margin-bottom: 6px;">{category_badge}</span>
-        <h1 class="hero-title-ags" style="font-size: clamp(2.2rem, 3.8vw, 3.5rem); line-height: 1.15; margin-bottom: 16px;">{page_title}</h1>
-        <p class="hero-subtitle-ags" style="font-size: 1.12rem; line-height: 1.65; color: #CBD5E1; margin-bottom: 26px; max-width: 780px;">
-          {page_subtitle}
-        </p>
-        <div class="hero-actions-ags" style="display: flex; gap: var(--space-md); flex-wrap: wrap; margin-bottom: var(--space-lg);">
-          <a href="{root_prefix}contact.html" class="btn btn-consultation-ags">
-            <span>Discuss Your Project</span>
-            <svg class="btn-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
-          <a href="{root_prefix}services.html" class="btn btn-outline-white">
-            <span>Explore Services</span>
-          </a>
+      <div class="hero-subpage-grid">
+        <div class="hero-subpage-left">
+          <nav class="breadcrumb-nav" aria-label="Breadcrumb" style="margin-bottom: var(--space-sm);">
+            <ol class="breadcrumb-list" style="display: flex; gap: 8px; list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #94A3B8;">
+              {breadcrumbs_html}
+            </ol>
+          </nav>
+          <span class="eyebrow-ags" style="color: #38BDF8; font-weight: 700; letter-spacing: 0.08em; display: inline-block; margin-bottom: 6px;">{category_badge}</span>
+          <h1 class="hero-title-ags" style="font-size: clamp(2.1rem, 3.4vw, 3.2rem); line-height: 1.15; margin-bottom: 14px;">{page_title}</h1>
+          <p class="hero-subtitle-ags" style="font-size: 1.08rem; line-height: 1.65; color: #CBD5E1; margin-bottom: 22px; max-width: 680px;">
+            {page_subtitle}
+          </p>
+          <div class="hero-actions-ags" style="display: flex; gap: var(--space-md); flex-wrap: wrap; margin-bottom: var(--space-md);">
+            <a href="{root_prefix}contact.html" class="btn btn-consultation-ags">
+              <span>Discuss Your Project</span>
+              <svg class="btn-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#key-capabilities" class="btn btn-outline-white">
+              <span>Explore Capabilities</span>
+            </a>
+          </div>
+          {hero_highlights_html}
         </div>
-        {hero_highlights_html}
+
+        <div class="hero-subpage-right">
+          {hero_showcase_card_html}
+        </div>
       </div>
     </div>
   </section>

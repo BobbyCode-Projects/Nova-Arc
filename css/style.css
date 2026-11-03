@@ -6007,20 +6007,23 @@ body.mobile-nav-open {
    ========================================================================== */
 
 /* 1. HERO SECTION (Dark Navy with Wave Matrix Graphic) */
-.solutions-hero-ags {
-  background: linear-gradient(135deg, #07172B 0%, #0B2545 60%, #0E2E56 100%);
-  position: relative;
-  overflow: hidden;
-  padding: 110px 0 125px;
-  color: #FFFFFF;
-}
-
 .solutions-hero-ags,
 .services-hero-ags,
 .page-hero-dark,
+.page-hero,
 .error-hero-dark {
+  background: linear-gradient(135deg, #07172B 0%, #0B2545 60%, #0E2E56 100%);
   position: relative;
   overflow: hidden !important;
+  color: #FFFFFF;
+  min-height: 100vh !important;
+  min-height: 100dvh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  padding-top: calc(75px + clamp(16px, 2.5vw, 36px)) !important;
+  padding-bottom: clamp(20px, 3vw, 40px) !important;
 }
 
 .solutions-hero-ags .ecg-waveform-container,
@@ -6384,7 +6387,6 @@ body.mobile-nav-open {
   background: linear-gradient(135deg, #07172B 0%, #0B2545 60%, #0E2E56 100%);
   position: relative;
   overflow: hidden;
-  padding: 110px 0 125px;
   color: #FFFFFF;
 }
 
@@ -9086,4 +9088,24 @@ html, body {
 
 .page-hero-dark .ai-stat-sublabel {
   color: #CBD5E1 !important;
+}
+
+/* Hero Showcase Console Card (Right Column) */
+.hero-showcase-console {
+  position: relative;
+  z-index: 6;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-showcase-console:hover {
+  transform: translateY(-3px);
+  border-color: rgba(56, 189, 248, 0.45) !important;
+  box-shadow: 0 24px 55px -10px rgba(0, 0, 0, 0.6), 0 0 35px rgba(56, 189, 248, 0.15) !important;
+}
+
+@media (max-width: 991px) {
+  .hero-subpage-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
 }

@@ -47,7 +47,7 @@
     <!-- Header / Navigation -->
     <!-- Header / Navigation -->
     <!-- Header / Navigation -->
-                                                          <header class="site-header" id="top">
+                                                            <header class="site-header" id="top">
     <div class="container navbar">
       <!-- Logo -->
       <a href="../index.html" class="logo" aria-label="Nova Arc Homepage">
@@ -425,10 +425,11 @@
 
 
 
+
   <!-- ========================================================================
        SECTION 1: HERO
        ======================================================================== -->
-  <section class="services-hero-ags">
+  <section class="services-hero-ags" style="min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; padding-top: calc(75px + clamp(16px, 2.5vw, 36px)); padding-bottom: clamp(20px, 3vw, 40px);">
     <div class="hero-orchestrated-glow-cyan"></div>
     <div class="hero-orchestrated-glow-blue"></div>
 <div class="orchestration-wave-container ecg-waveform-container" id="orchestrationWave" aria-hidden="true">
@@ -476,20 +477,90 @@
     </div>
 
     <div class="container hero-container-ags">
-      <div class="hero-content-ags">
-        <span class="eyebrow-ags" style="color: #38BDF8; font-weight: 600; letter-spacing: 0.08em;">ENTERPRISE TECHNOLOGY &amp; AUTOMATION</span>
-        <h1 class="hero-title-ags">Engineering Intelligent Solutions<br>for Connected Enterprises</h1>
-        <p class="hero-subtitle-ags">
-          We help organizations modernize complex operations across digital commerce, enterprise business systems, real-time operational monitoring, and AI-powered automation to drive meaningful business outcomes.
-        </p>
-        <div class="hero-actions-ags">
-          <a href="contact.html" class="btn btn-consultation-ags">
-            <span>Discuss Your Project</span>
-            <svg class="btn-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
+      <div class="hero-subpage-grid">
+        <div class="hero-subpage-left">
+          <nav class="breadcrumb-nav" aria-label="Breadcrumb" style="margin-bottom: var(--space-sm);">
+            <ol class="breadcrumb-list" style="display: flex; gap: 8px; list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #94A3B8;">
+              <li><a href="index.html" style="color: #38BDF8; text-decoration: none;">Home</a></li>
+              <li style="color: #64748B;">/</li>
+              <li style="color: #FFFFFF; font-weight: 600;">Services</li>
+            </ol>
+          </nav>
+          <span class="eyebrow-ags" style="color: #38BDF8; font-weight: 700; letter-spacing: 0.08em; display: inline-block; margin-bottom: 6px;">ENTERPRISE TECHNOLOGY &amp; AUTOMATION</span>
+          <h1 class="hero-title-ags" style="font-size: clamp(2.1rem, 3.4vw, 3.2rem); line-height: 1.15; margin-bottom: 14px;">Engineering Intelligent Solutions for Connected Enterprises</h1>
+          <p class="hero-subtitle-ags" style="font-size: 1.08rem; line-height: 1.65; color: #CBD5E1; margin-bottom: 22px; max-width: 680px;">
+            We help organizations modernize complex operations across digital commerce, enterprise business systems, real-time operational monitoring, and AI-powered automation to drive meaningful business outcomes.
+          </p>
+          <div class="hero-actions-ags" style="display: flex; gap: var(--space-md); flex-wrap: wrap; margin-bottom: var(--space-md);">
+            <a href="contact.html" class="btn btn-consultation-ags">
+              <span>Discuss Your Project</span>
+              <svg class="btn-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#overview" class="btn btn-outline-white">
+              <span>Explore All 4 Domains</span>
+            </a>
+          </div>
+          <div class="hero-highlights-strip">
+            <span class="hero-highlight-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Digital Commerce</span>
+            <span class="hero-highlight-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Enterprise Business</span>
+            <span class="hero-highlight-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Intelligent Monitoring</span>
+            <span class="hero-highlight-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg> AI &amp; Healthcare</span>
+          </div>
+        </div>
+
+        <div class="hero-subpage-right">
+          <div class="hero-showcase-console" style="background: rgba(11, 23, 44, 0.78); border: 1px solid rgba(56, 189, 248, 0.28); border-radius: 16px; padding: 22px 24px; backdrop-filter: blur(14px); box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.45);">
+            <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 12px; margin-bottom: 14px;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background: #38BDF8; box-shadow: 0 0 8px #38BDF8;"></span>
+                <span style="font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #38BDF8;">FOUR CORE SERVICE DOMAINS</span>
+              </div>
+              <span style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #94A3B8; background: rgba(56, 189, 248, 0.08); padding: 3px 8px; border-radius: 6px; border: 1px solid rgba(56, 189, 248, 0.16);">FULL CATALOG</span>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 9px;">
+              <a href="services/digital-commerce.html" style="text-decoration: none; display: flex; align-items: flex-start; gap: 12px; padding: 10px 14px; background: rgba(15, 23, 42, 0.55); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 10px; transition: all 0.2s ease;">
+                <span style="font-size: 0.74rem; font-weight: 800; color: #38BDF8; background: rgba(56, 189, 248, 0.14); padding: 3px 7px; border-radius: 5px; flex-shrink: 0; margin-top: 1px;">01</span>
+                <div style="min-width: 0;">
+                  <h4 style="font-size: 0.92rem; font-weight: 700; color: #FFFFFF; margin: 0 0 2px 0; line-height: 1.25;">Digital Commerce &amp; Supply Chain</h4>
+                  <p style="font-size: 0.8rem; color: #94A3B8; margin: 0; line-height: 1.45;">Headless storefronts, multi-warehouse WMS, vendor portals &amp; route dispatch.</p>
+                </div>
+              </a>
+
+              <a href="services/enterprise-business.html" style="text-decoration: none; display: flex; align-items: flex-start; gap: 12px; padding: 10px 14px; background: rgba(15, 23, 42, 0.55); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 10px; transition: all 0.2s ease;">
+                <span style="font-size: 0.74rem; font-weight: 800; color: #38BDF8; background: rgba(56, 189, 248, 0.14); padding: 3px 7px; border-radius: 5px; flex-shrink: 0; margin-top: 1px;">02</span>
+                <div style="min-width: 0;">
+                  <h4 style="font-size: 0.92rem; font-weight: 700; color: #FFFFFF; margin: 0 0 2px 0; line-height: 1.25;">Enterprise Business Solutions</h4>
+                  <p style="font-size: 0.8rem; color: #94A3B8; margin: 0; line-height: 1.45;">Unified ERP modernization, HRMS, CRM systems &amp; middleware integration.</p>
+                </div>
+              </a>
+
+              <a href="services/intelligent-monitoring.html" style="text-decoration: none; display: flex; align-items: flex-start; gap: 12px; padding: 10px 14px; background: rgba(15, 23, 42, 0.55); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 10px; transition: all 0.2s ease;">
+                <span style="font-size: 0.74rem; font-weight: 800; color: #38BDF8; background: rgba(56, 189, 248, 0.14); padding: 3px 7px; border-radius: 5px; flex-shrink: 0; margin-top: 1px;">03</span>
+                <div style="min-width: 0;">
+                  <h4 style="font-size: 0.92rem; font-weight: 700; color: #FFFFFF; margin: 0 0 2px 0; line-height: 1.25;">Intelligent Monitoring &amp; Automation</h4>
+                  <p style="font-size: 0.8rem; color: #94A3B8; margin: 0; line-height: 1.45;">Sub-second IoT telemetry, predictive health diagnostics &amp; automated workflows.</p>
+                </div>
+              </a>
+
+              <a href="services/ai-healthcare.html" style="text-decoration: none; display: flex; align-items: flex-start; gap: 12px; padding: 10px 14px; background: rgba(15, 23, 42, 0.55); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 10px; transition: all 0.2s ease;">
+                <span style="font-size: 0.74rem; font-weight: 800; color: #38BDF8; background: rgba(56, 189, 248, 0.14); padding: 3px 7px; border-radius: 5px; flex-shrink: 0; margin-top: 1px;">04</span>
+                <div style="min-width: 0;">
+                  <h4 style="font-size: 0.92rem; font-weight: 700; color: #FFFFFF; margin: 0 0 2px 0; line-height: 1.25;">AI &amp; Healthcare Technology</h4>
+                  <p style="font-size: 0.8rem; color: #94A3B8; margin: 0; line-height: 1.45;">HIPAA-compliant document AI, intelligent clinical pipelines &amp; governed LLMs.</p>
+                </div>
+              </a>
+            </div>
+
+            <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; color: #94A3B8;">
+              <span style="display: inline-flex; align-items: center; gap: 4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 99.99% Availability</span>
+              <span style="display: inline-flex; align-items: center; gap: 4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Zero-Trust RBAC</span>
+              <span style="display: inline-flex; align-items: center; gap: 4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Deterministic</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1224,7 +1295,7 @@
     <!-- ========================================================================
        FOOTER
        ======================================================================== -->
-                                                          <footer class="site-footer">
+                                                            <footer class="site-footer">
     <div class="container footer-container">
       <div class="footer-grid">
         <!-- Col 1: Brand & Positioning -->
