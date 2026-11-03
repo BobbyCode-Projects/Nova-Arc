@@ -615,7 +615,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
             btn_html = f'<button type="button" class="btn-read-more-caps" data-read-more-text="Read More (+{len(remaining)} more)" onclick="toggleCaps(this, \'{clean_id}\')" aria-expanded="false">Read More (+{len(remaining)} more) <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>'
 
         cap_cards.append(f"""
-        <div class="card subpage-card-padded" style="padding: var(--space-2xl); display: flex; flex-direction: column; justify-content: space-between; background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg);">
+        <div class="card subpage-card-padded capability-card" style="padding: var(--space-2xl); display: flex; flex-direction: column; background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); align-self: start; height: auto;">
           <div>
             <div style="width: 48px; height: 48px; border-radius: 10px; background: rgba(14, 165, 233, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #38BDF8;">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">

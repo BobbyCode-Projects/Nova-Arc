@@ -8328,6 +8328,7 @@ html, body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--space-xl);
+  align-items: start;
 }
 
 .subpage-grid-2col {
@@ -8769,4 +8770,15 @@ html, body {
   .service-domain-pill {
     flex-shrink: 0;
   }
+}
+
+/* Capability Cards Grid: Independent Card Expansion & Alignment */
+#key-capabilities .subpage-grid-cards {
+  align-items: start !important;
+}
+
+.capability-card,
+#key-capabilities .card.subpage-card-padded {
+  align-self: start !important;
+  height: auto !important;
 }
