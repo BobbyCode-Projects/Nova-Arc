@@ -6014,13 +6014,17 @@ body.mobile-nav-open {
 }
 
 .solutions-hero-ags,
-.services-hero-ags {
+.services-hero-ags,
+.page-hero-dark,
+.error-hero-dark {
   position: relative;
   overflow: hidden !important;
 }
 
 .solutions-hero-ags .ecg-waveform-container,
-.services-hero-ags .ecg-waveform-container {
+.services-hero-ags .ecg-waveform-container,
+.page-hero-dark .ecg-waveform-container,
+.error-hero-dark .ecg-waveform-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -6034,26 +6038,34 @@ body.mobile-nav-open {
 }
 
 .solutions-hero-ags .ecg-track-upper,
-.services-hero-ags .ecg-track-upper {
+.services-hero-ags .ecg-track-upper,
+.page-hero-dark .ecg-track-upper,
+.error-hero-dark .ecg-track-upper {
   top: calc(20% - 40px);
   opacity: 0.9;
 }
 
 .solutions-hero-ags .ecg-track-mid,
-.services-hero-ags .ecg-track-mid {
+.services-hero-ags .ecg-track-mid,
+.page-hero-dark .ecg-track-mid,
+.error-hero-dark .ecg-track-mid {
   top: calc(48% - 40px);
   opacity: 1;
 }
 
 .solutions-hero-ags .ecg-track-lower,
-.services-hero-ags .ecg-track-lower {
+.services-hero-ags .ecg-track-lower,
+.page-hero-dark .ecg-track-lower,
+.error-hero-dark .ecg-track-lower {
   top: calc(76% - 40px);
   opacity: 0.9;
 }
 
 .solutions-hero-ags .ecg-track-lower .ecg-path-signal,
 .services-hero-ags .ecg-track-lower .ecg-path-signal,
-.solution-detail-hero .ecg-track-lower .ecg-path-signal {
+.solution-detail-hero .ecg-track-lower .ecg-path-signal,
+.page-hero-dark .ecg-track-lower .ecg-path-signal,
+.error-hero-dark .ecg-track-lower .ecg-path-signal {
   stroke: #38BDF8;
   stroke-width: 2.2;
   filter: drop-shadow(0 0 6px #38BDF8) drop-shadow(0 0 14px rgba(31, 111, 235, 0.8));
@@ -6061,25 +6073,33 @@ body.mobile-nav-open {
 
 .solutions-hero-ags .ecg-path-ambient,
 .services-hero-ags .ecg-path-ambient,
-.solution-detail-hero .ecg-path-ambient {
+.solution-detail-hero .ecg-path-ambient,
+.page-hero-dark .ecg-path-ambient,
+.error-hero-dark .ecg-path-ambient {
   stroke: rgba(56, 189, 248, 0.28);
 }
 
 .solutions-hero-ags .hero-orchestrated-glow-cyan,
-.services-hero-ags .hero-orchestrated-glow-cyan {
+.services-hero-ags .hero-orchestrated-glow-cyan,
+.page-hero-dark .hero-orchestrated-glow-cyan,
+.error-hero-dark .hero-orchestrated-glow-cyan {
   right: 8%;
   top: -10%;
   opacity: 0.95;
 }
 
 .solutions-hero-ags .hero-orchestrated-glow-blue,
-.services-hero-ags .hero-orchestrated-glow-blue {
+.services-hero-ags .hero-orchestrated-glow-blue,
+.page-hero-dark .hero-orchestrated-glow-blue,
+.error-hero-dark .hero-orchestrated-glow-blue {
   right: -5%;
   top: 20%;
   opacity: 0.95;
 }
 
-.hero-container-ags {
+.hero-container-ags,
+.page-hero-dark .container,
+.error-hero-dark .container {
   position: relative;
   z-index: 5;
 }

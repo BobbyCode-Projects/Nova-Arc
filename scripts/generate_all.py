@@ -22,6 +22,7 @@ REPO_ROOT = os.path.dirname(SCRIPT_DIR)
 sys.path.insert(0, SCRIPT_DIR)
 
 from build_pages import generate_subpage, get_shared_header, get_shared_footer
+from ecg_component import get_ecg_waveform_html
 from data_solutions import SOLUTIONS_PAGES
 from data_services import SERVICES_PAGES
 from data_services_domain2 import SERVICES_DOMAIN_2
@@ -285,7 +286,10 @@ def generate_about_page():
          HERO SECTION: ABOUT NOVA ARC (2-COLUMN BALANCED)
          ======================================================================== -->
     <section class="solutions-hero-ags" style="padding-top: calc(70px + var(--space-3xl)); padding-bottom: var(--space-4xl);">
-      <div class="container">
+      <div class="hero-orchestrated-glow-cyan"></div>
+      <div class="hero-orchestrated-glow-blue"></div>
+      {get_ecg_waveform_html()}
+      <div class="container hero-container-ags">
         <div class="hero-subpage-grid">
           <!-- Left Column -->
           <div class="hero-left-col">
@@ -648,8 +652,11 @@ def generate_404_page():
 {header_html}
 
   <!-- Error 404 Hero (Dark Navy) -->
-  <section style="background: radial-gradient(circle at 50% 30%, rgba(31, 111, 235, 0.15) 0%, transparent 70%), #08111F; color: #FFFFFF; padding: calc(75px + var(--space-4xl)) 0 var(--space-3xl); text-align: center;">
-    <div class="container" style="max-width: 860px; margin: 0 auto;">
+  <section class="error-hero-dark" style="position: relative; overflow: hidden; background: radial-gradient(circle at 50% 30%, rgba(31, 111, 235, 0.15) 0%, transparent 70%), #08111F; color: #FFFFFF; padding: calc(75px + var(--space-4xl)) 0 var(--space-3xl); text-align: center;">
+    <div class="hero-orchestrated-glow-cyan"></div>
+    <div class="hero-orchestrated-glow-blue"></div>
+    {get_ecg_waveform_html()}
+    <div class="container" style="position: relative; z-index: 5; max-width: 860px; margin: 0 auto;">
       <span class="eyebrow-ags" style="color: #38BDF8; font-weight: 700; letter-spacing: 0.1em; font-size: 0.95rem;">ERROR 404</span>
       <h1 style="font-size: clamp(2.5rem, 5vw, 4.2rem); font-weight: 900; color: #FFFFFF; margin: 12px 0 18px; letter-spacing: -0.02em;">
         Page Not Found

@@ -7,6 +7,7 @@ Preserves existing visual design, CSS styling, components, responsive layouts, a
 
 import os
 import sys
+from ecg_component import get_ecg_waveform_html
 
 def get_shared_header(root_prefix, active_section=""):
     sol_active = ' active' if active_section == 'solutions' else ''
@@ -1286,6 +1287,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   <section class="services-hero-ags" style="padding-top: calc(75px + var(--space-3xl)); padding-bottom: var(--space-4xl);">
     <div class="hero-orchestrated-glow-cyan"></div>
     <div class="hero-orchestrated-glow-blue"></div>
+    {get_ecg_waveform_html()}
 
     <div class="container hero-container-ags">
       <div class="hero-subpage-grid">
