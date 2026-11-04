@@ -117,7 +117,7 @@ TECH_IND_CONNECT_PAGES = [
         "related_links": [
             {"title": "Generative AI", "link": "technology/generative-ai.html", "tag": "Core Technology", "desc": "Explore enterprise knowledge assistants and semantic document search."},
             {"title": "Intelligent Automation", "link": "technology/intelligent-automation.html", "tag": "Core Technology", "desc": "Deterministic workflow automation and cross-system data routing."},
-            {"title": "Agentic AI & Intelligent Agents Service", "link": "services/agentic-ai.html", "tag": "Service Domain", "desc": "Discover our commercial agentic AI engineering and implementation services."}
+            {"title": "Agentic AI & Intelligent Agents Service", "link": "services/agentic-ai.html", "tag": "Core Service", "desc": "Discover our commercial agentic AI engineering and implementation services."}
         ]
     },
     {
@@ -234,7 +234,7 @@ TECH_IND_CONNECT_PAGES = [
         "related_links": [
             {"title": "Agentic AI", "link": "technology/agentic-ai.html", "tag": "Complementary Tech", "desc": "Combine generative knowledge assistants with API tool-calling agents."},
             {"title": "Data Analytics & Intelligence", "link": "technology/data-analytics.html", "tag": "Analytical Tech", "desc": "Query structured business databases and operational telemetry."},
-            {"title": "Generative AI Applications Service", "link": "services/generative-ai.html", "tag": "Service Domain", "desc": "Discover our commercial generative AI engineering and implementation services."}
+            {"title": "Generative AI Applications Service", "link": "services/generative-ai.html", "tag": "Core Service", "desc": "Discover our commercial generative AI engineering and implementation services."}
         ]
     },
     {
@@ -351,7 +351,7 @@ TECH_IND_CONNECT_PAGES = [
         "related_links": [
             {"title": "Enterprise Integration", "link": "technology/enterprise-integration.html", "tag": "Data Layer", "desc": "Explore our REST and GraphQL API connectors and data synchronization pipelines."},
             {"title": "Agentic AI", "link": "technology/agentic-ai.html", "tag": "Cognitive Layer", "desc": "Add autonomous multi-step reasoning to your automated business workflows."},
-            {"title": "Business Process Automation Service", "link": "services/business-process-automation.html", "tag": "Service Domain", "desc": "Explore our commercial BPA implementation and workflow engineering services."}
+            {"title": "Business Process Automation Service", "link": "services/business-process-automation.html", "tag": "Core Service", "desc": "Explore our commercial BPA implementation and workflow engineering services."}
         ]
     },
     {
@@ -585,7 +585,7 @@ TECH_IND_CONNECT_PAGES = [
         "related_links": [
             {"title": "Intelligent Automation", "link": "technology/intelligent-automation.html", "tag": "Workflow Layer", "desc": "Trigger automated cross-system actions across integrated enterprise APIs."},
             {"title": "Data Analytics & Intelligence", "link": "technology/data-analytics.html", "tag": "Analytical Layer", "desc": "Aggregate data from multiple APIs into unified business intelligence dashboards."},
-            {"title": "Enterprise Business Solutions", "link": "services/enterprise-business.html", "tag": "Service Domain", "desc": "Commercial integration services for CRM, HRMS, and enterprise business software."}
+            {"title": "Enterprise Business Solutions", "link": "services/enterprise-business.html", "tag": "Core Service", "desc": "Commercial integration services for CRM, HRMS, and enterprise business software."}
         ]
     },
     {
@@ -1408,7 +1408,7 @@ TECH_IND_CONNECT_PAGES = [
         "related_links": [
             {"title": "Healthcare Technology & Automation", "link": "services/healthcare-automation.html", "tag": "Core Service", "desc": "Explore our dedicated healthcare administrative intake and scheduling automation services."},
             {"title": "Healthcare Technology Solutions", "link": "solutions/healthcare-technology.html", "tag": "Parent Solution", "desc": "Comprehensive healthcare administrative workflows and EHR data connectivity."},
-            {"title": "AI & Healthcare Technology", "link": "services/ai-healthcare.html", "tag": "Service Domain", "desc": "Discover our complete AI and healthcare administration technology service domain."}
+            {"title": "AI & Healthcare Technology", "link": "services/ai-healthcare.html", "tag": "Core Service", "desc": "Discover our complete AI and healthcare administration technology service domain."}
         ]
     },
 

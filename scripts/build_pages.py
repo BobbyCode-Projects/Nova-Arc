@@ -1035,7 +1035,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
         if is_domain_page:
             related_html.append(f"""
             <a href="{root_prefix}{rel['link']}" class="card" style="padding: var(--space-lg); text-decoration: none; display: block; transition: all 0.2s ease; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); box-shadow: 0 2px 8px -2px rgba(11, 37, 69, 0.05);">
-              <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #0284C7; font-weight: 700; background: #E0F2FE; padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 6px;">{rel.get('tag', 'Service Domain')}</span>
+              <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #0284C7; font-weight: 700; background: #E0F2FE; padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 6px;">{rel.get('tag', 'Related Service')}</span>
               <h4 style="font-size: 1.1rem; color: #0F172A; margin: 6px 0 4px;">{rel['title']} &rarr;</h4>
               <p style="color: #475569; font-size: 0.85rem; margin: 0; line-height: 1.45;">{rel['desc']}</p>
             </a>
@@ -1043,7 +1043,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
         else:
             related_html.append(f"""
             <a href="{root_prefix}{rel['link']}" class="card" style="padding: var(--space-lg); text-decoration: none; display: block; transition: all 0.2s ease; background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg);">
-              <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #38BDF8; font-weight: 700; background: rgba(56, 189, 248, 0.1); padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 6px;">{rel.get('tag', 'Service Domain')}</span>
+              <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #38BDF8; font-weight: 700; background: rgba(56, 189, 248, 0.1); padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 6px;">{rel.get('tag', 'Related Service')}</span>
               <h4 style="font-size: 1.1rem; color: #FFFFFF; margin: 6px 0 4px;">{rel['title']} &rarr;</h4>
               <p style="color: #94A3B8; font-size: 0.85rem; margin: 0; line-height: 1.45;">{rel['desc']}</p>
             </a>

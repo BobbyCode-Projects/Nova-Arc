@@ -15,6 +15,7 @@ Updates sitemap.xml and searchIndex in js/main.js
 import os
 import re
 import sys
+import datetime
 
 # Add scripts directory to path
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -760,7 +761,7 @@ def generate_sitemap(all_subpages):
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
     ]
 
-    today = "2026-10-27"
+    today = datetime.date.today().isoformat()
     for loc, prio, freq in urls:
         xml_lines.append(f"""  <url>
     <loc>{loc}</loc>
