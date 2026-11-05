@@ -9146,3 +9146,85 @@ html, body {
   border-color: rgba(56, 189, 248, 0.4) !important;
   box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.5), 0 0 25px rgba(56, 189, 248, 0.12) !important;
 }
+
+/* ==========================================================================
+   Information-Rich Two-Column Subpage Hero & First-Screen Architecture
+   ========================================================================== */
+.hero-two-col-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(24px, 3.5vw, 56px);
+  align-items: center;
+}
+
+.hero-left-col {
+  position: relative;
+  z-index: 5;
+}
+
+.hero-right-col {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-tagline-ags {
+  letter-spacing: -0.01em;
+}
+
+.hero-intro-text,
+.hero-supporting-text {
+  text-wrap: pretty;
+}
+
+.business-value-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.business-value-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.business-value-card:hover {
+  transform: translateY(-3px);
+  border-color: #0284C7 !important;
+  box-shadow: 0 10px 24px -6px rgba(2, 132, 199, 0.12), 0 4px 12px rgba(15, 23, 42, 0.06) !important;
+}
+
+.capability-grid-compact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.industry-badge-pill {
+  transition: all 0.2s ease;
+}
+
+.industry-badge-pill:hover {
+  background: #E0F2FE !important;
+  border-color: #38BDF8 !important;
+  color: #0369A1 !important;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 991px) {
+  .hero-two-col-grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+  .business-value-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .business-value-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

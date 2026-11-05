@@ -8,6 +8,8 @@ Preserves existing visual design, CSS styling, components, responsive layouts, a
 import os
 import sys
 from ecg_component import get_ecg_waveform_html
+from hero_visuals import get_hero_svg_for_page
+from page_enhancer import get_industries_for_page, get_supplemental_capabilities, INDUSTRY_ICON_MAP
 
 def get_shared_header(root_prefix, active_section=""):
     sol_active = ' active' if active_section == 'solutions' else ''
@@ -538,25 +540,69 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
             bc_items.append(f'<li aria-current="page">{label}</li>')
     breadcrumbs_html = '<span class="breadcrumb-separator">/</span>'.join(bc_items)
 
-    # 1. Overview HTML (in light section)
-    overview_html = "".join([f'<p style="font-size: 1.05rem; line-height: 1.8; color: #334155; margin-bottom: 18px;">{p}</p>' for p in overview_paragraphs])
+    # Ensure 5 or 6 detailed, page-specific capability cards
+    capabilities = get_supplemental_capabilities(rel_path, capabilities)
+
+    # Save original industries for domain deep-dive, and get curated industries for top strip
+    original_industries_served = industries_served
+    strip_industries = get_industries_for_page(rel_path)
+
+    # 1. Four Business Value Propositions Strip HTML (ALWAYS in LIGHT SLATE section)
+    bv_cards = []
+    default_icons = [
+        '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>',
+        '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+        '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
+        '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>'
+    ]
+    for idx, out in enumerate(outcomes[:4]):
+        icon = default_icons[idx % len(default_icons)]
+        bv_cards.append(f"""
+        <div class="business-value-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 20px 22px; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04); display: flex; flex-direction: column; transition: transform 0.25s ease, box-shadow 0.25s ease;">
+          <div style="width: 38px; height: 38px; border-radius: 8px; background: rgba(2, 132, 199, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 12px; color: #0284C7;">
+            {icon}
+          </div>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: #0F172A; margin-bottom: 6px; line-height: 1.35;">{out['title']}</h3>
+          <p style="font-size: 0.88rem; color: #475569; line-height: 1.55; margin: 0;">{out['desc']}</p>
+        </div>
+        """)
+    business_value_cards_html = "".join(bv_cards)
+
+    business_value_section_html = f"""
+  <!-- Section: Four Business Value Propositions (LIGHT SLATE) -->
+  <section id="business-value" class="subpage-section-light-alt" style="padding: clamp(32px, 4vw, 48px) 0; background: #F8FAFC; border-bottom: 1px solid #E2E8F0;">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: var(--space-xl); flex-wrap: wrap; gap: 12px;">
+        <div>
+          <span class="eyebrow-ags" style="color: #0284C7; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.08em;">MEASURABLE IMPACT</span>
+          <h2 style="font-size: clamp(1.4rem, 2.2vw, 1.85rem); font-weight: 800; color: #0F172A; margin: 4px 0 0; letter-spacing: -0.01em;">Four Core Business Value Propositions</h2>
+        </div>
+        <span style="font-size: 0.85rem; color: #64748B; font-weight: 500;">Direct Operational &amp; Financial Outcomes</span>
+      </div>
+
+      <div class="business-value-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px;">
+        {business_value_cards_html}
+      </div>
+    </div>
+  </section>
+    """
 
     # 2. Key Capabilities HTML with Read More / Show Less Toggle (ALWAYS in dark section)
     cap_cards = []
     for idx, cap in enumerate(capabilities):
         all_points = cap.get('points', [])
-        first_4 = all_points[:4]
-        remaining = all_points[4:]
+        first_3 = all_points[:3]
+        remaining = all_points[3:]
 
-        first_4_html = "".join([f'<li style="color: #CBD5E1; font-size: 0.875rem; margin-bottom: 7px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>{item}</span></li>' for item in first_4])
+        first_3_html = "".join([f'<li style="color: #CBD5E1; font-size: 0.85rem; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>{item}</span></li>' for item in first_3])
 
         more_html = ""
         btn_html = ""
         if remaining:
             clean_id = f"cap-more-{rel_path.replace('/', '-').replace('.', '-')}-{idx}"
-            rem_items_html = "".join([f'<li style="color: #CBD5E1; font-size: 0.875rem; margin-bottom: 7px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>{item}</span></li>' for item in remaining])
+            rem_items_html = "".join([f'<li style="color: #CBD5E1; font-size: 0.85rem; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>{item}</span></li>' for item in remaining])
             more_html = f'<div id="{clean_id}" class="capability-more-wrap" style="display: none;"><ul style="list-style: none; padding: 0; margin: 0; padding-top: 4px;">{rem_items_html}</ul></div>'
-            btn_html = f'<button type="button" class="btn-read-more-caps" data-read-more-text="Read More (+{len(remaining)} more)" onclick="toggleCaps(this, \'{clean_id}\')" aria-expanded="false">Read More (+{len(remaining)} more) <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>'
+            btn_html = f'<button type="button" class="btn-read-more-caps" data-read-more-text="Read More (+{len(remaining)} more)" onclick="toggleCaps(this, \'{clean_id}\')" aria-expanded="false" style="margin-top: 6px;">Read More (+{len(remaining)} more) <svg class="chevron-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>'
 
         # Determine if this capability has a destination link (strictly for the 4 core service domain pages)
         domain_overview_pages = {
@@ -570,7 +616,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
             cap_link = cap.get('link') or CAPABILITY_PAGE_MAP.get(cap.get('title'))
         if cap_link:
             card_class = "card subpage-card-padded capability-card capability-card-linked"
-            title_html = f"""<h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: var(--space-sm);">
+            title_html = f"""<h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 8px;">
               <a href="{root_prefix}{cap_link}" class="capability-title-link" style="color: #FFFFFF; text-decoration: none; display: inline-flex; align-items: center; justify-content: space-between; width: 100%; gap: 8px;">
                 <span>{cap['title']}</span>
                 <svg class="cap-arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-left: auto;">
@@ -581,24 +627,24 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
             </h3>"""
         else:
             card_class = "card subpage-card-padded capability-card"
-            title_html = f'<h3 style="font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-sm);">{cap["title"]}</h3>'
+            title_html = f'<h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">{cap["title"]}</h3>'
 
         cap_cards.append(f"""
-        <div class="{card_class}" style="padding: var(--space-2xl); display: flex; flex-direction: column; background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); align-self: start !important; height: auto !important;">
+        <div class="{card_class}" style="padding: var(--space-xl); display: flex; flex-direction: column; background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); align-self: stretch; height: auto;">
           <div>
-            <div style="width: 48px; height: 48px; border-radius: 10px; background: rgba(14, 165, 233, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #38BDF8;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(14, 165, 233, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 12px; color: #38BDF8;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                 <line x1="8" y1="21" x2="16" y2="21"></line>
                 <line x1="12" y1="17" x2="12" y2="21"></line>
               </svg>
             </div>
             {title_html}
-            <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.6; margin-bottom: var(--space-md);">{cap['desc']}</p>
+            <p style="color: #94A3B8; font-size: 0.90rem; line-height: 1.55; margin-bottom: 12px;">{cap['desc']}</p>
           </div>
-          <div>
-            <ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid rgba(255,255,255,0.08); padding-top: var(--space-md);">
-              {first_4_html}
+          <div style="margin-top: auto;">
+            <ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 10px;">
+              {first_3_html}
             </ul>
             {more_html}
             {btn_html}
@@ -606,6 +652,37 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
         </div>
         """)
     capabilities_html = "".join(cap_cards)
+
+    # 3. Industries Served Strip HTML (ALWAYS in LIGHT section)
+    ind_pills = []
+    for ind in strip_industries:
+        ind_name = ind.get('name') if isinstance(ind, dict) else str(ind)
+        icon_key = ind.get('icon', 'layers') if isinstance(ind, dict) else 'layers'
+        icon_svg = INDUSTRY_ICON_MAP.get(icon_key, INDUSTRY_ICON_MAP['layers'])
+        ind_pills.append(f"""
+        <span class="industry-badge-pill" style="display: inline-flex; align-items: center; gap: 7px; background: #F1F5F9; border: 1px solid #E2E8F0; padding: 7px 14px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; color: #1E293B;">
+          {icon_svg}
+          <span>{ind_name}</span>
+        </span>
+        """)
+    industries_badges_html = "".join(ind_pills)
+
+    industries_served_section_html = f"""
+  <!-- Section: Relevant Industries Served (LIGHT) -->
+  <section id="industries-served" class="subpage-section-light" style="padding: clamp(24px, 3.2vw, 38px) 0; background: #FFFFFF; border-bottom: 1px solid #E2E8F0;">
+    <div class="container">
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 0.8rem; font-weight: 800; color: #0284C7; letter-spacing: 0.08em; text-transform: uppercase;">INDUSTRIES SERVED:</span>
+          <span style="font-size: 0.88rem; color: #64748B; font-weight: 500;">Tailored engineering implementations delivering proven ROI across:</span>
+        </div>
+        <div class="industry-pills-row" style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
+          {industries_badges_html}
+        </div>
+      </div>
+    </div>
+  </section>
+    """
 
     # 3. What We Deliver Section HTML (Present on domain pages -> LIGHT SLATE)
     what_we_deliver_html = ""
@@ -643,32 +720,35 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   </section>
         """
 
-    # 4. Industries Served Section HTML (Present on domain pages -> LIGHT SLATE)
+    # 4. Industries Served Deep-Dive Section HTML (Present on domain pages -> LIGHT SLATE)
     industries_served_html = ""
-    if industries_served:
+    if is_domain_page and original_industries_served:
         ind_cards = []
-        for ind in industries_served:
+        for ind in original_industries_served:
+            ind_title = ind.get('industry') or ind.get('name') or "Industry"
+            ind_app = ind.get('application') or f"Tailored {ind_title} workflows engineered for maximum reliability."
+            ind_out = ind.get('outcome') or f"Measurable operational efficiency and compliance for {ind_title}."
             ind_cards.append(f"""
             <div class="industry-served-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); padding: var(--space-xl); display: flex; flex-direction: column; box-shadow: 0 4px 16px -2px rgba(11, 37, 69, 0.05);">
               <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #0284C7; background: #E0F2FE; padding: 3px 10px; border-radius: 999px; display: inline-block; margin-bottom: 10px; align-self: flex-start;">INDUSTRY VERTICAL</span>
-              <h3 style="font-size: 1.2rem; font-weight: 700; color: #0F172A; margin-bottom: 8px;">{ind['industry']}</h3>
+              <h3 style="font-size: 1.2rem; font-weight: 700; color: #0F172A; margin-bottom: 8px;">{ind_title}</h3>
               <div style="margin-bottom: var(--space-sm);">
                 <strong style="color: #64748B; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Vertical Implementation:</strong>
-                <p style="color: #334155; font-size: 0.925rem; line-height: 1.55; margin: 0;">{ind['application']}</p>
+                <p style="color: #334155; font-size: 0.925rem; line-height: 1.55; margin: 0;">{ind_app}</p>
               </div>
               <div style="margin-top: auto; padding: 10px 14px; background: #F0F9FF; border-left: 3px solid #0284C7; border-radius: 6px; font-size: 0.85rem; color: #0C4A6E; line-height: 1.5;">
                 <strong style="color: #0284C7; display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px;">Key Business Outcome:</strong>
-                <span>{ind['outcome']}</span>
+                <span>{ind_out}</span>
               </div>
             </div>
             """)
         ind_cards_str = "".join(ind_cards)
         industries_served_html = f"""
-  <!-- Industries Served Section -->
-  <section id="industries-served" class="subpage-section-light-alt" style="padding: var(--space-4xl) 0; background: #F8FAFC; border-bottom: 1px solid #E2E8F0;">
+  <!-- Industries Served Deep-Dive Section -->
+  <section id="industries-deep-dive" class="subpage-section-light-alt" style="padding: var(--space-4xl) 0; background: #F8FAFC; border-bottom: 1px solid #E2E8F0;">
     <div class="container">
       <div style="text-align: center; max-width: 760px; margin: 0 auto var(--space-3xl);">
-        <span class="eyebrow-ags" style="color: #0284C7;">INDUSTRIES SERVED</span>
+        <span class="eyebrow-ags" style="color: #0284C7;">INDUSTRIES SERVED DEEP-DIVE</span>
         <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #0F172A; margin: 8px 0 12px;">Domain-Specific Vertical Applications</h2>
         <p class="subpage-section-desc" style="color: #475569; font-size: 1.05rem;">Proven engineering architectures tailored to the operational demands and regulatory standards of each sector.</p>
       </div>
@@ -1183,18 +1263,16 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   </section>
         """
 
-    # Compute Hero Visual & Highlights (omitted on core service domain pages per user requirement)
-    domain_overview_pages = {
-        'services/digital-commerce.html',
-        'services/enterprise-business.html',
-        'services/intelligent-monitoring.html',
-        'services/ai-healthcare.html'
-    }
-    if is_domain_page or rel_path in domain_overview_pages:
-        hero_highlights_html = ""
-    else:
-        hero_highlights_html = get_hero_highlights_html(capabilities)
-    
+    # Introductory description (approx 40-60 words) & Supporting explanation (approx 25-40 words)
+    intro_desc = overview_paragraphs[0] if len(overview_paragraphs) > 0 else page_subtitle
+    supp_expl = overview_paragraphs[1] if len(overview_paragraphs) > 1 else ""
+    if len(overview_paragraphs) > 2 and len(intro_desc.split()) < 35:
+        intro_desc = f"{overview_paragraphs[0]} {overview_paragraphs[1]}"
+        supp_expl = overview_paragraphs[2]
+
+    # Large domain-specific hero illustration
+    hero_illustration_svg = get_hero_svg_for_page(rel_path, page_title, category_badge)
+
     canonical_url = f"https://novaarctech.in/{rel_path}"
 
     html = f"""<!DOCTYPE html>
@@ -1240,70 +1318,74 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
 
 {get_shared_header(root_prefix, active_sec)}
 
-  <!-- Hero Section -->
-  <section class="services-hero-ags" style="min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; padding-top: calc(75px + clamp(16px, 2.5vw, 36px)); padding-bottom: clamp(20px, 3vw, 40px);">
+  <!-- Hero Section (Information-Rich Two-Column Layout) -->
+  <section class="services-hero-ags hero-two-col-section" style="min-height: calc(100vh - 75px); display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; padding-top: calc(75px + clamp(16px, 2.2vw, 32px)); padding-bottom: clamp(24px, 3.2vw, 44px); position: relative; overflow: hidden;">
     <div class="hero-orchestrated-glow-cyan"></div>
     <div class="hero-orchestrated-glow-blue"></div>
     {get_ecg_waveform_html()}
 
     <div class="container hero-container-ags">
-      <div class="hero-content-ags" style="max-width: 900px;">
-        <nav class="breadcrumb-nav" aria-label="Breadcrumb" style="margin-bottom: var(--space-sm);">
-          <ol class="breadcrumb-list" style="display: flex; gap: 8px; list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #94A3B8;">
-            {breadcrumbs_html}
-          </ol>
-        </nav>
-        <span class="eyebrow-ags" style="color: #38BDF8; font-weight: 700; letter-spacing: 0.08em; display: inline-block; margin-bottom: 8px;">{category_badge}</span>
-        <h1 class="hero-title-ags" style="font-size: clamp(2.2rem, 3.8vw, 3.6rem); line-height: 1.15; margin-bottom: 16px;">{page_title}</h1>
-        <p class="hero-subtitle-ags" style="font-size: 1.12rem; line-height: 1.7; color: #CBD5E1; margin-bottom: 26px; max-width: 820px;">
-          {page_subtitle}
-        </p>
-        <div class="hero-actions-ags" style="display: flex; gap: var(--space-md); flex-wrap: wrap; margin-bottom: var(--space-lg);">
-          <a href="{root_prefix}contact.html" class="btn btn-consultation-ags">
-            <span>Discuss Your Project</span>
-            <svg class="btn-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
-          <a href="#key-capabilities" class="btn btn-outline-white">
-            <span>Explore Capabilities</span>
-          </a>
+      <div class="hero-two-col-grid">
+        
+        <!-- Left Column: Content & Context -->
+        <div class="hero-left-col">
+          <nav class="breadcrumb-nav" aria-label="Breadcrumb" style="margin-bottom: 8px;">
+            <ol class="breadcrumb-list" style="display: flex; gap: 8px; list-style: none; padding: 0; margin: 0; font-size: 0.82rem; color: #94A3B8;">
+              {breadcrumbs_html}
+            </ol>
+          </nav>
+          <span class="eyebrow-ags" style="color: #38BDF8; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.08em; display: inline-block; margin-bottom: 8px;">{category_badge}</span>
+          <h1 class="hero-title-ags" style="font-size: clamp(2.1rem, 3.3vw, 3.2rem); line-height: 1.15; color: #FFFFFF; font-weight: 800; margin-bottom: 12px; letter-spacing: -0.02em;">{page_title}</h1>
+          <p class="hero-tagline-ags" style="font-size: clamp(1.02rem, 1.25vw, 1.15rem); font-weight: 600; color: #38BDF8; line-height: 1.45; margin-bottom: 14px;">
+            {page_subtitle}
+          </p>
+          <p class="hero-intro-text" style="font-size: 0.98rem; line-height: 1.65; color: #E2E8F0; margin-bottom: 12px;">
+            {intro_desc}
+          </p>
+          {f'<p class="hero-supporting-text" style="font-size: 0.88rem; line-height: 1.6; color: #94A3B8; margin-bottom: 22px;">{supp_expl}</p>' if supp_expl else ''}
+          <div class="hero-actions-ags" style="display: flex; gap: var(--space-md); flex-wrap: wrap; align-items: center;">
+            <a href="{root_prefix}contact.html" class="btn btn-consultation-ags" style="padding: 12px 28px; font-size: 0.98rem;">
+              <span>Discuss Your Project</span>
+              <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#key-capabilities" class="btn btn-outline-white" style="padding: 12px 24px; font-size: 0.98rem;">
+              <span>Explore Capabilities</span>
+            </a>
+          </div>
         </div>
-        {hero_highlights_html}
+
+        <!-- Right Column: Domain Architectural Diagram -->
+        <div class="hero-right-col">
+          {hero_illustration_svg}
+        </div>
+
       </div>
     </div>
   </section>
 
   {services_domain_nav_html}
 
-  <!-- Section 1: Strategic Overview (LIGHT) -->
-  <section id="strategic-overview" class="subpage-section-light" style="padding: var(--space-4xl) 0; background: #FFFFFF; border-bottom: 1px solid #E2E8F0;">
-    <div class="container">
-      <div style="max-width: 860px; margin: 0 auto; text-align: center;">
-        <span class="eyebrow-ags" style="color: #0284C7;">STRATEGIC OVERVIEW</span>
-        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #0F172A; margin: 8px 0 20px; line-height: 1.3;">Engineered for Seamless Operations &amp; Measurable Outcomes</h2>
-        <div style="text-align: left;">
-          {overview_html}
-        </div>
-      </div>
-    </div>
-  </section>
+  {business_value_section_html}
 
   <!-- Section 2: Key Capabilities (DARK NAVY) -->
-  <section id="key-capabilities" class="subpage-section-dark" style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <section id="key-capabilities" class="subpage-section-dark" style="padding: clamp(48px, 6vw, 76px) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
-      <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
+      <div style="text-align: center; max-width: 760px; margin: 0 auto var(--space-3xl);">
         <span class="eyebrow-ags" style="color: #38BDF8;">KEY CAPABILITIES</span>
-        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Core Architecture &amp; Functional Capabilities</h2>
-        <p class="subpage-section-desc" style="color: #94A3B8; font-size: 1.05rem;">Purpose-built engineering modules designed to integrate cleanly into your existing enterprise stack.</p>
+        <h2 class="subpage-section-heading" style="font-size: clamp(1.8rem, 2.8vw, 2.4rem); font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Core Architecture &amp; Functional Capabilities</h2>
+        <p class="subpage-section-desc" style="color: #94A3B8; font-size: 1.02rem; line-height: 1.6;">Purpose-built engineering modules designed to integrate cleanly into your existing enterprise stack.</p>
       </div>
 
-      <div class="subpage-grid-cards">
+      <div class="subpage-grid-cards capability-grid-compact">
         {capabilities_html}
       </div>
     </div>
   </section>
+
+  {industries_served_section_html}
 
   {what_we_deliver_html}
 
@@ -1313,15 +1395,11 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
 
   {section_methodology_html}
 
-  {industries_served_html}
-
   {integrations_html}
 
   {why_choose_us_html}
 
   {considerations_html}
-
-  {section_benefits_html}
 
   {faqs_html}
 
