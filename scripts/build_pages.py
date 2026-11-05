@@ -474,6 +474,38 @@ def get_hero_highlights_html(capabilities):
     return f'<div class="hero-highlights-strip">{pills_html}</div>' if pills else ""
 
 
+# Mapping of Core Service Domain Key Capabilities to their dedicated subpages
+CAPABILITY_PAGE_MAP = {
+    # Domain 1: Digital Commerce & Supply Chain
+    'Digital Commerce Platforms': 'services/digital-commerce-platforms.html',
+    'FoodTech Solutions': 'services/foodtech.html',
+    'Supply Chain Management': 'services/supply-chain-management.html',
+    'Procurement & Vendor Management': 'services/procurement.html',
+    'Logistics & Distribution': 'services/logistics.html',
+    
+    # Domain 2: Enterprise Business Solutions
+    'Customer Relationship Management (CRM)': 'services/crm.html',
+    'Human Resource Management (HRMS)': 'services/hrms.html',
+    'Business Process Automation (BPA)': 'services/business-process-automation.html',
+    'Enterprise Application Development': 'services/enterprise-applications.html',
+    'System Integration & Data Connectivity': 'services/enterprise-integration.html',
+    
+    # Domain 3: Intelligent Monitoring & Automation
+    'Real-Time Monitoring & Dashboards': 'services/real-time-monitoring.html',
+    'Internet of Things (IoT) Solutions': 'services/iot-integration.html',
+    'Operational Analytics': 'services/operational-analytics.html',
+    'Intelligent Workflow Automation': 'services/workflow-automation.html',
+    'System & Infrastructure Monitoring': 'services/infrastructure-monitoring.html',
+    
+    # Domain 4: AI & Healthcare Technology
+    'Agentic AI & Intelligent Agents': 'services/agentic-ai.html',
+    'Generative AI Applications': 'services/generative-ai.html',
+    'Intelligent Document Processing': 'services/document-processing.html',
+    'AI-Powered Workflow Automation': 'services/ai-workflow-automation.html',
+    'Healthcare Technology Solutions': 'services/healthcare-automation.html',
+    'Healthcare Data Integration & Analytics': 'services/healthcare-data-analytics.html',
+}
+
 # New generate_subpage implementation for two-colour theme
 
 def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_subtitle,
@@ -526,8 +558,33 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
             more_html = f'<div id="{clean_id}" class="capability-more-wrap" style="display: none;"><ul style="list-style: none; padding: 0; margin: 0; padding-top: 4px;">{rem_items_html}</ul></div>'
             btn_html = f'<button type="button" class="btn-read-more-caps" data-read-more-text="Read More (+{len(remaining)} more)" onclick="toggleCaps(this, \'{clean_id}\')" aria-expanded="false">Read More (+{len(remaining)} more) <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>'
 
+        # Determine if this capability has a destination link (strictly for the 4 core service domain pages)
+        domain_overview_pages = {
+            'services/digital-commerce.html',
+            'services/enterprise-business.html',
+            'services/intelligent-monitoring.html',
+            'services/ai-healthcare.html'
+        }
+        cap_link = None
+        if (is_domain_page or rel_path in domain_overview_pages) and rel_path.startswith("services/"):
+            cap_link = cap.get('link') or CAPABILITY_PAGE_MAP.get(cap.get('title'))
+        if cap_link:
+            card_class = "card subpage-card-padded capability-card capability-card-linked"
+            title_html = f"""<h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: var(--space-sm);">
+              <a href="{root_prefix}{cap_link}" class="capability-title-link" style="color: #FFFFFF; text-decoration: none; display: inline-flex; align-items: center; justify-content: space-between; width: 100%; gap: 8px;">
+                <span>{cap['title']}</span>
+                <svg class="cap-arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-left: auto;">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </h3>"""
+        else:
+            card_class = "card subpage-card-padded capability-card"
+            title_html = f'<h3 style="font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-sm);">{cap["title"]}</h3>'
+
         cap_cards.append(f"""
-        <div class="card subpage-card-padded capability-card" style="padding: var(--space-2xl); display: flex; flex-direction: column; background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); align-self: start !important; height: auto !important;">
+        <div class="{card_class}" style="padding: var(--space-2xl); display: flex; flex-direction: column; background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); align-self: start !important; height: auto !important;">
           <div>
             <div style="width: 48px; height: 48px; border-radius: 10px; background: rgba(14, 165, 233, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: #38BDF8;">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -536,7 +593,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
                 <line x1="12" y1="17" x2="12" y2="21"></line>
               </svg>
             </div>
-            <h3 style="font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-sm);">{cap['title']}</h3>
+            {title_html}
             <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.6; margin-bottom: var(--space-md);">{cap['desc']}</p>
           </div>
           <div>
@@ -1126,8 +1183,17 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   </section>
         """
 
-    # Compute Hero Visual & Highlights
-    hero_highlights_html = get_hero_highlights_html(capabilities)
+    # Compute Hero Visual & Highlights (omitted on core service domain pages per user requirement)
+    domain_overview_pages = {
+        'services/digital-commerce.html',
+        'services/enterprise-business.html',
+        'services/intelligent-monitoring.html',
+        'services/ai-healthcare.html'
+    }
+    if is_domain_page or rel_path in domain_overview_pages:
+        hero_highlights_html = ""
+    else:
+        hero_highlights_html = get_hero_highlights_html(capabilities)
     
     canonical_url = f"https://novaarctech.in/{rel_path}"
 

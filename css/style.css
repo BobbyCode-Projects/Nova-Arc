@@ -9109,3 +9109,40 @@ html, body {
     gap: 32px !important;
   }
 }
+
+/* Capability Title Interactive Subpage Link on Domain Pages */
+.capability-title-link {
+  color: #FFFFFF !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  gap: 8px !important;
+  transition: color 0.25s ease !important;
+  cursor: pointer !important;
+}
+
+.capability-title-link:hover {
+  color: #38BDF8 !important;
+}
+
+.capability-title-link .cap-arrow-icon {
+  stroke: #38BDF8 !important;
+  transition: transform 0.25s ease, stroke 0.25s ease !important;
+}
+
+.capability-title-link:hover .cap-arrow-icon {
+  transform: translateX(4px) !important;
+  stroke: #67E8F9 !important;
+}
+
+.capability-card.capability-card-linked {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.capability-card.capability-card-linked:hover,
+.capability-card:has(.capability-title-link):hover {
+  border-color: rgba(56, 189, 248, 0.4) !important;
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.5), 0 0 25px rgba(56, 189, 248, 0.12) !important;
+}
