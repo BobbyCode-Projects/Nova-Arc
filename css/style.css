@@ -9228,3 +9228,143 @@ html, body {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* ==========================================================================
+   Nova Arc — Subtle Premium Page Transitions & Micro-Choreography
+   ========================================================================== */
+
+:root {
+  --ease-page-premium: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* 1. Page-level Navigation Transition (Exit Animation)
+   When clicking an internal link, gently fade out previous page content */
+.subpage-body.page-transitioning-out > section,
+.subpage-body.page-transitioning-out > main,
+.subpage-body.page-transitioning-out .services-hero-ags,
+.subpage-body.page-transitioning-out .hero-two-col-section,
+.subpage-body.page-transitioning-out .solutions-hero-ags {
+  opacity: 0 !important;
+  transform: translateY(-8px) !important;
+  transition: opacity 0.26s var(--ease-page-premium), transform 0.26s var(--ease-page-premium) !important;
+  pointer-events: none;
+}
+
+/* 2. Micro-Choreography Keyframes */
+@keyframes subFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes subSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subImageScaleUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Breadcrumb: gentle fade (300ms) */
+.subpage-body .hero-left-col .breadcrumb-nav,
+.subpage-body .hero-left-col .breadcrumbs,
+.subpage-body .breadcrumbs {
+  animation: subFadeIn 0.30s var(--ease-page-premium) both;
+}
+
+/* Category label / Eyebrow: fade and slight upward movement (350ms, 40ms stagger) */
+.subpage-body .hero-left-col .eyebrow-ags,
+.subpage-body .hero-badge,
+.subpage-body .category-badge {
+  animation: subSlideUp 0.35s var(--ease-page-premium) 0.04s both;
+}
+
+/* Main heading: fade and slide up (350ms, 80ms stagger) */
+.subpage-body .hero-left-col .hero-title-ags,
+.subpage-body .subpage-hero-title,
+.subpage-body h1.hero-title {
+  animation: subSlideUp 0.35s var(--ease-page-premium) 0.08s both;
+}
+
+/* Business-focused Tagline: fade and slide up (380ms, 120ms stagger) */
+.subpage-body .hero-left-col .hero-tagline-ags {
+  animation: subSlideUp 0.38s var(--ease-page-premium) 0.12s both;
+}
+
+/* Description (intro & supporting text): fade in shortly afterward (400ms, 160ms stagger) */
+.subpage-body .hero-left-col .hero-intro-text,
+.subpage-body .hero-left-col .hero-supporting-text,
+.subpage-body .hero-desc-ags {
+  animation: subFadeIn 0.40s var(--ease-page-premium) 0.16s both;
+}
+
+/* CTA buttons: subtle fade and upward movement (400ms, 200ms stagger) */
+.subpage-body .hero-left-col .hero-actions-ags,
+.subpage-body .hero-actions-ags .btn {
+  animation: subSlideUp 0.40s var(--ease-page-premium) 0.20s both;
+}
+
+/* Hero image / architectural diagram: gentle opacity and scale transition (450ms, 100ms stagger) */
+.subpage-body .hero-right-col,
+.subpage-body .hero-right-col .hero-diagram-container {
+  animation: subImageScaleUp 0.45s var(--ease-page-premium) 0.10s both;
+}
+
+/* 3. Sequential Cards Fade and Slight Upward Movement (350ms each with ~50ms stagger) */
+.subpage-body .capability-grid-compact .capability-card,
+.subpage-body .business-value-grid .business-value-card {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.35s var(--ease-page-premium), transform 0.35s var(--ease-page-premium), border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.subpage-body .capability-grid-compact .capability-card.card-revealed,
+.subpage-body .business-value-grid .business-value-card.card-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fallback for no-js */
+.no-js .subpage-body .capability-grid-compact .capability-card,
+.no-js .subpage-body .business-value-grid .business-value-card {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* 4. Accessibility — Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .subpage-body *,
+  .subpage-body *::before,
+  .subpage-body *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .subpage-body .capability-grid-compact .capability-card,
+  .subpage-body .business-value-grid .business-value-card {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .subpage-body.page-transitioning-out > section,
+  .subpage-body.page-transitioning-out > main {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

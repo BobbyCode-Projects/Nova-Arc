@@ -70,6 +70,10 @@ def replace_header_and_footer(html_content, root_prefix, active_section=""):
     # Normalize style.css to v=4.0
     html_content = re.sub(r'href="[^"]*css/style\.css(\?v=[^"]*)?"', f'href="{root_prefix}css/style.css?v=4.0"', html_content)
 
+    # Ensure body has subpage-body class for root internal pages (index.html is excluded)
+    if '<body class="subpage-body">' not in html_content:
+        html_content = re.sub(r'<body(?:\s+class="[^"]*")?>', '<body class="subpage-body">', html_content, count=1)
+
     return html_content
 
 def generate_all_subpages():

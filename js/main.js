@@ -32,6 +32,7 @@ function initAllComponents() {
   safeInit('WaveformInteraction', initWaveformInteraction);
   safeInit('NavSimpleDropdowns', initNavSimpleDropdowns);
   safeInit('SiteSearchModal', initSiteSearchModal);
+  safeInit('PageTransitions', initPageTransitions);
 }
 
 if (document.readyState === 'loading') {
@@ -1895,4 +1896,139 @@ function toggleCaps(btn, containerId) {
   }
 }
 window.toggleCaps = toggleCaps;
+
+/* --------------------------------------------------------------------------
+   16. Subtle Premium Page Transitions & Card Stagger
+   -------------------------------------------------------------------------- */
+function initPageTransitions() {
+  const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // bfcache restoration: ensure page is immediately visible if user hits Back/Forward
+  window.addEventListener('pageshow', function(e) {
+    document.body.classList.remove('page-transitioning-out');
+  });
+
+  // Always reveal cards if reduced motion is requested
+  if (isReducedMotion) {
+    document.querySelectorAll('.capability-card, .business-value-card').forEach(function(card) {
+      card.classList.add('card-revealed');
+    });
+    return;
+  }
+
+  // Handle subtle link transitions only on internal subpages
+  if (document.body.classList.contains('subpage-body')) {
+    document.addEventListener('click', function(e) {
+      const link = e.target.closest('a');
+      if (!link) return;
+
+      const href = link.getAttribute('href');
+      if (!href) return;
+
+      // Skip non-navigation, external, anchor, and special protocol links
+      if (
+        href.startsWith('#') ||
+        href.startsWith('javascript:') ||
+        href.startsWith('mailto:') ||
+        href.startsWith('tel:') ||
+        link.getAttribute('target') === '_blank' ||
+        link.hasAttribute('download') ||
+        e.ctrlKey || e.metaKey || e.shiftKey || e.altKey ||
+        e.defaultPrevented
+      ) {
+        return;
+      }
+
+      // Resolve URL against current location
+      let targetUrl;
+      try {
+        targetUrl = new URL(link.href, window.location.href);
+      } catch (err) {
+        return;
+      }
+
+      // Check same-origin
+      if (targetUrl.origin !== window.location.origin) return;
+
+      // Same page click (without hash) - ignore redundant navigation
+      if (targetUrl.pathname === window.location.pathname && targetUrl.search === window.location.search && !targetUrl.hash) {
+        e.preventDefault();
+        return;
+      }
+
+      // Anchor hash link on same page - let smooth scroll handle it
+      if (targetUrl.pathname === window.location.pathname && targetUrl.hash) {
+        return;
+      }
+
+      // Trigger subtle exit transition
+      e.preventDefault();
+      document.body.classList.add('page-transitioning-out');
+
+      // Navigate after 240ms (within the 300ms budget)
+      setTimeout(function() {
+        window.location.href = targetUrl.href;
+      }, 240);
+
+      // Failsafe in case navigation is interrupted
+      setTimeout(function() {
+        document.body.classList.remove('page-transitioning-out');
+      }, 1000);
+    });
+  }
+
+  // Card Reveal Stagger (Business Value Cards & Capability Cards)
+  initCardStagger();
+}
+
+function initCardStagger() {
+  const cards = document.querySelectorAll('.capability-grid-compact .capability-card, .business-value-grid .business-value-card');
+  if (!cards.length) return;
+
+  // Stagger reveal using IntersectionObserver
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          const card = entry.target;
+          const parent = card.parentElement;
+          let index = 0;
+          if (parent) {
+            const siblings = Array.from(parent.children);
+            index = siblings.indexOf(card);
+          }
+          const delay = Math.max(0, index) * 50; // ~50ms stagger per card
+
+          setTimeout(function() {
+            card.classList.add('card-revealed');
+          }, delay);
+
+          observer.unobserve(card);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -30px 0px',
+      threshold: 0.08
+    });
+
+    cards.forEach(function(card) {
+      observer.observe(card);
+    });
+  } else {
+    cards.forEach(function(card, idx) {
+      setTimeout(function() {
+        card.classList.add('card-revealed');
+      }, idx * 50);
+    });
+  }
+
+  // Safety net: ensure all cards are visible after 1.2s regardless of viewport state
+  setTimeout(function() {
+    cards.forEach(function(card) {
+      card.classList.add('card-revealed');
+    });
+  }, 1200);
+}
+
 
