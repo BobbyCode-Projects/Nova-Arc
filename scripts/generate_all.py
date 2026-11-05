@@ -65,10 +65,10 @@ def replace_header_and_footer(html_content, root_prefix, active_section=""):
     # Clean up any duplicate script tags and normalize main.js and style.css
     html_content = re.sub(r'<script[^>]*main\.js[^>]*></script>', '', html_content)
     html_content = re.sub(r'<!--\s*Scripts\s*-->\s*', '', html_content)
-    html_content = re.sub(r'\s*</body>', f'\n\n  <!-- Scripts -->\n  <script src="{root_prefix}js/main.js?v=3.5"></script>\n</body>', html_content)
+    html_content = re.sub(r'\s*</body>', f'\n\n  <!-- Scripts -->\n  <script src="{root_prefix}js/main.js?v=4.0"></script>\n</body>', html_content)
 
-    # Normalize style.css to v=3.5
-    html_content = re.sub(r'href="[^"]*css/style\.css(\?v=[^"]*)?"', f'href="{root_prefix}css/style.css?v=3.5"', html_content)
+    # Normalize style.css to v=4.0
+    html_content = re.sub(r'href="[^"]*css/style\.css(\?v=[^"]*)?"', f'href="{root_prefix}css/style.css?v=4.0"', html_content)
 
     return html_content
 
@@ -257,7 +257,7 @@ def generate_about_page():
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Core Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=3.5">
+  <link rel="stylesheet" href="css/style.css?v=4.0">
 
   <!-- Google tag (gtag.js) - Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NOVAARC001"></script>
@@ -630,7 +630,7 @@ def generate_about_page():
 {footer_html}
 
   <!-- Scripts -->
-  <script src="js/main.js?v=3.5"></script>
+  <script src="js/main.js?v=4.0"></script>
 </body>
 </html>"""
 
@@ -657,7 +657,7 @@ def generate_404_page():
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=3.5">
+  <link rel="stylesheet" href="css/style.css?v=4.0">
 </head>
 <body class="subpage-body">
 
@@ -728,7 +728,7 @@ def generate_404_page():
 {footer_html}
 
   <!-- Scripts -->
-  <script src="js/main.js?v=3.5"></script>
+  <script src="js/main.js?v=4.0"></script>
 </body>
 </html>
 """

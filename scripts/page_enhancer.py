@@ -345,3 +345,4 @@ def get_supplemental_capabilities(rel_path, current_caps):
     # Add supplemental capabilities
     extended = list(current_caps) + supplements[:needed]
     return extended
+

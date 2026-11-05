@@ -1301,7 +1301,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{root_prefix}css/style.css?v=3.5">
+  <link rel="stylesheet" href="{root_prefix}css/style.css?v=4.0">
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -1410,7 +1410,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
 {get_shared_footer(root_prefix)}
 
   <!-- Scripts -->
-  <script src="{root_prefix}js/main.js?v=3.5"></script>
+  <script src="{root_prefix}js/main.js?v=4.0"></script>
 </body>
 </html>
 """

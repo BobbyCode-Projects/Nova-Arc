@@ -811,3 +811,4 @@ def _svg_connect_architecture():
     <circle cx="455" cy="269" r="6" fill="#10B981" filter="url(#glow)"/>
     """
     return _svg_wrapper(svg, "ENTERPRISE ENGAGEMENT WORKFLOW", "CLIENT COLLABORATION")
+
