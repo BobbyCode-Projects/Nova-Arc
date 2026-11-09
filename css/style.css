@@ -373,33 +373,44 @@ button, input, select, textarea {
   margin-left: 2px;
 }
 
-/* Nav Links */
+/* Nav Links - Enlarged & Centered for Premium Presence */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  margin: 0 40px;
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 22px;
+  gap: 48px;
 }
 
 .nav-link {
-  font-size: 0.925rem;
-  font-weight: 500;
-  color: #E2E8F0;
+  font-size: 1.12rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
   position: relative;
-  padding: 6px 0;
-  transition: color var(--transition-fast);
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
 }
 
 .nav-link:hover,
 .nav-link.active {
   color: #38BDF8;
+  background-color: rgba(255, 255, 255, 0.06);
 }
 
 .nav-link.has-badge {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .nav-badge {
@@ -426,17 +437,19 @@ button, input, select, textarea {
   position: relative !important;
 }
 
-/* Dropdown Link for Solutions & AI Platform */
+/* Dropdown Link for Services, Technology & Industries */
 .nav-dropdown-link {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-size: 0.925rem;
-  font-weight: 500;
-  color: #E2E8F0;
+  gap: 8px;
+  font-size: 1.12rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
   text-decoration: none;
-  padding: 6px 0;
-  transition: color var(--transition-fast);
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
 }
 
@@ -444,57 +457,65 @@ button, input, select, textarea {
 .nav-dropdown-link.active,
 .nav-item-dropdown:hover .nav-dropdown-link {
   color: #38BDF8;
+  background-color: rgba(255, 255, 255, 0.06);
 }
 
 .nav-dropdown-link .dropdown-chevron {
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
   color: #94A3B8;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
 }
 
 .nav-dropdown-link:hover .dropdown-chevron,
-.nav-item-dropdown:hover .nav-dropdown-link .dropdown-chevron {
+.nav-item-dropdown:hover .nav-dropdown-link .dropdown-chevron,
+.nav-item-dropdown.open .nav-dropdown-link .dropdown-chevron {
   color: #38BDF8;
   transform: rotate(180deg);
 }
 
-/* Nav Dropdown Toggle Button (Services & General - Normal clean link style matching Solutions and AI Platform) */
+/* Nav Dropdown Toggle Button (Services & General) */
 .nav-dropdown-toggle {
   background: transparent !important;
   border: none !important;
   font-family: inherit;
-  font-size: 0.925rem !important;
-  font-weight: 500 !important;
-  color: #E2E8F0 !important;
+  font-size: 1.12rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em;
+  color: #FFFFFF !important;
   cursor: pointer;
   display: inline-flex !important;
   align-items: center !important;
-  gap: 6px !important;
-  padding: 6px 0 !important;
-  border-radius: 0 !important;
+  gap: 8px !important;
+  padding: 8px 18px !important;
+  border-radius: 8px !important;
   box-shadow: none !important;
-  transition: color var(--transition-fast);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .nav-dropdown-toggle:hover,
 .nav-dropdown-toggle.active,
 .nav-item-dropdown:hover .nav-dropdown-toggle {
   color: #38BDF8 !important;
-  background: transparent !important;
+  background-color: rgba(255, 255, 255, 0.06) !important;
   box-shadow: none !important;
   transform: none !important;
 }
 
 .nav-dropdown-toggle .dropdown-chevron {
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
   color: #94A3B8;
   display: inline-block;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
 }
 
 .nav-dropdown-toggle:hover .dropdown-chevron,
 .nav-item-dropdown:hover .nav-dropdown-toggle .dropdown-chevron,
-.nav-dropdown-toggle[aria-expanded="true"] .dropdown-chevron {
+.nav-dropdown-toggle[aria-expanded="true"] .dropdown-chevron,
+.nav-item-dropdown.open .nav-dropdown-toggle .dropdown-chevron {
   color: #38BDF8 !important;
   transform: rotate(180deg);
 }
@@ -503,18 +524,35 @@ button, input, select, textarea {
 .nav-pill-services {
   background: transparent !important;
   box-shadow: none !important;
-  padding: 6px 0 !important;
-  border-radius: 0 !important;
-  font-weight: 500 !important;
-  color: #E2E8F0 !important;
+  padding: 8px 18px !important;
+  border-radius: 8px !important;
+  font-size: 1.12rem !important;
+  font-weight: 600 !important;
+  color: #FFFFFF !important;
 }
 
 .nav-pill-services:hover,
 .nav-item-dropdown:hover .nav-pill-services {
-  background: transparent !important;
+  background-color: rgba(255, 255, 255, 0.06) !important;
   box-shadow: none !important;
   color: #38BDF8 !important;
   transform: none !important;
+}
+
+@media (max-width: 1200px) and (min-width: 1025px) {
+  .desktop-nav {
+    margin: 0 20px;
+  }
+  .nav-menu {
+    gap: 30px;
+  }
+  .nav-dropdown-link,
+  .nav-dropdown-toggle,
+  .nav-pill-services,
+  .nav-link {
+    font-size: 1.02rem !important;
+    padding: 8px 12px !important;
+  }
 }
 
 /* Simple Dropdown for Solutions, Tech, Industries & Connect */
