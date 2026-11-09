@@ -12,7 +12,6 @@ from hero_visuals import get_hero_svg_for_page
 from page_enhancer import get_industries_for_page, get_supplemental_capabilities, INDUSTRY_ICON_MAP
 
 def get_shared_header(root_prefix, active_section=""):
-    sol_active = ' active' if active_section == 'solutions' else ''
     serv_active = ' active' if active_section == 'services' else ''
     tech_active = ' active' if active_section == 'technology' else ''
     ind_active = ' active' if active_section == 'industries' else ''
@@ -29,47 +28,7 @@ def get_shared_header(root_prefix, active_section=""):
       <!-- Desktop Navigation Menu -->
       <nav class="desktop-nav" aria-label="Main Navigation">
         <ul class="nav-menu">
-          <!-- Item 1: Solutions Dropdown -->
-          <li class="nav-item-dropdown nav-item-solutions">
-            <a href="{root_prefix}solutions.html" class="nav-dropdown-link{sol_active}" id="solutionsDropdownToggle" aria-haspopup="true" aria-expanded="false">
-              <span>Solutions</span>
-              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </a>
-            <div class="nav-simple-dropdown" aria-labelledby="solutionsDropdownToggle" role="menu">
-              <a href="{root_prefix}solutions.html" class="nav-simple-item" role="menuitem">
-                <strong>All Solutions Overview</strong>
-                <span>Comprehensive enterprise digital and automation architecture</span>
-              </a>
-              <a href="{root_prefix}solutions/digital-commerce.html" class="nav-simple-item" role="menuitem">
-                <strong>Digital Commerce Solutions</strong>
-                <span>B2B/B2C storefronts, digital ordering &amp; catalog management</span>
-              </a>
-              <a href="{root_prefix}solutions/supply-chain.html" class="nav-simple-item" role="menuitem">
-                <strong>Supply Chain &amp; Procurement</strong>
-                <span>End-to-end inventory visibility, PO workflows &amp; vendor portals</span>
-              </a>
-              <a href="{root_prefix}solutions/enterprise-business.html" class="nav-simple-item" role="menuitem">
-                <strong>Enterprise Business Solutions</strong>
-                <span>Modern CRM, HRMS, and automated cross-departmental operations</span>
-              </a>
-              <a href="{root_prefix}solutions/intelligent-monitoring.html" class="nav-simple-item" role="menuitem">
-                <strong>Intelligent Monitoring Solutions</strong>
-                <span>Real-time telemetry, IoT ingestion &amp; automated incident response</span>
-              </a>
-              <a href="{root_prefix}solutions/ai-automation.html" class="nav-simple-item" role="menuitem">
-                <strong>AI &amp; Agentic Automation</strong>
-                <span>Task-specific intelligent agents &amp; governed document understanding</span>
-              </a>
-              <a href="{root_prefix}solutions/healthcare-technology.html" class="nav-simple-item" role="menuitem">
-                <strong>Healthcare Technology Solutions</strong>
-                <span>Administrative workflow automation &amp; secure healthcare integration</span>
-              </a>
-            </div>
-          </li>
-
-          <!-- Item 2: Services Mega-Menu -->
+          <!-- Item 1: Services Mega-Menu -->
           <li class="nav-item-dropdown nav-item-services">
             <a href="{root_prefix}services.html" class="nav-dropdown-link nav-pill-services{serv_active}" id="servicesDropdownToggle" aria-haspopup="true" aria-expanded="false">
               <span>Services</span>
@@ -217,7 +176,7 @@ def get_shared_header(root_prefix, active_section=""):
 
       <!-- Desktop Action Buttons -->
       <div class="nav-actions">
-        <button class="nav-search-btn" id="siteSearchBtn" aria-label="Search Nova Arc services and solutions" title="Search">
+        <button class="nav-search-btn" id="siteSearchBtn" aria-label="Search Nova Arc services, technology, and industries" title="Search">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -236,131 +195,175 @@ def get_shared_header(root_prefix, active_section=""):
       </button>
     </div>
 
-    <!-- Mobile Drawer Menu -->
-    <div class="mobile-nav-drawer" id="mobileDrawer">
-      <ul class="mobile-nav-list">
-        <!-- Mobile Solutions Accordion -->
-        <li class="mobile-accordion-item">
-          <button class="mobile-nav-link mobile-accordion-toggle" id="mobileSolutionsToggle" aria-expanded="false" aria-controls="mobileSolutionsSubmenu">
-            <span>Solutions</span>
-            <svg class="mobile-accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-          <div class="mobile-submenu-collapse" id="mobileSolutionsSubmenu" aria-hidden="true">
-            <div class="mobile-submenu-section">
-              <a href="{root_prefix}solutions.html" class="mobile-submenu-link" style="font-weight: 700; color: #38BDF8;">All Solutions Overview</a>
-              <a href="{root_prefix}solutions/digital-commerce.html" class="mobile-submenu-link">Digital Commerce Solutions</a>
-              <a href="{root_prefix}solutions/supply-chain.html" class="mobile-submenu-link">Supply Chain &amp; Procurement</a>
-              <a href="{root_prefix}solutions/enterprise-business.html" class="mobile-submenu-link">Enterprise Business Solutions</a>
-              <a href="{root_prefix}solutions/intelligent-monitoring.html" class="mobile-submenu-link">Intelligent Monitoring Solutions</a>
-              <a href="{root_prefix}solutions/ai-automation.html" class="mobile-submenu-link">AI &amp; Agentic Automation</a>
-              <a href="{root_prefix}solutions/healthcare-technology.html" class="mobile-submenu-link">Healthcare Technology Solutions</a>
-            </div>
-          </div>
-        </li>
-
-        <!-- Mobile Services Accordion -->
-        <li class="mobile-accordion-item">
-          <button class="mobile-nav-link mobile-accordion-toggle" id="mobileServicesToggle" aria-expanded="false" aria-controls="mobileServicesSubmenu">
-            <span>Services</span>
-            <svg class="mobile-accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-          <div class="mobile-submenu-collapse" id="mobileServicesSubmenu" aria-hidden="true">
-            <div class="mobile-submenu-section">
-              <a href="{root_prefix}services.html" class="mobile-submenu-link" style="font-weight: 700; color: #38BDF8;">All Services Catalog</a>
-            </div>
-            <div class="mobile-submenu-section">
-              <h4 class="mobile-category-title"><a href="{root_prefix}services/digital-commerce.html">Digital Commerce &amp; Supply Chain</a></h4>
-              <a href="{root_prefix}services/digital-commerce-platforms.html" class="mobile-submenu-link">Digital Commerce Platforms</a>
-              <a href="{root_prefix}services/foodtech.html" class="mobile-submenu-link">FoodTech Solutions</a>
-              <a href="{root_prefix}services/supply-chain-management.html" class="mobile-submenu-link">Supply Chain Management</a>
-              <a href="{root_prefix}services/procurement.html" class="mobile-submenu-link">Procurement &amp; Vendor Management</a>
-              <a href="{root_prefix}services/logistics.html" class="mobile-submenu-link">Logistics &amp; Distribution</a>
-            </div>
-            <div class="mobile-submenu-section">
-              <h4 class="mobile-category-title"><a href="{root_prefix}services/enterprise-business.html">Enterprise Business Solutions</a></h4>
-              <a href="{root_prefix}services/crm.html" class="mobile-submenu-link">CRM</a>
-              <a href="{root_prefix}services/hrms.html" class="mobile-submenu-link">HRMS</a>
-              <a href="{root_prefix}services/business-process-automation.html" class="mobile-submenu-link">Business Process Automation</a>
-              <a href="{root_prefix}services/enterprise-applications.html" class="mobile-submenu-link">Custom Enterprise Applications</a>
-              <a href="{root_prefix}services/enterprise-integration.html" class="mobile-submenu-link">Enterprise Integration &amp; BI</a>
-            </div>
-            <div class="mobile-submenu-section">
-              <h4 class="mobile-category-title"><a href="{root_prefix}services/intelligent-monitoring.html">Intelligent Monitoring &amp; Automation</a></h4>
-              <a href="{root_prefix}services/real-time-monitoring.html" class="mobile-submenu-link">Real-Time Monitoring &amp; Dashboards</a>
-              <a href="{root_prefix}services/iot-integration.html" class="mobile-submenu-link">IoT &amp; Device Integration</a>
-              <a href="{root_prefix}services/operational-analytics.html" class="mobile-submenu-link">Operational Analytics</a>
-              <a href="{root_prefix}services/workflow-automation.html" class="mobile-submenu-link">Workflow &amp; Process Automation</a>
-              <a href="{root_prefix}services/infrastructure-monitoring.html" class="mobile-submenu-link">System &amp; Infrastructure Monitoring</a>
-            </div>
-            <div class="mobile-submenu-section">
-              <h4 class="mobile-category-title"><a href="{root_prefix}services/ai-healthcare.html">AI &amp; Healthcare Technology</a></h4>
-              <a href="{root_prefix}services/agentic-ai.html" class="mobile-submenu-link">Agentic AI &amp; Intelligent Agents</a>
-              <a href="{root_prefix}services/generative-ai.html" class="mobile-submenu-link">Generative AI &amp; Enterprise Assistants</a>
-              <a href="{root_prefix}services/document-processing.html" class="mobile-submenu-link">Intelligent Document Processing</a>
-              <a href="{root_prefix}services/ai-workflow-automation.html" class="mobile-submenu-link">AI-Powered Workflow Automation</a>
-              <a href="{root_prefix}services/healthcare-automation.html" class="mobile-submenu-link">Healthcare Technology &amp; Automation</a>
-              <a href="{root_prefix}services/healthcare-data-analytics.html" class="mobile-submenu-link">Healthcare Data Integration &amp; Analytics</a>
-            </div>
-          </div>
-        </li>
-
-        <!-- Mobile Technology Accordion -->
-        <li class="mobile-accordion-item">
-          <button class="mobile-nav-link mobile-accordion-toggle" id="mobileTechToggle" aria-expanded="false" aria-controls="mobileTechSubmenu">
-            <span>Technology</span>
-            <svg class="mobile-accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-          <div class="mobile-submenu-collapse" id="mobileTechSubmenu" aria-hidden="true">
-            <div class="mobile-submenu-section">
-              <a href="{root_prefix}technology.html" class="mobile-submenu-link" style="font-weight: 700; color: #38BDF8;">Technology Overview</a>
-              <a href="{root_prefix}technology/agentic-ai.html" class="mobile-submenu-link">Agentic AI</a>
-              <a href="{root_prefix}technology/generative-ai.html" class="mobile-submenu-link">Generative AI</a>
-              <a href="{root_prefix}technology/intelligent-automation.html" class="mobile-submenu-link">Intelligent Automation</a>
-              <a href="{root_prefix}technology/iot.html" class="mobile-submenu-link">Internet of Things (IoT)</a>
-              <a href="{root_prefix}technology/enterprise-integration.html" class="mobile-submenu-link">Enterprise Integration</a>
-              <a href="{root_prefix}technology/data-analytics.html" class="mobile-submenu-link">Data Analytics &amp; Intelligence</a>
-            </div>
-          </div>
-        </li>
-
-        <!-- Mobile Industries Accordion -->
-        <li class="mobile-accordion-item">
-          <button class="mobile-nav-link mobile-accordion-toggle" id="mobileIndustriesToggle" aria-expanded="false" aria-controls="mobileIndustriesSubmenu">
-            <span>Industries</span>
-            <svg class="mobile-accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-          <div class="mobile-submenu-collapse" id="mobileIndustriesSubmenu" aria-hidden="true">
-            <div class="mobile-submenu-section">
-              <a href="{root_prefix}industries.html" class="mobile-submenu-link" style="font-weight: 700; color: #38BDF8;">All Industries Overview</a>
-              <a href="{root_prefix}industries/foodtech.html" class="mobile-submenu-link">FoodTech &amp; Food Distribution</a>
-              <a href="{root_prefix}industries/retail-ecommerce.html" class="mobile-submenu-link">Retail &amp; Digital Commerce</a>
-              <a href="{root_prefix}industries/manufacturing.html" class="mobile-submenu-link">Manufacturing &amp; Industrial Operations</a>
-              <a href="{root_prefix}industries/logistics.html" class="mobile-submenu-link">Logistics &amp; Supply Chain</a>
-              <a href="{root_prefix}industries/enterprise.html" class="mobile-submenu-link">Enterprise &amp; Professional Services</a>
-              <a href="{root_prefix}industries/healthcare.html" class="mobile-submenu-link">Healthcare &amp; Health Technology</a>
-            </div>
-          </div>
-        </li>
-      </ul>
-      <div class="mobile-nav-bottom">
-        <button class="btn btn-secondary mobile-search-trigger" id="mobileSearchTrigger" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 8px;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    <!-- Redesigned Full-Screen Mobile Navigation Drawer (White AGS-Style) -->
+    <div class="mobile-nav-drawer" id="mobileDrawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+      <!-- Top Bar: Logo on Left, Close (X) on Right -->
+      <div class="mobile-drawer-topbar">
+        <a href="{root_prefix}index.html" class="mobile-drawer-logo" aria-label="Nova Arc Home">
+          <img src="{root_prefix}images/nova-arc-logo.png" alt="Nova Arc Logo" width="38" height="34" class="mobile-drawer-logo-img">
+          <span class="mobile-drawer-logo-title">Nova<span class="mobile-drawer-logo-accent">Arc</span></span>
+        </a>
+        <button type="button" class="mobile-drawer-close-btn" id="mobileDrawerCloseBtn" aria-label="Close navigation menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
-          Search Services
         </button>
-        <a href="tel:04046146093" class="btn btn-secondary" style="width: 100%; margin-bottom: 8px;">Call 040-46146093</a>
-        <a href="{root_prefix}contact.html" class="btn btn-primary" style="width: 100%;">Connect with us</a>
       </div>
+
+      <!-- Main Navigation Menu: EXACT 5 Options -->
+      <nav class="mobile-drawer-nav" aria-label="Mobile Menu">
+        <ul class="mobile-drawer-list">
+
+          <!-- 1. Services (Accordion) -->
+          <li class="mobile-nav-item">
+            <button type="button" class="mobile-nav-btn mobile-accordion-toggle" id="mobileServicesToggle" aria-expanded="false" aria-controls="mobileServicesSubmenu">
+              <span class="mobile-nav-label">Services</span>
+              <svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="mobile-submenu-collapse" id="mobileServicesSubmenu" aria-hidden="true">
+              <div class="mobile-submenu-inner">
+                <div class="mobile-subcat-group">
+                  <a href="{root_prefix}services.html" class="mobile-subcat-main-link">
+                    <span>All Services Catalog</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </a>
+                </div>
+
+                <div class="mobile-subcat-group">
+                  <a href="{root_prefix}services/digital-commerce.html" class="mobile-subcat-title">Digital Commerce &amp; Supply Chain</a>
+                  <ul class="mobile-sublink-list">
+                    <li><a href="{root_prefix}services/digital-commerce-platforms.html" class="mobile-sublink">Digital Commerce Platforms</a></li>
+                    <li><a href="{root_prefix}services/foodtech.html" class="mobile-sublink">FoodTech Solutions</a></li>
+                    <li><a href="{root_prefix}services/supply-chain-management.html" class="mobile-sublink">Supply Chain Management</a></li>
+                    <li><a href="{root_prefix}services/procurement.html" class="mobile-sublink">Procurement &amp; Vendor Management</a></li>
+                    <li><a href="{root_prefix}services/logistics.html" class="mobile-sublink">Logistics &amp; Distribution</a></li>
+                  </ul>
+                </div>
+
+                <div class="mobile-subcat-group">
+                  <a href="{root_prefix}services/enterprise-business.html" class="mobile-subcat-title">Enterprise Business Solutions</a>
+                  <ul class="mobile-sublink-list">
+                    <li><a href="{root_prefix}services/crm.html" class="mobile-sublink">Customer Relationship Management (CRM)</a></li>
+                    <li><a href="{root_prefix}services/hrms.html" class="mobile-sublink">Human Resource Management (HRMS)</a></li>
+                    <li><a href="{root_prefix}services/business-process-automation.html" class="mobile-sublink">Business Process Automation</a></li>
+                    <li><a href="{root_prefix}services/enterprise-applications.html" class="mobile-sublink">Custom Enterprise Applications</a></li>
+                    <li><a href="{root_prefix}services/enterprise-integration.html" class="mobile-sublink">Enterprise Integration &amp; Middleware</a></li>
+                  </ul>
+                </div>
+
+                <div class="mobile-subcat-group">
+                  <a href="{root_prefix}services/intelligent-monitoring.html" class="mobile-subcat-title">Intelligent Monitoring &amp; Automation</a>
+                  <ul class="mobile-sublink-list">
+                    <li><a href="{root_prefix}services/real-time-monitoring.html" class="mobile-sublink">Real-Time Monitoring &amp; Dashboards</a></li>
+                    <li><a href="{root_prefix}services/iot-integration.html" class="mobile-sublink">IoT &amp; Device Integration</a></li>
+                    <li><a href="{root_prefix}services/operational-analytics.html" class="mobile-sublink">Operational Analytics</a></li>
+                    <li><a href="{root_prefix}services/workflow-automation.html" class="mobile-sublink">Workflow &amp; Process Automation</a></li>
+                    <li><a href="{root_prefix}services/infrastructure-monitoring.html" class="mobile-sublink">System &amp; Infrastructure Monitoring</a></li>
+                  </ul>
+                </div>
+
+                <div class="mobile-subcat-group">
+                  <a href="{root_prefix}services/ai-healthcare.html" class="mobile-subcat-title">AI &amp; Healthcare Technology</a>
+                  <ul class="mobile-sublink-list">
+                    <li><a href="{root_prefix}services/agentic-ai.html" class="mobile-sublink">Agentic AI &amp; Intelligent Agents</a></li>
+                    <li><a href="{root_prefix}services/generative-ai.html" class="mobile-sublink">Generative AI &amp; Enterprise Assistants</a></li>
+                    <li><a href="{root_prefix}services/document-processing.html" class="mobile-sublink">Intelligent Document Processing</a></li>
+                    <li><a href="{root_prefix}services/ai-workflow-automation.html" class="mobile-sublink">AI-Powered Workflow Automation</a></li>
+                    <li><a href="{root_prefix}services/healthcare-automation.html" class="mobile-sublink">Healthcare Technology &amp; Automation</a></li>
+                    <li><a href="{root_prefix}services/healthcare-data-analytics.html" class="mobile-sublink">Healthcare Data Integration &amp; Analytics</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 2. Technology (Accordion) -->
+          <li class="mobile-nav-item">
+            <button type="button" class="mobile-nav-btn mobile-accordion-toggle" id="mobileTechToggle" aria-expanded="false" aria-controls="mobileTechSubmenu">
+              <span class="mobile-nav-label">Technology</span>
+              <svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="mobile-submenu-collapse" id="mobileTechSubmenu" aria-hidden="true">
+              <div class="mobile-submenu-inner">
+                <div class="mobile-subcat-group">
+                  <a href="{root_prefix}technology.html" class="mobile-subcat-main-link">
+                    <span>Technology Platform Overview</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </a>
+                </div>
+                <div class="mobile-subcat-group">
+                  <ul class="mobile-sublink-list">
+                    <li><a href="{root_prefix}technology/agentic-ai.html" class="mobile-sublink">Agentic AI</a></li>
+                    <li><a href="{root_prefix}technology/generative-ai.html" class="mobile-sublink">Generative AI</a></li>
+                    <li><a href="{root_prefix}technology/intelligent-automation.html" class="mobile-sublink">Intelligent Automation</a></li>
+                    <li><a href="{root_prefix}technology/iot.html" class="mobile-sublink">Internet of Things (IoT)</a></li>
+                    <li><a href="{root_prefix}technology/enterprise-integration.html" class="mobile-sublink">Enterprise Integration</a></li>
+                    <li><a href="{root_prefix}technology/data-analytics.html" class="mobile-sublink">Data Analytics &amp; Intelligence</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 3. Industries (Accordion) -->
+          <li class="mobile-nav-item">
+            <button type="button" class="mobile-nav-btn mobile-accordion-toggle" id="mobileIndustriesToggle" aria-expanded="false" aria-controls="mobileIndustriesSubmenu">
+              <span class="mobile-nav-label">Industries</span>
+              <svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="mobile-submenu-collapse" id="mobileIndustriesSubmenu" aria-hidden="true">
+              <div class="mobile-submenu-inner">
+                <div class="mobile-subcat-group">
+                  <a href="{root_prefix}industries.html" class="mobile-subcat-main-link">
+                    <span>All Industries Overview</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </a>
+                </div>
+                <div class="mobile-subcat-group">
+                  <ul class="mobile-sublink-list">
+                    <li><a href="{root_prefix}industries/foodtech.html" class="mobile-sublink">FoodTech &amp; Food Distribution</a></li>
+                    <li><a href="{root_prefix}industries/retail-ecommerce.html" class="mobile-sublink">Retail &amp; Digital Commerce</a></li>
+                    <li><a href="{root_prefix}industries/manufacturing.html" class="mobile-sublink">Manufacturing &amp; Industrial Operations</a></li>
+                    <li><a href="{root_prefix}industries/logistics.html" class="mobile-sublink">Logistics &amp; Supply Chain</a></li>
+                    <li><a href="{root_prefix}industries/enterprise.html" class="mobile-sublink">Enterprise &amp; Professional Services</a></li>
+                    <li><a href="{root_prefix}industries/healthcare.html" class="mobile-sublink">Healthcare &amp; Health Technology</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 4. Search -->
+          <li class="mobile-nav-item">
+            <button type="button" class="mobile-nav-btn" id="mobileMenuSearchBtn">
+              <span class="mobile-nav-label">Search</span>
+              <svg class="mobile-nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </li>
+
+          <!-- 5. Contact Us -->
+          <li class="mobile-nav-item">
+            <a href="{root_prefix}contact.html" class="mobile-nav-btn mobile-nav-link-direct">
+              <span class="mobile-nav-label">Contact Us</span>
+              <svg class="mobile-nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
     </div>
   </header>
 """
@@ -393,20 +396,7 @@ def get_shared_footer(root_prefix):
           </ul>
         </div>
 
-        <!-- Col 3: Solutions -->
-        <div>
-          <h4 class="footer-col-title">Solutions</h4>
-          <ul class="footer-links-list">
-            <li><a href="{root_prefix}solutions/digital-commerce.html" class="footer-link">Digital Commerce Solutions</a></li>
-            <li><a href="{root_prefix}solutions/supply-chain.html" class="footer-link">Supply Chain &amp; Procurement</a></li>
-            <li><a href="{root_prefix}solutions/enterprise-business.html" class="footer-link">Enterprise Business Solutions</a></li>
-            <li><a href="{root_prefix}solutions/intelligent-monitoring.html" class="footer-link">Intelligent Monitoring</a></li>
-            <li><a href="{root_prefix}solutions/ai-automation.html" class="footer-link">AI &amp; Agentic Automation</a></li>
-            <li><a href="{root_prefix}solutions/healthcare-technology.html" class="footer-link">Healthcare Technology</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 4: Company & Industries -->
+        <!-- Col 3: Company & Technology -->
         <div>
           <h4 class="footer-col-title">Company</h4>
           <ul class="footer-links-list">
@@ -419,7 +409,7 @@ def get_shared_footer(root_prefix):
           </ul>
         </div>
 
-        <!-- Col 5: Contact Info -->
+        <!-- Col 4: Contact Info -->
         <div>
           <h4 class="footer-col-title">Headquarters</h4>
           <div class="footer-contact-info">
@@ -443,15 +433,9 @@ def get_shared_footer(root_prefix):
         </div>
       </div>
 
-      <!-- Footer Bottom Legal & Copyright -->
+      <!-- Footer Bottom Copyright -->
       <div class="footer-bottom">
         <p>&copy; 2026 Nova Arc Technologies, Inc. All rights reserved.</p>
-        <div class="footer-legal-links">
-          <a href="{root_prefix}contact.html#privacy">Privacy Policy</a>
-          <a href="{root_prefix}contact.html#terms">Terms of Service</a>
-          <a href="{root_prefix}contact.html#security">Security &amp; Trust</a>
-          <a href="{root_prefix}contact.html#cookies">Cookie Preferences</a>
-        </div>
       </div>
     </div>
   </footer>
@@ -520,9 +504,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
     two-colour theme (Dark Navy Blue + White / Light Background) with strict alternation.
     """
     active_sec = "services"
-    if "solutions/" in rel_path:
-        active_sec = "solutions"
-    elif "technology/" in rel_path:
+    if "technology/" in rel_path:
         active_sec = "technology"
     elif "industries/" in rel_path:
         active_sec = "industries"

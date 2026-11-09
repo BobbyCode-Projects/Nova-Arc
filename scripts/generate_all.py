@@ -24,7 +24,6 @@ sys.path.insert(0, SCRIPT_DIR)
 
 from build_pages import generate_subpage, get_shared_header, get_shared_footer
 from ecg_component import get_ecg_waveform_html
-from data_solutions import SOLUTIONS_PAGES
 from data_services import SERVICES_PAGES
 from data_services_domain2 import SERVICES_DOMAIN_2
 from data_services_domain3 import SERVICES_DOMAIN_3
@@ -77,9 +76,8 @@ def replace_header_and_footer(html_content, root_prefix, active_section=""):
     return html_content
 
 def generate_all_subpages():
-    print("\n--- Generating 47 Subpages ---")
+    print("\n--- Generating 41 Subpages ---")
     all_subpage_defs = (
-        SOLUTIONS_PAGES +
         SERVICES_PAGES +
         SERVICES_DOMAIN_2 +
         SERVICES_DOMAIN_3 +
@@ -124,17 +122,7 @@ def update_root_pages():
     # 1. index.html - Strictly excluded per Project Requirements
     print("  [EXCLUDED] index.html (Homepage strictly preserved and untouched)")
 
-    # 2. solutions.html
-    solutions_path = os.path.join(REPO_ROOT, "solutions.html")
-    if os.path.exists(solutions_path):
-        with open(solutions_path, "r", encoding="utf-8") as f:
-            sol_html = f.read()
-        sol_html = replace_header_and_footer(sol_html, "", "solutions")
-        with open(solutions_path, "w", encoding="utf-8") as f:
-            f.write(sol_html)
-        print("  [OK] Updated solutions.html header & footer")
-
-    # 3. services.html
+    # 2. services.html
     services_path = os.path.join(REPO_ROOT, "services.html")
     if os.path.exists(services_path):
         with open(services_path, "r", encoding="utf-8") as f:
@@ -197,7 +185,6 @@ def update_root_pages():
 def generate_directory_indexes():
     print("\n--- Generating Directory Index Aliases ---")
     mappings = [
-        ("solutions/index.html", "solutions.html", "solutions"),
         ("services/index.html", "services.html", "services"),
         ("technology/index.html", "technology.html", "technology"),
         ("industries/index.html", "industries.html", "industries"),
@@ -651,7 +638,7 @@ def generate_404_page():
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page Not Found (404) | Nova Arc</title>
-  <meta name="description" content="The page you requested could not be found. Explore Nova Arc's solutions, services, technology, and industries.">
+  <meta name="description" content="The page you requested could not be found. Explore Nova Arc's services, technology, and industries.">
   <meta name="robots" content="noindex, follow">
 
   <!-- Favicon -->
@@ -704,12 +691,7 @@ def generate_404_page():
         <h2 style="font-size: 2rem; font-weight: 800; color: #0F172A; margin: 8px 0 10px;">Popular Areas of Exploration</h2>
         <p style="color: #475569; font-size: 1.05rem;">Quick links to key enterprise platforms and service domains.</p>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-lg);">
-        <a href="solutions.html" class="card" style="padding: var(--space-lg); text-decoration: none; display: block; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); box-shadow: 0 4px 16px -2px rgba(11,37,69,0.05); transition: all 0.2s ease;">
-          <span style="font-size: 0.72rem; color: #0284C7; background: #E0F2FE; font-weight: 700; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px;">Overview</span>
-          <h4 style="font-size: 1.1rem; color: #0F172A; margin: 6px 0 4px; font-weight: 700;">Solutions Suite &rarr;</h4>
-          <p style="color: #475569; font-size: 0.85rem; margin: 0; line-height: 1.45;">Comprehensive digital commerce, supply chain, monitoring, and AI platforms.</p>
-        </a>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-lg);">
         <a href="services.html" class="card" style="padding: var(--space-lg); text-decoration: none; display: block; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); box-shadow: 0 4px 16px -2px rgba(11,37,69,0.05); transition: all 0.2s ease;">
           <span style="font-size: 0.72rem; color: #0284C7; background: #E0F2FE; font-weight: 700; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px;">Catalog</span>
           <h4 style="font-size: 1.1rem; color: #0F172A; margin: 6px 0 4px; font-weight: 700;">Services Catalog &rarr;</h4>
@@ -723,6 +705,9 @@ def generate_404_page():
         <a href="industries.html" class="card" style="padding: var(--space-lg); text-decoration: none; display: block; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); box-shadow: 0 4px 16px -2px rgba(11,37,69,0.05); transition: all 0.2s ease;">
           <span style="font-size: 0.72rem; color: #0284C7; background: #E0F2FE; font-weight: 700; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px;">Sectors</span>
           <h4 style="font-size: 1.1rem; color: #0F172A; margin: 6px 0 4px; font-weight: 700;">Industries We Serve &rarr;</h4>
+          <p style="color: #475569; font-size: 0.85rem; margin: 0; line-height: 1.45;">FoodTech, retail commerce, manufacturing, logistics, healthcare, and enterprise.</p>
+        </a>
+      </div>
           <p style="color: #475569; font-size: 0.85rem; margin: 0; line-height: 1.45;">FoodTech, retail commerce, manufacturing, logistics, healthcare, and enterprise.</p>
         </a>
       </div>
@@ -745,7 +730,6 @@ def generate_sitemap(all_subpages):
         ("https://novaarctech.in/", "1.0", "weekly"),
         ("https://novaarctech.in/index.html", "1.0", "weekly"),
         ("https://novaarctech.in/about.html", "0.85", "monthly"),
-        ("https://novaarctech.in/solutions.html", "0.9", "weekly"),
         ("https://novaarctech.in/services.html", "0.9", "weekly"),
         ("https://novaarctech.in/technology.html", "0.9", "weekly"),
         ("https://novaarctech.in/industries.html", "0.9", "weekly"),
@@ -795,13 +779,6 @@ def update_search_index(all_subpages):
       desc: 'Engineering intelligent solutions for a connected business world. Digital commerce, enterprise systems, and AI automation.',
       url: rootPrefix + 'index.html',
       tags: ['home', 'overview', 'nova arc', 'engineering', 'solutions']
-    }""")
-    entries.append("""    {
-      title: 'All Solutions Overview',
-      category: 'Solutions',
-      desc: 'Unified architecture combining commerce, enterprise systems, intelligent monitoring, and AI automation.',
-      url: rootPrefix + 'solutions.html',
-      tags: ['solutions', 'overview', 'enterprise solutions', 'digital commerce', 'supply chain', 'monitoring']
     }""")
     entries.append("""    {
       title: 'Full Services Catalog',
@@ -870,7 +847,6 @@ def update_search_index(all_subpages):
     # Replace in js/main.js
     pattern = re.compile(r'  const (?:isServicesDir|isSubDir) =.*?;.*?const searchIndex = \[.*?\];', re.DOTALL)
     replacement = f"""  const isSubDir = window.location.pathname.includes('/services/') ||
-                   window.location.pathname.includes('/solutions/') ||
                    window.location.pathname.includes('/technology/') ||
                    window.location.pathname.includes('/industries/') ||
                    window.location.pathname.includes('/connect/');

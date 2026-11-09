@@ -822,7 +822,7 @@ TECH_IND_CONNECT_PAGES = [
         ],
         "related_links": [
             {"title": "FoodTech Solutions Service", "link": "services/foodtech.html", "tag": "Core Service", "desc": "Explore our dedicated food ordering, inventory, and traceability services."},
-            {"title": "Supply Chain & Procurement", "link": "solutions/supply-chain.html", "tag": "Related Solution", "desc": "End-to-end inventory visibility and vendor procurement architectures."},
+            {"title": "Supply Chain Management", "link": "services/supply-chain-management.html", "tag": "Related Service", "desc": "End-to-end inventory visibility and vendor procurement architectures."},
             {"title": "Intelligent Monitoring & IoT", "link": "services/intelligent-monitoring.html", "tag": "Related Domain", "desc": "Continuous environmental and temperature telemetry systems."}
         ]
     },
@@ -939,7 +939,7 @@ TECH_IND_CONNECT_PAGES = [
         ],
         "related_links": [
             {"title": "Digital Commerce Platforms", "link": "services/digital-commerce-platforms.html", "tag": "Core Service", "desc": "B2B and B2C custom storefront engineering and catalog management."},
-            {"title": "Digital Commerce Solutions", "link": "solutions/digital-commerce.html", "tag": "Parent Solution", "desc": "Comprehensive digital commerce and fulfillment architectures."},
+            {"title": "Digital Commerce Platforms", "link": "services/digital-commerce-platforms.html", "tag": "Related Service", "desc": "Comprehensive digital commerce and fulfillment architectures."},
             {"title": "Logistics & Distribution", "link": "services/logistics.html", "tag": "Related Service", "desc": "Carrier shipping integrations, route planning, and delivery tracking."}
         ]
     },
@@ -1057,7 +1057,7 @@ TECH_IND_CONNECT_PAGES = [
         "related_links": [
             {"title": "IoT & Device Integration", "link": "services/iot-integration.html", "tag": "Core Technology", "desc": "Industrial sensor connectivity, MQTT brokers, and edge telemetry ingestion."},
             {"title": "Real-Time Monitoring & Dashboards", "link": "services/real-time-monitoring.html", "tag": "Core Service", "desc": "Sub-second operational control centers and equipment health visualization."},
-            {"title": "Intelligent Monitoring Solutions", "link": "solutions/intelligent-monitoring.html", "tag": "Parent Solution", "desc": "Explore complete operational telemetry and incident automation architectures."}
+            {"title": "Intelligent Monitoring & Automation", "link": "services/intelligent-monitoring.html", "tag": "Related Service", "desc": "Explore complete operational telemetry and incident automation architectures."}
         ]
     },
     {
@@ -1174,7 +1174,7 @@ TECH_IND_CONNECT_PAGES = [
         "related_links": [
             {"title": "Logistics & Distribution Service", "link": "services/logistics.html", "tag": "Core Service", "desc": "Explore our dedicated transportation management and shipment tracking services."},
             {"title": "Supply Chain Management", "link": "services/supply-chain-management.html", "tag": "Core Service", "desc": "Multi-warehouse inventory optimization and automated replenishment."},
-            {"title": "Supply Chain & Procurement Solutions", "link": "solutions/supply-chain.html", "tag": "Parent Solution", "desc": "Comprehensive supply chain visibility and procurement workflows."}
+            {"title": "Logistics & Freight Technology", "link": "services/logistics.html", "tag": "Related Service", "desc": "Comprehensive fleet tracking, freight optimization, and distribution workflows."}
         ]
     },
     {
@@ -1407,7 +1407,7 @@ TECH_IND_CONNECT_PAGES = [
         ],
         "related_links": [
             {"title": "Healthcare Technology & Automation", "link": "services/healthcare-automation.html", "tag": "Core Service", "desc": "Explore our dedicated healthcare administrative intake and scheduling automation services."},
-            {"title": "Healthcare Technology Solutions", "link": "solutions/healthcare-technology.html", "tag": "Parent Solution", "desc": "Comprehensive healthcare administrative workflows and EHR data connectivity."},
+            {"title": "Enterprise Health Operations", "link": "services/ai-healthcare.html", "tag": "Related Service", "desc": "Comprehensive healthcare administrative workflows and EHR data connectivity."},
             {"title": "AI & Healthcare Technology", "link": "services/ai-healthcare.html", "tag": "Core Service", "desc": "Discover our complete AI and healthcare administration technology service domain."}
         ]
     },
@@ -1636,7 +1636,7 @@ TECH_IND_CONNECT_PAGES = [
             }
         ],
         "related_links": [
-            {"title": "All Solutions Overview", "link": "solutions.html", "tag": "Solutions Suite", "desc": "Explore our complete digital solutions across commerce, enterprise, IoT, and AI."},
+            {"title": "Technology Architecture Platform", "link": "technology.html", "tag": "Technology Architecture", "desc": "Explore our complete technology platform across cloud, IoT, integration, and AI."},
             {"title": "Services Catalog", "link": "services.html", "tag": "Engineering Services", "desc": "Detailed breakdown of our four core technology service domains."},
             {"title": "Main Contact Portal", "link": "contact.html", "tag": "Contact Center", "desc": "Access our central contact form and departmental email directory."}
         ]

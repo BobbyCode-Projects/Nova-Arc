@@ -220,43 +220,7 @@ function initMobileNavigation() {
     document.body.appendChild(backdrop);
   }
 
-  // Ensure drawer has a clean top header with brand and dedicated close button
-  let drawerHeader = drawer.querySelector('.mobile-drawer-header');
-  if (!drawerHeader) {
-    drawerHeader = document.createElement('div');
-    drawerHeader.className = 'mobile-drawer-header';
-    drawerHeader.innerHTML = `
-      <div class="mobile-drawer-brand">
-        <span class="mobile-drawer-logo-text">Nova<strong>Arc</strong></span>
-      </div>
-      <button type="button" class="mobile-drawer-close" id="mobileDrawerCloseBtn" aria-label="Close navigation menu">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-    `;
-    drawer.insertBefore(drawerHeader, drawer.firstChild);
-  }
-
-  const closeBtn = document.getElementById('mobileDrawerCloseBtn');
-
-  // Add "Explore All Services" link inside the services accordion if not already present
-  const mobileServicesSubmenu = drawer.querySelector('#mobileServicesSubmenu');
-  if (mobileServicesSubmenu && !mobileServicesSubmenu.querySelector('.mobile-all-services-link')) {
-    const isSubdir = window.location.pathname.includes('/services/') || window.location.pathname.includes('/solutions/');
-    const servicesPath = isSubdir ? '../services.html' : 'services.html';
-    const overviewWrap = document.createElement('div');
-    overviewWrap.className = 'mobile-submenu-overview-wrap';
-    overviewWrap.innerHTML = `
-      <a href="${servicesPath}" class="mobile-all-services-link">
-        <span>Explore All Services</span>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-      </a>
-    `;
-    mobileServicesSubmenu.insertBefore(overviewWrap, mobileServicesSubmenu.firstChild);
-  }
-
+  // Open & Close handlers
   const openMenu = () => {
     drawer.classList.add('active');
     backdrop.classList.add('active');
@@ -315,8 +279,27 @@ function initMobileNavigation() {
   };
 
   bindAction(toggleBtn, toggleMenu);
+
+  // Close button inside top bar of drawer
+  const closeBtn = document.getElementById('mobileDrawerCloseBtn');
   if (closeBtn) bindAction(closeBtn, closeMenu);
   bindAction(backdrop, closeMenu);
+
+  // Wire mobile menu search action to the site search modal
+  const mobileMenuSearchBtn = document.getElementById('mobileMenuSearchBtn');
+  if (mobileMenuSearchBtn) {
+    bindAction(mobileMenuSearchBtn, () => {
+      closeMenu();
+      setTimeout(() => {
+        const siteSearchBtn = document.getElementById('siteSearchBtn');
+        if (siteSearchBtn) {
+          siteSearchBtn.click();
+        } else if (typeof openSearchModal === 'function') {
+          openSearchModal();
+        }
+      }, 180);
+    });
+  }
 
   // Close on Escape key
   document.addEventListener('keydown', (e) => {
@@ -345,7 +328,7 @@ function initMobileNavigation() {
   // For page navigation links, DO NOT close the drawer synchronously or disable pointer-events,
   // which cancels the browser's navigation request on iOS Safari.
   const navLinks = drawer.querySelectorAll(
-    'a.mobile-nav-link, .mobile-submenu-link, .mobile-submenu-sublink, .mobile-category-title a, .mobile-nav-bottom a, .mobile-all-services-link, .mobile-overview-btn'
+    'a.mobile-nav-btn, .mobile-sublink, .mobile-subcat-main-link, .mobile-subcat-title, a.mobile-nav-link, .mobile-submenu-link, .mobile-submenu-sublink, .mobile-category-title a, .mobile-nav-bottom a, .mobile-all-services-link, .mobile-overview-btn'
   );
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -362,7 +345,7 @@ function initMobileNavigation() {
     });
   });
 
-  // Mobile search trigger inside drawer
+  // Mobile search trigger inside drawer (if present)
   const mobileSearchTrigger = drawer.querySelector('#mobileSearchTrigger');
   if (mobileSearchTrigger) {
     mobileSearchTrigger.addEventListener('click', () => {
@@ -1351,7 +1334,7 @@ function initSiteSearchModal() {
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
-          <input type="text" class="site-search-input" id="siteSearchInput" placeholder="Search services, solutions, IoT, AI, commerce..." autocomplete="off">
+          <input type="text" class="site-search-input" id="siteSearchInput" placeholder="Search services, technology, IoT, AI, commerce..." autocomplete="off">
         </div>
         <div class="site-search-body">
           <div id="siteSearchDefaultView">
@@ -1375,7 +1358,6 @@ function initSiteSearchModal() {
   }
 
   const isSubDir = window.location.pathname.includes('/services/') ||
-                   window.location.pathname.includes('/solutions/') ||
                    window.location.pathname.includes('/technology/') ||
                    window.location.pathname.includes('/industries/') ||
                    window.location.pathname.includes('/connect/');
@@ -1388,13 +1370,6 @@ function initSiteSearchModal() {
       desc: 'Engineering intelligent solutions for a connected business world. Digital commerce, enterprise systems, and AI automation.',
       url: rootPrefix + 'index.html',
       tags: ['home', 'overview', 'nova arc', 'engineering', 'solutions']
-    },
-    {
-      title: 'All Solutions Overview',
-      category: 'Solutions',
-      desc: 'Unified architecture combining commerce, enterprise systems, intelligent monitoring, and AI automation.',
-      url: rootPrefix + 'solutions.html',
-      tags: ['solutions', 'overview', 'enterprise solutions', 'digital commerce', 'supply chain', 'monitoring']
     },
     {
       title: 'Full Services Catalog',
@@ -1430,48 +1405,6 @@ function initSiteSearchModal() {
       desc: 'Get in touch with Nova Arc. Hyderabad headquarters, direct departmental emails, and phone contact.',
       url: rootPrefix + 'contact.html',
       tags: ['contact', 'connect', 'phone', 'email', 'hyderabad', 'support', 'sales']
-    },
-    {
-      title: 'Digital Commerce Solutions',
-      category: 'Connected Digital Solutions',
-      desc: 'End-to-end B2B and B2C commerce architectures engineered for rapid digital ordering, customer engagement, dynamic pricing, and ...',
-      url: rootPrefix + 'solutions/digital-commerce.html',
-      tags: ['digital', 'commerce', 'solutions', 'platforms', 'ordering', 'customer', 'portals']
-    },
-    {
-      title: 'Supply Chain & Procurement Solutions',
-      category: 'Connected Digital Solutions',
-      desc: 'End-to-end supply chain visibility, intelligent warehouse coordination, automated purchase requisitions, and vendor collaborati...',
-      url: rootPrefix + 'solutions/supply-chain.html',
-      tags: ['supply', 'chain', 'procurement', 'solutions', 'end', 'visibility', 'digital', 'vendor', 'portals']
-    },
-    {
-      title: 'Enterprise Business Solutions',
-      category: 'Connected Digital Solutions',
-      desc: 'Modernize core operations with synchronized CRM, HRMS, custom business applications, and automated cross-departmental workflows.',
-      url: rootPrefix + 'solutions/enterprise-business.html',
-      tags: ['enterprise', 'business', 'solutions', 'customer', 'relationship', 'management', 'crm', 'human', 'resource', 'hrms']
-    },
-    {
-      title: 'Intelligent Monitoring Solutions',
-      category: 'Connected Digital Solutions',
-      desc: 'Real-time IoT sensor telemetry, low-latency operational dashboards, threshold alerting, and automated incident escalation workf...',
-      url: rootPrefix + 'solutions/intelligent-monitoring.html',
-      tags: ['intelligent', 'monitoring', 'solutions', 'real', 'time', 'operational', 'dashboards', 'iot', 'device', 'sensor']
-    },
-    {
-      title: 'AI & Agentic Automation Solutions',
-      category: 'Connected Digital Solutions',
-      desc: 'Apply agentic AI workflows, generative enterprise assistants, intelligent document extraction, and governed business automation.',
-      url: rootPrefix + 'solutions/ai-automation.html',
-      tags: ['agentic', 'automation', 'solutions', 'multi', 'step', 'orchestration', 'generative', 'enterprise', 'assistants']
-    },
-    {
-      title: 'Healthcare Technology Solutions',
-      category: 'Connected Digital Solutions',
-      desc: 'Administrative workflow automation, digital patient intake, scheduling coordination, healthcare document processing, and secure...',
-      url: rootPrefix + 'solutions/healthcare-technology.html',
-      tags: ['healthcare', 'technology', 'solutions', 'digital', 'patient', 'intake', 'registration', 'scheduling', 'operational', 'coordination']
     },
     {
       title: 'Digital Commerce & Supply Chain',
