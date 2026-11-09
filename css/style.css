@@ -5858,9 +5858,23 @@ body.mobile-nav-open {
 }
 
 @media (max-width: 768px) {
+  /* Clean Background on Mobile (no ECG lines cutting through portrait) */
+  .orchestration-wave-container {
+    opacity: 0.12;
+  }
+  .ecg-track-upper,
+  .ecg-track-mid {
+    display: none;
+  }
+  .ecg-track-lower {
+    top: auto;
+    bottom: 24px;
+    opacity: 0.22;
+  }
+
   .hero-orchestrated {
     min-height: auto;
-    padding: calc(70px + var(--space-sm)) 0 0;
+    padding: calc(70px + 14px) 0 40px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -5877,52 +5891,59 @@ body.mobile-nav-open {
     gap: 0;
   }
 
-  /* Executive Woman Portrait First on Mobile */
+  /* Executive Portrait Showcase Card First on Mobile */
   .hero-orchestrated-visual {
     order: 1;
     width: 100%;
     min-height: auto;
-    height: clamp(260px, 62vw, 320px);
-    margin-top: 4px;
-    margin-bottom: 12px;
+    height: auto;
+    margin: 0 0 18px 0;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    overflow: hidden;
+    align-items: center;
   }
 
   .hero-portrait-stage {
     position: relative;
-    max-width: 320px;
-    height: 100%;
+    width: 100%;
+    max-width: 350px;
+    height: clamp(215px, 58vw, 245px);
+    border-radius: 22px;
+    background: linear-gradient(180deg, rgba(16, 36, 68, 0.72) 0%, rgba(8, 20, 38, 0.95) 100%);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.55), 0 0 24px rgba(31, 111, 235, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+    overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
   }
 
   .hero-portrait-ambient-glow {
     position: absolute;
-    bottom: 8%;
+    top: 36%;
     left: 50%;
-    transform: translateX(-50%);
-    width: 260px;
-    height: 260px;
+    transform: translate(-50%, -50%);
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
-    background: radial-gradient(ellipse at center, rgba(31, 111, 235, 0.28) 0%, rgba(56, 189, 248, 0.10) 50%, transparent 72%);
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.32) 0%, rgba(31, 111, 235, 0.18) 50%, transparent 72%);
     pointer-events: none;
     z-index: 1;
   }
 
+  .hero-portrait-picture,
   .hero-full-portrait-img {
     position: relative;
     z-index: 2;
+    width: 100%;
     height: 100%;
     max-height: 100%;
-    width: auto;
-    object-fit: contain;
-    object-position: center bottom;
-    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    object-fit: cover;
+    object-position: center 25%;
+    display: block;
+    filter: none;
+    mask-image: none;
+    -webkit-mask-image: none;
   }
 
   /* Data & Content Second on Mobile */
@@ -5935,23 +5956,32 @@ body.mobile-nav-open {
 
   .hero-intro-badge {
     margin-bottom: 12px;
-    padding: 5px 12px;
+    padding: 6px 14px;
   }
 
   .hero-badge-label {
-    font-size: 0.72rem;
+    font-size: 0.73rem;
   }
 
   .hero-orchestrated-title {
-    font-size: clamp(1.75rem, 6.2vw, 2.15rem);
-    line-height: 1.18;
+    font-size: clamp(1.8rem, 6.2vw, 2.2rem);
+    line-height: 1.16;
     letter-spacing: -0.025em;
     margin-bottom: 12px;
   }
 
+  .hero-title-gradient {
+    color: #38BDF8;
+    background: linear-gradient(135deg, #FFFFFF 10%, #7DD3FC 55%, #38BDF8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    display: inline-block;
+  }
+
   .hero-orchestrated-desc {
     font-size: 0.96rem;
-    line-height: 1.5;
+    line-height: 1.52;
     margin-bottom: 20px;
     max-width: 100%;
   }
