@@ -5874,7 +5874,7 @@ body.mobile-nav-open {
 
   .hero-orchestrated {
     min-height: auto;
-    padding: calc(70px + 14px) 0 40px;
+    padding: calc(68px + 6px) 0 36px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -5891,66 +5891,68 @@ body.mobile-nav-open {
     gap: 0;
   }
 
-  /* Executive Portrait Showcase Card First on Mobile */
+  /* Executive Portrait First on Mobile (Organic, Seamless, Unboxed) */
   .hero-orchestrated-visual {
     order: 1;
     width: 100%;
     min-height: auto;
-    height: auto;
-    margin: 0 0 18px 0;
+    height: clamp(240px, 58vw, 285px);
+    margin: 0 0 12px 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    position: relative;
+    overflow: visible;
   }
 
   .hero-portrait-stage {
     position: relative;
     width: 100%;
-    max-width: 350px;
-    height: clamp(215px, 58vw, 245px);
-    border-radius: 22px;
-    background: linear-gradient(180deg, rgba(16, 36, 68, 0.72) 0%, rgba(8, 20, 38, 0.95) 100%);
-    border: 1px solid rgba(56, 189, 248, 0.25);
-    box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.55), 0 0 24px rgba(31, 111, 235, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.14);
-    overflow: hidden;
+    max-width: 320px;
+    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    pointer-events: none;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
   }
 
   .hero-portrait-ambient-glow {
     position: absolute;
-    top: 36%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 220px;
-    height: 220px;
+    width: 260px;
+    height: 260px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(56, 189, 248, 0.32) 0%, rgba(31, 111, 235, 0.18) 50%, transparent 72%);
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.24) 0%, rgba(31, 111, 235, 0.14) 48%, transparent 72%);
     pointer-events: none;
     z-index: 1;
   }
 
-  .hero-portrait-picture,
   .hero-full-portrait-img {
     position: relative;
     z-index: 2;
-    width: 100%;
+    width: auto;
     height: 100%;
     max-height: 100%;
-    object-fit: cover;
-    object-position: center 25%;
+    object-fit: contain;
+    object-position: center bottom;
     display: block;
-    filter: none;
-    mask-image: none;
-    -webkit-mask-image: none;
+    filter: drop-shadow(0 14px 32px rgba(5, 19, 36, 0.65));
+    mask-image: linear-gradient(to bottom, black 74%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 74%, transparent 100%);
   }
 
   /* Data & Content Second on Mobile */
   .hero-orchestrated-content {
     order: 2;
     max-width: 100%;
-    padding: 0 0 var(--space-xl);
+    padding: 0 0 var(--space-lg);
     text-align: left;
   }
 
