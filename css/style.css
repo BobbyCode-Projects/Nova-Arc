@@ -5860,7 +5860,7 @@ body.mobile-nav-open {
 @media (max-width: 768px) {
   .hero-orchestrated {
     min-height: auto;
-    padding: calc(75px + var(--space-lg)) 0 0;
+    padding: calc(70px + var(--space-sm)) 0 0;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -5877,10 +5877,59 @@ body.mobile-nav-open {
     gap: 0;
   }
 
-  .hero-orchestrated-content {
+  /* Executive Woman Portrait First on Mobile */
+  .hero-orchestrated-visual {
     order: 1;
+    width: 100%;
+    min-height: auto;
+    height: clamp(260px, 62vw, 320px);
+    margin-top: 4px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+
+  .hero-portrait-stage {
+    position: relative;
+    max-width: 320px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .hero-portrait-ambient-glow {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center, rgba(31, 111, 235, 0.28) 0%, rgba(56, 189, 248, 0.10) 50%, transparent 72%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hero-full-portrait-img {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+    object-position: center bottom;
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  }
+
+  /* Data & Content Second on Mobile */
+  .hero-orchestrated-content {
+    order: 2;
     max-width: 100%;
-    padding: var(--space-xs) 0 var(--space-lg);
+    padding: 0 0 var(--space-xl);
     text-align: left;
   }
 
@@ -5920,30 +5969,6 @@ body.mobile-nav-open {
     justify-content: center;
     padding: 12px 20px;
     font-size: 0.95rem;
-  }
-
-  .hero-orchestrated-visual {
-    order: 2;
-    width: 100%;
-    min-height: auto;
-    height: 300px;
-    margin-top: var(--space-md);
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    overflow: hidden;
-  }
-
-  .hero-portrait-stage {
-    max-width: 320px;
-    height: 100%;
-  }
-
-  .hero-full-portrait-img {
-    max-height: 300px;
-    object-position: center bottom;
-    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
   }
 }
 
