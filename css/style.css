@@ -1492,7 +1492,6 @@ button, input, select, textarea {
   color: #0F172A;
   font-weight: 600;
 }
-}
 
 body.mobile-nav-open {
   overflow: hidden !important;
@@ -5607,14 +5606,14 @@ body.mobile-nav-open {
   line-height: 1;
 }
 
-/* Main Headline (Bold, authoritative 3-line cadence) */
+/* Main Headline */
 .hero-orchestrated-title {
-  font-size: clamp(2.35rem, 3.8vw, 3.5rem);
+  font-size: clamp(2.05rem, 3.1vw, 3.15rem);
   font-weight: 800;
-  line-height: 1.13;
+  line-height: 1.18;
   letter-spacing: -0.03em;
   color: #FFFFFF;
-  margin-bottom: clamp(16px, 2vw, 22px);
+  margin-bottom: clamp(16px, 1.8vw, 22px);
   text-align: left;
 }
 
@@ -5630,15 +5629,19 @@ body.mobile-nav-open {
   text-shadow: 0 0 35px rgba(56, 189, 248, 0.28);
 }
 
-/* Short Supporting Description */
+/* Supporting Description */
 .hero-orchestrated-desc {
-  font-size: clamp(1.04rem, 1.22vw, 1.18rem);
+  font-size: clamp(0.96rem, 1.08vw, 1.06rem);
   font-weight: 400;
   color: #CBD5E1;
-  line-height: 1.62;
-  margin-bottom: clamp(24px, 2.8vw, 32px);
-  max-width: 600px;
+  line-height: 1.58;
+  margin-bottom: clamp(20px, 2.2vw, 28px);
+  max-width: 620px;
   text-align: left;
+}
+
+.hero-orchestrated-desc p:not(:last-child) {
+  margin-bottom: 12px;
 }
 
 /* Call-to-Action Buttons */
@@ -5815,15 +5818,20 @@ body.mobile-nav-open {
   }
 
   .hero-orchestrated-title {
-    font-size: clamp(2rem, 3.4vw, 2.5rem);
-    line-height: 1.15;
+    font-size: clamp(1.85rem, 2.8vw, 2.3rem);
+    line-height: 1.18;
     margin-bottom: 14px;
   }
 
   .hero-orchestrated-desc {
-    font-size: 1.02rem;
+    font-size: 0.94rem;
+    line-height: 1.54;
     margin-bottom: var(--space-lg);
     max-width: 100%;
+  }
+
+  .hero-orchestrated-desc p:not(:last-child) {
+    margin-bottom: 10px;
   }
 
   .hero-orchestrated-actions {
@@ -5983,8 +5991,8 @@ body.mobile-nav-open {
   }
 
   .hero-orchestrated-title {
-    font-size: clamp(1.8rem, 6.2vw, 2.2rem);
-    line-height: 1.16;
+    font-size: clamp(1.65rem, 5.8vw, 2.05rem);
+    line-height: 1.18;
     letter-spacing: -0.025em;
     margin-bottom: 12px;
   }
@@ -5999,10 +6007,14 @@ body.mobile-nav-open {
   }
 
   .hero-orchestrated-desc {
-    font-size: 0.96rem;
-    line-height: 1.52;
+    font-size: 0.92rem;
+    line-height: 1.5;
     margin-bottom: 20px;
     max-width: 100%;
+  }
+
+  .hero-orchestrated-desc p:not(:last-child) {
+    margin-bottom: 10px;
   }
 
   .hero-orchestrated-actions {
