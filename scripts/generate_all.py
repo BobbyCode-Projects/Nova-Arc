@@ -45,6 +45,8 @@ def replace_header_and_footer(html_content, root_prefix, active_section=""):
     Replaces existing <header class="site-header" id="top">...</header>
     and <footer class="site-footer">...</footer> with the unified shared components.
     """
+    # Clean duplicate comments
+    html_content = re.sub(r'(?:<!--\s*(?:Header|Navigation|FOOTER)[^>]*-->\s*)+', '', html_content)
     # Replace header
     header_pattern = re.compile(r'<header class="site-header" id="top">.*?</header>', re.DOTALL)
     new_header = get_shared_header(root_prefix, active_section)
@@ -116,6 +118,27 @@ def generate_all_subpages():
     print(f"Total subpages built: {generated_count}")
     return all_subpage_defs
 
+def generate_technology_page():
+    tech_path = os.path.join(REPO_ROOT, "technology.html")
+    if os.path.exists(tech_path):
+        with open(tech_path, "r", encoding="utf-8") as f:
+            tech_html = f.read()
+        tech_html = replace_header_and_footer(tech_html, "", "technology")
+        tech_html = tech_html.replace(
+            "<title>Enterprise Technology &amp; Automation Platform | Nova Arc</title>",
+            "<title>Technology &amp; Platform Architecture | Nova Arc</title>"
+        )
+        tech_html = tech_html.replace(
+            "https://novaarctech.in/ai-platform.html",
+            "https://novaarctech.in/technology.html"
+        )
+        with open(tech_path, "w", encoding="utf-8") as f:
+            f.write(tech_html)
+        ai_platform_path = os.path.join(REPO_ROOT, "ai-platform.html")
+        with open(ai_platform_path, "w", encoding="utf-8") as f:
+            f.write(tech_html)
+        print("  [OK] Updated technology.html and synchronized ai-platform.html")
+
 def update_root_pages():
     print("\n--- Updating Root Pages with Unified Header & Footer ---")
 
@@ -147,24 +170,7 @@ def update_root_pages():
         print("  [OK] Synchronized connect.html")
 
     # 5. technology.html & ai-platform.html
-    ai_platform_path = os.path.join(REPO_ROOT, "ai-platform.html")
-    if os.path.exists(ai_platform_path):
-        with open(ai_platform_path, "r", encoding="utf-8") as f:
-            tech_html = f.read()
-        tech_html = replace_header_and_footer(tech_html, "", "technology")
-        tech_html = tech_html.replace(
-            "<title>Enterprise Technology &amp; Automation Platform | Nova Arc</title>",
-            "<title>Technology &amp; Platform Architecture | Nova Arc</title>"
-        )
-        tech_html = tech_html.replace(
-            "https://novaarctech.in/ai-platform.html",
-            "https://novaarctech.in/technology.html"
-        )
-        with open(os.path.join(REPO_ROOT, "technology.html"), "w", encoding="utf-8") as f:
-            f.write(tech_html)
-        with open(ai_platform_path, "w", encoding="utf-8") as f:
-            f.write(tech_html)
-        print("  [OK] Created technology.html and synchronized ai-platform.html")
+    generate_technology_page()
 
     # 6. industries.html & who-we-serve.html
     who_we_serve_path = os.path.join(REPO_ROOT, "who-we-serve.html")

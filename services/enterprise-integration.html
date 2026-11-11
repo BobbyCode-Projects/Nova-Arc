@@ -390,8 +390,8 @@
   </header>
 
 
-  <!-- Hero Section (Information-Rich Two-Column Layout) -->
-  <section class="services-hero-ags hero-two-col-section" style="min-height: calc(100vh - 75px); display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; padding-top: calc(75px + clamp(16px, 2.2vw, 32px)); padding-bottom: clamp(24px, 3.2vw, 44px); position: relative; overflow: hidden;">
+  <!-- Hero Section (Clean Open Layout matching Screenshot 3) -->
+  <section class="page-hero page-hero-dark" style="min-height: calc(100vh - 75px); min-height: calc(100dvh - 75px); display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; padding-top: calc(75px + clamp(16px, 2.5vw, 36px)); padding-bottom: clamp(28px, 4vw, 52px); position: relative; overflow: hidden;">
     <div class="hero-orchestrated-glow-cyan"></div>
     <div class="hero-orchestrated-glow-blue"></div>
     <div class="orchestration-wave-container ecg-waveform-container" id="orchestrationWave" aria-hidden="true">
@@ -438,225 +438,135 @@
       </div>
     </div>
 
-    <div class="container hero-container-ags">
-      <div class="hero-two-col-grid">
-        
-        <!-- Left Column: Content & Context -->
-        <div class="hero-left-col">
-          <nav class="breadcrumb-nav" aria-label="Breadcrumb" style="margin-bottom: 8px;">
-            <ol class="breadcrumb-list" style="display: flex; gap: 8px; list-style: none; padding: 0; margin: 0; font-size: 0.82rem; color: #94A3B8;">
-              <li><a href="../index.html">Home</a></li><span class="breadcrumb-separator">/</span><li><a href="../services.html">Services</a></li><span class="breadcrumb-separator">/</span><li><a href="../services/enterprise-business.html">Enterprise Business</a></li><span class="breadcrumb-separator">/</span><li aria-current="page">Enterprise Integration</li>
-            </ol>
-          </nav>
-          <span class="eyebrow-ags" style="color: #38BDF8; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.08em; display: inline-block; margin-bottom: 8px;">ENTERPRISE BUSINESS SOLUTIONS</span>
-          <h1 class="hero-title-ags" style="font-size: clamp(2.1rem, 3.3vw, 3.2rem); line-height: 1.15; color: #FFFFFF; font-weight: 800; margin-bottom: 12px; letter-spacing: -0.02em;">Enterprise Integration & Business Intelligence</h1>
-          <p class="hero-tagline-ags" style="font-size: clamp(1.02rem, 1.25vw, 1.15rem); font-weight: 600; color: #38BDF8; line-height: 1.45; margin-bottom: 14px;">
-            API integration, CRM/HRMS/ERP connectivity, third-party application integration, data synchronization, centralized reporting, and role-based access controls.
-          </p>
-          <p class="hero-intro-text" style="font-size: 0.98rem; line-height: 1.65; color: #E2E8F0; margin-bottom: 12px;">
-            In modern enterprise architectures, the value of individual software applications is determined by how effectively they communicate and share data with the rest of the technology ecosystem. Nova Arc provides robust Enterprise Integration & Business Intelligence engineering. We design and implement secure REST and GraphQL API connectors, bidirectional ERP/CRM data synchronizers, and centralized reporting data pipelines.
-          </p>
-          <p class="hero-supporting-text" style="font-size: 0.88rem; line-height: 1.6; color: #94A3B8; margin-bottom: 22px;">Our integration architectures eliminate manual double-entry, enforce strict transactional data consistency, and transform disparate operational metrics into unified business intelligence dashboards that drive informed executive decision-making.</p>
-          <div class="hero-actions-ags" style="display: flex; gap: var(--space-md); flex-wrap: wrap; align-items: center;">
-            <a href="../contact.html" class="btn btn-consultation-ags" style="padding: 12px 28px; font-size: 0.98rem;">
-              <span>Discuss Your Project</span>
-              <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-            <a href="#key-capabilities" class="btn btn-outline-white" style="padding: 12px 24px; font-size: 0.98rem;">
-              <span>Explore Capabilities</span>
-            </a>
-          </div>
-        </div>
+    <div class="container hero-container-ags" style="position: relative; z-index: 5;">
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb" style="margin-bottom: 14px;">
+        <ol class="breadcrumb-list" style="display: flex; gap: 8px; list-style: none; padding: 0; margin: 0; font-size: 0.82rem; color: #94A3B8;">
+          <li><a href="../index.html">Home</a></li><span class="breadcrumb-separator">/</span><li><a href="../services.html">Services</a></li><span class="breadcrumb-separator">/</span><li><a href="../services/enterprise-business.html">Enterprise Business</a></li><span class="breadcrumb-separator">/</span><li aria-current="page">Enterprise Integration</li>
+        </ol>
+      </nav>
 
-        <!-- Right Column: Domain Architectural Diagram -->
-        <div class="hero-right-col">
-          
-<div class="hero-diagram-container" style="position: relative; width: 100%; max-width: 540px; margin: 0 auto;">
-  <div style="background: rgba(10, 22, 40, 0.65); border: 1px solid rgba(56, 189, 248, 0.22); border-radius: 16px; padding: 20px 22px 16px; backdrop-filter: blur(12px); box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.5), 0 0 30px rgba(56, 189, 248, 0.1);">
-    
-    <!-- Top Diagram Status Bar -->
-    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 12px; margin-bottom: 16px;">
-      <div style="display: flex; align-items: center; gap: 8px;">
-        <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #38BDF8; box-shadow: 0 0 8px #38BDF8;"></span>
-        <span style="font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 700; color: #E2E8F0; letter-spacing: 0.05em; text-transform: uppercase;">ENTERPRISE INTEGRATION MESH</span>
+      <div class="page-hero-content" style="max-width: 900px;">
+        <span class="eyebrow-ags" style="color: #38BDF8; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.08em; display: inline-block; margin-bottom: 12px;">ENTERPRISE BUSINESS SOLUTIONS</span>
+        <h1 class="page-hero-title" style="font-size: clamp(1.75rem, 3.8vw, 3.2rem); line-height: 1.18; color: #FFFFFF; font-weight: 800; margin-bottom: 16px; letter-spacing: -0.02em; overflow-wrap: break-word; word-break: normal;">Enterprise Integration & Business Intelligence</h1>
+        <p class="hero-tagline-ags" style="font-size: clamp(1.02rem, 1.3vw, 1.2rem); font-weight: 600; color: #38BDF8; line-height: 1.5; margin-bottom: 14px;">
+          API integration, CRM/HRMS/ERP connectivity, third-party application integration, data synchronization, centralized reporting, and role-based access controls.
+        </p>
+        <p class="hero-intro-text" style="font-size: 1.02rem; line-height: 1.65; color: #E2E8F0; margin-bottom: 24px;">
+          In modern enterprise architectures, the value of individual software applications is determined by how effectively they communicate and share data with the rest of the technology ecosystem.
+        </p>
       </div>
-      <span style="font-family: 'Inter', sans-serif; font-size: 0.72rem; color: #94A3B8; background: rgba(56, 189, 248, 0.1); padding: 3px 8px; border-radius: 6px; border: 1px solid rgba(56, 189, 248, 0.2);">BIDIRECTIONAL SYNC</span>
-    </div>
 
-    <!-- Scalable Vector Diagram -->
-    <svg viewBox="0 0 500 310" width="100%" height="auto" style="display: block; overflow: visible;">
-      <defs>
-        <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#0E2E56"/>
-          <stop offset="100%" stop-color="#07172B"/>
-        </linearGradient>
-        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-          <feGaussianBlur stdDeviation="3" result="blur" />
-          <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-        </filter>
-      </defs>
-      
-    
-    <g transform="translate(20, 20)">
-      <rect width="135" height="54" rx="8" fill="rgba(14, 34, 61, 0.85)" stroke="rgba(56, 189, 248, 0.45)" stroke-width="1.2"/>
-      <rect x="1" y="1" width="133" height="3" rx="1.5" fill="#38BDF8" opacity="0.9"/>
-      <text x="14" y="24" fill="#38BDF8" font-family="Inter, sans-serif" font-size="12" font-weight="700">Legacy Core Systems</text>
-      <text x="14" y="40" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10" font-weight="400">AS400, Mainframe, SQL</text>
-    </g>
-    
-    
-    <g transform="translate(20, 95)">
-      <rect width="135" height="54" rx="8" fill="rgba(10, 22, 40, 0.75)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.2"/>
-      <rect x="1" y="1" width="133" height="3" rx="1.5" fill="#FFFFFF" opacity="0.4"/>
-      <text x="14" y="24" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="12" font-weight="700">Cloud SaaS Platforms</text>
-      <text x="14" y="40" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10" font-weight="400">Salesforce, Workday, Hubspot</text>
-    </g>
-    
-    
-    <g transform="translate(20, 170)">
-      <rect width="135" height="54" rx="8" fill="rgba(10, 22, 40, 0.75)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.2"/>
-      <rect x="1" y="1" width="133" height="3" rx="1.5" fill="#FFFFFF" opacity="0.4"/>
-      <text x="14" y="24" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="12" font-weight="700">Third-Party Partners</text>
-      <text x="14" y="40" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10" font-weight="400">B2B EDI & Webhooks</text>
-    </g>
-    
-
-    
-    <path d="M 155 47 L 195 107" stroke="#38BDF8" stroke-width="1.5" opacity="0.65" stroke-dasharray="4 4"/>
-    <circle cx="195" cy="107" r="3" fill="#38BDF8"/>
-    
-    
-    
-    <path d="M 155 122 L 195 122" stroke="#38BDF8" stroke-width="1.5" opacity="0.65" stroke-dasharray="4 4"/>
-    <circle cx="195" cy="122" r="3" fill="#38BDF8"/>
-    
-    
-    
-    <path d="M 155 197 L 195 137" stroke="#38BDF8" stroke-width="1.5" opacity="0.65" stroke-dasharray="4 4"/>
-    <circle cx="195" cy="137" r="3" fill="#38BDF8"/>
-    
-    
-
-    
-    <g transform="translate(195, 95)">
-      <rect width="120" height="60" rx="8" fill="rgba(14, 34, 61, 0.85)" stroke="rgba(56, 189, 248, 0.45)" stroke-width="1.2"/>
-      <rect x="1" y="1" width="118" height="3" rx="1.5" fill="#38BDF8" opacity="0.9"/>
-      <text x="14" y="24" fill="#38BDF8" font-family="Inter, sans-serif" font-size="12" font-weight="700">Enterprise API Bus</text>
-      <text x="14" y="40" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10" font-weight="400">Schema Mapping & Transform</text>
-    </g>
-    
-
-    
-    <path d="M 315 107 L 345 47" stroke="#38BDF8" stroke-width="1.5" opacity="0.65" stroke-dasharray="4 4"/>
-    <circle cx="345" cy="47" r="3" fill="#38BDF8"/>
-    
-    
-    
-    <path d="M 315 122 L 345 122" stroke="#38BDF8" stroke-width="1.5" opacity="0.65" stroke-dasharray="4 4"/>
-    <circle cx="345" cy="122" r="3" fill="#38BDF8"/>
-    
-    
-    
-    <path d="M 315 137 L 345 197" stroke="#38BDF8" stroke-width="1.5" opacity="0.65" stroke-dasharray="4 4"/>
-    <circle cx="345" cy="197" r="3" fill="#38BDF8"/>
-    
-    
-
-    
-    <g transform="translate(345, 20)">
-      <rect width="135" height="54" rx="8" fill="rgba(10, 22, 40, 0.75)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.2"/>
-      <rect x="1" y="1" width="133" height="3" rx="1.5" fill="#FFFFFF" opacity="0.4"/>
-      <text x="14" y="24" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="12" font-weight="700">Message Queues</text>
-      <text x="14" y="40" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10" font-weight="400">Zero-Loss Kafka Buffer</text>
-    </g>
-    
-    
-    <g transform="translate(345, 95)">
-      <rect width="135" height="54" rx="8" fill="rgba(14, 34, 61, 0.85)" stroke="rgba(56, 189, 248, 0.45)" stroke-width="1.2"/>
-      <rect x="1" y="1" width="133" height="3" rx="1.5" fill="#38BDF8" opacity="0.9"/>
-      <text x="14" y="24" fill="#38BDF8" font-family="Inter, sans-serif" font-size="12" font-weight="700">Target Synchronization</text>
-      <text x="14" y="40" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10" font-weight="400">Transactional Consistency</text>
-    </g>
-    
-    
-    <g transform="translate(345, 170)">
-      <rect width="135" height="54" rx="8" fill="rgba(10, 22, 40, 0.75)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.2"/>
-      <rect x="1" y="1" width="133" height="3" rx="1.5" fill="#FFFFFF" opacity="0.4"/>
-      <text x="14" y="24" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="12" font-weight="700">Traffic Throttling</text>
-      <text x="14" y="40" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10" font-weight="400">Rate Limits & Health Mesh</text>
-    </g>
-    
-
-    <rect x="20" y="245" width="460" height="48" rx="8" fill="rgba(14, 165, 233, 0.08)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1.2"/>
-    <text x="35" y="268" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="11" font-weight="700">Enterprise High-Throughput Integration Mesh</text>
-    <text x="35" y="283" fill="#94A3B8" font-family="Inter, sans-serif" font-size="9">Bidirectional Connectivity, Protocol Normalization &amp; Resilient Circuit Breaking</text>
-    <circle cx="455" cy="269" r="6" fill="#10B981" filter="url(#glow)"/>
-    
-    </svg>
-
-    <!-- Bottom Architectural Flow Legend -->
-    <div style="margin-top: 14px; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.06); display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem; color: #64748B;">
-      <span>Architecture: High-Throughput Microservices</span>
-      <span style="color: #38BDF8;">● Resilient Zero-Loss Pipeline</span>
-    </div>
-  </div>
-</div>
-
-        </div>
-
+      <div class="hero-actions-ags" style="display: flex; gap: var(--space-md); flex-wrap: wrap; align-items: center;">
+        <a href="../contact.html" class="btn btn-consultation-ags" style="padding: 12px 28px; font-size: 0.98rem;">
+          <span>Discuss Your Project</span>
+          <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <a href="#key-capabilities" class="btn btn-outline-white" style="padding: 12px 24px; font-size: 0.98rem;">
+          <span>Explore Capabilities</span>
+        </a>
       </div>
+
+      <div class="hero-highlights-strip" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px;"><span class="hero-highlight-pill" style="font-size: 0.85rem; padding: 7px 16px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Robust API Connectors (REST</span><span class="hero-highlight-pill" style="font-size: 0.85rem; padding: 7px 16px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Bidirectional ERP/CRM Synchronization</span><span class="hero-highlight-pill" style="font-size: 0.85rem; padding: 7px 16px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Centralized Business Intelligence</span><span class="hero-highlight-pill" style="font-size: 0.85rem; padding: 7px 16px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Role-Based Access</span></div>
     </div>
   </section>
 
   
-
-  
-  <!-- Section: Four Business Value Propositions (LIGHT SLATE) -->
-  <section id="business-value" class="subpage-section-light-alt" style="padding: clamp(32px, 4vw, 48px) 0; background: #F8FAFC; border-bottom: 1px solid #E2E8F0;">
+  <!-- Section 1: Problem & Resolution (LIGHT SLATE #F8FAFC) - Editorial Consulting Layout -->
+  <section id="problem-resolution" class="editorial-resolution-section">
     <div class="container">
-      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: var(--space-xl); flex-wrap: wrap; gap: 12px;">
-        <div>
-          <span class="eyebrow-ags" style="color: #0284C7; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.08em;">MEASURABLE IMPACT</span>
-          <h2 style="font-size: clamp(1.4rem, 2.2vw, 1.85rem); font-weight: 800; color: #0F172A; margin: 4px 0 0; letter-spacing: -0.01em;">Four Core Business Value Propositions</h2>
-        </div>
-        <span style="font-size: 0.85rem; color: #64748B; font-weight: 500;">Direct Operational &amp; Financial Outcomes</span>
+      <div class="editorial-header">
+        <span class="eyebrow-ags" style="color: #0284C7; font-weight: 700; letter-spacing: 0.08em; display: inline-block; margin-bottom: 8px;">PROBLEM &amp; RESOLUTION</span>
+        <h2 style="font-size: clamp(1.85rem, 2.8vw, 2.4rem); font-weight: 800; color: #0F172A; margin: 0 0 14px; letter-spacing: -0.02em;">From Fragmented Workflows to Operational Velocity</h2>
+        <p style="color: #475569; font-size: 1.05rem; line-height: 1.65; max-width: 780px; margin: 0;">Enterprise operations stall when critical customer records, workforce data, and administrative processes remain locked in siloed systems. We engineer unified platforms that automate business workflows and accelerate cross-departmental coordination.</p>
       </div>
 
-      <div class="business-value-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px;">
+      <div class="editorial-rows-container">
         
-        <div class="business-value-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 20px 22px; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04); display: flex; flex-direction: column; transition: transform 0.25s ease, box-shadow 0.25s ease;">
-          <div style="width: 38px; height: 38px; border-radius: 8px; background: rgba(2, 132, 199, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 12px; color: #0284C7;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        <div class="editorial-resolution-row">
+          <div class="editorial-row-meta">
+            <span class="editorial-num">01</span>
+            <h3 class="editorial-challenge-title">Disjointed & Conflicting Data</h3>
           </div>
-          <h3 style="font-size: 1.05rem; font-weight: 700; color: #0F172A; margin-bottom: 6px; line-height: 1.35;">Zero Manual Data Transfers</h3>
-          <p style="font-size: 0.88rem; color: #475569; line-height: 1.55; margin: 0;">Eliminate human transcription errors by synchronizing data automatically between ERP, CRM, and internal tools.</p>
+          <div class="editorial-problem-col">
+            <div class="editorial-label problem-label">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span>The Challenge</span>
+            </div>
+            <p class="editorial-problem-desc">Disjointed & Conflicting Data Different departments hold contradictory customer and revenue numbers, leading to confused executive reporting.</p>
+          </div>
+          <div class="editorial-resolution-col">
+            <div class="editorial-label resolution-label">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Engineered Resolution</span>
+            </div>
+            <p class="editorial-resolution-desc">We establish a single source of truth through unified data integration buses with automated deduplication and master data governance.</p>
+          </div>
         </div>
         
-        <div class="business-value-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 20px 22px; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04); display: flex; flex-direction: column; transition: transform 0.25s ease, box-shadow 0.25s ease;">
-          <div style="width: 38px; height: 38px; border-radius: 8px; background: rgba(2, 132, 199, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 12px; color: #0284C7;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div class="editorial-resolution-row">
+          <div class="editorial-row-meta">
+            <span class="editorial-num">02</span>
+            <h3 class="editorial-challenge-title">Fragile Point-to-Point Integrations</h3>
           </div>
-          <h3 style="font-size: 1.05rem; font-weight: 700; color: #0F172A; margin-bottom: 6px; line-height: 1.35;">Single Source of Truth</h3>
-          <p style="font-size: 0.88rem; color: #475569; line-height: 1.55; margin: 0;">Ensure all teams operate from the same verified customer, inventory, and financial figures.</p>
+          <div class="editorial-problem-col">
+            <div class="editorial-label problem-label">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span>The Challenge</span>
+            </div>
+            <p class="editorial-problem-desc">Fragile Point-to-Point Integrations Spaghetti connections between applications break whenever any single software vendor updates an API endpoint.</p>
+          </div>
+          <div class="editorial-resolution-col">
+            <div class="editorial-label resolution-label">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Engineered Resolution</span>
+            </div>
+            <p class="editorial-resolution-desc">Our integration architectures use standardized middleware and message queues that decouple systems and handle API changes gracefully.</p>
+          </div>
         </div>
         
-        <div class="business-value-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 20px 22px; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04); display: flex; flex-direction: column; transition: transform 0.25s ease, box-shadow 0.25s ease;">
-          <div style="width: 38px; height: 38px; border-radius: 8px; background: rgba(2, 132, 199, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 12px; color: #0284C7;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div class="editorial-resolution-row">
+          <div class="editorial-row-meta">
+            <span class="editorial-num">03</span>
+            <h3 class="editorial-challenge-title">Manual Export-Import Overhead</h3>
           </div>
-          <h3 style="font-size: 1.05rem; font-weight: 700; color: #0F172A; margin-bottom: 6px; line-height: 1.35;">Resilient System Connectivity</h3>
-          <p style="font-size: 0.88rem; color: #475569; line-height: 1.55; margin: 0;">Asynchronous message queuing guarantees that temporary third-party API outages never result in lost business transactions.</p>
+          <div class="editorial-problem-col">
+            <div class="editorial-label problem-label">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span>The Challenge</span>
+            </div>
+            <p class="editorial-problem-desc">Manual Export-Import Overhead Staff waste hours daily downloading CSV reports from one tool and manually uploading them into another.</p>
+          </div>
+          <div class="editorial-resolution-col">
+            <div class="editorial-label resolution-label">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Engineered Resolution</span>
+            </div>
+            <p class="editorial-resolution-desc">We replace manual exports with automated API synchronization that updates records in real time without human intervention.</p>
+          </div>
         </div>
         
-        <div class="business-value-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 20px 22px; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04); display: flex; flex-direction: column; transition: transform 0.25s ease, box-shadow 0.25s ease;">
-          <div style="width: 38px; height: 38px; border-radius: 8px; background: rgba(2, 132, 199, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 12px; color: #0284C7;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        <div class="editorial-resolution-row">
+          <div class="editorial-row-meta">
+            <span class="editorial-num">04</span>
+            <h3 class="editorial-challenge-title">Lack of Centralized Message Middleware</h3>
           </div>
-          <h3 style="font-size: 1.05rem; font-weight: 700; color: #0F172A; margin-bottom: 6px; line-height: 1.35;">Real-Time Executive Intelligence</h3>
-          <p style="font-size: 0.88rem; color: #475569; line-height: 1.55; margin: 0;">Access live company-wide KPIs and operational performance metrics through centralized dashboards.</p>
+          <div class="editorial-problem-col">
+            <div class="editorial-label problem-label">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span>The Challenge</span>
+            </div>
+            <p class="editorial-problem-desc">Point-to-point connections create an unmaintainable spiderweb of custom API scripts. System-wide failures when a single endpoint updates or experiences network downtime.</p>
+          </div>
+          <div class="editorial-resolution-col">
+            <div class="editorial-label resolution-label">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Engineered Resolution</span>
+            </div>
+            <p class="editorial-resolution-desc">Distributed pub/sub message brokers (Kafka/RabbitMQ) with guaranteed delivery semantics.</p>
+          </div>
         </div>
         
       </div>
@@ -664,358 +574,205 @@
   </section>
     
 
+  
   <!-- Section 2: Key Capabilities (DARK NAVY) -->
   <section id="key-capabilities" class="subpage-section-dark" style="padding: clamp(48px, 6vw, 76px) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div style="text-align: center; max-width: 760px; margin: 0 auto var(--space-3xl);">
-        <span class="eyebrow-ags" style="color: #38BDF8;">KEY CAPABILITIES</span>
-        <h2 class="subpage-section-heading" style="font-size: clamp(1.8rem, 2.8vw, 2.4rem); font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Core Architecture &amp; Functional Capabilities</h2>
+        <span class="eyebrow-ags" style="color: #38BDF8; font-weight: 700; letter-spacing: 0.08em;">KEY CAPABILITIES</span>
+        <h2 class="subpage-section-heading" style="font-size: clamp(1.8rem, 2.8vw, 2.4rem); font-weight: 800; color: #FFFFFF; margin: 8px 0 12px; letter-spacing: -0.01em;">Core Architecture &amp; Functional Capabilities</h2>
         <p class="subpage-section-desc" style="color: #94A3B8; font-size: 1.02rem; line-height: 1.6;">Purpose-built engineering modules designed to integrate cleanly into your existing enterprise stack.</p>
       </div>
 
       <div class="subpage-grid-cards capability-grid-compact">
         
-        <div class="card subpage-card-padded capability-card" style="padding: var(--space-xl); display: flex; flex-direction: column; background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); align-self: stretch; height: auto;">
+        <div class="card subpage-card-padded capability-card" style="padding: var(--space-xl); display: flex; flex-direction: column; background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); align-self: start; height: auto;">
           <div>
-            <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(14, 165, 233, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 12px; color: #38BDF8;">
+            <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(14, 165, 233, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; color: #38BDF8;">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                 <line x1="8" y1="21" x2="16" y2="21"></line>
                 <line x1="12" y1="17" x2="12" y2="21"></line>
               </svg>
             </div>
-            <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Robust API Connectors (REST & GraphQL)</h3>
-            <p style="color: #94A3B8; font-size: 0.90rem; line-height: 1.55; margin-bottom: 12px;">High-throughput, secure API gateways linking cloud services, internal applications, and external partner systems.</p>
+            <h3 style="font-size: 1.18rem; font-weight: 700; color: #FFFFFF; margin-bottom: 10px;">Robust API Connectors (REST & GraphQL)</h3>
+            <p style="color: #94A3B8; font-size: 0.92rem; line-height: 1.55; margin-bottom: 14px;">High-throughput, secure API gateways linking cloud services, internal applications, and external partner systems.</p>
           </div>
-          <div style="margin-top: auto;">
-            <ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 10px;">
-              <li style="color: #CBD5E1; font-size: 0.85rem; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>OpenAPI / Swagger specifications</span></li><li style="color: #CBD5E1; font-size: 0.85rem; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Rate limiting & throttling controls</span></li><li style="color: #CBD5E1; font-size: 0.85rem; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>OAuth2 & API key security</span></li>
+          <div style="margin-top: auto; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);">
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>OpenAPI / Swagger specifications</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Rate limiting & throttling controls</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>OAuth2 & API key security</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Automatic retry & backoff logic</span></li>
             </ul>
-            <div id="cap-more-services-enterprise-integration-html-0" class="capability-more-wrap" style="display: none;"><ul style="list-style: none; padding: 0; margin: 0; padding-top: 4px;"><li style="color: #CBD5E1; font-size: 0.85rem; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Automatic retry & backoff logic</span></li></ul></div>
-            <button type="button" class="btn-read-more-caps" data-read-more-text="Read More (+1 more)" onclick="toggleCaps(this, 'cap-more-services-enterprise-integration-html-0')" aria-expanded="false" style="margin-top: 6px;">Read More (+1 more) <svg class="chevron-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div id="cap-more-services-enterprise-integration-html-0" class="capability-more-wrap" style="display: none;"><ul style="list-style: none; padding: 0; margin: 0;"><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Rate limiting and traffic throttling protecting internal backend services</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Standardized OpenAPI/Swagger schema definitions and developer docs</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>API versioning support maintaining backward compatibility for legacy clients</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Automated token validation and OAuth 2.0 authentication handshakes</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Caching layer utilizing Redis to reduce redundant database queries</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Comprehensive API telemetry tracking error rates, latency, and throughput</span></li></ul></div>
+            <button type="button" class="btn-read-more-caps" data-read-more-text="Read More" onclick="toggleCaps(this, 'cap-more-services-enterprise-integration-html-0')" aria-expanded="false">Read More <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+            
           </div>
         </div>
         
-        <div class="card subpage-card-padded capability-card" style="padding: var(--space-xl); display: flex; flex-direction: column; background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); align-self: stretch; height: auto;">
+        <div class="card subpage-card-padded capability-card" style="padding: var(--space-xl); display: flex; flex-direction: column; background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); align-self: start; height: auto;">
           <div>
-            <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(14, 165, 233, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 12px; color: #38BDF8;">
+            <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(14, 165, 233, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; color: #38BDF8;">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                 <line x1="8" y1="21" x2="16" y2="21"></line>
                 <line x1="12" y1="17" x2="12" y2="21"></line>
               </svg>
             </div>
-            <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Bidirectional ERP/CRM Synchronization</h3>
-            <p style="color: #94A3B8; font-size: 0.90rem; line-height: 1.55; margin-bottom: 12px;">Real-time event-driven data buses ensuring customer, order, inventory, and financial records stay synchronized.</p>
+            <h3 style="font-size: 1.18rem; font-weight: 700; color: #FFFFFF; margin-bottom: 10px;">Bidirectional ERP/CRM Synchronization</h3>
+            <p style="color: #94A3B8; font-size: 0.92rem; line-height: 1.55; margin-bottom: 14px;">Real-time event-driven data buses ensuring customer, order, inventory, and financial records stay synchronized.</p>
           </div>
-          <div style="margin-top: auto;">
-            <ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 10px;">
-              <li style="color: #CBD5E1; font-size: 0.85rem; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Webhook-driven synchronization</span></li><li style="color: #CBD5E1; font-size: 0.85rem; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Conflict resolution algorithms</span></li><li style="color: #CBD5E1; font-size: 0.85rem; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Transaction rollback protections</span></li>
+          <div style="margin-top: auto; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);">
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Webhook-driven synchronization</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Conflict resolution algorithms</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Transaction rollback protections</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Data normalization schemas</span></li>
             </ul>
-            <div id="cap-more-services-enterprise-integration-html-1" class="capability-more-wrap" style="display: none;"><ul style="list-style: none; padding: 0; margin: 0; padding-top: 4px;"><li style="color: #CBD5E1; font-size: 0.85rem; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Data normalization schemas</span></li></ul></div>
-            <button type="button" class="btn-read-more-caps" data-read-more-text="Read More (+1 more)" onclick="toggleCaps(this, 'cap-more-services-enterprise-integration-html-1')" aria-expanded="false" style="margin-top: 6px;">Read More (+1 more) <svg class="chevron-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div id="cap-more-services-enterprise-integration-html-1" class="capability-more-wrap" style="display: none;"><ul style="list-style: none; padding: 0; margin: 0;"><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Event-driven webhook connectors syncing customer data upon change</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Conflict resolution rules determining system of record per field</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Transaction rollback mechanisms preventing partial or corrupted syncs</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Batch reconciliation routines resolving off-hours network drops</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Field mapping transformation engine handling disparate data schemas</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Real-time sync status monitoring dashboard with manual re-try controls</span></li></ul></div>
+            <button type="button" class="btn-read-more-caps" data-read-more-text="Read More" onclick="toggleCaps(this, 'cap-more-services-enterprise-integration-html-1')" aria-expanded="false">Read More <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+            
           </div>
         </div>
         
-        <div class="card subpage-card-padded capability-card" style="padding: var(--space-xl); display: flex; flex-direction: column; background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); align-self: stretch; height: auto;">
+        <div class="card subpage-card-padded capability-card" style="padding: var(--space-xl); display: flex; flex-direction: column; background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); align-self: start; height: auto;">
           <div>
-            <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(14, 165, 233, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 12px; color: #38BDF8;">
+            <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(14, 165, 233, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; color: #38BDF8;">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                 <line x1="8" y1="21" x2="16" y2="21"></line>
                 <line x1="12" y1="17" x2="12" y2="21"></line>
               </svg>
             </div>
-            <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Centralized Business Intelligence & ETL</h3>
-            <p style="color: #94A3B8; font-size: 0.90rem; line-height: 1.55; margin-bottom: 12px;">Automated data extract, transform, and load (ETL) pipelines feeding unified analytical data warehouses.</p>
+            <h3 style="font-size: 1.18rem; font-weight: 700; color: #FFFFFF; margin-bottom: 10px;">Centralized Business Intelligence & ETL</h3>
+            <p style="color: #94A3B8; font-size: 0.92rem; line-height: 1.55; margin-bottom: 14px;">Automated data extract, transform, and load (ETL) pipelines feeding unified analytical data warehouses.</p>
           </div>
-          <div style="margin-top: auto;">
-            <ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 10px;">
-              <li style="color: #CBD5E1; font-size: 0.85rem; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Automated scheduled ETL jobs</span></li><li style="color: #CBD5E1; font-size: 0.85rem; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Data cleansing & deduplication</span></li><li style="color: #CBD5E1; font-size: 0.85rem; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Historical trend data lakes</span></li>
+          <div style="margin-top: auto; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);">
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Automated scheduled ETL jobs</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Data cleansing & deduplication</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Historical trend data lakes</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Custom SQL analytical queries</span></li>
             </ul>
-            <div id="cap-more-services-enterprise-integration-html-2" class="capability-more-wrap" style="display: none;"><ul style="list-style: none; padding: 0; margin: 0; padding-top: 4px;"><li style="color: #CBD5E1; font-size: 0.85rem; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Custom SQL analytical queries</span></li></ul></div>
-            <button type="button" class="btn-read-more-caps" data-read-more-text="Read More (+1 more)" onclick="toggleCaps(this, 'cap-more-services-enterprise-integration-html-2')" aria-expanded="false" style="margin-top: 6px;">Read More (+1 more) <svg class="chevron-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div id="cap-more-services-enterprise-integration-html-2" class="capability-more-wrap" style="display: none;"><ul style="list-style: none; padding: 0; margin: 0;"><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Automated ETL/ELT pipelines extracting data from disparate siloed databases</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Data warehouse modeling across Snowflake, BigQuery, and Redshift</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Data quality validation rules flagging malformed or missing records</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Change Data Capture (CDC) streaming real-time operational updates</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Historical data archiving pipelines optimizing operational DB speed</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Business glossary and data dictionary governance tools</span></li></ul></div>
+            <button type="button" class="btn-read-more-caps" data-read-more-text="Read More" onclick="toggleCaps(this, 'cap-more-services-enterprise-integration-html-2')" aria-expanded="false">Read More <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+            
           </div>
         </div>
         
-        <div class="card subpage-card-padded capability-card" style="padding: var(--space-xl); display: flex; flex-direction: column; background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); align-self: stretch; height: auto;">
+        <div class="card subpage-card-padded capability-card" style="padding: var(--space-xl); display: flex; flex-direction: column; background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); align-self: start; height: auto;">
           <div>
-            <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(14, 165, 233, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 12px; color: #38BDF8;">
+            <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(14, 165, 233, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; color: #38BDF8;">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                 <line x1="8" y1="21" x2="16" y2="21"></line>
                 <line x1="12" y1="17" x2="12" y2="21"></line>
               </svg>
             </div>
-            <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Role-Based Access & Governance</h3>
-            <p style="color: #94A3B8; font-size: 0.90rem; line-height: 1.55; margin-bottom: 12px;">Enterprise permission architectures ensuring data access complies with organizational roles and regulatory standards.</p>
+            <h3 style="font-size: 1.18rem; font-weight: 700; color: #FFFFFF; margin-bottom: 10px;">Role-Based Access & Governance</h3>
+            <p style="color: #94A3B8; font-size: 0.92rem; line-height: 1.55; margin-bottom: 14px;">Enterprise permission architectures ensuring data access complies with organizational roles and regulatory standards.</p>
           </div>
-          <div style="margin-top: auto;">
-            <ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 10px;">
-              <li style="color: #CBD5E1; font-size: 0.85rem; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Granular field-level permissions</span></li><li style="color: #CBD5E1; font-size: 0.85rem; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Single Sign-On (SSO / SAML)</span></li><li style="color: #CBD5E1; font-size: 0.85rem; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Comprehensive API audit logs</span></li>
+          <div style="margin-top: auto; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);">
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Granular field-level permissions</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Single Sign-On (SSO / SAML)</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Comprehensive API audit logs</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Data masking & encryption</span></li>
             </ul>
-            <div id="cap-more-services-enterprise-integration-html-3" class="capability-more-wrap" style="display: none;"><ul style="list-style: none; padding: 0; margin: 0; padding-top: 4px;"><li style="color: #CBD5E1; font-size: 0.85rem; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Data masking & encryption</span></li></ul></div>
-            <button type="button" class="btn-read-more-caps" data-read-more-text="Read More (+1 more)" onclick="toggleCaps(this, 'cap-more-services-enterprise-integration-html-3')" aria-expanded="false" style="margin-top: 6px;">Read More (+1 more) <svg class="chevron-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div id="cap-more-services-enterprise-integration-html-3" class="capability-more-wrap" style="display: none;"><ul style="list-style: none; padding: 0; margin: 0;"><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Granular attribute-based access control (ABAC) and RBAC policies</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Centralized directory synchronization via Active Directory / Azure AD</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Automated user deprovisioning upon employee departure</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Compliance monitoring verifying adherence to SOC 2, HIPAA, and GDPR</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Privileged access management (PAM) for administrative accounts</span></li><li style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Periodic access certification workflows for departmental managers</span></li></ul></div>
+            <button type="button" class="btn-read-more-caps" data-read-more-text="Read More" onclick="toggleCaps(this, 'cap-more-services-enterprise-integration-html-3')" aria-expanded="false">Read More <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+            
           </div>
         </div>
         
-        <div class="card subpage-card-padded capability-card" style="padding: var(--space-xl); display: flex; flex-direction: column; background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); align-self: stretch; height: auto;">
-          <div>
-            <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(14, 165, 233, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 12px; color: #38BDF8;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                <line x1="8" y1="21" x2="16" y2="21"></line>
-                <line x1="12" y1="17" x2="12" y2="21"></line>
-              </svg>
-            </div>
-            <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Resilient Queue Buffering & Dead-Letter Recovery</h3>
-            <p style="color: #94A3B8; font-size: 0.90rem; line-height: 1.55; margin-bottom: 12px;">Asynchronous messaging backbones that prevent data loss during third-party endpoint downtime or network outages.</p>
-          </div>
-          <div style="margin-top: auto;">
-            <ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 10px;">
-              <li style="color: #CBD5E1; font-size: 0.85rem; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Guaranteed at-least-once message delivery via Kafka or RabbitMQ backbones</span></li><li style="color: #CBD5E1; font-size: 0.85rem; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Automatic retry policies with exponential backoff on transient network faults</span></li><li style="color: #CBD5E1; font-size: 0.85rem; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Dead-letter queue inspection consoles allowing safe message replay after repairs</span></li>
-            </ul>
-            <div id="cap-more-services-enterprise-integration-html-4" class="capability-more-wrap" style="display: none;"><ul style="list-style: none; padding: 0; margin: 0; padding-top: 4px;"><li style="color: #CBD5E1; font-size: 0.85rem; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg><span>Real-time integration health metrics alerting engineers to API latency spikes</span></li></ul></div>
-            <button type="button" class="btn-read-more-caps" data-read-more-text="Read More (+1 more)" onclick="toggleCaps(this, 'cap-more-services-enterprise-integration-html-4')" aria-expanded="false" style="margin-top: 6px;">Read More (+1 more) <svg class="chevron-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-
-  
-  <!-- Section: Relevant Industries Served (LIGHT) -->
-  <section id="industries-served" class="subpage-section-light" style="padding: clamp(24px, 3.2vw, 38px) 0; background: #FFFFFF; border-bottom: 1px solid #E2E8F0;">
-    <div class="container">
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
-        <div style="display: flex; align-items: center; gap: 10px;">
-          <span style="font-size: 0.8rem; font-weight: 800; color: #0284C7; letter-spacing: 0.08em; text-transform: uppercase;">INDUSTRIES SERVED:</span>
-          <span style="font-size: 0.88rem; color: #64748B; font-weight: 500;">Tailored engineering implementations delivering proven ROI across:</span>
-        </div>
-        <div class="industry-pills-row" style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
-          
-        <span class="industry-badge-pill" style="display: inline-flex; align-items: center; gap: 7px; background: #F1F5F9; border: 1px solid #E2E8F0; padding: 7px 14px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; color: #1E293B;">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-          <span>Enterprise SaaS & Technology</span>
-        </span>
-        
-        <span class="industry-badge-pill" style="display: inline-flex; align-items: center; gap: 7px; background: #F1F5F9; border: 1px solid #E2E8F0; padding: 7px 14px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; color: #1E293B;">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-          <span>Financial Services & FinTech</span>
-        </span>
-        
-        <span class="industry-badge-pill" style="display: inline-flex; align-items: center; gap: 7px; background: #F1F5F9; border: 1px solid #E2E8F0; padding: 7px 14px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; color: #1E293B;">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-          <span>Global Professional Services</span>
-        </span>
-        
-        <span class="industry-badge-pill" style="display: inline-flex; align-items: center; gap: 7px; background: #F1F5F9; border: 1px solid #E2E8F0; padding: 7px 14px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; color: #1E293B;">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-          <span>Healthcare Provider Systems</span>
-        </span>
-        
-        <span class="industry-badge-pill" style="display: inline-flex; align-items: center; gap: 7px; background: #F1F5F9; border: 1px solid #E2E8F0; padding: 7px 14px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; color: #1E293B;">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-          <span>Retail & Commercial Services</span>
-        </span>
-        
-        </div>
       </div>
     </div>
   </section>
     
 
   
-
-  
-  <!-- Section 3: Problem & Resolution -->
-  <section id="problem-resolution" class="subpage-section-light-alt" style="padding: var(--space-4xl) 0; background: #F8FAFC; border-bottom: 1px solid #E2E8F0;">
+  <!-- Section 3: Four Business Value Propositions (LIGHT WHITE) -->
+  <section id="business-value" class="subpage-section-light" style="padding: clamp(48px, 6vw, 76px) 0; background: #FFFFFF; border-bottom: 1px solid #E2E8F0;">
     <div class="container">
-      <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
-        <span class="eyebrow-ags" style="color: #0284C7;">PROBLEM &amp; RESOLUTION</span>
-        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #0F172A; margin: 8px 0 12px;">Operational Challenges &amp; Technical Resolutions</h2>
-        <p class="subpage-section-desc" style="color: #475569; font-size: 1.05rem;">How Nova Arc overcomes systemic process inefficiencies, operational friction, and technology bottlenecks.</p>
+      <div style="text-align: center; max-width: 760px; margin: 0 auto var(--space-3xl);">
+        <span class="eyebrow-ags" style="color: #0284C7; font-weight: 700; letter-spacing: 0.08em;">MEASURABLE IMPACT</span>
+        <h2 class="subpage-section-heading" style="font-size: clamp(1.8rem, 2.8vw, 2.4rem); font-weight: 800; color: #0F172A; margin: 8px 0 12px; letter-spacing: -0.01em;">Four Core Business Value Propositions</h2>
+        <p class="subpage-section-desc" style="color: #475569; font-size: 1.05rem; line-height: 1.6;">Direct operational velocity, architectural resilience, and measurable financial return.</p>
       </div>
 
-      <div class="subpage-grid-cards">
+      <div class="business-value-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
         
-            <div class="card subpage-card-padded" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); padding: var(--space-xl); display: flex; flex-direction: column; box-shadow: 0 4px 16px -2px rgba(11, 37, 69, 0.05);">
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-sm);">
-                <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px; border-radius: 999px; background: #FEE2E2; color: #DC2626;">Business Challenge</span>
-              </div>
-              <h3 style="font-size: 1.15rem; font-weight: 700; color: #0F172A; margin-bottom: var(--space-xs);">Business Problem</h3>
-              <p style="color: #334155; font-size: 0.95rem; line-height: 1.55; margin-bottom: var(--space-md);">Disjointed & Conflicting Data</p>
-              
-              <div style="margin-bottom: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid #E2E8F0;">
-                <span style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #D97706; display: block; margin-bottom: 4px;">Why It Matters:</span>
-                <p style="color: #475569; font-size: 0.9rem; line-height: 1.55; margin: 0;">Different departments hold contradictory customer and revenue numbers, leading to confused executive reporting.</p>
-              </div>
-
-              <div style="margin-top: auto; padding: var(--space-md); background: #F0F9FF; border-left: 3px solid #0284C7; border-radius: 6px;">
-                <strong style="color: #0284C7; font-size: 0.85rem; display: block; margin-bottom: 4px;">Proposed Resolution:</strong>
-                <span style="color: #0C4A6E; font-size: 0.9rem; line-height: 1.55;">We establish a single source of truth through unified data integration buses with automated deduplication and master data governance.</span>
-              </div>
-            </div>
-            
-            <div class="card subpage-card-padded" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); padding: var(--space-xl); display: flex; flex-direction: column; box-shadow: 0 4px 16px -2px rgba(11, 37, 69, 0.05);">
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-sm);">
-                <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px; border-radius: 999px; background: #FEE2E2; color: #DC2626;">Business Challenge</span>
-              </div>
-              <h3 style="font-size: 1.15rem; font-weight: 700; color: #0F172A; margin-bottom: var(--space-xs);">Business Problem</h3>
-              <p style="color: #334155; font-size: 0.95rem; line-height: 1.55; margin-bottom: var(--space-md);">Fragile Point-to-Point Integrations</p>
-              
-              <div style="margin-bottom: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid #E2E8F0;">
-                <span style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #D97706; display: block; margin-bottom: 4px;">Why It Matters:</span>
-                <p style="color: #475569; font-size: 0.9rem; line-height: 1.55; margin: 0;">Spaghetti connections between applications break whenever any single software vendor updates an API endpoint.</p>
-              </div>
-
-              <div style="margin-top: auto; padding: var(--space-md); background: #F0F9FF; border-left: 3px solid #0284C7; border-radius: 6px;">
-                <strong style="color: #0284C7; font-size: 0.85rem; display: block; margin-bottom: 4px;">Proposed Resolution:</strong>
-                <span style="color: #0C4A6E; font-size: 0.9rem; line-height: 1.55;">Our integration architectures use standardized middleware and message queues that decouple systems and handle API changes gracefully.</span>
-              </div>
-            </div>
-            
-            <div class="card subpage-card-padded" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); padding: var(--space-xl); display: flex; flex-direction: column; box-shadow: 0 4px 16px -2px rgba(11, 37, 69, 0.05);">
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-sm);">
-                <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px; border-radius: 999px; background: #FEE2E2; color: #DC2626;">Business Challenge</span>
-              </div>
-              <h3 style="font-size: 1.15rem; font-weight: 700; color: #0F172A; margin-bottom: var(--space-xs);">Business Problem</h3>
-              <p style="color: #334155; font-size: 0.95rem; line-height: 1.55; margin-bottom: var(--space-md);">Manual Export-Import Overhead</p>
-              
-              <div style="margin-bottom: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid #E2E8F0;">
-                <span style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #D97706; display: block; margin-bottom: 4px;">Why It Matters:</span>
-                <p style="color: #475569; font-size: 0.9rem; line-height: 1.55; margin: 0;">Staff waste hours daily downloading CSV reports from one tool and manually uploading them into another.</p>
-              </div>
-
-              <div style="margin-top: auto; padding: var(--space-md); background: #F0F9FF; border-left: 3px solid #0284C7; border-radius: 6px;">
-                <strong style="color: #0284C7; font-size: 0.85rem; display: block; margin-bottom: 4px;">Proposed Resolution:</strong>
-                <span style="color: #0C4A6E; font-size: 0.9rem; line-height: 1.55;">We replace manual exports with automated API synchronization that updates records in real time without human intervention.</span>
-              </div>
-            </div>
-            
+        <div class="business-value-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 22px 24px; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04); display: flex; flex-direction: column; transition: transform 0.25s ease, box-shadow 0.25s ease;">
+          <div style="width: 40px; height: 40px; border-radius: 8px; background: rgba(2, 132, 199, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; color: #0284C7;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3 style="font-size: 1.08rem; font-weight: 700; color: #0F172A; margin-bottom: 8px; line-height: 1.35;">Zero Manual Data Transfers</h3>
+          <p style="font-size: 0.90rem; color: #475569; line-height: 1.55; margin: 0;">Eliminate human transcription errors by synchronizing data automatically between ERP, CRM, and internal tools.</p>
+        </div>
+        
+        <div class="business-value-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 22px 24px; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04); display: flex; flex-direction: column; transition: transform 0.25s ease, box-shadow 0.25s ease;">
+          <div style="width: 40px; height: 40px; border-radius: 8px; background: rgba(2, 132, 199, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; color: #0284C7;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 style="font-size: 1.08rem; font-weight: 700; color: #0F172A; margin-bottom: 8px; line-height: 1.35;">Single Source of Truth</h3>
+          <p style="font-size: 0.90rem; color: #475569; line-height: 1.55; margin: 0;">Ensure all teams operate from the same verified customer, inventory, and financial figures.</p>
+        </div>
+        
+        <div class="business-value-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 22px 24px; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04); display: flex; flex-direction: column; transition: transform 0.25s ease, box-shadow 0.25s ease;">
+          <div style="width: 40px; height: 40px; border-radius: 8px; background: rgba(2, 132, 199, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; color: #0284C7;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 style="font-size: 1.08rem; font-weight: 700; color: #0F172A; margin-bottom: 8px; line-height: 1.35;">Resilient System Connectivity</h3>
+          <p style="font-size: 0.90rem; color: #475569; line-height: 1.55; margin: 0;">Asynchronous message queuing ensures that temporary third-party API outages never result in lost business transactions.</p>
+        </div>
+        
+        <div class="business-value-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 22px 24px; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04); display: flex; flex-direction: column; transition: transform 0.25s ease, box-shadow 0.25s ease;">
+          <div style="width: 40px; height: 40px; border-radius: 8px; background: rgba(2, 132, 199, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; color: #0284C7;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          </div>
+          <h3 style="font-size: 1.08rem; font-weight: 700; color: #0F172A; margin-bottom: 8px; line-height: 1.35;">Real-Time Executive Intelligence</h3>
+          <p style="font-size: 0.90rem; color: #475569; line-height: 1.55; margin: 0;">Access live company-wide KPIs and operational performance metrics through centralized dashboards.</p>
+        </div>
+        
       </div>
     </div>
   </section>
     
 
   
-  <!-- Section: Practical Applications -->
-  <section id="practical-applications" class="subpage-section-dark" style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <!-- Section 4: Practical Applications (DARK NAVY) -->
+  <section id="practical-applications" class="subpage-section-dark-alt" style="padding: clamp(48px, 6vw, 76px) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
-      <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
-        <span class="eyebrow-ags" style="color: #38BDF8;">PRACTICAL APPLICATIONS</span>
-        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Real-World Enterprise Applications &amp; Workflows</h2>
-        <p class="subpage-section-desc" style="color: #94A3B8; font-size: 1.05rem;">Realistic ways organizations apply these capabilities to solve tangible operational challenges.</p>
+      <div style="text-align: center; max-width: 760px; margin: 0 auto var(--space-3xl);">
+        <span class="eyebrow-ags" style="color: #38BDF8; font-weight: 700; letter-spacing: 0.08em;">PRACTICAL APPLICATIONS</span>
+        <h2 class="subpage-section-heading" style="font-size: clamp(1.8rem, 2.8vw, 2.4rem); font-weight: 800; color: #FFFFFF; margin: 8px 0 12px; letter-spacing: -0.01em;">Real-World Enterprise Applications &amp; Workflows</h2>
+        <p class="subpage-section-desc" style="color: #94A3B8; font-size: 1.02rem; line-height: 1.6;">Realistic ways forward-thinking organizations apply these capabilities to solve tangible operational challenges.</p>
       </div>
       <div class="subpage-grid-cards">
         
-                <div class="card subpage-card-padded" style="padding: var(--space-xl); background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); display: flex; flex-direction: column;">
-                  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
-                    <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #38BDF8; background: rgba(56, 189, 248, 0.1); padding: 4px 10px; border-radius: 999px;">PRACTICAL APPLICATION</span>
-                  </div>
-                  <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-xs);"><span style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #94A3B8; font-weight: 600; margin-bottom: 2px;">Application Name</span>ERP to E-Commerce Live Inventory & Order Bus</h3>
-                  <div style="margin-bottom: var(--space-md);">
-                    <strong style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #94A3B8; font-weight: 600; margin-bottom: 2px;">Business Scenario &amp; How It Is Used:</strong>
-                    <p style="color: #94A3B8; font-size: 0.925rem; line-height: 1.6; margin: 0;">Real-time bidirectional synchronization ensuring digital storefronts display exact warehouse inventory and new online orders transmit instantly to the ERP ledger.</p>
-                  </div>
-                  <div style='margin-top: auto; padding: 12px 14px; background: rgba(56, 189, 248, 0.08); border-radius: 6px; border-left: 3px solid #38BDF8; font-size: 0.875rem; color: #E2E8F0; line-height: 1.55;'><strong style='color: #38BDF8; display: block; margin-bottom: 3px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;'>Expected Operational Value:</strong>A multi-brand retailer synchronized NetSuite ERP with three online storefronts, eliminating out-of-stock orders and manual order re-entry.</div>
-                </div>
-                
-                <div class="card subpage-card-padded" style="padding: var(--space-xl); background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); display: flex; flex-direction: column;">
-                  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
-                    <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #38BDF8; background: rgba(56, 189, 248, 0.1); padding: 4px 10px; border-radius: 999px;">PRACTICAL APPLICATION</span>
-                  </div>
-                  <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-xs);"><span style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #94A3B8; font-weight: 600; margin-bottom: 2px;">Application Name</span>Automated ETL Pipeline to Enterprise Data Warehouse</h3>
-                  <div style="margin-bottom: var(--space-md);">
-                    <strong style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #94A3B8; font-weight: 600; margin-bottom: 2px;">Business Scenario &amp; How It Is Used:</strong>
-                    <p style="color: #94A3B8; font-size: 0.925rem; line-height: 1.6; margin: 0;">Daily automated extraction of transactional records from CRM, billing, and operational databases into Snowflake or BigQuery for executive BI reports.</p>
-                  </div>
-                  <div style='margin-top: auto; padding: 12px 14px; background: rgba(56, 189, 248, 0.08); border-radius: 6px; border-left: 3px solid #38BDF8; font-size: 0.875rem; color: #E2E8F0; line-height: 1.55;'><strong style='color: #38BDF8; display: block; margin-bottom: 3px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;'>Expected Operational Value:</strong>A financial services group consolidated data from 4 transactional databases into a central data warehouse, enabling real-time executive Power BI dashboards.</div>
-                </div>
-                
-                <div class="card subpage-card-padded" style="padding: var(--space-xl); background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); display: flex; flex-direction: column;">
-                  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
-                    <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #38BDF8; background: rgba(56, 189, 248, 0.1); padding: 4px 10px; border-radius: 999px;">PRACTICAL APPLICATION</span>
-                  </div>
-                  <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin-bottom: var(--space-xs);"><span style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #94A3B8; font-weight: 600; margin-bottom: 2px;">Application Name</span>Secure Third-Party Partner API Gateway</h3>
-                  <div style="margin-bottom: var(--space-md);">
-                    <strong style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #94A3B8; font-weight: 600; margin-bottom: 2px;">Business Scenario &amp; How It Is Used:</strong>
-                    <p style="color: #94A3B8; font-size: 0.925rem; line-height: 1.6; margin: 0;">Providing authorized corporate partners with secure, rate-limited REST APIs to query inventory availability and submit wholesale purchase orders.</p>
-                  </div>
-                  <div style='margin-top: auto; padding: 12px 14px; background: rgba(56, 189, 248, 0.08); border-radius: 6px; border-left: 3px solid #38BDF8; font-size: 0.875rem; color: #E2E8F0; line-height: 1.55;'><strong style='color: #38BDF8; display: block; margin-bottom: 3px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;'>Expected Operational Value:</strong>A logistics supplier deployed an authenticated API gateway for 40 enterprise clients, reducing customer service order status inquiries.</div>
-                </div>
-                
-      </div>
-    </div>
-  </section>
-        
-
-  
-  <!-- Section 4: Engineering Methodology (5-Stage Lifecycle) -->
-  <section id="engineering-methodology" class="subpage-section-light" style="padding: var(--space-4xl) 0; background: #FFFFFF; border-bottom: 1px solid #E2E8F0;">
-    <div class="container">
-      <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
-        <span class="eyebrow-ags" style="color: #0284C7;">ENGINEERING METHODOLOGY</span>
-        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #0F172A; margin: 8px 0 12px;">Disciplined 5-Stage Engineering Lifecycle</h2>
-        <p class="subpage-section-desc" style="color: #475569; font-size: 1.05rem;">A structured implementation approach tailored to your systems, workflows, and governance requirements.</p>
-      </div>
-
-      <div class="subpage-methodology-grid">
-        
-            <div class="subpage-methodology-card" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); padding: 24px 18px; display: flex; flex-direction: column; position: relative; box-shadow: 0 2px 8px -2px rgba(11, 37, 69, 0.05);">
+            <div class="card subpage-card-padded" style="padding: var(--space-xl); background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); display: flex; flex-direction: column;">
               <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <span class="subpage-methodology-badge" style="font-size: 0.95rem; font-weight: 800; color: #0284C7; background: #E0F2FE; padding: 4px 10px; border-radius: 6px; display: inline-block; width: fit-content;">01</span>
-                <div style="width: 28px; height: 28px; border-radius: 50%; background: #FFFFFF; border: 1px solid #E2E8F0; display: flex; align-items: center; justify-content: center; color: #0284C7;">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
+                <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px; border-radius: 999px; background: rgba(56, 189, 248, 0.12); color: #38BDF8;">Enterprise Workflow</span>
               </div>
-              <h4 class="subpage-methodology-title" style="font-size: 1.05rem; font-weight: 700; color: #0F172A; margin: 8px 0;">Requirement Discovery</h4>
-              <p class="subpage-methodology-desc" style="color: #475569; font-size: 0.9rem; line-height: 1.55; margin: 0;">Catalog disparate enterprise applications, proprietary databases, third-party SaaS tools, data exchange formats, and sync frequencies.</p>
+              <h3 style="font-size: 1.18rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">ERP to E-Commerce Live Inventory & Order Bus</h3>
+              <p style="color: #94A3B8; font-size: 0.92rem; line-height: 1.6; margin-bottom: var(--space-md);">Real-time bidirectional synchronization ensuring digital storefronts display exact warehouse inventory and new online orders transmit instantly to the ERP ledger.</p>
+              <div style='margin-top: auto; padding: 12px 14px; background: rgba(56, 189, 248, 0.08); border-radius: 6px; border-left: 3px solid #38BDF8; font-size: 0.88rem; color: #CBD5E1; line-height: 1.55;'>
+              <strong style='color: #38BDF8; display: block; margin-bottom: 3px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;'>Expected Operational Value:</strong>
+              A multi-brand retailer synchronized NetSuite ERP with three online storefronts, eliminating out-of-stock orders and manual order re-entry.
+            </div>
             </div>
             
-            <div class="subpage-methodology-card" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); padding: 24px 18px; display: flex; flex-direction: column; position: relative; box-shadow: 0 2px 8px -2px rgba(11, 37, 69, 0.05);">
+            <div class="card subpage-card-padded" style="padding: var(--space-xl); background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); display: flex; flex-direction: column;">
               <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <span class="subpage-methodology-badge" style="font-size: 0.95rem; font-weight: 800; color: #0284C7; background: #E0F2FE; padding: 4px 10px; border-radius: 6px; display: inline-block; width: fit-content;">02</span>
-                <div style="width: 28px; height: 28px; border-radius: 50%; background: #FFFFFF; border: 1px solid #E2E8F0; display: flex; align-items: center; justify-content: center; color: #0284C7;">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
+                <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px; border-radius: 999px; background: rgba(56, 189, 248, 0.12); color: #38BDF8;">Enterprise Workflow</span>
               </div>
-              <h4 class="subpage-methodology-title" style="font-size: 1.05rem; font-weight: 700; color: #0F172A; margin: 8px 0;">Solution Architecture</h4>
-              <p class="subpage-methodology-desc" style="color: #475569; font-size: 0.9rem; line-height: 1.55; margin: 0;">Design secure API gateways, event-driven message queuing architectures, data mapping schemas, and token authentication protocols.</p>
+              <h3 style="font-size: 1.18rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Automated ETL Pipeline to Enterprise Data Warehouse</h3>
+              <p style="color: #94A3B8; font-size: 0.92rem; line-height: 1.6; margin-bottom: var(--space-md);">Daily automated extraction of transactional records from CRM, billing, and operational databases into Snowflake or BigQuery for executive BI reports.</p>
+              <div style='margin-top: auto; padding: 12px 14px; background: rgba(56, 189, 248, 0.08); border-radius: 6px; border-left: 3px solid #38BDF8; font-size: 0.88rem; color: #CBD5E1; line-height: 1.55;'>
+              <strong style='color: #38BDF8; display: block; margin-bottom: 3px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;'>Expected Operational Value:</strong>
+              A financial services group consolidated data from 4 transactional databases into a central data warehouse, enabling real-time executive Power BI dashboards.
+            </div>
             </div>
             
-            <div class="subpage-methodology-card" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); padding: 24px 18px; display: flex; flex-direction: column; position: relative; box-shadow: 0 2px 8px -2px rgba(11, 37, 69, 0.05);">
+            <div class="card subpage-card-padded" style="padding: var(--space-xl); background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); display: flex; flex-direction: column;">
               <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <span class="subpage-methodology-badge" style="font-size: 0.95rem; font-weight: 800; color: #0284C7; background: #E0F2FE; padding: 4px 10px; border-radius: 6px; display: inline-block; width: fit-content;">03</span>
-                <div style="width: 28px; height: 28px; border-radius: 50%; background: #FFFFFF; border: 1px solid #E2E8F0; display: flex; align-items: center; justify-content: center; color: #0284C7;">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
+                <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px; border-radius: 999px; background: rgba(56, 189, 248, 0.12); color: #38BDF8;">Enterprise Workflow</span>
               </div>
-              <h4 class="subpage-methodology-title" style="font-size: 1.05rem; font-weight: 700; color: #0F172A; margin: 8px 0;">Design & Development</h4>
-              <p class="subpage-methodology-desc" style="color: #475569; font-size: 0.9rem; line-height: 1.55; margin: 0;">Build bidirectional API adapters, automated ETL data synchronization pipelines, error-recovery handlers, and centralized BI reporting models.</p>
+              <h3 style="font-size: 1.18rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Secure Third-Party Partner API Gateway</h3>
+              <p style="color: #94A3B8; font-size: 0.92rem; line-height: 1.6; margin-bottom: var(--space-md);">Providing authorized corporate partners with secure, rate-limited REST APIs to query inventory availability and submit wholesale purchase orders.</p>
+              <div style='margin-top: auto; padding: 12px 14px; background: rgba(56, 189, 248, 0.08); border-radius: 6px; border-left: 3px solid #38BDF8; font-size: 0.88rem; color: #CBD5E1; line-height: 1.55;'>
+              <strong style='color: #38BDF8; display: block; margin-bottom: 3px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;'>Expected Operational Value:</strong>
+              A logistics supplier deployed an authenticated API gateway for 40 enterprise clients, reducing customer service order status inquiries.
             </div>
-            
-            <div class="subpage-methodology-card" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); padding: 24px 18px; display: flex; flex-direction: column; position: relative; box-shadow: 0 2px 8px -2px rgba(11, 37, 69, 0.05);">
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <span class="subpage-methodology-badge" style="font-size: 0.95rem; font-weight: 800; color: #0284C7; background: #E0F2FE; padding: 4px 10px; border-radius: 6px; display: inline-block; width: fit-content;">04</span>
-                <div style="width: 28px; height: 28px; border-radius: 50%; background: #FFFFFF; border: 1px solid #E2E8F0; display: flex; align-items: center; justify-content: center; color: #0284C7;">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-              </div>
-              <h4 class="subpage-methodology-title" style="font-size: 1.05rem; font-weight: 700; color: #0F172A; margin: 8px 0;">Integration & Validation</h4>
-              <p class="subpage-methodology-desc" style="color: #475569; font-size: 0.9rem; line-height: 1.55; margin: 0;">Conduct end-to-end data integrity validation, schema transformation testing, and high-concurrency throughput simulations.</p>
-            </div>
-            
-            <div class="subpage-methodology-card" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); padding: 24px 18px; display: flex; flex-direction: column; position: relative; box-shadow: 0 2px 8px -2px rgba(11, 37, 69, 0.05);">
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <span class="subpage-methodology-badge" style="font-size: 0.95rem; font-weight: 800; color: #0284C7; background: #E0F2FE; padding: 4px 10px; border-radius: 6px; display: inline-block; width: fit-content;">05</span>
-                <div style="width: 28px; height: 28px; border-radius: 50%; background: #FFFFFF; border: 1px solid #E2E8F0; display: flex; align-items: center; justify-content: center; color: #0284C7;">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-              </div>
-              <h4 class="subpage-methodology-title" style="font-size: 1.05rem; font-weight: 700; color: #0F172A; margin: 8px 0;">Deployment & Improvement</h4>
-              <p class="subpage-methodology-desc" style="color: #475569; font-size: 0.9rem; line-height: 1.55; margin: 0;">Deploy integration middleware, establish 24/7 API health telemetry surveillance, and optimize pipeline latency.</p>
             </div>
             
       </div>
@@ -1024,216 +781,72 @@
     
 
   
-  <!-- Section: System Connectivity -->
-  <section id="system-connectivity" class="subpage-section-dark" style="padding: var(--space-4xl) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <!-- Section 5: Connected Ecosystem (LIGHT SLATE) -->
+  <section id="connected-ecosystem" class="subpage-section-light-alt" style="padding: clamp(48px, 6vw, 76px) 0; background: #F8FAFC; border-bottom: 1px solid #E2E8F0;">
     <div class="container">
-      <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
-        <span class="eyebrow-ags" style="color: #38BDF8;">SYSTEM CONNECTIVITY</span>
-        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Enterprise System Connectivity &amp; Data Flow</h2>
-        <p class="subpage-section-desc" style="color: #94A3B8; font-size: 1.05rem;">Configurable interfaces connecting with your existing enterprise infrastructure, databases, and APIs.</p>
-      </div>
-      <div class="subpage-grid-2col">
-        
-            <div style="background: rgba(11, 25, 44, 0.65); border: 1px solid rgba(56, 189, 248, 0.16); border-radius: var(--radius-md); padding: var(--space-lg);">
-              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #38BDF8; background: rgba(56, 189, 248, 0.1); padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px;">Integration Boundary</span>
-              <h4 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin-bottom: 6px;">Message Brokers & Event Buses</h4>
-              <p style="color: #CBD5E1; font-size: 0.9rem; line-height: 1.55; margin: 0;">High-throughput asynchronous queuing using Apache Kafka, RabbitMQ, AWS SQS/SNS, and Redis Pub/Sub.</p>
-            </div>
-            
-            <div style="background: rgba(11, 25, 44, 0.65); border: 1px solid rgba(56, 189, 248, 0.16); border-radius: var(--radius-md); padding: var(--space-lg);">
-              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #38BDF8; background: rgba(56, 189, 248, 0.1); padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px;">Integration Boundary</span>
-              <h4 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin-bottom: 6px;">Enterprise Data Warehouses</h4>
-              <p style="color: #CBD5E1; font-size: 0.9rem; line-height: 1.55; margin: 0;">Integration and ETL modeling for Snowflake, Google BigQuery, Amazon Redshift, and Databricks.</p>
-            </div>
-            
-            <div style="background: rgba(11, 25, 44, 0.65); border: 1px solid rgba(56, 189, 248, 0.16); border-radius: var(--radius-md); padding: var(--space-lg);">
-              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #38BDF8; background: rgba(56, 189, 248, 0.1); padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px;">Integration Boundary</span>
-              <h4 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin-bottom: 6px;">Business Intelligence & Visualization</h4>
-              <p style="color: #CBD5E1; font-size: 0.9rem; line-height: 1.55; margin: 0;">Semantic layer and dashboard integrations for Microsoft Power BI, Tableau, Metabase, and Looker.</p>
-            </div>
-            
-            <div style="background: rgba(11, 25, 44, 0.65); border: 1px solid rgba(56, 189, 248, 0.16); border-radius: var(--radius-md); padding: var(--space-lg);">
-              <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #38BDF8; background: rgba(56, 189, 248, 0.1); padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px;">Integration Boundary</span>
-              <h4 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin-bottom: 6px;">Core Enterprise ERPs</h4>
-              <p style="color: #CBD5E1; font-size: 0.9rem; line-height: 1.55; margin: 0;">Certified connectors for SAP S/4HANA, Oracle NetSuite, Microsoft Dynamics 365, and Infor.</p>
-            </div>
-            
-      </div>
-    </div>
-  </section>
-        
-
-  
-
-  
-  <!-- Section: Deployment & Oversight -->
-  <section id="deployment-oversight" class="subpage-section-light-alt" style="padding: var(--space-4xl) 0; background: #F8FAFC; border-bottom: 1px solid #E2E8F0;">
-    <div class="container">
-      <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
-        <span class="eyebrow-ags" style="color: #0284C7;">DEPLOYMENT &amp; OVERSIGHT</span>
-        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #0F172A; margin: 8px 0 12px;">Implementation Lifecycle, Security &amp; Human Oversight</h2>
-        <p class="subpage-section-desc" style="color: #475569; font-size: 1.05rem;">Prerequisites, security safeguards, and human review gates required for dependable execution.</p>
-      </div>
-      <div class="subpage-grid-2col">
-        
-                <div class="subpage-card-padded" style="padding: var(--space-lg); background: #FFFFFF; border-radius: var(--radius-md); border: 1px solid #E2E8F0; border-left: 3px solid #0284C7; box-shadow: 0 2px 8px -2px rgba(11, 37, 69, 0.04);">
-                  <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #64748B; display: inline-block; margin-bottom: 4px;">Governance &amp; Controls</span>
-                  <h4 style="font-size: 1.05rem; font-weight: 700; color: #0F172A; margin-bottom: 6px;">Asynchronous Decoupling & Queueing</h4>
-                  <p style="color: #475569; font-size: 0.9rem; line-height: 1.55; margin: 0;">Message queues prevent cascading failures by buffering inbound transactions if a receiving system experiences temporary downtime or rate limits.</p>
-                </div>
-                
-                <div class="subpage-card-padded" style="padding: var(--space-lg); background: #FFFFFF; border-radius: var(--radius-md); border: 1px solid #E2E8F0; border-left: 3px solid #0284C7; box-shadow: 0 2px 8px -2px rgba(11, 37, 69, 0.04);">
-                  <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #64748B; display: inline-block; margin-bottom: 4px;">Governance &amp; Controls</span>
-                  <h4 style="font-size: 1.05rem; font-weight: 700; color: #0F172A; margin-bottom: 6px;">Idempotency & Duplicate Prevention</h4>
-                  <p style="color: #475569; font-size: 0.9rem; line-height: 1.55; margin: 0;">All transaction webhooks must include unique idempotency keys so network retries never create duplicate invoices, orders, or journal entries.</p>
-                </div>
-                
-                <div class="subpage-card-padded" style="padding: var(--space-lg); background: #FFFFFF; border-radius: var(--radius-md); border: 1px solid #E2E8F0; border-left: 3px solid #0284C7; box-shadow: 0 2px 8px -2px rgba(11, 37, 69, 0.04);">
-                  <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #64748B; display: inline-block; margin-bottom: 4px;">Governance &amp; Controls</span>
-                  <h4 style="font-size: 1.05rem; font-weight: 700; color: #0F172A; margin-bottom: 6px;">API Rate Limiting & Quota Management</h4>
-                  <p style="color: #475569; font-size: 0.9rem; line-height: 1.55; margin: 0;">Integration middleware must implement token bucket rate-limiting algorithms to avoid exceeding third-party SaaS API quotas.</p>
-                </div>
-                
-      </div>
-    </div>
-  </section>
-        
-
-  
-  <!-- Section: Frequently Asked Questions -->
-  <section id="frequently-asked-questions" class="subpage-section-light" style="padding: var(--space-4xl) 0; background: #FFFFFF; border-bottom: 1px solid #E2E8F0;">
-    <div class="container" style="max-width: 860px; margin: 0 auto;">
-      <div style="text-align: center; margin-bottom: var(--space-3xl);">
-        <span class="eyebrow-ags" style="color: #0284C7;">FREQUENTLY ASKED QUESTIONS</span>
-        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #0F172A; margin: 8px 0 12px;">Frequently Asked Questions</h2>
-        <p class="subpage-section-desc" style="color: #475569; font-size: 1.05rem;">Practical guidance regarding project scope, integrations, and operational requirements.</p>
-      </div>
-      <div>
-        
-                <details style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: var(--radius-md); padding: var(--space-md) var(--space-lg); margin-bottom: var(--space-sm); box-shadow: 0 1px 4px rgba(11,37,69,0.03);">
-                  <summary style="font-weight: 700; color: #0F172A; font-size: 1.05rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                    <span>How does enterprise integration eliminate manual data re-entry between systems?</span>
-                    <span style="color: #0284C7; font-size: 1.25rem; font-weight: 400; margin-left: 12px;">+</span>
-                  </summary>
-                  <div style="color: #475569; font-size: 0.925rem; line-height: 1.6; margin-top: var(--space-sm); border-top: 1px solid #E2E8F0; padding-top: var(--space-sm);">
-                    By establishing automated, bi-directional API pipelines that synchronize records across CRM, ERP, HRMS, and accounting platforms instantly upon change events.
-                  </div>
-                </details>
-                
-                <details style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: var(--radius-md); padding: var(--space-md) var(--space-lg); margin-bottom: var(--space-sm); box-shadow: 0 1px 4px rgba(11,37,69,0.03);">
-                  <summary style="font-weight: 700; color: #0F172A; font-size: 1.05rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                    <span>What happens if a target system is temporarily offline during a data sync event?</span>
-                    <span style="color: #0284C7; font-size: 1.25rem; font-weight: 400; margin-left: 12px;">+</span>
-                  </summary>
-                  <div style="color: #475569; font-size: 0.925rem; line-height: 1.6; margin-top: var(--space-sm); border-top: 1px solid #E2E8F0; padding-top: var(--space-sm);">
-                    Our message queue architecture stores unacknowledged payloads in durable dead-letter queues, automatically retrying delivery with exponential backoff once the target recovers.
-                  </div>
-                </details>
-                
-                <details style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: var(--radius-md); padding: var(--space-md) var(--space-lg); margin-bottom: var(--space-sm); box-shadow: 0 1px 4px rgba(11,37,69,0.03);">
-                  <summary style="font-weight: 700; color: #0F172A; font-size: 1.05rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                    <span>What integration protocols and data formats are supported?</span>
-                    <span style="color: #0284C7; font-size: 1.25rem; font-weight: 400; margin-left: 12px;">+</span>
-                  </summary>
-                  <div style="color: #475569; font-size: 0.925rem; line-height: 1.6; margin-top: var(--space-sm); border-top: 1px solid #E2E8F0; padding-top: var(--space-sm);">
-                    We support REST (JSON), GraphQL, SOAP (XML), gRPC, Webhooks, flat-file SFTP (CSV/EDI), and AMQP/Kafka event streams.
-                  </div>
-                </details>
-                
-                <details style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: var(--radius-md); padding: var(--space-md) var(--space-lg); margin-bottom: var(--space-sm); box-shadow: 0 1px 4px rgba(11,37,69,0.03);">
-                  <summary style="font-weight: 700; color: #0F172A; font-size: 1.05rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                    <span>How are data mapping and schema transformations managed between incompatible systems?</span>
-                    <span style="color: #0284C7; font-size: 1.25rem; font-weight: 400; margin-left: 12px;">+</span>
-                  </summary>
-                  <div style="color: #475569; font-size: 0.925rem; line-height: 1.6; margin-top: var(--space-sm); border-top: 1px solid #E2E8F0; padding-top: var(--space-sm);">
-                    Middleware transformation logic normalizes heterogeneous field names, currency units, date formats, and enumerated values into standardized payloads.
-                  </div>
-                </details>
-                
-                <details style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: var(--radius-md); padding: var(--space-md) var(--space-lg); margin-bottom: var(--space-sm); box-shadow: 0 1px 4px rgba(11,37,69,0.03);">
-                  <summary style="font-weight: 700; color: #0F172A; font-size: 1.05rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                    <span>How do you protect sensitive data during transit between cloud and on-premises environments?</span>
-                    <span style="color: #0284C7; font-size: 1.25rem; font-weight: 400; margin-left: 12px;">+</span>
-                  </summary>
-                  <div style="color: #475569; font-size: 0.925rem; line-height: 1.6; margin-top: var(--space-sm); border-top: 1px solid #E2E8F0; padding-top: var(--space-sm);">
-                    All communication channels enforce TLS 1.3 encryption, IP allowlisting, OAuth 2.0 / mutual TLS (mTLS) authentication, and zero plain-text credential storage.
-                  </div>
-                </details>
-                
-                <details style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: var(--radius-md); padding: var(--space-md) var(--space-lg); margin-bottom: var(--space-sm); box-shadow: 0 1px 4px rgba(11,37,69,0.03);">
-                  <summary style="font-weight: 700; color: #0F172A; font-size: 1.05rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                    <span>Can the integration platform feed clean, consolidated data into BI reporting tools?</span>
-                    <span style="color: #0284C7; font-size: 1.25rem; font-weight: 400; margin-left: 12px;">+</span>
-                  </summary>
-                  <div style="color: #475569; font-size: 0.925rem; line-height: 1.6; margin-top: var(--space-sm); border-top: 1px solid #E2E8F0; padding-top: var(--space-sm);">
-                    Yes. We build harmonized data marts that feed clean operational data directly into Power BI, Tableau, or custom executive dashboards.
-                  </div>
-                </details>
-                
-      </div>
-    </div>
-  </section>
-        
-
-  
-  <!-- Section 9: Connected Ecosystem -->
-  <section id="connected-ecosystem" class="subpage-section-dark" style="padding: var(--space-4xl) 0; background: #08111F; border-bottom: 1px solid rgba(255,255,255,0.06);">
-    <div class="container">
-      <div style="text-align: center; max-width: 720px; margin: 0 auto var(--space-3xl);">
-        <span class="eyebrow-ags" style="color: #38BDF8;">CONNECTED ECOSYSTEM</span>
-        <h2 class="subpage-section-heading" style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 12px;">Cross-Domain Enterprise Ecosystem Integration</h2>
-        <p class="subpage-section-desc" style="color: #94A3B8; font-size: 1.05rem;">Integrate complementary enterprise modules across our four core service domains.</p>
+      <div style="text-align: center; max-width: 760px; margin: 0 auto var(--space-3xl);">
+        <span class="eyebrow-ags" style="color: #0284C7; font-weight: 700; letter-spacing: 0.08em;">CONNECTED ECOSYSTEM</span>
+        <h2 class="subpage-section-heading" style="font-size: clamp(1.8rem, 2.8vw, 2.4rem); font-weight: 800; color: #0F172A; margin: 8px 0 12px; letter-spacing: -0.01em;">Cross-Domain Enterprise Ecosystem Integration</h2>
+        <p class="subpage-section-desc" style="color: #475569; font-size: 1.05rem; line-height: 1.6;">Integrate complementary enterprise modules across our four core service domains.</p>
       </div>
 
-      <div class="subpage-grid-related">
+      <div class="subpage-grid-related" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
         
-            <a href="../technology/enterprise-integration.html" class="card" style="padding: var(--space-lg); text-decoration: none; display: block; transition: all 0.2s ease; background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg);">
-              <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #38BDF8; font-weight: 700; background: rgba(56, 189, 248, 0.1); padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 6px;">Tech Architecture</span>
-              <h4 style="font-size: 1.1rem; color: #FFFFFF; margin: 6px 0 4px;">Technology: Enterprise Integration &rarr;</h4>
-              <p style="color: #94A3B8; font-size: 0.85rem; margin: 0; line-height: 1.45;">In-depth review of our API integration patterns, protocols, and security models.</p>
-            </a>
-            
-            <a href="../services/enterprise-applications.html" class="card" style="padding: var(--space-lg); text-decoration: none; display: block; transition: all 0.2s ease; background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg);">
-              <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #38BDF8; font-weight: 700; background: rgba(56, 189, 248, 0.1); padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 6px;">Core Service</span>
-              <h4 style="font-size: 1.1rem; color: #FFFFFF; margin: 6px 0 4px;">Custom Enterprise Applications &rarr;</h4>
-              <p style="color: #94A3B8; font-size: 0.85rem; margin: 0; line-height: 1.45;">Build tailored operations portals powered by integrated enterprise data.</p>
-            </a>
-            
-            <a href="../technology/data-analytics.html" class="card" style="padding: var(--space-lg); text-decoration: none; display: block; transition: all 0.2s ease; background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg);">
-              <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #38BDF8; font-weight: 700; background: rgba(56, 189, 248, 0.1); padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 6px;">Technology Pillar</span>
-              <h4 style="font-size: 1.1rem; color: #FFFFFF; margin: 6px 0 4px;">Data Analytics & Intelligence &rarr;</h4>
-              <p style="color: #94A3B8; font-size: 0.85rem; margin: 0; line-height: 1.45;">Explore operational dashboards, trend analysis, and predictive modeling.</p>
-            </a>
-            
+        <a href="../technology/enterprise-integration.html" class="card" style="padding: var(--space-xl); text-decoration: none; display: flex; flex-direction: column; transition: all 0.25s ease; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);">
+          <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #0284C7; font-weight: 700; background: #E0F2FE; padding: 4px 10px; border-radius: 999px; display: inline-block; margin-bottom: 10px; align-self: flex-start;">Tech Architecture</span>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #0F172A; margin: 0 0 8px; display: flex; align-items: center; justify-content: space-between;">
+            <span>Technology: Enterprise Integration</span>
+            <span style="color: #0284C7; font-size: 1.2rem;">&rarr;</span>
+          </h3>
+          <p style="color: #475569; font-size: 0.90rem; margin: 0; line-height: 1.55;">In-depth review of our API integration patterns, protocols, and security models.</p>
+        </a>
+        
+        <a href="../services/enterprise-applications.html" class="card" style="padding: var(--space-xl); text-decoration: none; display: flex; flex-direction: column; transition: all 0.25s ease; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);">
+          <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #0284C7; font-weight: 700; background: #E0F2FE; padding: 4px 10px; border-radius: 999px; display: inline-block; margin-bottom: 10px; align-self: flex-start;">Core Service</span>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #0F172A; margin: 0 0 8px; display: flex; align-items: center; justify-content: space-between;">
+            <span>Custom Enterprise Applications</span>
+            <span style="color: #0284C7; font-size: 1.2rem;">&rarr;</span>
+          </h3>
+          <p style="color: #475569; font-size: 0.90rem; margin: 0; line-height: 1.55;">Build tailored operations portals powered by integrated enterprise data.</p>
+        </a>
+        
+        <a href="../technology/data-analytics.html" class="card" style="padding: var(--space-xl); text-decoration: none; display: flex; flex-direction: column; transition: all 0.25s ease; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: var(--radius-lg); box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);">
+          <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #0284C7; font-weight: 700; background: #E0F2FE; padding: 4px 10px; border-radius: 999px; display: inline-block; margin-bottom: 10px; align-self: flex-start;">Technology Pillar</span>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #0F172A; margin: 0 0 8px; display: flex; align-items: center; justify-content: space-between;">
+            <span>Data Analytics & Intelligence</span>
+            <span style="color: #0284C7; font-size: 1.2rem;">&rarr;</span>
+          </h3>
+          <p style="color: #475569; font-size: 0.90rem; margin: 0; line-height: 1.55;">Explore operational dashboards, trend analysis, and predictive modeling.</p>
+        </a>
+        
       </div>
     </div>
   </section>
     
 
   
-  <!-- Bottom CTA Container (Light Background with Floating Dark Gradient Card) -->
-  <section class="subpage-cta-section subpage-section-light-alt" style="padding: var(--space-4xl) 0; background: #F8FAFC; border-top: 1px solid #E2E8F0; text-align: center;">
-    <div class="container" style="max-width: 960px; margin: 0 auto;">
-      <div style="background: linear-gradient(135deg, #07172B 0%, #0B2545 60%, #0E2E56 100%); border-radius: var(--radius-xl); padding: var(--space-3xl) var(--space-2xl); text-align: center; box-shadow: 0 20px 45px -10px rgba(11,37,69,0.22); border: 1px solid rgba(56, 189, 248, 0.25);">
-        <h2 style="font-size: clamp(2rem, 3.5vw, 2.7rem); font-weight: 800; color: #FFFFFF; margin-bottom: var(--space-md); letter-spacing: -0.02em;">
-          Let’s Build Your Next Business Solution.
-        </h2>
-        <p style="font-size: 1.05rem; color: #CBD5E1; line-height: 1.65; max-width: 680px; margin: 0 auto var(--space-2xl);">
-          Discuss your business challenges, operational needs, and technology goals with our team. We evaluate your existing system architecture and help you plan the right solution.
-        </p>
-        <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
-          <a href="../contact.html" class="btn btn-consultation-ags" style="font-size: 1.05rem; padding: 14px 34px;">
-            <span>Discuss Your Project</span>
-            <svg class="btn-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-          <a href="tel:04046146093" class="btn btn-outline-white" style="font-size: 1.05rem; padding: 14px 28px;">
-            <span>Call 040-46146093</span>
-          </a>
-        </div>
+  <!-- Bottom CTA Banner (Dark Gradient) -->
+  <section class="cta-strip-ags subpage-section-dark" style="padding: clamp(56px, 7vw, 84px) 0; background: linear-gradient(135deg, #07172B 0%, #0B2545 60%, #0E2E56 100%); text-align: center; border-top: 1px solid rgba(255,255,255,0.08);">
+    <div class="container" style="max-width: 780px; margin: 0 auto;">
+      <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 800; color: #FFFFFF; margin-bottom: 16px; letter-spacing: -0.02em;">
+        Let’s Build Your Next Business Solution.
+      </h2>
+      <p style="font-size: 1.1rem; color: #CBD5E1; line-height: 1.65; margin-bottom: 32px;">
+        Discuss your business challenges, operational needs, and technology goals with our team. We evaluate your existing system architecture and help you plan the right solution.
+      </p>
+      <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+        <a href="../contact.html" class="btn btn-consultation-ags" style="font-size: 1.02rem; padding: 14px 32px;">
+          <span>Discuss Your Project</span>
+          <svg class="btn-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <a href="tel:04046146093" class="btn btn-outline-white" style="font-size: 1.02rem; padding: 14px 28px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-right: 6px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>040-46146093</span>
+        </a>
       </div>
     </div>
   </section>
-        
+    
 
   <footer class="site-footer">
     <div class="container footer-container">
