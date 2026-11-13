@@ -361,16 +361,19 @@ function initMobileNavigation() {
     if (submenu) {
       bindAction(toggle, () => {
         const isOpen = submenu.classList.contains('open');
+        const parentAccordion = toggle.closest('.mobile-subcat-accordion');
         if (isOpen) {
           submenu.classList.remove('open');
           toggle.classList.remove('open');
           toggle.setAttribute('aria-expanded', 'false');
           submenu.setAttribute('aria-hidden', 'true');
+          if (parentAccordion) parentAccordion.classList.remove('is-open');
         } else {
           submenu.classList.add('open');
           toggle.classList.add('open');
           toggle.setAttribute('aria-expanded', 'true');
           submenu.setAttribute('aria-hidden', 'false');
+          if (parentAccordion) parentAccordion.classList.add('is-open');
         }
       });
     }

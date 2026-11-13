@@ -1451,6 +1451,105 @@ button, input, select, textarea {
   color: #1D4ED8;
 }
 
+/* --- Mobile Services Nested Secondary Accordion --- */
+.mobile-subcat-accordion {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  background: #FFFFFF;
+  overflow: hidden;
+  margin-bottom: 8px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mobile-subcat-accordion:has(.mobile-subcat-toggle.open),
+.mobile-subcat-accordion.is-open {
+  border-color: #93C5FD;
+  box-shadow: 0 4px 14px rgba(31, 111, 235, 0.08);
+}
+
+.mobile-subcat-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 13px 16px;
+  background: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  gap: 12px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-subcat-toggle:hover {
+  background: #F8FAFC;
+}
+
+.mobile-subcat-toggle.open {
+  background: #F0F9FF;
+  border-bottom: 1px solid #E0F2FE;
+}
+
+.mobile-subcat-toggle-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0F172A;
+  line-height: 1.35;
+  transition: color 0.15s ease;
+}
+
+.mobile-subcat-toggle.open .mobile-subcat-toggle-text {
+  color: #0284C7;
+}
+
+.mobile-subcat-chevron {
+  color: #64748B;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.mobile-subcat-toggle.open .mobile-subcat-chevron {
+  transform: rotate(180deg);
+  color: #0284C7;
+}
+
+.mobile-nested-collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+  opacity: 0;
+  background: #FAFAFA;
+}
+
+.mobile-nested-collapse.open {
+  max-height: 1200px;
+  opacity: 1;
+}
+
+.mobile-nested-collapse .mobile-sublink-list {
+  padding: 8px 8px 12px;
+}
+
+.mobile-sublink-overview {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  background: #EFF6FF !important;
+  color: #1D4ED8 !important;
+  font-weight: 700 !important;
+  border: 1px solid #DBEAFE;
+  margin-bottom: 6px;
+  border-radius: 6px;
+}
+
+.mobile-sublink-overview:hover {
+  background: #DBEAFE !important;
+}
+
 .mobile-subcat-title {
   font-size: 0.85rem;
   font-weight: 800;
@@ -3897,6 +3996,25 @@ body.mobile-nav-open {
 .category-pill-link.active .pill-counter {
   background: rgba(255, 255, 255, 0.2);
   color: #FFFFFF;
+}
+
+.category-pill-link .pill-arrow-icon {
+  flex-shrink: 0;
+  color: #1F6FEB;
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.category-pill-link:hover .pill-arrow-icon {
+  transform: translateX(3px);
+  color: #0284C7;
+}
+
+.category-pill-cta {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+.category-pill-cta:hover {
+  box-shadow: 0 4px 14px rgba(31, 111, 235, 0.22) !important;
 }
 
 /* Category Sections */
@@ -8671,29 +8789,63 @@ html, body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .hero-actions-ags {
     flex-direction: column !important;
     width: 100% !important;
-    gap: 10px !important;
+    gap: 16px !important;
+    row-gap: 16px !important;
+    margin-bottom: 24px !important;
   }
   
   .hero-actions-ags .btn {
     width: 100% !important;
     justify-content: center !important;
     text-align: center !important;
-    padding: 12px 20px !important;
-    font-size: 0.95rem !important;
+    padding: 13px 22px !important;
+    font-size: 0.98rem !important;
+    box-sizing: border-box !important;
   }
   
   .hero-highlights-strip {
-    gap: 6px !important;
-    margin-top: 16px !important;
+    gap: 10px !important;
+    row-gap: 10px !important;
+    margin-top: 24px !important;
   }
   
   .hero-highlight-pill {
-    font-size: 0.74rem !important;
-    padding: 4px 10px !important;
+    font-size: 0.78rem !important;
+    padding: 6px 12px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-actions-ags {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 16px !important;
+    row-gap: 16px !important;
+    margin-bottom: 24px !important;
+  }
+  
+  .hero-actions-ags .btn {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 13px 20px !important;
+    font-size: 0.96rem !important;
+    box-sizing: border-box !important;
+  }
+  
+  .hero-highlights-strip {
+    gap: 10px !important;
+    row-gap: 10px !important;
+    margin-top: 24px !important;
+  }
+  
+  .hero-highlight-pill {
+    font-size: 0.78rem !important;
+    padding: 6px 12px !important;
   }
 }
 

@@ -247,56 +247,112 @@
             </button>
             <div class="mobile-submenu-collapse" id="mobileServicesSubmenu" aria-hidden="true">
               <div class="mobile-submenu-inner">
-                <div class="mobile-subcat-group">
+                <div class="mobile-subcat-group mobile-catalog-link-group">
                   <a href="../services.html" class="mobile-subcat-main-link">
                     <span>All Services Catalog</span>
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                   </a>
                 </div>
 
-                <div class="mobile-subcat-group">
-                  <a href="../services/digital-commerce.html" class="mobile-subcat-title">Digital Commerce &amp; Supply Chain</a>
-                  <ul class="mobile-sublink-list">
-                    <li><a href="../services/digital-commerce-platforms.html" class="mobile-sublink">Digital Commerce Platforms</a></li>
-                    <li><a href="../services/foodtech.html" class="mobile-sublink">FoodTech Solutions</a></li>
-                    <li><a href="../services/supply-chain-management.html" class="mobile-sublink">Supply Chain Management</a></li>
-                    <li><a href="../services/procurement.html" class="mobile-sublink">Procurement &amp; Vendor Management</a></li>
-                    <li><a href="../services/logistics.html" class="mobile-sublink">Logistics &amp; Distribution</a></li>
-                  </ul>
+                <!-- 1. Digital Commerce & Supply Chain -->
+                <div class="mobile-subcat-accordion">
+                  <button type="button" class="mobile-subcat-toggle mobile-accordion-toggle" id="toggleSubcatDC" aria-expanded="false" aria-controls="collapseSubcatDC">
+                    <span class="mobile-subcat-toggle-text">Digital Commerce &amp; Supply Chain</span>
+                    <svg class="mobile-subcat-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+                  <div class="mobile-nested-collapse" id="collapseSubcatDC" aria-hidden="true">
+                    <ul class="mobile-sublink-list">
+                      <li>
+                        <a href="../services/digital-commerce.html" class="mobile-sublink mobile-sublink-overview">
+                          <span>Digital Commerce Overview</span>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                      </li>
+                      <li><a href="../services/digital-commerce-platforms.html" class="mobile-sublink">Digital Commerce Platforms</a></li>
+                      <li><a href="../services/foodtech.html" class="mobile-sublink">FoodTech Solutions</a></li>
+                      <li><a href="../services/supply-chain-management.html" class="mobile-sublink">Supply Chain Management</a></li>
+                      <li><a href="../services/procurement.html" class="mobile-sublink">Procurement &amp; Vendor Management</a></li>
+                      <li><a href="../services/logistics.html" class="mobile-sublink">Logistics &amp; Distribution</a></li>
+                    </ul>
+                  </div>
                 </div>
 
-                <div class="mobile-subcat-group">
-                  <a href="../services/enterprise-business.html" class="mobile-subcat-title">Enterprise Business Solutions</a>
-                  <ul class="mobile-sublink-list">
-                    <li><a href="../services/crm.html" class="mobile-sublink">Customer Relationship Management (CRM)</a></li>
-                    <li><a href="../services/hrms.html" class="mobile-sublink">Human Resource Management (HRMS)</a></li>
-                    <li><a href="../services/business-process-automation.html" class="mobile-sublink">Business Process Automation</a></li>
-                    <li><a href="../services/enterprise-applications.html" class="mobile-sublink">Custom Enterprise Applications</a></li>
-                    <li><a href="../services/enterprise-integration.html" class="mobile-sublink">Enterprise Integration &amp; Middleware</a></li>
-                  </ul>
+                <!-- 2. Enterprise Business Solutions -->
+                <div class="mobile-subcat-accordion">
+                  <button type="button" class="mobile-subcat-toggle mobile-accordion-toggle" id="toggleSubcatEBS" aria-expanded="false" aria-controls="collapseSubcatEBS">
+                    <span class="mobile-subcat-toggle-text">Enterprise Business Solutions</span>
+                    <svg class="mobile-subcat-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+                  <div class="mobile-nested-collapse" id="collapseSubcatEBS" aria-hidden="true">
+                    <ul class="mobile-sublink-list">
+                      <li>
+                        <a href="../services/enterprise-business.html" class="mobile-sublink mobile-sublink-overview">
+                          <span>Enterprise Business Overview</span>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                      </li>
+                      <li><a href="../services/crm.html" class="mobile-sublink">Customer Relationship Management (CRM)</a></li>
+                      <li><a href="../services/hrms.html" class="mobile-sublink">Human Resource Management (HRMS)</a></li>
+                      <li><a href="../services/business-process-automation.html" class="mobile-sublink">Business Process Automation</a></li>
+                      <li><a href="../services/enterprise-applications.html" class="mobile-sublink">Custom Enterprise Applications</a></li>
+                      <li><a href="../services/enterprise-integration.html" class="mobile-sublink">Enterprise Integration &amp; Middleware</a></li>
+                    </ul>
+                  </div>
                 </div>
 
-                <div class="mobile-subcat-group">
-                  <a href="../services/intelligent-monitoring.html" class="mobile-subcat-title">Intelligent Monitoring &amp; Automation</a>
-                  <ul class="mobile-sublink-list">
-                    <li><a href="../services/real-time-monitoring.html" class="mobile-sublink">Real-Time Monitoring &amp; Dashboards</a></li>
-                    <li><a href="../services/iot-integration.html" class="mobile-sublink">IoT &amp; Device Integration</a></li>
-                    <li><a href="../services/operational-analytics.html" class="mobile-sublink">Operational Analytics</a></li>
-                    <li><a href="../services/workflow-automation.html" class="mobile-sublink">Workflow &amp; Process Automation</a></li>
-                    <li><a href="../services/infrastructure-monitoring.html" class="mobile-sublink">System &amp; Infrastructure Monitoring</a></li>
-                  </ul>
+                <!-- 3. Intelligent Monitoring & Automation -->
+                <div class="mobile-subcat-accordion">
+                  <button type="button" class="mobile-subcat-toggle mobile-accordion-toggle" id="toggleSubcatIMA" aria-expanded="false" aria-controls="collapseSubcatIMA">
+                    <span class="mobile-subcat-toggle-text">Intelligent Monitoring &amp; Automation</span>
+                    <svg class="mobile-subcat-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+                  <div class="mobile-nested-collapse" id="collapseSubcatIMA" aria-hidden="true">
+                    <ul class="mobile-sublink-list">
+                      <li>
+                        <a href="../services/intelligent-monitoring.html" class="mobile-sublink mobile-sublink-overview">
+                          <span>Intelligent Monitoring Overview</span>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                      </li>
+                      <li><a href="../services/real-time-monitoring.html" class="mobile-sublink">Real-Time Monitoring &amp; Dashboards</a></li>
+                      <li><a href="../services/iot-integration.html" class="mobile-sublink">IoT &amp; Device Integration</a></li>
+                      <li><a href="../services/operational-analytics.html" class="mobile-sublink">Operational Analytics</a></li>
+                      <li><a href="../services/workflow-automation.html" class="mobile-sublink">Workflow &amp; Process Automation</a></li>
+                      <li><a href="../services/infrastructure-monitoring.html" class="mobile-sublink">System &amp; Infrastructure Monitoring</a></li>
+                    </ul>
+                  </div>
                 </div>
 
-                <div class="mobile-subcat-group">
-                  <a href="../services/ai-healthcare.html" class="mobile-subcat-title">AI &amp; Healthcare Technology</a>
-                  <ul class="mobile-sublink-list">
-                    <li><a href="../services/agentic-ai.html" class="mobile-sublink">Agentic AI &amp; Intelligent Agents</a></li>
-                    <li><a href="../services/generative-ai.html" class="mobile-sublink">Generative AI &amp; Enterprise Assistants</a></li>
-                    <li><a href="../services/document-processing.html" class="mobile-sublink">Intelligent Document Processing</a></li>
-                    <li><a href="../services/ai-workflow-automation.html" class="mobile-sublink">AI-Powered Workflow Automation</a></li>
-                    <li><a href="../services/healthcare-automation.html" class="mobile-sublink">Healthcare Technology &amp; Automation</a></li>
-                    <li><a href="../services/healthcare-data-analytics.html" class="mobile-sublink">Healthcare Data Integration &amp; Analytics</a></li>
-                  </ul>
+                <!-- 4. AI & Healthcare Technology -->
+                <div class="mobile-subcat-accordion">
+                  <button type="button" class="mobile-subcat-toggle mobile-accordion-toggle" id="toggleSubcatAIH" aria-expanded="false" aria-controls="collapseSubcatAIH">
+                    <span class="mobile-subcat-toggle-text">AI &amp; Healthcare Technology</span>
+                    <svg class="mobile-subcat-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+                  <div class="mobile-nested-collapse" id="collapseSubcatAIH" aria-hidden="true">
+                    <ul class="mobile-sublink-list">
+                      <li>
+                        <a href="../services/ai-healthcare.html" class="mobile-sublink mobile-sublink-overview">
+                          <span>AI &amp; Healthcare Overview</span>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                      </li>
+                      <li><a href="../services/agentic-ai.html" class="mobile-sublink">Agentic AI &amp; Intelligent Agents</a></li>
+                      <li><a href="../services/generative-ai.html" class="mobile-sublink">Generative AI &amp; Enterprise Assistants</a></li>
+                      <li><a href="../services/document-processing.html" class="mobile-sublink">Intelligent Document Processing</a></li>
+                      <li><a href="../services/ai-workflow-automation.html" class="mobile-sublink">AI-Powered Workflow Automation</a></li>
+                      <li><a href="../services/healthcare-automation.html" class="mobile-sublink">Healthcare Technology &amp; Automation</a></li>
+                      <li><a href="../services/healthcare-data-analytics.html" class="mobile-sublink">Healthcare Data Integration &amp; Analytics</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -456,7 +512,7 @@
         </p>
       </div>
 
-      <div class="hero-actions-ags" style="display: flex; gap: var(--space-md); flex-wrap: wrap; align-items: center;">
+      <div class="hero-actions-ags" style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
         <a href="../contact.html" class="btn btn-consultation-ags" style="padding: 12px 28px; font-size: 0.98rem;">
           <span>Discuss Your Project</span>
           <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -469,7 +525,7 @@
         </a>
       </div>
 
-      <div class="hero-highlights-strip" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px;"><a href="../services/real-time-monitoring.html" class="category-pill-link" style="padding: 8px 18px; font-size: 0.88rem;">Real-Time Operational Monitoring</a><a href="../services/iot-integration.html" class="category-pill-link" style="padding: 8px 18px; font-size: 0.88rem;">IoT & Connected Systems</a><a href="../services/operational-analytics.html" class="category-pill-link" style="padding: 8px 18px; font-size: 0.88rem;">Operational Analytics</a><a href="../services/workflow-automation.html" class="category-pill-link" style="padding: 8px 18px; font-size: 0.88rem;">Intelligent Workflow Automation</a><a href="../services/infrastructure-monitoring.html" class="category-pill-link" style="padding: 8px 18px; font-size: 0.88rem;">Infrastructure Monitoring</a></div>
+      <div class="hero-highlights-strip" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px;"><a href="../services/real-time-monitoring.html" class="category-pill-link category-pill-cta" style="padding: 9px 18px; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 8px;"><span>Real-Time Operational Monitoring</span><svg class="pill-arrow-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a><a href="../services/iot-integration.html" class="category-pill-link category-pill-cta" style="padding: 9px 18px; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 8px;"><span>IoT & Connected Systems</span><svg class="pill-arrow-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a><a href="../services/operational-analytics.html" class="category-pill-link category-pill-cta" style="padding: 9px 18px; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 8px;"><span>Operational Analytics</span><svg class="pill-arrow-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a><a href="../services/workflow-automation.html" class="category-pill-link category-pill-cta" style="padding: 9px 18px; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 8px;"><span>Intelligent Workflow Automation</span><svg class="pill-arrow-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a><a href="../services/infrastructure-monitoring.html" class="category-pill-link category-pill-cta" style="padding: 9px 18px; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 8px;"><span>Infrastructure Monitoring</span><svg class="pill-arrow-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1F6FEB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a></div>
     </div>
   </section>
 
