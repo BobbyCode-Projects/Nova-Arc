@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <!-- Center Dot -->
+  <circle cx="250" cy="250" r="22" fill="#F4EEDD" />
+  
+  <!-- Inner Arc (Emerald Green) -->
+  <path d="M 172.726 229.294 A 80.000 80.000 0 1 1 222.638 325.175" fill="none" stroke="#2DD782" stroke-width="38" stroke-linecap="round" />
+  
+  <!-- Middle Arc (Mint Green) -->
+  <path d="M 236.752 401.422 A 152.000 152.000 0 1 1 399.691 223.605" fill="none" stroke="#A5DABE" stroke-width="38" stroke-linecap="round" />
+  
+  <!-- Outer Arc (Cream) -->
+  <path d="M 435.704 124.741 A 224.000 224.000 0 1 1 91.608 91.608" fill="none" stroke="#F4EEDD" stroke-width="38" stroke-linecap="round" />
+</svg>

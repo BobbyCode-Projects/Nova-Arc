@@ -71,6 +71,17 @@ def replace_header_and_footer(html_content, root_prefix, active_section=""):
     # Normalize style.css to v=4.0
     html_content = re.sub(r'href="[^"]*css/style\.css(\?v=[^"]*)?"', f'href="{root_prefix}css/style.css?v=4.0"', html_content)
 
+    # Normalize Favicon suite
+    favicons = f'''<!-- Favicon & Brand Icons -->
+  <link rel="icon" type="image/svg+xml" href="{root_prefix}images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="{root_prefix}images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{root_prefix}images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{root_prefix}images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="{root_prefix}favicon.ico">
+  <link rel="manifest" href="{root_prefix}site.webmanifest">'''
+    html_content = re.sub(r'<!--\s*Favicon[^-]*-->\s*<link rel="icon"[^>]*>', favicons, html_content)
+    html_content = re.sub(r'<link rel="icon" type="image/png" href="[^"]*images/nova-arc-logo\.png">', favicons, html_content)
+
     # Ensure body has subpage-body class for root internal pages (index.html is excluded)
     if '<body class="subpage-body">' not in html_content:
         html_content = re.sub(r'<body(?:\s+class="[^"]*")?>', '<body class="subpage-body">', html_content, count=1)
@@ -245,8 +256,13 @@ def generate_about_page():
   <meta name="twitter:title" content="About Nova Arc | Enterprise Technology &amp; Systems Engineering">
   <meta name="twitter:description" content="Nova Arc is an enterprise technology engineering firm headquartered in Hyderabad. We build connected commerce platforms, enterprise business solutions, real-time IoT monitoring, and governed AI automation.">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/nova-arc-logo.png">
+  <!-- Favicon & Brand Icons -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
 
   <!-- Google Font: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -647,8 +663,13 @@ def generate_404_page():
   <meta name="description" content="The page you requested could not be found. Explore Nova Arc's services, technology, and industries.">
   <meta name="robots" content="noindex, follow">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/nova-arc-logo.png">
+  <!-- Favicon & Brand Icons -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
 
   <!-- Fonts & Core Stylesheet -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

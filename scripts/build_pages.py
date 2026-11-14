@@ -20,9 +20,9 @@ def get_shared_header(root_prefix, active_section=""):
     return f"""  <header class="site-header" id="top">
     <div class="container navbar">
       <!-- Logo -->
-      <a href="{root_prefix}index.html" class="logo" aria-label="Nova Arc Homepage">
-        <img src="{root_prefix}images/nova-arc-logo.png" alt="Nova Arc Logo" class="logo-img" width="38" height="33">
-        <span class="logo-text">Nova<span class="logo-highlight">Arc</span></span>
+      <a href="{root_prefix}index.html" class="logo" aria-label="NovaArc Homepage">
+        <img src="{root_prefix}images/novaarc-icon.svg" alt="NovaArc Logo" class="logo-img" width="38" height="38">
+        <span class="logo-text">NOVA<span class="logo-highlight">ARC</span></span>
       </a>
 
       <!-- Desktop Navigation Menu -->
@@ -199,9 +199,9 @@ def get_shared_header(root_prefix, active_section=""):
     <div class="mobile-nav-drawer" id="mobileDrawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
       <!-- Top Bar: Logo on Left, Close (X) on Right -->
       <div class="mobile-drawer-topbar">
-        <a href="{root_prefix}index.html" class="mobile-drawer-logo" aria-label="Nova Arc Home">
-          <img src="{root_prefix}images/nova-arc-logo.png" alt="Nova Arc Logo" width="38" height="34" class="mobile-drawer-logo-img">
-          <span class="mobile-drawer-logo-title">Nova<span class="mobile-drawer-logo-accent">Arc</span></span>
+        <a href="{root_prefix}index.html" class="mobile-drawer-logo" aria-label="NovaArc Home">
+          <img src="{root_prefix}images/novaarc-icon-dark.svg" alt="NovaArc Logo" width="36" height="36" class="mobile-drawer-logo-img">
+          <span class="mobile-drawer-logo-title">NOVA<span class="mobile-drawer-logo-accent">ARC</span></span>
         </a>
         <button type="button" class="mobile-drawer-close-btn" id="mobileDrawerCloseBtn" aria-label="Close navigation menu">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -430,12 +430,11 @@ def get_shared_footer(root_prefix):
       <div class="footer-grid">
         <!-- Col 1: Brand & Positioning -->
         <div class="footer-col-brand">
-          <a href="{root_prefix}index.html" class="footer-logo">
-            <img src="{root_prefix}images/nova-arc-logo.png" alt="Nova Arc Logo" width="36" height="32" class="footer-logo-img">
-            <span class="footer-logo-text">Nova<span class="logo-highlight">Arc</span></span>
+          <a href="{root_prefix}index.html" class="footer-logo" aria-label="NovaArc Technologies Services Home">
+            <img src="{root_prefix}images/novaarc-logo-stacked.svg" alt="NovaArc Technologies Services Pvt Ltd" class="footer-logo-stacked" width="220" height="183">
           </a>
           <p class="footer-desc">
-            Nova Arc is an enterprise technology and intelligent solutions company helping organizations modernize business operations through digital platforms, enterprise applications, connected systems, intelligent automation, and applied AI.
+            NovaArc is an enterprise technology and intelligent solutions company helping organizations modernize business operations through digital platforms, enterprise applications, connected systems, intelligent automation, and applied AI.
           </p>
           <div class="footer-tagline">Engineering Intelligent Solutions for a Connected Business World.</div>
         </div>
@@ -982,8 +981,13 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   <meta name="twitter:title" content="{page_title} | Nova Arc">
   <meta name="twitter:description" content="{seo_desc}">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="{root_prefix}images/nova-arc-logo.png">
+  <!-- Favicon & Brand Icons -->
+  <link rel="icon" type="image/svg+xml" href="{root_prefix}images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="{root_prefix}images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{root_prefix}images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{root_prefix}images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="{root_prefix}favicon.ico">
+  <link rel="manifest" href="{root_prefix}site.webmanifest">
 
   <!-- Fonts & Core Stylesheet -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -332,44 +332,48 @@ button, input, select, textarea {
   height: 70px;
 }
 
-/* Brand Logo */
+/* Brand Logo (Official NovaArc Branding) */
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   text-decoration: none;
   cursor: pointer;
 }
 
 .logo-icon-svg {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
 }
 
 .logo-img {
   width: 38px;
-  height: auto;
+  height: 38px;
   display: block;
   object-fit: contain;
   transition: transform var(--transition-fast);
+  flex-shrink: 0;
 }
 
 .logo:hover .logo-img {
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
-.logo-text {
-  font-size: 1.35rem;
+.logo-text, .logo-title {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.45rem;
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.06em;
   color: #FFFFFF !important;
   display: flex;
   align-items: center;
+  line-height: 1;
 }
 
 .logo-text .logo-highlight,
-.logo-text .logo-accent {
-  color: #0EA5E9 !important;
+.logo-text .logo-accent,
+.logo-title .logo-accent {
+  color: #2DD782 !important; /* Official NovaArc Emerald Accent */
   margin-left: 2px;
 }
 
@@ -1280,27 +1284,30 @@ button, input, select, textarea {
 .mobile-drawer-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   text-decoration: none;
 }
 
 .mobile-drawer-logo-img {
   width: 36px;
-  height: 32px;
+  height: 36px;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .mobile-drawer-logo-title {
   font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 1.35rem;
-  font-weight: 700;
+  font-weight: 800;
   color: #0B2545;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.06em;
+  line-height: 1;
 }
 
 .mobile-drawer-logo-accent {
-  color: #1F6FEB;
+  color: #10B981;
   font-weight: 800;
+  margin-left: 2px;
 }
 
 .mobile-drawer-close-btn {
@@ -3181,16 +3188,27 @@ body.mobile-nav-open {
 }
 
 .footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  display: inline-block;
   text-decoration: none;
   color: #FFFFFF;
 }
 
+.footer-logo-stacked {
+  width: 210px;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  margin-bottom: 8px;
+  transition: transform var(--transition-fast);
+}
+
+.footer-logo:hover .footer-logo-stacked {
+  transform: scale(1.02);
+}
+
 .footer-logo-img {
   width: 38px;
-  height: auto;
+  height: 38px;
   display: block;
   object-fit: contain;
   transition: transform var(--transition-fast);
@@ -3201,9 +3219,15 @@ body.mobile-nav-open {
 }
 
 .footer-logo-text {
-  font-size: 1.4rem;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.45rem;
   font-weight: 800;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+}
+
+.footer-logo-text .logo-highlight {
+  color: #2DD782 !important;
 }
 
 .footer-brand-desc {
