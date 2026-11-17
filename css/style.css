@@ -6235,6 +6235,11 @@ body.mobile-nav-open {
     font-size: 0.8rem;
     justify-content: flex-start;
   }
+
+  .hero-service-highlights > .hero-service-pill:nth-child(5) {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 540px) {
