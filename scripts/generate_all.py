@@ -28,7 +28,9 @@ from data_services import SERVICES_PAGES
 from data_services_domain2 import SERVICES_DOMAIN_2
 from data_services_domain3 import SERVICES_DOMAIN_3
 from data_services_domain4 import SERVICES_DOMAIN_4
+from data_services_rcm import SERVICES_RCM_PAGES
 from data_tech_ind_connect import TECH_IND_CONNECT_PAGES
+from build_rcm_domain import generate_rcm_domain_page
 
 def ensure_dir(path):
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -89,12 +91,13 @@ def replace_header_and_footer(html_content, root_prefix, active_section=""):
     return html_content
 
 def generate_all_subpages():
-    print("\n--- Generating 41 Subpages ---")
+    print("\n--- Generating All Subpages (including Healthcare RCM) ---")
     all_subpage_defs = (
         SERVICES_PAGES +
         SERVICES_DOMAIN_2 +
         SERVICES_DOMAIN_3 +
         SERVICES_DOMAIN_4 +
+        SERVICES_RCM_PAGES +
         TECH_IND_CONNECT_PAGES
     )
     
@@ -126,7 +129,13 @@ def generate_all_subpages():
         write_page(rel_path, html)
         generated_count += 1
     
-    print(f"Total subpages built: {generated_count}")
+    # Generate Healthcare RCM Domain Main Page
+    print("\n--- Generating Healthcare RCM Main Domain Page ---")
+    rcm_domain_html = generate_rcm_domain_page()
+    write_page("services/healthcare-rcm.html", rcm_domain_html)
+    generated_count += 1
+
+    print(f"Total subpages & domain pages built: {generated_count}")
     return all_subpage_defs
 
 def generate_technology_page():
@@ -758,6 +767,7 @@ def generate_sitemap(all_subpages):
         ("https://novaarctech.in/index.html", "1.0", "weekly"),
         ("https://novaarctech.in/about.html", "0.85", "monthly"),
         ("https://novaarctech.in/services.html", "0.9", "weekly"),
+        ("https://novaarctech.in/services/healthcare-rcm.html", "0.9", "weekly"),
         ("https://novaarctech.in/technology.html", "0.9", "weekly"),
         ("https://novaarctech.in/industries.html", "0.9", "weekly"),
         ("https://novaarctech.in/contact.html", "0.8", "monthly"),
@@ -818,36 +828,8 @@ def update_search_index(all_subpages):
       title: 'Healthcare Revenue Cycle Management (RCM)',
       category: 'Healthcare RCM',
       desc: 'End-to-end healthcare RCM powered by intelligent automation, real-time monitoring, and AI-driven insights.',
-      url: rootPrefix + 'services.html#rcm',
-      tags: ['healthcare', 'rcm', 'revenue cycle', 'billing', 'claims', 'coding', 'denial management']
-    }""")
-    entries.append("""    {
-      title: 'Patient Access & Front-End RCM',
-      category: 'Healthcare RCM',
-      desc: 'Patient registration, insurance eligibility verification, prior authorization, and financial clearance.',
-      url: rootPrefix + 'services.html#rcm-patient-access',
-      tags: ['patient access', 'registration', 'eligibility', 'prior authorization', 'front-end', 'rcm']
-    }""")
-    entries.append("""    {
-      title: 'Medical Coding & Charge Management',
-      category: 'Healthcare RCM',
-      desc: 'Professional coding, facility coding, risk adjustment, and complete charge capture throughout the revenue cycle.',
-      url: rootPrefix + 'services.html#rcm-medical-coding',
-      tags: ['medical coding', 'coding audits', 'charge capture', 'risk adjustment', 'icd-10', 'cpt']
-    }""")
-    entries.append("""    {
-      title: 'Medical Billing & Payment Management',
-      category: 'Healthcare RCM',
-      desc: 'Claims submission, rejection management, secondary billing, payment posting, and cash reconciliation.',
-      url: rootPrefix + 'services.html#rcm-billing-payment',
-      tags: ['medical billing', 'claims', 'payment posting', 'reconciliation', 'rejections']
-    }""")
-    entries.append("""    {
-      title: 'Accounts Receivable & Denial Management',
-      category: 'Healthcare RCM',
-      desc: 'Proactive A/R follow-up, denial appeals management, underpayment recovery, and revenue cycle analytics.',
-      url: rootPrefix + 'services.html#rcm-ar-denial',
-      tags: ['ar', 'accounts receivable', 'denials', 'appeals', 'underpayment recovery']
+      url: rootPrefix + 'services/healthcare-rcm.html',
+      tags: ['healthcare', 'rcm', 'revenue cycle', 'billing', 'claims', 'coding', 'denial management', 'novachron', 'bpms']
     }""")
     entries.append("""    {
       title: 'Healthcare RCM Technology & Automation',

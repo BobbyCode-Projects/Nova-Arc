@@ -90,13 +90,13 @@ def get_shared_header(root_prefix, active_section=""):
 
                   <!-- Col 5: Healthcare Revenue Cycle Management (RCM) -->
                   <div class="mega-col" role="none">
-                    <h3 class="mega-col-heading" id="menu-col-5-heading"><a href="{root_prefix}services.html#rcm" class="mega-heading-link">Healthcare RCM</a></h3>
+                    <h3 class="mega-col-heading" id="menu-col-5-heading"><a href="{root_prefix}services/healthcare-rcm.html" class="mega-heading-link">Healthcare RCM</a></h3>
                     <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-5-heading">
-                      <li role="none"><a href="{root_prefix}services.html#rcm-patient-access" class="mega-item standalone" role="menuitem">Patient Access &amp; Front-End RCM</a></li>
-                      <li role="none"><a href="{root_prefix}services.html#rcm-medical-coding" class="mega-item standalone" role="menuitem">Medical Coding &amp; Charge Capture</a></li>
-                      <li role="none"><a href="{root_prefix}services.html#rcm-billing-payment" class="mega-item standalone" role="menuitem">Billing &amp; Payment Management</a></li>
-                      <li role="none"><a href="{root_prefix}services.html#rcm-ar-denial" class="mega-item standalone" role="menuitem">A/R &amp; Denial Resolution</a></li>
-                      <li role="none"><a href="{root_prefix}services.html#rcm-outcomes" class="mega-item standalone" role="menuitem">Target Benchmarks &amp; Outcomes</a></li>
+                      <li role="none"><a href="{root_prefix}services/rcm-patient-access.html" class="mega-item standalone" role="menuitem">Patient Access &amp; Front-End RCM</a></li>
+                      <li role="none"><a href="{root_prefix}services/rcm-medical-coding.html" class="mega-item standalone" role="menuitem">Medical Coding &amp; Charge Management</a></li>
+                      <li role="none"><a href="{root_prefix}services/rcm-billing-payment.html" class="mega-item standalone" role="menuitem">Medical Billing &amp; Payment Management</a></li>
+                      <li role="none"><a href="{root_prefix}services/rcm-ar-denial.html" class="mega-item standalone" role="menuitem">Accounts Receivable &amp; Denial Management</a></li>
+                      <li role="none"><a href="{root_prefix}services/rcm-target-benchmarks.html" class="mega-item standalone" role="menuitem">Target Benchmarks &amp; Outcomes</a></li>
                     </ul>
                   </div>
                 </div>
@@ -356,16 +356,16 @@ def get_shared_header(root_prefix, active_section=""):
                   <div class="mobile-nested-collapse" id="collapseSubcatRCM" aria-hidden="true">
                     <ul class="mobile-sublink-list">
                       <li>
-                        <a href="{root_prefix}services.html#rcm" class="mobile-sublink mobile-sublink-overview">
-                          <span>Healthcare RCM Overview</span>
+                        <a href="{root_prefix}services/healthcare-rcm.html" class="mobile-sublink mobile-sublink-overview">
+                          <span>Healthcare RCM Domain Overview</span>
                           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                         </a>
                       </li>
-                      <li><a href="{root_prefix}services.html#rcm-patient-access" class="mobile-sublink">Patient Access &amp; Front-End RCM</a></li>
-                      <li><a href="{root_prefix}services.html#rcm-medical-coding" class="mobile-sublink">Medical Coding &amp; Charge Management</a></li>
-                      <li><a href="{root_prefix}services.html#rcm-billing-payment" class="mobile-sublink">Medical Billing &amp; Payment Management</a></li>
-                      <li><a href="{root_prefix}services.html#rcm-ar-denial" class="mobile-sublink">Accounts Receivable &amp; Denial Management</a></li>
-                      <li><a href="{root_prefix}services.html#rcm-outcomes" class="mobile-sublink">RCM Business Outcomes &amp; Benchmarks</a></li>
+                      <li><a href="{root_prefix}services/rcm-patient-access.html" class="mobile-sublink">Patient Access &amp; Front-End RCM</a></li>
+                      <li><a href="{root_prefix}services/rcm-medical-coding.html" class="mobile-sublink">Medical Coding &amp; Charge Management</a></li>
+                      <li><a href="{root_prefix}services/rcm-billing-payment.html" class="mobile-sublink">Medical Billing &amp; Payment Management</a></li>
+                      <li><a href="{root_prefix}services/rcm-ar-denial.html" class="mobile-sublink">Accounts Receivable &amp; Denial Management</a></li>
+                      <li><a href="{root_prefix}services/rcm-target-benchmarks.html" class="mobile-sublink">Target Benchmarks &amp; Outcomes</a></li>
                     </ul>
                   </div>
                 </div>
@@ -484,7 +484,7 @@ def get_shared_footer(root_prefix):
             <li><a href="{root_prefix}services/enterprise-business.html" class="footer-link">Enterprise Business Solutions</a></li>
             <li><a href="{root_prefix}services/intelligent-monitoring.html" class="footer-link">Intelligent Monitoring &amp; Automation</a></li>
             <li><a href="{root_prefix}services/ai-healthcare.html" class="footer-link">AI &amp; Healthcare Technology</a></li>
-            <li><a href="{root_prefix}services.html#rcm" class="footer-link">Healthcare RCM Services</a></li>
+            <li><a href="{root_prefix}services/healthcare-rcm.html" class="footer-link">Healthcare RCM Solutions</a></li>
             <li><a href="{root_prefix}services.html" class="footer-link">Full Services Catalog</a></li>
           </ul>
         </div>
@@ -604,6 +604,24 @@ CAPABILITY_PAGE_MAP = {
     'Healthcare Data Integration & Analytics': 'services/healthcare-data-analytics.html',
     'AI Systems Integration & Governance': 'services/ai-workflow-automation.html',
     'AI-Powered Workflow Automation': 'services/ai-workflow-automation.html',
+    
+    # Domain 5: Healthcare Revenue Cycle Management (RCM)
+    'Patient Access & Front-End RCM': 'services/rcm-patient-access.html',
+    'Patient Access Services': 'services/rcm-patient-access.html',
+    'Patient Registration & Data Validation': 'services/rcm-patient-access.html',
+    'Medical Coding & Charge Management': 'services/rcm-medical-coding.html',
+    'Medical Coding Services': 'services/rcm-medical-coding.html',
+    'Professional Medical Coding': 'services/rcm-medical-coding.html',
+    'Medical Billing & Payment Management': 'services/rcm-billing-payment.html',
+    'Billing & Payment Management': 'services/rcm-billing-payment.html',
+    'Claims Management & Electronic Transmission': 'services/rcm-billing-payment.html',
+    'Accounts Receivable & Denial Management': 'services/rcm-ar-denial.html',
+    'Accounts Receivable (A/R) Management': 'services/rcm-ar-denial.html',
+    'A/R & Denial Resolution': 'services/rcm-ar-denial.html',
+    'Accounts Receivable Follow-up & Liquidation': 'services/rcm-ar-denial.html',
+    'Target Benchmarks & Outcomes': 'services/rcm-target-benchmarks.html',
+    'RCM Target Benchmarks & Outcomes': 'services/rcm-target-benchmarks.html',
+    'Clean Claim Optimization (Target: >= 95%)': 'services/rcm-target-benchmarks.html',
 }
 
 def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_subtitle,
@@ -627,7 +645,8 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
         'services/digital-commerce.html',
         'services/enterprise-business.html',
         'services/intelligent-monitoring.html',
-        'services/ai-healthcare.html'
+        'services/ai-healthcare.html',
+        'services/healthcare-rcm.html'
     }
     is_domain_page = rel_path in domain_overview_pages
 
@@ -697,6 +716,9 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
     elif "monitoring" in rel_path or "iot" in rel_path or "operational-analytics" in rel_path or "infrastructure" in rel_path:
         editorial_heading = "From Silent Failures to Real-Time Operational Intelligence"
         editorial_intro = "Distributed infrastructure and device networks generate massive operational telemetry that often goes unmonitored until costly outages occur. We deploy real-time observation pipelines and automated alerting engines that diagnose friction proactively."
+    elif "rcm" in rel_path or "healthcare-rcm" in rel_path:
+        editorial_heading = "From Operational Fragmentation to Revenue Cycle Precision"
+        editorial_intro = "Healthcare organizations lose significant revenue every year through avoidable front-end registration errors, clinical documentation gaps, clearinghouse rejections, and unappealed payer denials. We combine domain-certified expertise with intelligent automation to streamline revenue operations and optimize financial performance."
     elif "ai" in rel_path or "document" in rel_path or "healthcare" in rel_path:
         editorial_heading = "From Manual Overhead to Autonomous Intelligence"
         editorial_intro = "Enterprise productivity slows down when knowledge workers spend hours on repetitive data transcription, document triage, and disjointed coordination. We design governed agentic AI and intelligent automation pipelines that transform operations."
@@ -717,6 +739,68 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
     </div>
   </section>
     """
+
+    section_benchmark_table_html = ""
+    if "rcm-target-benchmarks" in rel_path:
+        section_benchmark_table_html = """
+  <!-- Target Performance Benchmarks Table Section -->
+  <section id="benchmark-metrics" class="subpage-section-dark-alt" style="padding: clamp(48px, 6vw, 76px) 0; background: #0A1628; border-bottom: 1px solid rgba(255,255,255,0.06);">
+    <div class="container">
+      <div style="text-align: center; max-width: 760px; margin: 0 auto var(--space-3xl);">
+        <span class="eyebrow-ags" style="color: #38BDF8; font-weight: 700; letter-spacing: 0.08em;">PERFORMANCE BENCHMARKS</span>
+        <h2 class="subpage-section-heading" style="font-size: clamp(1.8rem, 2.8vw, 2.4rem); font-weight: 800; color: #FFFFFF; margin: 8px 0 12px; letter-spacing: -0.01em;">Target Revenue Cycle Key Performance Indicators</h2>
+        <p class="subpage-section-desc" style="color: #94A3B8; font-size: 1.02rem; line-height: 1.6;">Our integrated technology workflows and certified RCM teams target industry-leading HFMA and MGMA performance thresholds.</p>
+      </div>
+
+      <!-- Benchmark Table -->
+      <div class="rcm-benchmark-table-wrapper" style="max-width: 960px; margin: 0 auto var(--space-2xl); background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; overflow: hidden; box-shadow: 0 12px 30px rgba(0,0,0,0.25);">
+        <table class="rcm-benchmark-table" style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
+          <thead>
+            <tr style="background: rgba(30, 41, 59, 0.9); border-bottom: 1px solid rgba(255,255,255,0.12);">
+              <th style="padding: 16px 20px; color: #38BDF8; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; font-size: 0.82rem;">Performance Area</th>
+              <th style="padding: 16px 20px; color: #38BDF8; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; font-size: 0.82rem;">Target Benchmark</th>
+              <th style="padding: 16px 20px; color: #38BDF8; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; font-size: 0.82rem;">Operational Focus &amp; Technology Lever</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+              <td style="padding: 16px 20px; font-weight: 600; color: #FFFFFF;">Clean Claim Rate</td>
+              <td style="padding: 16px 20px; color: #38BDF8; font-weight: 700; font-size: 1.05rem;">95% or higher</td>
+              <td style="padding: 16px 20px; color: #CBD5E1; font-size: 0.9rem;">Triple-pass pre-submission scrubbing, demographic cross-checks, and automated NCCI edit enforcement.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.02);">
+              <td style="padding: 16px 20px; font-weight: 600; color: #FFFFFF;">Denial Rate</td>
+              <td style="padding: 16px 20px; color: #38BDF8; font-weight: 700; font-size: 1.05rem;">Under 5%</td>
+              <td style="padding: 16px 20px; color: #CBD5E1; font-size: 0.9rem;">Predictive denial scoring, upfront prior authorization gatekeeping, and 24-hour CARC/RARC triage.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+              <td style="padding: 16px 20px; font-weight: 600; color: #FFFFFF;">Days in A/R (DAR)</td>
+              <td style="padding: 16px 20px; color: #38BDF8; font-weight: 700; font-size: 1.05rem;">Under 40 days</td>
+              <td style="padding: 16px 20px; color: #CBD5E1; font-size: 0.9rem;">24-48 hr charge entry, daily EDI 837 batches, automated ERA 835 posting, and early Day 21 status outreach.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.02);">
+              <td style="padding: 16px 20px; font-weight: 600; color: #FFFFFF;">A/R Over 90 Days</td>
+              <td style="padding: 16px 20px; color: #38BDF8; font-weight: 700; font-size: 1.05rem;">Under 15%</td>
+              <td style="padding: 16px 20px; color: #CBD5E1; font-size: 0.9rem;">Dedicated senior recovery specialists, payer escalation paths, and rapid timely filing appeal compilation.</td>
+            </tr>
+            <tr>
+              <td style="padding: 16px 20px; font-weight: 600; color: #FFFFFF;">Net Collection Rate</td>
+              <td style="padding: 16px 20px; color: #38BDF8; font-weight: 700; font-size: 1.05rem;">95% or higher</td>
+              <td style="padding: 16px 20px; color: #CBD5E1; font-size: 0.9rem;">Contractual allowable modeling, fee schedule variance recovery, and complete surgical charge capture.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Disclaimer Note -->
+      <div style="max-width: 960px; margin: 0 auto; padding: 14px 20px; background: rgba(14, 165, 233, 0.08); border-left: 3px solid #38BDF8; border-radius: 6px;">
+        <p style="margin: 0; font-size: 0.88rem; color: #CBD5E1; line-height: 1.55;">
+          <strong style="color: #38BDF8;">Target Benchmark Disclaimer:</strong> These figures represent target benchmarks, not guaranteed results. Actual performance targets depend on the client's existing baseline, operational requirements, and mutually agreed service levels.
+        </p>
+      </div>
+    </div>
+  </section>
+"""
 
     # 3. Key Capabilities HTML (DARK NAVY #08111F) with Independent Read More Toggle
     cap_cards = []
@@ -982,6 +1066,14 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
                 ("Healthcare Analytics", "services/healthcare-data-analytics.html"),
                 ("AI Workflow Automation", "services/ai-workflow-automation.html")
             ]
+        elif "healthcare-rcm" in rel_path or "rcm" in rel_path:
+            domain_subpages = [
+                ("Patient Access & Front-End RCM", "services/rcm-patient-access.html"),
+                ("Medical Coding & Charge Management", "services/rcm-medical-coding.html"),
+                ("Medical Billing & Payment Management", "services/rcm-billing-payment.html"),
+                ("Accounts Receivable & Denial Management", "services/rcm-ar-denial.html"),
+                ("Target Benchmarks & Outcomes", "services/rcm-target-benchmarks.html")
+            ]
         for p_title, p_link in domain_subpages:
             pills_list.append(
                 f'<a href="{root_prefix}{p_link}" class="category-pill-link category-pill-cta" style="padding: 9px 18px; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 8px;">'
@@ -1090,6 +1182,8 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
   </section>
 
   {section_problem_resolution_html}
+
+  {section_benchmark_table_html}
 
   {section_capabilities_html}
 

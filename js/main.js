@@ -1385,36 +1385,8 @@ function initSiteSearchModal() {
       title: 'Healthcare Revenue Cycle Management (RCM)',
       category: 'Healthcare RCM',
       desc: 'End-to-end healthcare RCM powered by intelligent automation, real-time monitoring, and AI-driven insights.',
-      url: rootPrefix + 'services.html#rcm',
-      tags: ['healthcare', 'rcm', 'revenue cycle', 'billing', 'claims', 'coding', 'denial management']
-    },
-    {
-      title: 'Patient Access & Front-End RCM',
-      category: 'Healthcare RCM',
-      desc: 'Patient registration, insurance eligibility verification, prior authorization, and financial clearance.',
-      url: rootPrefix + 'services.html#rcm-patient-access',
-      tags: ['patient access', 'registration', 'eligibility', 'prior authorization', 'front-end', 'rcm']
-    },
-    {
-      title: 'Medical Coding & Charge Management',
-      category: 'Healthcare RCM',
-      desc: 'Professional coding, facility coding, risk adjustment, and complete charge capture throughout the revenue cycle.',
-      url: rootPrefix + 'services.html#rcm-medical-coding',
-      tags: ['medical coding', 'coding audits', 'charge capture', 'risk adjustment', 'icd-10', 'cpt']
-    },
-    {
-      title: 'Medical Billing & Payment Management',
-      category: 'Healthcare RCM',
-      desc: 'Claims submission, rejection management, secondary billing, payment posting, and cash reconciliation.',
-      url: rootPrefix + 'services.html#rcm-billing-payment',
-      tags: ['medical billing', 'claims', 'payment posting', 'reconciliation', 'rejections']
-    },
-    {
-      title: 'Accounts Receivable & Denial Management',
-      category: 'Healthcare RCM',
-      desc: 'Proactive A/R follow-up, denial appeals management, underpayment recovery, and revenue cycle analytics.',
-      url: rootPrefix + 'services.html#rcm-ar-denial',
-      tags: ['ar', 'accounts receivable', 'denials', 'appeals', 'underpayment recovery']
+      url: rootPrefix + 'services/healthcare-rcm.html',
+      tags: ['healthcare', 'rcm', 'revenue cycle', 'billing', 'claims', 'coding', 'denial management', 'novachron', 'bpms']
     },
     {
       title: 'Healthcare RCM Technology & Automation',
@@ -1625,6 +1597,41 @@ function initSiteSearchModal() {
       desc: 'Healthcare administrative dashboards, EHR data connectivity, operational clinic metrics, and administrative billing assistance ...',
       url: rootPrefix + 'services/healthcare-data-analytics.html',
       tags: ['healthcare', 'data', 'integration', 'analytics', 'operational', 'clinic', 'dashboards', 'ehr', 'practice', 'management']
+    },
+    {
+      title: 'Patient Access & Front-End RCM',
+      category: 'Healthcare Revenue Cycle Man',
+      desc: 'Accurate Patient Data. Stronger Financial Clearance.',
+      url: rootPrefix + 'services/rcm-patient-access.html',
+      tags: ['patient', 'access', 'front', 'end', 'rcm', 'registration', 'data', 'validation', 'insurance', 'eligibility']
+    },
+    {
+      title: 'Medical Coding & Charge Management',
+      category: 'Healthcare Revenue Cycle Man',
+      desc: 'Precision in Every Code. Revenue in Every Encounter.',
+      url: rootPrefix + 'services/rcm-medical-coding.html',
+      tags: ['medical', 'coding', 'charge', 'management', 'professional', 'facility', 'drg', 'assignment']
+    },
+    {
+      title: 'Medical Billing & Payment Management',
+      category: 'Healthcare Revenue Cycle Man',
+      desc: 'Smarter Billing. Faster Reimbursements.',
+      url: rootPrefix + 'services/rcm-billing-payment.html',
+      tags: ['medical', 'billing', 'payment', 'management', 'claims', 'electronic', 'transmission', 'clearinghouse', 'payer', 'rejection']
+    },
+    {
+      title: 'Accounts Receivable & Denial Management',
+      category: 'Healthcare Revenue Cycle Man',
+      desc: 'Recover Revenue. Reduce Denials. Maximize Collections.',
+      url: rootPrefix + 'services/rcm-ar-denial.html',
+      tags: ['accounts', 'receivable', 'denial', 'management', 'follow', 'liquidation', 'root', 'cause']
+    },
+    {
+      title: 'Target Benchmarks & Outcomes',
+      category: 'Healthcare Revenue Cycle Man',
+      desc: 'Measurable Performance. Meaningful Results.',
+      url: rootPrefix + 'services/rcm-target-benchmarks.html',
+      tags: ['target', 'benchmarks', 'outcomes', 'clean', 'claim', 'optimization', 'denial', 'rate', 'minimization', 'prevention']
     },
     {
       title: 'Agentic AI',
