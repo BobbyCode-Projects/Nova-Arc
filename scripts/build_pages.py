@@ -991,7 +991,7 @@ def generate_subpage(rel_path, root_prefix, category_badge, page_title, page_sub
       <div style="text-align: center; max-width: 760px; margin: 0 auto var(--space-3xl);">
         <span class="eyebrow-ags" style="color: #0284C7; font-weight: 700; letter-spacing: 0.08em;">CONNECTED ECOSYSTEM</span>
         <h2 class="subpage-section-heading" style="font-size: clamp(1.8rem, 2.8vw, 2.4rem); font-weight: 800; color: #0F172A; margin: 8px 0 12px; letter-spacing: -0.01em;">Cross-Domain Enterprise Ecosystem Integration</h2>
-        <p class="subpage-section-desc" style="color: #475569; font-size: 1.05rem; line-height: 1.6;">Integrate complementary enterprise modules across our four core service domains.</p>
+        <p class="subpage-section-desc" style="color: #475569; font-size: 1.05rem; line-height: 1.6;">Integrate complementary enterprise modules across our five core service domains.</p>
       </div>
 
       <div class="subpage-grid-related" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">

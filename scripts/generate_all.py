@@ -4,7 +4,7 @@ Nova Arc - Multi-Page Complete Website Master Generator
 Builds all 54 pages across:
   - Home: index.html
   - Solutions: solutions.html, solutions/index.html, + 6 subpages
-  - Services: services.html, services/index.html, 4 domain landings + 21 subpages
+  - Services: services.html, services/index.html, 5 domain landings + 25 subpages
   - Technology: technology.html, technology/index.html, ai-platform.html, + 6 subpages
   - Industries: industries.html, industries/index.html, who-we-serve.html, + 6 subpages
   - Connect With Us: contact.html, connect.html, connect/index.html, + 4 subpages
@@ -348,9 +348,9 @@ def generate_about_page():
           <!-- Quick Executive Highlights Cards -->
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; text-align: left;">
             <div style="background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 18px 20px;">
-              <div style="font-size: 1.8rem; font-weight: 800; color: #38BDF8; line-height: 1; margin-bottom: 6px;">04</div>
+              <div style="font-size: 1.8rem; font-weight: 800; color: #38BDF8; line-height: 1; margin-bottom: 6px;">05</div>
               <div style="font-size: 0.95rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Technology Domains</div>
-              <div style="font-size: 0.8rem; color: #94A3B8;">Commerce, ERP, IoT, AI</div>
+              <div style="font-size: 0.8rem; color: #94A3B8;">Commerce, ERP, IoT, AI, RCM</div>
             </div>
             <div style="background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 18px 20px;">
               <div style="font-size: 1.8rem; font-weight: 800; color: #10B981; line-height: 1; margin-bottom: 6px;">100%</div>
