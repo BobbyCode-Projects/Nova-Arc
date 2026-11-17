@@ -87,6 +87,18 @@ def get_shared_header(root_prefix, active_section=""):
                       <li role="none"><a href="{root_prefix}services/healthcare-data-analytics.html" class="mega-item standalone" role="menuitem">Healthcare Data Integration &amp; Analytics</a></li>
                     </ul>
                   </div>
+
+                  <!-- Col 5: Healthcare Revenue Cycle Management (RCM) -->
+                  <div class="mega-col" role="none">
+                    <h3 class="mega-col-heading" id="menu-col-5-heading"><a href="{root_prefix}services.html#rcm" class="mega-heading-link">Healthcare RCM</a></h3>
+                    <ul class="mega-menu-list" role="none" aria-labelledby="menu-col-5-heading">
+                      <li role="none"><a href="{root_prefix}services.html#rcm-patient-access" class="mega-item standalone" role="menuitem">Patient Access &amp; Front-End RCM</a></li>
+                      <li role="none"><a href="{root_prefix}services.html#rcm-medical-coding" class="mega-item standalone" role="menuitem">Medical Coding &amp; Charge Capture</a></li>
+                      <li role="none"><a href="{root_prefix}services.html#rcm-billing-payment" class="mega-item standalone" role="menuitem">Billing &amp; Payment Management</a></li>
+                      <li role="none"><a href="{root_prefix}services.html#rcm-ar-denial" class="mega-item standalone" role="menuitem">A/R &amp; Denial Resolution</a></li>
+                      <li role="none"><a href="{root_prefix}services.html#rcm-outcomes" class="mega-item standalone" role="menuitem">Target Benchmarks &amp; Outcomes</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -332,6 +344,31 @@ def get_shared_header(root_prefix, active_section=""):
                     </ul>
                   </div>
                 </div>
+
+                <!-- 5. Healthcare Revenue Cycle Management (RCM) -->
+                <div class="mobile-subcat-accordion">
+                  <button type="button" class="mobile-subcat-toggle mobile-accordion-toggle" id="toggleSubcatRCM" aria-expanded="false" aria-controls="collapseSubcatRCM">
+                    <span class="mobile-subcat-toggle-text">Healthcare Revenue Cycle Management (RCM)</span>
+                    <svg class="mobile-subcat-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+                  <div class="mobile-nested-collapse" id="collapseSubcatRCM" aria-hidden="true">
+                    <ul class="mobile-sublink-list">
+                      <li>
+                        <a href="{root_prefix}services.html#rcm" class="mobile-sublink mobile-sublink-overview">
+                          <span>Healthcare RCM Overview</span>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                      </li>
+                      <li><a href="{root_prefix}services.html#rcm-patient-access" class="mobile-sublink">Patient Access &amp; Front-End RCM</a></li>
+                      <li><a href="{root_prefix}services.html#rcm-medical-coding" class="mobile-sublink">Medical Coding &amp; Charge Management</a></li>
+                      <li><a href="{root_prefix}services.html#rcm-billing-payment" class="mobile-sublink">Medical Billing &amp; Payment Management</a></li>
+                      <li><a href="{root_prefix}services.html#rcm-ar-denial" class="mobile-sublink">Accounts Receivable &amp; Denial Management</a></li>
+                      <li><a href="{root_prefix}services.html#rcm-outcomes" class="mobile-sublink">RCM Business Outcomes &amp; Benchmarks</a></li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </li>
@@ -447,6 +484,7 @@ def get_shared_footer(root_prefix):
             <li><a href="{root_prefix}services/enterprise-business.html" class="footer-link">Enterprise Business Solutions</a></li>
             <li><a href="{root_prefix}services/intelligent-monitoring.html" class="footer-link">Intelligent Monitoring &amp; Automation</a></li>
             <li><a href="{root_prefix}services/ai-healthcare.html" class="footer-link">AI &amp; Healthcare Technology</a></li>
+            <li><a href="{root_prefix}services.html#rcm" class="footer-link">Healthcare RCM Services</a></li>
             <li><a href="{root_prefix}services.html" class="footer-link">Full Services Catalog</a></li>
           </ul>
         </div>

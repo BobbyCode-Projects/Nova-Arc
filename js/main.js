@@ -1377,9 +1377,51 @@ function initSiteSearchModal() {
     {
       title: 'Full Services Catalog',
       category: 'Services',
-      desc: 'Complete engineering services across 4 core domains: Digital Commerce, Enterprise, Monitoring, and AI.',
+      desc: 'Complete engineering services across 5 core domains: Digital Commerce, Enterprise, Monitoring, AI, and Healthcare RCM.',
       url: rootPrefix + 'services.html',
       tags: ['services', 'catalog', 'engineering', 'consulting', 'capabilities']
+    },
+    {
+      title: 'Healthcare Revenue Cycle Management (RCM)',
+      category: 'Healthcare RCM',
+      desc: 'End-to-end healthcare RCM powered by intelligent automation, real-time monitoring, and AI-driven insights.',
+      url: rootPrefix + 'services.html#rcm',
+      tags: ['healthcare', 'rcm', 'revenue cycle', 'billing', 'claims', 'coding', 'denial management']
+    },
+    {
+      title: 'Patient Access & Front-End RCM',
+      category: 'Healthcare RCM',
+      desc: 'Patient registration, insurance eligibility verification, prior authorization, and financial clearance.',
+      url: rootPrefix + 'services.html#rcm-patient-access',
+      tags: ['patient access', 'registration', 'eligibility', 'prior authorization', 'front-end', 'rcm']
+    },
+    {
+      title: 'Medical Coding & Charge Management',
+      category: 'Healthcare RCM',
+      desc: 'Professional coding, facility coding, risk adjustment, and complete charge capture throughout the revenue cycle.',
+      url: rootPrefix + 'services.html#rcm-medical-coding',
+      tags: ['medical coding', 'coding audits', 'charge capture', 'risk adjustment', 'icd-10', 'cpt']
+    },
+    {
+      title: 'Medical Billing & Payment Management',
+      category: 'Healthcare RCM',
+      desc: 'Claims submission, rejection management, secondary billing, payment posting, and cash reconciliation.',
+      url: rootPrefix + 'services.html#rcm-billing-payment',
+      tags: ['medical billing', 'claims', 'payment posting', 'reconciliation', 'rejections']
+    },
+    {
+      title: 'Accounts Receivable & Denial Management',
+      category: 'Healthcare RCM',
+      desc: 'Proactive A/R follow-up, denial appeals management, underpayment recovery, and revenue cycle analytics.',
+      url: rootPrefix + 'services.html#rcm-ar-denial',
+      tags: ['ar', 'accounts receivable', 'denials', 'appeals', 'underpayment recovery']
+    },
+    {
+      title: 'Healthcare RCM Technology & Automation',
+      category: 'Technology',
+      desc: 'Agentic AI, NovaChron operational monitoring, revenue leakage intelligence dashboard, and BPMS workflow automation.',
+      url: rootPrefix + 'technology.html#rcm-tech',
+      tags: ['rcm tech', 'novachron', 'revenue leakage', 'bpms', 'intelligent automation', 'monitoring']
     },
     {
       title: 'Technology Platform & Architecture',

@@ -649,8 +649,8 @@ button, input, select, textarea {
   left: 50%;
   transform: translateX(-50%) translateY(-6px);
   width: max-content;
-  max-width: min(1080px, calc(100vw - 32px));
-  min-width: min(960px, calc(100vw - 32px));
+  max-width: min(1320px, calc(100vw - 32px));
+  min-width: min(1180px, calc(100vw - 32px));
   background-color: #FFFFFF;
   border-radius: 14px;
   border: 1px solid #E2E8F0;
@@ -707,7 +707,7 @@ button, input, select, textarea {
 
 .mega-menu-inner.container,
 .mega-menu-inner {
-  padding: 28px 32px 32px 32px;
+  padding: 24px 28px 28px 28px;
   max-width: 100%;
   width: 100%;
   margin: 0;
@@ -715,8 +715,8 @@ button, input, select, textarea {
 
 .mega-menu-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(210px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(5, minmax(180px, 1fr));
+  gap: 18px;
   align-items: stretch;
 }
 
@@ -728,7 +728,43 @@ button, input, select, textarea {
 /* Thin 1px vertical border between columns */
 .mega-menu-grid > .mega-col + .mega-col {
   border-left: 1px solid #E2E8F0;
-  padding-left: 20px;
+  padding-left: 16px;
+}
+
+@media (max-width: 1240px) {
+  .mega-menu-panel {
+    min-width: min(980px, calc(100vw - 32px));
+    max-width: min(1040px, calc(100vw - 32px));
+  }
+  .mega-menu-inner {
+    padding: 20px 20px 24px 20px;
+  }
+  .mega-menu-grid {
+    grid-template-columns: repeat(5, minmax(155px, 1fr));
+    gap: 12px;
+  }
+  .mega-menu-grid > .mega-col + .mega-col {
+    padding-left: 10px;
+  }
+  .mega-col-heading a,
+  .mega-col-heading .mega-heading-link {
+    font-size: 11px;
+    letter-spacing: 0.03em;
+  }
+  .mega-item.standalone {
+    font-size: 0.78rem;
+    padding: 5px 6px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .mega-menu-panel {
+    min-width: min(920px, calc(100vw - 24px));
+  }
+  .mega-menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
 }
 
 /* Column Headings: Bold Section Headers in Services Mega Menu */
@@ -1198,11 +1234,7 @@ button, input, select, textarea {
   margin-top: 8px;
 }
 
-@media (max-width: 1080px) {
-  .mega-menu-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+/* Mega menu responsive handled above in navigation */
 
 /* ==========================================================================
    Mobile Navigation Sidebar & Backdrop
@@ -6823,7 +6855,7 @@ body.mobile-nav-open {
 
 @media (min-width: 1200px) {
   .services-provided-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 }
 
@@ -9917,5 +9949,287 @@ html, body {
     line-height: 1.6 !important;
     margin-bottom: 20px !important;
   }
+}
+
+/* ==========================================================================
+   Healthcare RCM Section & Benchmarks (services.html & technology.html)
+   ========================================================================== */
+.rcm-section-header {
+  max-width: 860px;
+  margin-bottom: 40px;
+}
+
+.rcm-core-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .rcm-core-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rcm-service-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.05);
+}
+
+.rcm-service-card:hover {
+  transform: translateY(-4px);
+  border-color: #38BDF8;
+  box-shadow: 0 12px 24px -4px rgba(11, 37, 69, 0.12);
+}
+
+.rcm-badge-num {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #1F6FEB;
+  background: rgba(31, 111, 235, 0.08);
+  padding: 3px 9px;
+  border-radius: 4px;
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+}
+
+.rcm-service-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0B2545;
+  margin: 0 0 6px 0;
+  line-height: 1.3;
+}
+
+.rcm-service-tagline {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1F6FEB;
+  margin-bottom: 14px;
+}
+
+.rcm-service-desc {
+  font-size: 0.92rem;
+  color: #475569;
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+
+.rcm-includes-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0F172A;
+  margin-bottom: 10px;
+}
+
+.rcm-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rcm-check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: #334155;
+  line-height: 1.45;
+}
+
+.rcm-check-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #10B981;
+}
+
+.rcm-business-value-box {
+  background: #F8FAFC;
+  border-left: 3px solid #10B981;
+  padding: 10px 14px;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.85rem;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.rcm-business-value-box strong {
+  color: #0B2545;
+}
+
+/* RCM Outcomes & Benchmarks Table */
+.rcm-outcomes-container {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 32px;
+  margin-top: 36px;
+  box-shadow: 0 4px 12px rgba(11, 37, 69, 0.05);
+}
+
+.rcm-table-wrap {
+  overflow-x: auto;
+  margin: 24px 0 16px 0;
+}
+
+.rcm-benchmark-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.rcm-benchmark-table th {
+  background: #F1F5F9;
+  color: #0B2545;
+  font-weight: 700;
+  padding: 14px 20px;
+  border-bottom: 2px solid #CBD5E1;
+  letter-spacing: 0.02em;
+}
+
+.rcm-benchmark-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #E2E8F0;
+  color: #334155;
+}
+
+.rcm-benchmark-table tr:last-child td {
+  border-bottom: none;
+}
+
+.rcm-benchmark-table tr:hover td {
+  background: #F8FAFC;
+}
+
+.rcm-benchmark-val {
+  font-weight: 800;
+  color: #1F6FEB;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rcm-benchmark-val::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10B981;
+}
+
+.rcm-disclaimer-note {
+  font-size: 0.82rem;
+  color: #64748B;
+  line-height: 1.6;
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: #F8FAFC;
+  border-radius: 6px;
+}
+
+/* RCM Technology Section on technology.html */
+#rcm-tech .ai-module-heading {
+  color: #FFFFFF !important;
+}
+#rcm-tech .ai-module-subtext {
+  color: #CBD5E1 !important;
+}
+
+.rcm-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin: 28px 0;
+}
+
+@media (max-width: 900px) {
+  .rcm-tech-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rcm-tech-card {
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 12px;
+  padding: 24px;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.rcm-tech-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(56, 189, 248, 0.5);
+}
+
+.rcm-tech-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.rcm-tech-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(31, 111, 235, 0.2);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #38BDF8;
+  flex-shrink: 0;
+}
+
+.rcm-tech-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.rcm-tech-desc {
+  font-size: 0.88rem;
+  color: #CBD5E1;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.rcm-tech-caps-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rcm-tech-cap-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #94A3B8;
+}
+
+.rcm-tech-cap-item svg {
+  color: #10B981;
+  flex-shrink: 0;
 }
 
